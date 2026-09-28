@@ -1,0 +1,62 @@
+# Configuration for Osteoclast Knowledge Graph (KG) and Repurposing Pipeline
+project:
+  name: "OC-Drug-Repurposing"
+  version: "1.0.0"
+  description: "Signed Contextual Mechanism Knowledge Graph for Osteoclast Repurposing"
+  remote_repo: "https://github.com/yuvipaloozie/OC-Drug-Repurposing.git"
+
+data:
+  raw_dir: "data/raw"
+  interim_dir: "data/interim"
+  processed_dir: "data/processed"
+  manifest_file: "data/manifest.json"
+
+namespaces:
+  gene: "HGNC"
+  protein: "HGNC"
+  metabolite: "CHEBI"
+  reaction: "RHEA"
+  pathway: "REACTOME"
+  compound: "CHEMBL"
+  drug_product: "FDA"
+  cell_type: "CL"
+  phenotype: "PHENO"
+  chromatin_event: "CHREV"
+
+kg_rules:
+  max_path_depth: 5
+  enforce_signed_consistency: true
+  reject_unsigned_causal_chains: true
+  reject_docking_only_edges: true
+  contradiction_policy: "store_both_flag_contradiction"
+  aggregation_strategy: "capped_module_sum"
+  leakage_prevention:
+    mask_held_out_papers: true
+    mask_held_out_compounds: true
+    rebuild_training_graph_per_fold: true
+
+models:
+  molecular_branch:
+    type: "GAT"  # or EGNN / ECFP baseline
+    layers: 3
+    hidden_dim: 128
+    dropout: 0.2
+    pooling: "mean"
+  mechanism_branch:
+    scoring_version: "V1"
+    features:
+      - "signed_consistency"
+      - "direct_oc_evidence_count"
+      - "strongest_evidence_kind"
+      - "path_length"
+      - "target_potency_class"
+      - "species_context_match"
+      - "contradiction_flag"
+  fusion:
+    model: "regularized_logistic_regression"
+    calibrate: true
+    metrics:
+      - "PR-AUC"
+      - "enrichment_top_20"
+      - "recall"
+      - "brier_score"

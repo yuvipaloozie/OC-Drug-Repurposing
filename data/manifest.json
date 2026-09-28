@@ -1,0 +1,61 @@
+{
+  "manifest_version": "1.0.0",
+  "created_at": "2026-09-28T15:00:00Z",
+  "project": "Osteoclast Drug Repurposing With Molecular and Mechanism Graphs",
+  "sources": [
+    {
+      "source_name": "PubTator 3.0",
+      "version": "API v3.0 (2026)",
+      "retrieval_date": "2026-09-28",
+      "url": "https://www.ncbi.nlm.nih.gov/research/pubtator3-api/",
+      "license": "Public Domain (US Government Work)",
+      "selection_query": "osteoclast differentiation AND (metabolism OR epigenetic OR serine OR glutaminolysis OR PRMT6 OR itaconate)",
+      "checksum_sha256": "initial_seed_snapshot"
+    },
+    {
+      "source_name": "Rhea Biochemical Reactions",
+      "version": "Release 132",
+      "retrieval_date": "2026-09-28",
+      "url": "https://www.rhea-db.org/",
+      "license": "CC BY 4.0",
+      "selection_query": "Reactions linked to EC:1.1.1.95 (PHGDH), EC:2.6.1.52 (PSAT1), EC:3.1.3.3 (PSPH), EC:3.5.1.2 (GLS), EC:4.1.1.17 (ACOD1)",
+      "checksum_sha256": "rhea_2026_subset"
+    },
+    {
+      "source_name": "Reactome",
+      "version": "Release 89",
+      "retrieval_date": "2026-09-28",
+      "url": "https://reactome.org/download-data",
+      "license": "CC BY 4.0",
+      "selection_query": "R-HSA-5668541 (TNFRSF11A/RANK signaling), R-HSA-70635 (Glutamate metabolism)",
+      "checksum_sha256": "reactome_rel89_subset"
+    },
+    {
+      "source_name": "ChEBI",
+      "version": "Release 232",
+      "retrieval_date": "2026-09-28",
+      "url": "https://www.ebi.ac.uk/chebi/",
+      "license": "CC BY 4.0",
+      "selection_query": "Entity normalization dictionary for osteoclast metabolic intermediates",
+      "checksum_sha256": "chebi_rel232_subset"
+    },
+    {
+      "source_name": "ChEMBL",
+      "version": "Release 34",
+      "retrieval_date": "2026-09-28",
+      "url": "https://www.ebi.ac.uk/chembl/",
+      "license": "CC BY-SA 3.0",
+      "selection_query": "Target bioactivity assays for human PHGDH (CHEMBL4203), PRMT6 (CHEMBL5472), GLS (CHEMBL2047), SIRT3 (CHEMBL4845), RANKL (CHEMBL4077)",
+      "checksum_sha256": "chembl34_target_assays"
+    },
+    {
+      "source_name": "Drugs@FDA / openFDA",
+      "version": "Q3 2026 Snapshot",
+      "retrieval_date": "2026-09-28",
+      "url": "https://open.fda.gov/apis/drug/label/",
+      "license": "CC0 1.0",
+      "selection_query": "Active ingredient level FDA approved small molecule product list",
+      "checksum_sha256": "openfda_approved_202609"
+    }
+  ]
+}
