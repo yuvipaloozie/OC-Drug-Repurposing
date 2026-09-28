@@ -57,11 +57,14 @@ def build_clean_app(data_dir: str, output_paths: list):
     TF_SET = {
         'HGNC:NFATC1', 'HGNC:FOS', 'HGNC:JUN', 'HGNC:SPI1', 'HGNC:MITF', 'HGNC:TFE3',
         'HGNC:CEBPA', 'HGNC:CREB1', 'HGNC:NFKB1', 'HGNC:RELA', 'HGNC:NFKB2', 'HGNC:RELB',
-        'HGNC:IRF8', 'HGNC:PRDM1', 'HGNC:BCL6', 'HGNC:RBPJ', 'HGNC:MAFB', 'HGNC:TGIF2'
+        'HGNC:REL', 'HGNC:IRF8', 'HGNC:PRDM1', 'HGNC:BCL6', 'HGNC:RBPJ', 'HGNC:MAFB', 'HGNC:TGIF2',
+        'HGNC:SREBF2', 'HGNC:IRF7', 'HGNC:HIF1A'
     }
     EPIGENETIC_SET = {
         'HGNC:PRMT6', 'HGNC:KDM6B', 'HGNC:KDM4A', 'HGNC:EZH2', 'HGNC:SIRT3', 'HGNC:PDHA1',
-        'HGNC:EP300', 'HGNC:TET2', 'CHREV:H3K27me3_demethylation_Nfatc1',
+        'HGNC:EP300', 'HGNC:TET2', 'HGNC:DNMT3A', 'HGNC:DPY30', 'HGNC:ASXL1', 'HGNC:HDAC1',
+        'HGNC:HDAC2', 'HGNC:HDAC5', 'HGNC:SIRT1', 'HGNC:SIRT6',
+        'CHREV:H3K27me3_demethylation_Nfatc1',
         'CHREV:H3R2me2a_fao_promoters', 'CHREV:H3K9ac_H3K27ac_promoters',
         'CHREV:TET2_5hmC_hydroxymethylation', 'CHREV:EZH2_H3K27me3_repression'
     }
@@ -73,7 +76,11 @@ def build_clean_app(data_dir: str, output_paths: list):
         'HGNC:ACOD1', 'HGNC:SRC', 'HGNC:PTK2B', 'HGNC:SYK', 'HGNC:BTK', 'HGNC:PLCG2',
         'HGNC:PPP3CA', 'HGNC:CAMK4', 'HGNC:CHUK', 'HGNC:IKBKB', 'HGNC:IKBKG', 'HGNC:MAP3K14',
         'HGNC:MAP3K7', 'HGNC:MAPK14', 'HGNC:MAPK8', 'HGNC:MAPK1', 'HGNC:CTSK', 'HGNC:ACP5',
-        'HGNC:MMP9', 'HGNC:CA2', 'HGNC:CBLB'
+        'HGNC:MMP9', 'HGNC:CA2', 'HGNC:CBLB', 'HGNC:CBL', 'HGNC:CYLD', 'HGNC:MAP3K1',
+        'HGNC:MAP3K5', 'HGNC:RAF1', 'HGNC:MAP2K1', 'HGNC:MAP2K2', 'HGNC:MAP2K3', 'HGNC:MAP2K6',
+        'HGNC:MAP2K4', 'HGNC:MAP2K7', 'HGNC:MAPK3', 'HGNC:MAPK11', 'HGNC:MAPK12', 'HGNC:MAPK13',
+        'HGNC:MAPK9', 'HGNC:MAPK10', 'HGNC:PIK3CA', 'HGNC:AKT1', 'HGNC:GSK3B', 'HGNC:TEC',
+        'HGNC:DUSP1', 'HGNC:DUSP6', 'HGNC:PPM1D', 'HGNC:MMP2', 'HGNC:MMP3', 'HGNC:MMP8', 'HGNC:MMP13'
     }
 
     classified_nodes = []
@@ -84,7 +91,7 @@ def build_clean_app(data_dir: str, output_paths: list):
             category = "transcription_factor"
         elif nid in EPIGENETIC_SET or ntype == "chromatin_event":
             category = "epigenetics"
-        elif ntype in ["mrna", "mirna"]:
+        elif ntype in ["mrna", "mirna"] or nid.startswith("RNA:") or nid.startswith("MIRNA:") or nid.startswith("MRNA:"):
             category = "rna"
         elif nid in ENZYME_SET:
             category = "enzyme"
