@@ -53,6 +53,35 @@ def build_clean_app(data_dir: str, output_paths: list):
     for edge in edges:
         edge["evidence"] = ev_map.get(edge["edge_id"], [])
 
+    # Calculate degree and literature mention counts per node
+    node_papers = {}
+    node_ev_counts = {}
+    node_degrees = {}
+    for n in nodes:
+        nid = n["node_id"]
+        node_papers[nid] = set()
+        node_ev_counts[nid] = 0
+        node_degrees[nid] = 0
+
+    for e in edges:
+        s = e["source_id"]
+        t = e["target_id"]
+        if s in node_degrees:
+            node_degrees[s] += 1
+        if t in node_degrees:
+            node_degrees[t] += 1
+        ev_list = e.get("evidence", [])
+        for ev in ev_list:
+            paper = ev.get("paper_id", "")
+            if s in node_papers and paper:
+                node_papers[s].add(paper)
+            if t in node_papers and paper:
+                node_papers[t].add(paper)
+            if s in node_ev_counts:
+                node_ev_counts[s] += 1
+            if t in node_ev_counts:
+                node_ev_counts[t] += 1
+
     # Exact Classification rules based on user request
     TF_SET = {
         'HGNC:NFATC1', 'HGNC:FOS', 'HGNC:JUN', 'HGNC:SPI1', 'HGNC:MITF', 'HGNC:TFE3',
@@ -61,9 +90,9 @@ def build_clean_app(data_dir: str, output_paths: list):
         'HGNC:SREBF2', 'HGNC:IRF7', 'HGNC:HIF1A'
     }
     EPIGENETIC_SET = {
-        'HGNC:PRMT6', 'HGNC:KDM6B', 'HGNC:KDM4A', 'HGNC:EZH2', 'HGNC:SIRT3', 'HGNC:PDHA1',
+        'HGNC:PRMT6', 'HGNC:KDM6B', 'HGNC:KDM4A', 'HGNC:EZH2', 'HGNC:SIRT1', 'HGNC:SIRT3', 'HGNC:SIRT6',
         'HGNC:EP300', 'HGNC:TET2', 'HGNC:DNMT3A', 'HGNC:DPY30', 'HGNC:ASXL1', 'HGNC:HDAC1',
-        'HGNC:HDAC2', 'HGNC:HDAC5', 'HGNC:SIRT1', 'HGNC:SIRT6',
+        'HGNC:HDAC2', 'HGNC:HDAC5',
         'CHREV:H3K27me3_demethylation_Nfatc1',
         'CHREV:H3R2me2a_fao_promoters', 'CHREV:H3K9ac_H3K27ac_promoters',
         'CHREV:TET2_5hmC_hydroxymethylation', 'CHREV:EZH2_H3K27me3_repression'
@@ -80,7 +109,8 @@ def build_clean_app(data_dir: str, output_paths: list):
         'HGNC:MAP3K5', 'HGNC:RAF1', 'HGNC:MAP2K1', 'HGNC:MAP2K2', 'HGNC:MAP2K3', 'HGNC:MAP2K6',
         'HGNC:MAP2K4', 'HGNC:MAP2K7', 'HGNC:MAPK3', 'HGNC:MAPK11', 'HGNC:MAPK12', 'HGNC:MAPK13',
         'HGNC:MAPK9', 'HGNC:MAPK10', 'HGNC:PIK3CA', 'HGNC:AKT1', 'HGNC:GSK3B', 'HGNC:TEC',
-        'HGNC:DUSP1', 'HGNC:DUSP6', 'HGNC:PPM1D', 'HGNC:MMP2', 'HGNC:MMP3', 'HGNC:MMP8', 'HGNC:MMP13'
+        'HGNC:DUSP1', 'HGNC:DUSP6', 'HGNC:PPM1D', 'HGNC:MMP2', 'HGNC:MMP3', 'HGNC:MMP8', 'HGNC:MMP13',
+        'HGNC:PDHA1'
     }
 
     classified_nodes = []
@@ -108,6 +138,9 @@ def build_clean_app(data_dir: str, output_paths: list):
 
         item = dict(n)
         item["category"] = category
+        item["paper_count"] = len(node_papers.get(nid, set()))
+        item["evidence_count"] = node_ev_counts.get(nid, 0)
+        item["degree"] = node_degrees.get(nid, 0)
         classified_nodes.append(item)
 
     kg_payload = {
@@ -268,14 +301,14 @@ def build_clean_app(data_dir: str, output_paths: list):
 
     // Pathway memberships
     const PATHWAY_MEMBERS = {{
-      'glycolysis': ['HGNC:HK2', 'HGNC:GPI', 'HGNC:PFKFB3', 'HGNC:PFKM', 'HGNC:ALDOA', 'HGNC:GAPDH', 'HGNC:PGK1', 'HGNC:PGAM1', 'HGNC:ENO1', 'HGNC:PKM', 'HGNC:LDHA', 'CHEBI:17234', 'CHEBI:14314', 'CHEBI:15946', 'CHEBI:16905', 'CHEBI:17138', 'CHEBI:16001', 'CHEBI:17794', 'CHEBI:17835', 'CHEBI:18021', 'CHEBI:32816', 'CHEBI:16651', 'CHEMBL:2DG', 'CHEMBL:SHOKI3', 'CHEMBL:PFK15', 'MRNA:Pkm', 'MRNA:Pfkfb3'],
-      'tca': ['HGNC:CS', 'HGNC:ACO2', 'HGNC:IDH2', 'HGNC:OGDH', 'HGNC:SUCLG1', 'HGNC:SDHA', 'HGNC:FH', 'HGNC:MDH2', 'HGNC:PC', 'HGNC:GLS', 'HGNC:PHGDH', 'HGNC:PSAT1', 'HGNC:PSPH', 'HGNC:ACOD1', 'CHEBI:15351', 'CHEBI:16947', 'CHEBI:32838', 'CHEBI:30887', 'CHEBI:30915', 'CHEBI:15380', 'CHEBI:15741', 'CHEBI:18012', 'CHEBI:15589', 'CHEBI:16452', 'CHEBI:30805', 'CHEBI:18050', 'CHEBI:16015', 'CHEBI:17115', 'CHEMBL:CBR5884', 'CHEMBL:CB839', 'CHEMBL:4OI'],
-      'epigenetics': ['HGNC:PRMT6', 'HGNC:KDM6B', 'HGNC:KDM4A', 'HGNC:EZH2', 'HGNC:SIRT3', 'HGNC:PDHA1', 'HGNC:EP300', 'HGNC:TET2', 'CHREV:H3K27me3_demethylation_Nfatc1', 'CHREV:H3R2me2a_fao_promoters', 'CHREV:H3K9ac_H3K27ac_promoters', 'CHREV:TET2_5hmC_hydroxymethylation', 'CHREV:EZH2_H3K27me3_repression', 'CHEMBL:EPZ020411'],
-      'signaling': ['HGNC:TNFSF11', 'HGNC:TNFRSF11A', 'HGNC:TRAF6', 'HGNC:CHUK', 'HGNC:IKBKB', 'HGNC:IKBKG', 'HGNC:NFKB1', 'HGNC:RELA', 'HGNC:MAPK14', 'HGNC:MAPK8', 'HGNC:MAPK1', 'HGNC:FOS', 'HGNC:JUN', 'HGNC:NFATC1', 'HGNC:TYROBP', 'HGNC:FCER1G', 'HGNC:OSCAR', 'HGNC:TREM2', 'HGNC:SYK', 'HGNC:BTK', 'HGNC:BLNK', 'HGNC:PLCG2', 'HGNC:PPP3CA', 'HGNC:CALM1', 'CHEMBL:FK506', 'CHEMBL:DENOSUMAB'],
-      'fusion': ['HGNC:DCSTAMP', 'HGNC:OCSTAMP', 'HGNC:ATP6V0D2', 'HGNC:SNX10', 'HGNC:MSN', 'STRUCT:syncytium', 'MRNA:Dcstamp', 'STAGE:syncytium_prefusion_polykaryon'],
-      'cytoskeleton': ['HGNC:ITGAV', 'HGNC:ITGB3', 'HGNC:SRC', 'HGNC:PTK2B', 'HGNC:VAV3', 'HGNC:RAC1', 'HGNC:CDC42', 'HGNC:RHOA', 'HGNC:CTTN', 'HGNC:WAS', 'STRUCT:podosome_belt', 'STRUCT:f_actin_sealing_zone', 'CHEMBL:DASATINIB', 'CHEMBL:SARACATINIB'],
-      'resorption': ['HGNC:TCIRG1', 'HGNC:ATP6V1C1', 'HGNC:ATP6AP1', 'HGNC:CLCN7', 'HGNC:OSTM1', 'HGNC:CA2', 'HGNC:ACP5', 'HGNC:CTSK', 'HGNC:MMP9', 'STRUCT:resorption_lacuna', 'MRNA:Acp5', 'MRNA:Ctsk', 'PHENO:bone_resorption', 'PHENO:trap_production'],
-      'brakes': ['HGNC:IRF8', 'HGNC:PRDM1', 'HGNC:BCL6', 'HGNC:RBPJ', 'HGNC:GNA13', 'HGNC:IFNB1', 'HGNC:IFNAR1', 'HGNC:IFT80', 'HGNC:CBLB', 'HGNC:XPO1', 'CHEMBL:SELINEXOR'],
+      'glycolysis': ['HGNC:HK2', 'HGNC:GPI', 'HGNC:PFKFB3', 'HGNC:PFKM', 'HGNC:ALDOA', 'HGNC:GAPDH', 'HGNC:PGK1', 'HGNC:PGAM1', 'HGNC:ENO1', 'HGNC:PKM', 'HGNC:LDHA', 'HGNC:HIF1A', 'CHEBI:17234', 'CHEBI:14314', 'CHEBI:15946', 'CHEBI:16905', 'CHEBI:17138', 'CHEBI:16001', 'CHEBI:17794', 'CHEBI:17835', 'CHEBI:18021', 'CHEBI:32816', 'CHEBI:16651', 'CHEMBL:2DG', 'CHEMBL:SHOKI3', 'CHEMBL:PFK15', 'MRNA:Pkm', 'MRNA:Pfkfb3'],
+      'tca': ['HGNC:PDHA1', 'HGNC:CS', 'HGNC:ACO2', 'HGNC:IDH2', 'HGNC:OGDH', 'HGNC:SUCLG1', 'HGNC:SDHA', 'HGNC:FH', 'HGNC:MDH2', 'HGNC:PC', 'HGNC:GLS', 'HGNC:PHGDH', 'HGNC:PSAT1', 'HGNC:PSPH', 'HGNC:ACOD1', 'CHEBI:15351', 'CHEBI:16947', 'CHEBI:32838', 'CHEBI:30887', 'CHEBI:30915', 'CHEBI:15380', 'CHEBI:15741', 'CHEBI:18012', 'CHEBI:15589', 'CHEBI:16452', 'CHEBI:30805', 'CHEBI:18050', 'CHEBI:16015', 'CHEBI:17115', 'CHEBI:26523', 'CHEMBL:CBR5884', 'CHEMBL:CB839', 'CHEMBL:4OI'],
+      'epigenetics': ['HGNC:PRMT6', 'HGNC:KDM6B', 'HGNC:KDM4A', 'HGNC:EZH2', 'HGNC:SIRT1', 'HGNC:SIRT3', 'HGNC:SIRT6', 'HGNC:DNMT3A', 'HGNC:DPY30', 'HGNC:ASXL1', 'HGNC:HDAC1', 'HGNC:HDAC2', 'HGNC:HDAC5', 'HGNC:EP300', 'HGNC:TET2', 'CHREV:H3K27me3_demethylation_Nfatc1', 'CHREV:H3R2me2a_fao_promoters', 'CHREV:H3K9ac_H3K27ac_promoters', 'CHREV:TET2_5hmC_hydroxymethylation', 'CHREV:EZH2_H3K27me3_repression', 'MIRNA:mmu-miR-146a-5p', 'MIRNA:mmu-miR-124-3p', 'MIRNA:mmu-miR-19a-3p', 'MIRNA:mmu-miR-21a-5p', 'RNA:lncRNA_AW011738', 'CHEMBL:EPZ020411'],
+      'signaling': ['HGNC:TNFSF11', 'HGNC:TNFRSF11A', 'HGNC:TRAF6', 'HGNC:MAP3K7', 'HGNC:TAB1', 'HGNC:TAB2', 'HGNC:CHUK', 'HGNC:IKBKB', 'HGNC:IKBKG', 'HGNC:NFKBIA', 'HGNC:NFKB1', 'HGNC:RELA', 'HGNC:MAP3K14', 'HGNC:NFKB2', 'HGNC:RELB', 'HGNC:MAP3K5', 'HGNC:MAP2K3', 'HGNC:MAP2K6', 'HGNC:MAPK14', 'HGNC:MAPK11', 'HGNC:MAPK12', 'HGNC:MAPK13', 'HGNC:MAP3K1', 'HGNC:MAP2K4', 'HGNC:MAP2K7', 'HGNC:MAPK8', 'HGNC:MAPK9', 'HGNC:MAPK10', 'HGNC:CSF1', 'HGNC:CSF1R', 'HGNC:RAF1', 'HGNC:MAP2K1', 'HGNC:MAP2K2', 'HGNC:MAPK3', 'HGNC:MAPK1', 'HGNC:CREB1', 'HGNC:FOS', 'HGNC:JUN', 'HGNC:NFATC1', 'HGNC:TYROBP', 'HGNC:FCER1G', 'HGNC:OSCAR', 'HGNC:TREM2', 'HGNC:SIRPB1', 'HGNC:PIRA', 'HGNC:SYK', 'HGNC:LCP2', 'HGNC:BTK', 'HGNC:TEC', 'HGNC:PLCG2', 'CHEBI:29108', 'HGNC:CALM1', 'HGNC:PPP3CA', 'HGNC:CAMK4', 'MRNA:Nfatc1', 'CHEMBL:FK506', 'CHEMBL:DENOSUMAB'],
+      'fusion': ['HGNC:DCSTAMP', 'HGNC:OCSTAMP', 'HGNC:ATP6V0D2', 'HGNC:CD9', 'HGNC:CD47', 'HGNC:SNX10', 'HGNC:MSN', 'STRUCT:syncytium', 'MRNA:Dcstamp', 'STAGE:syncytium_prefusion_polykaryon', 'STAGE:mature_resorbing_osteoclast'],
+      'cytoskeleton': ['HGNC:ITGAV', 'HGNC:ITGB3', 'HGNC:SRC', 'HGNC:PTK2B', 'HGNC:VAV3', 'HGNC:RAC1', 'HGNC:CDC42', 'HGNC:RHOA', 'HGNC:CTTN', 'HGNC:WAS', 'HGNC:CBL', 'STRUCT:podosome_belt', 'STRUCT:f_actin_sealing_zone', 'STRUCT:resorption_lacuna', 'CHEMBL:DASATINIB', 'CHEMBL:SARACATINIB'],
+      'resorption': ['HGNC:CA2', 'CHEBI:17544', 'CHEBI:17996', 'HGNC:TCIRG1', 'HGNC:ATP6V1C1', 'HGNC:ATP6AP1', 'HGNC:ATP6V0D2', 'HGNC:CLCN7', 'STRUCT:ruffled_border', 'STRUCT:resorption_lacuna', 'HGNC:CTSK', 'HGNC:ACP5', 'HGNC:MMP2', 'HGNC:MMP3', 'HGNC:MMP8', 'HGNC:MMP9', 'HGNC:MMP13', 'HGNC:TIMP1', 'HGNC:TIMP2', 'HGNC:TIMP3', 'HGNC:CST6', 'MRNA:Acp5', 'MRNA:Ctsk', 'PHENO:bone_resorption', 'PHENO:trap_production'],
+      'brakes': ['HGNC:IRF8', 'HGNC:PRDM1', 'HGNC:BCL6', 'HGNC:SREBF2', 'HGNC:IRF7', 'HGNC:GNA13', 'HGNC:RGS10', 'HGNC:RGS12', 'HGNC:DUSP1', 'HGNC:DUSP6', 'HGNC:PPM1D', 'HGNC:AMBN', 'HGNC:CYLD', 'HGNC:CBLB', 'HGNC:IFT80', 'HGNC:IFNG', 'HGNC:IL4', 'HGNC:IL10', 'HGNC:IL13', 'HGNC:IL33', 'HGNC:RBPJ', 'HGNC:EFNB2', 'HGNC:EPHB4', 'HGNC:XPO1', 'CHEMBL:SELINEXOR'],
       'drugs': ['CHEMBL:DENOSUMAB', 'CHEMBL:ZOLEDRONATE', 'CHEMBL:ALENDRONATE', 'CHEMBL:DASATINIB', 'CHEMBL:SARACATINIB', 'CHEMBL:FK506', 'CHEMBL:SELINEXOR', 'CHEMBL:CBR5884', 'CHEMBL:CB839', 'CHEMBL:EPZ020411', 'CHEMBL:4OI', 'CHEMBL:2DG', 'CHEMBL:SHOKI3', 'CHEMBL:PFK15']
     }};
 
@@ -288,42 +321,45 @@ def build_clean_app(data_dir: str, output_paths: list):
       const w = rect.width;
       const h = rect.height;
 
-      // Group nodes into distinct columns across the white canvas
+      // Group nodes into distinct functional columns matching biological flow
       state.nodes = DATA.nodes.map((n, idx) => {{
         let x = w * 0.5 + (Math.random() - 0.5) * w * 0.75;
         let y = h * 0.5 + (Math.random() - 0.5) * h * 0.75;
 
         // Structured multi-column layout for immediate presentation
         if (n.category === 'drug') {{
-          x = w * 0.08 + (Math.random() - 0.5) * 60;
-          y = h * 0.15 + (idx % 8) * (h * 0.1);
-        }} else if (n.category === 'protein' && (n.node_id.includes('RANK') || n.node_id.includes('ITG') || n.node_id.includes('TYROBP') || n.node_id.includes('OSCAR'))) {{
-          x = w * 0.22 + (Math.random() - 0.5) * 50;
-        }} else if (n.category === 'enzyme' && (n.node_id.includes('HK') || n.node_id.includes('PFK') || n.node_id.includes('PKM') || n.node_id.includes('GLS') || n.node_id.includes('PHGDH'))) {{
-          x = w * 0.40 + (Math.random() - 0.5) * 80;
-          y = h * 0.22 + (Math.random() - 0.5) * 160;
+          x = w * 0.07 + (Math.random() - 0.5) * 50;
+          y = h * 0.12 + (idx % 14) * (h * 0.058);
+        }} else if (n.category === 'protein' && (n.node_id.includes('RANK') || n.node_id.includes('ITG') || n.node_id.includes('TYROBP') || n.node_id.includes('OSCAR') || n.node_id.includes('CSF') || n.node_id.includes('IL') || n.node_id.includes('TNF') || n.node_id.includes('TREM') || n.node_id.includes('EPH') || n.node_id.includes('PIR') || n.node_id.includes('SIRP') || n.node_id.includes('CD40') || n.node_id.includes('TLR4'))) {{
+          x = w * 0.20 + (Math.random() - 0.5) * 60;
+        }} else if (n.category === 'enzyme' || (n.category === 'protein' && (n.node_id.includes('MAP') || n.node_id.includes('IKB') || n.node_id.includes('SRC') || n.node_id.includes('SYK') || n.node_id.includes('PLC') || n.node_id.includes('AKT') || n.node_id.includes('PIK3') || n.node_id.includes('RAF') || n.node_id.includes('BTK') || n.node_id.includes('TEC') || n.node_id.includes('DUSP') || n.node_id.includes('GSK3')))) {{
+          x = w * 0.38 + (Math.random() - 0.5) * 80;
         }} else if (n.category === 'metabolite') {{
-          x = w * 0.48 + (Math.random() - 0.5) * 90;
-          y = h * 0.22 + (Math.random() - 0.5) * 160;
+          x = w * 0.46 + (Math.random() - 0.5) * 80;
+          y = h * 0.24 + (Math.random() - 0.5) * 160;
         }} else if (n.category === 'epigenetics') {{
-          x = w * 0.58 + (Math.random() - 0.5) * 70;
+          x = w * 0.56 + (Math.random() - 0.5) * 70;
           y = h * 0.42 + (Math.random() - 0.5) * 140;
         }} else if (n.category === 'transcription_factor') {{
-          x = w * 0.68 + (Math.random() - 0.5) * 70;
+          x = w * 0.67 + (Math.random() - 0.5) * 70;
           y = h * 0.50 + (Math.random() - 0.5) * 160;
         }} else if (n.category === 'rna') {{
-          x = w * 0.72 + (Math.random() - 0.5) * 50;
-          y = h * 0.25 + (Math.random() - 0.5) * 120;
-        }} else if (n.category === 'cellular_structure' || n.category === 'phenotype') {{
+          x = w * 0.76 + (Math.random() - 0.5) * 50;
+          y = h * 0.26 + (Math.random() - 0.5) * 130;
+        }} else if (n.category === 'cellular_structure' || n.category === 'phenotype' || n.category === 'differentiation_stage') {{
           x = w * 0.88 + (Math.random() - 0.5) * 50;
           y = h * 0.52 + (Math.random() - 0.5) * 180;
         }}
+
+        // Dynamic node radius: nodes repeated a lot in literature are significantly larger
+        const litWeight = (n.paper_count || 0) * 3.5 + (n.evidence_count || 0) * 0.8 + (n.degree || 0) * 0.5;
+        const radius = Math.min(32, Math.max(7.5, 7.5 + Math.sqrt(litWeight) * 2.8));
 
         return {{
           ...n,
           x: x,
           y: y,
-          radius: n.category === 'phenotype' ? 12 : (n.category === 'drug' ? 10 : 8)
+          radius: radius
         }};
       }});
 
@@ -487,19 +523,36 @@ def build_clean_app(data_dir: str, output_paths: list):
       const outEdges = state.edges.filter(e => e.source_id === node.node_id);
       const allEv = [...inEdges, ...outEdges].flatMap(e => e.evidence || []);
 
+      const litBadge = (node.paper_count >= 5) 
+        ? '<span class=\"px-2 py-0.5 rounded-full font-mono text-[10px] font-bold bg-amber-100 text-amber-800 border border-amber-300\">Major Literature Hub</span>'
+        : ((node.paper_count >= 2)
+          ? '<span class=\"px-2 py-0.5 rounded-full font-mono text-[10px] font-medium bg-indigo-50 text-indigo-700 border border-indigo-200\">Pathway Mediator</span>'
+          : '<span class=\"px-2 py-0.5 rounded-full font-mono text-[10px] text-slate-600 bg-slate-100\">Specific Intermediate</span>');
+
       let html = `
-        <div class="bg-slate-50 border border-slate-200 p-3 rounded-lg space-y-1.5 text-xs">
-          <div class="flex justify-between">
-            <span class="text-slate-500">ID:</span>
-            <span class="font-mono text-slate-800 font-medium">${{node.node_id}}</span>
+        <div class=\"bg-slate-50 border border-slate-200 p-3 rounded-lg space-y-2 text-xs\">
+          <div class=\"flex justify-between items-center pb-1.5 border-b border-slate-200\">
+            <span class=\"text-slate-500 font-medium\">Literature Evidence:</span>
+            <div class=\"flex items-center space-x-1.5\">
+              ${{litBadge}}
+              <span class=\"font-bold text-slate-800 font-mono text-[11px]\">${{node.paper_count || 0}} Studies</span>
+            </div>
           </div>
-          <div class="flex justify-between">
-            <span class="text-slate-500">Cellular Compartment:</span>
-            <span class="text-slate-700 capitalize font-medium">${{node.compartment || 'Unspecified'}}</span>
+          <div class=\"flex justify-between items-center\">
+            <span class=\"text-slate-500 font-medium\">Network Connectivity:</span>
+            <span class=\"font-semibold text-slate-800 font-mono text-[11px]\">${{node.degree || 0}} functional interactions</span>
           </div>
-          <div class="flex justify-between">
-            <span class="text-slate-500">Known Aliases:</span>
-            <span class="text-slate-600 truncate max-w-[180px]" title="${{node.aliases}}">${{node.aliases || 'None'}}</span>
+          <div class=\"flex justify-between\">
+            <span class=\"text-slate-500\">ID:</span>
+            <span class=\"font-mono text-slate-800 font-medium\">${{node.node_id}}</span>
+          </div>
+          <div class=\"flex justify-between\">
+            <span class=\"text-slate-500\">Cellular Compartment:</span>
+            <span class=\"text-slate-700 capitalize font-medium\">${{node.compartment || 'Unspecified'}}</span>
+          </div>
+          <div class=\"flex justify-between\">
+            <span class=\"text-slate-500\">Known Aliases:</span>
+            <span class=\"text-slate-600 truncate max-w-[180px]\" title=\"${{node.aliases}}\">${{node.aliases || 'None'}}</span>
           </div>
         </div>
       `;
