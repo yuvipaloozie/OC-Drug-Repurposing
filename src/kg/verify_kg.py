@@ -138,6 +138,33 @@ def run_verification(data_dir: str) -> Dict[str, Any]:
             "MRNA:Dcstamp",
             "MRNA:Acp5",
         ],
+        "Transcriptional Brakes": [
+            "HGNC:IRF8",
+            "HGNC:PRDM1",
+            "HGNC:BCL6",
+            "HGNC:GNA13",
+            "HGNC:IFNB1",
+        ],
+        "Co-stimulatory Receptors & Calcium Hubs": [
+            "HGNC:OSCAR",
+            "HGNC:TREM2",
+            "HGNC:RGS10",
+            "HGNC:RGS12",
+            "HGNC:BLNK",
+        ],
+        "V-ATPase & Lacunar Machinery": [
+            "HGNC:TCIRG1",
+            "HGNC:ATP6V0D2",
+            "HGNC:CLCN7",
+            "HGNC:OSTM1",
+            "HGNC:MMP9",
+        ],
+        "Therapeutic Probes & Anti-resorptives": [
+            "CHEMBL:DENOSUMAB",
+            "CHEMBL:ZOLEDRONATE",
+            "CHEMBL:SARACATINIB",
+            "CHEMBL:SELINEXOR",
+        ],
     }
 
     coverage_report = {}

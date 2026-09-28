@@ -112,6 +112,35 @@ class TestOsteoclastKG(unittest.TestCase):
         res_fk506 = filtered_kg.score_drug_mechanism("CHEMBL:FK506", desired_phenotype_effect=-1)
         self.assertTrue(res_fk506["mechanism_coverage"])
 
+    def test_denosumab_neutralization(self):
+        # Denosumab -> RANKL -> RANK -> TRAF6 -> NF-kB -> NFATc1 -> Differentiation
+        res = self.kg.score_drug_mechanism("CHEMBL:DENOSUMAB", desired_phenotype_effect=-1)
+        self.assertTrue(res["mechanism_coverage"])
+        found_nodes = {n for p in res["paths"] for n in p["nodes"]}
+        self.assertIn("HGNC:TNFSF11", found_nodes)
+        self.assertIn("HGNC:TNFRSF11A", found_nodes)
+        self.assertIn("HGNC:NFATC1", found_nodes)
+
+    def test_selinexor_xpo1_axis(self):
+        # Selinexor -> XPO1 -> NF-kB -> NFATc1 -> Differentiation
+        res = self.kg.score_drug_mechanism("CHEMBL:SELINEXOR", desired_phenotype_effect=-1)
+        self.assertTrue(res["mechanism_coverage"])
+        found_nodes = {n for p in res["paths"] for n in p["nodes"]}
+        self.assertIn("HGNC:XPO1", found_nodes)
+        self.assertIn("HGNC:NFKB1", found_nodes)
+
+    def test_irf8_blimp1_circuit(self):
+        # Verify Blimp1 represses IRF8, which represses NFATc1
+        out_edges = self.kg.adj_out.get("HGNC:PRDM1", [])
+        irf8_edge = [eid for tgt, eid in out_edges if tgt == "HGNC:IRF8"]
+        self.assertTrue(len(irf8_edge) > 0)
+        self.assertEqual(self.kg.edges[irf8_edge[0]]["sign"], -1)
+
+        irf8_out = self.kg.adj_out.get("HGNC:IRF8", [])
+        nfatc1_edge = [eid for tgt, eid in irf8_out if tgt == "HGNC:NFATC1"]
+        self.assertTrue(len(nfatc1_edge) > 0)
+        self.assertEqual(self.kg.edges[nfatc1_edge[0]]["sign"], -1)
+
 
 if __name__ == "__main__":
     unittest.main()
