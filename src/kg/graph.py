@@ -121,7 +121,7 @@ class OsteoclastKnowledgeGraph:
         self,
         drug_node_id: str,
         target_phenotype_id: str = "PHENO:osteoclast_differentiation",
-        max_depth: int = 5,
+        max_depth: int = 8,
     ) -> List[Dict[str, Any]]:
         """
         Finds biologically typed directed paths from drug to osteoclast phenotype.
@@ -175,6 +175,7 @@ class OsteoclastKnowledgeGraph:
         drug_node_id: str,
         desired_phenotype_effect: int = -1,  # -1 means inhibit osteoclastogenesis
         target_phenotype_id: str = "PHENO:osteoclast_differentiation",
+        max_depth: int = 8,
     ) -> Dict[str, Any]:
         """
         Scores a drug candidate based on surviving validated paths:
@@ -183,7 +184,7 @@ class OsteoclastKnowledgeGraph:
         - Counts direct osteoclast experimental evidence.
         - Checks for contradictions.
         """
-        raw_paths = self.find_mechanism_paths(drug_node_id, target_phenotype_id)
+        raw_paths = self.find_mechanism_paths(drug_node_id, target_phenotype_id, max_depth=max_depth)
         if not raw_paths:
             return {
                 "drug_id": drug_node_id,

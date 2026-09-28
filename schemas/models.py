@@ -6,6 +6,12 @@ Defines the five canonical tables:
 3. experiments
 4. edge_evidence
 5. contexts
+
+Strictly filtered to:
+- Osteoclastogenesis
+- RANKL-induced osteoclast differentiation in RAW 264.7 and primary mouse BMMs.
+- Metabolic pathways (glycolysis, TCA, amino acids), actin dynamics, syncytium fusion,
+  histone states, transcription factors, miRNA, and mRNA translation.
 """
 
 from dataclasses import dataclass, field, asdict
@@ -20,6 +26,10 @@ class NodeType(str, Enum):
     REACTION = "reaction"
     CHROMATIN_EVENT = "chromatin_event"
     GENE = "gene"
+    MRNA = "mrna"
+    MIRNA = "mirna"
+    CELLULAR_STRUCTURE = "cellular_structure"
+    DIFFERENTIATION_STAGE = "differentiation_stage"
     PHENOTYPE = "phenotype"
 
 
@@ -34,6 +44,12 @@ class EdgeRelation(str, Enum):
     ASSOCIATED_WITH = "ASSOCIATED_WITH"
     SECRETED_BY = "SECRETED_BY"
     TAKEN_UP_BY = "TAKEN_UP_BY"
+    SECRETED_INTO = "SECRETED_INTO"
+    TRANSCRIBED_FROM = "TRANSCRIBED_FROM"
+    TRANSLATED_TO = "TRANSLATED_TO"
+    TARGETS_MRNA = "TARGETS_MRNA"
+    FORMS_STRUCTURE = "FORMS_STRUCTURE"
+    TRANSITIONS_TO = "TRANSITIONS_TO"
 
 
 class EdgeStatus(str, Enum):
@@ -56,11 +72,11 @@ class EvidencePolarity(str, Enum):
 
 @dataclass
 class Node:
-    node_id: str  # Namespaced stable ID (e.g., HGNC:PHGDH, CHEBI:16810, CHEMBL:CHEMBL25)
+    node_id: str  # Namespaced stable ID (e.g., HGNC:PHGDH, CHEBI:16810, CHEMBL:CHEMBL25, MRNA:Nfatc1, MIRNA:miR-21)
     type: str  # NodeType
     name: str
-    taxon: str  # 'human', 'mouse', 'all'
-    compartment: Optional[str] = None  # cytoplasm, nucleus, mitochondria, extracellular
+    taxon: str  # 'mouse', 'human', 'all'
+    compartment: Optional[str] = None  # cytoplasm, nucleus, mitochondria, extracellular, plasma_membrane
     aliases: str = ""  # Pipe-separated aliases
 
     def to_dict(self) -> Dict[str, Any]:
@@ -73,7 +89,7 @@ class Edge:
     source_id: str
     relation: str  # EdgeRelation
     target_id: str
-    sign: int  # -1 (inhibition/repression), +1 (activation/production), 0 (unsigned/reaction)
+    sign: int  # -1 (inhibition/repression), +1 (activation/production), 0 (unsigned/reaction/structural)
     context_id: str
     source_db: str  # pubmed, pubtator, rhea, reactome, chembl
     source_record_id: str  # PMID:..., RHEA:..., etc.
@@ -86,16 +102,16 @@ class Edge:
 @dataclass
 class Experiment:
     experiment_id: str
-    paper_id: str  # PMID:... or PMC:...
-    model_system: str  # in_vitro, in_vivo, cell_free
-    species: str  # mouse, human, rat
-    cell_type: str  # bone marrow macrophage, RAW264.7, PBMC, osteoclast, osteoblast
-    differentiation_stage: str  # quiescent, early differentiation, multinucleated osteoclast
-    treatment: str
+    paper_id: str  # PMID:...
+    model_system: str  # in_vitro, ex_vivo
+    species: str  # mouse (strictly mouse for BMMs / RAW 264.7)
+    cell_type: str  # bone marrow macrophage (BMM), RAW 264.7
+    differentiation_stage: str  # uncommitted, early pre-osteoclast, committed mononuclear TRAP+, syncytium, mature multinucleated
+    treatment: str  # M-CSF + RANKL, RANKL alone, etc.
     dose: Optional[str] = None
     duration: Optional[str] = None
     endpoint: str = ""  # TRAP+ multinucleated cells, pit resorption area, F-actin ring, viability
-    assay: str = ""  # TRAP staining, qPCR, Western blot, metabolomics, RNA-seq, ChIP-seq
+    assay: str = ""  # TRAP staining, qPCR, Western blot, metabolomics, RNA-seq, ChIP-seq, pit assay
     measured_effect: str = ""  # quantitative or qualitative effect
     viability: str = "not reported"  # MTT, CCK-8, LDH, Trypan blue, or 'not reported'
     figure_or_table: str = ""
@@ -121,11 +137,11 @@ class EdgeEvidence:
 @dataclass
 class Context:
     context_id: str
-    species: str
-    cell_type: str
+    species: str  # mouse
+    cell_type: str  # bone marrow macrophage, RAW 264.7
     stage: str
     compartment: Optional[str] = None
-    disease_setting: Optional[str] = None  # physiological, osteoporosis_OVX, rheumatoid_arthritis
+    disease_setting: Optional[str] = None  # physiological, RANKL_induced_osteoclastogenesis
     note: str = ""
 
     def to_dict(self) -> Dict[str, Any]:
