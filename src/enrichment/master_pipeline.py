@@ -154,6 +154,32 @@ def run_master_pipeline():
         en["flux_kinetics"] = pan_prof["flux_kinetics"]
         en["pan_literature"] = pan_prof.get("literature", [])
         
+        # E. Attach Interactive 3D Molecular Conformation Viewers & Unified Pan-Disease Summary
+        if "alphafold_id" in en or "uniprot_id" in en:
+            af_id = en.get("alphafold_id")
+            if not af_id or not af_id.startswith("AF-"):
+                af_id = f"AF-{en.get('uniprot_id', 'P01100')}-F1"
+            en["alphafold_3d_viewer"] = f"https://alphafold.ebi.ac.uk/entry/{af_id}"
+            en["molstar_viewer"] = f"https://molstar.org/viewer/?afdb={af_id}"
+            if en.get("pdb_id"):
+                en["rcsb_3d_viewer"] = f"https://www.rcsb.org/3d-view/{en['pdb_id']}"
+        if "smiles" in en and en["smiles"]:
+            import urllib.parse
+            en["molview_3d_viewer"] = f"https://molview.org/?smiles={urllib.parse.quote(en['smiles'])}"
+            en["pubchem_3d_viewer"] = f"https://pubchem.ncbi.nlm.nih.gov/#query={urllib.parse.quote(name)}"
+
+        pd_data = pan_prof["pan_disease"]
+        pan_parts = []
+        if pd_data.get("oncology"):
+            pan_parts.append(f"Oncology: {pd_data['oncology']}")
+        if pd_data.get("autoimmune_inflammatory"):
+            pan_parts.append(f"Autoimmune: {pd_data['autoimmune_inflammatory']}")
+        if pd_data.get("cardiovascular_metabolic"):
+            pan_parts.append(f"CVD: {pd_data['cardiovascular_metabolic']}")
+        if pd_data.get("neurodegenerative"):
+            pan_parts.append(f"Neuro: {pd_data['neurodegenerative']}")
+        en["pan_disease_associations"] = " | ".join(pan_parts)
+            
         # Tab 3: Pan-Disease & Clinical Genomics Row
         pd_data = pan_prof["pan_disease"]
         mut_data = pan_prof["mutations"]
@@ -528,6 +554,18 @@ def update_cypher_scripts(nodes, edges):
                 node_props.append(f"small_molecule_tractability: '{escape_cypher(n['small_molecule_tractability'])}'")
             if "recon3d_subsystem" in n:
                 node_props.append(f"recon3d_subsystem: '{escape_cypher(n['recon3d_subsystem'])}'")
+            if "alphafold_3d_viewer" in n:
+                node_props.append(f"alphafold_3d_viewer: '{escape_cypher(n['alphafold_3d_viewer'])}'")
+            if "molstar_viewer" in n:
+                node_props.append(f"molstar_viewer: '{escape_cypher(n['molstar_viewer'])}'")
+            if "rcsb_3d_viewer" in n:
+                node_props.append(f"rcsb_3d_viewer: '{escape_cypher(n['rcsb_3d_viewer'])}'")
+            if "molview_3d_viewer" in n:
+                node_props.append(f"molview_3d_viewer: '{escape_cypher(n['molview_3d_viewer'])}'")
+            if "pubchem_3d_viewer" in n:
+                node_props.append(f"pubchem_3d_viewer: '{escape_cypher(n['pubchem_3d_viewer'])}'")
+            if "pan_disease_associations" in n:
+                node_props.append(f"pan_disease_associations: '{escape_cypher(n['pan_disease_associations'])}'")
                 
             # Single cell pseudotime & polarization
             if "single_cell_trajectory" in n:
@@ -751,8 +789,22 @@ def update_cypher_scripts(nodes, edges):
                     val = escape_cypher(flux['flux_directionality'])
                     set_clauses.append(f"n.flux_directionality = '{val}'")
                     
+            if "alphafold_3d_viewer" in n:
+                set_clauses.append(f"n.alphafold_3d_viewer = '{escape_cypher(n['alphafold_3d_viewer'])}'")
+            if "molstar_viewer" in n:
+                set_clauses.append(f"n.molstar_viewer = '{escape_cypher(n['molstar_viewer'])}'")
+            if "rcsb_3d_viewer" in n:
+                set_clauses.append(f"n.rcsb_3d_viewer = '{escape_cypher(n['rcsb_3d_viewer'])}'")
+            if "molview_3d_viewer" in n:
+                set_clauses.append(f"n.molview_3d_viewer = '{escape_cypher(n['molview_3d_viewer'])}'")
+            if "pubchem_3d_viewer" in n:
+                set_clauses.append(f"n.pubchem_3d_viewer = '{escape_cypher(n['pubchem_3d_viewer'])}'")
+            if "pan_disease_associations" in n:
+                set_clauses.append(f"n.pan_disease_associations = '{escape_cypher(n['pan_disease_associations'])}'")
+                
             if set_clauses:
-                f.write(f"MATCH (n {{id: '{nid}'}}) SET {', '.join(set_clauses)};\n")
+                clean_sym = nid.split(":")[-1]
+                f.write(f"MATCH (n) WHERE n.id = '{nid}' OR n.node_id = '{nid}' OR n.id = '{clean_sym}' OR n.node_id = '{clean_sym}' SET {', '.join(set_clauses)};\n")
                 
     print(f"-> Generated: {cypher_import_path}")
     print(f"-> Generated: {cypher_enrich_path}")

@@ -129,10 +129,17 @@ def main():
     parser.add_argument("--host", default="localhost", help="Neo4j host (default: localhost)")
     parser.add_argument("--port", default=7474, type=int, help="Neo4j HTTP port (default: 7474)")
     parser.add_argument("--user", default="neo4j", help="Neo4j username (default: neo4j)")
-    parser.add_argument("--password", default=None, help="Neo4j password")
     parser.add_argument("--wait", action="store_true", help="Wait and poll until Neo4j is running")
     parser.add_argument("--reset", action="store_true", help="Delete existing graph before loading")
+    parser.add_argument("--enrich-only", action="store_true", help="Only run property enrichment (enrich_nodes.cypher) on existing nodes")
+    parser.add_argument("--file", default=None, help="Custom Cypher file to execute")
     args = parser.parse_args()
+
+    target_cypher = CYPHER_FILE
+    if args.enrich_only:
+        target_cypher = SCRIPT_DIR / "enrich_nodes.cypher"
+    elif args.file:
+        target_cypher = Path(args.file).resolve()
 
     password = args.password
     if not password:
@@ -189,8 +196,8 @@ def main():
             sys.exit(1)
         print("Existing graph cleared.")
 
-    print(f"\nReading statements from {CYPHER_FILE.name}...")
-    statements = parse_cypher_statements(CYPHER_FILE.read_text(encoding="utf-8"))
+    print(f"\nReading statements from {target_cypher.name}...")
+    statements = parse_cypher_statements(target_cypher.read_text(encoding="utf-8"))
     print(f"Parsed {len(statements)} Cypher blocks (constraints, nodes, relationships).")
 
     print("\nExecuting import transactions...")
