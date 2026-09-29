@@ -229,6 +229,12 @@ def build_kegg_app(data_dir: str, output_paths: list):
         'HGNC:ATP6V0D2': 'ATP6V0D2',
         'HGNC:TCIRG1': 'TCIRG1',
         'HGNC:CA2': 'CA2',
+        'HGNC:PPP3R1': 'Ppp3r1 (CNB1)',
+        'HGNC:PXN': 'Pxn (Paxillin)',
+        'HGNC:PTK2': 'Ptk2 (FAK)',
+        'HGNC:TAB3': 'Tab3',
+        'HGNC:SQSTM1': 'p62 (Sqstm1)',
+        'HGNC:UBE2N': 'Ubc13 (Ube2n)',
         'STRUCT:syncytium': 'Syncytium',
         'STRUCT:f_actin_sealing_zone': 'Sealing Zone',
         'STRUCT:podosome_belt': 'Podosome Belt',
@@ -317,11 +323,14 @@ def build_kegg_app(data_dir: str, output_paths: list):
         'HGNC:MAP3K7': (810, 610),
         'HGNC:TAB1': (810, 650),
         'HGNC:TAB2': (810, 690),
+        'HGNC:TAB3': (810, 730),
+        'HGNC:SQSTM1': (810, 520),
+        'HGNC:UBE2N': (710, 520),
         'HGNC:MAP2K6': (1010, 590),
         'HGNC:MAP2K7': (1010, 640),
         'HGNC:MAPK14': (1220, 590),
         'HGNC:MAPK8': (1220, 640),
-        'HGNC:RAC1': (810, 730),
+        'HGNC:RAC1': (810, 770),
 
         # ITAM / Calcium Flux
         'HGNC:SYK': (620, 810),
@@ -332,6 +341,7 @@ def build_kegg_app(data_dir: str, output_paths: list):
         'HGNC:PLCG2': (940, 810),
         'HGNC:CALM1': (1360, 780),
         'HGNC:PPP3CA': (1490, 780),
+        'HGNC:PPP3R1': (1610, 780),
         'HGNC:CAMK4': (1490, 850),
 
         # IFN-beta feedback
@@ -432,6 +442,8 @@ def build_kegg_app(data_dir: str, output_paths: list):
         'HGNC:ATP6V0D2': (2460, 880),
         'HGNC:CLCN7': (2460, 930),
         'HGNC:MMP9': (2460, 980),
+        'HGNC:PXN': (2580, 760),
+        'HGNC:PTK2': (2580, 820),
 
         # Phenotypes & Structures (X ~ 2680 - 2900)
         'STRUCT:syncytium': (2700, 700),
@@ -499,22 +511,9 @@ def build_kegg_app(data_dir: str, output_paths: list):
         nid = n["node_id"]
         ntype = n["type"]
 
-        if nid in TF_SET or ntype == "gene":
-            category = "transcription_factor"
-        elif nid in EPIGENETIC_SET or ntype == "chromatin_event":
-            category = "epigenetics"
-        elif ntype in ["mrna", "mirna"] or nid.startswith("RNA:") or nid.startswith("MIRNA:") or nid.startswith("MRNA:"):
-            category = "rna"
-        elif nid in ENZYME_SET:
-            category = "enzyme"
-        elif ntype == "metabolite":
-            category = "metabolite"
-        elif ntype == "drug":
-            category = "drug"
-        elif ntype in ["phenotype", "differentiation_stage"]:
-            category = "phenotype"
-        elif ntype == "cellular_structure":
-            category = "cellular_structure"
+        # Support the 8 distinct subtypes (protein partitioned into enzyme, transcription_factor, protein)
+        if ntype in ["protein", "enzyme", "transcription_factor", "extracellular_compound", "intracellular_compound", "gene", "reaction", "pathway"]:
+            category = ntype
         else:
             category = "protein"
 
@@ -529,10 +528,16 @@ def build_kegg_app(data_dir: str, output_paths: list):
                 short_name = nid.replace("HGNC:", "")
             elif nid.startswith("CHEMBL:"):
                 short_name = nid.replace("CHEMBL:", "")
+            elif nid.startswith("GENE:"):
+                short_name = nid.replace("GENE:", "")
             elif nid.startswith("MRNA:"):
                 short_name = nid.replace("MRNA:", "") + " mRNA"
             elif nid.startswith("MIRNA:"):
                 short_name = nid.replace("MIRNA:mmu-", "")
+            elif nid.startswith("PATHWAY:"):
+                short_name = nid.replace("PATHWAY:", "").replace("_", " ").title()[:18].strip()
+            elif nid.startswith("RXN:"):
+                short_name = nid.replace("RXN:", "").replace("CHROMATIN_", "").replace("_", " ").title()[:18].strip()
             elif nid.startswith("STRUCT:"):
                 short_name = nid.replace("STRUCT:", "").replace("_", " ")
             elif nid.startswith("PHENO:"):
@@ -697,17 +702,17 @@ def build_kegg_app(data_dir: str, output_paths: list):
     <div class="flex-1 relative bg-white" id="canvas-wrapper">
       <canvas id="kg-canvas" class="w-full h-full absolute inset-0 block cursor-grab"></canvas>
 
-      <!-- Category Legend (Clean minimal floating bar at top-left) -->
+      <!-- Category Legend (Clean minimal floating bar at bottom-left) -->
       <div class="absolute bottom-3 left-4 bg-white/95 border border-slate-300 rounded-md px-3 py-1.5 shadow-xs text-[11px] backdrop-blur-xs flex items-center space-x-3 pointer-events-auto">
-        <span class="font-bold text-slate-500 uppercase tracking-wider text-[10px]">Legend:</span>
-        <div class="flex items-center space-x-1.5"><span class="w-2.5 h-2.5 rounded-sm bg-[#dcfce7] border border-[#16a34a]"></span><span class="text-slate-700">Protein</span></div>
-        <div class="flex items-center space-x-1.5"><span class="w-2.5 h-2.5 rounded-sm bg-[#dbeafe] border border-[#2563eb]"></span><span class="text-slate-700">Enzyme</span></div>
-        <div class="flex items-center space-x-1.5"><span class="w-2.5 h-2.5 rounded-sm bg-[#ffedd5] border border-[#ea580c]"></span><span class="text-slate-700">Transcription Factor</span></div>
-        <div class="flex items-center space-x-1.5"><span class="w-2.5 h-2.5 rounded-sm bg-[#f3e8ff] border border-[#9333ea]"></span><span class="text-slate-700">Epigenetics</span></div>
-        <div class="flex items-center space-x-1.5"><span class="w-2.5 h-2.5 rounded-sm bg-[#fee2e2] border border-[#dc2626]"></span><span class="text-slate-700">RNA</span></div>
-        <div class="flex items-center space-x-1.5"><span class="w-2.5 h-2.5 rounded-sm bg-[#fef3c7] border border-[#d97706]"></span><span class="text-slate-700">Metabolite / Ion</span></div>
-        <div class="flex items-center space-x-1.5"><span class="w-2.5 h-2.5 rounded-sm bg-[#ccfbf1] border border-[#0d9488]"></span><span class="text-slate-700">Drug</span></div>
-        <div class="flex items-center space-x-1.5"><span class="w-2.5 h-2.5 rounded-sm bg-[#ffe4e6] border border-[#e11d48]"></span><span class="text-slate-700">Phenotype / Lacuna</span></div>
+        <span class="font-bold text-slate-500 uppercase tracking-wider text-[10px]">Subtypes:</span>
+        <div class="flex items-center space-x-1.5"><span class="w-3 h-3 rounded-sm bg-green-500/20 border-2 border-[#16a34a]"></span><span class="text-slate-700">Protein (Green)</span></div>
+        <div class="flex items-center space-x-1.5"><span class="w-3 h-3 rounded-sm bg-red-500/20 border-2 border-[#dc2626]"></span><span class="text-slate-700">Enzyme (Red)</span></div>
+        <div class="flex items-center space-x-1.5"><span class="w-3 h-3 rounded-sm bg-fuchsia-500/20 border-2 border-[#c026d3]"></span><span class="text-slate-700">Transcription Factor (Magenta)</span></div>
+        <div class="flex items-center space-x-1.5"><span class="w-3 h-3 rounded-sm bg-orange-500/20 border-2 border-[#ea580c]"></span><span class="text-slate-700">Gene (Orange)</span></div>
+        <div class="flex items-center space-x-1.5"><span class="w-3 h-3 rounded-sm bg-[#8b4513]/20 border-2 border-[#8b4513]"></span><span class="text-slate-700">Extracellular Compound (Brown)</span></div>
+        <div class="flex items-center space-x-1.5"><span class="w-3 h-3 rounded-sm bg-purple-500/20 border-2 border-[#9333ea]"></span><span class="text-slate-700">Intracellular Compound (Purple)</span></div>
+        <div class="flex items-center space-x-1.5"><span class="w-3 h-3 rounded-sm bg-blue-600/20 border-2 border-[#2563eb]"></span><span class="text-slate-700">Reaction (Royal Blue)</span></div>
+        <div class="flex items-center space-x-1.5"><span class="w-3 h-3 rounded-sm bg-cyan-500/20 border-2 border-[#0891b2]"></span><span class="text-slate-700">Pathway (Cyan)</span></div>
       </div>
     </div>
 
@@ -735,17 +740,18 @@ def build_kegg_app(data_dir: str, output_paths: list):
   <script>
     const DATA = {kg_json};
 
-    // User-Specified Pastel Color Palette with Crisp Borders (KEGG aesthetic)
+    // User-Specified Exact Color Palette: Transparent Fills with Opaque Borders
+    // protein: green, enzyme: red, transcription factor: magenta, gene: orange
+    // extracellular compound: brown, intracellular compound: purple, reaction: royal blue, pathway: cyan
     const COLOR_THEMES = {{
-      'protein': {{ bg: '#dcfce7', border: '#16a34a', text: '#14532d' }},
-      'enzyme': {{ bg: '#dbeafe', border: '#2563eb', text: '#1e3a8a' }},
-      'transcription_factor': {{ bg: '#ffedd5', border: '#ea580c', text: '#7c2d12' }},
-      'epigenetics': {{ bg: '#f3e8ff', border: '#9333ea', text: '#581c87' }},
-      'rna': {{ bg: '#fee2e2', border: '#dc2626', text: '#7f1d1d' }},
-      'metabolite': {{ bg: '#fef3c7', border: '#d97706', text: '#78350f' }},
-      'drug': {{ bg: '#ccfbf1', border: '#0d9488', text: '#134e4a' }},
-      'phenotype': {{ bg: '#ffe4e6', border: '#e11d48', text: '#881337' }},
-      'cellular_structure': {{ bg: '#ffe4e6', border: '#e11d48', text: '#881337' }}
+      'protein': {{ bg: 'rgba(34, 197, 94, 0.16)', border: '#16a34a', text: '#15803d' }},
+      'enzyme': {{ bg: 'rgba(239, 68, 68, 0.16)', border: '#dc2626', text: '#b91c1c' }},
+      'transcription_factor': {{ bg: 'rgba(217, 70, 239, 0.16)', border: '#c026d3', text: '#a21caf' }},
+      'gene': {{ bg: 'rgba(249, 115, 22, 0.16)', border: '#ea580c', text: '#c2410c' }},
+      'extracellular_compound': {{ bg: 'rgba(139, 69, 19, 0.16)', border: '#8b4513', text: '#78350f' }},
+      'intracellular_compound': {{ bg: 'rgba(147, 51, 234, 0.16)', border: '#9333ea', text: '#7e22ce' }},
+      'reaction': {{ bg: 'rgba(37, 99, 235, 0.16)', border: '#2563eb', text: '#1d4ed8' }},
+      'pathway': {{ bg: 'rgba(6, 182, 212, 0.16)', border: '#0891b2', text: '#0e7490' }}
     }};
 
     // Curated KEGG Pathway Member IDs
@@ -1171,7 +1177,7 @@ def build_kegg_app(data_dir: str, output_paths: list):
         ctx.fillStyle = theme.bg;
         ctx.fill();
         ctx.strokeStyle = (isSelected || isHovered) ? '#0f172a' : theme.border;
-        ctx.lineWidth = (isSelected || isHovered) ? 2 : (n.is_hub ? 1.5 : 1.2);
+        ctx.lineWidth = (isSelected || isHovered) ? 2.5 : (n.is_hub ? 2.0 : 1.6);
         ctx.stroke();
       }}
 
@@ -1237,7 +1243,17 @@ def build_kegg_app(data_dir: str, output_paths: list):
       const body = document.getElementById('fact-content');
 
       const theme = COLOR_THEMES[node.category] || {{ bg: '#64748b', border: '#475569', text: '#ffffff' }};
-      badge.textContent = node.category.replace('_', ' ');
+      const categoryLabels = {{
+        'protein': 'Protein',
+        'enzyme': 'Enzyme',
+        'transcription_factor': 'Transcription Factor',
+        'gene': 'Gene',
+        'extracellular_compound': 'Extracellular Compound',
+        'intracellular_compound': 'Intracellular Compound',
+        'reaction': 'Reaction',
+        'pathway': 'Pathway'
+      }};
+      badge.textContent = categoryLabels[node.category] || node.category.replace('_', ' ').toUpperCase();
       badge.style.backgroundColor = theme.border;
       title.textContent = `${{node.short_name}} (${{node.name}})`;
 

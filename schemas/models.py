@@ -20,17 +20,14 @@ from enum import Enum
 
 
 class NodeType(str, Enum):
-    DRUG = "drug"
-    PROTEIN = "protein"
-    METABOLITE = "metabolite"
-    REACTION = "reaction"
-    CHROMATIN_EVENT = "chromatin_event"
+    EXTRACELLULAR_COMPOUND = "extracellular_compound"
+    INTRACELLULAR_COMPOUND = "intracellular_compound"
     GENE = "gene"
-    MRNA = "mrna"
-    MIRNA = "mirna"
-    CELLULAR_STRUCTURE = "cellular_structure"
-    DIFFERENTIATION_STAGE = "differentiation_stage"
-    PHENOTYPE = "phenotype"
+    PROTEIN = "protein"
+    ENZYME = "enzyme"
+    TRANSCRIPTION_FACTOR = "transcription_factor"
+    REACTION = "reaction"
+    PATHWAY = "pathway"
 
 
 class EdgeRelation(str, Enum):
@@ -39,17 +36,12 @@ class EdgeRelation(str, Enum):
     CATALYZES = "CATALYZES"
     INPUT_TO = "INPUT_TO"
     OUTPUT_OF = "OUTPUT_OF"
+    TRANSPORTS = "TRANSPORTS"
     REGULATES = "REGULATES"
-    CHANGES_MODIFICATION = "CHANGES_MODIFICATION"
-    ASSOCIATED_WITH = "ASSOCIATED_WITH"
-    SECRETED_BY = "SECRETED_BY"
-    TAKEN_UP_BY = "TAKEN_UP_BY"
-    SECRETED_INTO = "SECRETED_INTO"
     TRANSCRIBED_FROM = "TRANSCRIBED_FROM"
     TRANSLATED_TO = "TRANSLATED_TO"
-    TARGETS_MRNA = "TARGETS_MRNA"
-    FORMS_STRUCTURE = "FORMS_STRUCTURE"
-    TRANSITIONS_TO = "TRANSITIONS_TO"
+    PART_OF = "PART_OF"
+    ASSOCIATED_WITH = "ASSOCIATED_WITH"
 
 
 class EdgeStatus(str, Enum):
