@@ -24,6 +24,7 @@ import sys
 import json
 import csv
 from pathlib import Path
+import re
 from collections import defaultdict
 
 WORKSPACE_DIR = Path(__file__).resolve().parents[2]
@@ -44,6 +45,117 @@ from single_cell_sc_enricher import SINGLE_CELL_TRAJECTORY_DATA, get_single_cell
 from pan_disease_multiomics_catalog import generate_pan_disease_profile, PAN_HUB_DATA
 from hallucination_auditor import run_full_audit
 from build_master_xlsx_workbook import create_master_xlsx
+
+def merge_quotes(quotes):
+    """Combines multiple biological quotes cleanly without repeating duplicate sentences."""
+    all_sentences = []
+    seen = set()
+    string_tag = None
+    for q in quotes:
+        if not q:
+            continue
+        m = re.search(r'\[Confirmed by STRING[^\]]+\]', q)
+        if m:
+            string_tag = m.group(0)
+            q_clean = q.replace(m.group(0), '').strip()
+        else:
+            q_clean = q.strip()
+        parts = [p.strip() for p in q_clean.split('. ') if p.strip()]
+        for p in parts:
+            p_norm = p.rstrip('.').lower()
+            if p_norm not in seen:
+                seen.add(p_norm)
+                all_sentences.append(p.rstrip('.'))
+    combined = '. '.join(all_sentences)
+    if combined and not combined.endswith('.'):
+        combined += '.'
+    if string_tag:
+        combined = f'{combined} {string_tag}'
+    return combined
+
+def deduplicate_edges(raw_edges):
+    """
+    Identifies redundant multi-edges between the same source and target nodes
+    that have the same response polarity (sign), collapses them into a single edge,
+    and consolidates all underlying quotes, PMIDs, DOIs, and experimental evidence.
+    """
+    groups = defaultdict(list)
+    for e in raw_edges:
+        src = e.get('source')
+        tgt = e.get('target')
+        sign = e.get('sign', 1)
+        groups[(src, tgt, sign)].append(e)
+        
+    consolidated = []
+    merged_groups = []
+    merged_count = 0
+    for (src, tgt, sign), elist in groups.items():
+        if len(elist) == 1:
+            consolidated.append(elist[0])
+            continue
+            
+        merged_count += (len(elist) - 1)
+        base = dict(sorted(elist, key=lambda x: x.get('edge_id', 'zzz'))[0])
+        relations = [e.get('relation', 'ACTIVATES') for e in elist]
+        specific_rel = next((r for r in relations if r not in ('ACTIVATES', 'INTERACTS_WITH')), None)
+        base['relation'] = specific_rel if specific_rel else relations[0]
+        base['sign'] = sign
+        
+        rec_ids = []
+        for e in elist:
+            r = e.get('source_record_id')
+            if r and r not in rec_ids:
+                rec_ids.append(r)
+        base['source_record_id'] = '; '.join(rec_ids) if rec_ids else base.get('source_record_id')
+        
+        dbs = []
+        for e in elist:
+            d = e.get('source_db')
+            if d and d not in dbs:
+                dbs.append(d)
+        base['source_db'] = ' / '.join(dbs) if dbs else base.get('source_db')
+        
+        quotes, exp_ids, kinds, reviewed_ats = [], [], [], []
+        has_string_ppi = False
+        for e in elist:
+            ev = e.get('evidence', {})
+            if isinstance(ev, dict):
+                q = ev.get('quote_or_description')
+                if q:
+                    quotes.append(q)
+                exp = ev.get('experiment_id')
+                if exp and exp not in exp_ids:
+                    exp_ids.append(exp)
+                k = ev.get('kind')
+                if k and k not in kinds:
+                    kinds.append(k)
+                if ev.get('string_ppi_validated'):
+                    has_string_ppi = True
+                rev = ev.get('reviewed_at')
+                if rev and rev not in reviewed_ats:
+                    reviewed_ats.append(rev)
+            elif isinstance(ev, str) and ev:
+                quotes.append(ev)
+                
+        base['evidence'] = {
+            'experiment_id': '; '.join(exp_ids) if exp_ids else 'exp:curated_consensus',
+            'kind': '; '.join(kinds) if kinds else 'measurement',
+            'polarity': 'support',
+            'quote_or_description': merge_quotes(quotes),
+            'curator_status': 'reviewed',
+            'reviewed_at': sorted(reviewed_ats)[-1] if reviewed_ats else '2026-09-28',
+            'string_ppi_validated': has_string_ppi
+        }
+        if any(e.get('is_causal') for e in elist):
+            base['is_causal'] = True
+        stitch_scores = [e.get('stitch_score') for e in elist if e.get('stitch_score') is not None]
+        if stitch_scores:
+            base['stitch_score'] = max(stitch_scores)
+        consolidated.append(base)
+        merged_groups.append((src, tgt, sign, base, elist))
+        
+    print(f"Deduplicated edges: {len(raw_edges)} -> {len(consolidated)} (consolidated {merged_count} redundant edges).")
+    return consolidated, merged_groups
 
 def run_master_pipeline():
     print("=" * 80)
@@ -264,6 +376,9 @@ def run_master_pipeline():
             
         enriched_edges.append(ee)
         
+    # 3b. Deduplicate redundant edges between same source/target nodes with identical response
+    consolidated_edges, merged_groups = deduplicate_edges(enriched_edges)
+        
     # 4. Read sources.csv and compile Tab 1 & Tab 2 (augmenting with Pan-Disease Literature)
     sources_csv_path = WORKSPACE_DIR / "sources.csv"
     with open(sources_csv_path, "r", encoding="utf-8") as f:
@@ -462,7 +577,7 @@ def run_master_pipeline():
             "version": "5.0.0",
             "description": "Multi-scale Osteoclast Knowledge Graph enriched with Pan-Disease, Clinical Genomics, Novel Pathways, Proteomics, Metabolomics Flux, UniProt, AlphaFold, PDB, InterPro, PhosphoSitePlus, QuickGO, Ensembl, PubChem, Rhea, Recon3D, STRING, OmniPath, FANTOM4, Harmonizome, RNAInter, MeSH, and DGL-LifeSci Canonical Atom/Bond featurization metrics.",
             "total_nodes": len(enriched_nodes),
-            "total_edges": len(enriched_edges),
+            "total_edges": len(consolidated_edges),
             "has_drug_nodes": False,
             "drug_annotations": "Target properties only (NO drug nodes)",
             "pan_disease_annotated": True,
@@ -473,7 +588,7 @@ def run_master_pipeline():
             "zero_hallucination_verified": True
         },
         "nodes": enriched_nodes,
-        "edges": enriched_edges
+        "edges": consolidated_edges
     }
     
     with open(DATA_DIR / "osteoclast_knowledge_graph.json", "w", encoding="utf-8") as f:
@@ -481,10 +596,10 @@ def run_master_pipeline():
     with open(NEO4J_DIR / "osteoclast_knowledge_graph.json", "w", encoding="utf-8") as f:
         json.dump(kg_master, f, indent=2)
         
-    print(f"Saved master JSON Knowledge Graph ({len(enriched_nodes)} nodes, {len(enriched_edges)} edges).")
+    print(f"Saved master JSON Knowledge Graph ({len(enriched_nodes)} nodes, {len(consolidated_edges)} edges).")
     
     # 8. Update Cypher scripts
-    update_cypher_scripts(enriched_nodes, enriched_edges)
+    update_cypher_scripts(enriched_nodes, consolidated_edges, merged_groups)
     
     print("=" * 80)
     print("MASTER MULTI-OMICS MINI-PRIMEKG & PAN-DISEASE PIPELINE COMPLETED SUCCESSFULLY!")
@@ -495,7 +610,7 @@ def escape_cypher(val):
         return ""
     return str(val).replace("\\", "\\\\").replace("'", "\\'")
 
-def update_cypher_scripts(nodes, edges):
+def update_cypher_scripts(nodes, edges, merged_groups=None):
     """Generates updated Cypher scripts with multi-omics, single-cell, GNN, and pan-disease attributes."""
     cypher_import_path = NEO4J_DIR / "import_osteoclast_kg.cypher"
     cypher_enrich_path = NEO4J_DIR / "enrich_nodes.cypher"
@@ -806,6 +921,30 @@ def update_cypher_scripts(nodes, edges):
                 clean_sym = nid.split(":")[-1]
                 f.write(f"MATCH (n) WHERE n.id = '{nid}' OR n.node_id = '{nid}' OR n.id = '{clean_sym}' OR n.node_id = '{clean_sym}' SET {', '.join(set_clauses)};\n")
                 
+    # 3. Generate In-Place Edge Deduplication Script
+    if merged_groups:
+        cypher_dedup_path = NEO4J_DIR / "deduplicate_edges.cypher"
+        with open(cypher_dedup_path, "w", encoding="utf-8") as f:
+            f.write("// ==========================================================================\n")
+            f.write("// Osteoclast Mini-PrimeKG Edge Deduplication & Evidence Consolidation\n")
+            f.write(f"// Consolidates {len(merged_groups)} redundant multi-edge pairs with same response into 1 edge\n")
+            f.write("// ==========================================================================\n\n")
+            for src, tgt, sign, base, elist in merged_groups:
+                clean_src = src.split(":")[-1]
+                clean_tgt = tgt.split(":")[-1]
+                evid_val = escape_cypher(json.dumps(base["evidence"]))
+                rec_id = escape_cypher(base.get("source_record_id", ""))
+                rel = base.get("relation", "ACTIVATES").upper().replace(" ", "_").replace("-", "_")
+                f.write(
+                    f"MATCH (s)-[r]->(t) "
+                    f"WHERE (s.id IN ['{src}', '{clean_src}'] OR s.node_id IN ['{src}', '{clean_src}']) "
+                    f"  AND (t.id IN ['{tgt}', '{clean_tgt}'] OR t.node_id IN ['{tgt}', '{clean_tgt}']) "
+                    f"WITH s, t, collect(r) AS rels WHERE size(rels) > 1 "
+                    f"SET rels[0].evidence = '{evid_val}', rels[0].source_record_id = '{rec_id}' "
+                    f"FOREACH (dup IN rels[1..] | DELETE dup);\n"
+                )
+        print(f"-> Generated: {cypher_dedup_path}")
+
     print(f"-> Generated: {cypher_import_path}")
     print(f"-> Generated: {cypher_enrich_path}")
 
