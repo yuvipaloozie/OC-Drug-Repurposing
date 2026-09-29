@@ -212,9 +212,9 @@ def main():
     # Verify counts
     print("\nVerifying Knowledge Graph contents in Neo4j...")
     verify_stmts = [
-        "MATCH (n:Node) RETURN count(n) AS node_count",
+        "MATCH (n) RETURN count(n) AS node_count",
         "MATCH ()-[r]->() RETURN count(r) AS edge_count",
-        "MATCH (n:Node) RETURN n.type AS type, count(n) AS count ORDER BY count DESC",
+        "MATCH (n) RETURN n.type AS type, count(n) AS count ORDER BY count DESC",
         "MATCH ()-[r]->() RETURN type(r) AS rel, count(r) AS count ORDER BY count DESC"
     ]
     ok, errors, results = run_cypher_tx(endpoint, auth_header, verify_stmts)
@@ -225,8 +225,8 @@ def main():
         edge_breakdown = results[3]["data"]
 
         print("-----------------------------------------------------------------")
-        print(f" Total Nodes:         {total_nodes} (Target: 281)")
-        print(f" Total Relationships: {total_edges} (Target: 365)")
+        print(f" Total Nodes:         {total_nodes} (Target: 267 Biological Nodes)")
+        print(f" Total Relationships: {total_edges} (Target: 350 Biological Edges)")
         print("-----------------------------------------------------------------")
         print(" Node Subtypes:")
         for row in node_breakdown:
