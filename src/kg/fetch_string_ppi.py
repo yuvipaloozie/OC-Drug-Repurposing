@@ -53,7 +53,7 @@ def fetch_string_ppi():
 
     # STRING API endpoint for network
     api_url = "https://string-db.org/api/json/network"
-    
+
     # We query in batches or single POST
     params = {
         "identifiers": "\r".join(sorted_symbols),

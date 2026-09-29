@@ -23,6 +23,7 @@ Executes the complete Mini-PrimeKG transformation:
 6. Updates `osteoclast_knowledge_graph.json` and generates `neo4j/import_osteoclast_kg.cypher`
    and `neo4j/enrich_nodes.cypher`.
 """
+raise RuntimeError("Retired legacy transform: unverified enrichment or obsolete identity schema. Use python -m src.kg.rebuild; curate source-backed records in data/processed.")
 
 import os
 import sys
@@ -163,7 +164,7 @@ def determine_pillar_for_node(node):
     nid = node["id"]
     name = node["name"].lower()
     t = node["type"]
-    
+
     if nid in COMPOUND_METADATA:
         return COMPOUND_METADATA[nid]["pillar"]
     if nid in GENE_METADATA:
@@ -174,7 +175,7 @@ def determine_pillar_for_node(node):
         return PATHWAY_METADATA[nid]["pillar"]
     if nid in HGNC_METADATA:
         return HGNC_METADATA[nid]["pillar"]
-        
+
     # Heuristic rules
     if any(k in name for k in ['kinase', 'synthase', 'dehydrogenase', 'isomerase', 'mutase', 'enolase', 'aldolase', 'glutaminase', 'glycolysis', 'tca cycle', 'fatty acid oxidation', 'prmt6', 'tet2', 'sdh', 'cpt1a', 'pfkfb3', 'hk2', 'phgdh', 'irg1', 'acod1']):
         return "metabolism"
@@ -192,7 +193,7 @@ def determine_pillar_for_node(node):
         return "inflammation"
     if any(k in name for k in ['ephrin', 'ephb', 'semaphorin', 'plexin', 'sclerostin', 'sost', 'dkk1', 'hif1', 'hif-1', 'vegf', 'coupling', 'osteoblast']):
         return "interactions_with_other_processes"
-        
+
     return "differentiation"
 
 def escape_xml(val):
@@ -213,7 +214,7 @@ def build_worksheet_xml(headers, rows):
         '  <sheetFormatPr defaultRowHeight="16"/>\n',
         '  <sheetData>\n'
     ]
-    
+
     # Header row
     out.append('    <row r="1" spans="1:{}">\n'.format(len(headers)))
     for col_idx, h in enumerate(headers, 1):
@@ -221,7 +222,7 @@ def build_worksheet_xml(headers, rows):
         ref = f"{col_letter}1"
         out.append(f'      <c r="{ref}" t="inlineStr"><is><t>{escape_xml(h)}</t></is></c>\n')
     out.append('    </row>\n')
-    
+
     # Data rows
     for row_idx, r in enumerate(rows, 2):
         out.append(f'    <row r="{row_idx}" spans="1:{len(headers)}">\n')
@@ -230,14 +231,14 @@ def build_worksheet_xml(headers, rows):
             ref = f"{col_letter}{row_idx}"
             out.append(f'      <c r="{ref}" t="inlineStr"><is><t>{escape_xml(val)}</t></is></c>\n')
         out.append('    </row>\n')
-        
+
     out.append('  </sheetData>\n</worksheet>')
     return "".join(out)
 
 def create_xlsx_file(output_path, tab1_name, tab1_headers, tab1_rows, tab2_name, tab2_headers, tab2_rows):
     output_path = Path(output_path)
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    
+
     with zipfile.ZipFile(output_path, 'w', zipfile.ZIP_DEFLATED) as z:
         z.writestr('[Content_Types].xml', '''<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">
@@ -266,39 +267,39 @@ def create_xlsx_file(output_path, tab1_name, tab1_headers, tab1_rows, tab2_name,
         z.writestr('xl/workbook.xml', wb_xml)
         z.writestr('xl/worksheets/sheet1.xml', build_worksheet_xml(tab1_headers, tab1_rows))
         z.writestr('xl/worksheets/sheet2.xml', build_worksheet_xml(tab2_headers, tab2_rows))
-        
+
     print(f"-> Generated XLSX: {output_path} ({output_path.stat().st_size:,} bytes)")
 
 def run_enrichment_pipeline():
     print("=" * 70)
     print("STARTING OSTEOCLAST MINI-PRIMEKG ENRICHMENT & WORKBOOK PIPELINE")
     print("=" * 70)
-    
+
     # 1. Load existing knowledge graph
     kg_path = DATA_DIR / "osteoclast_knowledge_graph.json"
     with open(kg_path, "r", encoding="utf-8") as f:
         kg = json.load(f)
-        
+
     raw_nodes = kg.get("nodes", [])
     raw_edges = kg.get("edges", [])
     print(f"Initial raw graph: {len(raw_nodes)} nodes, {len(raw_edges)} edges.")
-    
+
     # 2. Filter out 14 drug nodes and 15 drug edges
     drug_ids = {n["id"] for n in raw_nodes if n["id"].startswith("CHEMBL:")}
     print(f"Identified {len(drug_ids)} exogenous drug nodes to transition to target properties: {sorted(list(drug_ids))}")
-    
+
     bio_nodes = [n for n in raw_nodes if n["id"] not in drug_ids]
     bio_edges = [e for e in raw_edges if e["source"] not in drug_ids and e["target"] not in drug_ids]
     print(f"Cleaned pure biological graph: {len(bio_nodes)} nodes, {len(bio_edges)} edges.")
-    
+
     # Build node lookup by name and ID
     node_by_name = {n["name"]: n for n in bio_nodes}
     node_by_id = {n["id"]: n for n in bio_nodes}
-    
+
     # 3. Enrich every biological node with full Mini-PrimeKG properties
     enriched_nodes = []
     pillar_counts = defaultdict(int)
-    
+
     for n in bio_nodes:
         nid = n["id"]
         name = n["name"]
@@ -306,11 +307,11 @@ def run_enrichment_pipeline():
         compartment = n.get("compartment", "cytoplasm")
         pillar = determine_pillar_for_node(n)
         pillar_counts[pillar] += 1
-        
+
         # Start with base node
         en = dict(n)
         en["physiological_pillar"] = pillar
-        
+
         # If HGNC protein/enzyme/TF
         if nid.startswith("HGNC:"):
             symbol = nid.replace("HGNC:", "")
@@ -321,7 +322,7 @@ def run_enrichment_pipeline():
                 en["known_targeting_drugs"] = DRUG_TARGET_TRANSFERS[nid]
                 en["drug_interaction_count"] = len(DRUG_TARGET_TRANSFERS[nid])
                 en["small_molecule_tractability"] = "Clinical Precedence"
-                
+
         # If compound
         elif nid.startswith("CHEBI:"):
             if nid in COMPOUND_METADATA:
@@ -329,33 +330,33 @@ def run_enrichment_pipeline():
             if nid in DRUG_TARGET_TRANSFERS:
                 en["known_targeting_drugs"] = DRUG_TARGET_TRANSFERS[nid]
                 en["drug_interaction_count"] = len(DRUG_TARGET_TRANSFERS[nid])
-                
+
         # If gene / RNA
         elif nid.startswith("GENE:"):
             if nid in GENE_METADATA:
                 en.update(GENE_METADATA[nid])
-                
+
         # If reaction
         elif nid.startswith("RXN:"):
             if nid in REACTION_METADATA:
                 en.update(REACTION_METADATA[nid])
-                
+
         # If pathway
         elif nid.startswith("PATHWAY:"):
             if nid in PATHWAY_METADATA:
                 en.update(PATHWAY_METADATA[nid])
-                
+
         enriched_nodes.append(en)
-        
+
     print("\nPillar breakdown across 267 biological nodes:")
     for p, c in sorted(pillar_counts.items(), key=lambda x: x[1], reverse=True):
         print(f"  - {p:35s}: {c:3d} nodes")
-        
+
     # 4. Read sources.csv and filter out drug nodes
     sources_csv_path = WORKSPACE_DIR / "sources.csv"
     with open(sources_csv_path, "r", encoding="utf-8") as f:
         src_rows = list(csv.DictReader(f))
-        
+
     # Tab 1: All Evidence & Sources (Database, Paper, DOI, Pillar, Node Type, Node Name, Findings)
     tab1_headers = [
         "Database",
@@ -367,7 +368,7 @@ def run_enrichment_pipeline():
         "Experimental Findings & Evidentiary Data"
     ]
     tab1_rows = []
-    
+
     # Tab 2: Node-Paper Mappings (Node ID, Node Name, Node Type, Compartment, Pillar, Database, Paper, DOI, Findings)
     tab2_headers = [
         "Node ID",
@@ -381,38 +382,38 @@ def run_enrichment_pipeline():
         "Specific Evidence & Findings"
     ]
     tab2_rows = []
-    
+
     drug_names_lower = {n["name"].lower() for n in raw_nodes if n["id"].startswith("CHEMBL:")}
-    
+
     for r in src_rows:
         nname = r["node name"]
         if nname.lower() in drug_names_lower:
             continue  # Exclude drug node rows from pure biological topology
-            
+
         matched_node = node_by_name.get(nname)
         nid = matched_node["id"] if matched_node else "N/A"
         comp = matched_node.get("compartment", "cytoplasm") if matched_node else "cytoplasm"
         pillar = determine_pillar_for_node(matched_node) if matched_node else "differentiation"
-        
+
         db = r["database"]
         art = r["article"]
         doi = r["doi"]
         ntype = r["node type"]
         data = r["data"]
-        
+
         tab1_rows.append([db, art, doi, pillar, ntype, nname, data])
         tab2_rows.append([nid, nname, ntype, comp, pillar, db, art, doi, data])
-        
+
     print(f"\nCompiled {len(tab1_rows)} biological evidence rows for Tab 1.")
     print(f"Compiled {len(tab2_rows)} node-paper mappings for Tab 2.")
-    
+
     # 5. Generate Excel Workbooks in root, data/processed/, and neo4j/
     xlsx_destinations = [
         WORKSPACE_DIR / "osteoclast_knowledge_graph_sources.xlsx",
         DATA_DIR / "osteoclast_knowledge_graph_sources.xlsx",
         NEO4J_DIR / "osteoclast_knowledge_graph_sources.xlsx"
     ]
-    
+
     for dest in xlsx_destinations:
         create_xlsx_file(
             output_path=dest,
@@ -423,7 +424,7 @@ def run_enrichment_pipeline():
             tab2_headers=tab2_headers,
             tab2_rows=tab2_rows
         )
-        
+
     # 6. Save updated JSON knowledge graph (pure biological topology + enriched properties)
     updated_kg = {
         "metadata": {
@@ -439,17 +440,17 @@ def run_enrichment_pipeline():
         "nodes": enriched_nodes,
         "edges": bio_edges
     }
-    
+
     with open(DATA_DIR / "osteoclast_knowledge_graph.json", "w", encoding="utf-8") as f:
         json.dump(updated_kg, f, indent=2)
     with open(NEO4J_DIR / "osteoclast_knowledge_graph.json", "w", encoding="utf-8") as f:
         json.dump(updated_kg, f, indent=2)
-        
+
     print(f"\n-> Updated JSON Knowledge Graph: {len(enriched_nodes)} nodes, {len(bio_edges)} edges.")
-    
+
     # 7. Generate Cypher update scripts
     generate_cypher_scripts(enriched_nodes, bio_edges)
-    
+
     print("=" * 70)
     print("PIPELINE COMPLETED SUCCESSFULLY!")
     print("=" * 70)
@@ -459,7 +460,7 @@ def generate_cypher_scripts(nodes, edges):
     cypher_import_path = NEO4J_DIR / "import_osteoclast_kg.cypher"
     cypher_enrich_path = NEO4J_DIR / "enrich_nodes.cypher"
     cypher_remove_drugs_path = NEO4J_DIR / "remove_drug_nodes.cypher"
-    
+
     # Script 1: Remove drug nodes from existing graph
     with open(cypher_remove_drugs_path, "w", encoding="utf-8") as f:
         f.write("// ==========================================================================\n")
@@ -467,22 +468,22 @@ def generate_cypher_scripts(nodes, edges):
         f.write("// ==========================================================================\n\n")
         f.write("MATCH (d) WHERE d.id STARTS WITH 'CHEMBL:' DETACH DELETE d;\n")
     print(f"-> Generated: {cypher_remove_drugs_path}")
-    
+
     # Script 2: Enrich existing nodes in Neo4j with Mini-PrimeKG properties
     with open(cypher_enrich_path, "w", encoding="utf-8") as f:
         f.write("// ==========================================================================\n")
         f.write("// Osteoclast Mini-PrimeKG Node Property Enrichment Statements\n")
         f.write("// ==========================================================================\n\n")
-        
+
         for n in nodes:
             nid = n["id"]
             label = n.get("neo4j_label", "Node")
-            
+
             # Format properties into Cypher SET clauses
             set_clauses = [
                 f"n.physiological_pillar = '{n.get('physiological_pillar', 'differentiation')}'"
             ]
-            
+
             if "uniprot_id" in n:
                 set_clauses.append(f"n.uniprot_id = '{n['uniprot_id']}'")
             if "sequence_length" in n:
@@ -512,19 +513,19 @@ def generate_cypher_scripts(nodes, edges):
                 set_clauses.append(f"n.tpsa = {n['tpsa']}")
             if "charge" in n:
                 set_clauses.append(f"n.charge = {n['charge']}")
-                
+
             # Drug target transfers
             if "known_targeting_drugs" in n and n["known_targeting_drugs"]:
                 escaped_drugs = [json.dumps(d) for d in n["known_targeting_drugs"]]
                 drugs_cypher = "[" + ", ".join(escaped_drugs) + "]"
                 set_clauses.append(f"n.known_targeting_drugs = {drugs_cypher}")
                 set_clauses.append(f"n.drug_interaction_count = {n.get('drug_interaction_count', 0)}")
-                
+
             clause_str = ", ".join(set_clauses)
             f.write(f"MATCH (n {{id: '{nid}'}}) SET {clause_str};\n")
-            
+
     print(f"-> Generated: {cypher_enrich_path}")
-    
+
     # Script 3: Complete Fresh Import Script
     with open(cypher_import_path, "w", encoding="utf-8") as f:
         f.write("// ==========================================================================\n")
@@ -532,7 +533,7 @@ def generate_cypher_scripts(nodes, edges):
         f.write(f"// Total Nodes: {len(nodes)} (Pure Biological Topology) | Total Edges: {len(edges)}\n")
         f.write("// ==========================================================================\n\n")
         f.write("MATCH (n) DETACH DELETE n;\n\n")
-        
+
         # Write nodes
         f.write("// --- 1. BIOLOGICAL NODES ---\n")
         for n in nodes:
@@ -542,7 +543,7 @@ def generate_cypher_scripts(nodes, edges):
             pillar = n.get("physiological_pillar", "differentiation")
             comp = n.get("compartment", "cytoplasm")
             ntype = n.get("type", "protein")
-            
+
             node_props = [
                 f"id: '{nid}'",
                 f"name: '{name}'",
@@ -578,9 +579,9 @@ def generate_cypher_scripts(nodes, edges):
                 drugs_cypher = "[" + ", ".join(escaped_drugs) + "]"
                 node_props.append(f"known_targeting_drugs: {drugs_cypher}")
                 node_props.append(f"drug_interaction_count: {n.get('drug_interaction_count', 0)}")
-                
+
             f.write(f"CREATE (:{lbl} {{{', '.join(node_props)}}});\n")
-            
+
         f.write("\n// --- 2. BIOLOGICAL EDGES ---\n")
         for e in edges:
             src = e["source"]
@@ -593,7 +594,7 @@ def generate_cypher_scripts(nodes, edges):
             else:
                 evid = str(evid_val).replace("'", "\\'")
             f.write(f"MATCH (s {{id: '{src}'}}), (t {{id: '{tgt}'}}) CREATE (s)-[:{rel} {{sign: '{sign}', evidence: '{evid}'}}]->(t);\n")
-            
+
     print(f"-> Generated: {cypher_import_path}")
 
 if __name__ == "__main__":

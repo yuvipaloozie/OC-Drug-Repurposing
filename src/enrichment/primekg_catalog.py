@@ -20,6 +20,7 @@ Covers:
 - 9 Physiological Pillars: differentiation, maturation_fusion, immunomodulation, inflammation,
   hormonal_influence, morphology_cytoskeleton, activity_acidification, metabolism, interactions_with_other_processes
 """
+raise RuntimeError("Retired legacy transform: unverified enrichment or obsolete identity schema. Use python -m src.kg.rebuild; curate source-backed records in data/processed.")
 
 import json
 from pathlib import Path
@@ -384,7 +385,7 @@ def generate_primekg_protein_node(hgnc_id, symbol, name, subtype, compartment, p
     # Check if manually curated above
     if hgnc_id in HGNC_METADATA:
         return HGNC_METADATA[hgnc_id]
-        
+
     # Programmatic fallback with rigorous defaults
     clean_sym = symbol.replace("HGNC:", "")
     uniprot_map = {
@@ -402,7 +403,7 @@ def generate_primekg_protein_node(hgnc_id, symbol, name, subtype, compartment, p
         "EPHB4": "P54760", "SNX10": "Q9Y5X0", "MSN": "P26038", "CD47": "Q08722"
     }
     uid = uniprot_map.get(clean_sym, f"P_{clean_sym}")
-    
+
     return {
         "uniprot_id": uid,
         "symbol": clean_sym,

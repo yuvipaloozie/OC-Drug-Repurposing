@@ -6,6 +6,7 @@ into the Osteoclast Knowledge Graph.
 - Adds verified high-confidence PPI edges
 - Enriches edge_evidence.csv with STRING combined and experimental scores
 """
+raise RuntimeError("Retired legacy transform: unverified enrichment or obsolete identity schema. Use python -m src.kg.rebuild; curate source-backed records in data/processed.")
 
 import os
 import csv

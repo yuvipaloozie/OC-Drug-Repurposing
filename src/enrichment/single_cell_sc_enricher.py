@@ -5,6 +5,7 @@ Single-Cell scRNA-seq Pseudotime Trajectory & Polarization State Module.
 Embeds single-cell expression kinetics, pseudotime stages, and polarization states
 (M1 vs M2 vs Osteoclast syncytium) into knowledge graph nodes.
 """
+raise RuntimeError("Retired legacy transform: unverified enrichment or obsolete identity schema. Use python -m src.kg.rebuild; curate source-backed records in data/processed.")
 
 # Benchmark single-cell marker dynamics along osteoclast differentiation continuum (pseudotime 0.0 -> 1.0)
 SINGLE_CELL_TRAJECTORY_DATA = {
@@ -46,7 +47,7 @@ def get_single_cell_trajectory(node_id):
     """Retrieves single-cell pseudotime trajectory and polarization dynamics for a given node ID."""
     if node_id in SINGLE_CELL_TRAJECTORY_DATA:
         return SINGLE_CELL_TRAJECTORY_DATA[node_id]
-        
+
     # Heuristic programmatic classification for remaining nodes
     return {
         "pseudotime_peak": 0.5,

@@ -42,6 +42,7 @@ for all 267 nodes in the Osteoclast Knowledge Graph:
 5. Scientific Literature Provenance:
    - Real PubMed IDs (PMIDs), CrossRef DOIs, publication years, and evidence summaries across systemic biomedical literature.
 """
+raise RuntimeError("Retired legacy transform: unverified enrichment or obsolete identity schema. Use python -m src.kg.rebuild; curate source-backed records in data/processed.")
 
 import json
 from pathlib import Path
@@ -415,11 +416,11 @@ def generate_pan_disease_profile(node_id, symbol, name, node_type, pillar):
     mutations, kinetics, and literature annotations for any node in the OC-KG.
     """
     clean_sym = symbol.replace("HGNC:", "").replace("CHEBI:", "").replace("GENE:", "")
-    
+
     # If explicitly curated in PAN_HUB_DATA, return curated record
     if node_id in PAN_HUB_DATA:
         return PAN_HUB_DATA[node_id]
-        
+
     # Programmatic biological annotation based on classification
     if node_id.startswith("HGNC:"):
         is_kinase = any(k in name.lower() for k in ["kinase", "mapk", "akt", "src", "syk", "btk", "ptk", "raf", "camk"])
@@ -427,7 +428,7 @@ def generate_pan_disease_profile(node_id, symbol, name, node_type, pillar):
         is_tf = node_type == "transcription_factor" or any(k in name.lower() for k in ["transcription", "factor", "fos", "jun", "mitf", "repa", "nfkb", "irf", "bcl"])
         is_metabolic = any(k in name.lower() for k in ["synthase", "dehydrogenase", "isomerase", "aldolase", "enolase", "mutase", "pkm", "hk", "pfk", "gls", "cpt"])
         is_immune = any(k in name.lower() for k in ["interleukin", "tnf", "interferon", "receptor", "chemokine", "ccl", "toll"])
-        
+
         # 1. Pan-disease
         onc_role = f"Aberrant in solid tumors and hematologic malignancies; regulates cell survival and proliferation in {clean_sym}-associated cancers"
         if is_kinase:
@@ -436,19 +437,19 @@ def generate_pan_disease_profile(node_id, symbol, name, node_type, pillar):
             onc_role = f"Tumor microenvironment remodeler; cleaves extracellular matrix and basement membrane, facilitating local invasion and distant metastasis"
         elif is_metabolic:
             onc_role = f"Cancer metabolic reprogramming driver; fuels Warburg glycolysis and anabolic macromolecule synthesis in rapidly dividing neoplastic cells"
-            
+
         auto_role = f"Modulates systemic inflammatory cascades; implicated in synovial inflammation in rheumatoid arthritis and autoimmune tissue injury"
         cardio_role = f"Associated with vascular remodeling, endothelial dysfunction, and atherosclerotic plaque vulnerability"
         neuro_role = f"Expressed in resident microglial or neuronal populations; modulates neuroinflammatory signaling in neurodegenerative pathology"
         omim_code = f"OMIM:{100000 + (hash(clean_sym) % 899999)}"
-        
+
         # 2. Pathways
         canonical_pws = [f"{clean_sym} Signaling Pathway", "Signal Transduction (Reactome:R-HSA-162582)", "Immune System (Reactome:R-HSA-168256)"]
         if is_kinase:
             canonical_pws = ["MAPK signaling pathway (KEGG:hsa04010)", "PI3K-Akt signaling (KEGG:hsa04151)", "Chemokine signaling (KEGG:hsa04062)"]
         elif is_metabolic:
             canonical_pws = ["Central carbon metabolism (KEGG:hsa05230)", "Biosynthesis of amino acids (KEGG:hsa01230)", "Carbon metabolism (KEGG:hsa01200)"]
-            
+
         novel_pws = [
             f"Mechanotransduction & Cytoskeletal Tension ({clean_sym} cooperates with integrin focal adhesion complexes under mechanical strain)",
             f"Autophagic Flux Coordination ({clean_sym} interfaces with lysosomal nutrient sensing and cellular stress clearance)",
@@ -460,30 +461,30 @@ def generate_pan_disease_profile(node_id, symbol, name, node_type, pillar):
                 f"Immunometabolism Shunt ({clean_sym} metabolic flux is redirected during macrophage inflammatory activation)",
                 f"Metabolic-Epigenetic Retrograde Signaling (Generates or depletes metabolites modulating nuclear chromatin-modifying enzymes)"
             ]
-            
+
         # 3. Proteomics
         top_tissue = "Bone Marrow / Spleen / Lymphoid (42.5 TPM)" if is_immune else ("Liver / Skeletal Muscle (55.0 TPM)" if is_metabolic else "Ubiquitous human tissue expression (32.0 TPM)")
         tpm = 45.0 + (hash(clean_sym) % 40)
         hpa_loc = "Cytoplasm and Plasma Membrane" if is_kinase else ("Nucleoplasm and Nuclear Speckles" if is_tf else "Cytoplasm and Mitochondria")
-        
+
         # 4. Mutations
         clinvar_var = f"VCV{abs(hash(clean_sym)) % 900000 + 100000:09d} (Pathogenic missense variant causing functional dysregulation)"
         pli = round(0.50 + ((hash(clean_sym) % 50) / 100.0), 2)
         loeuf = round(0.20 + ((hash(clean_sym) % 60) / 100.0), 2)
         missense_z = round(1.20 + ((hash(clean_sym) % 250) / 100.0), 2)
         cosmic_hotspot = f"COSV{abs(hash(clean_sym)) % 80000000 + 10000000} (Recurrent somatic missense hotspot in solid tumors)"
-        
+
         # 5. Flux Kinetics
         rhea_acc = f"RHEA:{10000 + (hash(clean_sym) % 40000)}"
         ec_num = f"EC {2 if is_kinase else (3 if is_protease else (1 if is_metabolic else 2))}.{hash(clean_sym)%10}.{hash(clean_sym)%20}.{hash(clean_sym)%50}" if (is_kinase or is_protease or is_metabolic) else "N/A (Regulatory / Structural Protein)"
         kcat = round(1.5 + (hash(clean_sym) % 45), 1) if (is_kinase or is_protease or is_metabolic) else 0.0
         km = round(5.0 + (hash(clean_sym) % 200), 1) if (is_kinase or is_protease or is_metabolic) else 0.0
         rate_lim = "Yes" if (is_kinase or clean_sym in ["HK2", "PFKFB3", "PKM", "CTSK", "TCIRG1", "TET2", "ACOD1", "GLS", "PHGDH"]) else "No"
-        
+
         # 6. Literature
         pmid_num = 20000000 + (abs(hash(clean_sym)) % 14000000)
         doi_str = f"10.1038/s41586-02{abs(hash(clean_sym))%4 + 0}-{abs(hash(clean_sym))%9000 + 1000}-x"
-        
+
         return {
             "pan_disease": {
                 "oncology": onc_role,
@@ -525,7 +526,7 @@ def generate_pan_disease_profile(node_id, symbol, name, node_type, pillar):
                 {"pmid": str(pmid_num + 1420), "doi": f"10.1016/j.cell.202{abs(hash(clean_sym))%4 + 0}.0{abs(hash(clean_sym))%8 + 1}.00{abs(hash(clean_sym))%9 + 1}", "year": 2020 + (abs(hash(clean_sym)) % 5), "title": f"Novel cross-talk pathways and metabolic-epigenetic regulation governed by {clean_sym}."}
             ]
         }
-        
+
     elif node_id.startswith("CHEBI:"):
         # Metabolite profile
         return {
@@ -573,7 +574,7 @@ def generate_pan_disease_profile(node_id, symbol, name, node_type, pillar):
                 {"pmid": "31548608", "doi": "10.1016/j.cmet.2019.08.018", "year": 2019, "title": f"Immunometabolic regulation of cell differentiation and inflammation by {name}."}
             ]
         }
-        
+
     elif node_id.startswith("GENE:") or node_id.startswith("RNA:"):
         return {
             "pan_disease": {
@@ -620,7 +621,7 @@ def generate_pan_disease_profile(node_id, symbol, name, node_type, pillar):
                 {"pmid": "32161266", "doi": "10.1016/j.cell.2020.02.012", "year": 2020, "title": f"Non-coding RNA network orchestration in systemic inflammation and tissue remodeling."}
             ]
         }
-        
+
     else:
         # Pathway or Reaction
         return {

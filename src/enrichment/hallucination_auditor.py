@@ -31,7 +31,7 @@ def audit_node_record(node):
     """Audits a single enriched node for identifier validity and integrity."""
     audit_results = []
     nid = node.get("id", "")
-    
+
     # 1. UniProt
     if "uniprot_id" in node:
         uid = node["uniprot_id"]
@@ -42,9 +42,9 @@ def audit_node_record(node):
             "value": uid,
             "registry": "UniProtKB",
             "is_valid": valid,
-            "status": "VERIFIED_CANONICAL" if valid and not uid.startswith("P_") else ("VERIFIED_CURATED_SYMBOLIC" if valid else "INVALID")
+            "status": "FORMAT_VALID_CANONICAL" if valid and not uid.startswith("P_") else ("FORMAT_VALID_CURATED_SYMBOLIC" if valid else "INVALID")
         })
-        
+
     # 2. AlphaFold
     if "alphafold_id" in node:
         afid = node["alphafold_id"]
@@ -55,9 +55,9 @@ def audit_node_record(node):
             "value": afid,
             "registry": "AlphaFold DB (EBI)",
             "is_valid": valid,
-            "status": "VERIFIED_ALPHAFOLD_COORDINATE" if valid else "INVALID"
+            "status": "FORMAT_VALID_ALPHAFOLD_COORDINATE" if valid else "INVALID"
         })
-        
+
     # 3. PDB
     if "pdb_structures" in node and isinstance(node["pdb_structures"], list):
         for pdb in node["pdb_structures"]:
@@ -68,9 +68,9 @@ def audit_node_record(node):
                 "value": pdb,
                 "registry": "RCSB PDB",
                 "is_valid": valid,
-                "status": "VERIFIED_EXPERIMENTAL_PDB" if valid and not pdb.startswith("PDB_") else ("VERIFIED_SYMBOLIC_FALLBACK" if valid else "INVALID")
+                "status": "FORMAT_VALID_EXPERIMENTAL_PDB" if valid and not pdb.startswith("PDB_") else ("FORMAT_VALID_SYMBOLIC_FALLBACK" if valid else "INVALID")
             })
-            
+
     # 4. InChIKey
     if "inchikey" in node:
         ikey = node["inchikey"]
@@ -81,9 +81,9 @@ def audit_node_record(node):
             "value": ikey,
             "registry": "IUPAC / PubChem InChIKey",
             "is_valid": valid,
-            "status": "VERIFIED_STEREOCHEMISTRY_HASH" if valid else "INVALID"
+            "status": "FORMAT_VALID_STEREOCHEMISTRY_HASH" if valid else "INVALID"
         })
-        
+
     # 5. Canonical Transcript
     if "canonical_transcript" in node:
         tid = node["canonical_transcript"]
@@ -94,9 +94,9 @@ def audit_node_record(node):
             "value": tid,
             "registry": "Ensembl / miRBase",
             "is_valid": valid,
-            "status": "VERIFIED_GENOMIC_TRANSCRIPT" if valid else "INVALID"
+            "status": "FORMAT_VALID_GENOMIC_TRANSCRIPT" if valid else "INVALID"
         })
-        
+
     return audit_results
 
 def run_full_audit(nodes, evidence_rows):
@@ -104,12 +104,12 @@ def run_full_audit(nodes, evidence_rows):
     print("=" * 70)
     print("EXECUTING ZERO-HALLUCINATION AUDIT OVER ALL GRAPH IDENTIFIERS")
     print("=" * 70)
-    
+
     total_checks = 0
     passed_checks = 0
     failed_checks = 0
     audit_table = []
-    
+
     for n in nodes:
         node_audits = audit_node_record(n)
         for r in node_audits:
@@ -119,7 +119,7 @@ def run_full_audit(nodes, evidence_rows):
             else:
                 failed_checks += 1
             audit_table.append(r)
-            
+
     # Audit DOIs
     for row in evidence_rows:
         doi = row.get("DOI / URL", row.get("doi", ""))
@@ -136,12 +136,12 @@ def run_full_audit(nodes, evidence_rows):
                 "value": doi,
                 "registry": "CrossRef / PubMed DOI",
                 "is_valid": valid,
-                "status": "VERIFIED_LITERATURE_DOI" if valid else "INVALID"
+                "status": "FORMAT_VALID_LITERATURE_DOI" if valid else "INVALID"
             })
-            
+
     print(f"Total Identifiers Audited: {total_checks:,}")
-    print(f"Passed Canonical Verifications: {passed_checks:,} ({passed_checks/total_checks*100:.1f}%)")
-    print(f"Failed / Hallucinated Identifiers: {failed_checks}")
+    print(f"Passed syntax checks (not registry or claim verification): {passed_checks:,} ({passed_checks/max(1,total_checks)*100:.1f}%)")
+    print(f"Failed syntax checks: {failed_checks}")
     print("=" * 70)
     return audit_table, passed_checks, failed_checks
 

@@ -1,0 +1,1 @@
+Legacy snapshot is unverified historical material, excluded from current exports and scoring. The archive preserves original IDs, fabricated/enriched annotations, unsupported quantitative assertions and pre-migration exports for audit. Do not re-import it as evidence.

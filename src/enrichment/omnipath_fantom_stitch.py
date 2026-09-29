@@ -5,6 +5,7 @@ OmniPath, FANTOM4, STITCH, Recon3D, Harmonizome, RNAInter, and MeSH Enrichment M
 Integrates multi-omics database annotations to support causal signaling,
 metabolic sub-systems, transcription factor dynamics, and biomedical ontologies.
 """
+raise RuntimeError("Retired legacy transform: unverified enrichment or obsolete identity schema. Use python -m src.kg.rebuild; curate source-backed records in data/processed.")
 
 # OmniPath Causal Mechanism Classifications for Key Signaling Cascades
 OMNIPATH_CAUSAL_RULES = {

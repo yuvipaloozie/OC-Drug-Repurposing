@@ -23,9 +23,8 @@ class NodeType(str, Enum):
     EXTRACELLULAR_COMPOUND = "extracellular_compound"
     INTRACELLULAR_COMPOUND = "intracellular_compound"
     GENE = "gene"
+    RNA = "rna"
     PROTEIN = "protein"
-    ENZYME = "enzyme"
-    TRANSCRIPTION_FACTOR = "transcription_factor"
     REACTION = "reaction"
     PATHWAY = "pathway"
 
@@ -47,6 +46,7 @@ class EdgeRelation(str, Enum):
 class EdgeStatus(str, Enum):
     CURATED = "curated"
     PROPOSED = "proposed"
+    QUARANTINED = "quarantined"
 
 
 class EvidenceKind(str, Enum):
@@ -64,12 +64,20 @@ class EvidencePolarity(str, Enum):
 
 @dataclass
 class Node:
-    node_id: str  # Namespaced stable ID (e.g., HGNC:PHGDH, CHEBI:16810, CHEMBL:CHEMBL25, MRNA:Nfatc1, MIRNA:miR-21)
+    node_id: str  # Local entity identity or registry accession; local molecule IDs are not official gene IDs.
     type: str  # NodeType
     name: str
     taxon: str  # 'mouse', 'human', 'all'
     compartment: Optional[str] = None  # cytoplasm, nucleus, mitochondria, extracellular, plasma_membrane
     aliases: str = ""  # Pipe-separated aliases
+    roles: str = ""  # Protein roles, e.g. enzyme|transcription_factor
+    rna_type: str = ""  # mrna, mirna, lncrna; only for RNA entities
+    legacy_ids: str = ""
+    identity_status: str = "pending_registry_mapping"
+    symbol: str = ""
+    physiological_pillar: str = ""
+    structure_candidates: str = "{}"
+    annotation_status: str = "pending"
 
     def to_dict(self) -> Dict[str, Any]:
         return asdict(self)
@@ -82,10 +90,13 @@ class Edge:
     relation: str  # EdgeRelation
     target_id: str
     sign: int  # -1 (inhibition/repression), +1 (activation/production), 0 (unsigned/reaction/structural)
-    context_id: str
+    context_id: Optional[str]
     source_db: str  # pubmed, pubtator, rhea, reactome, chembl
     source_record_id: str  # PMID:..., RHEA:..., etc.
     status: str = EdgeStatus.PROPOSED.value
+    context_status: str = "pending"
+    legacy_source_record_id: str = ""
+    review_note: str = ""
 
     def to_dict(self) -> Dict[str, Any]:
         return asdict(self)
@@ -107,6 +118,8 @@ class Experiment:
     measured_effect: str = ""  # quantitative or qualitative effect
     viability: str = "not reported"  # MTT, CCK-8, LDH, Trypan blue, or 'not reported'
     figure_or_table: str = ""
+    verification_status: str = "pending_passage_review"
+    review_note: str = ""
 
     def to_dict(self) -> Dict[str, Any]:
         return asdict(self)
@@ -121,6 +134,16 @@ class EdgeEvidence:
     polarity: str  # EvidencePolarity
     curator_status: str  # reviewed, automated_extraction, pending
     reviewed_at: str
+    evidence_id: str = ""
+    source_id: str = ""
+    claim_summary: str = ""
+    passage_status: str = "missing"
+    source_location: str = ""
+    source_url: str = ""
+    source_sha256: str = ""
+    legacy_experiment_id: str = ""
+    legacy_source_records: str = ""
+    review_note: str = ""
 
     def to_dict(self) -> Dict[str, Any]:
         return asdict(self)
@@ -135,6 +158,23 @@ class Context:
     compartment: Optional[str] = None
     disease_setting: Optional[str] = None  # physiological, RANKL_induced_osteoclastogenesis
     note: str = ""
+    verification_status: str = "pending_source_review"
 
     def to_dict(self) -> Dict[str, Any]:
         return asdict(self)
+
+
+@dataclass
+class SourceRecord:
+    source_id: str
+    title: str
+    resolution_status: str
+    claim_match_status: str
+    url: str
+    retrieved_at: str
+    raw_file: str
+    raw_sha256: str
+    doi: str = ""
+    pmid: str = ""
+    pmcid: str = ""
+    publication_types: str = ""

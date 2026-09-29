@@ -1,5 +1,2 @@
-// ==========================================================================
-// Remove Exogenous Drug Nodes & Edges to Restore Pure Biological Topology
-// ==========================================================================
-
-MATCH (d) WHERE d.id STARTS WITH 'CHEMBL:' DETACH DELETE d;
+// Retired: do not alter audited claims with legacy enrichment or deduplication.
+RETURN "Use python -m src.kg.rebuild and import into a clean database" AS instruction;

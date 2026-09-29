@@ -4,6 +4,7 @@ Partitions protein nodes into:
 2. enzyme
 3. protein
 """
+raise RuntimeError("Retired legacy transform: unverified enrichment or obsolete identity schema. Use python -m src.kg.rebuild; curate source-backed records in data/processed.")
 
 import os
 import csv

@@ -34,7 +34,7 @@ def build_worksheet_xml(headers, rows):
         '  <sheetFormatPr defaultRowHeight="16"/>\n',
         '  <sheetData>\n'
     ]
-    
+
     # Header row
     out.append('    <row r="1" spans="1:{}">\n'.format(len(headers)))
     for col_idx, h in enumerate(headers, 1):
@@ -42,7 +42,7 @@ def build_worksheet_xml(headers, rows):
         ref = f"{col_letter}1"
         out.append(f'      <c r="{ref}" t="inlineStr"><is><t>{escape_xml(h)}</t></is></c>\n')
     out.append('    </row>\n')
-    
+
     # Data rows
     for row_idx, r in enumerate(rows, 2):
         out.append(f'    <row r="{row_idx}" spans="1:{len(headers)}">\n')
@@ -51,7 +51,7 @@ def build_worksheet_xml(headers, rows):
             ref = f"{col_letter}{row_idx}"
             out.append(f'      <c r="{ref}" t="inlineStr"><is><t>{escape_xml(val)}</t></is></c>\n')
         out.append('    </row>\n')
-        
+
     out.append('  </sheetData>\n</worksheet>')
     return "".join(out)
 
@@ -61,10 +61,14 @@ def create_master_xlsx(output_path, tabs):
     """
     output_path = Path(output_path)
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    
+
     num_sheets = len(tabs)
-    
+
     with zipfile.ZipFile(output_path, 'w', zipfile.ZIP_DEFLATED) as z:
+        def put(name, content):
+            info = zipfile.ZipInfo(name, (1980, 1, 1, 0, 0, 0))
+            info.compress_type = zipfile.ZIP_DEFLATED
+            z.writestr(info, content)
         # [Content_Types].xml
         types_lines = [
             '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>',
@@ -76,14 +80,14 @@ def create_master_xlsx(output_path, tabs):
         for i in range(1, num_sheets + 1):
             types_lines.append(f'  <Override PartName="/xl/worksheets/sheet{i}.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/>')
         types_lines.append('</Types>')
-        z.writestr('[Content_Types].xml', "\n".join(types_lines))
-        
+        put('[Content_Types].xml', "\n".join(types_lines))
+
         # _rels/.rels
-        z.writestr('_rels/.rels', '''<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+        put('_rels/.rels', '''<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
   <Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/>
 </Relationships>''')
-        
+
         # xl/_rels/workbook.xml.rels
         wb_rels_lines = [
             '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>',
@@ -92,8 +96,8 @@ def create_master_xlsx(output_path, tabs):
         for i in range(1, num_sheets + 1):
             wb_rels_lines.append(f'  <Relationship Id="rId{i}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet{i}.xml"/>')
         wb_rels_lines.append('</Relationships>')
-        z.writestr('xl/_rels/workbook.xml.rels', "\n".join(wb_rels_lines))
-        
+        put('xl/_rels/workbook.xml.rels', "\n".join(wb_rels_lines))
+
         # xl/workbook.xml
         wb_sheets_lines = [
             '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>',
@@ -104,12 +108,12 @@ def create_master_xlsx(output_path, tabs):
             wb_sheets_lines.append(f'    <sheet name="{escape_xml(tab["name"])}" sheetId="{i}" r:id="rId{i}"/>')
         wb_sheets_lines.append('  </sheets>')
         wb_sheets_lines.append('</workbook>')
-        z.writestr('xl/workbook.xml', "\n".join(wb_sheets_lines))
-        
+        put('xl/workbook.xml', "\n".join(wb_sheets_lines))
+
         # Write individual worksheets
         for i, tab in enumerate(tabs, 1):
-            z.writestr(f'xl/worksheets/sheet{i}.xml', build_worksheet_xml(tab["headers"], tab["rows"]))
-            
+            put(f'xl/worksheets/sheet{i}.xml', build_worksheet_xml(tab["headers"], tab["rows"]))
+
     print(f"Generated {num_sheets}-Tab Master Excel Workbook: {output_path} ({output_path.stat().st_size:,} bytes)")
 
 create_5tab_xlsx = create_master_xlsx

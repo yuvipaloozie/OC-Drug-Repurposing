@@ -7,6 +7,7 @@ Conversion script to map the Osteoclast Knowledge Graph to the simplified 6-subt
 5. reaction
 6. pathway
 """
+raise RuntimeError("Retired legacy transform: unverified enrichment or obsolete identity schema. Use python -m src.kg.rebuild; curate source-backed records in data/processed.")
 
 import os
 import csv

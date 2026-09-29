@@ -1,0 +1,16 @@
+# Normalize source code; preserve exact bytes of checksum-covered artifacts.
+* text=auto eol=lf
+data/processed/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+data/raw/provenance/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+data/quarantine/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+neo4j/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+assets/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+schemas/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/index.html -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/osteoclast_3d_conformation_explorer.html -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/sources.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+*.xlsx -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+*.zip -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+# Preserve upstream vendor files verbatim, including license whitespace.
+assets/vendor/** -whitespace

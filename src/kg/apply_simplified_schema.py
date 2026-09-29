@@ -7,6 +7,7 @@ Applies the simplified 6-subtype schema to data/processed:
 - reaction
 - pathway
 """
+raise RuntimeError("Retired legacy transform: unverified enrichment or obsolete identity schema. Use python -m src.kg.rebuild; curate source-backed records in data/processed.")
 
 import os
 import csv

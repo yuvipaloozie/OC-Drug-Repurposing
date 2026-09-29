@@ -1,7 +1,7 @@
 # Configuration for Osteoclast Knowledge Graph (KG) and Repurposing Pipeline
 project:
   name: "OC-Drug-Repurposing"
-  version: "1.0.0"
+  version: "3.0.0"
   description: "Signed Contextual Mechanism Knowledge Graph for Osteoclast Repurposing"
   remote_repo: "https://github.com/yuvipaloozie/OC-Drug-Repurposing.git"
 
@@ -12,8 +12,9 @@ data:
   manifest_file: "data/manifest.json"
 
 namespaces:
-  gene: "HGNC"
-  protein: "HGNC"
+  gene: "LOCAL:gene (registry mapping pending)"
+  protein: "LOCAL:protein"
+  rna: "LOCAL:rna"
   metabolite: "CHEBI"
   reaction: "RHEA"
   pathway: "REACTOME"
@@ -25,6 +26,9 @@ namespaces:
 
 kg_rules:
   max_path_depth: 5
+  require_reviewed_passage: true
+  require_reviewed_experiment_and_context: true
+  allow_quarantined_claims_for_scoring: false
   enforce_signed_consistency: true
   reject_unsigned_causal_chains: true
   reject_docking_only_edges: true

@@ -9,6 +9,7 @@ Provides:
 
 from collections import defaultdict
 import csv
+import re
 from typing import Dict, List, Set, Tuple, Optional, Any
 
 
@@ -33,6 +34,7 @@ class OsteoclastKnowledgeGraph:
         contexts_path: Optional[str] = None,
     ):
         """Loads all KG tables from standardized CSV files."""
+        self.__init__()  # Loading is a replacement, not an accumulating merge.
         # Load nodes
         with open(nodes_path, "r", encoding="utf-8") as f:
             reader = csv.DictReader(f)
@@ -83,7 +85,7 @@ class OsteoclastKnowledgeGraph:
         3. Edges directly linking to held-out compounds except strictly approved background facts.
         """
         subgraph = OsteoclastKnowledgeGraph()
-        subgraph.nodes = dict(self.nodes)
+        subgraph.nodes = {k:dict(v) for k,v in self.nodes.items() if k not in held_out_compounds}
         subgraph.contexts = dict(self.contexts)
         subgraph.experiments = {
             exp_id: exp
@@ -95,16 +97,21 @@ class OsteoclastKnowledgeGraph:
         subgraph.edge_evidence = [
             ev
             for ev in self.edge_evidence
-            if ev.get("experiment_id") in subgraph.experiments or ev.get("experiment_id") is None
+            if (not ev.get("experiment_id") or ev.get("experiment_id") in subgraph.experiments)
+            and ev.get("source_id") not in held_out_papers
         ]
 
         # Valid edges
         for edge_id, edge in self.edges.items():
             # Check source record
             src_record = edge.get("source_record_id", "")
-            if any(paper in src_record for paper in held_out_papers):
+            if set(re.findall(r"PMID:\d+|DOI:[^;\s]+",src_record)) & held_out_papers:
                 continue
 
+            original_support = [ev for ev in self.edge_evidence if ev["edge_id"] == edge_id]
+            remaining_support = [ev for ev in subgraph.edge_evidence if ev["edge_id"] == edge_id]
+            if original_support and not remaining_support:
+                continue
             src = edge["source_id"]
             tgt = edge["target_id"]
 
@@ -115,13 +122,29 @@ class OsteoclastKnowledgeGraph:
             subgraph.adj_out[src].append((tgt, edge_id))
             subgraph.adj_in[tgt].append((src, edge_id))
 
+        subgraph.edge_evidence = [ev for ev in subgraph.edge_evidence if ev["edge_id"] in subgraph.edges]
         return subgraph
+
+    def evidence_eligible(self, edge_id):
+        """Fail closed: a plausible citation or recovered narrative is not reviewed evidence."""
+        edge=self.edges[edge_id]
+        if edge.get('status')!='curated' or edge.get('context_status')!='reviewed':return False
+        context=self.contexts.get(edge.get('context_id'),{})
+        if context.get('verification_status')!='reviewed':return False
+        for ev in self.edge_evidence:
+            if ev['edge_id']!=edge_id or ev.get('curator_status')!='reviewed':continue
+            if ev.get('polarity')!='support' or ev.get('passage_status') not in ('source_checked_paraphrase','source_checked_quote'):continue
+            if not all(ev.get(k) for k in ('source_id','source_location','source_sha256','quote_or_location')):continue
+            exp=self.experiments.get(ev.get('experiment_id'),{})
+            if exp.get('verification_status')=='reviewed' and exp.get('species')==context.get('species') and exp.get('cell_type')==context.get('cell_type'):return True
+        return False
 
     def find_mechanism_paths(
         self,
         drug_node_id: str,
         target_phenotype_id: str = "PHENO:osteoclast_differentiation",
         max_depth: int = 8,
+        evidence_only: bool = True,
     ) -> List[Dict[str, Any]]:
         """
         Finds biologically typed directed paths from drug to osteoclast phenotype.
@@ -160,6 +183,8 @@ class OsteoclastKnowledgeGraph:
                 return
 
             for nxt_node, edge_id in self.adj_out.get(curr_node, []):
+                if evidence_only and not self.evidence_eligible(edge_id):
+                    continue
                 if nxt_node not in visited_nodes:
                     visited_nodes.add(nxt_node)
                     current_path.append((nxt_node, edge_id))

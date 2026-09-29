@@ -1,3 +1,5 @@
+> Historical pre-repair report. Superseded for current schema/readiness by [SCHEMA_AND_PROVENANCE_REPAIR.md](SCHEMA_AND_PROVENANCE_REPAIR.md). Claims of verification or benchmark readiness below were not independently established.
+
 # In-Depth Schema Comparison: Osteoclast Knowledge Graph (OCKG) vs. Published Benchmarks
 
 ## Executive Summary

@@ -93,10 +93,14 @@ class PubTatorParser:
             "evidence": {
                 "edge_id": edge_id,
                 "experiment_id": None,  # Filled upon experimental validation
-                "quote_or_location": passage_text[:300],
+                "quote_or_location": passage_text,
                 "evidence_kind": "association",
                 "polarity": "support",
                 "curator_status": "automated_extraction",
                 "reviewed_at": "",
+                "passage_status": "automated_extraction_unreviewed",
+                "source_id": paper_id,
+                "source_location": "",
+                "source_sha256": "",
             },
         }

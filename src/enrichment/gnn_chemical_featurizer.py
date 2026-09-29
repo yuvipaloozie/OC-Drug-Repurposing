@@ -11,6 +11,7 @@ Compatible with:
 - RDKit Molecular Descriptors: MW, LogP, TPSA, HBD, HBA, Rotatable Bonds, Aromatic Rings, Formal Charge
 - PyTorch Geometric (PyG) Data objects for retrospective GNN binding affinity prediction
 """
+raise RuntimeError("Retired legacy transform: unverified enrichment or obsolete identity schema. Use python -m src.kg.rebuild; curate source-backed records in data/processed.")
 
 import json
 from pathlib import Path
