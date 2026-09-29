@@ -55,7 +55,7 @@ def build_worksheet_xml(headers, rows):
     out.append('  </sheetData>\n</worksheet>')
     return "".join(out)
 
-def create_5tab_xlsx(output_path, tabs):
+def create_master_xlsx(output_path, tabs):
     """Creates a multi-tab Excel workbook from a list of tab dicts:
        [{'name': str, 'headers': list, 'rows': list}, ...]
     """
@@ -110,6 +110,8 @@ def create_5tab_xlsx(output_path, tabs):
         for i, tab in enumerate(tabs, 1):
             z.writestr(f'xl/worksheets/sheet{i}.xml', build_worksheet_xml(tab["headers"], tab["rows"]))
             
-    print(f"Generated 5-Tab Master Excel Workbook: {output_path} ({output_path.stat().st_size:,} bytes)")
+    print(f"Generated {num_sheets}-Tab Master Excel Workbook: {output_path} ({output_path.stat().st_size:,} bytes)")
 
-print("Master 5-Tab XLSX generator module initialized.")
+create_5tab_xlsx = create_master_xlsx
+
+print("Master XLSX generator module initialized.")
