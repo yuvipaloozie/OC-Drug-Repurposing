@@ -129,6 +129,7 @@ def main():
     parser.add_argument("--host", default="localhost", help="Neo4j host (default: localhost)")
     parser.add_argument("--port", default=7474, type=int, help="Neo4j HTTP port (default: 7474)")
     parser.add_argument("--user", default="neo4j", help="Neo4j username (default: neo4j)")
+    parser.add_argument("--password", default=None, help="Neo4j password")
     parser.add_argument("--wait", action="store_true", help="Wait and poll until Neo4j is running")
     parser.add_argument("--reset", action="store_true", help="Delete existing graph before loading")
     parser.add_argument("--enrich-only", action="store_true", help="Only run property enrichment (enrich_nodes.cypher) on existing nodes")

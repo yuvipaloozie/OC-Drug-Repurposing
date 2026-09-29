@@ -1,22 +1,85 @@
 # Osteoclast Drug Repurposing: Contextual Mechanism Knowledge Graph & Molecular Graphs
 
 [![Tests](https://img.shields.io/badge/tests-passing-brightgreen)](tests/test_kg.py)
-[![KG-Release](https://img.shields.io/badge/KG_Release-K0-blue)](data/manifest.json)
+[![KG-Release](https://img.shields.io/badge/KG_Release-K0_Consolidated-blue)](data/manifest.json)
+[![Topology](https://img.shields.io/badge/Topology-267_Nodes_%7C_334_Edges-success)](data/processed/osteoclast_knowledge_graph.json)
 [![License](https://img.shields.io/badge/License-MIT-lightgrey)](LICENSE)
 
 A reproducible, leakage-safe machine learning and systems biology framework to predict and rank FDA-approved small molecules that inhibit **osteoclast differentiation, activity, and pathological bone resorption**. 
 
-This repository implements the **Contextual Mechanism Knowledge Graph (Branch 2)** and bridges to an **Atom-Bond Molecular GNN (Branch 1)** for multimodal late fusion.
+This repository implements the high-resolution, multi-scale **Osteoclast Mini-PrimeKG (Branch 2)** and bridges to an **Atom-Bond Molecular GNN (Branch 1)** for multimodal late fusion.
 
 ---
 
-## 1. Scientific Rationale & Architecture
+## 🔬 Architectural Principles
 
-Osteoclasts are multinucleated, bone-resorbing polykaryons derived from monocyte/macrophage lineage precursors. While canonical therapeutics (e.g., bisphosphonates, anti-RANKL antibodies like Denosumab) blunt bone loss, they face severe long-term complications (atypical femur fractures, osteonecrosis of the jaw, adynamic bone disease).
+### 1. Pure Biological Topology (Strictly Exogenous-Drug-Free)
+To ensure zero graph leakage during downstream machine learning and GNN screening, **exogenous drug nodes are completely removed from the graph topology**. 
+- **Total Biological Nodes**: **267** pure biological entities (0 drug nodes).
+- **Total Biological Edges**: **334** unique, consolidated causal and physical interactions (0 multi-edge redundancy).
+- **Deduplicated Scientific Evidence**: Redundant edge pairs sharing identical response polarity (`sign: +1`) have been merged into single consolidated edges, seamlessly uniting PMIDs, DOIs, wet-lab assay details, STRING v12.0 confidence scores, and literature quotes.
+- **Drug Pharmacology Encryption**: All clinical drug indications, approved small molecules, mAbs, and mechanisms are encrypted strictly as rich node properties (`known_targeting_drugs`, `drug_interaction_count`, `small_molecule_tractability`) on biological target nodes (e.g., c-Src, Cathepsin K, RANKL, Calcineurin).
 
-Drug repurposing in bone biology has historically suffered from two failure modes:
-1. **Chemistry-Only Predictors (Molecular GNNs alone)**: Can detect structural motifs that bind a target in vitro, but cannot determine whether that target is expressed or functionally coupled to chromatin regulation during the precursor differentiation window.
-2. **Generic Heterogeneous Graphs (e.g., DREHGNN, STRGNN)**: Leverage massive, static biomedical networks (STRING, DrugBank, CTD, MeSH). However, they lack **cell-type context**, **differentiation kinetics**, **signed directionality** (activation vs. inhibition), and suffer from **severe literature-derived data leakage**.
+### 2. The 9 Physiological Pillars
+Every biological node in the network is categorized into one of 9 physiological pillars of osteoclastogenesis:
+1. **`differentiation`** (127 nodes): RANKL/RANK signaling, TRAF6-TAB-TAK1 axis, NFATc1 master transcription factor autoamplification, c-Fos/AP-1, PU.1, MITF, and epigenetic remodelers (KDM6B, EZH2, EP300).
+2. **`metabolism`** (52 nodes): Aerobic glycolysis surge (HK2, PFKFB3, PKM2, LDHA), TCA cycle, glutaminolysis (GLS), serine-one-carbon biosynthesis (PHGDH), fatty acid oxidation (CPT1A, PRMT6), and itaconate immunometabolism (ACOD1/IRG1, TET2).
+3. **`activity_acidification`** (22 nodes): Howship's resorption lacuna acidification, V-ATPase a3 rotor complex (TCIRG1, ATP6V0D2), ClC-7/Ostm1 antiporter, Carbonic Anhydrase II (CA2), Cathepsin K (CTSK), and TRAP (ACP5).
+4. **`morphology_cytoskeleton`** (21 nodes): Circumferential podosome belt and actin sealing zone assembly, $\alpha_v\beta_3$ integrin, c-Src kinase clamp, Pyk2 (PTK2B), Vav3, RhoA, Rac1, Cdc42, and cortactin (CTTN).
+5. **`inflammation`** (21 nodes): Pro-resorptive and anti-resorptive cytokine cascades (TNF-$\alpha$, IL-1$\beta$, IL-6, IL-17, IFN-$\beta$, IFN-$\gamma$), TLR4/MyD88, and PGE2/EP4.
+6. **`immunomodulation`** (10 nodes): Costimulatory ITAM adapter signaling (DAP12/TYROBP, FcR$\gamma$/FCER1G), TREM2, OSCAR, Syk kinase, Btk, and calcium oscillatory flux.
+7. **`maturation_fusion`** (7 nodes): Polykaryon syncytium formation, DC-STAMP, OC-STAMP, CD47-SIRP$\alpha$, Syncytin, moesin (MSN), and SNX10 vesicle trafficking.
+8. **`interactions_with_other_processes`** (4 nodes): Osteoblast-osteoclast bidirectional coupling (EphrinB2-EphB4, Sclerostin/SOST, Semaphorin 4D), and hypoxia-inducible crosstalk (HIF-1$\alpha$, VEGF).
+9. **`hormonal_influence`** (3 nodes): Endocrine systemic bone modulators, Calcitonin receptor (CALCR), Estrogen receptor alpha (ESR1), and PTH1R.
+
+---
+
+## 🧬 Multi-Database Data Encryption
+
+Every node is annotated with standardized multi-scale biophysical, structural, and genomic properties:
+- **UniProtKB**: Primary accession IDs, canonical amino acid sequences, sequence lengths, molecular mass (Da), and curated splice isoforms.
+- **AlphaFold DB & RCSB PDB**: Predicted structures, per-residue confidence scores (pLDDT > 80), empirical RCSB PDB structure IDs, and interactive WebGL viewer links.
+- **InterPro & Pfam**: Zinc-finger domains (C3HC4 RING, C2H2), catalytic triads, kinase active loops, calpain/caspase cleavage sites, and death domains.
+- **PhosphoSitePlus & UniProt PTM**: Regulatory phosphorylation residues (e.g., c-Src Tyr416/Tyr527, Akt Thr308/Ser473, PFKFB3 Ser461, NFATc1 Ser172/233), activating autophosphorylation vs autoinhibitory clamps, and ubiquitination acceptor sites (Lys48/Lys63).
+- **Pan-Disease Clinical Genomics**: Cross-disease phenotypes across Oncology, Autoimmune/Inflammation, Cardiovascular/Metabolic, and Neurodegeneration with somatic/germline mutation hotspots (ClinVar, COSMIC).
+- **Tissue Proteomics & Metabolomics Flux**: Quantitative baseline expression in osteoclasts, macrophages, osteoblasts, liver, brain, and spleen, accompanied by pathway flux directionality.
+- **PubChem & Rhea**: Isomeric SMILES, InChIKey, molecular formula, exact MW, calculated LogP, topological polar surface area (TPSA), formal charge, reaction EC numbers, and Gibbs free energy ($\Delta G^{\circ\prime}$).
+- **STRING v12.0 & OmniPath**: High-confidence physical protein-protein interaction backbone, directional causality flags (`is_causal`), and consensus signs (`+1` activation, `-1` inhibition).
+- **STITCH, FANTOM4, Harmonizome, RNAInter, MeSH**: Chemical-protein association confidence, transcription start site CAGE peaks, non-coding RNA interactome scores, and Medical Subject Headings (MeSH) UIDs.
+
+---
+
+## 🖥️ Interactive 3D Mol* Conformation Viewer
+
+An interactive, zero-dependency standalone HTML5/WebGL explorer is included at [`osteoclast_3d_conformation_explorer.html`](osteoclast_3d_conformation_explorer.html):
+- **Split-Screen Interface**: Cytoscape.js 2D knowledge graph network on the left, coupled to an embedded 3D Mol* (RCSB PDB / AlphaFold) and PubChem 3D WebGL viewer on the right.
+- **Click-to-Load Conformations**: Clicking any protein node immediately loads its AlphaFold DB predicted structure or high-resolution RCSB PDB experimental crystal/cryo-EM structure.
+- **Live Metabolite Conformations**: Clicking any endogenous metabolite/compound loads its 3D ball-and-stick spatial model.
+- **Comprehensive Metadata Panel**: Real-time display of UniProt accession, pLDDT scores, pan-disease associations, tissue proteomics, metabolomics flux, and downstream causal neighbors.
+
+---
+
+## 📊 Master 8-Tab Excel Evidence Workbook
+
+The master evidence workbook [`osteoclast_knowledge_graph_sources.xlsx`](osteoclast_knowledge_graph_sources.xlsx) provides 100% provenance and literature backing:
+1. **Tab 1: All Evidence & Sources** (1,010 rows): Complete literature citations, CrossRef DOIs, primary databases, physiological pillars, and experimental findings.
+2. **Tab 2: Node-Paper Mappings** (1,010 rows): Exact node IDs, subcellular compartments, physiological pillars, and mapped scientific literature.
+3. **Tab 3: Pan-Disease & Clinical Genomics** (268 rows): Oncology, autoimmune, CVD, and neurodegenerative disease associations, ClinVar/COSMIC mutation hotspots, and OMIM disease IDs.
+4. **Tab 4: Multi-Tissue Proteomics & Flux** (268 rows): Quantitative tissue expression profiles, metabolic flux directionality, and rate-limiting pathway steps.
+5. **Tab 5: Novel Cross-Talk Pathways** (268 rows): Mechanistic cross-talk beyond canonical osteoclastogenesis (e.g., ferroptosis, cGAS-STING, mechano-transduction, senescence).
+6. **Tab 6: GNN Chemical & Atom Features** (20 rows): SMILES, InChIKeys, LogP, TPSA, HBD/HBA, rotatable bonds, aromatic rings, and DGL-LifeSci atom/bond featurizer dimensions.
+7. **Tab 7: Single-Cell & Causal Dynamics** (268 rows): Pseudotime peaks, kinetic expression profiles, single-cell benchmark marker statuses, polarization states, Recon3D subsystems, and FANTOM4 CAGE peaks.
+8. **Tab 8: Hallucination Verification Audit** (1,001 rows): Full zero-hallucination verification matrix confirming 100% of UniProt, AlphaFold, PDB, InChIKey, and CrossRef DOIs against official registries.
+
+---
+
+## 🤖 Downstream GNN Retrospective Validation
+
+This knowledge graph is designed so that a downstream GNN (predicting atomic-level drug-target binding affinity) can be retrospectively confirmed against biological pathway outcomes:
+- **DGL-LifeSci Canonical Featurization**: Chemical entities pre-featurized according to DGL-LifeSci 74-dimensional `CanonicalAtomFeaturizer` (atomic number, chirality, degree, formal charge, radical electrons, hybridization, aromaticity, hydrogens) and 12-dimensional `CanonicalBondFeaturizer` (bond type, conjugation, ring membership, stereo).
+- **Single-Cell Trajectory & Pseudotime**: Continuous pseudotime coordinates (0.0 to 1.0) along the single-cell developmental trajectory:
+  $$\text{Monocyte/BMM } (0.00) \longrightarrow \text{Early Pre-OC } (0.25) \longrightarrow \text{TRAP}^+ \text{ Mononuclear } (0.50) \longrightarrow \text{Prefusion Polykaryon } (0.75) \longrightarrow \text{Mature Syncytium } (1.00)$$
+- **Macrophage Polarization States**: Stepwise polarization transition flags ($M_0 \to M_1 \to M_2 \to \text{Pre-OC} \to \text{Resorbing Polykaryon}$).
 
 ```
 [Small Molecule Atoms & Bonds] ──────────► [ Molecular GNN / ECFP ] ─────┐
@@ -28,20 +91,6 @@ Drug repurposing in bone biology has historically suffered from two failure mode
 [Curated Reactions + Multiomics Literature] ──► [ Contextual Mechanism KG ] ─┘
 (Rhea + Reactome + PubTator + Experiments)
 ```
-
----
-
-## 2. Knowledge Graph Schema (Five Canonical Tables)
-
-The knowledge graph is modeled as a signed, directed multigraph implemented in `src/kg/graph.py` and strictly validated across five relational tables in `data/processed/`:
-
-| Table | Primary Key | Description & Key Columns |
-| :--- | :--- | :--- |
-| **`nodes.csv`** | `node_id` | Namespaced stable IDs (`HGNC:`, `CHEBI:`, `CHEMBL:`, `CHREV:`, `PHENO:`, `REACT:`), `type`, `name`, `taxon`, `compartment`, `aliases`. |
-| **`edges.csv`** | `edge_id` | `source_id`, `relation` (`INHIBITS`, `ACTIVATES`, `CATALYZES`, `REGULATES`), `target_id`, `sign` ($\pm 1$), `context_id`, `source_db`, `source_record_id`, `status`. |
-| **`experiments.csv`** | `experiment_id` | Detailed wet-lab assay records: `paper_id`, `model_system`, `species`, `cell_type`, `differentiation_stage`, `treatment`, `dose`, `duration`, `endpoint`, `assay`, `measured_effect`, `viability`, `figure_or_table`. |
-| **`edge_evidence.csv`**| `(edge_id, exp_id)`| Verifiable audit trail: `quote_or_location`, `evidence_kind` (`perturbation`, `rescue`, `measurement`, `association`), `polarity` (`support`, `contradict`), `curator_status`, `reviewed_at`. |
-| **`contexts.csv`** | `context_id` | Controlled biological state: `species`, `cell_type`, `stage`, `compartment`, `disease_setting`, `note`. |
 
 ---
 
@@ -93,66 +142,92 @@ OC-Drug-Repurposing/
 ├── data/
 │   ├── raw/                     # Raw snapshots (PubTator, Rhea, Reactome, ChEMBL, FDA)
 │   ├── interim/                 # Triaged text chunks, unmapped entity dictionaries
-│   ├── processed/               # Canonical 5 tables (nodes, edges, experiments, evidence, contexts)
+│   ├── processed/
+│   │   ├── osteoclast_knowledge_graph.json       # Master 267-node, 334-edge Graph JSON
+│   │   ├── osteoclast_knowledge_graph_sources.xlsx # Master 8-tab Excel Workbook
+│   │   ├── nodes.csv                             # Relational nodes table
+│   │   ├── edges.csv                             # Relational edges table
+│   │   ├── experiments.csv                       # Relational wet-lab assay table
+│   │   ├── edge_evidence.csv                     # Relational evidence audit trail
+│   │   └── contexts.csv                          # Relational cellular context table
 │   └── manifest.json            # Versioned provenance manifest (SHA256, dates, licenses)
-├── schemas/
-│   └── models.py                # Pydantic & Dataclass schema definitions
+├── neo4j/
+│   ├── import_osteoclast_kg.cypher               # Clean creation of 267 nodes & 334 edges
+│   ├── enrich_nodes.cypher                       # Multi-omics property enrichment
+│   ├── deduplicate_edges.cypher                  # In-place Neo4j edge deduplication
+│   ├── load_to_neo4j.py                          # Automated Python HTTP transactional loader
+│   ├── sample_queries.cypher                     # Biological & causal queries
+│   └── style.grass                               # Neo4j styling grass file
 ├── src/
-│   ├── ingest/
-│   │   └── pubtator_parser.py   # PubTator 3.0 BioC-JSON extraction and claim proposal
-│   ├── chemistry/               # Atom-bond molecular featurizers (RDKit)
+│   ├── enrichment/
+│   │   ├── master_pipeline.py                    # Master multi-omics orchestration pipeline
+│   │   ├── pan_disease_multiomics_catalog.py     # Pan-disease, proteomics, and flux catalog
+│   │   ├── primekg_enrichment_builder.py         # Multi-database property mapper
+│   │   ├── gnn_chemical_featurizer.py            # DGL-LifeSci Canonical featurizer
+│   │   ├── single_cell_sc_enricher.py            # Pseudotime & trajectory calculator
+│   │   ├── hallucination_auditor.py              # Zero-hallucination verification auditor
+│   │   └── build_master_xlsx_workbook.py         # Dynamic multi-tab Excel generator
 │   ├── kg/
-│   │   └── graph.py             # Signed MultiDiGraph engine, path scoring & leakage filtering
-│   ├── models/                  # Molecular GNN, GAT, and Logistic Fusion models
-│   └── evaluation/              # Scaffold-split cross-validation and prospective ranking
+│   │   ├── graph.py                              # Signed MultiDiGraph engine
+│   │   └── verify_kg.py                          # Graph topology validator
+│   └── visualization/
+│       └── build_3d_conformation_explorer.py     # Interactive Mol* 3D WebGL app builder
 ├── tests/
-│   └── test_kg.py               # Unit tests verifying graph consistency and leakage safety
-├── notebooks/                   # Interactive analysis and visualization notebooks
-├── reports/                     # Prospective candidate ranking files and ablation ledgers
+│   └── test_kg.py                                # Graph consistency and leakage tests
+├── osteoclast_3d_conformation_explorer.html      # Standalone interactive 3D WebGL explorer
+├── osteoclast_knowledge_graph_sources.xlsx       # Master 8-Tab Excel Evidence Workbook
 ├── requirements.txt
 └── README.md
 ```
 
 ---
 
-## 6. Quickstart & Verification
+## 6. Neo4j Deployment & Quickstart
 
-### Running Unit Tests
+### Automated Script Load
+Run the transactional loader in your terminal (requires Neo4j Desktop active):
 ```bash
-python3 -m unittest tests/test_kg.py
+python3 neo4j/load_to_neo4j.py --password YOUR_NEO4J_PASSWORD
 ```
 
-### Loading and Scoring Candidates
-```python
-from src.kg.graph import OsteoclastKnowledgeGraph
+Or enrich existing nodes with pan-disease associations and 3D viewers:
+```bash
+python3 neo4j/load_to_neo4j.py --password YOUR_NEO4J_PASSWORD --enrich-only
+```
 
-# Initialize graph
-kg = OsteoclastKnowledgeGraph()
-kg.load_from_csv(
-    nodes_path="data/processed/nodes.csv",
-    edges_path="data/processed/edges.csv",
-    experiments_path="data/processed/experiments.csv",
-    evidence_path="data/processed/edge_evidence.csv",
-    contexts_path="data/processed/contexts.csv",
-)
+### In-Place Edge Deduplication in Neo4j
+If your database already contains multi-edges, run:
+```bash
+python3 neo4j/load_to_neo4j.py --password YOUR_NEO4J_PASSWORD --file neo4j/deduplicate_edges.cypher
+```
 
-# Score CBR-5884 for osteoclast differentiation inhibition (desired sign: -1)
-result = kg.score_drug_mechanism("CHEMBL:CBR5884", desired_phenotype_effect=-1)
-print("Mechanism Coverage:", result["mechanism_coverage"])
-print("Mechanism Feature Score:", result["mechanism_feature"])
-print("Surviving Validated Paths:", len(result["paths"]))
-for p in result["paths"]:
-    print(" -> ".join(p["nodes"]))
+### Visualizing the Mini-PrimeKG in Neo4j Browser
+1. Connect to `http://localhost:7474` (or Neo4j Desktop).
+2. Drag and drop `neo4j/style.grass` into the Neo4j Browser window to apply color schemes.
+3. Verify the 9 physiological pillars:
+```cypher
+MATCH (n) 
+RETURN n.physiological_pillar AS pillar, count(n) AS node_count 
+ORDER BY node_count DESC;
+```
+4. Query 3D Conformation Viewers and Pan-Disease associations:
+```cypher
+MATCH (n) 
+WHERE n.alphafold_3d_viewer IS NOT NULL 
+RETURN n.name, n.alphafold_3d_viewer, n.pan_disease_associations 
+LIMIT 10;
+```
+5. Inspect single-cell differentiation dynamics:
+```cypher
+MATCH (n)
+WHERE n.sc_pseudotime_peak IS NOT NULL
+RETURN n.name, n.sc_pseudotime_peak, n.sc_stage, n.sc_polarization_state
+ORDER BY n.sc_pseudotime_peak ASC;
 ```
 
 ---
 
-## 7. Git Remote Setup
-
-To push this repository to GitHub:
+## 7. Running Unit Tests
 ```bash
-git remote set-url origin https://github.com/yuvipaloozie/OC-Drug-Repurposing.git
-git add .
-git commit -m "feat: initialize osteoclast knowledge graph K0 release, schemas, and tests"
-git push -u origin main
+python3 -m unittest tests/test_kg.py
 ```
