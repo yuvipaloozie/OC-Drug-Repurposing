@@ -205,13 +205,19 @@
     const candidates=selected.structure_candidates||{};
     const uniprot=String(candidates.uniprot_id||'');
     // Syntax is only an eligibility check; it is not a registry or identity verification.
-    if (/^(?:[OPQ][0-9][A-Z0-9]{3}[0-9]|[A-NR-Z][0-9](?:[A-Z][A-Z0-9]{2}[0-9]){1,2})$/.test(uniprot)) structureOptions.push({label:`AlphaFold · ${uniprot} (unverified mapping)`,url:`https://alphafold.ebi.ac.uk/entry/${uniprot}`,kind:'alphafold',id:uniprot});
+    if (/^(?:[OPQ][0-9][A-Z0-9]{3}[0-9]|[A-NR-Z][0-9](?:[A-Z][A-Z0-9]{2}[0-9]){1,2})$/.test(uniprot)) structureOptions.push({label:`AlphaFold · ${uniprot}`,url:`https://alphafold.ebi.ac.uk/entry/${uniprot}`,kind:'alphafold',id:uniprot});
     const pdbs=[...new Set([...(Array.isArray(candidates.pdb_structures)?candidates.pdb_structures:[]),candidates.primary_pdb].filter(p=>/^[1-9][a-zA-Z0-9]{3}$/.test(p||'')))];
-    pdbs.forEach(p=>structureOptions.push({label:`PDB · ${p} (unverified mapping)`,url:`https://www.rcsb.org/structure/${p}`,kind:'pdb',id:p}));
+    pdbs.forEach(p=>structureOptions.push({label:`PDB · ${p}`,url:`https://www.rcsb.org/structure/${p}`,kind:'pdb',id:p}));
     $('structure-source').replaceChildren();
     structureOptions.forEach((o,i)=>{const opt=make('option',o.label);opt.value=i;$('structure-source').append(opt);});
     if(!structureOptions.length){const opt=make('option','No usable structure identifier');$('structure-source').append(opt);}
-    $('structure-source').disabled=!structureOptions.length; $('load-structure').disabled=!structureOptions.length;
+    $('structure-source').disabled=structureOptions.length<2;
+    const sourceNote=$('structure-source-note');sourceNote.hidden=mode!=='structure';
+    sourceNote.textContent=structureOptions.length===1
+      ? `One candidate recorded: ${structureOptions[0].label}. ${pdbs.length?'No other usable identifier is recorded.':'No usable PDB identifier is recorded.'} Select Load 3D structure; the entity/species mapping is unverified.`
+      : structureOptions.length>1
+        ? `${structureOptions.length} candidates recorded. Choose a source, then select Load 3D structure. Entity/species mappings are unverified.`
+        : 'No usable structure identifier is recorded. Placeholder IDs are excluded.'; $('load-structure').disabled=!structureOptions.length;
     $('structure-message').textContent=structureOptions.length?'Explore this molecule in 3D':'No protein structure available';
     $('structure-explanation').textContent=structureOptions.length?'Choose a source above, then load the interactive structure. Drag to rotate and scroll to zoom. Structure downloads require internet access.':'The repository has no usable AlphaFold or PDB identifier for this entity. RNA, genes, metabolites, reactions and pathways are not protein entities.';
     $('structure-status').textContent=structureOptions.length?'Unverified legacy structure identifiers. Source identity/species may differ from this KG entity; these are candidates, not validated mappings.':'No substitute structure has been loaded.';
@@ -237,7 +243,7 @@
     if(!libraryPromise)libraryPromise=new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='assets/vendor/3Dmol-min.js';script.onload=resolve;script.onerror=()=>{libraryPromise=null;script.remove();reject(new Error('The 3D rendering library could not load.'));};document.head.append(script);});
     return libraryPromise;
   }
-  $('structure-source').onchange=()=>{const option=structureOptions[Number($('structure-source').value)];if(option){resetModel();$('external-structure').href=option.url;$('load-structure').disabled=false;$('structure-message').textContent='Explore this molecule in 3D';$('structure-explanation').textContent='Load the selected structure to rotate and zoom its molecular shape.';$('structure-status').textContent='Source selected. Load the structure to update the 3D panel.';}};
+  $('structure-source').onchange=()=>{const option=structureOptions[Number($('structure-source').value)];if(option){resetModel();$('external-structure').href=option.url;$('load-structure').disabled=false;$('structure-message').textContent='Explore this molecule in 3D';$('structure-explanation').textContent='Load the selected structure to rotate and zoom its molecular shape.';$('structure-status').textContent=`${option.label} selected. Select Load 3D structure to update the panel. Mapping remains unverified.`;}};
   $('load-structure').onclick=async()=>{
     const option=structureOptions[Number($('structure-source').value)];if(!option)return;
     resetModel();const serial=loadSerial;const controller=new AbortController();loadController=controller;const signal=controller.signal;const timeout=setTimeout(()=>controller.abort(),25000);
