@@ -32,10 +32,13 @@ def rebuild(root=ROOT):
         for k in ['aliases','roles','legacy_ids']:n[k]=[s.strip() for s in n.get(k,'').split('|') if s.strip()]
         n['structure_candidates']=json.loads(n.get('structure_candidates') or '{}')
         nodes.append(n)
+    from src.kg.graph import OsteoclastKnowledgeGraph
+    eligibility=OsteoclastKnowledgeGraph()
+    eligibility.load_from_csv(*(str(root/'data/processed'/f'{x}.csv') for x in ['nodes','edges','experiments','edge_evidence','contexts']))
     edges=[]
     for row in tables['edges']:
         e=dict(row);e['source']=e.pop('source_id');e['target']=e.pop('target_id');e['sign']=int(e['sign'])
-        e['evidence']=evidence[e['edge_id']];e['context_id']=e['context_id'] or None
+        e['evidence_eligible']=eligibility.evidence_eligible(e['edge_id']);e['evidence']=evidence[e['edge_id']];e['context_id']=e['context_id'] or None
         edges.append(e)
     payload={'metadata':{'version':'3.0.0','description':'Audited claim inventory; review status is separate from registry resolution. Pending and quarantined claims are not validated facts.',
                          'statistics':{'total_nodes':len(nodes),'total_edges':len(edges),'node_types':dict(Counter(n['type'] for n in nodes))}},
@@ -62,11 +65,12 @@ def rebuild(root=ROOT):
         tabs.append({'name':name,'headers':fields,'rows':[[row.get(k,'') for k in fields] for row in rows]})
     xlsx=root/'data/processed/osteoclast_knowledge_graph_sources.xlsx';create_master_xlsx(xlsx,tabs)
     (root/'neo4j'/xlsx.name).write_bytes(xlsx.read_bytes())
+    (root/xlsx.name).write_bytes(xlsx.read_bytes())
     export_neo4j(payload,root)
     import importlib.util
     spec=importlib.util.spec_from_file_location('viewer_build',root/'src/visualization/build_viewers.py')
     module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module);module.build(root)
-    outputs=['index.html','osteoclast_3d_conformation_explorer.html','sources.csv']
+    outputs=['index.html','osteoclast_3d_conformation_explorer.html','sources.csv','osteoclast_knowledge_graph_sources.xlsx']
     files=[p for base in ['data/processed','data/raw/provenance','data/quarantine','neo4j','assets','schemas'] for p in (root/base).rglob('*') if p.is_file() and '__pycache__' not in p.parts]
     files += [root/p for p in outputs]
     manifest={'manifest_version':'3.0.0','note':'Hashes describe local files; original source claims are archived, not certified.',

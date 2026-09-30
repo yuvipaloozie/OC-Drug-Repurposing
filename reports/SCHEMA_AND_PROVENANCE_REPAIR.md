@@ -67,3 +67,12 @@ The broken joins, export loss, misleading review statuses and automatic regenera
 ## Verification performed
 
 20 unit/regression tests passed, including missing-reference rejection, review requirements, RNA translation types, preservation of multiple evidence records, export equivalence, source hashes and held-out support removal. All Python sources compile, workbook XML is valid, and two consecutive rebuilds produced identical manifests. Both viewers were checked in the browser for legacy-link resolution, RNA identity, evidence display, and the full 267-node graph. A live Neo4j database import was not executed.
+
+
+## Follow-up: identity, consumers, and viewer evidence filters
+
+The historical counts above describe the first repair. Current evidence counts are 250 quarantined, 92 pending, and 3 reviewed after quarantining the two CHEBI:16015 incident claims. ChEBI confirms this accession is L-glutamic acid (https://www.ebi.ac.uk/chebi/CHEBI:16015, checked 2026-09-29). The old GLS-to-compound and compound-to-alpha-ketoglutarate ACTIVATES assertions are retained for audit only, not approved reaction semantics. No node merge or protonation change was inferred.
+
+Path finding and scoring now default to PATHWAY:OSTEOCLAST_DIFFERENTIATION. Paper masking filters individual evidence before deciding whether a relationship survives; retained edge source lists omit held-out IDs and do not mutate the input graph. The root workbook now matches the processed and Neo4j copies and is included in the manifest.
+
+Viewer evidence filters affect relationships only, preserving node positions, navigation, and pan/zoom. Has reviewed passage is distinct from Eligible for scoring; the latter is exported directly from the Python eligibility gate and currently matches zero edges. Mixed-status evidence can match more than one filter. Incident details continue to show all records for auditing. Regression coverage now totals 25 tests.

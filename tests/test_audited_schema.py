@@ -82,8 +82,50 @@ class AuditedSchemaTests(unittest.TestCase):
 
     def test_independent_support_survives_fold_mask(self):
         g=OsteoclastKnowledgeGraph();g.nodes={'a':{},'b':{}};g.edges={'e':{'source_id':'a','target_id':'b','source_record_id':'database:x'}}
+        g.edges['e']['source_record_id']='PMID:123;PMID:456'
         g.experiments={'x':{'paper_id':'PMID:123'},'y':{'paper_id':'PMID:456'}}
         g.edge_evidence=[{'edge_id':'e','experiment_id':'x','source_id':'PMID:123'},{'edge_id':'e','experiment_id':'y','source_id':'PMID:456'}]
         sub=g.filter_subgraph_by_leakage({'PMID:123'},set());self.assertIn('e',sub.edges);self.assertEqual(len(sub.edge_evidence),1)
+        self.assertEqual(sub.edges['e']['source_record_id'],'PMID:456')
+        self.assertEqual(g.edges['e']['source_record_id'],'PMID:123;PMID:456')
+
+
+    def test_default_endpoint_finds_and_scores_reviewed_fixture(self):
+        g=OsteoclastKnowledgeGraph();end='PATHWAY:OSTEOCLAST_DIFFERENTIATION'
+        g.nodes={k:{} for k in ['drug','target',end]}
+        g.contexts={'c':{'verification_status':'reviewed','species':'mouse','cell_type':'BMM'}}
+        g.experiments={'x':{'verification_status':'reviewed','species':'mouse','cell_type':'BMM'}}
+        for i,(a,b,sign) in enumerate([('drug','target',-1),('target',end,1)]):
+            key=str(i);g.edges[key]={'source_id':a,'target_id':b,'sign':sign,'status':'curated','context_status':'reviewed','context_id':'c'}
+            g.adj_out[a].append((b,key))
+            g.edge_evidence.append({'edge_id':key,'experiment_id':'x','curator_status':'reviewed','polarity':'support','passage_status':'source_checked_quote','source_id':'fixture','source_location':'fixture','source_sha256':'fixture','quote_or_location':'fixture'})
+        self.assertEqual(len(g.find_mechanism_paths('drug')),1)
+        self.assertTrue(g.score_drug_mechanism('drug')['mechanism_coverage'])
+
+    def test_all_workbook_copies_match(self):
+        expected=(DATA/'osteoclast_knowledge_graph_sources.xlsx').read_bytes()
+        for directory in [ROOT,ROOT/'neo4j']:
+            self.assertEqual((directory/'osteoclast_knowledge_graph_sources.xlsx').read_bytes(),expected)
+        self.assertIn('osteoclast_knowledge_graph_sources.xlsx',json.loads((ROOT/'data/manifest.json').read_text())['files'])
+
+    def test_glutamic_acid_identity_and_incident_quarantine(self):
+        nodes={n['node_id']:n for n in rows('nodes')}
+        self.assertEqual(nodes['CHEBI:16015']['name'],'L-glutamic acid')
+        self.assertIn('CHEBI:30915',nodes)
+        incident=[e for e in rows('edges') if 'CHEBI:16015' in (e['source_id'],e['target_id'])]
+        self.assertEqual(len(incident),2)
+        self.assertTrue(all(e['status']=='quarantined' for e in incident))
+
+    def test_viewer_eligibility_matches_scoring_gate(self):
+        g=OsteoclastKnowledgeGraph();g.load_from_csv(*(str(DATA/f'{x}.csv') for x in ['nodes','edges','experiments','edge_evidence','contexts']))
+        payload=json.loads((DATA/'osteoclast_knowledge_graph.json').read_text(encoding='utf-8'))
+        for e in payload['edges']:self.assertEqual(e['evidence_eligible'],g.evidence_eligible(e['edge_id']))
+
+    def test_legacy_source_only_mask_keeps_independent_reference(self):
+        g=OsteoclastKnowledgeGraph();g.nodes={'a':{},'b':{}}
+        g.edges={'e':{'source_id':'a','target_id':'b','source_record_id':'PMID:123;PMID:456'}}
+        sub=g.filter_subgraph_by_leakage({'PMID:123'},set())
+        self.assertEqual(sub.edges['e']['source_record_id'],'PMID:456')
+        self.assertFalse(g.filter_subgraph_by_leakage({'PMID:123','PMID:456'},set()).edges)
 
 if __name__=='__main__':unittest.main()

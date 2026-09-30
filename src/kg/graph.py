@@ -78,11 +78,10 @@ class OsteoclastKnowledgeGraph:
     def filter_subgraph_by_leakage(
         self, held_out_papers: Set[str], held_out_compounds: Set[str]
     ) -> "OsteoclastKnowledgeGraph":
-        """
-        Creates a leakage-safe copy of the KG by excluding:
-        1. Any edge whose source_record_id is in held_out_papers.
-        2. Any edge whose evidence links to an experiment from held_out_papers.
-        3. Edges directly linking to held-out compounds except strictly approved background facts.
+        """Remove held-out evidence, preserving independently supported relationships.
+
+        Evidence records are authoritative when present. Edge-level source IDs are
+        a fallback for legacy records without evidence; retained copies are scrubbed.
         """
         subgraph = OsteoclastKnowledgeGraph()
         subgraph.nodes = {k:dict(v) for k,v in self.nodes.items() if k not in held_out_compounds}
@@ -103,15 +102,21 @@ class OsteoclastKnowledgeGraph:
 
         # Valid edges
         for edge_id, edge in self.edges.items():
-            # Check source record
-            src_record = edge.get("source_record_id", "")
-            if set(re.findall(r"PMID:\d+|DOI:[^;\s]+",src_record)) & held_out_papers:
-                continue
-
+            sources = [v.strip() for v in edge.get("source_record_id", "").split(';') if v.strip()]
+            retained_sources = [v for v in sources if v not in held_out_papers]
             original_support = [ev for ev in self.edge_evidence if ev["edge_id"] == edge_id]
             remaining_support = [ev for ev in subgraph.edge_evidence if ev["edge_id"] == edge_id]
-            if original_support and not remaining_support:
+            if original_support:
+                if not remaining_support:
+                    continue
+            elif sources and not retained_sources:
                 continue
+            edge = dict(edge)
+            edge["source_record_id"] = ';'.join(retained_sources)
+            if "legacy_source_record_id" in edge:
+                edge["legacy_source_record_id"] = ';'.join(
+                    v.strip() for v in edge["legacy_source_record_id"].split(';')
+                    if v.strip() not in held_out_papers)
             src = edge["source_id"]
             tgt = edge["target_id"]
 
@@ -142,7 +147,7 @@ class OsteoclastKnowledgeGraph:
     def find_mechanism_paths(
         self,
         drug_node_id: str,
-        target_phenotype_id: str = "PHENO:osteoclast_differentiation",
+        target_phenotype_id: str = "PATHWAY:OSTEOCLAST_DIFFERENTIATION",
         max_depth: int = 8,
         evidence_only: bool = True,
     ) -> List[Dict[str, Any]]:
@@ -199,7 +204,7 @@ class OsteoclastKnowledgeGraph:
         self,
         drug_node_id: str,
         desired_phenotype_effect: int = -1,  # -1 means inhibit osteoclastogenesis
-        target_phenotype_id: str = "PHENO:osteoclast_differentiation",
+        target_phenotype_id: str = "PATHWAY:OSTEOCLAST_DIFFERENTIATION",
         max_depth: int = 8,
     ) -> Dict[str, Any]:
         """

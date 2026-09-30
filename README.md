@@ -58,7 +58,7 @@ Publication resolution and claim verification are separate steps. A valid PMID o
 
 The source audit requested 44 references from Europe PMC: 42 resolved and two remained unresolved. It flagged 29 apparent citation-topic mismatches, six references needing additional claim matching, and seven relevant publications still requiring claim-level scrutiny. Five open-access full-text XML snapshots and retrieval records are included under `data/raw/provenance`.
 
-Of the **345 evidence records**, **248 are quarantined, 94 are pending, and three contain source-checked qualitative paraphrases**. All 48 experiment records remain quarantined or pending. The checked paraphrases do not validate historical dose, duration, effect-size, or exact-context assertions.
+Of the **345 evidence records**, **250 are quarantined, 92 are pending, and three contain source-checked qualitative paraphrases**. All 48 experiment records remain quarantined or pending. The checked paraphrases do not validate historical dose, duration, effect-size, or exact-context assertions.
 
 Recovered repository narratives are retained in `claim_summary`, not presented as article quotations. Checked excerpts or paraphrases use `quote_or_location` alongside a source location, URL, checksum, and review information. Broken context and experiment references have been cleared without inventing replacements, and joined experiment IDs have been separated into individual evidence rows.
 
@@ -82,6 +82,8 @@ Open [`index.html`](index.html) to navigate the biological graph:
 
 The full graph starts with wider spacing and light category/role fills. At whole-network fit, labels are necessarily small; zoom or switch to a neighborhood for detailed reading. Neighborhoods refit after their animation settles to keep their nodes inside the canvas.
 
+A compact Evidence selector filters relationships by reviewed passages, pending evidence, quarantine, or scoring eligibility. Nodes and their positions remain visible. Line styles distinguish reviewed passages, pending evidence, and quarantine-only claims; mixed support remains explicit in details. Reviewed passages alone do not establish scoring readiness.
+
 Relationship details preserve all associated evidence records and show their review status. Visibility in the viewer does not mean a claim is eligible for scientific scoring.
 
 ### Structure explorer
@@ -102,7 +104,7 @@ Visit http://127.0.0.1:8765/index.html and switch explorers using the navigation
 
 ## Master Evidence Workbook
 
-The rebuilt [Excel workbook](data/processed/osteoclast_knowledge_graph_sources.xlsx) contains seven sheets: a scope/read-me sheet followed by nodes, edges, contexts, experiments, edge evidence, and source records. A synchronized copy is provided under `neo4j`.
+The rebuilt [Excel workbook](data/processed/osteoclast_knowledge_graph_sources.xlsx) contains seven sheets: a scope/read-me sheet followed by nodes, edges, contexts, experiments, edge evidence, and source records. Synchronized copies are provided at the repository root and under `neo4j`; all three are rebuilt and checksum-tracked.
 
 The workbook mirrors the canonical tables, including missing values and review status. It replaces the earlier eight-tab presentation of unsupported enrichment and blanket verification claims. Source CSV exports provide a flattened evidence ledger with publication metadata, while the graph JSON retains multiple evidence records per relationship.
 
@@ -143,6 +145,8 @@ The original seed topics remain useful starting points for targeted literature r
 4. **Itaconate and TET2.** A checked qualitative claim is linked to the abstract and Results of cached `PMC12159140`. Derivative experiments, including OI, must not be assigned to parent itaconate as dose-equivalent evidence.
 5. **Pyruvate, acetyl-CoA, and histone acetylation.** These remain candidate mechanisms for source-specific curation; earlier detailed residue and assay claims should not be treated as validated findings.
 6. **The RANKL signaling backbone.** RANKL/RANK, TRAF6, transcriptional regulators, and downstream osteoclast-associated entities remain central navigation routes. Each relationship still needs its own evidence and context assessment.
+
+The ChEBI label for `CHEBI:16015` is corrected to L-glutamic acid, and its two incident claims are quarantined for reaction-level re-curation. It is not merged with alpha-ketoglutarate.
 
 The immediate priority is source-to-claim matching and passage-level experimental curation, followed by registry/orthology mapping and context review. These steps should precede promoting paths into the default scoring set.
 
@@ -211,6 +215,6 @@ Structural validation checks identifiers, foreign keys, entity types, RNA transl
 
 Rebuild synchronizes both graph JSON copies, browser assets, inventory, source ledgers, both Excel workbooks, Neo4j artifacts, and the file-hash manifest. It performs no network enrichment and does not automatically promote records to reviewed status. Legacy export and master-pipeline entry points redirect to this rebuild.
 
-The repair passed 20 unit/regression tests, including evidence preservation, invalid-reference rejection, source checksums, export consistency, and held-out support handling. A fresh Git checkout also passed the suite with all 43 manifest artifacts present. Git attributes preserve checksum-covered bytes, and the required provenance snapshots are included in version control.
+The repair passed 25 unit/regression tests, including evidence preservation, invalid-reference rejection, source checksums, export consistency, and held-out support handling. A fresh Git checkout also passed the suite with all 44 manifest artifacts present. Git attributes preserve checksum-covered bytes, and the required provenance snapshots are included in version control.
 
 The remaining scientific work is documented in the [repair report](reports/SCHEMA_AND_PROVENANCE_REPAIR.md). Test success establishes software/data consistency within these checks; it does not resolve the pending literature review or validate a repurposing prediction.

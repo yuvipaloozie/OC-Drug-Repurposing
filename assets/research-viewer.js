@@ -18,7 +18,7 @@
   const make = (tag, text, cls) => { const e = document.createElement(tag); if (text !== undefined) e.textContent = text; if (cls) e.className = cls; return e; };
   const selectedParam = new URLSearchParams(location.search).get('node');
   let selected = resolveNode(selectedParam) || resolveNode(mode === 'graph' ? 'HGNC:PHGDH' : 'HGNC:SRC') || data.nodes[0];
-  let lastNodeClick = null;
+  let lastNodeClick = null, pendingLayout = null;
   let scope = 'module', rootId = selected.id, animation = 0, neighborPage = 0, viewNodes = [], viewEdges = [], positions = new Map();
   let scale = 1, panX = 0, panY = 0, drag = null, moved = false, structureOptions = [], modelViewer = null, loadSerial = 0, loadController = null, libraryPromise;
   const svgNS = 'http://www.w3.org/2000/svg';
@@ -82,11 +82,12 @@
     if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
     cancelAnimationFrame(animation);
     const target=new Map([...positions].map(([id,p])=>[id,{...p}]));
+    pendingLayout=target;
     const center=target.get(rootId)||{x:0,y:0}; const start=performance.now();
     function frame(now){
       const t=Math.min(1,(now-start)/420),ease=1-Math.pow(1-t,3);
       for(const [id,p] of positions){const end=target.get(id);p.x=center.x+(end.x-center.x)*(.65+.35*ease);p.y=center.y+(end.y-center.y)*(.65+.35*ease);}
-      updateGeometry();if(t<1)animation=requestAnimationFrame(frame);else fitGraph();
+      updateGeometry();if(t<1)animation=requestAnimationFrame(frame);else {pendingLayout=null;fitGraph();}
     }
     animation=requestAnimationFrame(frame);
   }
@@ -144,8 +145,18 @@
     return overlaps;
   }
   const networkPositions=mode==='graph'?layoutNetwork():new Map();
+  function evidenceFlags(e) {
+    const ev=e.evidence||[];
+    return {reviewed:ev.some(v=>v.curator_status==='reviewed' && ['source_checked_quote','source_checked_paraphrase'].includes(v.passage_status)),
+      pending:ev.some(v=>!['reviewed','quarantined'].includes(v.curator_status))||(!ev.length&&e.status!=='quarantined'),
+      quarantined:e.status==='quarantined'||ev.some(v=>v.curator_status==='quarantined'),eligible:e.evidence_eligible===true};
+  }
+  function evidenceMatches(e){const value=$('evidence-filter').value;return value==='all'||evidenceFlags(e)[value];}
+  $('evidence-tools').hidden=mode!=='graph';
+  $('evidence-filter').onchange=()=>{const settling=!!pendingLayout;drawGraph();if(settling)fitGraph();};
   function drawGraph() {
     cancelAnimationFrame(animation);
+    if(pendingLayout){positions=pendingLayout;pendingLayout=null;}
     const previous=positions;
     let ids;
     const allNeighbors = [...new Set(incident.get(rootId).flatMap(e=>[e.source,e.target]))].filter(id=>id!==rootId).sort((a,b)=>symbol(nodes.get(a)).localeCompare(symbol(nodes.get(b))));
@@ -153,7 +164,10 @@
     else { const module = $('module').value; ids = new Set(data.nodes.filter(n => module === 'all' || n.physiological_pillar === module).map(n => n.id)); }
     $('neighbor-pagination').hidden = true;
     viewNodes = data.nodes.filter(n => ids.has(n.id));
-    viewEdges = data.edges.filter(e => ids.has(e.source) && ids.has(e.target));
+    const scopedEdges = data.edges.filter(e => ids.has(e.source) && ids.has(e.target));
+    viewEdges = scopedEdges.filter(evidenceMatches);
+    const shown=$('evidence-filter').selectedOptions[0].textContent;
+    $('evidence-filter-note').textContent=`${viewEdges.length} of ${scopedEdges.length} relationships · ${shown}. Nodes stay fixed.${!viewEdges.length?" No matching relationships in this view.":""}`;
     $('stage-title').textContent = scope === 'neighbors' ? `${symbol(nodes.get(rootId))} neighborhood` : $('module').value === 'all' ? 'Full collection' : human($('module').value);
     $('graph-count').textContent = `${viewNodes.length} entities · ${viewEdges.length} relationships`;
     const scene = $('graph-scene'); scene.replaceChildren();
@@ -173,8 +187,12 @@
       const active=e.source===selected.id||e.target===selected.id;
       const d=edgePath(e);
       const path = svgEl('path',{class:'graph-edge',d,fill:'none',stroke:negative?'#dd7772':positive?'#549984':'#939e98','stroke-width':active?2:1,opacity:active?.85:.24,'vector-effect':'non-scaling-stroke','marker-end':`url(#arrow-${type})`});
-      if (!positive && !negative) path.setAttribute('stroke-dasharray','5 4');
-      path.append(svgEl('title',{},`${symbol(nodes.get(e.source))} → ${symbol(nodes.get(e.target))}: ${human(e.relation)}`)); scene.append(path);
+      const flags=evidenceFlags(e);
+      const evidenceStyle=e.status==='quarantined'?'quarantined':flags.reviewed?'reviewed':flags.pending?'pending':'quarantined';
+      path.dataset.evidence=evidenceStyle;
+      path.setAttribute('opacity',active?(evidenceStyle==='quarantined'?.5:.85):(evidenceStyle==='quarantined'?.18:.32));
+      if(evidenceStyle!=='reviewed')path.setAttribute('stroke-dasharray',evidenceStyle==='pending'?'6 4':'2 5');
+      path.append(svgEl('title',{},`${symbol(nodes.get(e.source))} → ${symbol(nodes.get(e.target))}: ${human(e.relation)} · ${Object.keys(flags).filter(k=>flags[k]).join(", ")} · ${e.evidence_eligible?"scoring eligible":"not scoring eligible"}`)); scene.append(path);
     });
     viewNodes.forEach(n => {
       const p = positions.get(n.id), active=n.id===selected.id;
