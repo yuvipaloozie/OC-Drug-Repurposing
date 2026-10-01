@@ -1,0 +1,125 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "5",
+              "38",
+              "41",
+              "44",
+              "48",
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "CYT387",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "6",
+              "39",
+              "40",
+              "42",
+              "45",
+              "51"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 60,
+            "passage_index": 0,
+            "quote": "CYT387, a JAK-Specific Inhibitor Impedes Osteoclast Activity",
+            "start": 0
+          },
+          {
+            "end": 1103,
+            "passage_index": 1,
+            "quote": "Further, we examined the preclinical prospects of CYT387 using an oophorectomy (OVX) mouse model of osteoporosis with its anti-osteoclast activity in vivo.",
+            "start": 948
+          }
+        ],
+        "experiment": {
+          "assay": "oophorectomy (OVX) mouse model of osteoporosis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast activity",
+          "intervention": "CYT387",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "CYT387 was reported to impede osteoclast activity, with anti-osteoclast activity assessed in an oophorectomy mouse model of osteoporosis.",
+        "uncertainties": [
+          "The abstract does not specify the magnitude of the osteoclast activity change.",
+          "The title indicates an effect, but the exact experimental readout details are limited in the provided text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        60
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        61
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        948,
+        1103
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        852,
+        956
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

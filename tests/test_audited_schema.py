@@ -73,7 +73,12 @@ class AuditedSchemaTests(unittest.TestCase):
 
     def test_pending_claims_cannot_score(self):
         g=OsteoclastKnowledgeGraph();g.load_from_csv(*(str(DATA/f'{x}.csv') for x in ['nodes','edges','experiments','edge_evidence','contexts']))
-        self.assertFalse(any(g.evidence_eligible(k) for k in g.edges))
+        self.assertEqual({k for k in g.edges if g.evidence_eligible(k)}, {'edge:stegen2024_phgdh_formation', 'edge:stegen2024_psat1_formation'})
+        for k,edge in g.edges.items():
+            if edge.get('status') != 'curated': self.assertFalse(g.evidence_eligible(k))
+        for k in ['edge:0034','edge:0217']:
+            self.assertEqual(g.edges[k]['relation'],'REGULATES')
+            self.assertFalse(g.evidence_eligible(k))
 
     def test_only_heldout_support_removes_edge(self):
         g=OsteoclastKnowledgeGraph();g.nodes={'a':{},'b':{}};g.edges={'e':{'source_id':'a','target_id':'b','source_record_id':'database:x'}}
@@ -119,7 +124,12 @@ class AuditedSchemaTests(unittest.TestCase):
     def test_viewer_eligibility_matches_scoring_gate(self):
         g=OsteoclastKnowledgeGraph();g.load_from_csv(*(str(DATA/f'{x}.csv') for x in ['nodes','edges','experiments','edge_evidence','contexts']))
         payload=json.loads((DATA/'osteoclast_knowledge_graph.json').read_text(encoding='utf-8'))
-        for e in payload['edges']:self.assertEqual(e['evidence_eligible'],g.evidence_eligible(e['edge_id']))
+        for e in payload['edges']:
+            self.assertEqual(e['evidence_eligible'],g.evidence_eligible(e['edge_id']))
+            assessment=g.assess_edge(e['edge_id'])
+            self.assertEqual(e['informed_usable'],assessment['usable'])
+            self.assertEqual(e['evidence_tier'],assessment['tier'])
+            self.assertEqual(e['evidence_weight'],assessment['weight'])
 
     def test_legacy_source_only_mask_keeps_independent_reference(self):
         g=OsteoclastKnowledgeGraph();g.nodes={'a':{},'b':{}}

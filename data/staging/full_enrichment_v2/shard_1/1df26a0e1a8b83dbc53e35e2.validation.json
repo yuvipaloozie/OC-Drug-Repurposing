@@ -1,0 +1,181 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "31"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ICT",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast formation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 749,
+            "passage_index": 1,
+            "quote": "ICT was found to inhibit osteoclast formation",
+            "start": 704
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast formation and bone resorption function",
+          "intervention": "ICT",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Icaritin (ICT) was reported to inhibit osteoclast formation and bone resorption function.",
+        "uncertainties": [
+          "The cited span is truncated and does not include the full bone-resorption clause, although the abstract states both osteoclast formation and bone resorption function were inhibited.",
+          "No assay, dose, duration, species, or cell type were stated in the quoted span."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ovariectomy",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "37"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ICT",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "43"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1178,
+            "passage_index": 1,
+            "quote": "ICT attenuated the bone loss associated with ovariectomy (OVX).",
+            "start": 1115
+          }
+        ],
+        "experiment": {
+          "assay": "histomorphological results",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone loss",
+          "intervention": "ICT",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "ICT attenuated bone loss associated with ovariectomy (OVX).",
+        "uncertainties": [
+          "The passage links bone loss to ovariectomy/OVX, but species is not stated in the quoted text.",
+          "No dose or duration was stated in the abstract."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        704,
+        749
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        555,
+        600
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1115,
+        1178
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1208,
+        1271
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

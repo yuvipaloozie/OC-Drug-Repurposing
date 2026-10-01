@@ -1,0 +1,147 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "osteopenia",
+          "species": "mice",
+          "stage": "mature osteoclasts"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "2",
+              "33",
+              "34",
+              "36",
+              "50",
+              "54",
+              "57"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Bcl-xL",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone-resorbing activity",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 105,
+            "passage_index": 0,
+            "quote": "The antiapoptotic protein Bcl-xL negatively regulates the bone-resorbing activity of osteoclasts in mice.",
+            "start": 0
+          },
+          {
+            "end": 904,
+            "passage_index": 1,
+            "quote": "Although the Bcl-x cKO mice grew normally with no apparent morphological abnormalities, they developed substantial osteopenia at 1 year of age, which was caused by increased bone resorption.",
+            "start": 714
+          },
+          {
+            "end": 1082,
+            "passage_index": 1,
+            "quote": "Bcl-x deficiency increased the bone-resorbing activity of osteoclasts despite their high susceptibility to apoptosis, whereas Bcl-xL overexpression produced the opposite effect.",
+            "start": 905
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": "1 year of age",
+          "endpoint": "bone-resorbing activity",
+          "intervention": "osteoclast-specific conditional deletion of Bcl-x",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In mice, osteoclast-specific Bcl-x deficiency increased bone-resorbing activity, while the paper states Bcl-xL attenuates osteoclastic bone-resorbing activity.",
+        "uncertainties": [
+          "The paper uses both Bcl-xL and Bcl-x naming for the same target in text; the exact molecular form is supported by the passage but not experimentally disambiguated beyond the reported gene context.",
+          "The sign is inferred from perturbation language and should not be treated as a direct mechanistic activation/inhibition claim."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        105
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        104
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        714,
+        904
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        711,
+        804
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        905,
+        1082
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        806,
+        1010
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

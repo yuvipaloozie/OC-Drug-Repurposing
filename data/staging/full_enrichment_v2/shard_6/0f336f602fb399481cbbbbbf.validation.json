@@ -1,0 +1,191 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "5291",
+              "207",
+              "2475"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "PI3K/Akt/mTOR signalling pathway",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 878,
+            "passage_index": 1,
+            "quote": "This pathway is not only involved in bone metabolism and bone remodelling but also closely related to the proliferation and differentiation of osteoblasts, osteoclasts, and bone marrow mesenchymal stem cells.",
+            "start": 670
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The PI3K/Akt/mTOR signalling pathway is described as closely related to osteoclast proliferation and differentiation.",
+        "uncertainties": [
+          "The passage is a review/background statement, not an experimental result.",
+          "The text mentions osteoclast proliferation and differentiation together; no separate causal direction is stated."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "5291",
+              "207",
+              "2475"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "PI3K/Akt/mTOR signalling pathway",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D010024"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoporosis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1115,
+            "passage_index": 1,
+            "quote": "Abnormal activation or inhibition of the PI3K/Akt/mTOR signalling pathway can disrupt the balance between osteoblast-mediated bone formation and osteoclast-mediated bone resorption, ultimately leading to the development of osteoporosis.",
+            "start": 879
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The passage states that abnormal activation or inhibition of the PI3K/Akt/mTOR pathway can disrupt the balance between bone formation and bone resorption, ultimately leading to osteoporosis.",
+        "uncertainties": [
+          "The claim is framed as a review statement using 'can'; no specific experiment is described.",
+          "The direction of pathway action on osteoporosis is not specified as purely positive or negative because the passage states abnormal activation or inhibition."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        670,
+        878
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        145,
+        252
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        879,
+        1115
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        252,
+        397
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

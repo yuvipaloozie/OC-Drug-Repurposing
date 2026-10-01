@@ -1,0 +1,287 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "in vitro",
+          "disease_setting": null,
+          "species": "murine",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "5",
+              "47",
+              "54",
+              "58",
+              "67",
+              "72"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Chicago sky blue 6B",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "49"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "52",
+              "53"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:NFATC1",
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "NFATc1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast genes",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 642,
+            "passage_index": 1,
+            "quote": "Chicago sky blue 6B (CSB6B) suppresses RANKL-induced osteoclast and bone resorption in vitro via the inhibition of NF-kappaB signaling activation and promoting proteasome-mediated degradation of MIF. Consequently, the induction of NFATc1 was impaired resulting in downregulation of NFATc1-responsive osteoclast genes.",
+            "start": 325
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast and bone resorption",
+          "intervention": "CSB6B treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "CSB6B suppresses RANKL-induced osteoclast formation and bone resorption in vitro, with impaired NFATc1 induction and downregulation of NFATc1-responsive osteoclast genes.",
+        "uncertainties": [
+          "The text combines multiple downstream effects in one sentence; the exact causal chain is not fully disentangled.",
+          "'osteoclast' is treated as a phenotype/process here rather than a specific cell type because the passage does not explicitly name the cell type in the extracted span."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "in vitro",
+          "disease_setting": "osteolytic bone disorders",
+          "species": "murine",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "5",
+              "47",
+              "54",
+              "58",
+              "67",
+              "72"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Chicago sky blue 6B",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "9",
+              "50",
+              "55",
+              "68"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "NF-kappaB signaling",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "7",
+              "8",
+              "42",
+              "43",
+              "46",
+              "51",
+              "66",
+              "69",
+              "71"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "MIF",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 524,
+            "passage_index": 1,
+            "quote": "Chicago sky blue 6B (CSB6B) suppresses RANKL-induced osteoclast and bone resorption in vitro via the inhibition of NF-kappaB signaling activation and promoting proteasome-mediated degradation of MIF.",
+            "start": 325
+          },
+          {
+            "end": 1433,
+            "passage_index": 1,
+            "quote": "NF-kappaB pathway. MIF is a prime target for therapeutic targeting for the treatment of osteolytic bone disorders",
+            "start": 1320
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "NF-kappaB signaling activation; proteasome-mediated degradation of MIF",
+          "intervention": "CSB6B treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": {
+          "direction": "unknown",
+          "enzyme": null,
+          "products": [],
+          "substrates": [
+            {
+              "entity": "e3",
+              "stoichiometry": null
+            }
+          ]
+        },
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "CSB6B treatment is reported to inhibit NF-kappaB signaling activation and to promote proteasome-mediated degradation of MIF.",
+        "uncertainties": [
+          "The passage states 'promoting proteasome-mediated degradation of MIF' but does not specify the full biochemical reaction or all products.",
+          "The NF-kappaB effect is reported as signaling activation inhibition, not a direct molecular interaction."
+        ]
+      },
+      "errors": [
+        "regulatory form mismatch"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        325,
+        642
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        542,
+        752
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        325,
+        524
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        542,
+        637
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1320,
+        1433
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1537,
+        1658
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

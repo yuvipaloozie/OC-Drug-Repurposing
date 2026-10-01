@@ -1,0 +1,233 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "36",
+              "38",
+              "40",
+              "42",
+              "45",
+              "47",
+              "50",
+              "53",
+              "55",
+              "58",
+              "63"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "RNA",
+            "surface": "miR-148a",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "39",
+              "41",
+              "51"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "mice",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone mass phenotype",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 461,
+            "passage_index": 1,
+            "quote": "We found miR-148a KO mice exhibited an increased bone mass phenotype and decreased osteoclastogenesis",
+            "start": 360
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "miR-148a knockout (KO) mice",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "miR-148a knockout mice showed increased bone mass and decreased osteoclastogenesis versus wild-type littermates.",
+        "uncertainties": [
+          "The passage reports KO effects in mice but does not specify the molecular form of the endogenous miR-148a product beyond an RNA/miRNA.",
+          "The causal role is inferred from perturbation rather than a direct molecular assay."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "36",
+              "38",
+              "40",
+              "42",
+              "45",
+              "47",
+              "50",
+              "53",
+              "55",
+              "58",
+              "63"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "RNA",
+            "surface": "miR-148a",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "43",
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption function",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 579,
+            "passage_index": 1,
+            "quote": "In vitro, miR-148a overexpression promoted osteoclastogenesis and bone resorption function.",
+            "start": 488
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis and bone resorption function",
+          "intervention": "miR-148a overexpression",
+          "outcome_change": "increased",
+          "perturbation_type": "gain_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "miR-148a overexpression promoted osteoclastogenesis and bone resorption in vitro.",
+        "uncertainties": [
+          "The passage does not specify the cell type used for the in vitro assay.",
+          "The positive effect on bone resorption is stated, but the exact molecular mechanism is not described in this sentence."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        360,
+        461
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        317,
+        411
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        488,
+        579
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        414,
+        505
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

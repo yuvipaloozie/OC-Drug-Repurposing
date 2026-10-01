@@ -1,0 +1,196 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "synovial",
+          "disease_setting": "mild and severe monoiodoacetate-induced hip arthropathy",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "52",
+              "57",
+              "58",
+              "59",
+              "60",
+              "71",
+              "73",
+              "79",
+              "80",
+              "81",
+              "86",
+              "88"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "high-dose MIA group",
+            "taxon": "rat"
+          },
+          {
+            "annotation_ids": [
+              "69",
+              "70",
+              "78"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "RNA",
+            "surface": "Rankl mRNA expression",
+            "taxon": "rat"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1724,
+            "passage_index": 1,
+            "quote": "receptor activator of nuclear factor-kappa B ligand (Rankl), as well as osteoclast-like multinucleated cells in the femoral head, were also quantified. RESULTS: The high-dose MIA group showed significantly greater mechanical hypersensitivity and reduced weight-bearing capacity than the low-dose MIA and sham groups. This group also demonstrated more severe joint destruction, higher OARSI scores, a higher proportion of CGRP-immunoreactive DRG neurons, and an increased number of Iba1-immunoreactive microglia in the spinal dorsal horn. Synovial Tnf-alpha and Rankl mRNA expression levels were significantly increased in the high-dose MIA group compared with those in the sham and low-dose MIA groups.",
+            "start": 1022
+          }
+        ],
+        "experiment": {
+          "assay": "mRNA expression quantification",
+          "dose": null,
+          "duration": null,
+          "endpoint": "synovial Rankl mRNA expression",
+          "intervention": "high-dose MIA",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "High-dose MIA treatment in rats was associated with increased synovial Rankl mRNA expression compared with sham and low-dose MIA groups.",
+        "uncertainties": [
+          "The evidence span is broad and includes surrounding context to preserve the causal antecedent and outcome.",
+          "The text reports increased mRNA expression, not protein abundance or activity."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "femoral head",
+          "compartment": "femoral head",
+          "disease_setting": "mild and severe monoiodoacetate-induced hip arthropathy",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "52",
+              "57",
+              "58",
+              "59",
+              "60",
+              "71",
+              "73",
+              "79",
+              "80",
+              "81",
+              "86",
+              "88"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "high-dose MIA group",
+            "taxon": "rat"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast-like multinucleated cells",
+            "taxon": "rat"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1928,
+            "passage_index": 1,
+            "quote": "MIA-induced hip arthropathy. The high-dose MIA group showed significantly greater mechanical hypersensitivity and reduced weight-bearing capacity than the low-dose MIA and sham groups. This group also demonstrated more severe joint destruction, higher OARSI scores, a higher proportion of CGRP-immunoreactive DRG neurons, and an increased number of Iba1-immunoreactive microglia in the spinal dorsal horn. Synovial Tnf-alpha and Rankl mRNA expression levels were significantly increased in the high-dose MIA group compared with those in the sham and low-dose MIA groups. These changes were accompanied by an increased number of osteoclast-like multinucleated cells and bone resorption cavities compatible with Howship's lacunae in the femoral head.",
+            "start": 1796
+          }
+        ],
+        "experiment": {
+          "assay": "histological quantification",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast-like multinucleated cells",
+          "intervention": "high-dose MIA",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "High-dose MIA treatment was associated with more osteoclast-like multinucleated cells in the femoral head.",
+        "uncertainties": [
+          "The cited span is broad and includes the accompanying bone-resorption statement; the specific endpoint extracted here is osteoclast-like multinucleated cells.",
+          "Direct causality is not established; the text reports association within the treated group."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1022,
+        1724
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1148,
+        1323
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

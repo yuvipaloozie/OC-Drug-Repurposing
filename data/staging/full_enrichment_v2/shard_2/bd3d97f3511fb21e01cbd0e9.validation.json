@@ -1,0 +1,210 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "gene",
+            "surface": "these genes",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1503,
+            "passage_index": 1,
+            "quote": "The results of the enrichment analysis indicated that these genes were involved in biological functions such as immune inflammation and signaling pathways including T cell receptors, mitogen activated protein kinase (MAPK), rat sarcoma virus oncogene homologs (Ras), osteoclast differentiation, and B cell receptors.",
+            "start": 1187
+          }
+        ],
+        "experiment": {
+          "assay": "enrichment analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "pathway involvement",
+          "intervention": "enrichment analysis of immune-related DEGs",
+          "outcome_change": "other",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Immune-related differentially expressed genes in osteoporosis were reported to be involved in pathways including osteoclast differentiation.",
+        "uncertainties": [
+          "The passage reports pathway enrichment, not a direct causal mechanism.",
+          "The specific genes referred to by 'these genes' are not individually enumerated in the quoted span."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow tissue",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "patients",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "25"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "vascular endothelial growth factor A",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "27"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "epidermal growth factor receptor",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "29"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "AKT1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "30"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "SRC",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "gene",
+            "surface": "JUN",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1730,
+            "passage_index": 1,
+            "quote": "In addition, among the candidate genes, upregulated vascular endothelial growth factor A (VEGFA) and epidermal growth factor receptor (EGFR) and downregulated AKT1, SRC, and JUN in osteoporosis showed the highest connectivity.",
+            "start": 1504
+          }
+        ],
+        "experiment": {
+          "assay": "PCR and Western blot analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "gene expression / network connectivity",
+          "intervention": "candidate gene analysis",
+          "outcome_change": "other",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In osteoporosis, VEGFA and EGFR were upregulated, while AKT1 and SRC were downregulated, among the candidate genes with highest network connectivity.",
+        "uncertainties": [
+          "The quote combines several genes with different expression directions; the claim captures the reported differential expression pattern rather than a causal relation.",
+          "'patients' is a provider-mapped species annotation, but the text only explicitly supports human patients."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1187,
+        1503
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1380,
+        1567
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1504,
+        1730
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1570,
+        1772
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

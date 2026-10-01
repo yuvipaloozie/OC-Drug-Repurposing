@@ -1,0 +1,247 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "glucocorticoid-associated skeletal disorders",
+          "species": "10090",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "exogenous glucocorticoid treatment",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "20",
+              "24"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone turnover",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "25"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone mass",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 392,
+            "passage_index": 1,
+            "quote": "exogenous glucocorticoid treatment on bone loss and delayed fracture healing in mice and found that reduced bone turnover",
+            "start": 271
+          },
+          {
+            "end": 453,
+            "passage_index": 1,
+            "quote": "resulting in a net loss of bone mass",
+            "start": 417
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone turnover; bone mass",
+          "intervention": "exogenous glucocorticoid treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In mice, exogenous glucocorticoid treatment reduced bone turnover and led to a net loss of bone mass.",
+        "uncertainties": [
+          "The passage links reduced bone turnover and net bone mass loss, but does not specify the glucocorticoid compound or dose.",
+          "Bone mass is mentioned as an outcome of the treatment, but the causal relation is summarized from the abstract wording rather than a dedicated experiment description."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "macrophages",
+          "compartment": "nucleus",
+          "disease_setting": "glucocorticoid-associated skeletal disorders",
+          "species": "10090",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "fatty acid oxidation",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "macrophages",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "glucocorticoid-liganded receptors",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "29"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Bmp2",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 910,
+            "passage_index": 1,
+            "quote": "fatty acid oxidation in macrophages fueled the ability of glucocorticoid-liganded receptors to enter the nucleus",
+            "start": 798
+          },
+          {
+            "end": 997,
+            "passage_index": 1,
+            "quote": "and then promoted the expression of Bmp2, a key cytokine that facilitates osteogenesis",
+            "start": 911
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "Bmp2 expression",
+          "intervention": "fatty acid oxidation in macrophages",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Fatty acid oxidation in macrophages promoted glucocorticoid-receptor nuclear entry and increased Bmp2 expression.",
+        "uncertainties": [
+          "The sentence also states an effect on nuclear entry of glucocorticoid-liganded receptors, but the causal object extracted here is Bmp2 expression.",
+          "The exact molecular form of Bmp2 is not explicitly stated as RNA or protein in the abstract."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        271,
+        392
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        268,
+        329
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        417,
+        453
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        549,
+        567
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        798,
+        910
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        922,
+        1009
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        911,
+        997
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1014,
+        1091
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

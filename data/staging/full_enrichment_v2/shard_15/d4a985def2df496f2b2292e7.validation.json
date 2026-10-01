@@ -1,0 +1,225 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "rheumatoid arthritis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "5"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "itaconate",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "6"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "TET2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "7"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "rheumatoid arthritis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 139,
+            "passage_index": 0,
+            "quote": "Inflammatory macrophage-derived itaconate inhibits DNA demethylase TET2 to prevent excessive osteoclast activation in rheumatoid arthritis.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "prevent excessive osteoclast activation",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The paper states that macrophage-derived itaconate inhibits TET2 and prevents excessive osteoclast activation in rheumatoid arthritis.",
+        "uncertainties": [
+          "The title does not specify the experimental assay used to show TET2 inhibition.",
+          "Directness of the inhibition is not established from the title alone."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "arthritis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "49"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "itaconate",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "50"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "4-octyl-itaconate",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "51"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "arthritis progression",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone destruction",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 784,
+            "passage_index": 1,
+            "quote": "itaconate or its derivative, 4-octyl-itaconate, inhibits arthritis progression and mitigates bone destruction",
+            "start": 675
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "arthritis progression and bone destruction",
+          "intervention": "exogenous administration of itaconate or its derivative, 4-octyl-itaconate",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Exogenous itaconate or 4-octyl-itaconate is reported to inhibit arthritis progression and mitigate bone destruction.",
+        "uncertainties": [
+          "The quoted span is truncated relative to the full sentence context.",
+          "The abstract does not specify whether the effect is attributable equally to itaconate and 4-octyl-itaconate or to one compound in particular."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        139
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        140
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        675,
+        784
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        815,
+        928
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

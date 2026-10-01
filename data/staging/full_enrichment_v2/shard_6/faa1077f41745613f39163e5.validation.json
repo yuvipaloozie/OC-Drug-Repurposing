@@ -1,0 +1,175 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "atrophic rhinitis",
+          "species": "pigs",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Pasteurella multocida toxin (PMT)",
+            "taxon": "9823"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "osteoclasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 892,
+            "passage_index": 1,
+            "quote": "Toxin-expressing strains cause atrophic rhinitis where nasal turbinate bones are destroyed through the inhibition of bone building osteoblasts and the activation of bone resorbing osteoclasts.",
+            "start": 700
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "activation of bone resorbing osteoclasts",
+          "intervention": "Toxin-expressing strains",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "PMT is described as causing activation of bone-resorbing osteoclasts in atrophic rhinitis.",
+        "uncertainties": [
+          "The sentence is a review/background description rather than a primary experiment.",
+          "Osteoclasts are not annotated as a specific molecular entity type in the packet."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "pigs",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "PMT",
+            "taxon": "9823"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "heterotrimeric G proteins",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1140,
+            "passage_index": 1,
+            "quote": "PMT specifically targets the alpha subunit of several heterotrimeric G proteins and constitutively activates them through deamidation of a glutamine residue to glutamate in the alpha subunit.",
+            "start": 949
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "constitutively activates them",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "direct",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "PMT specifically targets heterotrimeric G proteins and constitutively activates them through deamidation of a glutamine residue to glutamate.",
+        "uncertainties": [
+          "The text does not specify which heterotrimeric G protein family member(s) are involved.",
+          "The sentence is presented in review/background context."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        700,
+        892
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        567,
+        759
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        949,
+        1140
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        790,
+        981
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

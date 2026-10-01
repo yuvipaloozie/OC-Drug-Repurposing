@@ -1,0 +1,219 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ovariectomy-induced model",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "39"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "MRC",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1203,
+            "passage_index": 1,
+            "quote": "Micro-CT analysis showed that MRC effectively inhibited bone loss in the OVX-induced rat model.",
+            "start": 1108
+          }
+        ],
+        "experiment": {
+          "assay": "micro-CT",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone loss",
+          "intervention": "MRC treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "MRC treatment inhibited bone loss in an ovariectomy-induced rat model.",
+        "uncertainties": [
+          "The passage states an ovariectomy-induced rat model but does not specify exact dose or treatment duration.",
+          "The claim is about bone loss in the animal model, not directly about osteoclast cells."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW 264.7 cells",
+          "compartment": null,
+          "disease_setting": "RANKL-induced",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "39"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "MRC",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "44",
+              "48",
+              "54"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "TRAP",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "actin ring formation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "42",
+              "51",
+              "57",
+              "62"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "NFATc1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "5",
+              "58",
+              "63"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "c-Fos",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1694,
+            "passage_index": 1,
+            "quote": "In RANKL-induced-RAW 264.7 cells, MRC significantly reduced TRAP activity and actin ring formation. In addition, MRC significantly inhibited the expression of nuclear factor of activated T cells 1 (NFATc1)/ and c-Fos, and suppressed the mRNA expression.",
+            "start": 1441
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP, immunohistochemistry, RT-PCR, western blot",
+          "dose": null,
+          "duration": null,
+          "endpoint": "TRAP activity, actin ring formation, NFATc1 and c-Fos expression",
+          "intervention": "MRC treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In RANKL-induced RAW 264.7 cells, MRC reduced TRAP activity and actin ring formation and inhibited NFATc1 and c-Fos expression.",
+        "uncertainties": [
+          "The passage combines several readouts; the regulatory field is anchored to the clearly stated reduction in TRAP activity, while NFATc1/c-Fos are additional inhibited markers in the same experiment.",
+          "The text does not specify whether the cited NFATc1 and c-Fos effects are direct or indirect."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1108,
+        1203
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        744,
+        824
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1441,
+        1694
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        877,
+        1198
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

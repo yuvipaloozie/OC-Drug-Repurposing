@@ -1,0 +1,202 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow monocytes and RAW264.7 cells",
+          "compartment": null,
+          "disease_setting": "ovariectomy-induced bone loss",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "49"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "matrine",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 724,
+            "passage_index": 1,
+            "quote": "matrine significantly prevented ovariectomy-induced bone loss and inhibited osteoclastogenesis in vivo",
+            "start": 622
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP staining; actin-ring formation; pit formation assays",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "matrine",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Matrine inhibited osteoclastogenesis/osteoclast differentiation and was reported to prevent bone loss in ovariectomized mice.",
+        "uncertainties": [
+          "Start/end offsets are best-effort for a long substring in the abstract.",
+          "The in vivo bone-loss outcome and the in vitro osteoclastogenesis outcome are summarized in one claim.",
+          "Species is supported by the title and abstract, but the exact in vitro cell source includes two cell systems in the same sentence."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow monocytes and RAW264.7 cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "60"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "matrine",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "62"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "NF-kappaB",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "63"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "AKT",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "MAPK pathways",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1225,
+            "passage_index": 1,
+            "quote": "matrine abrogated RANKL-induced activation of NF-kappaB, AKT, and MAPK pathways",
+            "start": 1146
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "RANKL-induced activation of NF-kappaB, AKT, and MAPK pathways",
+          "intervention": "matrine",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Matrine abrogated RANKL-induced activation of NF-kappaB, AKT, and MAPK pathways.",
+        "uncertainties": [
+          "The sentence names three pathways; only one regulatory object can be recorded in this claim, so the remaining pathway effects are not separately encoded here.",
+          "Offsets are best-effort for the quoted span."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        622,
+        724
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        720,
+        821
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1146,
+        1225
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1244,
+        1354
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

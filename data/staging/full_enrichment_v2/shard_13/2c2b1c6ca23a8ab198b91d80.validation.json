@@ -1,0 +1,242 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "periodontitis in HFD-fed mice",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "64",
+              "71",
+              "74",
+              "86"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "periodontitis",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastic activity",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [
+              "68"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "alveolar and femoral bone loss",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 976,
+            "passage_index": 1,
+            "quote": "periodontitis significantly increased osteoclastic activity and resulted in alveolar",
+            "start": 892
+          },
+          {
+            "end": 1015,
+            "passage_index": 1,
+            "quote": " and femoral bone loss in HFD-fed mice.",
+            "start": 976
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastic activity and alveolar/femoral bone loss",
+          "intervention": "periodontitis",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In HFD-fed mice, periodontitis increased osteoclastic activity and caused alveolar and femoral bone loss.",
+        "uncertainties": [
+          "The sentence also links periodontitis to bone loss; the regulatory object here is limited to osteoclastic activity, with bone loss captured as a phenotypic outcome in the summary.",
+          "Direct molecular mechanism is not established in the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "HFD-fed mice with periodontitis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "56",
+              "65",
+              "70",
+              "76",
+              "83"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "NSPT and metformin",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [
+              "64",
+              "71",
+              "74",
+              "86"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "periodontitis",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [
+              "66",
+              "72"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "systemic inflammation",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "femoral bone absorption",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1183,
+            "passage_index": 1,
+            "quote": "Compared to NSPT alone, NSPT and metformin significantly improved periodontitis, reduced systemic inflammation, and alleviated femoral bone absorption in HFD-fed mice.",
+            "start": 1016
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "oral gavage",
+          "duration": null,
+          "endpoint": "systemic inflammation and femoral bone absorption; improved periodontitis",
+          "intervention": "NSPT and metformin",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Compared with NSPT alone, NSPT plus metformin improved periodontitis, reduced systemic inflammation, and alleviated femoral bone absorption in HFD-fed mice.",
+        "uncertainties": [
+          "The intervention combines NSPT with metformin; the text does not separate their individual contributions in this comparison.",
+          "Bone outcome is described as 'bone absorption' rather than a standardized assay term."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        892,
+        976
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        718,
+        801
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        976,
+        1015
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        802,
+        831
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1016,
+        1183
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        833,
+        959
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

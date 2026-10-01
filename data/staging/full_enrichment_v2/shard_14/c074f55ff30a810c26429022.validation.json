@@ -1,0 +1,118 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "mature osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "22042"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Tfr1",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "MESH:D001862"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1416,
+            "passage_index": 1,
+            "quote": "disruption of Tfr1 expression",
+            "start": 1387
+          },
+          {
+            "end": 1666,
+            "passage_index": 1,
+            "quote": "bone resorption",
+            "start": 1651
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption",
+          "intervention": "disruption of Tfr1 expression",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Disruption of Tfr1 expression in mature osteoclasts was associated with decreased bone resorption.",
+        "uncertainties": [
+          "Exact offset for the quoted phrase was estimated from the abstract text.",
+          "The passage also mentions mitochondrial respiration and Src-Rac1-WAVE axis changes, but this claim captures only the directly stated bone resorption outcome."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1387,
+        1416
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1507,
+        1536
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1651,
+        1666
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1769,
+        1784
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

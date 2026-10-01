@@ -1,0 +1,186 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "primary calvarial cells; SV40-immortalized osteoblasts; primary osteoblasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "20779"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Src",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoblast differentiation and bone formation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 232,
+            "passage_index": 1,
+            "quote": "We report that deletion/reduction of Src expression enhances osteoblast differentiation and bone formation,",
+            "start": 125
+          }
+        ],
+        "experiment": {
+          "assay": "bone histomorphometry; alkaline phosphatase activity; nodule mineralization; reverse transcriptase-PCR",
+          "dose": "approximately 60% reduction in Src levels",
+          "duration": null,
+          "endpoint": "osteoblast differentiation and bone formation",
+          "intervention": "deletion/reduction of Src expression; Src-antisense oligodeoxynucleotides",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Deletion or reduction of Src expression increased osteoblast differentiation and bone formation.",
+        "uncertainties": [
+          "The abstract combines in vivo and in vitro findings; the claim summarizes the stated overall effect rather than a single direct mechanism.",
+          "Cell-type details are taken from the abstract and may reflect multiple experimental contexts."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "no_effect",
+        "context": {
+          "cell_type": "Src-deficient osteoblasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "20779"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Src",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "20750"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "osteopontin",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1180,
+            "passage_index": 1,
+            "quote": "osteopontin remained unchanged.",
+            "start": 1149
+          }
+        ],
+        "experiment": {
+          "assay": "semiquantitative reverse transcriptase-PCR",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteopontin expression",
+          "intervention": "Src deficiency",
+          "outcome_change": "no_detected_change",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Osteopontin expression remained unchanged in Src-deficient osteoblasts.",
+        "uncertainties": [
+          "The sentence is a negative finding and does not establish any positive regulatory effect."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        125,
+        232
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        125,
+        235
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1149,
+        1180
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1228,
+        1263
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

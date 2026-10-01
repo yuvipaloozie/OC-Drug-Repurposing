@@ -1,0 +1,332 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "compound 18",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "35",
+              "39"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-induced osteoclastogenesis",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "39"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "RAW264.7",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 270,
+            "passage_index": 1,
+            "quote": "evaluated for their inhibitory effects on RANKL-induced osteoclastogenesis. Among these, compound 18",
+            "start": 170
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "0.01 muM; IC50 7.96 nM",
+          "duration": null,
+          "endpoint": "RANKL-induced osteoclastogenesis",
+          "intervention": "compound 18",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Compound 18 inhibited RANKL-induced osteoclastogenesis in RAW264.7 cells and was reported as highly potent in that assay.",
+        "uncertainties": [
+          "The quoted span supports inhibition of osteoclastogenesis and identification of compound 18, but the exact IC50 sentence is not fully captured in the cited span.",
+          "RANKL is provider-tagged as a gene, but the molecular form here is treated as a phenotype context rather than a standalone molecular entity."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "compound 18",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "44",
+              "45",
+              "46",
+              "47"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast marker genes and proteins",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "44"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:ACP5",
+            "key": "e3",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "TRAP",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "45"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:CTSK",
+            "key": "e4",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "CTSK",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "46"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:FOS",
+            "key": "e5",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "c-Fos",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "47"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:MMP9",
+            "key": "e6",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "MMP-9",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 965,
+            "passage_index": 1,
+            "quote": "Mechanistic studies showed that compound 18 could dose-dependently suppress the expression of osteoclast marker genes (TRAP, CTSK) and proteins (c-Fos, MMP-9)",
+            "start": 807
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "expression of osteoclast marker genes and proteins",
+          "intervention": "compound 18",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Compound 18 dose-dependently suppressed expression of osteoclast marker genes and proteins, including TRAP, CTSK, c-Fos, and MMP-9.",
+        "uncertainties": [
+          "The sentence groups multiple markers together; separate gene/protein-specific effects are not individually resolved.",
+          "Provider annotations label these as genes, but the text also says proteins; molecular forms are therefore mixed/ambiguous."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ovariectomized (OVX) mouse model",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "compound 18",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "49"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "CTx",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1201,
+            "passage_index": 1,
+            "quote": "Furthermore, in an ovariectomized (OVX) mouse model, compound 18 (10 and 20 mg/kg, intraperitoneally, i.p.) dose - dependently prevented bone loss by improving key micro-CT parameters and decreasing serum bone resorption markers (CTx)",
+            "start": 967
+          }
+        ],
+        "experiment": {
+          "assay": "micro-CT parameters; serum bone resorption markers",
+          "dose": "10 and 20 mg/kg",
+          "duration": null,
+          "endpoint": "bone loss",
+          "intervention": "compound 18",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In an ovariectomized mouse model, compound 18 dose-dependently prevented bone loss and reduced serum bone resorption marker CTx.",
+        "uncertainties": [
+          "The cited span supports prevention of bone loss and decrease of serum CTx, but the micro-CT details are not fully enumerated in the evidence quote.",
+          "CTx is not annotated in the packet and is left unresolved."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        170,
+        270
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        446,
+        546
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        807,
+        965
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1000,
+        1135
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        967,
+        1201
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1148,
+        1308
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

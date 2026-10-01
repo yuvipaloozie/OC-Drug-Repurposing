@@ -1,0 +1,199 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "breast cancer-induced osteoclastogenesis",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "SHP099",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 815,
+            "passage_index": 1,
+            "quote": "SHP099, an allosteric inhibitor of SHP2, suppresses human breast cancer MDA-MB-231 cell conditioned medium (CM)-induced osteoclast differentiation and bone resorption from 250 nM in vitro.",
+            "start": 627
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "250 nM",
+          "duration": null,
+          "endpoint": "osteoclast differentiation and bone resorption",
+          "intervention": "SHP099",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "SHP099 suppresses breast cancer cell conditioned-medium-induced osteoclast differentiation and bone resorption in vitro.",
+        "uncertainties": [
+          "The quote states suppression of two outcomes together; the regulatory object is split into a representative phenotype claim for osteoclast differentiation, while bone resorption is mentioned in the summary but not modeled as a separate edge."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "breast cancer-induced osteoclastogenesis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "45"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "SHP099",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "p38 mitogen-activated protein kinases (MAPK)",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "49",
+              "50"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "NFATc1 nuclear translocation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1164,
+            "passage_index": 1,
+            "quote": "Mechanistically, SHP099 inhibits the phosphorylation of p38 mitogen-activated protein kinases (MAPK), c-Fos and calcium oscillation downstream of SHP2, thereby suppressing Nuclear Factor of Activated T-cells, Cytoplasmic 1 (NFATc1) nuclear translocation.",
+            "start": 910
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "p38 MAPK phosphorylation and NFATc1 nuclear translocation",
+          "intervention": "SHP099",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "SHP099 inhibits p38 MAPK phosphorylation downstream of SHP2 and suppresses NFATc1 nuclear translocation.",
+        "uncertainties": [
+          "The passage also mentions c-Fos and calcium oscillation in the same mechanistic sentence, but this claim models only one regulatory target to keep the object explicit.",
+          "The causal link to NFATc1 nuclear translocation is reported as a downstream consequence, not a separately measured direct interaction."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        627,
+        815
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        724,
+        910
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        910,
+        1164
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        913,
+        1090
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

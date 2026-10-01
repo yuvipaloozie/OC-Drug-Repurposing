@@ -1,0 +1,95 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "TRAF-independent motif (IVVY535-538)",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast lineage commitment",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 242,
+            "passage_index": 1,
+            "quote": "RANK primarily recruits TRAFs to promote osteoclastogenesis but also contains an TRAF-independent motif (IVVY535-538), which mediates osteoclast lineage commitment in vitro.",
+            "start": 69
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast lineage commitment",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The RANK TRAF-independent IVVY motif is described as mediating osteoclast lineage commitment in vitro.",
+        "uncertainties": [
+          "The claim is a background mechanistic statement rather than an intervention outcome.",
+          "The exact molecular form of the IVVY motif is unresolved."
+        ]
+      },
+      "errors": [
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        69,
+        242
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        70,
+        177
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

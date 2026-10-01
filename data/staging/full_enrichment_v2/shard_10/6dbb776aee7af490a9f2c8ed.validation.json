@@ -1,0 +1,213 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "14"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "kindlin3",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "15"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "LC3B",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 577,
+            "passage_index": 1,
+            "quote": "kindlin3, an important adaptor protein in the podosome, can interact with LC3B",
+            "start": 499
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "interaction",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "direct",
+          "effect_level": "binding",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "kindlin3 was reported to interact with LC3B, and the same sentence states that kindlin3 undergoes autophagy-mediated degradation to promote podosome disassembly.",
+        "uncertainties": [
+          "The quoted span directly supports interaction, but the autophagy-mediated degradation and podosome-disassembly part is only summarized from the same sentence rather than separately quoted.",
+          "Species is not stated explicitly in the passage; osteoclast context is from the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "autophagy",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "16",
+              "17",
+              "22"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "kindlin3",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "18"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "integrin beta3",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 765,
+            "passage_index": 1,
+            "quote": "Moreover, further analyses showed that the inhibition of autophagy increased kindlin3 levels",
+            "start": 673
+          },
+          {
+            "end": 831,
+            "passage_index": 1,
+            "quote": "enhanced the interaction between kindlin3 and integrin beta3.",
+            "start": 770
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "kindlin3 levels",
+          "intervention": "inhibition of autophagy",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Inhibition of autophagy increased kindlin3 levels and enhanced the interaction between kindlin3 and integrin beta3.",
+        "uncertainties": [
+          "The passage reports a perturbation outcome, but does not specify the method used to inhibit autophagy.",
+          "The interaction with integrin beta3 is reported in the same overall result section, but the quoted evidence for the causal increase in kindlin3 levels and the enhanced interaction is split across two spans."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        499,
+        577
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        615,
+        693
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        673,
+        765
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        790,
+        841
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        770,
+        831
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        886,
+        946
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

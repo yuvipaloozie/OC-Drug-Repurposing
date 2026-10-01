@@ -1,0 +1,165 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclast precursors",
+          "compartment": null,
+          "disease_setting": "rheumatoid arthritis",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "35"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "fatty acid oxidation (FAO)",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "36"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "OCP fusion",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 302,
+            "passage_index": 1,
+            "quote": "Herein, we show that increasing fatty acid oxidation (FAO) induces OCP fusion.",
+            "start": 224
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "OCP fusion",
+          "intervention": "increasing fatty acid oxidation (FAO)",
+          "outcome_change": "increased",
+          "perturbation_type": "gain_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Increasing fatty acid oxidation was reported to induce osteoclast precursor fusion.",
+        "uncertainties": [
+          "The passage does not specify the experimental system used for the FAO increase.",
+          "The causal mechanism linking FAO to fusion is described but not directly demonstrated as a single molecular interaction here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "mitochondria",
+          "disease_setting": "rheumatoid arthritis",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "37"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "CPT1A",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [
+              "32",
+              "33",
+              "34",
+              "39",
+              "50",
+              "53"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "rheumatoid arthritis",
+            "taxon": "human"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 564,
+            "passage_index": 1,
+            "quote": "CPT1A, which is important for carnitine transportation and is involved in FAO in the mitochondria, is upregulated in RA patients.",
+            "start": 436
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "CPT1A expression",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "CPT1A was reported as upregulated in rheumatoid arthritis patients.",
+        "uncertainties": [
+          "The sentence states upregulation in RA patients but does not specify the measurement assay in the excerpt.",
+          "The molecular form is inferred from the gene annotation and transcription-factor context, but the excerpt itself names CPT1A rather than a protein form explicitly."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [],
+  "valid_envelope": true
+}

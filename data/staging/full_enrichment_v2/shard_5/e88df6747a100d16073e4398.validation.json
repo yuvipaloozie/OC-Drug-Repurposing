@@ -1,0 +1,556 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW 264.7 cells and bone marrow macrophage",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "43"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "THF",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "46"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 291,
+            "passage_index": 1,
+            "quote": "6,7,4'-Trihydroxyflavone (THF)",
+            "start": 261
+          },
+          {
+            "end": 436,
+            "passage_index": 1,
+            "quote": "receptor activator of NF-kappaB ligand (RANKL)-induced osteoclast differentiation",
+            "start": 355
+          },
+          {
+            "end": 525,
+            "passage_index": 1,
+            "quote": "RAW 264.7 cells and bone marrow macrophage",
+            "start": 483
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "RANKL-induced osteoclast differentiation",
+          "intervention": "THF",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "THF inhibited RANKL-induced osteoclast differentiation in RAW 264.7 cells and bone marrow macrophage.",
+        "uncertainties": [
+          "The passage describes RANKL-induced differentiation and mentions two cell contexts; the exact cell-specific outcome is not separately quantified.",
+          "RANKL is annotated as a gene by the provider, but the text context suggests a ligand/protein role; no canonical identity is asserted here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW 264.7 cells and bone marrow macrophage",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "50",
+              "53"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "THF",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "pathway",
+            "surface": "JNK signaling pathway",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "protein",
+            "surface": "extracellular signal-regulated kinase",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "51"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:MAPK14",
+            "key": "e4",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "p38",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "52"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:AKT1",
+            "key": "e5",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "AKT",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 600,
+            "passage_index": 1,
+            "quote": "THF significantly inhibited the c-Jun-N-terminal kinase signaling pathway",
+            "start": 527
+          },
+          {
+            "end": 656,
+            "passage_index": 1,
+            "quote": "without affecting extracellular signal-regulated kinase",
+            "start": 601
+          },
+          {
+            "end": 680,
+            "passage_index": 1,
+            "quote": ", p38, and AKT signaling",
+            "start": 656
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "JNK signaling pathway",
+          "intervention": "THF",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "THF inhibited the JNK signaling pathway, while it did not affect ERK, p38, or AKT signaling.",
+        "uncertainties": [
+          "The text states no effect on ERK, p38, and AKT signaling but does not specify whether these are direct or indirect pathway effects.",
+          "The provider annotation for p38/AKT is gene-level; the mechanistic claim concerns signaling readouts."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW 264.7 cells and bone marrow macrophage",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "53",
+              "61",
+              "63",
+              "64",
+              "68",
+              "72"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "THF",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "45",
+              "46",
+              "56",
+              "65"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "54"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:FOS",
+            "key": "e3",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "c-Fos",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "gene",
+            "surface": "nuclear factor-activated T cells cytoplasm 1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "55"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:CTSK",
+            "key": "e5",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "cathepsin K",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "gene",
+            "surface": "c-src",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 809,
+            "passage_index": 1,
+            "quote": "THF inhibited the expression of c-Fos, nuclear factor-activated T cells cytoplasm 1, cathepsin K, and c-src by RANKL.",
+            "start": 692
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "RANKL-induced expression of c-Fos, NFATc1, cathepsin K, and c-src",
+          "intervention": "THF",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "THF inhibited RANKL-induced expression of c-Fos, NFATc1, cathepsin K, and c-src.",
+        "uncertainties": [
+          "The statement bundles multiple downstream expression targets into one sentence; the exact contribution of each target is not separately quantified.",
+          "NFATc1 is expanded in text but not provider-annotated; identity is text-supported only."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "LPS-induced bone loss",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "61",
+              "63",
+              "64",
+              "68",
+              "72"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "THF",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "58",
+              "69"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "LPS",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "59",
+              "70"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 877,
+            "passage_index": 1,
+            "quote": "We used a lipopolysaccharide (LPS)-induced bone loss model in mice.",
+            "start": 810
+          },
+          {
+            "end": 1071,
+            "passage_index": 1,
+            "quote": "Consequently, bone volume per tissue volume, trabecular number's reduction was recovered in THF-treated mice, and trabecular separation's augmentation was also attenuated by THF administration.",
+            "start": 878
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone loss-related microarchitecture changes",
+          "intervention": "THF administration",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c4",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In mice, THF treatment recovered bone volume per tissue volume and attenuated trabecular number reduction and trabecular separation augmentation in an LPS-induced bone loss model.",
+        "uncertainties": [
+          "The sentence reports multiple bone parameters together; the precise quantitative effect for each parameter is not provided in the excerpt.",
+          "The LPS-induced model is stated generally; timing and dose are not given."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        261,
+        291
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        358,
+        390
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        355,
+        436
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        452,
+        549
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        483,
+        525
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        580,
+        614
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        527,
+        600
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        624,
+        669
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        601,
+        656
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        669,
+        711
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        656,
+        680
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        711,
+        733
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        692,
+        809
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        789,
+        885
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c4",
+      "corrected_offsets": [
+        810,
+        877
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        917,
+        1000
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c4",
+      "corrected_offsets": [
+        878,
+        1071
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1001,
+        1135
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

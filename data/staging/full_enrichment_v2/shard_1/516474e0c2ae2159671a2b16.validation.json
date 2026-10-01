@@ -1,0 +1,178 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "9",
+              "11"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "RANKL signaling",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "cycles of fission and re-fusion of osteomorphs",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 446,
+            "passage_index": 1,
+            "quote": "Modifications to RANKL signaling has been shown to alter cycles of fission and re-fusion of osteomorphs in mice.",
+            "start": 334
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "cycles of fission and re-fusion of osteomorphs",
+          "intervention": "Modifications to RANKL signaling",
+          "outcome_change": "other",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Modifications to RANKL signaling were reported to alter the cycles of fission and re-fusion of osteomorphs in mice.",
+        "uncertainties": [
+          "The passage does not specify whether the RANKL signaling modification increased or decreased the cycling.",
+          "The exact nature of the RANKL signaling perturbation is not described."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "osteomorph-specific genes",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone structural and quality phenotypes",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 678,
+            "passage_index": 1,
+            "quote": "Moreover, the absence of osteomorph-specific genes in mice exhibits bone structural and quality phenotypes.",
+            "start": 571
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone structural and quality phenotypes",
+          "intervention": "absence of osteomorph-specific genes",
+          "outcome_change": "other",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Absence of osteomorph-specific genes in mice was reported to exhibit bone structural and quality phenotypes.",
+        "uncertainties": [
+          "The passage does not specify which genes are included in 'osteomorph-specific genes'.",
+          "The direction of the bone structural/quality phenotype change is not stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        334,
+        446
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        183,
+        295
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        571,
+        678
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        418,
+        524
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

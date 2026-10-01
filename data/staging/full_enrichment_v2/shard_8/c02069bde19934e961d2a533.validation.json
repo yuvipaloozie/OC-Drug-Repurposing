@@ -1,0 +1,218 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteocytes",
+          "compartment": null,
+          "disease_setting": "osteoarthritis",
+          "species": "male murine models",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "31",
+              "32",
+              "36",
+              "38",
+              "39",
+              "43",
+              "49"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Pvalb",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteocytes",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "27",
+              "28",
+              "33",
+              "37",
+              "48"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "OA",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 555,
+            "passage_index": 1,
+            "quote": "Conditional deletion of Pvalb in osteocytes accelerates OA progression, whereas bone-targeted restoration of Pvalb expression mitigates disease manifestations.",
+            "start": 396
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "OA progression / disease manifestations",
+          "intervention": "Conditional deletion of Pvalb in osteocytes; bone-targeted restoration of Pvalb expression",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Conditional deletion of Pvalb in osteocytes accelerates osteoarthritis progression, while bone-targeted restoration of Pvalb expression mitigates disease manifestations.",
+        "uncertainties": [
+          "The sentence contains two interventions with opposite outcomes; the regulatory field captures the deletion effect, while restoration is summarized in the text but not encoded as a separate causal sign.",
+          "The exact molecular form of Pvalb is inferred from text and provider gene tagging; no protein-level statement is made."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteocytes",
+          "compartment": null,
+          "disease_setting": "osteoarthritis",
+          "species": "male murine models",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "30",
+              "31",
+              "32",
+              "36",
+              "38",
+              "39",
+              "43",
+              "49"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Pvalb",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "44",
+              "45",
+              "46"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "pathway",
+            "surface": "Ca2+-CaMKIV-CREB signaling pathway",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "47"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 889,
+            "passage_index": 1,
+            "quote": "Under excessive mechanical loading, Pvalb expression is suppressed, leading to activation of the Ca2+-CaMKIV-CREB signaling pathway, increased RANKL production, and subsequent osteoclast activation and pathological bone remodeling.",
+            "start": 658
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "Pvalb expression / pathway activation / RANKL production / osteoclast activation",
+          "intervention": "excessive mechanical loading",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Under excessive mechanical loading, suppressed Pvalb expression is associated with activation of the Ca2+-CaMKIV-CREB signaling pathway, increased RANKL production, and subsequent osteoclast activation and pathological bone remodeling.",
+        "uncertainties": [
+          "The text states a multi-step cascade; only the first regulatory relation (suppressed Pvalb expression leading to pathway activation) is encoded directly.",
+          "RANKL increase and osteoclast activation are downstream outcomes in the same sentence, but directness for each step is not fully specified."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        658,
+        889
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        658,
+        872
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

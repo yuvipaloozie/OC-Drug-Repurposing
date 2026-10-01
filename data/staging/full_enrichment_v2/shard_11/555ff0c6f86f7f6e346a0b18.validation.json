@@ -1,0 +1,163 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "periodontal tissue",
+          "disease_setting": "periodontitis",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "LPS-BMSCs-Exo",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "37",
+              "40",
+              "45",
+              "52",
+              "57",
+              "68"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "periodontitis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "oxidative stress",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "38",
+              "39",
+              "44",
+              "61",
+              "67"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "mitochondrial dysfunction",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "64",
+              "69"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "inflammation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "alveolar bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2451,
+            "passage_index": 1,
+            "quote": "LPS-BMSCs-Exo can significantly alleviate the oxidative stress and mitochondrial dysfunction caused by periodontitis in periodontal tissue",
+            "start": 2313
+          },
+          {
+            "end": 2534,
+            "passage_index": 1,
+            "quote": ", thereby reducing inflammation in periodontal tissue and alveolar bone resorption.",
+            "start": 2451
+          }
+        ],
+        "experiment": {
+          "assay": "Micro-CT, HE staining, Masson staining, immunohistochemistry, and ROS fluorescence staining",
+          "dose": null,
+          "duration": null,
+          "endpoint": "oxidative stress and mitochondrial dysfunction; inflammation and alveolar bone resorption",
+          "intervention": "LPS-BMSCs-Exo treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Treatment with LPS-BMSCs-Exo alleviated oxidative stress and mitochondrial dysfunction in periodontitis context, with reduced inflammation and alveolar bone resorption in rats.",
+        "uncertainties": [
+          "The quoted result is broad and bundles multiple endpoints; subject-object mapping is centered on oxidative stress as the clearest stated effect.",
+          "The passage does not specify direct molecular targets or whether the effect is direct vs indirect."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        2313,
+        2451
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1878,
+        2008
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        2451,
+        2534
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2008,
+        2088
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

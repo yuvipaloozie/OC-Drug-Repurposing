@@ -1,0 +1,208 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "compression area",
+          "disease_setting": "orthodontic tooth movement",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "23",
+              "25",
+              "26",
+              "28",
+              "37",
+              "40",
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "CB2",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast number",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1157,
+            "passage_index": 1,
+            "quote": "In contrast, the accelerated tooth displacement, increased osteoclast number (P < 0.0001) and bone resorption on the compression area",
+            "start": 1024
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP staining",
+          "dose": null,
+          "duration": "0, 7 and 14 days",
+          "endpoint": "osteoclast number",
+          "intervention": "CB2 knockout (CB2-/-)",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In CB2 knockout mice, osteoclast number increased in the compression area during orthodontic tooth movement.",
+        "uncertainties": [
+          "Exact text span is a longer sentence fragment; the quote captures the reported increase but not the full comparison to WT.",
+          "The causal role of CB2 is inferred from knockout and not established as a direct molecular interaction."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "compression area",
+          "disease_setting": "orthodontic tooth movement",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "23",
+              "25",
+              "26",
+              "28",
+              "37",
+              "40",
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "CB2",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "32",
+              "38",
+              "42"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "e3",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "33",
+              "39",
+              "43"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFRSF11B",
+            "key": "e4",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "OPG",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1332,
+            "passage_index": 1,
+            "quote": "Additionally, the expression of RANKL was significantly upregulated, while OPG showed low levels in the compression area of the CB2 - / - group (P < 0.0001).",
+            "start": 1175
+          }
+        ],
+        "experiment": {
+          "assay": "histomorphometrically measured expression levels",
+          "dose": null,
+          "duration": "0, 7 and 14 days",
+          "endpoint": "RANKL expression",
+          "intervention": "CB2 knockout (CB2-/-)",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In CB2 knockout mice, RANKL was upregulated and OPG was low in the compression area.",
+        "uncertainties": [
+          "The quote contains both RANKL and OPG; only RANKL is mapped as the object in this claim.",
+          "The text states low OPG levels, but the regulatory relation from CB2 to OPG is not directly specified as activation or inhibition."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1024,
+        1157
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1065,
+        1141
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1175,
+        1332
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1286,
+        1362
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

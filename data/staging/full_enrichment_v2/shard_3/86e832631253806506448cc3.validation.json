@@ -1,0 +1,109 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "malignant pleural effusion",
+          "disease_setting": "osteoblastic osteosarcoma",
+          "species": "Homo sapiens",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "osteoclasts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D016066"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "MPE",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D009369"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "PT",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 675,
+            "passage_index": 1,
+            "quote": "Immune cells dominate the cellular contexts in MPE with more T/NK cells and less osteoclasts compared to PT samples.",
+            "start": 559
+          }
+        ],
+        "experiment": {
+          "assay": "single-cell RNA-sequencing",
+          "dose": null,
+          "duration": null,
+          "endpoint": "relative abundance of osteoclasts",
+          "intervention": "single-cell RNA-sequencing on 27 260 cells from seven MPE samples and 91 186 cells from eight osteosarcoma tissues",
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In malignant pleural effusion samples, osteoclasts were less abundant than in primary tumour samples.",
+        "uncertainties": [
+          "The statement is comparative and does not identify a molecular mechanism for the reduced osteoclast abundance.",
+          "Species is inferred from the patient context; no organism name is explicitly stated in the quoted span."
+        ]
+      },
+      "errors": [
+        "invented annotation ID",
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        559,
+        675
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        618,
+        671
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,198 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "postmenopausal osteoporosis",
+          "species": null,
+          "stage": "in vitro"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "32"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Sweroside",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 517,
+            "passage_index": 1,
+            "quote": "Sweroside inhibited osteoclast differentiation and bone resorption in a concentration-dependent manner",
+            "start": 415
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "concentration-dependent",
+          "duration": null,
+          "endpoint": "osteoclast differentiation and bone resorption",
+          "intervention": "Sweroside",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Sweroside inhibited osteoclast differentiation and bone resorption in vitro in a concentration-dependent manner.",
+        "uncertainties": [
+          "The quote states two inhibited outcomes together; direction is clear for both, but the exact experimental assay is not specified."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ovariectomized (OVX)",
+          "species": "mice",
+          "stage": "in vivo"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "38",
+              "40"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Sweroside",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "39"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone density",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 958,
+            "passage_index": 1,
+            "quote": "in vivo experiments using ovariectomized (OVX) mice showed that Sweroside alleviated bone loss and enhanced bone density",
+            "start": 838
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone loss",
+          "intervention": "Sweroside",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In vivo experiments in ovariectomized mice showed that Sweroside alleviated bone loss and enhanced bone density.",
+        "uncertainties": [
+          "The passage also mentions enhanced bone density, but the exact quantitative endpoint and assay are not provided."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        415,
+        517
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        386,
+        479
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        838,
+        958
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1037,
+        1157
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

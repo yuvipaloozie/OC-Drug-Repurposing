@@ -1,0 +1,348 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "cultured on glass and on bone",
+          "disease_setting": null,
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "21",
+              "23",
+              "24",
+              "25",
+              "26",
+              "27",
+              "28",
+              "29",
+              "30",
+              "31",
+              "32",
+              "-"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "[Ca2+]e",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "21",
+              "23",
+              "24",
+              "25",
+              "26",
+              "27",
+              "28",
+              "29",
+              "30",
+              "31",
+              "32",
+              "-"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "[Ca2+]i",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "19"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": "rat"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 572,
+            "passage_index": 1,
+            "quote": "Osteoclasts cultured on glass and on bone showed clear differences in their responses, as in 44% and 52% of osteoclasts on glass but in only 21% and 25% of osteoclasts on bone [Ca2+]i increased when [Ca2+]e was increased from 2 mM to 6 or 10 mM via perfusion, respectively.",
+            "start": 299
+          }
+        ],
+        "experiment": {
+          "assay": "single cell measurements",
+          "dose": "2 mM to 6 or 10 mM",
+          "duration": null,
+          "endpoint": "free cytosolic calcium concentrations ([Ca2+]i)",
+          "intervention": "increased [Ca2+]e from 2 mM to 6 or 10 mM via perfusion",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Increasing extracellular calcium increased free cytosolic calcium in a subset of rat osteoclasts, with different responses on glass versus bone.",
+        "uncertainties": [
+          "The passage reports different response frequencies on glass versus bone, but does not assign a direct mechanistic cause for the substrate dependence.",
+          "The entity mapping for calcium concentration is approximate because the text refers to concentrations rather than a specific molecular species."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "2 day cultures",
+          "disease_setting": null,
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "21",
+              "23",
+              "24",
+              "25",
+              "26",
+              "27",
+              "28",
+              "29",
+              "30",
+              "31",
+              "32",
+              "-"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "[Ca2+]e",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": "rat"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast numbers",
+            "taxon": "rat"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 685,
+            "passage_index": 1,
+            "quote": "Bone resorption was inhibited without changes in the osteoclast numbers only by 10 mM [Ca2+]e in 2 day cultures.",
+            "start": 573
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro bone resorption assays",
+          "dose": "10 mM",
+          "duration": "2 day",
+          "endpoint": "bone resorption",
+          "intervention": "10 mM [Ca2+]e",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "High extracellular calcium inhibited bone resorption in rat osteoclast cultures without changing osteoclast numbers.",
+        "uncertainties": [
+          "The sentence states no change in osteoclast numbers, but the main causal claim is inhibition of bone resorption.",
+          "The exact culture substrate for this result is not specified in the quoted sentence."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "resorbing osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "21",
+              "23",
+              "24",
+              "25",
+              "26",
+              "27",
+              "28",
+              "29",
+              "30",
+              "31",
+              "32",
+              "-"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "[Ca2+]e",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "microfilament structures",
+            "taxon": "rat"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e7",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "resorbing osteoclasts",
+            "taxon": "rat"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 859,
+            "passage_index": 1,
+            "quote": "Furthermore, there were no changes in the organization of microfilament structures in resorbing osteoclasts after increased [Ca2+]e (up to 20 mM [Ca2+]e, 30 min incubation).",
+            "start": 686
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "up to 20 mM",
+          "duration": "30 min incubation",
+          "endpoint": "organization of microfilament structures",
+          "intervention": "increased [Ca2+]e up to 20 mM",
+          "outcome_change": "no_detected_change",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e6",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Increasing extracellular calcium caused no detectable change in the organization of microfilament structures in resorbing osteoclasts over the stated incubation period.",
+        "uncertainties": [
+          "This is a null result; it does not rule out effects under different conditions or time scales.",
+          "The quoted text does not specify the exact measurement method for microfilament organization."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        299,
+        572
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        298,
+        571
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        573,
+        685
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        572,
+        685
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        686,
+        859
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        686,
+        819
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

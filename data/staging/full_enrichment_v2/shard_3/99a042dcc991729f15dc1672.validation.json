@@ -1,0 +1,187 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "serum",
+          "disease_setting": "age-related bone loss",
+          "species": "mice",
+          "stage": "aged"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "36"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "MSM",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 981,
+            "passage_index": 1,
+            "quote": "Furthermore, MSM reduced the serum level of the C-terminal telopeptide of type I collagen, a marker of bone resorption, and downregulated the mRNA levels of genes related to osteoclast proliferation and activity.",
+            "start": 769
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "400 mg/kg/day",
+          "duration": "8 weeks",
+          "endpoint": "serum level of C-terminal telopeptide of type I collagen; mRNA levels of genes related to osteoclast proliferation and activity",
+          "intervention": "MSM supplementation (400 mg/kg/day) in drinking water for 8 weeks",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In aged mice, MSM supplementation decreased a serum marker of bone resorption and reduced expression of genes related to osteoclast proliferation and activity.",
+        "uncertainties": [
+          "The text combines a bone resorption marker reduction with downregulation of osteoclast-related genes; the exact gene targets are not named.",
+          "Direct molecular target of MSM is not stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "plasma, erythrocytes, bone marrow",
+          "disease_setting": "age-related bone loss",
+          "species": "mice",
+          "stage": "aged"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "39",
+              "40",
+              "42",
+              "44",
+              "49"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "MSM",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "47"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Nrf2",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1441,
+            "passage_index": 1,
+            "quote": "These improvements were linked to the activation of the nuclear factor E2 related factor 2 (Nrf2) pathway and its downstream antioxidant gene expression",
+            "start": 1289
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "400 mg/kg/day",
+          "duration": "8 weeks",
+          "endpoint": "Nrf2 pathway activation; downstream antioxidant gene expression",
+          "intervention": "MSM supplementation",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "MSM-treated aged mice showed activation of the Nrf2 antioxidant pathway and downstream antioxidant gene expression.",
+        "uncertainties": [
+          "The sentence says the improvements were 'linked to' Nrf2 pathway activation, so causality is not direct.",
+          "The object is a pathway-level statement rather than a single molecular activity."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        769,
+        981
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        916,
+        1127
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1289,
+        1441
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1488,
+        1599
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

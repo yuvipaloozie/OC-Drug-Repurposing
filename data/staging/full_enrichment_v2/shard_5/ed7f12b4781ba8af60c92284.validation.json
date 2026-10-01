@@ -1,0 +1,107 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "gingiva",
+          "disease_setting": "diabetes",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "protein",
+            "surface": "pyruvate kinase 2",
+            "taxon": "null"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activation",
+            "taxon": "null"
+          },
+          {
+            "annotation_ids": [
+              "MESH:D010518"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "periodontitis",
+            "taxon": "null"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2214,
+            "passage_index": 1,
+            "quote": "Elevation of mitochondrial functions by pyruvate kinase 2 activation reversed diabetes-induced gingival inflammation, osteoclast activation, and periodontitis, even in the presence of hyperglycemia.",
+            "start": 2016
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast activation",
+          "intervention": "pyruvate kinase 2 activation",
+          "outcome_change": "decreased",
+          "perturbation_type": "gain_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Activation of pyruvate kinase 2 was reported to reverse diabetes-induced osteoclast activation and periodontitis in the diabetic context.",
+        "uncertainties": [
+          "The passage uses an activation intervention rather than a direct molecular mechanism, so directness is unknown.",
+          "Pyruvate kinase 2 is not explicitly mapped to a specific canonical gene/protein identifier in the provided packet.",
+          "The evidence sentence bundles gingival inflammation, osteoclast activation, and periodontitis; only osteoclast activation is extracted as the main object here."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        2016,
+        2214
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2167,
+        2289
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

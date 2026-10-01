@@ -1,0 +1,255 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "autosomal-recessive osteopetrosis",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "4",
+              "28",
+              "29"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "ATP6i",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [
+              "24",
+              "5"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "autosomal-recessive osteopetrosis",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "a3 subunit of V-ATPase",
+            "taxon": "9606"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 222,
+            "passage_index": 1,
+            "quote": "Approximately 50% of the patients harbor mutations of the ATP6i gene, encoding for the osteoclast-specific a3 subunit of V-ATPase.",
+            "start": 92
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "unknown",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "ATP6i is described as encoding the osteoclast-specific a3 subunit of V-ATPase, and mutations in ATP6i are found in about half of autosomal-recessive osteopetrosis patients.",
+        "uncertainties": [
+          "The sentence mixes a background functional description with a prevalence statement; the claim is limited to the stated association/encoding relation.",
+          "No specific causal direction between ATP6i and disease is experimentally demonstrated in this passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "autosomal-recessive osteopetrosis",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "4",
+              "28",
+              "29"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "ATP6i",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "a3 subunit immunoreactivity",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "inefficient bone resorption",
+            "taxon": "9606"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 309,
+            "passage_index": 1,
+            "quote": "We found inactivating ATP6i mutations in four patients, and three of these were novel.",
+            "start": 223
+          },
+          {
+            "end": 1253,
+            "passage_index": 1,
+            "quote": "Consistent with the finding in the bone biopsies, these cells excavated pits faintly stained with toluidine blue, indicating inefficient bone resorption.",
+            "start": 1100
+          },
+          {
+            "end": 1390,
+            "passage_index": 1,
+            "quote": "Bone marrow transplantation was successful in all patients, and posttransplant osteoclasts showed rescue of a3 subunit immunoreactivity.",
+            "start": 1254
+          }
+        ],
+        "experiment": {
+          "assay": "bone biopsy / pit excavation observation",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption",
+          "intervention": "inactivating ATP6i mutations",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In patients with inactivating ATP6i mutations, osteoclasts lacked a3 subunit immunoreactivity and showed inefficient bone resorption.",
+        "uncertainties": [
+          "The passage reports an association in affected patients rather than a controlled perturbation experiment.",
+          "The quote about rescue after bone marrow transplantation is a separate clinical outcome and does not by itself establish a direct molecular mechanism."
+        ]
+      },
+      "errors": [
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        92,
+        222
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        178,
+        303
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        223,
+        309
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        303,
+        390
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1100,
+        1253
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        889,
+        1007
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1254,
+        1390
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1008,
+        1077
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

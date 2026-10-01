@@ -1,0 +1,227 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "c-src deficiency",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "14"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "C-src deficiency",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [
+              "16"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 82,
+            "passage_index": 1,
+            "quote": "C-src deficiency is characterized by osteopetrosis due to impaired bone resorption",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption",
+          "intervention": "c-src deficiency",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In mice, c-src deficiency is reported to cause impaired bone resorption and is linked to osteopetrosis.",
+        "uncertainties": [
+          "The passage states characterization/background rather than a dedicated perturbation experiment.",
+          "The cited span also mentions osteopetrosis, but the claim is focused on bone resorption."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "c-src deficiency",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "14"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "C-src deficiency",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [
+              "17"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "tooth eruption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 36,
+            "passage_index": 1,
+            "quote": "C-src deficiency is characterized by",
+            "start": 0
+          },
+          {
+            "end": 82,
+            "passage_index": 1,
+            "quote": "impaired bone resorption",
+            "start": 58
+          },
+          {
+            "end": 130,
+            "passage_index": 1,
+            "quote": "by hypofunctional osteoclasts and the resultant",
+            "start": 83
+          },
+          {
+            "end": 156,
+            "passage_index": 1,
+            "quote": "failure of tooth eruption",
+            "start": 131
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "tooth eruption",
+          "intervention": "c-src deficiency",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In mice, c-src deficiency is reported to be associated with failure of tooth eruption.",
+        "uncertainties": [
+          "The passage presents a disease characterization and not a direct intervention assay.",
+          "The mechanism is attributed in the abstract to hypofunctional osteoclasts, but the extracted claim only captures the reported phenotype."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        0,
+        36
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        35
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        58,
+        82
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        62,
+        82
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        83,
+        130
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        83,
+        123
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        131,
+        156
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        124,
+        147
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

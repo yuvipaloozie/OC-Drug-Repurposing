@@ -1,0 +1,244 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ovariectomy (OVX)",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "60505"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "IL-21",
+            "taxon": "null"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 881,
+            "passage_index": 1,
+            "quote": "serum TRACP-5b and RANKL levels and osteoclastogenesis were significantly decreased",
+            "start": 798
+          },
+          {
+            "end": 930,
+            "passage_index": 1,
+            "quote": "IL-21 KO + OVX mice compared to WT + OVX mice",
+            "start": 885
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "IL-21 knockout",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "IL-21 knockout in ovariectomized mice was associated with decreased osteoclastogenesis compared with wild-type ovariectomized mice.",
+        "uncertainties": [
+          "The text reports a knockout comparison in an OVX mouse model, but does not state direct molecular mechanism.",
+          "IL-21 molecular form is not explicitly distinguished as gene versus protein in the experiment; knockout supports a gene-level perturbation."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ovariectomy (OVX)",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "60505"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "IL-21",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "21943"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "e3",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 829,
+            "passage_index": 1,
+            "quote": "serum TRACP-5b and RANKL levels",
+            "start": 798
+          },
+          {
+            "end": 881,
+            "passage_index": 1,
+            "quote": "and osteoclastogenesis were significantly decreased",
+            "start": 830
+          },
+          {
+            "end": 930,
+            "passage_index": 1,
+            "quote": "IL-21 KO + OVX mice compared to WT + OVX mice",
+            "start": 885
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "RANKL levels",
+          "intervention": "IL-21 knockout",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "IL-21 knockout in ovariectomized mice was associated with decreased RANKL levels compared with wild-type ovariectomized mice.",
+        "uncertainties": [
+          "The passage reports serum levels but does not specify whether the measured entity is transcript, protein, or another form.",
+          "Existing-node suggestion for RANKL may map to a mouse protein node, but the text annotation is a gene mention; mapping is not fully resolved."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        798,
+        881
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        877,
+        959
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        885,
+        930
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        986,
+        1042
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        798,
+        829
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        844,
+        875
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        830,
+        881
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        877,
+        959
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        885,
+        930
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        986,
+        1042
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,233 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "condylar cartilage",
+          "compartment": "temporomandibular joints",
+          "disease_setting": "HFD/CUS-induced TMJOA-like changes",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "38"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "TAK242",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "39",
+              "55"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "TMJOA-like changes",
+            "taxon": "rat"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 721,
+            "passage_index": 1,
+            "quote": "TAK242 could",
+            "start": 709
+          },
+          {
+            "end": 2225,
+            "passage_index": 1,
+            "quote": "TAK242 significantly alleviated the cartilage degradation, subchondral bone destruction, and chondrocyte apoptosis in the HFD/CUS group.",
+            "start": 2089
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "cartilage degradation, subchondral bone destruction, and chondrocyte apoptosis",
+          "intervention": "TAK242",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In rats with HFD/CUS-induced TMJOA-like changes, treatment with the TLR4 inhibitor TAK242 alleviated cartilage degradation, subchondral bone destruction, and chondrocyte apoptosis.",
+        "uncertainties": [
+          "Exact sentence-boundary offsets for the TAK242 effect span may need validation.",
+          "The study assessed multiple pathological endpoints together, so the object is summarized as a composite TMJOA-like phenotype."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "hypothesis",
+        "context": {
+          "cell_type": "condylar cartilage",
+          "compartment": "temporomandibular joints",
+          "disease_setting": "TMJOA",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "33"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "HFD",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "CUS",
+            "taxon": "rat"
+          },
+          {
+            "annotation_ids": [
+              "39",
+              "50",
+              "55",
+              "59"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "TMJOA-like changes",
+            "taxon": "rat"
+          },
+          {
+            "annotation_ids": [
+              "37",
+              "42",
+              "43",
+              "51",
+              "52",
+              "56",
+              "57",
+              "58"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "TLR4/NF-kappaB/IL-1beta inflammatory signaling pathway",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2384,
+            "passage_index": 1,
+            "quote": "CONCLUSION: HFD and CUS could synergistically induce TMJOA-like changes, potentially by activating the TLR4/NF-kappaB/IL-1beta inflammatory signaling pathway.",
+            "start": 2226
+          }
+        ],
+        "experiment": {
+          "assay": "micro-CT, histology with Mankin scoring, TUNEL assay, immunofluorescence",
+          "dose": null,
+          "duration": "5 or 10 weeks",
+          "endpoint": "TMJOA-like changes",
+          "intervention": "high-fat diet and chronic unpredictable stress",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The authors propose that HFD and chronic unpredictable stress synergistically induce TMJOA-like changes, potentially by activating the TLR4/NF-kappaB/IL-1beta inflammatory signaling pathway.",
+        "uncertainties": [
+          "The mechanistic pathway is stated as a possibility ('potentially by'), so the causal role is not established.",
+          "CUS is not explicitly mapped to a molecular entity and is represented as an unresolved phenotype/stressor."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        709,
+        721
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        853,
+        865
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        2089,
+        2225
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2238,
+        2338
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        2226,
+        2384
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1819,
+        1902
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

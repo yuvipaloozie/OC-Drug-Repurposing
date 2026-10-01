@@ -1,0 +1,217 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclast",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": "osteoclastogenesis"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "42",
+              "52",
+              "54",
+              "60",
+              "61",
+              "62",
+              "67",
+              "69",
+              "70",
+              "73"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "I-BET762",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "66"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "TRAP-positive multi-nucleated cells",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1090,
+            "passage_index": 1,
+            "quote": "TRAP-positive multi-nucleated cells were reduced by I-BET762",
+            "start": 1030
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "dose-dependent",
+          "duration": null,
+          "endpoint": "TRAP-positive multi-nucleated cells",
+          "intervention": "I-BET762 treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Treatment with I-BET762 reduced TRAP-positive multi-nucleated cells during osteoclastogenesis in a dose-dependent manner.",
+        "uncertainties": [
+          "The quoted span supports reduced TRAP-positive multi-nucleated cells, but does not by itself establish a direct molecular target in osteoclasts."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclast",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": "RANKL-induced osteoclast"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "42",
+              "52",
+              "54",
+              "60",
+              "61",
+              "62",
+              "67",
+              "69",
+              "70",
+              "73"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "I-BET762",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "actin ring formation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "68"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "e5",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-induced osteoclast",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1213,
+            "passage_index": 1,
+            "quote": "The actin ring formation of RANKL-induced osteoclast was inhibited in the presence of I-BET762",
+            "start": 1119
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "actin ring formation",
+          "intervention": "presence of I-BET762",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "I-BET762 inhibited actin ring formation in RANKL-induced osteoclasts.",
+        "uncertainties": [
+          "The passage states inhibition of actin ring formation but does not specify direct molecular mechanism or species."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1030,
+        1090
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1146,
+        1206
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1119,
+        1213
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1222,
+        1316
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,199 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "20",
+              "31"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Lycopene",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "25",
+              "26",
+              "27",
+              "28",
+              "29",
+              "30",
+              "32",
+              "33"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "RANK/RANKL/OPG pathway",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 245,
+            "passage_index": 1,
+            "quote": "Lycopene, a lipophilic carotenoid and an acyclic isomer of beta-carotene, functions as an antioxidant and may improve bone health via multiple pathways, including",
+            "start": 83
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The review states that lycopene may improve bone health by modulating the RANK/RANKL/OPG pathway.",
+        "uncertainties": [
+          "Review/background statement; no direct experiment or perturbation is described.",
+          "The text uses 'may improve' and does not establish a causal effect from data in this passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "28",
+              "30"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "RANKL/RANK signaling",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 805,
+            "passage_index": 1,
+            "quote": "Elevated RANKL/RANK signaling promotes osteoclastogenesis and consequently bone resorption, while inhibition of this pathway may prevent bone resorption.",
+            "start": 652
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "positive",
+          "subject": "e3"
+        },
+        "summary": "The review states that elevated RANKL/RANK signaling promotes osteoclastogenesis and bone resorption, and that inhibition of this pathway may prevent bone resorption.",
+        "uncertainties": [
+          "The passage is a review-level background statement rather than an original experiment.",
+          "The sentence also mentions inhibition may prevent bone resorption, but no specific perturbation or experimental result is given in this passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        83,
+        245
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        182,
+        291
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        652,
+        805
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        637,
+        845
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

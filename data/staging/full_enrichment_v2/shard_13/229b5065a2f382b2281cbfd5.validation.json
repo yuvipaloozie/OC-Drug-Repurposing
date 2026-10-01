@@ -1,0 +1,184 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "lumbar",
+          "disease_setting": "orchiectomy-induced osteoporosis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "Pulsed electromagnetic field",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "lumbar bone loss",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "4"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "orchiectomy mice",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 117,
+            "passage_index": 0,
+            "quote": "Pulsed electromagnetic field prevents lumbar bone loss in orchiectomy mice without altering systemic iron metabolism.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "lumbar bone loss",
+          "intervention": "Pulsed electromagnetic field",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Pulsed electromagnetic field therapy prevented lumbar bone loss in orchiectomy mice.",
+        "uncertainties": [
+          "The title states the outcome at a high level; it does not specify the exact mechanistic mediator of the bone-loss prevention."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "no_effect",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "orchiectomy-induced osteoporosis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "Pulsed electromagnetic field",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "systemic iron metabolism",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 117,
+            "passage_index": 0,
+            "quote": "without altering systemic iron metabolism.",
+            "start": 75
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "systemic iron metabolism",
+          "intervention": "Pulsed electromagnetic field",
+          "outcome_change": "no_detected_change",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Pulsed electromagnetic field therapy did not alter systemic iron metabolism.",
+        "uncertainties": [
+          "The title summarizes lack of alteration in systemic iron metabolism but does not specify which markers were unchanged."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        117
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        118
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        75,
+        117
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        78,
+        118
+      ],
+      "passage_index": 0
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,211 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "biofilms",
+          "disease_setting": "periodontal pathogenic biofilms",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "37"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "HAS",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "autoinducer-2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "QS-related genes",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1391,
+            "passage_index": 1,
+            "quote": "Furthermore, HAS significantly inhibited autoinducer-2 (AI-2) activity and downregulated",
+            "start": 1303
+          }
+        ],
+        "experiment": {
+          "assay": "bioluminescence assays; RT-qPCR",
+          "dose": null,
+          "duration": null,
+          "endpoint": "AI-2 activity and quorum-sensing-related gene expression",
+          "intervention": "HAS",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Hypochlorous acid solution (HAS) inhibited autoinducer-2 (AI-2) activity and downregulated quorum-sensing-related genes in periodontal pathogenic biofilms.",
+        "uncertainties": [
+          "The provided evidence span is partial and may not cover the full quoted sentence.",
+          "The text does not explicitly state whether the AI-2 effect is direct or indirect.",
+          "Quorum-sensing-related genes are treated as a textual gene-level placeholder rather than a curated set of specific genes."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "periodontitis",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "HAS",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "61"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "periodontal inflammation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "50"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "rat",
+            "taxon": "10116"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1494,
+            "passage_index": 1,
+            "quote": "In vivo, rat periodontitis models were established. Imaging and histological techniques were employed to evaluate the inhibitory effects of HAS on alveolar bone resorption and inflammatory cytokines. Results: Compared to 0.25% NaClO solution, it exhibited better biocompatibility. HAS downregulated biofilmvirulence factors and upregulated oxidative stress response-related genes, suggesting that inducing ROS production is a crucial mechanism of HAS in biofilm inhibition. Furthermore, HAS significantly inhibited autoinducer-2 (AI-2) activity and downregulated the QS-related genes. In vivo, HAS significantly reduced bone resorption and periodontal inflammation.",
+            "start": 829
+          }
+        ],
+        "experiment": {
+          "assay": "imaging and histological techniques",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption and periodontal inflammation",
+          "intervention": "HAS",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In rat periodontitis models, HAS reduced alveolar bone resorption and periodontal inflammation.",
+        "uncertainties": [
+          "The evidence span is broader than the specific outcome and includes adjacent background text.",
+          "The exact causal target for reduced inflammation is not specified; the claim records the phenotype-level outcome only."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1303,
+        1391
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1372,
+        1464
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        829,
+        1494
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        959,
+        1038
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

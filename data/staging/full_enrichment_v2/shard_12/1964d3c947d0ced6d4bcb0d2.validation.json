@@ -1,0 +1,237 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "high-fat diet-induced bone metabolism disorders",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "31",
+              "35",
+              "37",
+              "43",
+              "45"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "SC",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "OPG/RANKL/RANK signaling pathway",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 607,
+            "passage_index": 1,
+            "quote": "SC modulates the OPG/RANKL/RANK signaling pathway",
+            "start": 558
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "modulation of the OPG/RANKL/RANK signaling pathway",
+          "intervention": "Sciadonic acid",
+          "outcome_change": "not_stated",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Sciadonic acid was reported to modulate the OPG/RANKL/RANK signaling pathway in mice.",
+        "uncertainties": [
+          "The text states modulation of the pathway but does not specify whether the net effect on individual pathway components is activation or inhibition."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "high-fat diet-induced bone metabolism disorders",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "31",
+              "35",
+              "37",
+              "43",
+              "45"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "SC",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "6",
+              "28",
+              "36"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone metabolism disorders",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 82,
+            "passage_index": 0,
+            "quote": "Sciadonic acid attenuates high-fat diet-induced bone metabolism disorders in mice.",
+            "start": 0
+          },
+          {
+            "end": 552,
+            "passage_index": 1,
+            "quote": "SC could balance bone resorption and formation",
+            "start": 521
+          },
+          {
+            "end": 570,
+            "passage_index": 1,
+            "quote": "SC modulates",
+            "start": 558
+          },
+          {
+            "end": 910,
+            "passage_index": 1,
+            "quote": "SC could inhibit fat vacuoles",
+            "start": 881
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone metabolism disorders",
+          "intervention": "Sciadonic acid",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Sciadonic acid treatment was reported to attenuate high-fat diet-induced bone metabolism disorders in mice.",
+        "uncertainties": [
+          "The abstract summarizes multiple downstream phenotype changes, but only the overall attenuation of bone metabolism disorders is directly stated as the main result in the title and abstract."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        558,
+        607
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        641,
+        704
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        0,
+        82
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        80
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        558,
+        570
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        640,
+        651
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        881,
+        910
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        964,
+        994
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

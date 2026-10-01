@@ -1,0 +1,473 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "inflammatory osteolysis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "52",
+              "53"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Kaempferol",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "function",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "related gene expression",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 590,
+            "passage_index": 1,
+            "quote": "TRAP staining, F-actin ring immunofluorescence, pit formation assays, and Western blotting revealed that KE effectively suppressed osteoclast differentiation, function, and related gene expression.",
+            "start": 393
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP staining, F-actin ring immunofluorescence, pit formation assays, Western blotting",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation/function and related gene expression",
+          "intervention": "KE",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Kaempferol suppressed osteoclast differentiation, function, and related gene expression.",
+        "uncertainties": [
+          "The sentence groups multiple readouts; the exact individual contribution of each assay to each outcome is not separated.",
+          "\"related gene expression\" is not specified to particular genes."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "inflammatory osteolysis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "53",
+              "56",
+              "59",
+              "61",
+              "62",
+              "65",
+              "67",
+              "73",
+              "74",
+              "80",
+              "83",
+              "88"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "KE",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "60",
+              "66",
+              "69",
+              "70",
+              "71",
+              "85",
+              "87"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "NRF2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "68"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "KEAP1",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1193,
+            "passage_index": 1,
+            "quote": "By integrating molecular docking, surface plasmon resonance (KD = 7.03 muM), and cellular thermal shift assays, we established for the first time that KE directly binds to NRF2. Co-immunoprecipitation confirmed that KE disrupted the KEAP1-NRF2 interaction, reducing NRF2 ubiquitination,facilitating NRF2 nuclear translocation.",
+            "start": 867
+          }
+        ],
+        "experiment": {
+          "assay": "molecular docking, surface plasmon resonance, cellular thermal shift assays, co-immunoprecipitation",
+          "dose": "KD = 7.03 muM",
+          "duration": null,
+          "endpoint": "NRF2 binding / KEAP1-NRF2 interaction / NRF2 ubiquitination / NRF2 nuclear translocation",
+          "intervention": "molecular docking, surface plasmon resonance, cellular thermal shift assay, co-immunoprecipitation",
+          "outcome_change": "other",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "direct",
+          "effect_level": "binding",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Kaempferol directly binds NRF2 and was reported to disrupt the KEAP1-NRF2 interaction, with reduced NRF2 ubiquitination and increased NRF2 nuclear translocation.",
+        "uncertainties": [
+          "The passage reports direct binding and interaction disruption together; the precise causal chain is not fully separated.",
+          "NRF2, KEAP1, and KE are treated as text-supported entities; protein vs gene form for NRF2/KEAP1 is not explicitly stated in the sentence."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "LPS-induced osteolysis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "53",
+              "56",
+              "59",
+              "61",
+              "62",
+              "65",
+              "67",
+              "73",
+              "74",
+              "80",
+              "83",
+              "88"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "KE",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast formation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "81"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "72",
+              "82"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ML385",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "77",
+              "78",
+              "79"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "murine model of LPS-induced osteolysis",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1677,
+            "passage_index": 1,
+            "quote": "In a murine model of LPS-induced osteolysis, KE administration suppressed osteoclast formation and mitigated bone loss by modulating the local immune microenvironment-effects that were substantially reversed by ML385.",
+            "start": 1460
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast formation and bone loss",
+          "intervention": "KE administration",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Kaempferol administration in a murine LPS-induced osteolysis model suppressed osteoclast formation and mitigated bone loss, and these effects were reversed by ML385.",
+        "uncertainties": [
+          "The sentence states that effects were reversed by ML385, but the exact mechanism of reversal is not detailed.",
+          "\"by modulating the local immune microenvironment\" is descriptive and not separately quantified here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "macrophage",
+          "compartment": null,
+          "disease_setting": "inflammatory osteolysis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "53",
+              "56",
+              "59",
+              "61",
+              "62",
+              "65",
+              "67",
+              "73",
+              "74",
+              "80",
+              "83",
+              "88"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "KE",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "macrophage polarization",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "M1 phenotype",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "M2 phenotype",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1459,
+            "passage_index": 1,
+            "quote": "Furthermore, Flow Cytometry, Western blot, ELISA, and RT-qPCR analyses demonstrated that KE skewed macrophage polarization from a pro-inflammatory M1 toward an anti-inflammatory M2 phenotype.",
+            "start": 1268
+          }
+        ],
+        "experiment": {
+          "assay": "Flow Cytometry, Western blot, ELISA, RT-qPCR",
+          "dose": null,
+          "duration": null,
+          "endpoint": "macrophage polarization from M1 toward M2",
+          "intervention": "KE",
+          "outcome_change": "other",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c4",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Kaempferol skewed macrophage polarization from a pro-inflammatory M1 phenotype toward an anti-inflammatory M2 phenotype.",
+        "uncertainties": [
+          "The sentence reports a shift from M1 to M2 rather than separate quantified endpoints for each phenotype."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        393,
+        590
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        482,
+        681
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        867,
+        1193
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1099,
+        1312
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1460,
+        1677
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1560,
+        1849
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c4",
+      "corrected_offsets": [
+        1268,
+        1459
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1321,
+        1476
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

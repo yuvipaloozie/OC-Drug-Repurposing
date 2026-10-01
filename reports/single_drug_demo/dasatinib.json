@@ -1,0 +1,992 @@
+{
+  "drug": "dasatinib",
+  "source": {
+    "source_id": "DAILYMED:f9b79d54-9bee-4c93-9c87-f3e65d91f146",
+    "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f9b79d54-9bee-4c93-9c87-f3e65d91f146",
+    "title": "Dasatinib prescribing information",
+    "source_location": "12.1 Mechanism of Action",
+    "retrieved_at": "2026-09-30T04:21:19.117704+00:00",
+    "raw_file": "data/drug_demo/dasatinib_label.html",
+    "raw_sha256": "ceef4c4db4a242e390c4f3d375d9d95d70ea989d052c73fd92f891cf283035b7",
+    "reviewed_paraphrase": "The label describes inhibition of BCR-ABL, four SRC-family kinases, KIT, EPHA2 and PDGFR beta; individual assay species and quantitative target-specific potency are not supplied here."
+  },
+  "targets": [
+    {
+      "label_target": "BCR-ABL",
+      "symbol": null,
+      "candidate_node_ids": [],
+      "mapping_status": "not_represented",
+      "node_identity_statuses": {},
+      "action": "INHIBITS",
+      "sign": -1
+    },
+    {
+      "label_target": "SRC",
+      "symbol": "SRC",
+      "candidate_node_ids": [
+        "LOCAL:protein:mouse:SRC"
+      ],
+      "mapping_status": "target_binding_and_species_transfer_review_required",
+      "node_identity_statuses": {
+        "LOCAL:protein:mouse:SRC": "registry_gene_species_protein_accession_mapped"
+      },
+      "action": "INHIBITS",
+      "sign": -1
+    },
+    {
+      "label_target": "LCK",
+      "symbol": "LCK",
+      "candidate_node_ids": [],
+      "mapping_status": "not_represented",
+      "node_identity_statuses": {},
+      "action": "INHIBITS",
+      "sign": -1
+    },
+    {
+      "label_target": "YES",
+      "symbol": "YES1",
+      "candidate_node_ids": [],
+      "mapping_status": "not_represented",
+      "node_identity_statuses": {},
+      "action": "INHIBITS",
+      "sign": -1
+    },
+    {
+      "label_target": "FYN",
+      "symbol": "FYN",
+      "candidate_node_ids": [],
+      "mapping_status": "not_represented",
+      "node_identity_statuses": {},
+      "action": "INHIBITS",
+      "sign": -1
+    },
+    {
+      "label_target": "c-KIT",
+      "symbol": "KIT",
+      "candidate_node_ids": [],
+      "mapping_status": "not_represented",
+      "node_identity_statuses": {},
+      "action": "INHIBITS",
+      "sign": -1
+    },
+    {
+      "label_target": "EPHA2",
+      "symbol": "EPHA2",
+      "candidate_node_ids": [],
+      "mapping_status": "not_represented",
+      "node_identity_statuses": {},
+      "action": "INHIBITS",
+      "sign": -1
+    },
+    {
+      "label_target": "PDGFRbeta",
+      "symbol": "PDGFRB",
+      "candidate_node_ids": [],
+      "mapping_status": "not_represented",
+      "node_identity_statuses": {},
+      "action": "INHIBITS",
+      "sign": -1
+    }
+  ],
+  "scenario": "Conditional inhibition of candidate mouse SRC; species transfer unverified",
+  "target_list_scope": "Eight targets/groups in label section 12.1; not an exhaustive targetome",
+  "canonical_input_sha256": {
+    "data\\processed\\nodes.csv": "6015f0d6bd63974659be8353b652e4b78e182722cadcc0f2902c4d652704815d",
+    "data\\processed\\edges.csv": "47a9bfb128a00e161b537250c56c44ce74297761b104821c659be64b80b3bc5a",
+    "data\\processed\\experiments.csv": "a658e78407d301c1a9801e6a1eb994d0b3e3b224a8a640a6fe7443d0a3b4c47c",
+    "data\\processed\\edge_evidence.csv": "e87e4a027f6178a8accbd1ef9d1540dbed22df96a1e8cca629b6b1967d90652f",
+    "data\\processed\\contexts.csv": "7690e2a3f63d9d263a89b7040dd2e00a2fbe0552a49184c00b797ee6605cee5c",
+    "data\\processed\\source_records.csv": "e5ddf688bdbc39b0231c2e26d1293fe1a6c030dc8613f2d5a96b34a86f49f228"
+  },
+  "canonical_inputs_unchanged": true,
+  "scores": {
+    "PATHWAY:OSTEOCLAST_DIFFERENTIATION": {
+      "informed": {
+        "drug_id": "LOCAL:drug:dasatinib",
+        "evidence_mode": "informed",
+        "score_kind": "uncalibrated_heuristic",
+        "graph_coverage": true,
+        "mechanism_coverage": false,
+        "surviving_paths_count": 0,
+        "mechanism_feature": -0.0312,
+        "supporting_weight": 0.0,
+        "opposing_weight": 0.031231,
+        "contradiction_flag": false,
+        "paths": [],
+        "opposing_paths": [
+          {
+            "drug_id": "LOCAL:drug:dasatinib",
+            "start_node_id": "LOCAL:drug:dasatinib",
+            "nodes": [
+              "LOCAL:drug:dasatinib",
+              "LOCAL:protein:mouse:SRC",
+              "LOCAL:protein:mouse:VAV3",
+              "LOCAL:protein:mouse:RAC1",
+              "LOCAL:protein:mouse:WAS",
+              "LOCAL:protein:mouse:CTTN",
+              "PATHWAY:OSTEOCLAST_DIFFERENTIATION"
+            ],
+            "edges": [
+              "demo:dasatinib:LOCAL:protein:mouse:SRC",
+              "edge:0053",
+              "edge:0054",
+              "edge:0056",
+              "edge:0057",
+              "edge:full:d77631522379b15185ac3c5f"
+            ],
+            "path_length": 6,
+            "net_sign": 1,
+            "has_unsigned_step": false,
+            "unsigned_steps": [],
+            "evidence_mode": "informed",
+            "edge_assessments": [
+              {
+                "edge_id": "demo:dasatinib:LOCAL:protein:mouse:SRC",
+                "usable": true,
+                "tier": "citation_only_candidate",
+                "weight": 0.15,
+                "support_sources": [
+                  "DAILYMED:f9b79d54-9bee-4c93-9c87-f3e65d91f146"
+                ],
+                "contradicting_sources": [],
+                "warnings": [
+                  "not_strict_experimental_evidence"
+                ]
+              },
+              {
+                "edge_id": "edge:0053",
+                "usable": true,
+                "tier": "citation_only_candidate",
+                "weight": 0.15,
+                "support_sources": [
+                  "PMID:15711558"
+                ],
+                "contradicting_sources": [],
+                "warnings": [
+                  "not_strict_experimental_evidence"
+                ]
+              },
+              {
+                "edge_id": "edge:0054",
+                "usable": true,
+                "tier": "citation_only_candidate",
+                "weight": 0.15,
+                "support_sources": [
+                  "PMID:15711558"
+                ],
+                "contradicting_sources": [],
+                "warnings": [
+                  "not_strict_experimental_evidence"
+                ]
+              },
+              {
+                "edge_id": "edge:0056",
+                "usable": true,
+                "tier": "citation_only_candidate",
+                "weight": 0.15,
+                "support_sources": [
+                  "PMID:15711558"
+                ],
+                "contradicting_sources": [],
+                "warnings": [
+                  "endpoint_identity_pending",
+                  "not_strict_experimental_evidence"
+                ]
+              },
+              {
+                "edge_id": "edge:0057",
+                "usable": true,
+                "tier": "citation_only_candidate",
+                "weight": 0.15,
+                "support_sources": [
+                  "PMID:15711558"
+                ],
+                "contradicting_sources": [],
+                "warnings": [
+                  "endpoint_identity_pending",
+                  "not_strict_experimental_evidence"
+                ]
+              },
+              {
+                "edge_id": "edge:full:d77631522379b15185ac3c5f",
+                "usable": true,
+                "tier": "extracted_candidate",
+                "weight": 0.25,
+                "support_sources": [
+                  "PMID:38655781"
+                ],
+                "contradicting_sources": [],
+                "warnings": [
+                  "endpoint_identity_pending",
+                  "genetic_perturbation_not_equivalent_to_drug_inhibition",
+                  "inferred_functional_role_not_direct_activation",
+                  "not_strict_experimental_evidence"
+                ]
+              }
+            ],
+            "warnings": [
+              "context_incomplete",
+              "context_mismatch",
+              "endpoint_identity_pending",
+              "genetic_perturbation_not_equivalent_to_drug_inhibition",
+              "inferred_functional_role_not_direct_activation",
+              "not_strict_experimental_evidence"
+            ],
+            "heuristic_weight": 0.031231
+          }
+        ],
+        "direction_unresolved_paths": [],
+        "all_paths": [
+          {
+            "drug_id": "LOCAL:drug:dasatinib",
+            "start_node_id": "LOCAL:drug:dasatinib",
+            "nodes": [
+              "LOCAL:drug:dasatinib",
+              "LOCAL:protein:mouse:SRC",
+              "LOCAL:protein:mouse:VAV3",
+              "LOCAL:protein:mouse:RAC1",
+              "LOCAL:protein:mouse:WAS",
+              "LOCAL:protein:mouse:CTTN",
+              "PATHWAY:OSTEOCLAST_DIFFERENTIATION"
+            ],
+            "edges": [
+              "demo:dasatinib:LOCAL:protein:mouse:SRC",
+              "edge:0053",
+              "edge:0054",
+              "edge:0056",
+              "edge:0057",
+              "edge:full:d77631522379b15185ac3c5f"
+            ],
+            "path_length": 6,
+            "net_sign": 1,
+            "has_unsigned_step": false,
+            "unsigned_steps": [],
+            "evidence_mode": "informed",
+            "edge_assessments": [
+              {
+                "edge_id": "demo:dasatinib:LOCAL:protein:mouse:SRC",
+                "usable": true,
+                "tier": "citation_only_candidate",
+                "weight": 0.15,
+                "support_sources": [
+                  "DAILYMED:f9b79d54-9bee-4c93-9c87-f3e65d91f146"
+                ],
+                "contradicting_sources": [],
+                "warnings": [
+                  "not_strict_experimental_evidence"
+                ]
+              },
+              {
+                "edge_id": "edge:0053",
+                "usable": true,
+                "tier": "citation_only_candidate",
+                "weight": 0.15,
+                "support_sources": [
+                  "PMID:15711558"
+                ],
+                "contradicting_sources": [],
+                "warnings": [
+                  "not_strict_experimental_evidence"
+                ]
+              },
+              {
+                "edge_id": "edge:0054",
+                "usable": true,
+                "tier": "citation_only_candidate",
+                "weight": 0.15,
+                "support_sources": [
+                  "PMID:15711558"
+                ],
+                "contradicting_sources": [],
+                "warnings": [
+                  "not_strict_experimental_evidence"
+                ]
+              },
+              {
+                "edge_id": "edge:0056",
+                "usable": true,
+                "tier": "citation_only_candidate",
+                "weight": 0.15,
+                "support_sources": [
+                  "PMID:15711558"
+                ],
+                "contradicting_sources": [],
+                "warnings": [
+                  "endpoint_identity_pending",
+                  "not_strict_experimental_evidence"
+                ]
+              },
+              {
+                "edge_id": "edge:0057",
+                "usable": true,
+                "tier": "citation_only_candidate",
+                "weight": 0.15,
+                "support_sources": [
+                  "PMID:15711558"
+                ],
+                "contradicting_sources": [],
+                "warnings": [
+                  "endpoint_identity_pending",
+                  "not_strict_experimental_evidence"
+                ]
+              },
+              {
+                "edge_id": "edge:full:d77631522379b15185ac3c5f",
+                "usable": true,
+                "tier": "extracted_candidate",
+                "weight": 0.25,
+                "support_sources": [
+                  "PMID:38655781"
+                ],
+                "contradicting_sources": [],
+                "warnings": [
+                  "endpoint_identity_pending",
+                  "genetic_perturbation_not_equivalent_to_drug_inhibition",
+                  "inferred_functional_role_not_direct_activation",
+                  "not_strict_experimental_evidence"
+                ]
+              }
+            ],
+            "warnings": [
+              "context_incomplete",
+              "context_mismatch",
+              "endpoint_identity_pending",
+              "genetic_perturbation_not_equivalent_to_drug_inhibition",
+              "inferred_functional_role_not_direct_activation",
+              "not_strict_experimental_evidence"
+            ],
+            "heuristic_weight": 0.031231
+          }
+        ],
+        "excluded_edges": [
+          {
+            "edge_id": "edge:0052",
+            "usable": false,
+            "tier": "excluded",
+            "weight": 0.0,
+            "support_sources": [],
+            "contradicting_sources": [],
+            "warnings": [
+              "quarantined_claim"
+            ]
+          },
+          {
+            "edge_id": "edge:0060",
+            "usable": false,
+            "tier": "excluded",
+            "weight": 0.0,
+            "support_sources": [],
+            "contradicting_sources": [],
+            "warnings": [
+              "quarantined_claim"
+            ]
+          },
+          {
+            "edge_id": "EDGE_STR_0358",
+            "usable": false,
+            "tier": "excluded",
+            "weight": 0.0,
+            "support_sources": [],
+            "contradicting_sources": [],
+            "warnings": [
+              "no_nonquarantined_source_support"
+            ]
+          }
+        ],
+        "search_truncated": false
+      },
+      "strict": {
+        "drug_id": "LOCAL:drug:dasatinib",
+        "evidence_mode": "strict",
+        "score_kind": "uncalibrated_heuristic",
+        "graph_coverage": false,
+        "mechanism_coverage": false,
+        "surviving_paths_count": 0,
+        "mechanism_feature": 0.0,
+        "supporting_weight": 0.0,
+        "opposing_weight": 0.0,
+        "contradiction_flag": false,
+        "paths": [],
+        "opposing_paths": [],
+        "direction_unresolved_paths": [],
+        "all_paths": [],
+        "excluded_edges": [
+          {
+            "edge_id": "demo:dasatinib:LOCAL:protein:mouse:SRC",
+            "usable": false,
+            "tier": "excluded",
+            "weight": 0.0,
+            "support_sources": [],
+            "contradicting_sources": [],
+            "warnings": [
+              "strict_experiment_requirements_not_met"
+            ]
+          }
+        ],
+        "search_truncated": false
+      }
+    },
+    "PATHWAY:BONE_RESORPTION": {
+      "informed": {
+        "drug_id": "LOCAL:drug:dasatinib",
+        "evidence_mode": "informed",
+        "score_kind": "uncalibrated_heuristic",
+        "graph_coverage": true,
+        "mechanism_coverage": true,
+        "surviving_paths_count": 1,
+        "mechanism_feature": 0.0342,
+        "supporting_weight": 0.034212,
+        "opposing_weight": 0.0,
+        "contradiction_flag": false,
+        "paths": [
+          {
+            "drug_id": "LOCAL:drug:dasatinib",
+            "start_node_id": "LOCAL:drug:dasatinib",
+            "nodes": [
+              "LOCAL:drug:dasatinib",
+              "LOCAL:protein:mouse:SRC",
+              "LOCAL:protein:mouse:VAV3",
+              "LOCAL:protein:mouse:RAC1",
+              "LOCAL:protein:mouse:WAS",
+              "PATHWAY:BONE_RESORPTION"
+            ],
+            "edges": [
+              "demo:dasatinib:LOCAL:protein:mouse:SRC",
+              "edge:0053",
+              "edge:0054",
+              "edge:0056",
+              "edge:full:f0eaca18559376b359136632"
+            ],
+            "path_length": 5,
+            "net_sign": -1,
+            "has_unsigned_step": false,
+            "unsigned_steps": [],
+            "evidence_mode": "informed",
+            "edge_assessments": [
+              {
+                "edge_id": "demo:dasatinib:LOCAL:protein:mouse:SRC",
+                "usable": true,
+                "tier": "citation_only_candidate",
+                "weight": 0.15,
+                "support_sources": [
+                  "DAILYMED:f9b79d54-9bee-4c93-9c87-f3e65d91f146"
+                ],
+                "contradicting_sources": [],
+                "warnings": [
+                  "not_strict_experimental_evidence"
+                ]
+              },
+              {
+                "edge_id": "edge:0053",
+                "usable": true,
+                "tier": "citation_only_candidate",
+                "weight": 0.15,
+                "support_sources": [
+                  "PMID:15711558"
+                ],
+                "contradicting_sources": [],
+                "warnings": [
+                  "not_strict_experimental_evidence"
+                ]
+              },
+              {
+                "edge_id": "edge:0054",
+                "usable": true,
+                "tier": "citation_only_candidate",
+                "weight": 0.15,
+                "support_sources": [
+                  "PMID:15711558"
+                ],
+                "contradicting_sources": [],
+                "warnings": [
+                  "not_strict_experimental_evidence"
+                ]
+              },
+              {
+                "edge_id": "edge:0056",
+                "usable": true,
+                "tier": "citation_only_candidate",
+                "weight": 0.15,
+                "support_sources": [
+                  "PMID:15711558"
+                ],
+                "contradicting_sources": [],
+                "warnings": [
+                  "endpoint_identity_pending",
+                  "not_strict_experimental_evidence"
+                ]
+              },
+              {
+                "edge_id": "edge:full:f0eaca18559376b359136632",
+                "usable": true,
+                "tier": "extracted_candidate",
+                "weight": 0.25,
+                "support_sources": [
+                  "PMID:14726392"
+                ],
+                "contradicting_sources": [],
+                "warnings": [
+                  "endpoint_identity_pending",
+                  "genetic_perturbation_not_equivalent_to_drug_inhibition",
+                  "inferred_functional_role_not_direct_activation",
+                  "not_strict_experimental_evidence"
+                ]
+              }
+            ],
+            "warnings": [
+              "context_incomplete",
+              "context_mismatch",
+              "endpoint_identity_pending",
+              "genetic_perturbation_not_equivalent_to_drug_inhibition",
+              "inferred_functional_role_not_direct_activation",
+              "not_strict_experimental_evidence"
+            ],
+            "heuristic_weight": 0.034212
+          }
+        ],
+        "opposing_paths": [],
+        "direction_unresolved_paths": [],
+        "all_paths": [
+          {
+            "drug_id": "LOCAL:drug:dasatinib",
+            "start_node_id": "LOCAL:drug:dasatinib",
+            "nodes": [
+              "LOCAL:drug:dasatinib",
+              "LOCAL:protein:mouse:SRC",
+              "LOCAL:protein:mouse:VAV3",
+              "LOCAL:protein:mouse:RAC1",
+              "LOCAL:protein:mouse:WAS",
+              "PATHWAY:BONE_RESORPTION"
+            ],
+            "edges": [
+              "demo:dasatinib:LOCAL:protein:mouse:SRC",
+              "edge:0053",
+              "edge:0054",
+              "edge:0056",
+              "edge:full:f0eaca18559376b359136632"
+            ],
+            "path_length": 5,
+            "net_sign": -1,
+            "has_unsigned_step": false,
+            "unsigned_steps": [],
+            "evidence_mode": "informed",
+            "edge_assessments": [
+              {
+                "edge_id": "demo:dasatinib:LOCAL:protein:mouse:SRC",
+                "usable": true,
+                "tier": "citation_only_candidate",
+                "weight": 0.15,
+                "support_sources": [
+                  "DAILYMED:f9b79d54-9bee-4c93-9c87-f3e65d91f146"
+                ],
+                "contradicting_sources": [],
+                "warnings": [
+                  "not_strict_experimental_evidence"
+                ]
+              },
+              {
+                "edge_id": "edge:0053",
+                "usable": true,
+                "tier": "citation_only_candidate",
+                "weight": 0.15,
+                "support_sources": [
+                  "PMID:15711558"
+                ],
+                "contradicting_sources": [],
+                "warnings": [
+                  "not_strict_experimental_evidence"
+                ]
+              },
+              {
+                "edge_id": "edge:0054",
+                "usable": true,
+                "tier": "citation_only_candidate",
+                "weight": 0.15,
+                "support_sources": [
+                  "PMID:15711558"
+                ],
+                "contradicting_sources": [],
+                "warnings": [
+                  "not_strict_experimental_evidence"
+                ]
+              },
+              {
+                "edge_id": "edge:0056",
+                "usable": true,
+                "tier": "citation_only_candidate",
+                "weight": 0.15,
+                "support_sources": [
+                  "PMID:15711558"
+                ],
+                "contradicting_sources": [],
+                "warnings": [
+                  "endpoint_identity_pending",
+                  "not_strict_experimental_evidence"
+                ]
+              },
+              {
+                "edge_id": "edge:full:f0eaca18559376b359136632",
+                "usable": true,
+                "tier": "extracted_candidate",
+                "weight": 0.25,
+                "support_sources": [
+                  "PMID:14726392"
+                ],
+                "contradicting_sources": [],
+                "warnings": [
+                  "endpoint_identity_pending",
+                  "genetic_perturbation_not_equivalent_to_drug_inhibition",
+                  "inferred_functional_role_not_direct_activation",
+                  "not_strict_experimental_evidence"
+                ]
+              }
+            ],
+            "warnings": [
+              "context_incomplete",
+              "context_mismatch",
+              "endpoint_identity_pending",
+              "genetic_perturbation_not_equivalent_to_drug_inhibition",
+              "inferred_functional_role_not_direct_activation",
+              "not_strict_experimental_evidence"
+            ],
+            "heuristic_weight": 0.034212
+          }
+        ],
+        "excluded_edges": [
+          {
+            "edge_id": "edge:0052",
+            "usable": false,
+            "tier": "excluded",
+            "weight": 0.0,
+            "support_sources": [],
+            "contradicting_sources": [],
+            "warnings": [
+              "quarantined_claim"
+            ]
+          },
+          {
+            "edge_id": "edge:0060",
+            "usable": false,
+            "tier": "excluded",
+            "weight": 0.0,
+            "support_sources": [],
+            "contradicting_sources": [],
+            "warnings": [
+              "quarantined_claim"
+            ]
+          },
+          {
+            "edge_id": "EDGE_STR_0358",
+            "usable": false,
+            "tier": "excluded",
+            "weight": 0.0,
+            "support_sources": [],
+            "contradicting_sources": [],
+            "warnings": [
+              "no_nonquarantined_source_support"
+            ]
+          }
+        ],
+        "search_truncated": false
+      },
+      "strict": {
+        "drug_id": "LOCAL:drug:dasatinib",
+        "evidence_mode": "strict",
+        "score_kind": "uncalibrated_heuristic",
+        "graph_coverage": false,
+        "mechanism_coverage": false,
+        "surviving_paths_count": 0,
+        "mechanism_feature": 0.0,
+        "supporting_weight": 0.0,
+        "opposing_weight": 0.0,
+        "contradiction_flag": false,
+        "paths": [],
+        "opposing_paths": [],
+        "direction_unresolved_paths": [],
+        "all_paths": [],
+        "excluded_edges": [
+          {
+            "edge_id": "demo:dasatinib:LOCAL:protein:mouse:SRC",
+            "usable": false,
+            "tier": "excluded",
+            "weight": 0.0,
+            "support_sources": [],
+            "contradicting_sources": [],
+            "warnings": [
+              "strict_experiment_requirements_not_met"
+            ]
+          }
+        ],
+        "search_truncated": false
+      }
+    }
+  },
+  "partial_paths": [
+    {
+      "drug_id": "LOCAL:drug:dasatinib",
+      "start_node_id": "LOCAL:drug:dasatinib",
+      "nodes": [
+        "LOCAL:drug:dasatinib",
+        "LOCAL:protein:mouse:SRC",
+        "LOCAL:protein:mouse:VAV3",
+        "LOCAL:protein:mouse:RAC1",
+        "LOCAL:protein:mouse:WAS",
+        "LOCAL:protein:mouse:CTTN",
+        "PATHWAY:PODOSOME_BELT"
+      ],
+      "edges": [
+        "demo:dasatinib:LOCAL:protein:mouse:SRC",
+        "edge:0053",
+        "edge:0054",
+        "edge:0056",
+        "edge:0057",
+        "edge:0058"
+      ],
+      "path_length": 6,
+      "net_sign": 0,
+      "has_unsigned_step": true,
+      "unsigned_steps": [
+        {
+          "edge_id": "edge:0058",
+          "relation": "PART_OF",
+          "kind": "structural_or_biochemical"
+        }
+      ],
+      "evidence_mode": "informed",
+      "edge_assessments": [
+        {
+          "edge_id": "demo:dasatinib:LOCAL:protein:mouse:SRC",
+          "usable": true,
+          "tier": "citation_only_candidate",
+          "weight": 0.15,
+          "support_sources": [
+            "DAILYMED:f9b79d54-9bee-4c93-9c87-f3e65d91f146"
+          ],
+          "contradicting_sources": [],
+          "warnings": [
+            "not_strict_experimental_evidence"
+          ]
+        },
+        {
+          "edge_id": "edge:0053",
+          "usable": true,
+          "tier": "citation_only_candidate",
+          "weight": 0.15,
+          "support_sources": [
+            "PMID:15711558"
+          ],
+          "contradicting_sources": [],
+          "warnings": [
+            "not_strict_experimental_evidence"
+          ]
+        },
+        {
+          "edge_id": "edge:0054",
+          "usable": true,
+          "tier": "citation_only_candidate",
+          "weight": 0.15,
+          "support_sources": [
+            "PMID:15711558"
+          ],
+          "contradicting_sources": [],
+          "warnings": [
+            "not_strict_experimental_evidence"
+          ]
+        },
+        {
+          "edge_id": "edge:0056",
+          "usable": true,
+          "tier": "citation_only_candidate",
+          "weight": 0.15,
+          "support_sources": [
+            "PMID:15711558"
+          ],
+          "contradicting_sources": [],
+          "warnings": [
+            "endpoint_identity_pending",
+            "not_strict_experimental_evidence"
+          ]
+        },
+        {
+          "edge_id": "edge:0057",
+          "usable": true,
+          "tier": "citation_only_candidate",
+          "weight": 0.15,
+          "support_sources": [
+            "PMID:15711558"
+          ],
+          "contradicting_sources": [],
+          "warnings": [
+            "endpoint_identity_pending",
+            "not_strict_experimental_evidence"
+          ]
+        },
+        {
+          "edge_id": "edge:0058",
+          "usable": true,
+          "tier": "citation_only_candidate",
+          "weight": 0.15,
+          "support_sources": [
+            "PMID:15711558"
+          ],
+          "contradicting_sources": [],
+          "warnings": [
+            "endpoint_identity_pending",
+            "not_strict_experimental_evidence"
+          ]
+        }
+      ],
+      "warnings": [
+        "context_incomplete",
+        "direction_unresolved",
+        "endpoint_identity_pending",
+        "not_strict_experimental_evidence"
+      ],
+      "heuristic_weight": 0.044244
+    },
+    {
+      "drug_id": "LOCAL:drug:dasatinib",
+      "start_node_id": "LOCAL:drug:dasatinib",
+      "nodes": [
+        "LOCAL:drug:dasatinib",
+        "LOCAL:protein:mouse:SRC",
+        "LOCAL:protein:mouse:VAV3",
+        "LOCAL:protein:mouse:RAC1",
+        "LOCAL:protein:mouse:WAS",
+        "LOCAL:protein:mouse:CTTN",
+        "PATHWAY:PODOSOME_BELT",
+        "PATHWAY:F_ACTIN_SEALING_ZONE"
+      ],
+      "edges": [
+        "demo:dasatinib:LOCAL:protein:mouse:SRC",
+        "edge:0053",
+        "edge:0054",
+        "edge:0056",
+        "edge:0057",
+        "edge:0058",
+        "edge:0059"
+      ],
+      "path_length": 7,
+      "net_sign": 0,
+      "has_unsigned_step": true,
+      "unsigned_steps": [
+        {
+          "edge_id": "edge:0058",
+          "relation": "PART_OF",
+          "kind": "structural_or_biochemical"
+        },
+        {
+          "edge_id": "edge:0059",
+          "relation": "PART_OF",
+          "kind": "structural_or_biochemical"
+        }
+      ],
+      "evidence_mode": "informed",
+      "edge_assessments": [
+        {
+          "edge_id": "demo:dasatinib:LOCAL:protein:mouse:SRC",
+          "usable": true,
+          "tier": "citation_only_candidate",
+          "weight": 0.15,
+          "support_sources": [
+            "DAILYMED:f9b79d54-9bee-4c93-9c87-f3e65d91f146"
+          ],
+          "contradicting_sources": [],
+          "warnings": [
+            "not_strict_experimental_evidence"
+          ]
+        },
+        {
+          "edge_id": "edge:0053",
+          "usable": true,
+          "tier": "citation_only_candidate",
+          "weight": 0.15,
+          "support_sources": [
+            "PMID:15711558"
+          ],
+          "contradicting_sources": [],
+          "warnings": [
+            "not_strict_experimental_evidence"
+          ]
+        },
+        {
+          "edge_id": "edge:0054",
+          "usable": true,
+          "tier": "citation_only_candidate",
+          "weight": 0.15,
+          "support_sources": [
+            "PMID:15711558"
+          ],
+          "contradicting_sources": [],
+          "warnings": [
+            "not_strict_experimental_evidence"
+          ]
+        },
+        {
+          "edge_id": "edge:0056",
+          "usable": true,
+          "tier": "citation_only_candidate",
+          "weight": 0.15,
+          "support_sources": [
+            "PMID:15711558"
+          ],
+          "contradicting_sources": [],
+          "warnings": [
+            "endpoint_identity_pending",
+            "not_strict_experimental_evidence"
+          ]
+        },
+        {
+          "edge_id": "edge:0057",
+          "usable": true,
+          "tier": "citation_only_candidate",
+          "weight": 0.15,
+          "support_sources": [
+            "PMID:15711558"
+          ],
+          "contradicting_sources": [],
+          "warnings": [
+            "endpoint_identity_pending",
+            "not_strict_experimental_evidence"
+          ]
+        },
+        {
+          "edge_id": "edge:0058",
+          "usable": true,
+          "tier": "citation_only_candidate",
+          "weight": 0.15,
+          "support_sources": [
+            "PMID:15711558"
+          ],
+          "contradicting_sources": [],
+          "warnings": [
+            "endpoint_identity_pending",
+            "not_strict_experimental_evidence"
+          ]
+        },
+        {
+          "edge_id": "edge:0059",
+          "usable": true,
+          "tier": "citation_only_candidate",
+          "weight": 0.15,
+          "support_sources": [
+            "PMID:15711558"
+          ],
+          "contradicting_sources": [],
+          "warnings": [
+            "endpoint_identity_pending",
+            "not_strict_experimental_evidence"
+          ]
+        }
+      ],
+      "warnings": [
+        "context_incomplete",
+        "direction_unresolved",
+        "endpoint_identity_pending",
+        "not_strict_experimental_evidence"
+      ],
+      "heuristic_weight": 0.040962
+    }
+  ],
+  "interpretation": "No phenotype coverage is unknown, not evidence of inefficacy. Scores are uncalibrated heuristics, not ML probabilities."
+}

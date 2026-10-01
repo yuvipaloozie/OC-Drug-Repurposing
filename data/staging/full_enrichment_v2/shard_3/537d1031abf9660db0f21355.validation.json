@@ -1,0 +1,220 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "17",
+              "19",
+              "20",
+              "25",
+              "30"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Siglec-15",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activity",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 417,
+            "passage_index": 1,
+            "quote": "Siglec-15 participates in the metabolism of the skeleton by regulating osteoclast activity and differentiation",
+            "start": 307
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast activity and differentiation",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Siglec-15 is described as participating in skeletal metabolism by regulating osteoclast activity and differentiation.",
+        "uncertainties": [
+          "Review-style background statement; no primary experimental perturbation described.",
+          "The passage states regulation of both osteoclast activity and differentiation but does not specify direction or mechanism."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "22",
+              "23"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "DNAX activation protein of 12 kDa",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [
+              "17",
+              "19",
+              "20",
+              "25",
+              "30"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Siglec-15 receptor",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast growth",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "24"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "pathway",
+            "surface": "RANK/RANKL signalling",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 822,
+            "passage_index": 1,
+            "quote": "The binding of DNAX activation protein of 12 kDa (DAP12), which contains the immunoreceptor tyrosine-based activation motif (ITAM) activation domain, to the Siglec-15 receptor provides a positive stimulatory signal for osteoclast growth, with the involvement of the receptor activator of nuclear factor-kappaB (RANK)/RANK ligand (RANKL) signalling",
+            "start": 475
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast growth",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "DAP12 binding to Siglec-15 is described as providing a positive stimulatory signal for osteoclast growth, with RANK/RANKL signaling involved.",
+        "uncertainties": [
+          "This is a review statement describing a proposed/summary mechanism, not a primary experiment.",
+          "The text attributes the signal to binding of DAP12 to Siglec-15, but the exact molecular directionality and directness are not experimentally established in the passage.",
+          "RANK/RANKL involvement is mentioned only as contextual signaling; no separate causal edge is extracted for it."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        307,
+        417
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        199,
+        281
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        475,
+        822
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        353,
+        504
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

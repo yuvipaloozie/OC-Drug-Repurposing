@@ -1,0 +1,207 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "human",
+          "stage": "mature polarized"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "mineralized surfaces",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "1"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "OCs",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "proteins specialized for bone resorption and matrix interaction",
+            "taxon": "human"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 94,
+            "passage_index": 1,
+            "quote": "substrate-specific molecular adaptations crucial for bone remodeling",
+            "start": 26
+          },
+          {
+            "end": 518,
+            "passage_index": 1,
+            "quote": "mineralized surfaces promote the expression of proteins specialized for bone resorption and matrix interaction, such as lysosomal enzymes and ion transporters. This environment induces a mature and resorptive phenotype in OCs",
+            "start": 293
+          }
+        ],
+        "experiment": {
+          "assay": "mass spectrometry and functional enrichment analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "mature and resorptive phenotype; expression of proteins specialized for bone resorption and matrix interaction",
+          "intervention": "cultured on mineralized surfaces versus plastic plates",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Osteoclasts cultured on mineralized surfaces show a mature, resorptive phenotype and increased expression of proteins specialized for bone resorption and matrix interaction.",
+        "uncertainties": [
+          "The passage describes a comparison of substrates rather than a named molecular perturbation.",
+          "The exact molecular subjects of the increased protein expression are summarized at a broad level in the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "human",
+          "stage": "mature polarized"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "plastic plates",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "1"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "OCs",
+            "taxon": "human"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 830,
+            "passage_index": 1,
+            "quote": "Conversely, OCs on plastic plates display a more diverse proteomic profile, highlighting adaptations in adhesion, proliferation, and stress response pathways, suggesting a focus on cellular maintenance rather than active resorption.",
+            "start": 598
+          }
+        ],
+        "experiment": {
+          "assay": "mass spectrometry and functional enrichment analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "proteomic profile and pathway adaptations",
+          "intervention": "cultured on plastic plates versus mineralized surfaces",
+          "outcome_change": "other",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Osteoclasts cultured on plastic plates display adaptations linked to adhesion, proliferation, and stress response pathways rather than active resorption.",
+        "uncertainties": [
+          "The text suggests a focus on cellular maintenance rather than active resorption, but this is an interpretation stated in the abstract rather than a direct mechanistic assay.",
+          "No explicit causal molecular mediator is named for the plastic-plate condition."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        26,
+        94
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        66,
+        125
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        293,
+        518
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        175,
+        337
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        598,
+        830
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        338,
+        530
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

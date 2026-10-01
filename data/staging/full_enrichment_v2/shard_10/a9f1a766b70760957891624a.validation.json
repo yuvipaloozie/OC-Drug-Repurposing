@@ -1,0 +1,228 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": "periodontal tissues",
+          "disease_setting": "periodontal disease",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "Mitophagy",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "17",
+              "19",
+              "20",
+              "21",
+              "22",
+              "23",
+              "24",
+              "28",
+              "29",
+              "31"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "periodontal disease pathogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 295,
+            "passage_index": 1,
+            "quote": "Mitophagy, a specialized form of autophagy responsible for degrading damaged mitochondria, plays a crucial role in maintaining cellular homeostasis.",
+            "start": 147
+          },
+          {
+            "end": 1423,
+            "passage_index": 1,
+            "quote": "Mitophagy regulates periodontal disease pathogenesis by modulating inflammation, bone remodeling, and cell death",
+            "start": 1311
+          }
+        ],
+        "experiment": {
+          "assay": "literature review",
+          "dose": null,
+          "duration": null,
+          "endpoint": "periodontal disease pathogenesis",
+          "intervention": "review of 18 original studies",
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The review states that mitophagy regulates periodontal disease pathogenesis.",
+        "uncertainties": [
+          "This is a review-level statement, not a single primary experiment.",
+          "The passage does not specify a direct molecular mechanism or experimental perturbation."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "periodontal tissues",
+          "compartment": "periodontal tissues",
+          "disease_setting": "periodontal disease",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "mitophagy",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "25",
+              "30"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "periodontal inflammation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "pro-inflammatory cytokines",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "27"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "mitochondrial reactive oxygen species",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1021,
+            "passage_index": 1,
+            "quote": "Specifically, mitophagy modulates periodontal inflammation by influencing pro-inflammatory cytokines and mitochondrial reactive oxygen species.",
+            "start": 878
+          }
+        ],
+        "experiment": {
+          "assay": "literature review",
+          "dose": null,
+          "duration": null,
+          "endpoint": "periodontal inflammation",
+          "intervention": "review of 18 original studies",
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The review says mitophagy modulates periodontal inflammation, including pro-inflammatory cytokines and mitochondrial reactive oxygen species.",
+        "uncertainties": [
+          "The text summarizes prior studies and does not specify which study produced the cytokine/ROS effect.",
+          "The direction of change for cytokines and reactive oxygen species is not stated explicitly."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        147,
+        295
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        122,
+        170
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1311,
+        1423
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1341,
+        1445
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        878,
+        1021
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1452,
+        1568
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

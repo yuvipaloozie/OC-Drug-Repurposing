@@ -1,0 +1,354 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 and bone marrow-derived macrophage cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": "osteoclast differentiation"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "glycolysis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "oxidative phosphorylation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "35"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-induced osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "35"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "36"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "RAW264.7",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 504,
+            "passage_index": 1,
+            "quote": "glycolysis and oxidative phosphorylation characterized by glucose and oxygen consumption as well as lactate production were increased during receptor activator of nuclear factor-kappaB ligand (RANKL)-induced osteoclastogenesis",
+            "start": 278
+          }
+        ],
+        "experiment": {
+          "assay": "glucose consumption, oxygen consumption, lactate production",
+          "dose": null,
+          "duration": null,
+          "endpoint": "glycolysis and oxidative phosphorylation",
+          "intervention": "RANKL-induced osteoclastogenesis",
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "During RANKL-induced osteoclastogenesis, glycolysis and oxidative phosphorylation were increased in the reported cell systems.",
+        "uncertainties": [
+          "The passage reports increased metabolic pathways during osteoclastogenesis, but does not specify a direct causal regulator for the metabolic shift."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 and bone marrow-derived macrophage cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": "osteoclastogenesis"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "41",
+              "42"
+            ],
+            "existing_node_id": "CHEBI:32816",
+            "key": "e1",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "compound",
+            "surface": "pyruvate",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "43",
+              "44",
+              "45"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "RANKL-stimulated signals",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "44"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:MAPK1",
+            "key": "e4",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "ERK",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "45"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:MAPK8",
+            "key": "e5",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "JNK",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1386,
+            "passage_index": 1,
+            "quote": "pyruvate, which is capable of promoting mitochondrial respiration. Treatment of pyruvate synergistically increased osteoclastogenesis through the activation of RANKL-stimulated signals (ERK and JNK)",
+            "start": 1188
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "pyruvate",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Pyruvate treatment increased osteoclastogenesis and was reported to activate RANKL-stimulated ERK and JNK signaling.",
+        "uncertainties": [
+          "The text links pyruvate to activation of ERK and JNK, but does not establish whether this is direct or indirect."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 and bone marrow-derived macrophage cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": "osteoclastogenesis"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "47"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "rotenone",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "48"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "antimycin A",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "49"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "oligomycin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "46",
+              "51"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "ATP production",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1761,
+            "passage_index": 1,
+            "quote": "ATP production with either the inhibitors of mitochondrial complexes, such as rotenone and antimycin A, or the inhibitor of ATP synthase, oligomycin. We also found that osteoclastogenesis was retarded",
+            "start": 1610
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "rotenone and antimycin A, or oligomycin",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e5",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Blocking ATP production with mitochondrial complex inhibitors or oligomycin retarded osteoclastogenesis.",
+        "uncertainties": [
+          "The sentence groups several inhibitors together; the effect is reported collectively rather than separately for each compound.",
+          "The passage states ATP production was blocked, but does not provide a biochemical reaction statement."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        278,
+        504
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        278,
+        492
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1188,
+        1386
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1347,
+        1558
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

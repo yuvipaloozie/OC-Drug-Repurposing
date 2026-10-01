@@ -1,0 +1,180 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "44"
+            ],
+            "existing_node_id": "CHEBI:15741",
+            "key": "e1",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "compound",
+            "surface": "Succinate",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "45",
+              "46"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "succinate receptor-1",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 358,
+            "passage_index": 1,
+            "quote": "Succinate activates succinate receptor-1 (SUCNR1) and stimulates inflammation.",
+            "start": 280
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "SUCNR1 activation and inflammation",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Succinate is stated to activate SUCNR1 and stimulate inflammation.",
+        "uncertainties": [
+          "The text does not specify whether the SUCNR1 activation statement is a direct experimental result or a general background claim.",
+          "No specific cell type or assay is stated for the activation claim."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "periodontitis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "compound",
+            "surface": "SUCNR1 antagonist",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 881,
+            "passage_index": 1,
+            "quote": "Therapeutic studies demonstrated that a SUCNR1 antagonist inhibited inflammatory events and osteoclastogenesis in vitro",
+            "start": 762
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "SUCNR1 antagonist",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "A SUCNR1 antagonist inhibited osteoclastogenesis in vitro.",
+        "uncertainties": [
+          "The specific antagonist is not named in the supplied text.",
+          "The sentence groups inhibition of inflammatory events and osteoclastogenesis; only osteoclastogenesis is extracted here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        280,
+        358
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        276,
+        344
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        762,
+        881
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        760,
+        856
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

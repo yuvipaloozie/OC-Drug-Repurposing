@@ -1,0 +1,218 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "mouse",
+          "stage": "osteoclastogenesis"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "43",
+              "44",
+              "51",
+              "55",
+              "57"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "TTC26",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "45"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "MINDY3",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "46",
+              "47",
+              "48",
+              "56"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RACK1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "49",
+              "50"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:NFATC1",
+            "key": "e4",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "protein",
+            "surface": "NFATc1",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1816,
+            "passage_index": 1,
+            "quote": "TTC26 as a scaffold protein, TTC26 recruits the DUB ubiquitin carboxyl-terminal hydrolase-3 (MINDY3) to promote K48-linked deubiquitination of receptor for activated kinase C-1 (RACK1), thereby stabilizing RACK1 and activating nuclear factor of activated T cells 1 (NFATc1), the master transcription factor of osteoclastogenesis.",
+            "start": 1454
+          }
+        ],
+        "experiment": {
+          "assay": "RNA sequencing, Western blotting, co-immunoprecipitation, in vitro osteoclast differentiation assays, and protein structural analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "RACK1 stabilization and NFATc1 activation",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": {
+          "direction": "unknown",
+          "enzyme": "e2",
+          "products": [
+            {
+              "entity": "e3",
+              "stoichiometry": null
+            }
+          ],
+          "substrates": [
+            {
+              "entity": "e3",
+              "stoichiometry": null
+            }
+          ]
+        },
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "TTC26 acts as a scaffold that recruits MINDY3 to promote K48-linked deubiquitination of RACK1, which stabilizes RACK1 and activates NFATc1 in osteoclastogenesis.",
+        "uncertainties": [
+          "The text states deubiquitination and stabilization, but does not specify a direct enzymatic interaction for TTC26 itself.",
+          "MINDY3 is not annotated in the provider entities; its molecular form is inferred from the textual description.",
+          "The reaction representation is simplified because the substrate and product are the same named protein undergoing deubiquitination rather than a conversion to a distinct product."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable",
+        "regulatory form mismatch"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "ovariectomized (OVX) mice / osteoporosis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "38",
+              "40",
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Ttc26",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "shTtc26",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "trabecular bone loss",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2131,
+            "passage_index": 1,
+            "quote": "osteoclast-targeted inhibition of Ttc26 (shTtc26) in ovariectomized (OVX) mice, we validated its therapeutic potential as a novel target for osteoporosis intervention. Results: ... Notably, osteoclast-targeted inhibition of Ttc26 successfully alleviates trabecular bone loss in ovariectomized (OVX) mice.",
+            "start": 2061
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "trabecular bone loss",
+          "intervention": "osteoclast-targeted inhibition of Ttc26 (shTtc26)",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Osteoclast-targeted inhibition of Ttc26 (shTtc26) in ovariectomized mice alleviated trabecular bone loss.",
+        "uncertainties": [
+          "The passage links the phenotype to osteoclast-targeted Ttc26 inhibition, but does not specify the exact experimental assay used to measure trabecular bone loss.",
+          "shTtc26 is not a standardized molecular identifier; its exact construct is not specified in the text."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [],
+  "valid_envelope": true
+}

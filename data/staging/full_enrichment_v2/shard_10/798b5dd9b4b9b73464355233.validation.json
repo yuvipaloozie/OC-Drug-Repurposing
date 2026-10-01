@@ -1,0 +1,109 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "protein",
+            "surface": "Src-family kinases",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "tyrosines within the ITAM sequence",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "phosphorylated tyrosines within the ITAM sequence",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 530,
+            "passage_index": 1,
+            "quote": "Upon ligand binding to the receptors, tyrosines within the ITAM sequence are phosphorylated by Src-family kinases, leading to an SH2-domain mediated recruitment and activation of the Syk or the related ZAP-70 tyrosine kinase.",
+            "start": 305
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "metabolic_conversion",
+        "local_claim_id": "c1",
+        "reaction": {
+          "direction": "as_written",
+          "enzyme": "e1",
+          "products": [
+            {
+              "entity": "e3",
+              "stoichiometry": null
+            }
+          ],
+          "substrates": [
+            {
+              "entity": "e2",
+              "stoichiometry": null
+            }
+          ]
+        },
+        "regulatory": null,
+        "summary": "Src-family kinases phosphorylate tyrosines within ITAM sequences, which then supports recruitment and activation of Syk or related ZAP-70 kinase in this signaling context.",
+        "uncertainties": [
+          "Review/background statement rather than a primary experimental result.",
+          "The passage names Src-family kinases as a family, not a specific enzyme member.",
+          "No organism or cell type is specified in the quoted sentence."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        305,
+        530
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        305,
+        531
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

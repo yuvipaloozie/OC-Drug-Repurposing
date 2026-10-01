@@ -1,0 +1,226 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "32",
+              "39",
+              "41",
+              "43"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "dasatinib",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "40",
+              "42"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:CSF1R",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "protein",
+            "surface": "c-fms",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 464,
+            "passage_index": 1,
+            "quote": "While designed to inhibit Abl and Src kinases, dasatinib shows multitarget effects, including inhibition of the macrophage colony-stimulating factor (M-CSF) receptor c-fms. We have shown previously that dasatinib abrogates osteoclast formation and activity in vitro owing, in part, to its specificity for c-fms.",
+            "start": 153
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Dasatinib is described as inhibiting the M-CSF receptor c-fms, and prior work is cited that dasatinib abrogates osteoclast formation and activity in vitro in part because of c-fms specificity.",
+        "uncertainties": [
+          "The sentence mixes a current background statement with a prior-study result; the cited osteoclast effect is not from a new experiment in this paper.",
+          "c-fms is provided as a gene annotation, but the text context does not uniquely establish species or molecular form beyond a receptor protein name."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "proximal tibias",
+          "disease_setting": "physiologic bone turnover",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "46",
+              "49",
+              "52",
+              "57",
+              "58",
+              "59"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "dasatinib",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "trabecular volume",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "trabecular thickness",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast numbers",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast surface",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "CTX-1",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1449,
+            "passage_index": 1,
+            "quote": "dasatinib (5 mg/kg/day) or vehicle by gavage or zoledronic acid (ZOL; 100 microg/kg/6 weeks) subcutaneously. Following 4, 8, and 12 weeks of treatment, serum biochemical, bone morphometric, and histologic analyses were performed. Whole-body bone mineral density and tibial cortical thickness where unchanged in the dasatinib- or ZOL-treated animals relative to controls. However, micro-computed tomographic (microCT) analysis of cancellous bone at the proximal tibias showed that trabecular volume (BV/TV) and thickness (Tb.Th) were increased in dasatinib-treated animals at levels comparable with those of the ZOL-treated group. These changes were associated with a decrease in osteoclast numbers (N.Oc/B.Pm) and surface (Oc.S/BS) and decreased serum levels of the osteoclast marker c-terminal collagen crosslinks (CTX-1).",
+            "start": 626
+          }
+        ],
+        "experiment": {
+          "assay": "micro-computed tomographic (microCT) analysis",
+          "dose": "5 mg/kg/day",
+          "duration": "4, 8, and 12 weeks",
+          "endpoint": "trabecular volume (BV/TV) and thickness (Tb.Th)",
+          "intervention": "dasatinib (5 mg/kg/day) by gavage",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In rats treated with dasatinib, trabecular bone volume and thickness increased, and these changes were associated with decreased osteoclast numbers, decreased osteoclast surface, and decreased serum CTX-1.",
+        "uncertainties": [
+          "The association between increased trabecular bone parameters and decreased osteoclast measures is correlative in the text.",
+          "CTX-1 is a marker rather than a molecular target; it is represented here as a reported serum osteoclast marker."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        153,
+        464
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        126,
+        478
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        626,
+        1449
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        738,
+        1110
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

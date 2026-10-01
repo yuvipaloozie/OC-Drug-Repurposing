@@ -1,0 +1,132 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "bone diseases / osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "21"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Bisphosphonate drugs",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "prenylation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "small GTPases",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1379,
+            "passage_index": 1,
+            "quote": "Bisphosphonate drugs, which are widely used in the treatment of bone diseases such as osteoporosis",
+            "start": 1281
+          },
+          {
+            "end": 1562,
+            "passage_index": 1,
+            "quote": ", act by preventing the prenylation of small GTPases, resulting in the loss of the SZ and RB and therefore inhibition of osteoclast activity, as well as inducing osteoclast apoptosis.",
+            "start": 1379
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast activity",
+          "intervention": null,
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Bisphosphonate drugs are described as preventing prenylation of small GTPases, leading to loss of the sealing zone and ruffled border and inhibition of osteoclast activity, with induction of osteoclast apoptosis.",
+        "uncertainties": [
+          "This is a review statement rather than a described primary experiment.",
+          "The text states a mechanism involving prenylation of small GTPases, but does not specify a direct biochemical reaction for the drugs themselves.",
+          "Species is not stated in the passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1281,
+        1379
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1357,
+        1455
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1379,
+        1562
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1456,
+        1584
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

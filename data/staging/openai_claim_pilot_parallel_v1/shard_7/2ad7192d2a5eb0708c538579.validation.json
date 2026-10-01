@@ -1,0 +1,211 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "25",
+              "27",
+              "32",
+              "33",
+              "35",
+              "36",
+              "38"
+            ],
+            "existing_node_id": null,
+            "key": "LP45",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "LP45",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "SHP2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "SHP2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "26",
+              "28",
+              "29",
+              "31",
+              "34",
+              "37"
+            ],
+            "existing_node_id": null,
+            "key": "LPS",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "LPS",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 839,
+            "passage_index": 1,
+            "quote": "RESULTS: The expression level of SHP2 and Src was significantly increased, and the expression levels of NOX4, P22, P47, IL-1beta, NLRP3, IRF3, RANK, beta-catenin and INF-beta were inhibited in LP45 group and LPS + LP45 group as compared to those in LPS group.",
+            "start": 580
+          }
+        ],
+        "experiment": {
+          "assay": "Western blotting / immunofluorescence staining",
+          "dose": null,
+          "duration": null,
+          "endpoint": "SHP2 expression",
+          "intervention": "LP45 group and LPS + LP45 group",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "inferred_from_perturbation",
+          "object": "SHP2",
+          "sign": "positive",
+          "subject": "LP45"
+        },
+        "summary": "LP45 treatment was associated with increased SHP2 expression compared with LPS, alongside decreased expression of multiple oxidative stress/inflammatory and osteoclast-related markers.",
+        "uncertainties": [
+          "The text reports multiple readouts in the same sentence; only the SHP2 increase is encoded as the primary regulatory relation.",
+          "LP45 is not explicitly identified as a molecular species beyond the surface name.",
+          "Directness of the LP45-to-SHP2 effect is not established by the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "25",
+              "27",
+              "32",
+              "33",
+              "35",
+              "36",
+              "38"
+            ],
+            "existing_node_id": null,
+            "key": "LP45",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "LP45",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "24",
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "osteoporosis",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoporosis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1389,
+            "passage_index": 1,
+            "quote": "X-ray observation and HE staining showed that LP45 could inhibit the progression of osteoporosis.",
+            "start": 1292
+          }
+        ],
+        "experiment": {
+          "assay": "X-ray observation and HE staining",
+          "dose": null,
+          "duration": null,
+          "endpoint": "progression of osteoporosis",
+          "intervention": "LP45",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "osteoporosis",
+          "sign": "negative",
+          "subject": "LP45"
+        },
+        "summary": "LP45 was reported to inhibit the progression of osteoporosis in the experimental setting.",
+        "uncertainties": [
+          "The sentence describes an observed effect on osteoporosis progression but does not by itself establish a specific molecular mechanism.",
+          "The exact experimental model is not stated in the quoted sentence."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        580,
+        839
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        452,
+        788
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1292,
+        1389
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1308,
+        1371
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

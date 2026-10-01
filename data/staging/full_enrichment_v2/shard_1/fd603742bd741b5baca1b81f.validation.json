@@ -1,0 +1,125 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "living cells",
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "29",
+              "30",
+              "39"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "AW-006",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "1",
+              "23",
+              "24",
+              "28",
+              "31",
+              "34",
+              "40"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "SNX10",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "35"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Rab7",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "SNX10-Rab7 interaction",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1628,
+            "passage_index": 1,
+            "quote": "SNX10 interacts with the key vesicular trafficking regulator Rab7 in living cells, and AW-006 abnormally enhances this interaction, dysregulating normal podosome belt formation in osteoclasts.",
+            "start": 1436
+          }
+        ],
+        "experiment": {
+          "assay": "not stated",
+          "dose": null,
+          "duration": null,
+          "endpoint": "SNX10-Rab7 interaction; podosome belt formation",
+          "intervention": "AW-006",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "binding",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "AW-006 increases the SNX10-Rab7 interaction in living cells and this is linked to dysregulated podosome belt formation in osteoclasts.",
+        "uncertainties": [
+          "The exact experimental assay for the interaction change is not stated.",
+          "Species is not explicitly stated for the cellular experiment.",
+          "The claim refers to an interaction/association change rather than a direct biochemical conversion."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1436,
+        1628
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1544,
+        1677
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,204 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "marrow hematopoietic progenitors",
+          "compartment": null,
+          "disease_setting": "spinal cord injury",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "LIV",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation potential",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "marrow hematopoietic progenitors",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 606,
+            "passage_index": 1,
+            "quote": "LIV stimulates bone formation and improves osteoblast differentiation potential of bone marrow stromal stem cells while inhibiting osteoclast differentiation potential of marrow hematopoietic progenitors to reduce bone resorption.",
+            "start": 376
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": "8 weeks",
+          "endpoint": "osteoclast differentiation potential",
+          "intervention": "LIV",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Low-intensity vibration was reported to inhibit osteoclast differentiation potential in marrow hematopoietic progenitors, contributing to reduced bone resorption.",
+        "uncertainties": [
+          "The sentence also mentions reduced bone resorption, but the mechanistic object extracted here is osteoclast differentiation potential rather than bone resorption itself.",
+          "LIV is a physical intervention; molecular form is therefore left as unknown."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "SCI",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "combination of LIV and RANKL antibody",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "22"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "LIV",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "RANKL antibody",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 741,
+            "passage_index": 1,
+            "quote": "We further demonstrate that the combination of LIV and RANKL antibody reduces SCI-related bone loss more than each intervention alone.",
+            "start": 607
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "SCI-related bone loss",
+          "intervention": "combination of LIV and RANKL antibody",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The combination of low-intensity vibration and RANKL antibody was reported to reduce SCI-related bone loss more than either intervention alone.",
+        "uncertainties": [
+          "The comparison 'more than each intervention alone' is a relative outcome, not a separate mechanistic direction.",
+          "RANKL antibody is mentioned without a specific molecular identity or dosage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        376,
+        606
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        375,
+        605
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        607,
+        741
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        606,
+        740
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

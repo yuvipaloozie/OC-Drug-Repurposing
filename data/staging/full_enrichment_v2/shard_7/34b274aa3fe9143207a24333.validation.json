@@ -1,0 +1,211 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "43"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "COMMD1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "44"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "NF-kappaB-driven osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1750,
+            "passage_index": 1,
+            "quote": "COMMD1 restrains NF-kappaB-driven osteoclastogenesis",
+            "start": 1698
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "COMMD1 is described as restraining NF-kappaB-driven osteoclastogenesis.",
+        "uncertainties": [
+          "Review statement rather than primary experimental result.",
+          "The object phrase is inferred as a phenotype/pathway composite from the text and annotation context."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "hypothesis",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "lysosome",
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "47"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "CTR2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "48"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "unknown",
+            "surface": "copper release",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "mTORC1-autophagy signalling",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2006,
+            "passage_index": 1,
+            "quote": "lysosomal CTR2-mediated copper release as a candidate regulator of mTORC1-autophagy signalling in osteoclasts",
+            "start": 1897
+          },
+          {
+            "end": 2081,
+            "passage_index": 1,
+            "quote": "although direct evidence in bone cells for both pathways is still lacking",
+            "start": 2008
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "mTORC1-autophagy signalling",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "unresolved",
+          "object": "e3",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Lysosomal CTR2-mediated copper release is proposed as a candidate regulator of mTORC1-autophagy signalling in osteoclasts, but direct evidence in bone cells is stated to be lacking.",
+        "uncertainties": [
+          "The text frames this as a candidate mechanism and explicitly says direct evidence in bone cells is lacking.",
+          "The causal direction from CTR2 to signalling is proposed rather than demonstrated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1698,
+        1750
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1808,
+        1856
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1897,
+        2006
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2017,
+        2107
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        2008,
+        2081
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2109,
+        2166
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

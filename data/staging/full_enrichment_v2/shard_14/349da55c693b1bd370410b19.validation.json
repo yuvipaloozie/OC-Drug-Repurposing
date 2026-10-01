@@ -1,0 +1,396 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ovariectomized (OVX) rat models / osteoporosis",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "49",
+              "51",
+              "56",
+              "65",
+              "67",
+              "68",
+              "70",
+              "75",
+              "78",
+              "81"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "PDK4",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "57",
+              "58",
+              "69",
+              "71",
+              "80",
+              "82"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "AMPK pathway",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "59",
+              "72",
+              "77"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Dorsomorphin",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1387,
+            "passage_index": 1,
+            "quote": "Mechanistically, PDK4 silencing activated the AMPK pathway.",
+            "start": 1328
+          },
+          {
+            "end": 1485,
+            "passage_index": 1,
+            "quote": "The anti-osteoclastic effects of PDK4 knockdown were reversed by the AMPK inhibitor Dorsomorphin.",
+            "start": 1388
+          },
+          {
+            "end": 1735,
+            "passage_index": 1,
+            "quote": "These therapeutic benefits were again negated by co-administration of Dorsomorphin.",
+            "start": 1652
+          }
+        ],
+        "experiment": {
+          "assay": "Western blot; in vivo OVX rat model",
+          "dose": null,
+          "duration": null,
+          "endpoint": "AMPK pathway activity; anti-osteoclastic effects were reversed",
+          "intervention": "PDK4-knockdown; co-administration of Dorsomorphin",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "PDK4 silencing activated the AMPK pathway, and the AMPK inhibitor Dorsomorphin reversed the anti-osteoclastic effects of PDK4 knockdown.",
+        "uncertainties": [
+          "The AMPK activation statement is mechanistic and does not specify which AMPK component was measured.",
+          "The reversal by Dorsomorphin is stated for anti-osteoclastic effects, but the exact molecular target is not detailed in the passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "femur tissues",
+          "disease_setting": "ovariectomized (OVX) rats / osteoporosis",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "49",
+              "51",
+              "56",
+              "65",
+              "67",
+              "68",
+              "70",
+              "75",
+              "78",
+              "81"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "PDK4",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "76"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e7",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1651,
+            "passage_index": 1,
+            "quote": "In OVX rats, PDK4 knockdown ameliorated bone loss, reduced osteoclast activity and markers, and suppressed glycolysis-associated protein expression in femur tissues.",
+            "start": 1486
+          }
+        ],
+        "experiment": {
+          "assay": "in vivo OVX rat model; femur tissue analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone loss; osteoclast activity and markers; glycolysis-associated protein expression",
+          "intervention": "PDK4-knockdown lentivirus",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e6",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In ovariectomized rats, PDK4 knockdown ameliorated bone loss and reduced osteoclast activity and markers in femur tissues.",
+        "uncertainties": [
+          "The passage combines multiple outcomes; the exact causal linkage to each individual endpoint is not separately tested.",
+          "The text does not specify which osteoclast markers were measured."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 cells",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "49",
+              "51",
+              "56",
+              "65",
+              "67",
+              "68",
+              "70",
+              "75",
+              "78",
+              "81"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "PDK4",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "RAW264.7 cells",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "53",
+              "66"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "e3",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 588,
+            "passage_index": 1,
+            "quote": "Its role was validated using PDK4-knockdown RAW264.7 cells stimulated with receptor activator of nuclear factor kappa-B ligand (RANKL)",
+            "start": 454
+          },
+          {
+            "end": 1327,
+            "passage_index": 1,
+            "quote": "PDK4 knockdown suppressed the expression of osteoclast differentiation markers and glycolytic flux in vitro.",
+            "start": 1219
+          }
+        ],
+        "experiment": {
+          "assay": "Western blot; glycolytic flux measurement by glucose uptake, intracellular ATP, and lactate levels",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation markers and glycolytic flux",
+          "intervention": "PDK4-knockdown",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "unknown",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": null,
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "PDK4 knockdown in RANKL-stimulated RAW264.7 cells decreased osteoclast differentiation marker expression and glycolytic flux.",
+        "uncertainties": [
+          "The text does not specify whether the effect on osteoclast differentiation markers is direct or indirect.",
+          "RAW264.7 species is not stated in the passage.",
+          "RANKL is provider-annotated as a gene, but the text here only supports it as a stimulus used for cell treatment."
+        ]
+      },
+      "errors": [
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        454,
+        588
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        714,
+        809
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1219,
+        1327
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1356,
+        1454
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1328,
+        1387
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1460,
+        1526
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1388,
+        1485
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1528,
+        1608
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1652,
+        1735
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1878,
+        1947
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1486,
+        1651
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1609,
+        1840
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

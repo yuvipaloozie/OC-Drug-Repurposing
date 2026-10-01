@@ -1,0 +1,109 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "murine",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Osteoclasts",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [
+              "15",
+              "16",
+              "22",
+              "25"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "skeletal homeostasis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 176,
+            "passage_index": 1,
+            "quote": "Osteoclasts are terminally differentiated multinucleated giant cells that mediate bone resorption and regulate skeletal homeostasis under physiological and pathological states.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Osteoclasts mediate bone resorption and regulate skeletal homeostasis under physiological and pathological states.",
+        "uncertainties": [
+          "This is a general background statement rather than an experimental perturbation result.",
+          "The passage does not distinguish whether 'bone resorption' should be treated as a phenotype or process in the graph."
+        ]
+      },
+      "errors": [
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        176
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        104
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

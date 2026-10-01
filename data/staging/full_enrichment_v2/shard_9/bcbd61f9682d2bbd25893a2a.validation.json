@@ -1,0 +1,111 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 macrophages",
+          "compartment": null,
+          "disease_setting": "RANKL-induced osteoclastogenesis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "compound",
+            "surface": "ICA-CGNCs",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1277,
+            "passage_index": 1,
+            "quote": "ICA-CGNCs suppressed RANKL-induced osteoclastogenesis",
+            "start": 1224
+          },
+          {
+            "end": 1416,
+            "passage_index": 1,
+            "quote": "by reducing TRAP-positive multinucleated osteoclast formation, disrupting F-actin ring organization, and downregulating osteoclast markers",
+            "start": 1278
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis; TRAP-positive multinucleated osteoclast formation; bone resorption pit formation",
+          "intervention": "ICA-CGNCs",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "ICA-loaded beta-cyclodextrin-modified gold nanoclusters suppressed RANKL-induced osteoclastogenesis in RAW264.7 cells, reducing TRAP-positive multinucleated osteoclast formation, disrupting F-actin ring organization, downregulating osteoclast markers, and decreasing bone resorption pit formation.",
+        "uncertainties": [
+          "The passage combines multiple osteoclast readouts in one sentence; the exact contribution of each readout to the regulatory relation is not separable.",
+          "ICA-CGNCs is a composite material mentioned in text; no canonical entity mapping was provided."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1224,
+        1277
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1385,
+        1438
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1278,
+        1416
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1439,
+        1578
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

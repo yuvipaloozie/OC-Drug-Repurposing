@@ -1,0 +1,99 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "high-dose glucocorticoid treatment",
+          "species": "Homo sapiens",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D008687"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Metformin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D001862"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1382,
+            "passage_index": 1,
+            "quote": "Metformin reduced markers of protein breakdown and bone resorption.",
+            "start": 1315
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "prednisone 30 mg/d in combination with metformin or placebo",
+          "duration": "two 7-day periods",
+          "endpoint": "markers of bone resorption",
+          "intervention": "metformin or placebo during high-dose GC treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In the randomized crossover trial, metformin treatment during high-dose glucocorticoid exposure reduced markers of bone resorption.",
+        "uncertainties": [
+          "The text reports reduced markers of bone resorption, not a direct measurement of osteoclast activity.",
+          "The exact biomarker(s) for bone resorption are not specified in the abstract."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1315,
+        1382
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1445,
+        1504
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

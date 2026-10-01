@@ -1,0 +1,127 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "5741"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "parathyroid hormone",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [
+              "MESH:D002118"
+            ],
+            "existing_node_id": "CHEBI:29108",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "calcium levels",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 327,
+            "passage_index": 1,
+            "quote": "parathyroid hormone and",
+            "start": 304
+          },
+          {
+            "end": 404,
+            "passage_index": 1,
+            "quote": "Parathyroid hormone regulates calcium levels via bone resorption,",
+            "start": 339
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "calcium levels",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "unknown",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Parathyroid hormone is described as regulating calcium levels, including via bone resorption.",
+        "uncertainties": [
+          "The passage is a general review statement, not an experiment.",
+          "'Bone resorption' is mentioned as a mechanism but not as a separately measured outcome."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        304,
+        327
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        360,
+        383
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        339,
+        404
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        395,
+        465
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

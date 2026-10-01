@@ -1,0 +1,253 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "tibial tissues",
+          "disease_setting": "postmenopausal osteoporosis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "63"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "LWDHW",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "83"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:NFATC1",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "CLCF1",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "tibial tissues",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "80",
+              "81"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "PMOP mice",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1214,
+            "passage_index": 1,
+            "quote": "PMOP mice, LWDHW treatment significantly increased BMD, reduced osteoclast maturation, osteoclast membrane fusion rate, and F-actin ring formation, upregulated the mRNA and protein expressions of CLCF1 in tibial tissues",
+            "start": 995
+          }
+        ],
+        "experiment": {
+          "assay": "RT-qPCR and Western blotting",
+          "dose": null,
+          "duration": "60 days",
+          "endpoint": "CLCF1 mRNA and protein expression",
+          "intervention": "LWDHW treatment",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In PMOP mice, LWDHW treatment increased CLCF1 expression in tibial tissue and was associated with improved bone density and reduced osteoclast membrane fusion-related phenotypes.",
+        "uncertainties": [
+          "The passage also reports improved BMD and reduced osteoclast-related phenotypes in the same experiment, but these are not encoded as the primary object here.",
+          "CLCF1 is annotated as a gene, but the passage measures mRNA and protein expression and the existing-node suggestion points to a protein node; exact mapping is uncertain."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 cells",
+          "compartment": null,
+          "disease_setting": "RANKL-induced osteoclastogenesis context",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "72",
+              "73"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "LWDHW-medicated rat serum",
+            "taxon": "rat"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast membrane fusion rate",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "RAW264.7 cells",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "83"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "CLCF1 knockdown",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "100"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:NFATC1",
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "NFATc1",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 642,
+            "passage_index": 1,
+            "quote": "RANKL-induced RAW264.7 cells with or without lentivirus-mediated CLCF1 knockdown",
+            "start": 562
+          },
+          {
+            "end": 1527,
+            "passage_index": 1,
+            "quote": "LWDHW-medicated rat serum significantly decreased osteoclast membrane fusion rate, F-actin ring formation, and the expressions of NFATc1, DC-STAMP, OC-STAMP and ATP6V0D2.",
+            "start": 1357
+          }
+        ],
+        "experiment": {
+          "assay": "immunofluorescence staining with phalloidin peptide",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast membrane fusion rate",
+          "intervention": "LWDHW-medicated rat serum; CLCF1 knockdown present",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In RANKL-induced RAW264.7 cells with CLCF1 knockdown, LWDHW-medicated rat serum decreased osteoclast membrane fusion rate, F-actin ring formation, and expression of NFATc1, DC-STAMP, OC-STAMP, and ATP6V0D2.",
+        "uncertainties": [
+          "The sentence also reports decreased F-actin ring formation and reduced expression of several genes, but the primary encoded object is membrane fusion rate.",
+          "The species assignment for RAW264.7 cells is not explicitly stated in the text; rat context is only supported for the medicated serum."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        995,
+        1214
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1158,
+        1192
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        562,
+        642
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        725,
+        752
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1357,
+        1527
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1520,
+        1873
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

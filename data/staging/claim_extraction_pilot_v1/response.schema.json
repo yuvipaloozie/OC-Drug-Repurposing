@@ -1,0 +1,438 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Osteoclast mechanism extraction v1",
+  "type": "object",
+  "properties": {
+    "request_id": {
+      "type": "string"
+    },
+    "source_id": {
+      "type": "string"
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "local_claim_id": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "regulation",
+              "perturbation_effect",
+              "association",
+              "metabolic_conversion"
+            ]
+          },
+          "assertion": {
+            "type": "string",
+            "enum": [
+              "observed_result",
+              "background_statement",
+              "hypothesis",
+              "negated_relation",
+              "no_effect"
+            ]
+          },
+          "summary": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "passage_index": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "start": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "end": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "quote": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "passage_index",
+                "start",
+                "end",
+                "quote"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 1
+          },
+          "entities": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string"
+                },
+                "surface": {
+                  "type": "string"
+                },
+                "molecular_form": {
+                  "type": "string",
+                  "enum": [
+                    "gene",
+                    "RNA",
+                    "protein",
+                    "compound",
+                    "reaction",
+                    "pathway",
+                    "phenotype",
+                    "complex",
+                    "unknown"
+                  ]
+                },
+                "taxon": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "annotation_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "existing_node_id": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "mapping_qualification": {
+                  "type": "string",
+                  "enum": [
+                    "text_supported_candidate",
+                    "provider_only",
+                    "ambiguous",
+                    "unresolved"
+                  ]
+                }
+              },
+              "required": [
+                "key",
+                "surface",
+                "molecular_form",
+                "taxon",
+                "annotation_ids",
+                "existing_node_id",
+                "mapping_qualification"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "regulatory": {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "subject": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "object": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "direction": {
+                    "type": "string",
+                    "enum": [
+                      "subject_to_object",
+                      "undirected",
+                      "unknown"
+                    ]
+                  },
+                  "sign": {
+                    "type": "string",
+                    "enum": [
+                      "positive",
+                      "negative",
+                      "unknown"
+                    ]
+                  },
+                  "effect_level": {
+                    "type": "string",
+                    "enum": [
+                      "expression",
+                      "abundance",
+                      "activity",
+                      "phenotype",
+                      "binding",
+                      "association",
+                      "unknown"
+                    ]
+                  },
+                  "directness": {
+                    "type": "string",
+                    "enum": [
+                      "direct",
+                      "indirect",
+                      "unknown"
+                    ]
+                  },
+                  "interpretation": {
+                    "type": "string",
+                    "enum": [
+                      "explicit_in_text",
+                      "inferred_from_perturbation",
+                      "unresolved"
+                    ]
+                  }
+                },
+                "required": [
+                  "subject",
+                  "object",
+                  "direction",
+                  "sign",
+                  "effect_level",
+                  "directness",
+                  "interpretation"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "reaction": {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "enzyme": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "substrates": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "entity": {
+                          "type": "string"
+                        },
+                        "stoichiometry": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "entity",
+                        "stoichiometry"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "products": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "entity": {
+                          "type": "string"
+                        },
+                        "stoichiometry": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "entity",
+                        "stoichiometry"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "direction": {
+                    "type": "string",
+                    "enum": [
+                      "as_written",
+                      "reversible",
+                      "unknown"
+                    ]
+                  }
+                },
+                "required": [
+                  "enzyme",
+                  "substrates",
+                  "products",
+                  "direction"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "context": {
+            "type": "object",
+            "properties": {
+              "species": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "cell_type": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "stage": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "compartment": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "disease_setting": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "species",
+              "cell_type",
+              "stage",
+              "compartment",
+              "disease_setting"
+            ],
+            "additionalProperties": false
+          },
+          "experiment": {
+            "type": "object",
+            "properties": {
+              "intervention": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "perturbation_type": {
+                "type": "string",
+                "enum": [
+                  "loss_of_function",
+                  "gain_of_function",
+                  "chemical_treatment",
+                  "other",
+                  "not_stated"
+                ]
+              },
+              "outcome_change": {
+                "type": "string",
+                "enum": [
+                  "increased",
+                  "decreased",
+                  "no_detected_change",
+                  "other",
+                  "not_stated"
+                ]
+              },
+              "endpoint": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "assay": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "dose": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "duration": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "intervention",
+              "perturbation_type",
+              "outcome_change",
+              "endpoint",
+              "assay",
+              "dose",
+              "duration"
+            ],
+            "additionalProperties": false
+          },
+          "uncertainties": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "local_claim_id",
+          "kind",
+          "assertion",
+          "summary",
+          "evidence",
+          "entities",
+          "regulatory",
+          "reaction",
+          "context",
+          "experiment",
+          "uncertainties"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "no_claim_reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "request_id",
+    "source_id",
+    "claims",
+    "no_claim_reason"
+  ],
+  "additionalProperties": false
+}

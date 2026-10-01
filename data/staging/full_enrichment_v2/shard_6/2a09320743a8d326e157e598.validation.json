@@ -1,0 +1,216 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "bone",
+          "disease_setting": "multiple myeloma bone disease",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "74048"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "PD-1H",
+            "taxon": "null"
+          },
+          {
+            "annotation_ids": [
+              "397346"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "MMP-13",
+            "taxon": "null"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast fusion",
+            "taxon": "null"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone-resorptive activity",
+            "taxon": "null"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 479,
+            "passage_index": 1,
+            "quote": "PD-1H, as the bona fide MMP-13 receptor on osteoclasts. Silencing PD-1H or using Pd-1h-/- bone marrow cells abrogates the MMP-13-enhanced osteoclast fusion and bone-resorptive activity.",
+            "start": 294
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "MMP-13-enhanced osteoclast fusion and bone-resorptive activity",
+          "intervention": "Silencing PD-1H or using Pd-1h-/- bone marrow cells",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Silencing PD-1H or using Pd-1h-/- bone marrow cells reduced the MMP-13-enhanced osteoclast fusion and bone-resorptive activity.",
+        "uncertainties": [
+          "The passage combines two perturbations (silencing PD-1H and Pd-1h-/- bone marrow cells) and two outcomes; the exact causal contribution of each is not separated.",
+          "The text states PD-1H is a receptor on osteoclasts, but direct binding/biochemical interaction is not demonstrated in the quoted span."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone",
+          "disease_setting": "myeloma bone disease",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "74048"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "PD-1H",
+            "taxon": "null"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "myeloma cells",
+            "taxon": "null"
+          },
+          {
+            "annotation_ids": [
+              "MESH:D001847"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone destruction",
+            "taxon": "null"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 831,
+            "passage_index": 1,
+            "quote": "PD-1H in myeloma lytic bone lesions was confirmed using a Pd-1h-/- myeloma bone disease mouse model wherein myeloma cells injected into Pd-1h-/-Rag2-/- results in attenuated bone destruction.",
+            "start": 640
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone destruction",
+          "intervention": "Pd-1h-/-Rag2-/- mouse model with myeloma cell injection",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In a Pd-1h-/- myeloma bone disease mouse model, myeloma cells injected into Pd-1h-/-Rag2-/- mice resulted in attenuated bone destruction.",
+        "uncertainties": [
+          "The sentence is awkwardly constructed; the intervention is inferred from the model description.",
+          "The exact role of Rag2 is not the focus of the claim and is not modeled as a separate entity."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        294,
+        479
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        391,
+        556
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        640,
+        831
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        737,
+        919
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

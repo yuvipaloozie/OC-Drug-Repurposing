@@ -1,0 +1,210 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "11"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "ARP2/3",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "branched actin network",
+            "taxon": "human"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1201,
+            "passage_index": 1,
+            "quote": "ARP2/3 labeling was abundant at the substratum level of osteoclasts and in the branched actin network, where it localized to the branching points",
+            "start": 1056
+          }
+        ],
+        "experiment": {
+          "assay": "labeling / microscopy",
+          "dose": null,
+          "duration": null,
+          "endpoint": "ARP2/3 labeling localization",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "ARP2/3 was abundant at the substratum level of osteoclasts and in the branched actin network, where it localized to branching points.",
+        "uncertainties": [
+          "The passage describes localization/abundance, not a causal perturbation.",
+          "ARP2/3 is annotated as a gene by the provider, but the text does not specify protein versus gene product."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "8"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "c-Src",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [
+              "9"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "cortactin",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [
+              "10"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "cofilin",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "actin",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "nuclei",
+            "taxon": "human"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1054,
+            "passage_index": 1,
+            "quote": "the accumulation of c-Src, cortactin, cofilin, and actin around nuclei suggesting their role in nuclear processes such as the locomotion of nuclei",
+            "start": 908
+          }
+        ],
+        "experiment": {
+          "assay": "microscopy",
+          "dose": null,
+          "duration": null,
+          "endpoint": "accumulation around nuclei",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "unresolved",
+          "object": "e5",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "c-Src, cortactin, cofilin, and actin accumulated around nuclei, which the authors suggest may be related to nuclear locomotion.",
+        "uncertainties": [
+          "The phrase 'suggesting their role' is a hypothesis, not an experimentally demonstrated causal effect.",
+          "The claim bundles multiple molecules; the specific contribution of each is not resolved in the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1056,
+        1201
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1172,
+        1276
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        908,
+        1054
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1065,
+        1161
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

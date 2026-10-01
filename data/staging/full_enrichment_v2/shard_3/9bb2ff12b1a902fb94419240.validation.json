@@ -1,0 +1,238 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 cells",
+          "compartment": null,
+          "disease_setting": "postmenopausal osteoporosis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "44",
+              "48",
+              "50",
+              "57",
+              "63",
+              "65",
+              "71",
+              "73"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "SZQ-3",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "53",
+              "59",
+              "60",
+              "67"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "e2",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1118,
+            "passage_index": 1,
+            "quote": "SZQ-3 suppressed H2O2-induced osteoblast apoptosis and inhibited receptor activator of nuclear factor-kappa B ligand (RANKL)-stimulated osteoclast differentiation.",
+            "start": 955
+          }
+        ],
+        "experiment": {
+          "assay": "RANKL-induced RAW264.7 cells",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation",
+          "intervention": "SZQ-3",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "SZQ-3 inhibited RANKL-stimulated osteoclast differentiation in the reported cell-based experiment.",
+        "uncertainties": [
+          "The quoted span is a sentence fragment extracted from the abstract; the intervention/outcome relation is inferred from the stated inhibition.",
+          "RANKL is provider-annotated as a gene, but the text also names it as receptor activator of nuclear factor-kappa B ligand; the exact molecular form is ambiguous.",
+          "The cell line and species are taken from the abstract context, but the claim is about in vitro osteoclast differentiation rather than an in vivo bone phenotype."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 cells",
+          "compartment": null,
+          "disease_setting": "postmenopausal osteoporosis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "44",
+              "48",
+              "50",
+              "57",
+              "63",
+              "65",
+              "71",
+              "73"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "SZQ-3",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "8",
+              "61",
+              "62",
+              "64",
+              "68",
+              "69",
+              "74"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:NFKB1",
+            "key": "e2",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "NF-kappaB",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "52",
+              "53",
+              "59",
+              "60",
+              "61",
+              "62",
+              "64",
+              "66",
+              "67",
+              "68",
+              "69"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "pathway",
+            "surface": "H2O2- and RANKL-induced activation of the NF-kappaB pathway",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1539,
+            "passage_index": 1,
+            "quote": "SZQ-3 attenuated H2O2- and RANKL-induced activation of the NF-kappaB pathway by reducing phosphorylation and impeding nuclear translocation of NF-kappaB, stabilizing mitochondrial function.",
+            "start": 1350
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "NF-kappaB pathway activation",
+          "intervention": "SZQ-3",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "SZQ-3 attenuated H2O2- and RANKL-induced activation of the NF-kappaB pathway by reducing phosphorylation and impeding nuclear translocation.",
+        "uncertainties": [
+          "The effect on NF-kappaB pathway activation is described in a composite sentence with mechanistic qualifiers (reduced phosphorylation, impaired nuclear translocation).",
+          "The pathway object is a textual construct rather than a single molecular entity, so the exact target mapping is unresolved.",
+          "The passage does not establish direct binding or direct enzymatic inhibition from this sentence alone."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        955,
+        1118
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1116,
+        1163
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1350,
+        1539
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1511,
+        1679
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

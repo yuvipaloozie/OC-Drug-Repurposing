@@ -1,0 +1,96 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "REDs",
+          "species": "elite athletes",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "20"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Relative energy deficiency in sport (REDs)",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "21"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone health",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 141,
+            "passage_index": 1,
+            "quote": "is associated with impaired performance and compromised bone health in elite athletes.",
+            "start": 55
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone health",
+          "intervention": null,
+          "outcome_change": "other",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "REDs was associated with compromised bone health in elite athletes.",
+        "uncertainties": [
+          "This is an observational association, not an intervention study.",
+          "The quote also mentions impaired performance, but the extracted object is bone health."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        55,
+        141
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        43,
+        129
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

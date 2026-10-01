@@ -1,0 +1,213 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "rheumatoid arthritis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "63"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "COE",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "71",
+              "81"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "OCs",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1015,
+            "passage_index": 1,
+            "quote": "COE administration significantly inhibited RANKL-induced differentiation and maturation of OCs",
+            "start": 921
+          }
+        ],
+        "experiment": {
+          "assay": "RANKL-induced OC differentiation model",
+          "dose": null,
+          "duration": null,
+          "endpoint": "RANKL-induced differentiation and maturation of OCs",
+          "intervention": "COE administration",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Coelonin administration inhibited RANKL-induced osteoclast differentiation and maturation.",
+        "uncertainties": [
+          "OCs is an abbreviation in the text; molecular form is not specified.",
+          "The cited sentence does not specify direct molecular targets for the inhibition."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "rheumatoid arthritis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "63"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "COE",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "92",
+              "94",
+              "96"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Src",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1555,
+            "passage_index": 1,
+            "quote": "Mechanistically, COE directly interacted with Src, and the hydrogen bonds established within the kinase domain were essential for the binding of COE to Src",
+            "start": 1400
+          },
+          {
+            "end": 1608,
+            "passage_index": 1,
+            "quote": "COE inhibited the phosphorylation activation of Src",
+            "start": 1557
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "Src phosphorylation activation",
+          "intervention": "COE",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "direct",
+          "effect_level": "binding",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Coelonin directly interacted with Src and was reported to inhibit Src phosphorylation activation.",
+        "uncertainties": [
+          "The text separately states direct binding and inhibited phosphorylation; the binding claim is clear, but the phosphorylation effect is an activity-level outcome rather than direct enzymatic inhibition."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        921,
+        1015
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        983,
+        1073
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1400,
+        1555
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1571,
+        1668
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1557,
+        1608
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1670,
+        1724
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,279 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "hypophosphatasia",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D017674"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "HPP",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "249"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "ALPL",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 209,
+            "passage_index": 1,
+            "quote": "Hypophosphatemia (HPP) is an inherited metabolic disorder characterized by defective bone and tooth mineralization, resulting from mutations in the gene encoding tissue-nonspecific alkaline phosphatase (ALPL).",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "unknown",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e1",
+          "sign": "unknown",
+          "subject": "e2"
+        },
+        "summary": "ALPL mutations are associated with hypophosphatasia, an inherited metabolic disorder with defective bone and tooth mineralization.",
+        "uncertainties": [
+          "The text states a disease-gene relationship but does not specify a mechanistic direction beyond association/background.",
+          "HPP is expanded as hypophosphatemia in the passage, while the title and annotations indicate hypophosphatasia; this ambiguity is preserved."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "hypophosphatasia",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "tmVar:p|SUB|G|129|E;HGVS:p.G129E;VariantGroup:1;CorrespondingGene:249;CorrespondingSpecies:9606"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "G129E",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [
+              "249"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "ALPL",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 715,
+            "passage_index": 1,
+            "quote": "the G129E mutation significantly disrupted catalytic activity.",
+            "start": 653
+          }
+        ],
+        "experiment": {
+          "assay": "Biochemical assays",
+          "dose": null,
+          "duration": null,
+          "endpoint": "catalytic activity",
+          "intervention": "G129E mutation",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The G129E mutation significantly disrupted ALPL catalytic activity.",
+        "uncertainties": [
+          "The passage refers to a mutation and catalytic activity, but does not specify whether the measured activity was direct enzymatic assay of purified protein or a cellular context beyond 'biochemical assays'.",
+          "The molecular form for G129E is a variant/protein context inferred from the text; the exact altered molecular species is not otherwise specified."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "hypophosphatasia",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "tmVar:p|SUB|G|129|E;HGVS:p.G129E;VariantGroup:1;CorrespondingGene:249;CorrespondingSpecies:9606"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "G129E",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [
+              "249"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "WT ALPL protein",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 823,
+            "passage_index": 1,
+            "quote": "Furthermore, G129E exhibited a dominant-negative effect by suppressing the function of the WT ALPL protein.",
+            "start": 716
+          }
+        ],
+        "experiment": {
+          "assay": "Biochemical assays",
+          "dose": null,
+          "duration": null,
+          "endpoint": "WT ALPL protein function",
+          "intervention": "G129E mutation",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The G129E mutation showed a dominant-negative effect by suppressing the function of WT ALPL protein.",
+        "uncertainties": [
+          "The dominant-negative mechanism is stated in text, but the exact molecular interaction is not experimentally resolved here.",
+          "The text does not specify whether 'WT ALPL protein' refers to a particular isoform or oligomeric state beyond wild-type protein."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        209
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        171
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        653,
+        715
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        471,
+        547
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        716,
+        823
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        548,
+        676
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

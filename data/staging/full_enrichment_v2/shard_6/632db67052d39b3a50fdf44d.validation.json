@@ -1,0 +1,235 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "plasma",
+          "disease_setting": "schizophrenia",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "21"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "compound",
+            "surface": "SGAs",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "PINP",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "CTX-1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "20",
+              "25",
+              "27",
+              "28",
+              "31",
+              "34"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "phenotype",
+            "surface": "male patients with schizophrenia",
+            "taxon": "9606"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1183,
+            "passage_index": 1,
+            "quote": "There was a significant decrease for both BTMs concentrations of the posttreatment compared to the pretreatment",
+            "start": 1072
+          },
+          {
+            "end": 597,
+            "passage_index": 1,
+            "quote": "procollagen type I aminoterminal propeptide (PINP) and C-terminal telopeptide of type I collagen (CTX-1) as BTMs of osteogenesis and bone resorption, respectively",
+            "start": 435
+          }
+        ],
+        "experiment": {
+          "assay": "measured",
+          "dose": null,
+          "duration": "8 weeks",
+          "endpoint": "plasma levels of PINP and CTX-1",
+          "intervention": "8 weeks SGAs treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Eight weeks of second-generation antipsychotic treatment in male patients with schizophrenia was associated with decreased plasma levels of the bone turnover biomarkers PINP and CTX-1 compared with pretreatment.",
+        "uncertainties": [
+          "The sentence reports biomarker changes, not a direct molecular mechanism on osteoclasts.",
+          "PINP and CTX-1 are described as biomarkers of osteogenesis and bone resorption, but their molecular entity types are not specified in the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "schizophrenia",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "21",
+              "23",
+              "29",
+              "37"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "compound",
+            "surface": "SGAs",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone formation and bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1728,
+            "passage_index": 1,
+            "quote": "Long-term SGAs medication inhibited osteogenesis in a dose- and time-dependent manner and damaged the balance of bone formation and bone resorption",
+            "start": 1581
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": "long-term",
+          "endpoint": "osteogenesis",
+          "intervention": "Long-term SGAs medication",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e5",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The authors concluded that long-term second-generation antipsychotic medication inhibited osteogenesis and disrupted the balance of bone formation and bone resorption.",
+        "uncertainties": [
+          "This is a study conclusion summarizing the observed biomarker changes rather than a direct mechanistic assay.",
+          "The phrase 'dose- and time-dependent' is stated, but no dose or schedule values are provided."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1072,
+        1183
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        279,
+        363
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        435,
+        597
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        452,
+        536
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1581,
+        1728
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        829,
+        958
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,231 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "BMDMs",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "92"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "Fabkin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "87"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "FABP4 deficiency",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast formation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1708,
+            "passage_index": 1,
+            "quote": "Fabkin treatment significantly enhanced osteoclast differentiation and bone resorption, whereas FABP4 deficiency inhibited osteoclast formation.",
+            "start": 1564
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro osteoclastogenesis assays",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation and bone resorption; osteoclast formation",
+          "intervention": "Fabkin treatment; FABP4 deficiency",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In vitro, Fabkin treatment increased osteoclast differentiation and bone resorption; in the same experimental context, FABP4 deficiency inhibited osteoclast formation.",
+        "uncertainties": [
+          "The quoted sentence combines two related perturbations and outcomes; the regulatory fields summarize only the Fabkin-to-osteoclast differentiation relation.",
+          "FABP4 deficiency is represented as a perturbation context rather than a resolved molecular mechanism."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ovariectomy-induced osteoporosis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "87"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "FABP4-KO",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "83",
+              "86"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "OVX-induced osteoporosis",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "BMD",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "89"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast numbers",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1553,
+            "passage_index": 1,
+            "quote": "OVX-induced osteoporosis was significantly attenuated in FABP4-KO mice with higher BMD. TRAP staining showed a reduction in osteoclast numbers in FABP4-KO mice.",
+            "start": 1393
+          }
+        ],
+        "experiment": {
+          "assay": "micro-CT; histological staining; TRAP staining",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoporosis severity; BMD; osteoclast numbers",
+          "intervention": "FABP4-KO",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In FABP4-KO mice, ovariectomy-induced osteoporosis was attenuated, with higher BMD and fewer osteoclasts.",
+        "uncertainties": [
+          "The sentence reports multiple endpoints (BMD and osteoclast numbers) in the same KO context; they are summarized together as a phenotype-level decrease in osteoporosis severity.",
+          "The exact causal relation to bone mineral density is reported descriptively rather than as a direct molecular mechanism."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1564,
+        1708
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1647,
+        1758
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1393,
+        1553
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1438,
+        1595
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

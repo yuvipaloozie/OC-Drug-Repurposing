@@ -1,0 +1,232 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "periodontal tissues",
+          "disease_setting": "experimental periodontitis",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "57",
+              "62",
+              "81",
+              "84",
+              "92",
+              "99",
+              "105"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Rb3",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "alveolar bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast formation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1747,
+            "passage_index": 1,
+            "quote": "Rb3 group showed a decrease in alveolar bone resorption and osteoclast formation;",
+            "start": 1666
+          }
+        ],
+        "experiment": {
+          "assay": "Micro-CT assessment; TRAP staining",
+          "dose": null,
+          "duration": "3 weeks",
+          "endpoint": "alveolar bone resorption and osteoclast formation",
+          "intervention": "Rb3 treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In rats with experimental periodontitis, Rb3 treatment was associated with decreased alveolar bone resorption and osteoclast formation compared with the ligation group.",
+        "uncertainties": [
+          "The quoted span is a result statement; the full comparison context is provided in the same sentence but the exact antecedent is not separately quoted.",
+          "Rb3 is annotated as a gene by the provider, but the text indicates a compound name; molecular form is inferred from surface form."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "57",
+              "62",
+              "81",
+              "84",
+              "92",
+              "99",
+              "105"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Rb3",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "73",
+              "86",
+              "87",
+              "94",
+              "95"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "ERK",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "74",
+              "96"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "RAW264.7",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "75",
+              "76",
+              "98"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "LPS",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2093,
+            "passage_index": 1,
+            "quote": "Rb3 reduced IL-8 and IL-1beta mRNA expression levels and p-ERK/ERK and p-p38 MAPK/p38 MAPK ratios in RAW264.7 cells induced by P. gingivalis LPS stimulation.",
+            "start": 1936
+          }
+        ],
+        "experiment": {
+          "assay": "Western blot",
+          "dose": null,
+          "duration": null,
+          "endpoint": "p-ERK/ERK ratio",
+          "intervention": "Rb3 pretreatment with P. gingivalis LPS stimulation",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In RAW264.7 cells stimulated with Porphyromonas gingivalis LPS, Rb3 reduced the p-ERK/ERK ratio, indicating lower ERK phosphorylation-associated signaling in this assay context.",
+        "uncertainties": [
+          "The quote bundles multiple endpoints (IL-8, IL-1beta, p-ERK, p-p38); only the ERK-related portion is used for the regulatory object.",
+          "The organism source for RAW264.7 is not stated in the text.",
+          "The stimulus is described as P. gingivalis LPS stimulation; direct molecular target is not established."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1666,
+        1747
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1508,
+        1591
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1936,
+        2093
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2050,
+        2090
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

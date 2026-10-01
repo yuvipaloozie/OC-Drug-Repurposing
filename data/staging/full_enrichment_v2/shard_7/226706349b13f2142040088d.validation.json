@@ -1,0 +1,227 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "compound",
+            "surface": "compounds that bind to the Src SH2 domain",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "21",
+              "23",
+              "24",
+              "25",
+              "26",
+              "27",
+              "28",
+              "32",
+              "33",
+              "36",
+              "37"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:SRC",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "Src",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 197,
+            "passage_index": 1,
+            "quote": "We have investigated whether compounds that bind to the Src SH2 domain inhibit Src activity in cells",
+            "start": 97
+          },
+          {
+            "end": 902,
+            "passage_index": 1,
+            "quote": "The Src SH2 binding compounds inhibit Src activity in all three of these mechanism-based assays.",
+            "start": 806
+          }
+        ],
+        "experiment": {
+          "assay": "cell-based assays",
+          "dose": null,
+          "duration": null,
+          "endpoint": "Src activity",
+          "intervention": "compounds that bind to the Src SH2 domain",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Compounds that bind to the Src SH2 domain inhibited Src activity in cells.",
+        "uncertainties": [
+          "The specific compound(s) are not named in the provided text.",
+          "Cell type is described only generically as 'cells'."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "rabbit",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "compound",
+            "surface": "compounds that bind to the Src SH2 domain",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "35"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "rabbit osteoclast-mediated resorption of dentine",
+            "taxon": "rabbit"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 358,
+            "passage_index": 1,
+            "quote": "We have investigated whether compounds that bind to the Src SH2 domain inhibit Src activity in cells and decrease osteoclast-mediated resorption. Compounds were examined for binding to the Src SH2 domain in vitro using a fluorescence polarization binding assay.",
+            "start": 97
+          },
+          {
+            "end": 1119,
+            "passage_index": 1,
+            "quote": "These compounds were further tested and found to inhibit rabbit osteoclast-mediated resorption of dentine.",
+            "start": 1013
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast-mediated resorption of dentine",
+          "intervention": "compounds that bind to the Src SH2 domain",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Compounds that bind to the Src SH2 domain decreased rabbit osteoclast-mediated resorption of dentine.",
+        "uncertainties": [
+          "The specific compound(s) are not named in the provided text.",
+          "The passage states rabbit osteoclast-mediated resorption, but the osteoclast species/cell source is not otherwise specified."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        97,
+        197
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        121,
+        216
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        806,
+        902
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        566,
+        633
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        97,
+        358
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        121,
+        321
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1013,
+        1119
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        666,
+        749
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

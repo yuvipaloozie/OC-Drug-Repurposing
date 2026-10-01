@@ -1,0 +1,231 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow macrophages",
+          "compartment": null,
+          "disease_setting": "ovariectomy mouse model",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "58"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "MRL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "52",
+              "65",
+              "80"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1630,
+            "passage_index": 1,
+            "quote": "MRL inhibited osteoclast differentiation and the associated bone resorption",
+            "start": 1555
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP and bone resorption assays",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation and bone resorption",
+          "intervention": "MRL",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Myrislignan treatment reduced osteoclast differentiation and associated bone resorption in the reported experiments.",
+        "uncertainties": [
+          "Exact passage offsets for the quoted span are approximate.",
+          "The claim combines differentiation and resorption into one reported outcome; the mechanistic link is not separated here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow macrophages",
+          "compartment": null,
+          "disease_setting": "ovariectomy mouse model",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "70",
+              "71",
+              "72",
+              "75",
+              "77",
+              "79",
+              "81",
+              "86",
+              "89",
+              "91",
+              "92"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "MRL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "62",
+              "73",
+              "76",
+              "82",
+              "87",
+              "88",
+              "93"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "ERK",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "mitochondrial function",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "83",
+              "84"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "NFATc1",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1874,
+            "passage_index": 1,
+            "quote": "MRL inhibited the phosphorylation of ERK by suppressing the mitochondrial function, thereby downregulating the nuclear factor of activated T cells 1 (NFATc1) signaling",
+            "start": 1707
+          }
+        ],
+        "experiment": {
+          "assay": "western blotting; mitochondrial staining",
+          "dose": null,
+          "duration": null,
+          "endpoint": "ERK phosphorylation and NFATc1 signaling",
+          "intervention": "MRL",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Myrislignan inhibited ERK phosphorylation, with the text stating this occurred by suppressing mitochondrial function and was associated with reduced NFATc1 signaling.",
+        "uncertainties": [
+          "The sentence states a mechanistic chain ('by suppressing mitochondrial function') rather than a directly isolated causal test of each step.",
+          "ERK, NFATc1, and mitochondrial function are not independently perturbed in the quoted passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1555,
+        1630
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1245,
+        1318
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1707,
+        1874
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1880,
+        2068
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

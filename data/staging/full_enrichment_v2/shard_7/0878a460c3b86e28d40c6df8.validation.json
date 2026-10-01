@@ -1,0 +1,200 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "wild-type osteoblast EVs",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "29",
+              "32"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "TRAcP-positive cells",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1627,
+            "passage_index": 1,
+            "quote": "Treatment of rankl-/- mice with wild-type osteoblast EVs induced the appearance of TRAcP-positive cells in an EV density-dependent manner.",
+            "start": 1489
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "EV density-dependent manner",
+          "duration": null,
+          "endpoint": "appearance of TRAcP-positive cells",
+          "intervention": "wild-type osteoblast EVs in rankl-/- mice",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Wild-type osteoblast EVs induced TRAcP-positive cells in rankl-/- mice in an EV density-dependent manner, indicating a Rankl-dependent pro-osteoclastic effect.",
+        "uncertainties": [
+          "The exact molecular mediator within EVs is not isolated in this sentence; Rankl dependence is inferred from the surrounding text.",
+          "The quoted span is an approximate offset match from the provided passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclast",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "osteoblast EVs",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "33"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "zoledronate",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "34"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "dasatinib",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1781,
+            "passage_index": 1,
+            "quote": "Finally, osteoblast EVs internalized and shuttled anti-osteoclast drugs (zoledronate and dasatinib), inhibiting osteoclast activity in vitro and in vivo.",
+            "start": 1628
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast activity",
+          "intervention": "zoledronate and dasatinib shuttled by osteoblast EVs",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e2"
+        },
+        "summary": "Osteoblast EVs carried zoledronate and dasatinib and these drugs inhibited osteoclast activity in vitro and in vivo.",
+        "uncertainties": [
+          "The sentence attributes the inhibition to both drugs together; separate drug-specific effects are not distinguished in the text.",
+          "The quoted span is an approximate offset match from the provided passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1489,
+        1627
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1580,
+        1701
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1628,
+        1781
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1760,
+        1918
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

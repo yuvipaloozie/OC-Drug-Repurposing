@@ -1,0 +1,190 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "25",
+              "27",
+              "32",
+              "33",
+              "35",
+              "36",
+              "38"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "LP45",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "SHP2",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 653,
+            "passage_index": 1,
+            "quote": "The expression level of SHP2 and Src was significantly increased",
+            "start": 589
+          }
+        ],
+        "experiment": {
+          "assay": "Western blotting / immunofluorescence staining",
+          "dose": null,
+          "duration": null,
+          "endpoint": "SHP2 expression",
+          "intervention": "LP45",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "LP45 treatment was associated with increased SHP2 expression in the reported groups compared with LPS alone.",
+        "uncertainties": [
+          "The quoted result mentions SHP2 together with Src, but the exact contribution of LP45 versus LPS+LP45 groups is not separately specified in the excerpt.",
+          "SHP2 is not annotated in the packet, so molecular form and identifier are text-supported only."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "25",
+              "27",
+              "32",
+              "33",
+              "35",
+              "36",
+              "38"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "LP45",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast formation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1606,
+            "passage_index": 1,
+            "quote": "repressing osteoclast formation",
+            "start": 1575
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast formation",
+          "intervention": "LP45",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The authors report that LP45 represses osteoclast formation in their conclusion.",
+        "uncertainties": [
+          "The passage presents this as a conclusion statement; the underlying measured osteoclast assay is not specified in the quoted span."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        589,
+        653
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        594,
+        657
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1575,
+        1606
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1517,
+        1545
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

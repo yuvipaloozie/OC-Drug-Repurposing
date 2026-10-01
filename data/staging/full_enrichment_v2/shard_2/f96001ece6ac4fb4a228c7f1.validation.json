@@ -1,0 +1,115 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "macrophages",
+          "compartment": null,
+          "disease_setting": "inflammation-triggered",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "4"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Azilsartan",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "7"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "TNF-alpha",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 89,
+            "passage_index": 0,
+            "quote": "Azilsartan inhibits inflammation-triggered bone resorption and osteoclastogenesis in vivo",
+            "start": 0
+          },
+          {
+            "end": 145,
+            "passage_index": 0,
+            "quote": "via suppression of TNF-alpha expression in macrophages.",
+            "start": 90
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption and osteoclastogenesis",
+          "intervention": "azilsartan",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Azilsartan is reported to inhibit inflammation-triggered bone resorption and osteoclastogenesis in vivo, attributed to suppression of TNF-alpha expression in macrophages.",
+        "uncertainties": [
+          "The title summarizes the study but does not specify the exact experimental readout details or whether the effect is direct versus indirect.",
+          "TNF-alpha is annotated as a gene in the source, but the passage does not disambiguate RNA versus protein as the mechanistic target in the title alone."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        89
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        90
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        90,
+        145
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        91,
+        146
+      ],
+      "passage_index": 0
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,408 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "periodontitis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "1269"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "CB2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D007249"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "gingival inflammation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "alveolar bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast numbers",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1208,
+            "passage_index": 1,
+            "quote": "The absence of CB2 (Cnr2 knockout, Cnr2<sup>-/-</sup>) exacerbated gingival inflammation and increased alveolar bone resorption by elevating osteoclast numbers.",
+            "start": 1048
+          }
+        ],
+        "experiment": {
+          "assay": "Micro-CT, hematoxylin and eosin (HE) staining, and tartrate-resistant acid phosphatase (TRAP) staining",
+          "dose": null,
+          "duration": null,
+          "endpoint": "gingival inflammation and alveolar bone resorption",
+          "intervention": "CB2 knockout (Cnr2<sup>-/-</sup>)",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e4",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "CB2 knockout exacerbated gingival inflammation and increased alveolar bone resorption by elevating osteoclast numbers in periodontitis mice.",
+        "uncertainties": [
+          "The text links increased bone resorption to elevated osteoclast numbers, but does not specify a direct molecular mechanism.",
+          "CB2 is identified from the provider annotations and text, but the exact molecular form beyond gene/protein context is not explicitly resolved."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "periodontal ligament stem cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "Human",
+          "stage": "under inflammatory conditions"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:C439263"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "AM1241",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "PDLSCs",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D007249"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "inflammation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteogenic differentiation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1339,
+            "passage_index": 1,
+            "quote": "AM1241 was found to suppress inflammation in PDLSCs and to enhance their osteogenic differentiation under inflammatory conditions.",
+            "start": 1209
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "inflammation; osteogenic differentiation",
+          "intervention": "AM1241",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "AM1241 suppressed inflammation in PDLSCs and enhanced their osteogenic differentiation under inflammatory conditions.",
+        "uncertainties": [
+          "The sentence combines two outcomes; the molecular mediator for the osteogenic effect is not specified here."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "PDLSCs",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": "under inflammatory conditions"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:C439263"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "AM1241",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "ERK1/2 pathway",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1395,
+            "passage_index": 1,
+            "quote": "Additionally, AM1241 could activate the ERK1/2 pathway.",
+            "start": 1340
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "ERK1/2 pathway activation",
+          "intervention": "AM1241",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "AM1241 could activate the ERK1/2 pathway.",
+        "uncertainties": [
+          "The text states activation but does not specify whether the effect is direct or indirect."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "hypothesis",
+        "context": {
+          "cell_type": "periodontal ligament stem cells",
+          "compartment": null,
+          "disease_setting": "periodontitis",
+          "species": "Human",
+          "stage": "under inflammatory conditions"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "1269"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "CB2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteogenic differentiation of PDLSCs",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "ERK1/2 pathway",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1583,
+            "passage_index": 1,
+            "quote": "CB2 may promote the osteogenic differentiation of PDLSCs by activating ERK1/2 pathway.",
+            "start": 1497
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteogenic differentiation of PDLSCs",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c4",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "CB2 may promote osteogenic differentiation of PDLSCs by activating the ERK1/2 pathway.",
+        "uncertainties": [
+          "The statement is hedged with 'may', so it is a proposed interpretation rather than a demonstrated mechanism.",
+          "The pathway-mediated link is not directly tested in the quoted sentence."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1048,
+        1208
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1112,
+        1215
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1209,
+        1339
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1221,
+        1350
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1340,
+        1395
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1340,
+        1385
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c4",
+      "corrected_offsets": [
+        1497,
+        1583
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1537,
+        1621
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

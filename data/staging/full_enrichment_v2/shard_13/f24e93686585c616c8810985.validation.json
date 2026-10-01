@@ -1,0 +1,199 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ovariectomized model of estrogen deficiency",
+          "species": "rat",
+          "stage": "skeletally mature ovariectomized"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "50",
+              "54",
+              "55",
+              "60",
+              "70",
+              "73",
+              "85",
+              "87",
+              "88",
+              "92"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "CBD",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 915,
+            "passage_index": 1,
+            "quote": "Serum bone turnover markers showed increased bone resorption in OVX/CBD5 compared to OVX/VEH",
+            "start": 823
+          }
+        ],
+        "experiment": {
+          "assay": "serum bone turnover markers",
+          "dose": "5 mg/kg/d",
+          "duration": "12-week study; treatment initiated 2 wk after surgery",
+          "endpoint": "bone resorption",
+          "intervention": "cannabidiol 5 mg/kg/d via osmotic pumps",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In ovariectomized rats, cannabidiol treatment was associated with increased bone resorption compared with OVX vehicle.",
+        "uncertainties": [
+          "The sentence reports increased bone resorption in the OVX/CBD5 group versus OVX/VEH, but does not establish a direct molecular mechanism.",
+          "CBD is indexed from multiple mentions in the abstract; the claim uses the same compound across the study context."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "no_effect",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ovariectomized model of estrogen deficiency",
+          "species": "rat",
+          "stage": "skeletally mature ovariectomized"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "50",
+              "54",
+              "55",
+              "60",
+              "70",
+              "73",
+              "85",
+              "87",
+              "88",
+              "92"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "CBD",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "82"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Ctsk",
+            "taxon": "rat"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1073,
+            "passage_index": 1,
+            "quote": "Gene expression analysis revealed that estrogen significantly reduced Ctsk gene expression compared to OVX/VEH, while CBD showed no significant differences.",
+            "start": 917
+          }
+        ],
+        "experiment": {
+          "assay": "gene expression analysis",
+          "dose": "5 mg/kg/d",
+          "duration": "12-week study; treatment initiated 2 wk after surgery",
+          "endpoint": "Ctsk gene expression",
+          "intervention": "cannabidiol",
+          "outcome_change": "no_detected_change",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Cannabidiol did not significantly change Ctsk gene expression in ovariectomized rats, unlike estrogen which reduced Ctsk expression.",
+        "uncertainties": [
+          "The text states no significant differences for CBD but does not specify the direction of any small change.",
+          "The organism context is inferred from the study and annotation; the molecular species of the gene product is not explicitly stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        823,
+        915
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        845,
+        942
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        917,
+        1073
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        948,
+        1128
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,219 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "tibiae",
+          "disease_setting": null,
+          "species": "mice",
+          "stage": "8-week-old male mice"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "4"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "zoledronate",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "c-src",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 65,
+            "passage_index": 0,
+            "quote": "zoledronate inhibiting c-src expression",
+            "start": 26
+          }
+        ],
+        "experiment": {
+          "assay": "histochemical analysis",
+          "dose": "125 mug/kg body weight",
+          "duration": "8 weeks",
+          "endpoint": "c-src expression",
+          "intervention": "zoledronate",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Zoledronate administration was reported to inhibit c-src expression in osteoclasts from mice.",
+        "uncertainties": [
+          "Title wording is concise; the abstract provides the fuller context and supports the same direction of effect.",
+          "c-src is treated as a gene symbol from the text, but the molecular level discussed is expression in osteoclasts."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "tibiae",
+          "disease_setting": null,
+          "species": "mice",
+          "stage": "8-week-old male mice"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "4",
+              "25",
+              "26",
+              "28",
+              "31",
+              "34",
+              "38",
+              "39"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "zoledronate",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast adhesion",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "5",
+              "35",
+              "40"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "CD44",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "6",
+              "36",
+              "37",
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "osteopontin",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 124,
+            "passage_index": 0,
+            "quote": "interfering with CD44/OPN-mediated osteoclast adhesion",
+            "start": 70
+          },
+          {
+            "end": 913,
+            "passage_index": 1,
+            "quote": "CD44 or osteopontin (OPN)",
+            "start": 888
+          }
+        ],
+        "experiment": {
+          "assay": "histochemical analysis",
+          "dose": "125 mug/kg body weight",
+          "duration": "8 weeks",
+          "endpoint": "osteoclast adhesion",
+          "intervention": "zoledronate",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Zoledronate was reported to decrease osteoclast adhesion, with the authors proposing interference with CD44/OPN-mediated binding as the mechanism.",
+        "uncertainties": [
+          "The title states 'interfering with CD44/OPN-mediated osteoclast adhesion,' which is a mechanistic interpretation; the abstract also reports no CD44 or OPN expression in ZA-treated osteoclasts.",
+          "The specific physical interaction between CD44 and OPN is suggested by the authors rather than directly demonstrated in the quoted text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        70,
+        124
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        66,
+        120
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        888,
+        913
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1036,
+        1060
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

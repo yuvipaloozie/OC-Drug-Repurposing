@@ -1,0 +1,179 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "no_effect",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "bone",
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "mature"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "38"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "MK801",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast attachment to bone and survival",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1270,
+            "passage_index": 1,
+            "quote": "MK801 had no effect on osteoclast attachment to bone and survival",
+            "start": 1205
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro assay of bone resorption",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast attachment to bone and survival",
+          "intervention": "MK801",
+          "outcome_change": "no_detected_change",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In mature osteoclasts, the NMDAR channel blocker MK801 did not affect osteoclast attachment to bone or survival.",
+        "uncertainties": [
+          "The passage does not specify which attachment/survival measurement was used beyond the narrative description.",
+          "The species context is inferred from the nearby mention of mammalian osteoclasts and mouse bone marrow precursors; the quoted effect sentence itself does not restate species."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "bone",
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "mature"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "38"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "MK801",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "percentage of osteoclasts with actin ring structures",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1354,
+            "passage_index": 1,
+            "quote": "while it rapidly decreased the percentage of osteoclasts with actin ring structures",
+            "start": 1271
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro assay of bone resorption",
+          "dose": null,
+          "duration": null,
+          "endpoint": "percentage of osteoclasts with actin ring structures",
+          "intervention": "MK801",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "MK801 rapidly decreased the percentage of osteoclasts with actin ring structures associated with active resorption.",
+        "uncertainties": [
+          "The quoted span truncates the sentence before the clause describing association with actively resorbing osteoclasts.",
+          "The exact timing of 'rapidly' is not specified."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1205,
+        1270
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1250,
+        1314
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1271,
+        1354
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1319,
+        1413
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

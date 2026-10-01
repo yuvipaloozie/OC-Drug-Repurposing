@@ -1,0 +1,205 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "MC3T3-E1",
+          "compartment": null,
+          "disease_setting": "inflammatory microenvironment",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "57"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "LPS",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "TfR1",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1489,
+            "passage_index": 1,
+            "quote": "LPS dose-dependently reduced MC3T3-E1 viability while upregulating TfR1 and IL1beta",
+            "start": 1406
+          }
+        ],
+        "experiment": {
+          "assay": "Western blotting (WB), quantitative PCR (qPCR) and immunohistochemistry (IHC)",
+          "dose": null,
+          "duration": null,
+          "endpoint": "TfR1 expression",
+          "intervention": "Porphyromonas gingivalis lipopolysaccharide (LPS)",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In MC3T3-E1 cells, LPS increased TfR1 expression under inflammatory conditions.",
+        "uncertainties": [
+          "Exact passage offsets may be approximate in the provided abstract text.",
+          "The claim concerns expression in MC3T3-E1 cells; the text does not specify whether TfR1 changes are at RNA, protein, or both levels in the highlighted sentence."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "MC3T3-E1",
+          "compartment": null,
+          "disease_setting": "periodontitis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "TfR1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "52",
+              "59",
+              "71",
+              "72",
+              "76",
+              "82",
+              "84",
+              "88"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "68Ga-citrate uptake",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 743,
+            "passage_index": 1,
+            "quote": "The correlation between TfR1 expression and 68Ga-citrate uptake was validated via cellular uptake assays and plasmid-mediated TfR1 knockdown",
+            "start": 603
+          },
+          {
+            "end": 1640,
+            "passage_index": 1,
+            "quote": "68Ga-citrate uptake correlated positively with TfR1 expression and was significantly inhibited by TfR1 knockdown.",
+            "start": 1527
+          }
+        ],
+        "experiment": {
+          "assay": "cellular uptake assays",
+          "dose": null,
+          "duration": null,
+          "endpoint": "68Ga-citrate uptake",
+          "intervention": "plasmid-mediated TfR1 knockdown",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "TfR1 knockdown significantly inhibited 68Ga-citrate uptake in cells.",
+        "uncertainties": [
+          "The abstract reports both correlation and knockdown inhibition; the directness of the TfR1 effect on uptake is not established as direct biochemical binding or transport.",
+          "Exact passage offsets may be approximate in the provided abstract text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1406,
+        1489
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1540,
+        1620
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        603,
+        743
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1638,
+        1738
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1527,
+        1640
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1739,
+        1810
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

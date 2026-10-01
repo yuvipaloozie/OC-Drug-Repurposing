@@ -1,0 +1,121 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "bone",
+          "disease_setting": "advanced metastatic prostate or breast cancer",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "44"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "SRC",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "pathway",
+            "surface": "osteoclast-mediated bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "35",
+              "41",
+              "43",
+              "45",
+              "56"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "tumor growth",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "42",
+              "46"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "metastasis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 604,
+            "passage_index": 1,
+            "quote": "SRC, a nonreceptor tyrosine kinase, is an important signaling molecule during the processes of osteoclast-mediated bone resorption, tumor growth, and metastasis",
+            "start": 444
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast-mediated bone resorption",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The review states that SRC is an important signaling molecule during osteoclast-mediated bone resorption, tumor growth, and metastasis in advanced metastatic prostate or breast cancer.",
+        "uncertainties": [
+          "This is a review/background statement rather than a direct experimental perturbation.",
+          "The passage links SRC to multiple processes; the extracted regulatory object focuses on osteoclast-mediated bone resorption, while tumor growth and metastasis are included in the summary."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        444,
+        604
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        541,
+        769
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

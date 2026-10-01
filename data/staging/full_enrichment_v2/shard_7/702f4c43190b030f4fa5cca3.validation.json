@@ -1,0 +1,210 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "Bone marrow-derived macrophage (BMM)",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "in vitro"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "21",
+              "26",
+              "30",
+              "32",
+              "34",
+              "37",
+              "39"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "NFATc2",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 850,
+            "passage_index": 1,
+            "quote": "To study the function of NFATc2 in the skeleton, Nfatc2loxP/loxP mice, where the Nfact2 exon 2 is flanked by loxP sequences, were created and mated with mice expressing the Cre recombinase under the control of the Lyz2 promoter. Bone marrow-derived macrophage (BMM) from Lyz2Cre/WT ;Nfatc2Delta/Delta mice cultured in the presence of macrophage-colony stimulating factor and receptor activator of NF-kappaB ligand exhibited a decrease in the number and size of osteoclasts and a smaller sealing zone when compared to BMMs from Nfatc2loxP/loxP littermate controls. Bone resorption was decreased in osteoclasts from Lyz2Cre/WT ;Nfatc2Delta/Delta mice.",
+            "start": 201
+          },
+          {
+            "end": 950,
+            "passage_index": 1,
+            "quote": "This demonstrates that NFATc2 is necessary for optimal osteoclast maturation and function in vitro.",
+            "start": 851
+          }
+        ],
+        "experiment": {
+          "assay": "bone marrow-derived macrophage culture in the presence of macrophage-colony stimulating factor and receptor activator of NF-kappaB ligand",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast number and size; sealing zone size; bone resorption",
+          "intervention": "Lyz2Cre/WT ;Nfatc2Delta/Delta mice",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Conditional downregulation of Nfatc2 in mouse myeloid-lineage cells decreased osteoclast number and size, reduced sealing zone size, and decreased bone resorption in vitro.",
+        "uncertainties": [
+          "The causal molecular form is inferred from a conditional deletion context; the text does not explicitly distinguish gene versus protein effect.",
+          "The title states 'required for osteoclast differentiation and function in vitro' but the detailed abstract specifically reports decreased osteoclast metrics and resorption rather than a direct mechanistic pathway."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "negated_relation",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "1 or 4 months of age; 4-month-old"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "21",
+              "26",
+              "30",
+              "32",
+              "34",
+              "37",
+              "39"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "NFATc2",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "skeletal phenotype",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1522,
+            "passage_index": 1,
+            "quote": "Male and female Lyz2Cre/WT ;Nfatc2Delta/Delta mice did not exhibit an obvious skeletal phenotype by microcomputed tomography (muCT) at either 1 or 4 months of age when compared to Nfatc2loxP/loxP sex-matched littermates. Bone histomorphometry confirmed the muCT results, and conditional 4-month-old Lyz2Cre/WT ;Nfatc2Delta/Delta mice did not exhibit changes in parameters of bone histomorphometry. In conclusion, NFATc2 is necessary for optimal osteoclastogenesis in vitro, but its downregulation in the myeloid lineage has no consequences in skeletal remodeling in vivo.",
+            "start": 951
+          }
+        ],
+        "experiment": {
+          "assay": "microcomputed tomography (muCT); bone histomorphometry",
+          "dose": null,
+          "duration": null,
+          "endpoint": "skeletal phenotype; bone histomorphometry",
+          "intervention": "Lyz2Cre/WT ;Nfatc2Delta/Delta mice",
+          "outcome_change": "no_detected_change",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Conditional downregulation of Nfatc2 in myeloid lineage had no obvious skeletal phenotype in vivo and no changes in bone histomorphometry at 1 or 4 months.",
+        "uncertainties": [
+          "The abstract reports no obvious skeletal phenotype, which is a negative finding rather than proof of absence of all biological effects.",
+          "The exact molecular level affected by the conditional allele is not explicitly described as protein or RNA."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        201,
+        850
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        250,
+        670
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        851,
+        950
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        670,
+        749
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        951,
+        1522
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        750,
+        1128
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

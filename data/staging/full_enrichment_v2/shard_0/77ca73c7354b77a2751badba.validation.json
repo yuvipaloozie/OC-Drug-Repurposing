@@ -1,0 +1,191 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow cells",
+          "compartment": "bone marrow",
+          "disease_setting": "osteoporosis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "17",
+              "20",
+              "30"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "anti-RANKL antibody treatment",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "neutrophils",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "B lymphocytes",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1031,
+            "passage_index": 1,
+            "quote": "The anti-RANKL antibody treatment resulted in an increase proportion of neutrophils and B lymphocytes,",
+            "start": 929
+          }
+        ],
+        "experiment": {
+          "assay": "single-cell RNA sequencing; single-cell flow cytometry; immunofluorescence",
+          "dose": "10 mg/kg",
+          "duration": "4 weeks",
+          "endpoint": "proportion of neutrophils and B lymphocytes",
+          "intervention": "anti-RANKL antibody",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Anti-RANKL antibody treatment increased the proportion of neutrophils and B lymphocytes in bone marrow.",
+        "uncertainties": [
+          "The quoted sentence combines neutrophils and B lymphocytes; the regulatory object is represented with neutrophils while the summary covers both cell types.",
+          "Species is inferred from the described mouse experiment, but the text does not explicitly assign the cell populations to a separate species context beyond the mice study."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow cells",
+          "compartment": "bone marrow",
+          "disease_setting": "osteoporosis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "17",
+              "20",
+              "30"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "anti-RANKL antibody treatment",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "T lymphocytes",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1077,
+            "passage_index": 1,
+            "quote": "with a concomitant decrease in T lymphocytes.",
+            "start": 1032
+          }
+        ],
+        "experiment": {
+          "assay": "single-cell RNA sequencing; single-cell flow cytometry; immunofluorescence",
+          "dose": "10 mg/kg",
+          "duration": "4 weeks",
+          "endpoint": "proportion of T lymphocytes",
+          "intervention": "anti-RANKL antibody",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Anti-RANKL antibody treatment decreased the proportion of T lymphocytes in bone marrow.",
+        "uncertainties": [
+          "The sentence is part of a multi-outcome statement; the decrease in T lymphocytes is reported alongside increases in other cell types."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        929,
+        1031
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        840,
+        944
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1032,
+        1077
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        944,
+        1001
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

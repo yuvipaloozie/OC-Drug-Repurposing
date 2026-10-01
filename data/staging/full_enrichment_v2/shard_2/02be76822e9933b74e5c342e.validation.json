@@ -1,0 +1,336 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "monocytes",
+          "compartment": null,
+          "disease_setting": "mechanical unloading",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "26",
+              "27",
+              "28",
+              "29",
+              "35",
+              "37",
+              "39"
+            ],
+            "existing_node_id": "CHEBI:18050",
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Gln",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "30",
+              "31",
+              "40"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "solute carrier family 1 member 5",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "monocytes",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 572,
+            "passage_index": 1,
+            "quote": "Gln uptake is essential for the survival of monocytes under mechanical unloading.",
+            "start": 491
+          },
+          {
+            "end": 726,
+            "passage_index": 1,
+            "quote": "Deprivation of Gln or blockade of Gln transporter solute carrier family 1 member 5 (SLC1A5) inhibits bone resorption by enhancing apoptosis of monocytes.",
+            "start": 573
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption; apoptosis of monocytes",
+          "intervention": "Deprivation of Gln or blockade of Gln transporter SLC1A5",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In mechanical unloading, deprivation of glutamine or blockade of SLC1A5 inhibits bone resorption and increases apoptosis of monocytes.",
+        "uncertainties": [
+          "The sentence combines two perturbations (Gln deprivation and SLC1A5 blockade) and one outcome; the specific contribution of each is not separated.",
+          "The causal link is described at the phenotype level; direct molecular mechanism is not established in this sentence."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts and the precursors",
+          "compartment": "mitochondrial",
+          "disease_setting": "mechanical unloading",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "32",
+              "33",
+              "34"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "XIAP",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "gene",
+            "surface": "Diablo",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1046,
+            "passage_index": 1,
+            "quote": "Upon mechanical unloading XIAP is upregulated, then interacts with Diablo in mitochondrial and promotes the K63-linkage ubiquitylation of Diablo at the K212 site.",
+            "start": 884
+          },
+          {
+            "end": 1209,
+            "passage_index": 1,
+            "quote": "This sequesters Diablo within the mitochondrial and inhibits its release into the cytosol, ultimately inhibiting cell apoptosis of osteoclasts and the precursors.",
+            "start": 1047
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "cell apoptosis of osteoclasts and the precursors",
+          "intervention": "mechanical unloading",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Upon mechanical unloading, XIAP is upregulated and interacts with Diablo in mitochondria, promoting K63-linked ubiquitylation of Diablo at K212 and inhibiting release of Diablo into the cytosol, thereby suppressing apoptosis of osteoclasts and precursors.",
+        "uncertainties": [
+          "The text states interaction and ubiquitination but does not establish whether the XIAP-Diablo interaction is direct.",
+          "The molecular form of Diablo is supported only as a named entity; protein versus gene is not explicitly specified."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "serum",
+          "disease_setting": "osteoporosis",
+          "species": "null",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "35",
+              "37",
+              "39"
+            ],
+            "existing_node_id": "CHEBI:18050",
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "serum Gln levels",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "36"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "cross linked C-telopeptide of type I collagen (CTX) levels",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1332,
+            "passage_index": 1,
+            "quote": "Clinically, the serum Gln levels are positively correlated with cross linked C-telopeptide of type I collagen (CTX) levels",
+            "start": 1210
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "serum Gln and CTX levels",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Serum glutamine levels are positively correlated with CTX levels.",
+        "uncertainties": [
+          "This is a correlation statement and does not establish causality.",
+          "CTX is annotated in the source as a chemical tag, but the text uses it as a clinical biomarker level."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        491,
+        572
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        596,
+        652
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        573,
+        726
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        654,
+        744
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        884,
+        1046
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        878,
+        1004
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1047,
+        1209
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1005,
+        1090
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1210,
+        1332
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1340,
+        1456
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

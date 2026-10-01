@@ -1,0 +1,206 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "disuse osteoporosis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "46",
+              "47"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "antibody against receptor activator of nuclear factor-kappaB ligand (RANKL)",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "43",
+              "44",
+              "45",
+              "48",
+              "49"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 850,
+            "passage_index": 1,
+            "quote": "Administration of an antibody against receptor activator of nuclear factor-kappaB ligand (RANKL), which inhibits osteoclastogenesis, alleviated bone loss",
+            "start": 697
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone loss",
+          "intervention": "administration of an antibody against receptor activator of nuclear factor-kappaB ligand (RANKL)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In the mouse spiral wire immobilization model, administering an anti-RANKL antibody decreased bone loss, consistent with reduced osteoclast-mediated bone resorption during hindlimb immobilization.",
+        "uncertainties": [
+          "The exact antibody identity is not specified beyond anti-RANKL.",
+          "The effect is reported in a disease model and does not establish direct molecular inhibition beyond the stated phenotype."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "adipo-CAR cells",
+          "compartment": "bone marrow",
+          "disease_setting": "disuse osteoporosis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "SWI",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "52",
+              "54",
+              "59",
+              "69",
+              "70"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "RANKL expression",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "55",
+              "56",
+              "57",
+              "58",
+              "71",
+              "72"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "adipogenic C-X-C motif chemokine ligand 12-abundant reticular (adipo-CAR) cells",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1454,
+            "passage_index": 1,
+            "quote": "single-cell RNA sequencing of bone marrow cells from RANKL fate-mapping mice demonstrated that SWI increased RANKL expression specifically in adipogenic C-X-C motif chemokine ligand 12-abundant reticular (adipo-CAR) cells, but not in osteoblasts or osteocytes",
+            "start": 1195
+          }
+        ],
+        "experiment": {
+          "assay": "single-cell RNA sequencing",
+          "dose": null,
+          "duration": null,
+          "endpoint": "RANKL expression",
+          "intervention": "spiral wire immobilization (SWI)",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Spiral wire immobilization increased RANKL expression specifically in adipo-CAR cells, but not in osteoblasts or osteocytes.",
+        "uncertainties": [
+          "The increase is described for adipo-CAR cells specifically; the text also states that expression was not increased in osteoblasts or osteocytes.",
+          "SWI is a model/procedure rather than a molecular entity, so the mechanistic subject is an intervention-level placeholder."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        697,
+        850
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        757,
+        941
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1195,
+        1454
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1218,
+        1436
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

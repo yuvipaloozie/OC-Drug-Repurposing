@@ -1,0 +1,94 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow",
+          "compartment": "bone marrow",
+          "disease_setting": "chronic myelogenous leukemia",
+          "species": "patients",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "48"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "dasatinib",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "trabecular bone area",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 384,
+            "passage_index": 1,
+            "quote": "We identified a significant increase in percentage of TBA in postdasatinib BM (P = .022)",
+            "start": 296
+          }
+        ],
+        "experiment": {
+          "assay": "digitally analyzed changes in TBA in paired BM biopsy specimens",
+          "dose": "within the therapeutic range",
+          "duration": null,
+          "endpoint": "percentage of TBA in postdasatinib BM",
+          "intervention": "treatment with dasatinib",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In CML patients, dasatinib treatment was associated with a significant increase in trabecular bone area in post-treatment bone marrow specimens.",
+        "uncertainties": [
+          "The text reports an association between treatment and increased trabecular bone area in paired specimens; direct causality is not experimentally isolated.",
+          "The passage does not state the species explicitly; the context is human patients with CML."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        296,
+        384
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        360,
+        441
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

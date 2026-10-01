@@ -1,0 +1,99 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "bone metastasis / breast cancer-associated bone loss",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "100689229"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "P18",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "8600"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-stimulated osteoclasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1529,
+            "passage_index": 1,
+            "quote": "P18 had no inhibitory effect on mesenchymal stem cells but suppressed the maturation of RANKL-stimulated osteoclasts",
+            "start": 1413
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "maturation of RANKL-stimulated osteoclasts",
+          "intervention": "P18",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "P18 suppressed the maturation of RANKL-stimulated osteoclasts.",
+        "uncertainties": [
+          "The passage does not specify whether the effect is direct or mediated through another pathway.",
+          "RANKL is annotated in the source, but the claim is about RANKL-stimulated osteoclast maturation rather than a direct RANKL-target interaction."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1413,
+        1529
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1682,
+        1768
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

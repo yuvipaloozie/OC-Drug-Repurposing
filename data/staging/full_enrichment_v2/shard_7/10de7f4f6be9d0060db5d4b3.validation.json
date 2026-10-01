@@ -1,0 +1,191 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "diabetic Charcot neuroarthropathy",
+          "species": "9606",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "53",
+              "59",
+              "60",
+              "64",
+              "68",
+              "74"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "sulfated hyaluronan derivatives",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "61"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "calcium phosphate resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1258,
+            "passage_index": 1,
+            "quote": "Exposure to sulfated hyaluronan (sHA) derivatives reduced the exaggerated calcium phosphate resorption as well as the expression of genes associated with bone resorption in both groups, but more pronounced in patients with CN.",
+            "start": 1032
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "calcium phosphate resorption",
+          "intervention": "Exposure to sulfated hyaluronan derivatives",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Exposure to sulfated hyaluronan derivatives decreased exaggerated calcium phosphate resorption in osteoclast-related assays, with a stronger effect in patients with Charcot neuroarthropathy.",
+        "uncertainties": [
+          "The quoted sentence also mentions gene expression changes, but the claim here is limited to calcium phosphate resorption.",
+          "The exact experimental assay and dose are not stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "Charcot neuroarthropathy",
+          "species": "9606",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "60",
+              "64",
+              "68",
+              "74"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "sHA derivatives",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "65"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "pro-inflammatory cytokines",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1370,
+            "passage_index": 1,
+            "quote": "Moreover, sHA derivatives reduced the release of pro-inflammatory cytokines in osteoclasts of patients with CN.",
+            "start": 1259
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "release of pro-inflammatory cytokines",
+          "intervention": "Exposure to sHA derivatives",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Sulfated hyaluronan derivatives decreased release of pro-inflammatory cytokines in osteoclasts from patients with Charcot neuroarthropathy.",
+        "uncertainties": [
+          "The text does not specify which cytokines were measured.",
+          "The exact assay, dose, and duration are not stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1032,
+        1258
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1040,
+        1263
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1259,
+        1370
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1265,
+        1378
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

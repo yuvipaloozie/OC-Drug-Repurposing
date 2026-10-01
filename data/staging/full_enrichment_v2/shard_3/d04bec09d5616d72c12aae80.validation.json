@@ -1,0 +1,200 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "mouse and rat bone marrow mononuclear cells; human THP-1 cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "This mineralized ECM",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "multiple osteoclast precursors",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "22",
+              "23"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "tartrate-resistant acid phosphatase (TRAP)-positive multinucleated osteoclasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1837,
+            "passage_index": 1,
+            "quote": "This mineralized ECM supported the differentiation of multiple osteoclast precursors-including mouse and rat bone marrow mononuclear cells as well as human THP-1 cells-into tartrate-resistant acid phosphatase (TRAP)-positive multinucleated osteoclasts with characteristic F-actin ring formation and measurable resorption activity.",
+            "start": 1507
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation and resorption activity",
+          "intervention": "mineralized ECM substrate",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The DPSC-derived mineralized ECM supported differentiation of osteoclast precursors into TRAP-positive multinucleated osteoclasts with F-actin ring formation and measurable resorption activity.",
+        "uncertainties": [
+          "The exact molecular composition of the ECM is not fully specified in the claim beyond being mineralized and ECM-derived.",
+          "The passage combines multiple precursor cell types in one result statement, so species/context are summarized jointly."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "the platform",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "24"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "25"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "IFN-gamma",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2230,
+            "passage_index": 1,
+            "quote": "Moreover, the platform sensitively detected dose-dependent modulation of osteoclast activity by RANKL and IFN-gamma",
+            "start": 2163
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "dose-dependent",
+          "duration": null,
+          "endpoint": "osteoclast activity",
+          "intervention": "RANKL and IFN-gamma",
+          "outcome_change": "other",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "unknown",
+          "subject": "e2"
+        },
+        "summary": "The assay platform detected dose-dependent modulation of osteoclast activity by RANKL and IFN-gamma.",
+        "uncertainties": [
+          "The sentence states modulation by two factors together but does not specify the direction of either effect in the quoted span.",
+          "The exact assay used for this modulation is not specified in the quoted text."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1507,
+        1837
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1664,
+        1846
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

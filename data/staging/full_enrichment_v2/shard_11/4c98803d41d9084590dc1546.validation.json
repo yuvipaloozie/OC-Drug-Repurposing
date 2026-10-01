@@ -1,0 +1,229 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "49"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "KX2-391",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Src kinase",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "tubulin polymerization",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 71,
+            "passage_index": 1,
+            "quote": "PURPOSE: KX2-391 is an oral non-ATP-competitive inhibitor of Src kinase",
+            "start": 0
+          },
+          {
+            "end": 99,
+            "passage_index": 1,
+            "quote": "and tubulin polymerization.",
+            "start": 72
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "KX2-391 is described as an oral non-ATP-competitive inhibitor of Src kinase and tubulin polymerization.",
+        "uncertainties": [
+          "The text states inhibition of Src kinase and tubulin polymerization but does not specify a direct biochemical assay in this passage.",
+          "No species is specified for this background statement."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "bone-metastatic castration-resistant prostate cancer",
+          "species": "men",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "49",
+              "55",
+              "62",
+              "84"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "KX2-391",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone turnover markers",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1347,
+            "passage_index": 1,
+            "quote": "The proportion of men with declines",
+            "start": 1312
+          },
+          {
+            "end": 1445,
+            "passage_index": 1,
+            "quote": "in bone turnover markers was 32 % for uNTx, 21 % for CTx, 10 % for BAP, and 25 % for osteocalcin.",
+            "start": 1348
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "40 mg twice-daily",
+          "duration": "until disease progression or unacceptable toxicity",
+          "endpoint": "declines in bone turnover markers",
+          "intervention": "oral KX2-391 (40 mg twice-daily)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In men with bone-metastatic castration-resistant prostate cancer, treatment with KX2-391 was associated with declines in several bone turnover markers.",
+        "uncertainties": [
+          "The passage reports proportions with declines in specific markers rather than a mechanistic effect on osteoclasts.",
+          "The exact directionality for each individual marker is summarized as declines, but no direct cellular target in bone is established here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        71
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        69
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        72,
+        99
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        73,
+        98
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1312,
+        1347
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        385,
+        416
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1348,
+        1445
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        416,
+        520
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

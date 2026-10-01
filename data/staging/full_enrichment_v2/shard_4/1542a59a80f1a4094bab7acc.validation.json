@@ -1,0 +1,247 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "periodontal tissues",
+          "disease_setting": "ligature-induced periodontitis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "43",
+              "44",
+              "45",
+              "47",
+              "51",
+              "59",
+              "61",
+              "64",
+              "67"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "synthetic (+)-terrein",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "alveolar bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1364,
+            "passage_index": 1,
+            "quote": "The synthetic (+)-terrein-treated group suppressed alveolar bone resorption and the number of osteoclasts in the periodontal tissues compared to the control group (p < 0.05).",
+            "start": 1190
+          },
+          {
+            "end": 1641,
+            "passage_index": 1,
+            "quote": "synthetic (+)-terrein abrogates alveolar bone resorption",
+            "start": 1585
+          }
+        ],
+        "experiment": {
+          "assay": "micro-CT; HE staining; TRAP staining",
+          "dose": "30 mg/kg",
+          "duration": "twice a week; one to two weeks after induction of periodontitis",
+          "endpoint": "alveolar bone resorption; number of osteoclasts in periodontal tissues",
+          "intervention": "Synthetic (+)-terrein (30 mg/kg) administered intraperitoneally twice a week",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In a mouse ligature-induced periodontitis model, synthetic (+)-terrein treatment was reported to suppress alveolar bone resorption and reduce osteoclast number in periodontal tissues.",
+        "uncertainties": [
+          "The text combines effects on bone resorption and osteoclast number; the regulatory object is represented as alveolar bone resorption, while osteoclast reduction is described in the summary and endpoint.",
+          "Direct molecular target of (+)-terrein is not stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "periodontal tissues and serum",
+          "disease_setting": "ligature-induced periodontitis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "43",
+              "44",
+              "45",
+              "47",
+              "51",
+              "59",
+              "61",
+              "64",
+              "67"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "synthetic (+)-terrein",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "7",
+              "62",
+              "63",
+              "66"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNF",
+            "key": "e4",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "TNF-alpha",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1543,
+            "passage_index": 1,
+            "quote": "synthetic (+)-terrein significantly suppressed both mRNA expression of TNF-alpha in the periodontal tissues and the serum concentration of TNF-alpha (both p < 0.05).",
+            "start": 1378
+          },
+          {
+            "end": 1685,
+            "passage_index": 1,
+            "quote": "synthetic (+)-terrein abrogates alveolar bone resorption via the suppression of TNF-alpha production",
+            "start": 1585
+          }
+        ],
+        "experiment": {
+          "assay": "quantitative reverse-transcription PCR; ELISA",
+          "dose": "30 mg/kg",
+          "duration": "twice a week; one to two weeks after induction of periodontitis",
+          "endpoint": "TNF-alpha mRNA expression; serum TNF-alpha concentration",
+          "intervention": "Synthetic (+)-terrein (30 mg/kg) administered intraperitoneally twice a week",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Synthetic (+)-terrein treatment significantly suppressed TNF-alpha mRNA expression in periodontal tissues and TNF-alpha concentration in serum in the periodontitis mouse model.",
+        "uncertainties": [
+          "TNF-alpha is annotated as a gene by the provider, but the text also refers to mRNA expression and serum concentration; the molecular form is therefore context-dependent.",
+          "The passage states suppression of TNF-alpha production as part of a proposed mechanism, but no direct mechanistic assay of target engagement is provided."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1190,
+        1364
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        511,
+        596
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1585,
+        1641
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        700,
+        748
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1378,
+        1543
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        616,
+        694
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1585,
+        1685
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        700,
+        788
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,232 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "LPS-induced bone loss",
+          "species": "male Sprague-Dawley rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Magnesium lithospermate B",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone microstructure damage",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss models",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 664,
+            "passage_index": 1,
+            "quote": "The bone loss models were established by LPS administration in male Sprague-Dawley rats. MLB (200 mg/kg body weight) was given by subcutaneous injection.",
+            "start": 511
+          },
+          {
+            "end": 1404,
+            "passage_index": 1,
+            "quote": "MLB significantly abolished the LPS-induced bone microstructure damage (p < 0.05) and osteoclast formation.",
+            "start": 1297
+          }
+        ],
+        "experiment": {
+          "assay": "MicroCT analysis, biomarker assay, histological examination and immunohistochemical staining",
+          "dose": "200 mg/kg body weight",
+          "duration": "8th weeks",
+          "endpoint": "bone microstructure damage and osteoclast formation",
+          "intervention": "MLB (200 mg/kg body weight)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In LPS-treated male Sprague-Dawley rats, magnesium lithospermate B (MLB) reduced LPS-induced bone microstructure damage and osteoclast formation.",
+        "uncertainties": [
+          "The quoted result bundles bone microstructure damage and osteoclast formation; the regulatory object was normalized to bone microstructure damage as the primary phenotype."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 cells",
+          "compartment": null,
+          "disease_setting": "LPS-treated in vitro",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Magnesium lithospermate B",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast formation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "50"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "RAW264.7",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 875,
+            "passage_index": 1,
+            "quote": "In addition, RAW264.7 cells were treated with LPS in the presence or absence of MLB.",
+            "start": 791
+          },
+          {
+            "end": 1822,
+            "passage_index": 1,
+            "quote": "In addition, MLB significantly abolished the LPS-enhanced osteoclast formation, resorption activity, RANK, Traf6, Fra-1, and c-src expression in vitro.",
+            "start": 1671
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast formation and resorption activity",
+          "intervention": "MLB",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In RAW264.7 cells, MLB reduced LPS-enhanced osteoclast formation and resorption activity; the same in vitro experiment also reported decreased expression of RANK, Traf6, Fra-1, and c-src.",
+        "uncertainties": [
+          "The sentence also mentions reduced expression of RANK, Traf6, Fra-1, and c-src, but the claim is normalized to osteoclast formation as the regulatory object.",
+          "Species is not explicitly stated for RAW264.7 cells in the passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        511,
+        664
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        686,
+        797
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1297,
+        1404
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1334,
+        1415
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        791,
+        875
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        903,
+        986
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1671,
+        1822
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1828,
+        1945
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

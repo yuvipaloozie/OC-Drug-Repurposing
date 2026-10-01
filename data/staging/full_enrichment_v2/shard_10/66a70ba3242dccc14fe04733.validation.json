@@ -1,0 +1,124 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow cells",
+          "compartment": null,
+          "disease_setting": "collagen-induced arthritis / rheumatoid arthritis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "83"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Dasatinib",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "80"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "TRAP+ osteoclasts",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "resorption area",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1535,
+            "passage_index": 1,
+            "quote": "The number of TRAP+ osteoclasts and the area of the resorption were decreased in the bone marrow cells derived from dasatinib-pretreated mice compared with those derived from vehicle group.",
+            "start": 1346
+          },
+          {
+            "end": 1806,
+            "passage_index": 1,
+            "quote": "Dasatinib protected against arthritis in an animal model of RA by regulating the differentiation of regulatory T cells and IL-17+  CD4+ T cells and inhibiting osteoclastogenesis, indicating the therapeutic potential of dasatinib in the treatment of early RA.",
+            "start": 1548
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP staining and estimation of the resorption pit area",
+          "dose": null,
+          "duration": "5 weeks",
+          "endpoint": "TRAP+ osteoclasts and resorption area",
+          "intervention": "dasatinib-pretreated mice",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Dasatinib pretreatment in CIA mice was associated with fewer TRAP+ osteoclasts and reduced resorption area in bone marrow cells, consistent with inhibited osteoclastogenesis.",
+        "uncertainties": [
+          "The text reports pretreatment versus vehicle, so the specific molecular target responsible for reduced osteoclastogenesis is not stated.",
+          "Resorption area is described as decreased, but the exact quantified endpoint and whether it is directly attributable to osteoclasts alone are not fully resolved."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1346,
+        1535
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1565,
+        1655
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1548,
+        1806
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1663,
+        1890
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,148 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "femoral metaphyseal bone",
+          "disease_setting": null,
+          "species": "feline",
+          "stage": "18 weeks"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "15",
+              "16",
+              "17",
+              "21",
+              "22",
+              "23",
+              "24",
+              "25"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "PTE",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": "feline"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "nuclei",
+            "taxon": "feline"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 65,
+            "passage_index": 1,
+            "quote": "Twelve kittens aged 18 weeks each received a single injection via",
+            "start": 0
+          },
+          {
+            "end": 979,
+            "passage_index": 1,
+            "quote": "chi2 analyses did, however reveal a statistically highly significant (P < 0.0001) difference between PTE 6 hours osteoclasts and both untreated and PTE 1 hour samples.",
+            "start": 812
+          },
+          {
+            "end": 1075,
+            "passage_index": 1,
+            "quote": "The arithmetic mean and median numbers of nuclei increased 6 hours after administration of PTE.",
+            "start": 980
+          }
+        ],
+        "experiment": {
+          "assay": "histochemical staining and nucleus counts",
+          "dose": "4 USP units PTE per kg body weight",
+          "duration": "6 hours",
+          "endpoint": "number of nuclei in osteoclasts",
+          "intervention": "single injection of PTE via a femoral vein",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In kittens, a single injection of PTE was followed by an increase in the number of nuclei contained in osteoclasts at 6 hours, compared with untreated and 1-hour samples.",
+        "uncertainties": [
+          "PTE is not explicitly expanded in the abstract passage; it is treated as a text-supported compound candidate.",
+          "The claim concerns nuclei number in osteoclasts, not a specific molecular activity of PTE."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        65
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        64
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        812,
+        979
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        297,
+        431
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        980,
+        1075
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        432,
+        526
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

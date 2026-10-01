@@ -1,0 +1,220 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "mandible",
+          "disease_setting": null,
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "37",
+              "42",
+              "46",
+              "50",
+              "54",
+              "55",
+              "63",
+              "64"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "CR",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [
+              "1",
+              "48",
+              "65"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 638,
+            "passage_index": 1,
+            "quote": "8 weeks of CR led to trabecular and cortical bone loss",
+            "start": 584
+          },
+          {
+            "end": 1391,
+            "passage_index": 1,
+            "quote": "cause significant bone loss",
+            "start": 1364
+          }
+        ],
+        "experiment": {
+          "assay": "Micro-architecture",
+          "dose": "30 %",
+          "duration": "8 weeks",
+          "endpoint": "trabecular and cortical bone loss",
+          "intervention": "30 % CR for 8 weeks",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Caloric restriction led to mandible bone loss in female mice.",
+        "uncertainties": [
+          "Caloric restriction is treated as an intervention/unknown entity here; the text does not specify a molecular mediator.",
+          "The passage reports mandible bone loss in female mice, but the exact causal mechanism is not established in the claim."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "OMSCs",
+          "compartment": "orofacial bones",
+          "disease_setting": null,
+          "species": "mice",
+          "stage": "undifferentiated"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "37",
+              "42",
+              "46",
+              "50",
+              "54",
+              "55",
+              "63",
+              "64"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "CR",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [
+              "56",
+              "58",
+              "67"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "ATP production rates",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1022,
+            "passage_index": 1,
+            "quote": "Undifferentiated CR OMSCs showed marked suppression in ATP production rates",
+            "start": 947
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro bioenergetics",
+          "dose": null,
+          "duration": null,
+          "endpoint": "ATP production rates",
+          "intervention": "CR",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In female mice, caloric restriction suppressed ATP production rates in undifferentiated orofacial-bone mesenchymal cells.",
+        "uncertainties": [
+          "The cell population is described as mesenchymal cells from orofacial bones (OMSCs), not a defined osteoclast system.",
+          "The mechanism linking reduced ATP production to bone loss is presented as an overall interpretation rather than a directly tested causal step."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        584,
+        638
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        418,
+        462
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1364,
+        1391
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1451,
+        1473
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        947,
+        1022
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1043,
+        1110
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

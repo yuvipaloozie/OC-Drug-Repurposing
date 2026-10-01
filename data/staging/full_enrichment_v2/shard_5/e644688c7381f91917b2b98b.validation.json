@@ -1,0 +1,208 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "myeloma cells",
+          "compartment": null,
+          "disease_setting": "multiple myeloma",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "Osteoclasts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "dexamethasone-induced apoptosis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D009101"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "myeloma cells",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1209,
+            "passage_index": 1,
+            "quote": "Osteoclasts also inhibited dexamethasone-induced apoptosis in myeloma cells while retaining their normal morphology and functionality in bone resorption",
+            "start": 1057
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "dexamethasone-induced apoptosis",
+          "intervention": null,
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Osteoclasts inhibited dexamethasone-induced apoptosis in myeloma cells while retaining normal morphology and bone resorption functionality.",
+        "uncertainties": [
+          "No specific osteoclast lineage, species, or assay is stated in the extracted sentence.",
+          "The statement describes inhibition of apoptosis but does not specify whether the effect is direct or indirect."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "HS5 cells and osteoclasts",
+          "compartment": null,
+          "disease_setting": "multiple myeloma",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D000069439"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "dasatinib",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D009101",
+              "MESH:D003907"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "myeloma resistance to dexamethasone",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "CVCL:3720"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "HS5 cells and osteoclasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1373,
+            "passage_index": 1,
+            "quote": "Myeloma resistance to dexamethasone mediated by HS5 cells and osteoclasts was reversed by treatment with the Src/c-Abl inhibitor dasatinib but not with bortezomib",
+            "start": 1211
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "myeloma resistance to dexamethasone",
+          "intervention": "treatment with dasatinib",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Dasatinib reversed myeloma resistance to dexamethasone mediated by HS5 cells and osteoclasts.",
+        "uncertainties": [
+          "The sentence also mentions bortezomib in a negated comparison, but no separate effect is extracted for it.",
+          "The mechanism linking dasatinib to reversal of resistance is not established as direct in the text."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1057,
+        1209
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1262,
+        1377
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1211,
+        1373
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1380,
+        1504
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

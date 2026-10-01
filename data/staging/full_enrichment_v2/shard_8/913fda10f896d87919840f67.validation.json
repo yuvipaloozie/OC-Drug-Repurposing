@@ -1,0 +1,121 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "cancer",
+          "species": "mice",
+          "stage": "pediatric"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "3",
+              "42",
+              "46",
+              "50",
+              "52",
+              "61",
+              "64"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Vincristine",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "63"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 66,
+            "passage_index": 0,
+            "quote": "Vincristine impairs musculoskeletal development in pediatric mice.",
+            "start": 0
+          },
+          {
+            "end": 2179,
+            "passage_index": 1,
+            "quote": "bone resorption",
+            "start": 2164
+          }
+        ],
+        "experiment": {
+          "assay": "CTX-1 measurement and microCT",
+          "dose": "1.5 mg/kg, intraperitoneally, twice weekly",
+          "duration": "five weeks",
+          "endpoint": "bone resorption / musculoskeletal development",
+          "intervention": "vincristine",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Vincristine treatment in pediatric mice was associated with increased bone resorption and impaired musculoskeletal development.",
+        "uncertainties": [
+          "The exact causal mechanism linking vincristine to increased bone resorption is not established in the text.",
+          "The title states impaired musculoskeletal development, while the abstract specifically reports higher CTX-1 and bone loss; these are related but not identical endpoints."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        66
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        62
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        2164,
+        2179
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2231,
+        2246
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

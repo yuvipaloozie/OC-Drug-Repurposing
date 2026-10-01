@@ -1,0 +1,264 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow macrophages",
+          "compartment": null,
+          "disease_setting": "titanium particle-induced osteolysis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "52",
+              "53",
+              "56",
+              "59",
+              "64",
+              "72",
+              "76",
+              "78",
+              "80"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Lonafarnib",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "57",
+              "58",
+              "66",
+              "68",
+              "74",
+              "75",
+              "81",
+              "82"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "titanium particle-induced osteolysis",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 650,
+            "passage_index": 1,
+            "quote": "Lon",
+            "start": 647
+          },
+          {
+            "end": 1544,
+            "passage_index": 1,
+            "quote": "suppressed bone resorptive function and osteoclastogenesis",
+            "start": 1491
+          },
+          {
+            "end": 1981,
+            "passage_index": 1,
+            "quote": "Lon is a promising treatment",
+            "start": 1953
+          },
+          {
+            "end": 2190,
+            "passage_index": 1,
+            "quote": "periprosthetic osteolysis",
+            "start": 2171
+          }
+        ],
+        "experiment": {
+          "assay": "real-time quantitative PCR; immunofluorescence; western blot; in vivo calvarial osteolysis model",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis / bone resorptive function; titanium particle-induced osteolysis",
+          "intervention": "Lonafarnib (Lon)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Lonafarnib suppressed osteoclastogenesis/bone resorptive function in vitro and prevented titanium particle-induced osteolysis in vivo.",
+        "uncertainties": [
+          "The cited evidence spans are split across in vitro and in vivo results within the same abstract; the claim merges these related outcomes.",
+          "The exact causal wording for osteolysis prevention is broader than the short quoted spans used as evidence."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow macrophages",
+          "compartment": null,
+          "disease_setting": "titanium particle-induced osteolysis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "farnesyltransferase (FTase)",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "79",
+              "83"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "ERK signaling",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast formation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1951,
+            "passage_index": 1,
+            "quote": "inhibition of FTase reduced osteoclast formation by suppressing ERK signaling",
+            "start": 1874
+          },
+          {
+            "end": 1922,
+            "passage_index": 1,
+            "quote": "reduced osteoclast formation",
+            "start": 1894
+          },
+          {
+            "end": 2109,
+            "passage_index": 1,
+            "quote": "suppressing ERK signaling",
+            "start": 2088
+          }
+        ],
+        "experiment": {
+          "assay": "western blot",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast formation; ERK signaling",
+          "intervention": "FTase inhibition",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e5",
+          "sign": "negative",
+          "subject": "e4"
+        },
+        "summary": "Inhibition of FTase reduced osteoclast formation and suppressed ERK signaling.",
+        "uncertainties": [
+          "The text links FTase inhibition to osteoclast formation through ERK signaling; the regulatory edge here is simplified to FTase -> ERK signaling.",
+          "FTase molecular form is not explicitly specified in the text; protein is a best-effort normalization."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1953,
+        1981
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1856,
+        1885
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1874,
+        1951
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2041,
+        2148
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1894,
+        1922
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2071,
+        2084
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

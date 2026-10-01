@@ -1,0 +1,189 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "20"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "solute carrier family 4 anion exchanger member 2",
+            "taxon": "mice"
+          },
+          {
+            "annotation_ids": [
+              "21"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteopetrosis",
+            "taxon": "mice"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 740,
+            "passage_index": 1,
+            "quote": "Here we show that osteoclast-targeted deletion in mice of solute carrier family 4 anion exchanger member 2 (Slc4a2) results in osteopetrosis.",
+            "start": 599
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteopetrosis",
+          "intervention": "osteoclast-targeted deletion of Slc4a2",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Osteoclast-targeted deletion of Slc4a2 in mice resulted in osteopetrosis.",
+        "uncertainties": [
+          "The text does not specify the exact osteoclast lineage or whether the gene product is acting directly versus through downstream effects."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "22"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "SLC4A2",
+            "taxon": "mice"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "calpain-dependent podosome disassembly",
+            "taxon": "mice"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "actin belt formation",
+            "taxon": "mice"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 977,
+            "passage_index": 1,
+            "quote": "We further demonstrate a previously unrecognized consequence of SLC4A2 loss of function in the osteoclast: dysregulation of calpain-dependent podosome disassembly, leading to abnormal actin belt formation, cell spreading, and migration.",
+            "start": 741
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "calpain-dependent podosome disassembly",
+          "intervention": "SLC4A2 loss of function",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Loss of SLC4A2 in osteoclasts caused dysregulation of calpain-dependent podosome disassembly, leading to abnormal actin belt formation, cell spreading, and migration.",
+        "uncertainties": [
+          "The passage links the dysregulation to downstream actin belt formation, cell spreading, and migration, but does not separately quantify each outcome.",
+          "The molecular form of calpain-dependent podosome disassembly is not explicitly stated in the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        599,
+        740
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        755,
+        865
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        741,
+        977
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        875,
+        1059
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

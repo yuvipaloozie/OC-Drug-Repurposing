@@ -1,0 +1,439 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ovariectomy-induced osteoporosis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "109"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Semen Cuscutae extract",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "110",
+              "111"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "OVX mice",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone density",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone microstructure",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2169,
+            "passage_index": 1,
+            "quote": "After the Semen Cuscutae extract was orally administered to OVX mice, bone density increased (P < 0.01) and bone microstructure was significantly improved (P < 0.01 or 0.05).",
+            "start": 1995
+          }
+        ],
+        "experiment": {
+          "assay": "dual-energy X-ray absorptiometry and micro-computed tomography",
+          "dose": "high doses mentioned but not specified for this outcome",
+          "duration": null,
+          "endpoint": "bone density and bone microstructure",
+          "intervention": "Semen Cuscutae extract",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Oral Semen Cuscutae extract in OVX mice increased bone density and improved bone microstructure.",
+        "uncertainties": [
+          "The exact administered dose and treatment duration are not stated in the quoted outcome sentence.",
+          "The claim aggregates two related bone endpoints from one sentence."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "serum",
+          "disease_setting": "ovariectomy-induced osteoporosis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "112",
+              "115"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Semen Cuscutae",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "protein",
+            "surface": "TRACP-5b",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [
+              "113"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "e3",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [
+              "114"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFRSF11B",
+            "key": "e4",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "OPG",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2412,
+            "passage_index": 1,
+            "quote": "Additionally, Semen Cuscutae exhibited a significant descending effect in the levels of serum TRACP-5b and RANKL, while there was a significant increase in OPG in the Semen Cuscutae group compared with the OVX group, especially at high doses.",
+            "start": 2170
+          }
+        ],
+        "experiment": {
+          "assay": "ELISA",
+          "dose": "high doses mentioned",
+          "duration": null,
+          "endpoint": "serum TRACP-5b and RANKL; increased OPG",
+          "intervention": "Semen Cuscutae",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Semen Cuscutae decreased serum TRACP-5b and RANKL and increased OPG in OVX mice.",
+        "uncertainties": [
+          "TRACP-5b is treated as a measured serum marker here; molecular form is not directly stated in the text.",
+          "The sentence reports both decreases and an increase, so multiple regulatory directions are compressed into one claim."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ovariectomy-induced osteoporosis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "112",
+              "115",
+              "120",
+              "121"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Semen Cuscutae",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "117",
+              "123"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "c-fos",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [
+              "118",
+              "124"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "c-Src kinase",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [
+              "119",
+              "125"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "NFATC1",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2556,
+            "passage_index": 1,
+            "quote": "Moreover, we found that increasing of c-fos, c-Src kinase, and NFATC1 protein expressions were reversed by Semen Cuscutae in vitro and in vivo.",
+            "start": 2413
+          }
+        ],
+        "experiment": {
+          "assay": "Western blotting",
+          "dose": null,
+          "duration": null,
+          "endpoint": "c-fos, c-Src kinase, and NFATC1 protein expression",
+          "intervention": "Semen Cuscutae",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Semen Cuscutae reversed the OVX-associated increases in c-fos, c-Src kinase, and NFATC1 protein expression in vitro and in vivo.",
+        "uncertainties": [
+          "The sentence states a reversal of increases rather than a baseline expression change for each target individually.",
+          "The cell/tissue context for the in vitro component is not specified in the abstract."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "112",
+              "115",
+              "120",
+              "121",
+              "127"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Semen Cuscutae",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "117",
+              "118",
+              "119",
+              "123",
+              "124",
+              "125"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "c-fos/c-Src kinase/NFATC1 signaling pathway",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2701,
+            "passage_index": 1,
+            "quote": "Our results showed that Semen Cuscutae exhibited anti-osteoporosis effects through the c-fos/c-Src kinase/NFATC1 signaling pathway.",
+            "start": 2570
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c4",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The authors conclude that Semen Cuscutae exerts anti-osteoporosis effects through the c-fos/c-Src kinase/NFATC1 signaling pathway.",
+        "uncertainties": [
+          "This is a conclusion statement and not a direct mechanistic measurement.",
+          "The pathway relation is inferred by the authors rather than experimentally resolved in the sentence itself."
+        ]
+      },
+      "errors": [
+        "invented annotation ID",
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1995,
+        2169
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2140,
+        2255
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        2170,
+        2412
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2280,
+        2488
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        2413,
+        2556
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2489,
+        2627
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c4",
+      "corrected_offsets": [
+        2570,
+        2701
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2628,
+        2790
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

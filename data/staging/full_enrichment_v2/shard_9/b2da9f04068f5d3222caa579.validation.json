@@ -1,0 +1,180 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "yellow-feathered broilers",
+          "stage": "one-d-old to 63 d"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "26"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Chondroitin sulphate",
+            "taxon": "broilers"
+          },
+          {
+            "annotation_ids": [
+              "27"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1764,
+            "passage_index": 1,
+            "quote": "Chondroitin sulphate supplementation significantly decreased serum bone resorption markers tartrate resistant acid phosphatase (TRAP), elevated bone formation markers bone specific alkaline phosphatase (BALP) at 30 d, and down-regulated the expression levels of bone resorption-related genes (TRAP and RANKL) (P < 0.05).",
+            "start": 1444
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "0.05%, 0.15%, or 0.30%",
+          "duration": "30 d",
+          "endpoint": "expression levels of bone resorption-related genes (TRAP and RANKL)",
+          "intervention": "dietary supplementation with chondroitin sulphate",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Chondroitin sulphate supplementation decreased the expression levels of the bone resorption-related gene RANKL in broilers.",
+        "uncertainties": [
+          "RANKL is annotated as a gene in text, but the suggested existing node is a mouse protein and may not match the broiler context.",
+          "The quoted sentence also reports TRAP and serum marker changes; this claim isolates the RANKL expression component."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "yellow-feathered broilers",
+          "stage": "one-d-old to 63 d"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "26"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Chondroitin sulphate",
+            "taxon": "broilers"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "protein",
+            "surface": "tartrate resistant acid phosphatase",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1660,
+            "passage_index": 1,
+            "quote": "Chondroitin sulphate supplementation significantly decreased serum bone resorption markers tartrate resistant acid phosphatase (TRAP), elevated bone formation markers bone specific alkaline phosphatase (BALP) at 30 d",
+            "start": 1444
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "0.05%, 0.15%, or 0.30%",
+          "duration": "30 d",
+          "endpoint": "serum bone resorption marker TRAP",
+          "intervention": "dietary supplementation with chondroitin sulphate",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Chondroitin sulphate supplementation decreased serum tartrate resistant acid phosphatase (TRAP), a bone resorption marker, in broilers.",
+        "uncertainties": [
+          "The abstract names TRAP as a serum bone resorption marker; it is unclear whether this refers to the marker protein or a measured activity/readout in serum."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1444,
+        1764
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1577,
+        1889
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1444,
+        1660
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1577,
+        1738
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

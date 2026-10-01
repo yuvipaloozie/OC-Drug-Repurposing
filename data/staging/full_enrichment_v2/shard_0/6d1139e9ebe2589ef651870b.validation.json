@@ -1,0 +1,97 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": "subchondral bone",
+          "disease_setting": "osteoarthritis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D001845"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Subchondral bone",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "osteoclast lineage cells",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 528,
+            "passage_index": 1,
+            "quote": "Subchondral bone is generally considered a load-burdening tissue where mechanosensitive cells are resident, including osteocytes, osteoblast lineage cells, and osteoclast lineage cells",
+            "start": 344
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The review states that subchondral bone contains mechanosensitive resident cells, including osteoclast lineage cells.",
+        "uncertainties": [
+          "This is a review/background statement, not an experiment.",
+          "The passage describes resident cell types in subchondral bone but does not specify a causal effect on osteoclast lineage cells."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        344,
+        528
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        448,
+        632
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

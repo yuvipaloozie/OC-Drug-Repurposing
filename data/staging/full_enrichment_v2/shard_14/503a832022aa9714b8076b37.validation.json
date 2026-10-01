@@ -1,0 +1,231 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow-derived macrophages (BMDMs)",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "hMSC-EVs",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-induced differentiation of bone marrow-derived macrophages (BMDMs) into osteoclasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 771,
+            "passage_index": 1,
+            "quote": "hMSC-EVs inhibited RANKL-induced differentiation of bone marrow-derived macrophages (BMDMs) into osteoclasts in a dose-dependent manner.",
+            "start": 635
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "dose-dependent manner",
+          "duration": null,
+          "endpoint": "osteoclast differentiation",
+          "intervention": "hMSC-EVs",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Human adipose tissue-derived MSC extracellular vesicles inhibited RANKL-induced differentiation of bone marrow-derived macrophages into osteoclasts in a dose-dependent manner.",
+        "uncertainties": [
+          "The exact molecular composition of hMSC-EVs is not specified in the claim.",
+          "BMDM species is not explicitly stated in the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "BMDMs",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "100188847"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "RNA",
+            "surface": "miR122-5p",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-induced osteoclast differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "1432"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "p38",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "5599"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "JNK",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e7",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast-specific gene expression",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1412,
+            "passage_index": 1,
+            "quote": "Overexpression of miR122-5p in BMDMs significantly inhibited RANKL-induced osteoclast differentiation and induced defects in F-actin ring formation and bone resorption.",
+            "start": 1244
+          },
+          {
+            "end": 1569,
+            "passage_index": 1,
+            "quote": "Our results also revealed that RANKL-induced phosphorylation of p38 and JNK and osteoclast-specific gene expression was decreased by miR122-5p transfection,",
+            "start": 1413
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation",
+          "intervention": "miR122-5p transfection / overexpression",
+          "outcome_change": "decreased",
+          "perturbation_type": "gain_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e3"
+        },
+        "summary": "Overexpression of miR122-5p in BMDMs inhibited RANKL-induced osteoclast differentiation and reduced F-actin ring formation and bone resorption.",
+        "uncertainties": [
+          "The text links the same miR122-5p perturbation to decreased p38 and JNK phosphorylation and osteoclast-specific gene expression, but the exact subject-object pairing for those downstream readouts is distributed across the sentence and not separated into a direct mechanistic claim here.",
+          "BMDM species is not explicitly stated in the text."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        635,
+        771
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        442,
+        564
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1244,
+        1412
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1328,
+        1518
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1413,
+        1569
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1810,
+        1913
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,154 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "JE",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "24",
+              "29",
+              "31"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "C59",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "Wnt signaling",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "21",
+              "23",
+              "25",
+              "28",
+              "30",
+              "35",
+              "36",
+              "38",
+              "39",
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "JE",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 402,
+            "passage_index": 1,
+            "quote": "A membrane-permeable selective inhibitor of the Wntless protein, C59, was topically delivered to the JE.",
+            "start": 298
+          },
+          {
+            "end": 507,
+            "passage_index": 1,
+            "quote": "Wnt pathway suppression was verified by using Axin2LacZ/+ and Axin2CreERT2/+;R26RmTmG/+ strains of mice.",
+            "start": 403
+          },
+          {
+            "end": 987,
+            "passage_index": 1,
+            "quote": "C59 caused a dose-dependent inhibition in Wnt signaling, which led",
+            "start": 921
+          }
+        ],
+        "experiment": {
+          "assay": "verification with Axin2LacZ/+ and Axin2CreERT2/+;R26RmTmG/+ strains of mice",
+          "dose": "dose-dependent",
+          "duration": null,
+          "endpoint": "Wnt signaling",
+          "intervention": "topically delivered C59",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Topical C59 treatment dose-dependently inhibited Wnt signaling in the junctional epithelium.",
+        "uncertainties": [
+          "The passage also states that Wnt pathway suppression was verified, but the exact assay readout is not separately specified beyond the transgenic strains used.",
+          "JE is annotated as a cell line by the provider, but the text refers to it as junctional epithelium; the molecular form/taxon mapping remains uncertain."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        298,
+        402
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        403,
+        489
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        403,
+        507
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        491,
+        556
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        921,
+        987
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        558,
+        623
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

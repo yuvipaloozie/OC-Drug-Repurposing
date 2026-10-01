@@ -1,0 +1,97 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "macrophages and osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "7454"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Wiskott-Aldrich syndrome protein (WASp)",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "defective bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 595,
+            "passage_index": 1,
+            "quote": "macrophages and osteoclasts lacking Wiskott-Aldrich syndrome protein (WASp) are not able to form podosomes, and this leads to altered macrophage chemotaxis and defective bone resorption by osteoclasts.",
+            "start": 394
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "defective bone resorption",
+          "intervention": "lacking Wiskott-Aldrich syndrome protein (WASp)",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Lack of WASp in macrophages and osteoclasts is reported to impair podosome formation and is associated with defective bone resorption by osteoclasts.",
+        "uncertainties": [
+          "The quote also mentions altered macrophage chemotaxis, but the claim here is limited to osteoclast bone resorption.",
+          "Species is not explicitly assigned to the osteoclast result in this sentence, so context remains mixed human/murine from the abstract."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        394,
+        595
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        378,
+        599
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

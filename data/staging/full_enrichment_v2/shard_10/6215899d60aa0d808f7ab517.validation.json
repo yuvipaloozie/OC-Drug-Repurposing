@@ -1,0 +1,227 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "in vitro",
+          "disease_setting": null,
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "32",
+              "35"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "Dock5(-/-) osteoclasts",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "compound",
+            "surface": "minerals",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "36",
+              "37",
+              "38"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "active MMP9, TRAP and CtsK",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1645,
+            "passage_index": 1,
+            "quote": "In vitro, we show that Dock5(-/-) osteoclasts do present acidic compartments at the ventral plasma membrane and produce normal amounts of active MMP9, TRAP and CtsK for matrix protein degradation but they are unable to solubilize minerals.",
+            "start": 1406
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro",
+          "dose": null,
+          "duration": null,
+          "endpoint": "mineral solubilization",
+          "intervention": "Dock5(-/-)",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In Dock5(-/-) osteoclasts, mineral solubilization is lost, while matrix-protein degradation markers remain normal.",
+        "uncertainties": [
+          "The text does not specify whether the loss of mineral solubilization is direct or indirect.",
+          "'minerals' is a broad, unresolved target rather than a specific compound."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "long bones",
+          "disease_setting": null,
+          "species": "mice",
+          "stage": "developing and growing"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "23",
+              "24",
+              "25",
+              "26",
+              "27",
+              "28",
+              "29",
+              "30",
+              "32",
+              "33",
+              "34",
+              "35"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Dock5(-/-) mice",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [
+              "1",
+              "31",
+              "39"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "hypertrophic cartilage",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1095,
+            "passage_index": 1,
+            "quote": "We show that long bones are overall morphologically normal in developing and growing Dock5(-/-) mice.",
+            "start": 994
+          },
+          {
+            "end": 1205,
+            "passage_index": 1,
+            "quote": "We demonstrate that Dock5(-/-) mice also have normal hypertrophic cartilage and cartilage trabecular network.",
+            "start": 1096
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "hypertrophic cartilage and cartilage trabecular network",
+          "intervention": "Dock5(-/-)",
+          "outcome_change": "no_detected_change",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Dock5(-/-) mice show normal hypertrophic cartilage and cartilage trabecular network during development and growth.",
+        "uncertainties": [
+          "The sentence is a phenotype summary rather than a direct mechanistic assay of cartilage degradation.",
+          "The exact molecular form of Dock5 is not specified in the text beyond the gene annotation."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1406,
+        1645
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1540,
+        1653
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        994,
+        1095
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1127,
+        1192
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1096,
+        1205
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1198,
+        1267
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

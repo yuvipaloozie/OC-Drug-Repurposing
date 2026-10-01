@@ -1,0 +1,95 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "osteoporotic microenvironment",
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "31",
+              "32"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "epigallocatechin gallate",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 833,
+            "passage_index": 1,
+            "quote": "In the osteoporotic microenvironment, the MPN nanoparticles degrade and trigger the release of bioactive metals (strontium ions, SrII) to promote osteogenesis and functionalized phenols (epigallocatechin gallate, EGCG) to suppress osteoclastogenesis.",
+            "start": 583
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "release of functionalized phenols (EGCG) from metal-phenolic networks",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In the osteoporotic microenvironment, the nanoparticles released EGCG and the text states that EGCG suppresses osteoclastogenesis.",
+        "uncertainties": [
+          "The sentence describes EGCG release and its stated suppressive effect, but not a standalone direct mechanistic assay of EGCG on osteoclasts.",
+          "The nanoparticle itself is the delivery platform; directness of the EGCG effect is not established."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        583,
+        833
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        697,
+        905
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

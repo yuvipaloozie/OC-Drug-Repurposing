@@ -1,0 +1,208 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "skeletal tissues",
+          "disease_setting": "cancer",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "42",
+              "43"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "eribulin mesylate",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "38"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone mass",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activity",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 676,
+            "passage_index": 1,
+            "quote": "eribulin mesylate (ERI), a microtubule-targeting agent currently used to treat metastatic breast cancer and certain subtypes of advanced sarcomas, on bone metabolism in mice. The administration of ERI reduced bone mass in mice, mainly by promoting osteoclast activity.",
+            "start": 408
+          }
+        ],
+        "experiment": {
+          "assay": "bone metabolism / gene expression analysis of skeletal tissues",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone mass",
+          "intervention": "administration of ERI",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In mice, eribulin mesylate treatment reduced bone mass, mainly by promoting osteoclast activity.",
+        "uncertainties": [
+          "The text states that reduced bone mass was mainly due to promoting osteoclast activity, but does not provide a direct molecular mechanism for that effect."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "skeletal tissues",
+          "disease_setting": "cancer",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "42",
+              "43",
+              "47",
+              "50",
+              "52",
+              "54",
+              "59",
+              "63"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "eribulin mesylate",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "49"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "osteoprotegerin",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "RNA",
+            "surface": "transcript levels",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1030,
+            "passage_index": 1,
+            "quote": "Gene expression analysis of skeletal tissues revealed no change in the expression levels of the transcripts for RANK ligand, one of the master regulators of osteoclastogenesis; however, the transcript levels of osteoprotegerin, which neutralizes RANK ligand, were significantly reduced in ERI-treated mice compared with those in vehicle-treated controls",
+            "start": 677
+          }
+        ],
+        "experiment": {
+          "assay": "gene expression analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoprotegerin transcript levels",
+          "intervention": "ERI treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Eribulin mesylate treatment significantly reduced osteoprotegerin transcript levels in mouse skeletal tissues.",
+        "uncertainties": [
+          "The passage reports transcript changes, not protein abundance or activity.",
+          "The text also notes no change in RANK ligand transcripts, but this is a separate negative result not formulated as a causal mechanism here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        408,
+        676
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        500,
+        578
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        677,
+        1030
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        914,
+        1029
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,234 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclast-like cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "29",
+              "40",
+              "41",
+              "43",
+              "44"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Macrophage-stimulating protein",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "2",
+              "26",
+              "27",
+              "30",
+              "31",
+              "32",
+              "37",
+              "38",
+              "45"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "STK",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 116,
+            "passage_index": 0,
+            "quote": "Macrophage-stimulating protein activates STK receptor tyrosine kinase on osteoclasts and facilitates bone resorption",
+            "start": 0
+          },
+          {
+            "end": 741,
+            "passage_index": 1,
+            "quote": "MSP to OCLs induced rapid",
+            "start": 716
+          },
+          {
+            "end": 1132,
+            "passage_index": 1,
+            "quote": "MSP/STK signal transduction",
+            "start": 1105
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "STK receptor tyrosine kinase activation",
+          "intervention": "addition of MSP",
+          "outcome_change": "not_stated",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Macrophage-stimulating protein is reported to activate STK receptor tyrosine kinase in osteoclasts/osteoclast-like cells.",
+        "uncertainties": [
+          "The title states activation, but the abstract does not provide a direct biochemical assay for STK activation."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclast-like cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "29",
+              "40",
+              "41",
+              "43",
+              "44"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "MSP",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "pit formation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1047,
+            "passage_index": 1,
+            "quote": "MSP caused rapid redistribution of src to the borders of cytoplasm. These phenomena were associated with enhanced bone resorption. MSP caused a threefold increase in pit formation compared with control OCLs.",
+            "start": 840
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "threefold",
+          "duration": "rapid",
+          "endpoint": "pit formation / bone resorption",
+          "intervention": "addition of MSP",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Adding MSP to osteoclast-like cells increased bone resorption, measured as a threefold increase in pit formation.",
+        "uncertainties": [
+          "Pit formation is used as a readout for bone resorption, but the text does not describe the assay in detail.",
+          "The relation between MSP-induced src redistribution and resorption is stated as association rather than a direct mechanistic test."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        116
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        113
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        716,
+        741
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        332,
+        359
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1105,
+        1132
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1248,
+        1271
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        840,
+        1047
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        983,
+        1093
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

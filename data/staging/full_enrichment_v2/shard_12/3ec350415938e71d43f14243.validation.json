@@ -1,0 +1,177 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "postmenopausal osteoporosis",
+          "species": "mouse",
+          "stage": "ovariectomized (OVX) mouse model"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "48"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "loganin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "pro-osteoclastic markers",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1440,
+            "passage_index": 1,
+            "quote": "loganin inhibited the expression of pro-osteoclastic markers, such as tartrate-resistant acid phosphatase, C-terminal telopeptide, TNF-alpha and IL-6",
+            "start": 1291
+          }
+        ],
+        "experiment": {
+          "assay": "in vivo mouse model",
+          "dose": null,
+          "duration": null,
+          "endpoint": "expression of pro-osteoclastic markers",
+          "intervention": "loganin",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In OVX mice, loganin decreased the expression of pro-osteoclastic markers.",
+        "uncertainties": [
+          "The passage groups several markers together; the claim is about the marker expression level as stated, not a specific direct molecular target."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "postmenopausal osteoporosis",
+          "species": "mouse",
+          "stage": "ovariectomized (OVX) mouse model"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "48"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "loganin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone formation markers",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1558,
+            "passage_index": 1,
+            "quote": "enhanced the secretion of bone formation markers, such as procollagen type I intact n-terminal pro-peptide and IL-10",
+            "start": 1442
+          }
+        ],
+        "experiment": {
+          "assay": "in vivo mouse model",
+          "dose": null,
+          "duration": null,
+          "endpoint": "secretion of bone formation markers",
+          "intervention": "loganin",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In OVX mice, loganin increased the secretion of bone formation markers.",
+        "uncertainties": [
+          "The passage groups several markers together; the claim is about secretion of the marker set as stated, not a specific direct molecular target."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1291,
+        1440
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1484,
+        1600
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1442,
+        1558
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1602,
+        1695
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

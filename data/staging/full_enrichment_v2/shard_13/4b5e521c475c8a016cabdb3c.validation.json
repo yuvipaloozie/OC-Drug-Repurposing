@@ -1,0 +1,148 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW 264.7 murine macrophages",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "murine",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "34",
+              "35",
+              "39",
+              "42",
+              "55"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "EA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "36",
+              "37",
+              "40",
+              "41",
+              "43",
+              "44",
+              "45",
+              "54",
+              "56",
+              "57"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RANK",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "RANKL-RANK interaction",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "58",
+              "59"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "RAW 264.7 murine macrophages",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1552,
+            "passage_index": 1,
+            "quote": "EA can directly bind to RANKL and/or RANK and block the interaction between RANKL and RANK, thereby inhibiting downstream signaling pathways. Interestingly, we found that EA had strong affinities to RANK and RANKL, with the estimated equilibrium dissociation constants (KD) of 2.485 x 10-11 and 1.688 x 10-9 M, respectively, and could disrupt the interaction between RANKL and RANK, thereby inhibiting RANKL-induced canonical RANK signaling pathways (p65, JNK, ERK, and p38) and expression of downstream master transcriptional factors (NFATc1 and c-Fos) and osteoclast-specific genes and proteins (TRAP, c-Src, and cathepsin K), which could ultimately suppress RANKL-induced osteoclast differentiation and F-actin ring formation. Taken together, our results revealed that EA could block RANKL-RANK interaction and suppress RANKL-induced osteoclastogenesis by inhibiting RANK signaling pathways in RAW 264.7 murine macrophages.",
+            "start": 626
+          }
+        ],
+        "experiment": {
+          "assay": "binding and osteoclast differentiation assays",
+          "dose": null,
+          "duration": null,
+          "endpoint": "RANKL-RANK interaction and RANKL-induced osteoclastogenesis",
+          "intervention": "Ellagic acid",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "direct",
+          "effect_level": "binding",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Ellagic acid was reported to bind RANK and RANKL, disrupt the RANKL-RANK interaction, and inhibit RANKL-induced osteoclastogenesis in RAW 264.7 murine macrophages.",
+        "uncertainties": [
+          "RANK was not separately annotated in the provider data; its molecular form is inferred from the text.",
+          "The passage combines binding, signaling, and phenotype effects in one sentence, so the most specific causal edge is simplified to disruption of the RANKL-RANK interaction."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        626,
+        1552
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        756,
+        1653
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

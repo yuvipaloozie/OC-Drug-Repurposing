@@ -1,0 +1,233 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "Pg-LPS-induced in vitro periodontitis model",
+          "species": null,
+          "stage": "early"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "ADSCs-Exos",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "early osteoclast differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "35",
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Pg-LPS-induced in vitro periodontitis model",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1247,
+            "passage_index": 1,
+            "quote": "ADSCs-Exos suppressed early osteoclast differentiation in Pg-LPS-induced in vitro periodontitis model.",
+            "start": 1145
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "early osteoclast differentiation",
+          "intervention": "ADSCs-Exos",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "ADSCs-Exos suppressed early osteoclast differentiation in a Pg-LPS-induced in vitro periodontitis model.",
+        "uncertainties": [
+          "Exact cell type is not stated in the quoted sentence.",
+          "The claim concerns an in vitro periodontitis model; the underlying species is not specified."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "periodontitis cell model",
+          "compartment": null,
+          "disease_setting": "periodontitis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "ADSCs-Exos",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "45",
+              "51",
+              "54"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "COX-2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANK",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "46",
+              "52",
+              "55"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TRAF6",
+            "key": "e4",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "TRAF6",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1656,
+            "passage_index": 1,
+            "quote": "Furthermore, in a periodontitis cell model, ADSCs-Exos regulate bone resorption by downregulating the mRNA and protein expression levels of COX-2, RANK, and TRAF6.",
+            "start": 1493
+          },
+          {
+            "end": 1656,
+            "passage_index": 1,
+            "quote": "Furthermore, in a periodontitis cell model, ADSCs-Exos regulate bone resorption by downregulating the mRNA and protein expression levels of COX-2, RANK, and TRAF6.",
+            "start": 1493
+          }
+        ],
+        "experiment": {
+          "assay": "real-time PCR and western blotting",
+          "dose": null,
+          "duration": null,
+          "endpoint": "mRNA and protein expression levels of COX-2, RANK, and TRAF6",
+          "intervention": "ADSCs-Exos",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In a periodontitis cell model, ADSCs-Exos downregulated COX-2, RANK, and TRAF6 expression and were described as modulating the COX-2/TRAF6/RANK signaling axis.",
+        "uncertainties": [
+          "The sentence states downregulation of multiple targets; the object key captures only one representative target while the summary names all three.",
+          "RANK is not annotated in the provider entities.",
+          "The existing-node suggestion for TRAF6 is provider-only and species-specific mapping is uncertain."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1145,
+        1247
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1238,
+        1340
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1493,
+        1656
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1350,
+        1508
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1493,
+        1656
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1350,
+        1456
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

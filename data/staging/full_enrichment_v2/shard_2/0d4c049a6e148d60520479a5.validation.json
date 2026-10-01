@@ -1,0 +1,242 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "human",
+          "stage": "elderly"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "calcitonin analogs",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "adverse reactions",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "nasal discomfort",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e7",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "abnormal product odor",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2285,
+            "passage_index": 1,
+            "quote": "Conclusion: Long-term use of calcitonin analogs for the treatment of osteoporosis in the elderly does not confer additional benefits and instead increases the risk of adverse reactions.",
+            "start": 2100
+          },
+          {
+            "end": 1453,
+            "passage_index": 1,
+            "quote": "nasal discomfort (ROR = 283.4, PRR = 264.5, IC = 7.3, IC025 = 6.8) and abnormal product odor",
+            "start": 1361
+          }
+        ],
+        "experiment": {
+          "assay": "pharmacovigilance analysis",
+          "dose": null,
+          "duration": "long-term",
+          "endpoint": "adverse reactions",
+          "intervention": "long-term use of calcitonin analogs",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e5",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Long-term calcitonin analog use was associated with an increased risk of adverse reactions in elderly osteoporosis patients.",
+        "uncertainties": [
+          "The adverse-event association is based on pharmacovigilance signals and a conclusion statement, so causality is not established.",
+          "Specific adverse events are reported, but the extracted object is the broader adverse-reactions outcome."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "no_effect",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "human",
+          "stage": "elderly"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "calcitonin analogs",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "new non-vertebral fractures",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "20"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "vertebral fractures",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "lumbar spine and femoral neck bone mineral density",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1690,
+            "passage_index": 1,
+            "quote": "no significant effect of calcitonin analogs in preventing new non-vertebral fractures",
+            "start": 1605
+          },
+          {
+            "end": 1899,
+            "passage_index": 1,
+            "quote": "and vertebral fractures (HR = 0.93, 95% CI: 0.77-1.14). Changes in lumbar spine",
+            "start": 1822
+          }
+        ],
+        "experiment": {
+          "assay": "meta-analysis of randomized controlled trials",
+          "dose": null,
+          "duration": "long-term",
+          "endpoint": "prevention of fractures; bone mineral density",
+          "intervention": "long-term use of calcitonin analogs",
+          "outcome_change": "no_detected_change",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Long-term calcitonin analog use did not show a significant effect in preventing new non-vertebral or vertebral fractures in elderly osteoporosis patients, and BMD changes were not statistically significant.",
+        "uncertainties": [
+          "The text combines multiple outcomes; the causal object for the no-effect statement is partly distributed across fracture endpoints.",
+          "Bone mineral density is described as a slight upward trend but not statistically significant, so the direction is not treated as a confirmed effect."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1605,
+        1690
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1741,
+        1818
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        2100,
+        2285
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2082,
+        2166
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1361,
+        1453
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1492,
+        1576
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

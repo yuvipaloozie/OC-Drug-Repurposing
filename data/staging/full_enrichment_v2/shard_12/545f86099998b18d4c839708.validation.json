@@ -1,0 +1,193 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "27",
+              "30",
+              "32",
+              "35",
+              "37",
+              "44"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "NFATc1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "34",
+              "43"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 380,
+            "passage_index": 1,
+            "quote": "Inactivation of NFATc1 strongly attenuates RANKL-induced bone resorption and overexpression of a constitutively active form of NFATc1 in osteoclasts induces formation of actin rings and resorption pits on dentin slices. ",
+            "start": 160
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "RANKL-induced bone resorption",
+          "intervention": "Inactivation of NFATc1",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Inactivation of NFATc1 strongly attenuates RANKL-induced bone resorption.",
+        "uncertainties": [
+          "The quoted evidence span also contains a separate overexpression result.",
+          "NFATc1 molecular form is not explicitly stated in the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "on dentin slices",
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "27",
+              "30",
+              "32",
+              "35",
+              "37",
+              "44"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "NFATc1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "actin rings and resorption pits",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 380,
+            "passage_index": 1,
+            "quote": "Inactivation of NFATc1 strongly attenuates RANKL-induced bone resorption and overexpression of a constitutively active form of NFATc1 in osteoclasts induces formation of actin rings and resorption pits on dentin slices. ",
+            "start": 160
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "formation of actin rings and resorption pits on dentin slices",
+          "intervention": "overexpression of a constitutively active form of NFATc1",
+          "outcome_change": "increased",
+          "perturbation_type": "gain_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Overexpression of a constitutively active form of NFATc1 in osteoclasts induces formation of actin rings and resorption pits on dentin slices.",
+        "uncertainties": [
+          "The quoted evidence span also contains a separate inactivation result.",
+          "NFATc1 molecular form is not explicitly stated in the text.",
+          "The text does not separately specify which part of the phenotype is driven by actin rings versus resorption pits."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        160,
+        380
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        161,
+        304
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        160,
+        380
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        161,
+        304
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

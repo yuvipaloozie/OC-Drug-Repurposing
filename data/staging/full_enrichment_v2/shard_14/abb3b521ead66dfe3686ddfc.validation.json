@@ -1,0 +1,312 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "44",
+              "45"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "5-lipoxygenase",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "43"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "arachidonic acid",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "41",
+              "42",
+              "46",
+              "50"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Leukotrienes",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 100,
+            "passage_index": 1,
+            "quote": "Leukotrienes (LTs) are derived from arachidonic acid metabolism by the 5-lipoxygenase (5-LO) enzyme.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "leukotriene biosynthesis",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "metabolic_conversion",
+        "local_claim_id": "c1",
+        "reaction": {
+          "direction": "as_written",
+          "enzyme": "e1",
+          "products": [
+            {
+              "entity": "e3",
+              "stoichiometry": null
+            }
+          ],
+          "substrates": [
+            {
+              "entity": "e2",
+              "stoichiometry": null
+            }
+          ]
+        },
+        "regulatory": null,
+        "summary": "Leukotrienes are described as being derived from arachidonic acid metabolism by 5-lipoxygenase.",
+        "uncertainties": [
+          "The text states the conversion as background biology; it does not describe a direct assay in this passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoblasts",
+          "compartment": "bone",
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "eight-week-old"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "51",
+              "53",
+              "55",
+              "56",
+              "60",
+              "62",
+              "66",
+              "68",
+              "70",
+              "73",
+              "74",
+              "76",
+              "78",
+              "79"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "5-LO",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 581,
+            "passage_index": 1,
+            "quote": "using a 5-LO knockout mouse model.",
+            "start": 547
+          },
+          {
+            "end": 1253,
+            "passage_index": 1,
+            "quote": "the 5-LO absence enhances osteoblasts differentiation and mineralization but decreases the proliferation.",
+            "start": 1148
+          }
+        ],
+        "experiment": {
+          "assay": "alkaline phosphatase activity and mineralization assay",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoblast differentiation and mineralization",
+          "intervention": "5-LO knockout",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "unknown",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": null,
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In 5-LO knockout mice, absence of 5-LO was associated with enhanced osteoblast differentiation and mineralization.",
+        "uncertainties": [
+          "The passage links increased differentiation/mineralization and decreased proliferation in the same sentence; only the increased differentiation/mineralization outcome is extracted here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "bone",
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "51",
+              "53",
+              "55",
+              "56",
+              "60",
+              "62",
+              "66",
+              "68",
+              "70",
+              "73",
+              "74",
+              "76",
+              "78",
+              "79"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "5-LO",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1929,
+            "passage_index": 1,
+            "quote": "We observed enormous differences in the morphology and function of osteoclasts with reduced bone resorption markers and impaired osteoclasts in 5-LO KO compared to WT osteoclasts.",
+            "start": 1750
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption markers and osteoclast morphology/function",
+          "intervention": "5-LO knockout",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "unknown",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": null,
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Compared with wild-type, 5-LO knockout osteoclasts showed reduced bone resorption markers and impaired osteoclast morphology/function.",
+        "uncertainties": [
+          "The endpoint combines marker reduction and impaired osteoclast phenotype; no separate molecular target for the resorption markers is specified in the passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        100
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        97
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        547,
+        581
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        560,
+        597
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1148,
+        1253
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1185,
+        1284
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1750,
+        1929
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1875,
+        1970
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

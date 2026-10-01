@@ -1,0 +1,169 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "genetic diseases",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "18",
+              "19",
+              "20",
+              "23",
+              "26",
+              "30",
+              "32"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "SHP2",
+            "taxon": "human"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 868,
+            "passage_index": 1,
+            "quote": "We review rodent models of pathologic processes caused by germline mutations that activate SHP2 enzymatic activity",
+            "start": 754
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "unknown",
+          "directness": "unknown",
+          "effect_level": "unknown",
+          "interpretation": "explicit_in_text",
+          "object": null,
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The review states that related signaling pathways, including Ras/MEK/ERK, JAK/STAT, and PI3K/Akt, are important in skeletal development in the context of SHP2.",
+        "uncertainties": [
+          "The cited span does not include the pathway list; the claim is limited to the germline-mutation/SHP2 context stated in the abstract.",
+          "No osteoclast-specific perturbation or outcome is reported."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "18",
+              "19",
+              "20",
+              "23",
+              "26",
+              "30",
+              "32"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "SHP2",
+            "taxon": "human"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 195,
+            "passage_index": 1,
+            "quote": "Src homology-2 domain-containing phosphatase 2 (SHP2) is a ubiquitously expressed phosphatase that is vital for skeletal development and maintenance of chondrocytes, osteoblasts, and osteoclasts.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": null,
+        "summary": "SHP2 is described as vital for skeletal development and for maintenance of osteoclasts.",
+        "uncertainties": [
+          "This is a review background statement, not an experimental result.",
+          "The passage states maintenance of osteoclasts but does not specify a direction of regulation."
+        ]
+      },
+      "errors": [
+        "regulatory form mismatch"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        195
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        119
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        754,
+        868
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        661,
+        777
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

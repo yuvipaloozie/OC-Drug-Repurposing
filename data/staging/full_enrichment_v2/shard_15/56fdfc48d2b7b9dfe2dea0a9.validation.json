@@ -1,0 +1,199 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "49"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "50"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "OPG",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 634,
+            "passage_index": 1,
+            "quote": "bone remodeling between osteoclastogenesis and osteoblast differentiation regulated by key signaling pathways, including the RANKL/RANK/OPG",
+            "start": 495
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "unknown",
+          "directness": "unknown",
+          "effect_level": "unknown",
+          "interpretation": "explicit_in_text",
+          "object": "e1",
+          "sign": "unknown",
+          "subject": "e2"
+        },
+        "summary": "The review states that bone remodeling between osteoclastogenesis and osteoblast differentiation is regulated by signaling pathways including the RANKL/RANK/OPG network.",
+        "uncertainties": [
+          "The passage lists RANKL/RANK/OPG as a regulatory pathway in a review context, but does not specify a direct causal edge or direction for RANKL versus OPG.",
+          "The text does not isolate a single molecular subject-object pair beyond the pathway mention."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "estrogen deficiency-induced osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "62"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "estrogen deficiency",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone formation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1310,
+            "passage_index": 1,
+            "quote": "estrogen deficiency accelerates bone resorption and suppresses bone formation through altered cytokine signaling, oxidative stress, and impaired mechanotransduction",
+            "start": 1146
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The review states that estrogen deficiency accelerates bone resorption and suppresses bone formation.",
+        "uncertainties": [
+          "This is a review statement, not a primary experimental result.",
+          "The cited span also mentions suppression of bone formation, which is represented as a separate effect rather than a mechanistic assay."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        495,
+        634
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        364,
+        462
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1146,
+        1310
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1264,
+        1374
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,226 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoclast",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D005232"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Short-chain fatty acids",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 595,
+            "passage_index": 1,
+            "quote": "Short-chain fatty acids suppress osteoclast differentiation",
+            "start": 536
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation",
+          "intervention": null,
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Short-chain fatty acids are described as suppressing osteoclast differentiation.",
+        "uncertainties": [
+          "Review/background statement; no primary experiment is described.",
+          "No species or assay is stated in the cited text."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": "postmenopausal"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D056828"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Estrogen deficiency",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "4982"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "pathway",
+            "surface": "receptor activator of nuclear factor kappaBeta ligand/osteoprotegerin signaling pathway",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "gut microbial composition",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D001847"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "postmenopausal bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1311,
+            "passage_index": 1,
+            "quote": "Estrogen deficiency further disrupts the receptor activator of nuclear factor kappaBeta ligand/osteoprotegerin signaling pathway and alters gut microbial composition",
+            "start": 1146
+          },
+          {
+            "end": 1353,
+            "passage_index": 1,
+            "quote": "contributing to postmenopausal bone loss",
+            "start": 1313
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "RANKL/osteoprotegerin signaling pathway",
+          "intervention": null,
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Estrogen deficiency is described as disrupting RANKL/osteoprotegerin signaling and altering gut microbial composition, contributing to postmenopausal bone loss.",
+        "uncertainties": [
+          "This is a review-level mechanistic statement, not a described experiment.",
+          "The pathway annotation is ambiguous in the packet; no separate molecular entities were explicitly identified in the text."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        536,
+        595
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        631,
+        683
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1146,
+        1311
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1241,
+        1371
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1313,
+        1353
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1373,
+        1439
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

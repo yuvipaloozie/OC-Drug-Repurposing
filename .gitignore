@@ -59,3 +59,30 @@ data/processed/backup_legacy_schema/
 # Reviewed source snapshots are required for reproducible evidence audits.
 !data/raw/provenance/
 !data/raw/provenance/**
+
+# Bounded discovery snapshot supports offline replay and source auditing.
+!data/raw/discovery_pilot/
+!data/raw/discovery_pilot/**
+
+# Local credentials: never commit secrets, including provider-specific dotenv files.
+.env.*
+!.env.example
+.secrets/
+credentials.local.json
+*.dpapi
+
+# Regenerable review pages, execution logs, and superseded drafts.
+data/staging/**/*.log
+data/staging/**/review_queue.html
+data/staging/**/test_results.txt
+data/staging/**/*draft*
+data/staging/**/*rolled_back*
+data/staging/**/*superseded*
+data/staging/**/initial_prepared_superseded.json
+
+# Provider response envelopes contain opaque encrypted payloads; retain locally only.
+data/staging/**/*.response.json
+# Large discovery intermediates are regenerated from the retained public-source cache.
+data/staging/**/annotated_documents.json
+data/staging/connectivity_1000/
+data/staging/connectivity_iteration_1/

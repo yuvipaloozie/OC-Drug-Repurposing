@@ -1,0 +1,183 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "subchondral bone",
+          "compartment": "subchondral bone",
+          "disease_setting": "depression-related joint pain",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "57",
+              "58",
+              "59"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TLR4",
+            "key": "e1",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "pathway",
+            "surface": "Lbp-Tlr4-Netrin-1 axis",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "pain-like behaviors and excessive bone resorption",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1182,
+            "passage_index": 1,
+            "quote": "The Lbp-Tlr4-Netrin-1 axis was highly upregulated in depressed subchondral bone, and its inhibition alleviated both pain-like behaviors and excessive bone resorption",
+            "start": 1017
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "pain-like behaviors and excessive bone resorption",
+          "intervention": "inhibition of the Lbp-Tlr4-Netrin-1 axis",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The Lbp-Tlr4-Netrin-1 axis was reported as highly upregulated in depressed subchondral bone, and inhibition of this axis alleviated pain-like behaviors and excessive bone resorption.",
+        "uncertainties": [
+          "The cited text combines an upregulation observation with an intervention outcome; the causal relation for the upregulation itself is not established.",
+          "The axis is treated as a pathway/complex-level entity rather than a single molecular form.",
+          "The exact inhibitory intervention is not specified in the abstract."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "muscle satellite cells",
+          "compartment": "muscle",
+          "disease_setting": "depression-related joint pathology",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "64",
+              "87"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "TGF-beta1",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "joint integrity",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1746,
+            "passage_index": 1,
+            "quote": "and deletion of TGF-beta1 in satellite cells improved joint integrity",
+            "start": 1677
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "joint integrity",
+          "intervention": "conditional deletion of TGF-beta1 in muscle satellite cells",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Conditional deletion of TGF-beta1 in muscle satellite cells improved joint integrity.",
+        "uncertainties": [
+          "The abstract does not specify the molecular mechanism linking TGF-beta1 deletion to improved joint integrity.",
+          "The evidence phrase uses the abbreviated form 'satellite cells'; the preceding sentence indicates muscle satellite cells."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1017,
+        1182
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1072,
+        1209
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1677,
+        1746
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1759,
+        1836
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

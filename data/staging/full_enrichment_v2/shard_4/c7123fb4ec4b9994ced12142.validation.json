@@ -1,0 +1,115 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "pseudohyperparathyroidism",
+          "species": "women",
+          "stage": "pregnancy and lactation"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "68"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "parathyroid hormone-related protein",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [
+              "67"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "hypercalcemia",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1419,
+            "passage_index": 1,
+            "quote": "pseudohyperparathyroidism, a form of hypercalcemia",
+            "start": 1369
+          },
+          {
+            "end": 1475,
+            "passage_index": 1,
+            "quote": "that is mediated by parathyroid hormone-related protein",
+            "start": 1420
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "hypercalcemia",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The review states that pregnancy and lactation can cause pseudohyperparathyroidism, and that this hypercalcemia is mediated by parathyroid hormone-related protein.",
+        "uncertainties": [
+          "Review/background statement rather than a primary experiment.",
+          "The text says 'mediated by' but does not specify direct molecular mechanism or direction beyond involvement in hypercalcemia."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1369,
+        1419
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1455,
+        1505
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1420,
+        1475
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1507,
+        1575
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

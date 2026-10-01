@@ -1,0 +1,228 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "periodontal",
+          "disease_setting": "type 2 diabetes",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D003924"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "type 2 diabetes",
+            "taxon": "rat"
+          },
+          {
+            "annotation_ids": [
+              "78975"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "periodontal AMPK activity",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D007249"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "inflammation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D001862"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "alveolar bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1072,
+            "passage_index": 1,
+            "quote": "showed that diabetic rats exhibited an exacerbated alveolar bone resorption, overactive inflammation, and decreased periodontal AMPK activity during orthodontic tooth movement.",
+            "start": 896
+          }
+        ],
+        "experiment": {
+          "assay": "histological analyses",
+          "dose": null,
+          "duration": "0, 3, 7, or 14 days",
+          "endpoint": "periodontal AMPK activity",
+          "intervention": "type 2 diabetes",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Type 2 diabetes was reported to decrease periodontal AMPK activity during orthodontic tooth movement, with associated excessive inflammation and alveolar bone resorption.",
+        "uncertainties": [
+          "The sentence links decreased AMPK activity with increased inflammation and bone resorption, but the causal chain is summarized in the authors' interpretation rather than directly isolated mechanistically."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "periodontal",
+          "disease_setting": "type 2 diabetes",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "AMPK agonist",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D007249"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "periodontal inflammation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D001862"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "alveolar bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "orthodontic tooth movement",
+            "taxon": "rat"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1249,
+            "passage_index": 1,
+            "quote": "Injection of the AMPK agonist alleviated type 2 diabetes-induced periodontal inflammation and alveolar bone resorption, thus normalizing distance of orthodontic tooth movement.",
+            "start": 1073
+          }
+        ],
+        "experiment": {
+          "assay": "histological analyses",
+          "dose": null,
+          "duration": null,
+          "endpoint": "periodontal inflammation and alveolar bone resorption",
+          "intervention": "Injection of the AMPK agonist",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Injection of an AMPK agonist alleviated type 2 diabetes-induced periodontal inflammation and alveolar bone resorption, normalizing orthodontic tooth movement distance.",
+        "uncertainties": [
+          "The specific AMPK agonist is not named in the abstract.",
+          "The relationship between reduced inflammation/bone resorption and normalized tooth movement is stated as part of the reported outcome, not as a separate tested causal step."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        896,
+        1072
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        939,
+        1189
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1073,
+        1249
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1191,
+        1414
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

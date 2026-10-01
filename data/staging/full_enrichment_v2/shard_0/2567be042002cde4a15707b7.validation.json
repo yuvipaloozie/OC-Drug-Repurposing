@@ -1,0 +1,207 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "bone disease",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Human osteoclast-stimulating factor",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast formation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "24"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 149,
+            "passage_index": 1,
+            "quote": "Human osteoclast-stimulating factor (hOSF) is an intracellular protein produced by osteoclasts that induces osteoclast formation and bone resorption.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Human osteoclast-stimulating factor is described as being produced by osteoclasts and as inducing osteoclast formation and bone resorption.",
+        "uncertainties": [
+          "The statement is background description rather than a specific new experiment.",
+          "The sentence also mentions bone resorption as a second phenotype; only one regulatory relation is encoded here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "bone disease",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "37"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "APPAR(N-Clp)VK",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "hOSF SH3 domain",
+            "taxon": "9606"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1937,
+            "passage_index": 1,
+            "quote": "two designed peptoids APPAR(N-Clp)VK and APPAR(N-Ffa)VK with Pro430 replaced by N-Clp and N-Ffa were confirmed to have increased (Kd  = 0.87 muM) and comparable (Kd  = 2.9 muM) affinities relative to the template, respectively.",
+            "start": 1710
+          },
+          {
+            "end": 1415,
+            "passage_index": 1,
+            "quote": "the two key proline residues (Pro427 and Pro430) of the template peptide with nine N-substituted amino acid types.",
+            "start": 1301
+          }
+        ],
+        "experiment": {
+          "assay": "fluorescence spectroscopy assays",
+          "dose": null,
+          "duration": null,
+          "endpoint": "binding affinity (Kd)",
+          "intervention": "Pro430 replaced by N-Clp",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "binding",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The designed peptoid APPAR(N-Clp)VK showed increased binding affinity to the hOSF SH3 domain relative to the template peptide.",
+        "uncertainties": [
+          "The report compares binding affinity relative to a template peptide; no direct causal mechanism beyond binding is established.",
+          "The text also discusses APPAR(N-Ffa)VK, but that comparison is not encoded as a separate claim here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        149
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        101
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1710,
+        1937
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1708,
+        1932
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1301,
+        1415
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1610,
+        1676
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

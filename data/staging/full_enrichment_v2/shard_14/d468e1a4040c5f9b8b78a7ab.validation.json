@@ -1,0 +1,243 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "7",
+              "8",
+              "9",
+              "11"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Cbl",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 118,
+            "passage_index": 1,
+            "quote": "Cbl has been found play an important role in regulating cellular proliferation and migration.",
+            "start": 25
+          },
+          {
+            "end": 446,
+            "passage_index": 1,
+            "quote": "the important role of Cbl in the regulating osteoclast differentiation (also named osteoclastogenesis) has been reported",
+            "start": 326
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation (osteoclastogenesis)",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Cbl is described as having an important regulatory role in osteoclast differentiation (osteoclastogenesis).",
+        "uncertainties": [
+          "This is a review-style background statement rather than a primary experimental result.",
+          "The text does not specify species, cell type, or whether Cbl refers to gene or protein form in this passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "7",
+              "8",
+              "9",
+              "11"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Cbl",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "10"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "Src signaling",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "PI3K signaling",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone homeostasis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 844,
+            "passage_index": 1,
+            "quote": "the regulatory role of Cbl, as well as its cross-talking",
+            "start": 788
+          },
+          {
+            "end": 690,
+            "passage_index": 1,
+            "quote": "with other signaling pathways (such as: Src and PI3K signaling) in bone homeostasis.",
+            "start": 606
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "cross-talking with Src and PI3K signaling in bone homeostasis",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The review states that Cbl cross-talks with Src and PI3K signaling pathways in bone homeostasis.",
+        "uncertainties": [
+          "The passage describes cross-talking in a review context and does not specify a direct molecular mechanism.",
+          "PI3K is mentioned in the text but not annotated by the provider; the pathway entity is inferred only from the surface form."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        25,
+        118
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        111,
+        193
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        326,
+        446
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        288,
+        407
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        788,
+        844
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        434,
+        491
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        606,
+        690
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        491,
+        553
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

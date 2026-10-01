@@ -1,0 +1,436 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "50"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "anisomycin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "33",
+              "49",
+              "51"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "JNK",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "this effect",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1159,
+            "passage_index": 1,
+            "quote": "anisomycin (a JNK agonist) partially confronts",
+            "start": 1113
+          },
+          {
+            "end": 1172,
+            "passage_index": 1,
+            "quote": "this effect.",
+            "start": 1160
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bentamapimod effect on RANKL-induced osteoclast differentiation",
+          "intervention": "anisomycin",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Anisomycin partially reversed bentamapimod's inhibitory effect on RANKL-induced osteoclast differentiation.",
+        "uncertainties": [
+          "The target of 'this effect' is inferred from the preceding sentence and is not spelled out in the quoted fragment alone."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "estrogen deficiency",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "31",
+              "35",
+              "39",
+              "43",
+              "44",
+              "46",
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "bentamapimod",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "36",
+              "40",
+              "45"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "37",
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "mice",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "38",
+              "42"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "estrogen deficiency",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 318,
+            "passage_index": 1,
+            "quote": "Bentamapimod, initially designed for neurological disorders,",
+            "start": 258
+          },
+          {
+            "end": 626,
+            "passage_index": 1,
+            "quote": "bentamapimod alleviated bone loss in mice suffering",
+            "start": 575
+          },
+          {
+            "end": 1056,
+            "passage_index": 1,
+            "quote": "bone loss, but the effect",
+            "start": 1033
+          },
+          {
+            "end": 1045,
+            "passage_index": 1,
+            "quote": "bentamapimod can attenuate receptor activator of nuclear factor-kB ligand (RANKL)",
+            "start": 964
+          }
+        ],
+        "experiment": {
+          "assay": "micro-CT and histomorphometry assays",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone loss",
+          "intervention": "bentamapimod",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Bentamapimod reduced bone loss in estrogen-deficient mice and ameliorated ovariectomy-induced bone loss.",
+        "uncertainties": [
+          "The text combines in vivo bone-loss outcomes with multiple clauses; the extracted effect is limited to the stated reduction in bone loss and does not separate bone resorption from bone formation beyond the wording provided."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "31",
+              "35",
+              "39",
+              "43",
+              "44",
+              "46",
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "bentamapimod",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "4",
+              "47",
+              "48"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "33",
+              "49",
+              "51"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "JNK",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1053,
+            "passage_index": 1,
+            "quote": "bentamapimod can attenuate receptor activator of nuclear factor-kB ligand (RANKL)-induced",
+            "start": 964
+          },
+          {
+            "end": 1101,
+            "passage_index": 1,
+            "quote": "osteoclast differentiation via inactivating the",
+            "start": 1054
+          },
+          {
+            "end": 1235,
+            "passage_index": 1,
+            "quote": "JNK",
+            "start": 1232
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation",
+          "intervention": "bentamapimod",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Bentamapimod attenuated RANKL-induced osteoclast differentiation by inactivating JNK.",
+        "uncertainties": [
+          "The sentence states the mechanism as 'via inactivating the JNK,' but directness is not established here.",
+          "RANKL is provider-tagged as a gene; the text does not resolve whether the intended molecular form is ligand protein or gene symbol, so it is left as text-supported candidate protein/protein-like entity."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        258,
+        318
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        388,
+        444
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        575,
+        626
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        600,
+        649
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        964,
+        1045
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1094,
+        1178
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        964,
+        1053
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1094,
+        1183
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1054,
+        1101
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1184,
+        1230
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1113,
+        1159
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1239,
+        1282
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1160,
+        1172
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1283,
+        1295
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

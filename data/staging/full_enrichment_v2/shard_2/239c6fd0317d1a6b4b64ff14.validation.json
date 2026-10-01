@@ -1,0 +1,357 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "LEF low-response mice",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "67",
+              "72",
+              "80",
+              "86",
+              "91",
+              "95",
+              "97",
+              "104",
+              "105"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ARS",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "65",
+              "70",
+              "74",
+              "82",
+              "93"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone destruction",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1349,
+            "passage_index": 1,
+            "quote": "ARS treatment significantly ameliorated joint inflammation and bone destruction",
+            "start": 1270
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone destruction",
+          "intervention": "ARS treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In LEF low-response mice, artesunate treatment significantly ameliorated bone destruction.",
+        "uncertainties": [
+          "The quoted span mentions amelioration of joint inflammation and bone destruction together; the extracted object is limited to bone destruction."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclast",
+          "compartment": null,
+          "disease_setting": "rheumatoid arthritis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "67",
+              "72",
+              "80",
+              "86",
+              "91",
+              "95",
+              "97",
+              "104",
+              "105"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ARS",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "cGMP-PKG signalling pathway",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "99",
+              "100",
+              "101",
+              "107",
+              "108"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "TRAF6/NFATc1 axis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "99",
+              "100",
+              "107"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TRAF6",
+            "key": "e5",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "TRAF6",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "101",
+              "108"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:NFATC1",
+            "key": "e6",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "NFATc1",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1689,
+            "passage_index": 1,
+            "quote": "ARS enhanced osteoclast inhibition by activating the cyclic guanosine monophosphate (cGMP)-cGMP-dependent protein kinase (PKG) signalling pathway",
+            "start": 1544
+          },
+          {
+            "end": 1824,
+            "passage_index": 1,
+            "quote": "tumour necrosis factor receptor-associated factor 6 (TRAF6)/nuclear factor of activated T cells 1 (NFATc1) axis",
+            "start": 1713
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "cGMP-PKG signalling pathway",
+          "intervention": "ARS treatment",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Artesunate activated cGMP-PKG signaling and downregulated the TRAF6/NFATc1 axis in the osteoclast context.",
+        "uncertainties": [
+          "The passage states activation of the cGMP-PKG pathway and downregulation of the TRAF6/NFATc1 axis, but does not specify direct molecular targets or directness.",
+          "The osteoclast-related context is inferred from the surrounding sentence rather than a dedicated assay description."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclast",
+          "compartment": null,
+          "disease_setting": "rheumatoid arthritis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "67",
+              "72",
+              "80",
+              "86",
+              "91",
+              "95",
+              "97",
+              "104",
+              "105"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ARS",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "99",
+              "100",
+              "101",
+              "107",
+              "108"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "TRAF6/NFATc1 axis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1824,
+            "passage_index": 1,
+            "quote": "and downregulating the tumour necrosis factor receptor-associated factor 6 (TRAF6)/nuclear factor of activated T cells 1 (NFATc1) axis",
+            "start": 1690
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "TRAF6/NFATc1 axis",
+          "intervention": "ARS treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Artesunate suppressed the TRAF6/NFATc1 axis.",
+        "uncertainties": [
+          "The text uses the phrase 'downregulating the ... axis', which may encompass expression or pathway activity; the exact level is not specified."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1270,
+        1349
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        612,
+        686
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1544,
+        1689
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1666,
+        1744
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1713,
+        1824
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1842,
+        1967
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1690,
+        1824
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1753,
+        1818
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

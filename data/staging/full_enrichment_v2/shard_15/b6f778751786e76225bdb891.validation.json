@@ -1,0 +1,109 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": "osteoclasts",
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "31",
+              "38"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Bisphosphonates",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "32"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "33"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "farnesyl pyrophosphate synthase",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 808,
+            "passage_index": 1,
+            "quote": "Bisphosphonates inhibit bone resorption by targeting farnesyl pyrophosphate synthase in osteoclasts, and clinical trials have confirmed their efficacy in improving osteoporosis.",
+            "start": 631
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption",
+          "intervention": "bisphosphonates",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Bisphosphonates are stated to inhibit bone resorption, with the mechanism described as targeting farnesyl pyrophosphate synthase in osteoclasts.",
+        "uncertainties": [
+          "The mechanism mentions targeting farnesyl pyrophosphate synthase, but the passage does not explicitly state direct enzymatic inhibition or the direction of that target-level effect.",
+          "The claim is presented in a review-style statement rather than a primary experiment.",
+          "Osteoclasts are mentioned as the location of the target, but no separate osteoclast-specific experiment is described."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        631,
+        808
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        714,
+        891
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

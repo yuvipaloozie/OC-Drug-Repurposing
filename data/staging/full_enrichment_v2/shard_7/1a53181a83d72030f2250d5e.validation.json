@@ -1,0 +1,190 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "RAW264.7 cells",
+          "stage": "early stage of osteoclast differentiation"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "13"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "CG-1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-induced Akt phosphorylation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "NFATc1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "16",
+              "17"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "LY294002",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1074,
+            "passage_index": 1,
+            "quote": "CG-1 lowered RANKL-induced Akt phosphorylation, which is similar to the results seen with the PI3K inhibitor, LY294002. Moreover, CG-1 and LY294002 suppressed the RANKL-induced expression of NFATc1",
+            "start": 877
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": "early stage / first 3 days of the 5-day-osteoclastogenesis period",
+          "endpoint": "Akt phosphorylation; NFATc1 expression",
+          "intervention": "CG-1",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "CG-1 lowered RANKL-induced Akt phosphorylation and suppressed NFATc1 expression, similar to the PI3K inhibitor LY294002.",
+        "uncertainties": [
+          "The passage compares CG-1 with LY294002, but does not state a direct interaction or target engagement.",
+          "NFATc1 expression change is described as suppressed, but the subject-object regulatory field captures only the CG-1 to Akt phosphorylation relation; the NFATc1 statement is included in the summary as downstream context."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "RAW264.7 cells",
+          "stage": "osteoclast differentiation"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "13"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "CG-1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-induced osteoclast differentiation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 425,
+            "passage_index": 1,
+            "quote": "CG-1, and its underlying mechanism in receptor activator of NF-kappaB ligand (RANKL)-induced osteoclast differentiation of RAW264.7 cells. CG-1 inhibited the formation of tartrate-resistant acid phosphatase-positive multinucleated cells",
+            "start": 346
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": "first 3 days of the 5-day-osteoclastogenesis period; continuously for 5 days",
+          "endpoint": "osteoclast differentiation / formation of tartrate-resistant acid phosphatase-positive multinucleated cells",
+          "intervention": "CG-1",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "CG-1 inhibited RANKL-induced osteoclast differentiation/osteoclastogenesis in RAW264.7 cells.",
+        "uncertainties": [
+          "The quoted text supports inhibition of osteoclastogenesis-related phenotype, but does not establish direct molecular target binding."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        877,
+        1074
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        946,
+        1026
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

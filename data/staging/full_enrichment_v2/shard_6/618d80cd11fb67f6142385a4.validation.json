@@ -1,0 +1,202 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "femur",
+          "disease_setting": "osteoporosis",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "29",
+              "33",
+              "37",
+              "38",
+              "39",
+              "44",
+              "47"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "puerarin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "femoral BMD",
+            "taxon": "rat"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1117,
+            "passage_index": 1,
+            "quote": "meta-analysis demonstrated that puerarin significantly increased femoral BMD",
+            "start": 1041
+          }
+        ],
+        "experiment": {
+          "assay": "meta-analysis of randomized controlled trials",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone mineral density (BMD)",
+          "intervention": "puerarin monotherapy",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In rat models of osteoporosis, puerarin treatment significantly increased femoral bone mineral density.",
+        "uncertainties": [
+          "Systematic review/meta-analysis aggregates multiple rat studies rather than a single experiment.",
+          "The exact treated model conditions are summarized across studies and not fully specified in the abstract."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "29",
+              "33",
+              "37",
+              "38",
+              "39",
+              "44",
+              "47"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "puerarin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "40"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "CTX",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "TRACP",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1471,
+            "passage_index": 1,
+            "quote": "Puerarin significantly suppressed bone resorption markers, CTX and TRACP",
+            "start": 1399
+          }
+        ],
+        "experiment": {
+          "assay": "meta-analysis of randomized controlled trials",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption markers (CTX, TRACP)",
+          "intervention": "puerarin monotherapy",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In rat models of osteoporosis, puerarin treatment suppressed bone resorption markers CTX and TRACP.",
+        "uncertainties": [
+          "The abstract groups CTX and TRACP together; a single object key is used for the first listed marker and the text also supports a second marker.",
+          "Marker molecular forms are not specified in the abstract."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1041,
+        1117
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1090,
+        1150
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1399,
+        1471
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1484,
+        1568
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

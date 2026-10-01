@@ -1,0 +1,213 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone",
+          "disease_setting": "bone metastases from breast cancer",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "inhibitors of osteoclast function",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "22",
+              "24"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "bisphosphonates",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "23"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "gallium nitrate",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone-related complications",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 508,
+            "passage_index": 1,
+            "quote": "Inhibitors of osteoclast function, including bisphosphonates and gallium nitrate, have been shown in clinical trials to decrease bone-related complications.",
+            "start": 352
+          }
+        ],
+        "experiment": {
+          "assay": "clinical trials",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone-related complications",
+          "intervention": "inhibitors of osteoclast function, including bisphosphonates and gallium nitrate",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In clinical trials, inhibitors of osteoclast function, including bisphosphonates and gallium nitrate, decreased bone-related complications.",
+        "uncertainties": [
+          "The statement groups multiple agents and does not specify which compound caused the reported effect individually.",
+          "Direct molecular mechanism is not stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone",
+          "disease_setting": "bone metastases from breast cancer",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "27",
+              "28"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "osteoprotegerin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "27",
+              "28"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "compound",
+            "surface": "osteoprotegerin preparations",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "biochemical markers of bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 952,
+            "passage_index": 1,
+            "quote": "Improved understanding of the biology of osteoclastogenesis led to the identification of osteoprotegerin as a critical modulator of osteoclast activity. The clinical evaluation of several osteoprotegerin preparations has shown therapeutic effects as measured by significant reductions in biochemical markers of bone resorption.",
+            "start": 625
+          }
+        ],
+        "experiment": {
+          "assay": "clinical evaluation",
+          "dose": null,
+          "duration": null,
+          "endpoint": "biochemical markers of bone resorption",
+          "intervention": "several osteoprotegerin preparations",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e2"
+        },
+        "summary": "Clinical evaluation of osteoprotegerin preparations found significant reductions in biochemical markers of bone resorption.",
+        "uncertainties": [
+          "The text does not specify the exact composition of the osteoprotegerin preparations.",
+          "The claim concerns biomarker reduction, not a direct causal mechanism on osteoclasts."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        352,
+        508
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        438,
+        553
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        625,
+        952
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        758,
+        986
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

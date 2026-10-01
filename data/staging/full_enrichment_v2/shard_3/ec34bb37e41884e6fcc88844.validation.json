@@ -1,0 +1,117 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "primary hyperparathyroidism",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D006961"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Hyperparathyroidism",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastic activity",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D017824"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "aneurysmal cysts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 658,
+            "passage_index": 1,
+            "quote": "Hyperparathyroidism, usually resulting from a parathyroid adenoma, promotes osteoclastic activity, which can lead to bone resorption and potentially the formation of aneurysmal cysts.",
+            "start": 475
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Primary hyperparathyroidism is described as promoting osteoclastic activity, which can lead to bone resorption and potentially aneurysmal cyst formation.",
+        "uncertainties": [
+          "Background review statement rather than an experimental result.",
+          "The passage links osteoclastic activity to downstream bone resorption and possible aneurysmal cyst formation, but the directness of those downstream relations is not established as an experiment."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        475,
+        658
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        561,
+        797
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

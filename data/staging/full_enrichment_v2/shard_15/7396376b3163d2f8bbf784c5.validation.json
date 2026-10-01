@@ -1,0 +1,96 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "41",
+              "42"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "osteoprotegerin (OPG)",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 657,
+            "passage_index": 1,
+            "quote": "The TNFRSF11B gene encodes osteoprotegerin (OPG), a protein that inhibits bone resorption by binding the RANKL ligand and blocking osteoclast activation.",
+            "start": 504
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Osteoprotegerin (OPG), encoded by TNFRSF11B, inhibits bone resorption by binding RANKL and blocking osteoclast activation.",
+        "uncertainties": [
+          "The statement is descriptive background rather than a perturbation experiment.",
+          "Directness of the inhibition is not established beyond the stated binding step.",
+          "The passage does not specify a cell type or species for this mechanism."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        504,
+        657
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        499,
+        653
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

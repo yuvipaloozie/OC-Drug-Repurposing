@@ -1,0 +1,114 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow-derived macrophages (BMMs)",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "40"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Txnip",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast formation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "pathway",
+            "surface": "anaerobic glycolysis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "36"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "TCA cycle",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 917,
+            "passage_index": 1,
+            "quote": "Txnip knockout led to increased anaerobic glycolysis and disrupted the TCA cycle, thereby inhibiting osteoclast formation.",
+            "start": 795
+          }
+        ],
+        "experiment": {
+          "assay": "bone histomorphometry and histological analysis; Seahorse and 13C-Glucose tracer metabolic flux experiments",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast formation",
+          "intervention": "Txnip knockout",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Txnip knockout increased anaerobic glycolysis and disrupted the TCA cycle, which was reported to inhibit osteoclast formation.",
+        "uncertainties": [
+          "The quoted sentence combines metabolic changes with the osteoclast phenotype; directionality for the metabolic pathways is reported as part of the same outcome statement rather than as a separate measured causal edge.",
+          "Txnip is annotated as a gene, but the active molecular form in the perturbation is not explicitly stated in the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        795,
+        917
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        546,
+        651
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

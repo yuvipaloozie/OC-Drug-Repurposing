@@ -1,0 +1,215 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "FLG 29.1 cells",
+          "compartment": "mitochondrial",
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "1"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "17 beta-estradiol",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "F0F1-ATP synthase",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "26"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "FLG 29.1 cells",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 807,
+            "passage_index": 1,
+            "quote": "17 beta-estradiol on F0F1-ATP synthase directly (in permeabilized cells) and in intact osteoclastic FLG 29.1 cells, a model of inducible apoptosis. The baseline F0F1-ATP synthase activity of FLG 29.1 cells was 4.485 nmol/min per mg.",
+            "start": 575
+          },
+          {
+            "end": 1124,
+            "passage_index": 1,
+            "quote": "Estradiol rapidly inhibited F0F1-ATP synthase activity in the physiological range (half-inhibition concentration, IC50, of 30 nmol/l). With 1 nmol/l of estradiol, the inhibition was already significant (8-10% inhibition, p < 0.01) and with 100 nmol/l residual enzyme activity was only 15% (85% inhibition, p < 0.01).",
+            "start": 808
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "1 nmol/l; 100 nmol/l; IC50 30 nmol/l",
+          "duration": null,
+          "endpoint": "F0F1-ATP synthase activity",
+          "intervention": "17 beta-estradiol",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "direct",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "17 beta-estradiol inhibited F0F1-ATP synthase activity in FLG 29.1 cells in a dose-dependent manner.",
+        "uncertainties": [
+          "The paper states the effect was observed in intact FLG 29.1 cells and in permeabilized cells, but the exact cell-state-specific measurement is not separately quantified in the quoted text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "no_effect",
+        "context": {
+          "cell_type": "FLG 29.1 cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "23",
+              "25",
+              "28",
+              "29",
+              "30",
+              "32",
+              "35"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "estradiol",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "31"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "succinate-sustained respiration",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1325,
+            "passage_index": 1,
+            "quote": "In addition, the effect of estradiol appeared to be directed towards F0F1-ATP synthase, since succinate-sustained respiration, uncoupled from the electron transport chain, was unaffected by estradiol.",
+            "start": 1125
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "succinate-sustained respiration",
+          "intervention": "estradiol",
+          "outcome_change": "no_detected_change",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Estradiol did not affect succinate-sustained respiration.",
+        "uncertainties": [
+          "The sentence reports an unaffected respiration readout; it does not prove a specific molecular mechanism beyond the stated lack of effect."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        575,
+        807
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        652,
+        804
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        808,
+        1124
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        805,
+        1165
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1125,
+        1325
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1166,
+        1368
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

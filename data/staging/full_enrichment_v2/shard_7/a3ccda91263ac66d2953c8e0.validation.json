@@ -1,0 +1,98 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "calvaria",
+          "disease_setting": "LPS-induced osteolysis with hyperglycemia",
+          "species": "rats",
+          "stage": "early phase of bone remodelling"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "79",
+              "83",
+              "85",
+              "97",
+              "124"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "unknown",
+            "surface": "HUCMSCS and NEP administration",
+            "taxon": "Rattus novergicus"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": "Rattus novergicus"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1792,
+            "passage_index": 1,
+            "quote": "Results: HUCMSCS and NEP administration inhibit TRAP and Ctsk levels, reduce NFATc1, sclerostin, and RANK-RANKL, but enhance OPG expression in LPS-induced osteolysis with hyperglycemia with significant differences between groups (P <= 0.05). Conclusion: HUCMSCS and NEP post-administration reduced osteoclastogenesis",
+            "start": 1476
+          }
+        ],
+        "experiment": {
+          "assay": "enzyme-linked immunosorbent assay; immunohistochemistry",
+          "dose": "100 mul",
+          "duration": "day 8",
+          "endpoint": "osteoclastogenesis / TRAP / Ctsk / NFATc1 / sclerostin / RANK-RANKL / OPG",
+          "intervention": "HUCMSCS and NEP post-administration",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In hyperglycemic LPS-induced rat osteolysis, HUCMSCS and NEP administration reduced osteoclastogenesis / osteoclast-related markers and increased OPG expression.",
+        "uncertainties": [
+          "The passage reports a combined HUCMSCS+NEP treatment, but does not isolate the individual contribution of each component.",
+          "Entity mapping for the treatment is ambiguous because HUCMSCS is a secretome and NEP is a propolis formulation, while the claim concerns the administered combination."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1476,
+        1792
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1447,
+        1746
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

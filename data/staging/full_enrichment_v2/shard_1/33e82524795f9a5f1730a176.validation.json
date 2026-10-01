@@ -1,0 +1,180 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclast-like cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "24"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "VA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast-like cells",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1060,
+            "passage_index": 1,
+            "quote": "VA suppressed RELA protein production (pro-inflammatory), and enhanced IL10 mRNA expression (anti-inflammatory), leading to suppressed maturation of osteoclast-like cells and enhanced maturation of osteoblasts in vitro.",
+            "start": 841
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "maturation of osteoclast-like cells",
+          "intervention": "VA",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Valeric acid treatment was reported to suppress maturation of osteoclast-like cells in vitro.",
+        "uncertainties": [
+          "The passage links RELA and IL10 changes to the osteoclast-like cell outcome, but the direct causal mechanism is not established in the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "ovariectomized"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "24"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "VA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "17",
+              "18"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 839,
+            "passage_index": 1,
+            "quote": "VA demonstrated reduced bone resorption and better bone micro-structure",
+            "start": 768
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption",
+          "intervention": "fed VA",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In ovariectomized mice, valeric acid treatment was reported to reduce bone resorption.",
+        "uncertainties": [
+          "The quote is taken from the summary sentence and does not specify assay details or whether the effect is direct on osteoclasts."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        841,
+        1060
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        925,
+        1143
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        768,
+        839
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1187,
+        1250
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

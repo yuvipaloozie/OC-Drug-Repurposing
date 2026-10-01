@@ -1,0 +1,256 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "podosomes",
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "40",
+              "41",
+              "43",
+              "55"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "phosphatidylinositol 3,4,5-trisphosphate",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "30",
+              "39",
+              "42",
+              "45",
+              "47",
+              "49",
+              "51",
+              "54"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "gelsolin",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 123,
+            "passage_index": 0,
+            "quote": "Phosphatidylinositol 3,4,5-trisphosphate directs association of Src homology 2-containing signaling proteins with gelsolin.",
+            "start": 0
+          },
+          {
+            "end": 771,
+            "passage_index": 1,
+            "quote": "here we demonstrate phosphatidylinositol 3,4,5-trisphosphate/gelsolin function in mediating organization of the podosome signaling complex.",
+            "start": 632
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "association / organization of podosome signaling complex",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In osteoclast podosomes, gelsolin was described as having a relationship with phosphatidylinositol 3,4,5-trisphosphate, including direct association in the title and functional linkage in the abstract.",
+        "uncertainties": [
+          "The title states 'directs association' but the abstract evidence is broader and does not by itself establish a specific direct physical interaction mechanism.",
+          "Species is not stated in the passage; osteoclast context is explicit, but organism is not."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "lysates",
+          "disease_setting": null,
+          "species": null,
+          "stage": "activated"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "44",
+              "48"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "lipid extraction",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "30",
+              "39",
+              "42",
+              "45",
+              "47",
+              "49",
+              "51",
+              "54"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "gelsolin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "31",
+              "46"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "c-Src",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "32"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "PI3K",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "protein",
+            "surface": "focal adhesion kinase",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1166,
+            "passage_index": 1,
+            "quote": "lipid extraction of lysates from activated osteoclasts eliminated interaction between gelsolin, c-Src, PI3K, and focal adhesion kinase despite equal amounts of gelsolin in both the lipid-extracted and unextracted experiment.",
+            "start": 942
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "interaction between gelsolin, c-Src, PI3K, and focal adhesion kinase",
+          "intervention": "lipid extraction of lysates",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "unknown",
+          "directness": "unknown",
+          "effect_level": "binding",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Lipid extraction of lysates from activated osteoclasts eliminated the interaction between gelsolin, c-Src, PI3K, and focal adhesion kinase, despite equal amounts of gelsolin.",
+        "uncertainties": [
+          "The passage reports loss of interaction among several proteins after lipid extraction; the regulatory object was simplified to gelsolin for schema compatibility, but the full interaction complex is broader than a single pair.",
+          "The exact molecular nature of the 'lipid extraction' intervention is not specified."
+        ]
+      },
+      "errors": [
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        123
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        121
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        632,
+        771
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        666,
+        823
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        942,
+        1166
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1061,
+        1279
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

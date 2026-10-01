@@ -1,0 +1,171 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "obesity",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "35",
+              "36",
+              "40",
+              "42"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "high-fat diet-induced obesity",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1072,
+            "passage_index": 1,
+            "quote": "fat diet-induced obesity causes abnormalities in body weight, blood glucose, and lipid metabolism in mice, inhibits bone formation, promotes bone resorption, and leads to decreased bone mass",
+            "start": 882
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": "12 weeks dietary intervention",
+          "endpoint": "bone resorption",
+          "intervention": "high-fat diet-induced obesity",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In obese male mice, high-fat diet-induced obesity promotes bone resorption.",
+        "uncertainties": [
+          "The quoted span begins mid-word at 'fat' because the exact sentence start was not fully delimited in the source packet.",
+          "The intervention is a disease/condition context rather than a molecular perturbation; the causal mechanism is stated in text but directness is not established."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "obesity",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "aerobic exercise",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1616,
+            "passage_index": 1,
+            "quote": "obesity. Aerobic exercise can effectively reduce the body weight of obese male mice and alleviate abnormalities in glucose and lipid metabolism. To some extent, it also alleviates the inhibition effect of obesity on WNT pathway signaling, promotes bone formation, and inhibits bone resorption.",
+            "start": 1498
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": "10-week aerobic treadmill exercise intervention",
+          "endpoint": "bone resorption",
+          "intervention": "aerobic treadmill exercise",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Aerobic treadmill exercise alleviates obesity-related inhibition of bone resorption in obese male mice.",
+        "uncertainties": [
+          "The quoted span includes multiple results; the specific bone-resorption phrase is part of a broader conclusion statement.",
+          "This is a treatment effect in a disease context, not evidence of a direct molecular interaction."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        882,
+        1072
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        961,
+        1151
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

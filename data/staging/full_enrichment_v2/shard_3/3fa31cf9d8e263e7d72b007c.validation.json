@@ -1,0 +1,182 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "hypothesis",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "15"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Src SH2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "18"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 208,
+            "passage_index": 1,
+            "quote": "Inhibiting Src SH2 is believed to be a potentially attractive way of regulating bone resorption.",
+            "start": 112
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The review states that inhibiting Src SH2 is believed to be a potentially attractive way to regulate bone resorption.",
+        "uncertainties": [
+          "This is presented as a belief/potential strategy in a review, not an experimental result.",
+          "Src SH2 is a domain-level target; no specific molecular form beyond the text is established."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "T-cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "17",
+              "23"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "tandem SH2 domains of ZAP-70",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "T-cell proliferation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 529,
+            "passage_index": 1,
+            "quote": "Since inhibition of the tandem SH2 domains of ZAP-70 has been shown to block T-cell proliferation,",
+            "start": 431
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "T-cell proliferation",
+          "intervention": "inhibition of the tandem SH2 domains of ZAP-70",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The review says that inhibition of the tandem SH2 domains of ZAP-70 has been shown to block T-cell proliferation.",
+        "uncertainties": [
+          "The passage is a review statement and does not provide the underlying experiment details.",
+          "Cell type is mentioned in the broader sentence context, but the specific experimental system is not described."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        112,
+        208
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        110,
+        206
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        431,
+        529
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        426,
+        524
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

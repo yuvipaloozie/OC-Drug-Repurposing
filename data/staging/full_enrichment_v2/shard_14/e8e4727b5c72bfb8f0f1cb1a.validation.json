@@ -1,0 +1,516 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": "late stage"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "macrophage-colony-stimulating factor",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "20",
+              "21",
+              "23",
+              "26",
+              "31",
+              "33",
+              "35"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:NFATC1",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "NFATc1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "22",
+              "24",
+              "28",
+              "29",
+              "32",
+              "34"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:CBL",
+            "key": "e3",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "protein",
+            "surface": "Cbl proteins",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "25",
+              "27",
+              "30"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:SRC",
+            "key": "e4",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "protein",
+            "surface": "Src kinase",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 93,
+            "passage_index": 1,
+            "quote": "The regulation of NFATc1 expression is important for osteoclast differentiation and function.",
+            "start": 0
+          },
+          {
+            "end": 236,
+            "passage_index": 1,
+            "quote": "Herein, we demonstrate that macrophage-colony-stimulating factor induces NFATc1 degradation via Cbl proteins in a Src kinase-dependent manner.",
+            "start": 94
+          },
+          {
+            "end": 905,
+            "passage_index": 1,
+            "quote": "Taken together, our data provide a negative regulatory mechanism by which macrophage-colony-stimulating factor activates Src family kinases and Cbl proteins, and subsequently, induces NFATc1 degradation during osteoclast differentiation.",
+            "start": 668
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "NFATc1 degradation",
+          "intervention": "macrophage-colony-stimulating factor",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Macrophage-colony-stimulating factor induces NFATc1 degradation in a Src kinase-dependent manner during osteoclast differentiation.",
+        "uncertainties": [
+          "The passage states a Src kinase-dependent mechanism but does not specify direct physical interaction for the induction step.",
+          "Taxon is not explicitly stated for the molecules in the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "27",
+              "30"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:SRC",
+            "key": "e1",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "protein",
+            "surface": "c-Src",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "20",
+              "21",
+              "23",
+              "26",
+              "31",
+              "33",
+              "35"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:NFATC1",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "NFATc1",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 572,
+            "passage_index": 1,
+            "quote": "Overexpression of c-Src induces down-regulation of NFATc1",
+            "start": 515
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "NFATc1 down-regulation",
+          "intervention": "overexpression of c-Src",
+          "outcome_change": "decreased",
+          "perturbation_type": "gain_of_function"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Overexpression of c-Src decreases NFATc1 levels.",
+        "uncertainties": [
+          "The text does not specify whether the measured effect is on transcript or protein abundance.",
+          "Taxon is not explicitly stated for c-Src or NFATc1 in the passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": "late stage"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "22",
+              "24",
+              "28",
+              "29",
+              "32",
+              "34"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:CBL",
+            "key": "e1",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "protein",
+            "surface": "Cbl proteins",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "20",
+              "21",
+              "23",
+              "26",
+              "31",
+              "33",
+              "35"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:NFATC1",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "NFATc1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 667,
+            "passage_index": 1,
+            "quote": "and depletion of Cbl proteins blocks NFATc1 degradation during late stage osteoclastogenesis.",
+            "start": 574
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "NFATc1 degradation",
+          "intervention": "depletion of Cbl proteins",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Depletion of Cbl proteins blocks NFATc1 degradation during late-stage osteoclastogenesis.",
+        "uncertainties": [
+          "The statement reports a block of degradation rather than a direct molecular mechanism.",
+          "The specific Cbl family member(s) responsible are not resolved in this sentence."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "20",
+              "21",
+              "23",
+              "26",
+              "31",
+              "33",
+              "35"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:NFATC1",
+            "key": "e1",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "protein",
+            "surface": "NFATc1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "25",
+              "27",
+              "30"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:SRC",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "protein",
+            "surface": "c-Src",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "22",
+              "28",
+              "32"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:CBL",
+            "key": "e3",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "protein",
+            "surface": "c-Cbl",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "24",
+              "29"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Cbl-b",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 426,
+            "passage_index": 1,
+            "quote": "NFATc1 proteins are ubiquitinated and rapidly degraded during late stage osteoclastogenesis, and this degradation is mediated by Cbl-b and c-Cbl ubiquitin ligases in a Src-dependent manner.",
+            "start": 237
+          },
+          {
+            "end": 514,
+            "passage_index": 1,
+            "quote": "In addition, NFATc1 interacts endogenously with c-Src, c-Cbl, and Cbl-b in osteoclasts.",
+            "start": 427
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "endogenous interaction",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c4",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "direct",
+          "effect_level": "binding",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "NFATc1 endogenously interacts with c-Src, c-Cbl, and Cbl-b in osteoclasts.",
+        "uncertainties": [
+          "The passage does not specify the interaction assay.",
+          "The quote spans are used to capture the interaction context and may include adjacent mechanistic description."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        93
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        88
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        94,
+        236
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        89,
+        193
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        668,
+        905
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        797,
+        1004
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        515,
+        572
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        638,
+        695
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        574,
+        667
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        696,
+        790
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c4",
+      "corrected_offsets": [
+        237,
+        426
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        272,
+        367
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c4",
+      "corrected_offsets": [
+        427,
+        514
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        369,
+        459
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,191 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "3w",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "21943"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-induced osteoclast formation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 728,
+            "passage_index": 1,
+            "quote": "The most promising compound 3w with an IC50 value of 0.577 muM, markedly inhibited RANKL-induced osteoclast formation",
+            "start": 611
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro",
+          "dose": "0.577 muM",
+          "duration": null,
+          "endpoint": "osteoclast formation",
+          "intervention": "3w",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Compound 3w inhibited RANKL-induced osteoclast formation in vitro.",
+        "uncertainties": [
+          "The text does not specify the exact experimental system or cell type for the in vitro assay."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ovariectomized osteoporosis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "3w",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D001847"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1234,
+            "passage_index": 1,
+            "quote": "Additionally, 3w could bind to RANKL and interfere with RANKL-RANK interaction. Our findings may offer a valuable direction for the development of novel organoselenium-based antiosteoporosis agents.",
+            "start": 1084
+          },
+          {
+            "end": 1092,
+            "passage_index": 1,
+            "quote": "significantly prevented bone loss in ovariectomized osteoporosis mice",
+            "start": 1023
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone loss",
+          "intervention": "3w",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Compound 3w prevented bone loss in ovariectomized osteoporosis mice.",
+        "uncertainties": [
+          "The causal pathway for bone-loss prevention is not established by this sentence alone.",
+          "The text does not specify the dose or assay for the in vivo study."
+        ]
+      },
+      "errors": [
+        "invented annotation ID",
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        611,
+        728
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        775,
+        882
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1023,
+        1092
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1177,
+        1234
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,198 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "MC3T3-E1 cells and BMMs",
+          "compartment": null,
+          "disease_setting": "ovariectomy-induced osteoporosis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "56335"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "METTL3",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "14365"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "FZD3",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1253,
+            "passage_index": 1,
+            "quote": "METTL3 regulates FZD3 expression via m6A modification.",
+            "start": 1199
+          }
+        ],
+        "experiment": {
+          "assay": "quantitative m6A analysis and RIP assays",
+          "dose": null,
+          "duration": null,
+          "endpoint": "FZD3 expression",
+          "intervention": "oe-METTL3 or FZD3 lentiviral vectors",
+          "outcome_change": "increased",
+          "perturbation_type": "gain_of_function"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "METTL3 was reported to regulate FZD3 expression through m6A modification in the osteoporotic mouse/cell model context.",
+        "uncertainties": [
+          "The exact causal chain is described as via m6A modification, so directness is not established from the text alone.",
+          "The species assignment is based on the experimental mouse context in the abstract, not on the gene annotation alone."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "MC3T3-E1 cells and BMMs",
+          "compartment": null,
+          "disease_setting": "ovariectomy-induced osteoporosis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "14365"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "FZD3",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "12394"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RUNX1",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1439,
+            "passage_index": 1,
+            "quote": "FZD3 promoted osteoblast differentiation and bone formation while inhibiting osteoclast differentiation and bone resorption by regulating RUNX1, a protein downstream of the Wnt pathway.",
+            "start": 1254
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation and bone resorption",
+          "intervention": "oe-METTL3 or FZD3 lentiviral vectors",
+          "outcome_change": "decreased",
+          "perturbation_type": "gain_of_function"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "FZD3 was reported to inhibit osteoclast differentiation and bone resorption by regulating RUNX1.",
+        "uncertainties": [
+          "The sentence bundles osteoblast and osteoclast effects together; the object RUNX1 is linked to the broader regulatory phrase rather than a separately isolated causal test.",
+          "The direction for the RUNX1 relation is inferred from the wording 'by regulating RUNX1' and is not mechanistically decomposed in the abstract."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1199,
+        1253
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1334,
+        1400
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1254,
+        1439
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1044,
+        1168
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

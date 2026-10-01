@@ -1,0 +1,221 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D000069448"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Denosumab",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "8600"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 48,
+            "passage_index": 1,
+            "quote": "Denosumab is a potent antagonist of RANKL and is",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Denosumab is described as a potent antagonist of RANKL.",
+        "uncertainties": [
+          "The text states an antagonistic role, but does not specify direct biochemical mechanism or assay in this sentence."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "postoperative",
+          "species": "patients",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D000069448"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "denosumab",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D004151"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "dipeptides",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "-"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "di-L-phenylalanine",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:C033517"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "phenylalanylleucine",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "-"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "alpha-Asp-Phe",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 947,
+            "passage_index": 1,
+            "quote": "Denosumab-treated patients exhibited increased levels of the dipeptides di-L-phenylalanine, phenylalanylleucine, and alpha-Asp-Phe",
+            "start": 817
+          }
+        ],
+        "experiment": {
+          "assay": "untargeted HRMS coupled with liquid chromatography",
+          "dose": "2 doses of 60 mg",
+          "duration": "24 mo after surgery",
+          "endpoint": "levels of the dipeptides di-L-phenylalanine, phenylalanylleucine, and alpha-Asp-Phe",
+          "intervention": "denosumab",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In the randomized postoperative study, denosumab-treated patients had increased levels of specific dipeptides 24 months after surgery.",
+        "uncertainties": [
+          "The increase is reported for a group of specific dipeptides rather than each individual dipeptide separately in the extracted relation.",
+          "The sentence does not establish direct causality beyond the treated-vs-placebo comparison."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        48
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        49
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        817,
+        947
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        971,
+        1101
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

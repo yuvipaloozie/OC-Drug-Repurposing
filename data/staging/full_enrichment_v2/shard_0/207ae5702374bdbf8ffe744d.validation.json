@@ -1,0 +1,121 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone tissue",
+          "disease_setting": "obesity",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Bariatric surgery",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "sleeve gastrectomy (SG)",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone mineral density (BMD)",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "14"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "fracture risk",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 569,
+            "passage_index": 1,
+            "quote": "Bariatric surgery, represented by sleeve gastrectomy (SG), has emerged as a crucial intervention for the treatment of obesity and related metabolic comorbidities. However, accumulating evidence indicates that bariatric surgery exerts multiple adverse effects on bone tissue, characterized by significantly increased bone resorption, decreased bone mineral density (BMD), and a consequent elevation in fracture risk.",
+            "start": 154
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption",
+          "intervention": "bariatric surgery / sleeve gastrectomy",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The review states that bariatric surgery, represented by sleeve gastrectomy, is associated with increased bone resorption, decreased bone mineral density, and elevated fracture risk.",
+        "uncertainties": [
+          "The passage is a review summary rather than a primary experiment.",
+          "The text also mentions decreased BMD and elevated fracture risk, but these are captured as summary context rather than separate mechanistic claims."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        154,
+        569
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        151,
+        257
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

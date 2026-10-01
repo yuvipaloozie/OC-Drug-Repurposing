@@ -1,0 +1,245 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts differentiated in vitro from bone marrow mononuclear cells",
+          "compartment": "in vitro",
+          "disease_setting": "osteoporosis risk/bone remodeling context",
+          "species": "macaque",
+          "stage": "after 12 months of chronic ethanol or isocaloric control solution consumption"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "13"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ethanol",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 714,
+            "passage_index": 1,
+            "quote": "ethanol or isocaloric control solution consumption. Module scoring, trajectory inference with generalized additive modeling (tradeSeq), and CellChat-based analyses of intercellular communication were applied to uncover ethanol-induced changes in metabolic reprogramming, lineage progression, and signaling network dynamics.",
+            "start": 391
+          },
+          {
+            "end": 1252,
+            "passage_index": 1,
+            "quote": "Together, chronic alcohol consumption rewired osteoclastogenesis",
+            "start": 1188
+          },
+          {
+            "end": 1401,
+            "passage_index": 1,
+            "quote": "promoting enhanced osteoclastogenesis.",
+            "start": 1363
+          }
+        ],
+        "experiment": {
+          "assay": "scRNA-seq; module scoring; trajectory inference; CellChat-based analysis",
+          "dose": null,
+          "duration": "12 months",
+          "endpoint": "osteoclastogenesis",
+          "intervention": "chronic ethanol consumption",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Chronic ethanol consumption was associated with enhanced osteoclastogenesis in macaque-derived osteoclast lineage cells.",
+        "uncertainties": [
+          "Causal direction is inferred from comparative perturbation rather than directly demonstrated molecular causation.",
+          "The passage summarizes multiple analyses; the specific mechanism linking ethanol to osteoclastogenesis is not isolated in a single experiment."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts differentiated in vitro from bone marrow mononuclear cells",
+          "compartment": "in vitro",
+          "disease_setting": "bone remodeling/osteoporosis risk context",
+          "species": "macaque",
+          "stage": "after 12 months of chronic ethanol or isocaloric control solution consumption"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "9"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "alcohol",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "metabolic reprogramming toward oxidative phosphorylation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "glycolytic, migratory, and phagocytic activities",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 860,
+            "passage_index": 1,
+            "quote": "Module scoring indicated metabolic reprogramming toward oxidative phosphorylation, with reduced glycolytic, migratory, and phagocytic activities.",
+            "start": 715
+          },
+          {
+            "end": 1252,
+            "passage_index": 1,
+            "quote": "Together, chronic alcohol consumption rewired osteoclastogenesis",
+            "start": 1188
+          }
+        ],
+        "experiment": {
+          "assay": "module scoring",
+          "dose": null,
+          "duration": "12 months",
+          "endpoint": "oxidative phosphorylation-associated metabolic state; glycolytic, migratory, and phagocytic activities",
+          "intervention": "chronic alcohol consumption",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Chronic alcohol consumption was associated with metabolic reprogramming toward oxidative phosphorylation and reduced glycolytic, migratory, and phagocytic activities in osteoclast lineage cells.",
+        "uncertainties": [
+          "The passage reports an analysis summary rather than a directly isolated biochemical mechanism.",
+          "The reduced activities are bundled in the same sentence as the metabolic shift and may reflect inferred module scores rather than direct functional assays."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        391,
+        714
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        703,
+        810
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1188,
+        1252
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1440,
+        1490
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1363,
+        1401
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1529,
+        1569
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        715,
+        860
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        810,
+        940
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1188,
+        1252
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1440,
+        1490
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

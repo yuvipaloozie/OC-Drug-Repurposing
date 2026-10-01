@@ -1,0 +1,219 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "4"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Gnetol",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "ferroptosis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 118,
+            "passage_index": 0,
+            "quote": "Gnetol targeting of TNFAIP3 promotes SLC7A11 ubiquitination and ferroptosis in osteoclasts to ameliorate osteoporosis.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "ferroptosis in osteoclasts",
+          "intervention": "Gnetol",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Gnetol is reported to promote ferroptosis in osteoclasts.",
+        "uncertainties": [
+          "The title states the relationship at a high level but does not provide assay details in the title."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "36"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "GT",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "47"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "TNFAIP3",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "48"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "SLC7A11",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 839,
+            "passage_index": 1,
+            "quote": "GT directly interacted with the E3 ubiquitin-editing enzyme A20 (TNFAIP3) at the Asp70 residue",
+            "start": 745
+          },
+          {
+            "end": 923,
+            "passage_index": 1,
+            "quote": "thereby enhancing K48-linked ubiquitination and proteasomal degradation of SLC7A11",
+            "start": 841
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "SLC7A11 proteasomal degradation / abundance",
+          "intervention": "GT treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e5",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "GT directly interacts with TNFAIP3 and is reported to enhance K48-linked ubiquitination and proteasomal degradation of SLC7A11.",
+        "uncertainties": [
+          "The passage describes the mechanism as mediated through TNFAIP3; directness for the GT-to-SLC7A11 effect is indirect rather than direct.",
+          "The abstract does not distinguish whether TNFAIP3 is acting as the protein product versus the gene symbol in the annotation."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        118
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        119
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        745,
+        839
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        864,
+        958
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        841,
+        923
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        959,
+        1041
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

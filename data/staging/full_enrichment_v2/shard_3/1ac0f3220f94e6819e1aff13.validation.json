@@ -1,0 +1,199 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "cancer-induced bone pain",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "dasatinib",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "pain behaviour",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "49"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "rats",
+            "taxon": "10116"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 765,
+            "passage_index": 1,
+            "quote": "dasatinib (15 mg/kg, p.o.) from day 7 after inoculation of MRMT-1 mammary carcinoma cells significantly attenuated movement-evoked and non-evoked pain behaviour in cancer-bearing rats",
+            "start": 582
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "15 mg/kg",
+          "duration": "from day 7 after inoculation",
+          "endpoint": "movement-evoked and non-evoked pain behaviour",
+          "intervention": "dasatinib (15 mg/kg, p.o.) from day 7 after inoculation of MRMT-1 mammary carcinoma cells",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Dasatinib treatment attenuated pain behaviour in cancer-bearing rats.",
+        "uncertainties": [
+          "The passage reports a pain-behaviour outcome rather than a direct osteoclast assay."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "serum",
+          "disease_setting": "cancer-induced bone pain",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "50"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "dasatinib",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "serum TRACP 5b levels",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "rats",
+            "taxon": "10116"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1117,
+            "passage_index": 1,
+            "quote": "This was supported by a significant reduction of serum TRACP 5b levels in cancer-bearing rats treated with 15 mg/kg dasatinib",
+            "start": 992
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "15 mg/kg",
+          "duration": null,
+          "endpoint": "serum TRACP 5b levels",
+          "intervention": "15 mg/kg dasatinib",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Dasatinib treatment reduced serum TRACP 5b levels in cancer-bearing rats, consistent with a bone-preserving effect.",
+        "uncertainties": [
+          "TRACP 5b is presented as a serum marker; the passage does not identify a direct molecular target or osteoclast cell-level mechanism."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        582,
+        765
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        569,
+        662
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        992,
+        1117
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        981,
+        1060
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

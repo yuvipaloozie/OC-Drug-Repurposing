@@ -1,0 +1,177 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "jawbone",
+          "disease_setting": "jawbone destruction due to oral tumors or metastatic lesions",
+          "species": "patients",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "jawbone remineralization",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "clinical factors",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1027,
+            "passage_index": 1,
+            "quote": "Significant factors influencing remineralization included age, tumor histology, site of jawbone destruction, type of bone destruction, and radiation dose.",
+            "start": 873
+          }
+        ],
+        "experiment": {
+          "assay": "clinical analysis with CT and PET/CT imaging",
+          "dose": null,
+          "duration": "0, 3, 6, and 12 months after treatment",
+          "endpoint": "jawbone remineralization",
+          "intervention": "radiation therapy or chemotherapy",
+          "outcome_change": "other",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e1",
+          "sign": "unknown",
+          "subject": "e2"
+        },
+        "summary": "Jawbone remineralization after nonsurgical treatment was associated with patient-specific and treatment-related factors, including age, tumor histology, site of jawbone destruction, type of bone destruction, and radiation dose.",
+        "uncertainties": [
+          "The text reports association/influence but does not establish a specific causal mechanism.",
+          "The 'clinical factors' subject is a composite category rather than a single molecular entity."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "jawbone",
+          "disease_setting": "jawbone destruction after nonsurgical treatment",
+          "species": "patients",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "27"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "18F-FDG",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone remineralization",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1419,
+            "passage_index": 1,
+            "quote": "Patients younger than 18 years had CT values and bone-morphology changes comparable to reference sites. Post-treatment PET/CT revealed significant 18F-FDG accumulation with metabolic activity patterns resembling those of bone remineralization.",
+            "start": 1176
+          }
+        ],
+        "experiment": {
+          "assay": "PET/CT",
+          "dose": null,
+          "duration": "post-treatment",
+          "endpoint": "18F-FDG accumulation and metabolic activity patterns",
+          "intervention": "post-treatment PET/CT",
+          "outcome_change": "other",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Post-treatment PET/CT showed significant 18F-FDG accumulation with metabolic activity patterns resembling those seen in bone remineralization.",
+        "uncertainties": [
+          "The passage describes resemblance of imaging patterns, not a causal effect of 18F-FDG on remineralization.",
+          "18F-FDG accumulation is treated here as an observed imaging-related association rather than a biochemical mechanism."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        873,
+        1027
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        780,
+        930
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1176,
+        1419
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1301,
+        1597
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

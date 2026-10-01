@@ -1,0 +1,193 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "32"
+            ],
+            "existing_node_id": "CHEBI:30805",
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "itaconate",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation and activation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 998,
+            "passage_index": 1,
+            "quote": "We confirmed the inhibitory effect of itaconate in regulating osteoclast differentiation and activation",
+            "start": 895
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation and activation",
+          "intervention": "itaconate",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Itaconate was reported to inhibit osteoclast differentiation and activation.",
+        "uncertainties": [
+          "The text states an inhibitory effect but does not specify the experimental setup for this sentence beyond the abstract summary.",
+          "Directness of the inhibition is not established."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "lipopolysaccharides induced inflammatory bone loss animal model",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "33",
+              "36"
+            ],
+            "existing_node_id": "CHEBI:30805",
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "itaconate",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "35"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "inflammatory bone loss",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "34"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "lipopolysaccharides",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1116,
+            "passage_index": 1,
+            "quote": "and further verified the rescue role of itaconate in lipopolysaccharides induced inflammatory bone loss animal model",
+            "start": 1000
+          }
+        ],
+        "experiment": {
+          "assay": "animal model",
+          "dose": null,
+          "duration": null,
+          "endpoint": "inflammatory bone loss",
+          "intervention": "itaconate",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Itaconate was reported to have a rescue role in a lipopolysaccharides-induced inflammatory bone loss animal model, consistent with decreased inflammatory bone loss.",
+        "uncertainties": [
+          "The abstract does not specify the animal species or model details.",
+          "'Rescue role' is summarized here as a decrease in inflammatory bone loss, but the precise experimental comparison is not fully described in the abstract."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        895,
+        998
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        931,
+        1020
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1000,
+        1116
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1024,
+        1118
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,113 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoblasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "adiponectin signaling",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "39",
+              "40"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "OPG",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenic response",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1318,
+            "passage_index": 1,
+            "quote": "adiponectin signaling suppresses the RANKL (receptor activator of nuclear factor kappa-B ligand) - to - OPG (osteprotegerin) ratio in osteoblasts leading to the suppression of osteoclastogenic response",
+            "start": 1117
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenic response",
+          "intervention": null,
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The review states that adiponectin signaling in osteoblasts suppresses the RANKL-to-OPG ratio and thereby suppresses osteoclastogenic response.",
+        "uncertainties": [
+          "Review-level statement rather than a direct experiment.",
+          "OPG is mentioned in the ratio but the text does not state a direct measured change in OPG abundance."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1117,
+        1318
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1166,
+        1328
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

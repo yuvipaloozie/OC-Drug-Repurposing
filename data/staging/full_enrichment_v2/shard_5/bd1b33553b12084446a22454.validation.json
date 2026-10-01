@@ -1,0 +1,123 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "CPBS/GHA composites",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast growth",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "60"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "magnesium ions",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "61"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "gelatin-MgO microparticles",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1618,
+            "passage_index": 1,
+            "quote": "The CPBS/GHA composites displayed good bone tissue repair ability in engineering applications. This composite exhibited superior tensile strength, antibacterial effect, osteoclast growth enhancement, and osteoclast growth reduction.",
+            "start": 1444
+          },
+          {
+            "end": 1022,
+            "passage_index": 1,
+            "quote": "Osteoblast growth, osteoclast growth inhibition, and the antibacterial effect of CPBS/GHA composites were primarily due to the slow release of magnesium ions into the environment from the gelatin-MgO microparticles.",
+            "start": 807
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast growth",
+          "intervention": "CPBS/GHA composites",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The CPBS/GHA composite was reported to reduce osteoclast growth, and the authors attributed osteoclast growth inhibition to slow magnesium ion release from gelatin-MgO microparticles.",
+        "uncertainties": [
+          "The abstract contains both \"osteoclast growth enhancement\" and \"osteoclast growth reduction\" for the composite, so the net biological interpretation is unclear.",
+          "The causal phrase \"primarily due to\" links the effect to magnesium ion release, but the text does not establish directness."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        807,
+        1022
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        960,
+        1119
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,185 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoclast",
+          "compartment": null,
+          "disease_setting": "diabetic bone regeneration",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "18",
+              "20",
+              "23",
+              "25"
+            ],
+            "existing_node_id": "CHEBI:26523",
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ROS",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "OC differentiation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 620,
+            "passage_index": 1,
+            "quote": "ROS-mediated feedback loop that promotes OC differentiation",
+            "start": 561
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The review states that ROS-mediated feedback promotes osteoclast differentiation.",
+        "uncertainties": [
+          "This is a review statement rather than a primary experimental result.",
+          "OC is expanded as osteoclast in the passage; the exact molecular entity for differentiation is a phenotype, not a gene/protein."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoblast",
+          "compartment": null,
+          "disease_setting": "diabetic bone regeneration",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "18",
+              "20",
+              "23",
+              "25"
+            ],
+            "existing_node_id": "CHEBI:26523",
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ROS",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "OB survival, differentiation, and activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 680,
+            "passage_index": 1,
+            "quote": "ROS-mediated feedback loop that promotes OC differentiation while inhibiting OB survival, differentiation, and activity",
+            "start": 561
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The review states that ROS-mediated feedback inhibits osteoblast survival, differentiation, and activity.",
+        "uncertainties": [
+          "This is a review statement rather than a primary experimental result.",
+          "The object combines multiple osteoblast-related phenotypes in one phrase; it was not split further because the passage presents them together."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        561,
+        620
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        659,
+        735
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        561,
+        680
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        659,
+        762
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

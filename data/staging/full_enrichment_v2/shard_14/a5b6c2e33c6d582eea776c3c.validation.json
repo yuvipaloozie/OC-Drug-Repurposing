@@ -1,0 +1,190 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclast",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "rabbit",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "37",
+              "49",
+              "58",
+              "60",
+              "61"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "AP22408",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "62"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "rabbit osteoclast-mediated resorption of dentine",
+            "taxon": "rabbit"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1384,
+            "passage_index": 1,
+            "quote": "AP22408 inhibits rabbit osteoclast-mediated resorption of dentine",
+            "start": 1319
+          }
+        ],
+        "experiment": {
+          "assay": "cellular assay",
+          "dose": null,
+          "duration": null,
+          "endpoint": "resorption of dentine",
+          "intervention": "AP22408",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "AP22408 inhibited rabbit osteoclast-mediated resorption of dentine in a cellular assay.",
+        "uncertainties": [
+          "The passage states inhibition in a cellular assay but does not specify the exact assay conditions or whether the effect is direct on osteoclasts versus indirect."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoclast",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "33",
+              "34",
+              "38",
+              "39",
+              "46",
+              "48",
+              "51",
+              "59"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "pp60(src) (Src) gene",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast-mediated bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 122,
+            "passage_index": 1,
+            "quote": "Targeted disruption of the pp60(src) (Src) gene has implicated this tyrosine kinase in osteoclast-mediated bone resorption",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast-mediated bone resorption",
+          "intervention": "targeted disruption of the Src gene",
+          "outcome_change": "not_stated",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "unknown",
+          "subject": "e3"
+        },
+        "summary": "Targeted disruption of the Src gene has implicated Src in osteoclast-mediated bone resorption.",
+        "uncertainties": [
+          "The sentence is a background statement summarizing prior targeted disruption work, not a detailed experimental result with quantified outcome change."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1319,
+        1384
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1400,
+        1460
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        0,
+        122
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        125,
+        239
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,202 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "microfilaments",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "Microfilaments",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "V-ATPase",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "V-ATPase",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "ruffled membrane formation",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "ruffled membrane formation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1004,
+            "passage_index": 1,
+            "quote": "Microfilaments directly interact with the V-ATPase through an actin binding site in the B2-subunit of V-ATPase. This binding interaction is required for ruffled membrane formation.",
+            "start": 824
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "claim1",
+        "reaction": null,
+        "regulatory": null,
+        "summary": "Microfilaments are described as directly interacting with V-ATPase, and this binding interaction is said to be required for ruffled membrane formation.",
+        "uncertainties": [
+          "This is a review-style background statement rather than a primary experiment.",
+          "The molecular form of 'microfilaments' and the exact mechanistic relation to ruffled membrane formation are summarized from text only."
+        ]
+      },
+      "errors": [
+        "regulatory form mismatch"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "post-menopausal osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "inhibitor of the interaction",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "an inhibitor of the interaction",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "bone resorption",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "pre-clinical animal models",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "pre-clinical animal models",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D010024"
+            ],
+            "existing_node_id": null,
+            "key": "post-menopausal osteoporosis",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "post-menopausal osteoporosis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1166,
+            "passage_index": 1,
+            "quote": "Recent studies show that an inhibitor of the interaction blocks bone resorption in pre-clinical animal models, including a model of post-menopausal osteoporosis.",
+            "start": 1005
+          }
+        ],
+        "experiment": {
+          "assay": "pre-clinical animal models",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption",
+          "intervention": "an inhibitor of the interaction",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "claim2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "bone resorption",
+          "sign": "negative",
+          "subject": "inhibitor of the interaction"
+        },
+        "summary": "An inhibitor of the actin-V-ATPase interaction is reported to block bone resorption in pre-clinical animal models, including a model of post-menopausal osteoporosis.",
+        "uncertainties": [
+          "The inhibitor is unnamed, so the chemical entity cannot be identified from text alone.",
+          "The exact animal species and experimental details are not stated."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "claim1",
+      "corrected_offsets": [
+        824,
+        1004
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        88,
+        267
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "claim2",
+      "corrected_offsets": [
+        1005,
+        1166
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        268,
+        429
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

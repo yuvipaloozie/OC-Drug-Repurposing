@@ -1,0 +1,98 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "no_effect",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "type 2 diabetes mellitus",
+          "species": "Saudi adults",
+          "stage": "treatment-naive adults with T2DM"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "23",
+              "24",
+              "28",
+              "32",
+              "43"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "metformin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone turnover markers",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1878,
+            "passage_index": 1,
+            "quote": "while metformin-based interventions showed no significant effects on bone turnover markers.",
+            "start": 1787
+          }
+        ],
+        "experiment": {
+          "assay": "serum markers of bone resorption and bone formation measured at baseline, 3 months, and 6 months",
+          "dose": "1000 mg/day",
+          "duration": "6 months",
+          "endpoint": "bone turnover markers",
+          "intervention": "metformin-based interventions",
+          "outcome_change": "no_detected_change",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Metformin-based interventions showed no significant effects on bone turnover markers in treatment-naive adults with type 2 diabetes mellitus.",
+        "uncertainties": [
+          "The passage reports an overall lack of significant effect for metformin-based interventions on bone turnover markers, but does not specify a mechanistic target in osteoclasts.",
+          "Provider gene annotations for CTX appear inconsistent with the text and were not used as mechanistic evidence."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1787,
+        1878
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1888,
+        1986
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

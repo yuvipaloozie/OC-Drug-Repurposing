@@ -1,0 +1,189 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "prepubertal children",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D047928"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Preterm birth",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D001851"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "impaired metabolic bone profile and lower total-body and lumbar-spine BMD in childhood",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1656,
+            "passage_index": 1,
+            "quote": "Preterm birth is associated with impaired metabolic bone profile and lower total-body and lumbar-spine BMD in childhood.",
+            "start": 1536
+          }
+        ],
+        "experiment": {
+          "assay": "dual-energy X-ray absorptiometry/DXA; serum bone markers",
+          "dose": null,
+          "duration": null,
+          "endpoint": "metabolic bone profile and bone mineral density",
+          "intervention": "preterm birth",
+          "outcome_change": "other",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Preterm birth was associated with an impaired metabolic bone profile and lower total-body and lumbar-spine BMD in childhood.",
+        "uncertainties": [
+          "Composite phenotype in the object spans multiple reported outcomes.",
+          "Species is not explicitly stated in the passage."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "very preterm-born population",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D016640",
+              "MESH:D011225",
+              "MESH:D001997"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Gestational diabetes, preeclampsia, and bronchopulmonary dysplasia",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "lower total-body BMD",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1522,
+            "passage_index": 1,
+            "quote": "Gestational diabetes, preeclampsia, and bronchopulmonary dysplasia were associated with lower total-body BMD in the very preterm-born population.",
+            "start": 1377
+          }
+        ],
+        "experiment": {
+          "assay": "dual-energy X-ray absorptiometry/DXA",
+          "dose": null,
+          "duration": null,
+          "endpoint": "total-body BMD",
+          "intervention": "gestational diabetes, preeclampsia, and bronchopulmonary dysplasia",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "unknown",
+          "subject": "e3"
+        },
+        "summary": "Gestational diabetes, preeclampsia, and bronchopulmonary dysplasia were associated with lower total-body BMD in very preterm-born children.",
+        "uncertainties": [
+          "The sentence reports an association, not causation.",
+          "The object is a summary phenotype rather than a standardized ontology term."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1536,
+        1656
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1639,
+        1759
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1377,
+        1522
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1480,
+        1613
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

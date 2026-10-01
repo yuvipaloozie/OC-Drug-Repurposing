@@ -1,0 +1,107 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "hepatic osteodystrophy",
+          "species": "meat-type geese",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "27",
+              "28"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "pasture grazing through perennial ryegrass feeding",
+            "taxon": "geese"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast numbers",
+            "taxon": "geese"
+          },
+          {
+            "annotation_ids": [
+              "22",
+              "38"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "hepatic osteodystrophy",
+            "taxon": "geese"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1282,
+            "passage_index": 1,
+            "quote": "a significant reduction in osteoclast numbers (p < 0.01)",
+            "start": 1226
+          }
+        ],
+        "experiment": {
+          "assay": "micro-CT analysis and TRAP staining",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast numbers",
+          "intervention": "pasture grazing through perennial ryegrass feeding",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "claim1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Pasture grazing through perennial ryegrass feeding was associated with fewer osteoclasts in meat-type geese with hepatic osteodystrophy.",
+        "uncertainties": [
+          "The exact causal mediator of the osteoclast decrease is not stated; the abstract reports a multi-factor intervention rather than a single molecular perturbation.",
+          "The quoted span does not by itself include the full intervention sentence, so the intervention is summarized from surrounding context."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "claim1",
+      "corrected_offsets": [
+        1226,
+        1282
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1252,
+        1308
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

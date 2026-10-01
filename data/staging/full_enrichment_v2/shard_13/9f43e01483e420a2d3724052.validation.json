@@ -1,0 +1,111 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "U-266 and MCC-2 myeloma cell lines",
+          "compartment": null,
+          "disease_setting": "multiple myeloma",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "neutralising anti-RANK-L antibody",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "resorption of bone substrates",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1241,
+            "passage_index": 1,
+            "quote": "Resorption of bone substrates was prevented",
+            "start": 1198
+          },
+          {
+            "end": 1281,
+            "passage_index": 1,
+            "quote": "by a neutralising anti-RANK-L antibody.",
+            "start": 1242
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "resorption of bone substrates",
+          "intervention": "neutralising anti-RANK-L antibody",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "A neutralising anti-RANK-L antibody prevented resorption of bone substrates in adherent myeloma cultures.",
+        "uncertainties": [
+          "The antibody is described only as neutralising anti-RANK-L antibody; no exact molecular identifier is provided.",
+          "The claim is limited to the reported in vitro adherent cultures and does not establish direct molecular mechanism."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1198,
+        1241
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1349,
+        1394
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1242,
+        1281
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1398,
+        1439
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

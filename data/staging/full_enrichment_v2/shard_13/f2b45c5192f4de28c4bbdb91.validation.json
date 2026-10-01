@@ -1,0 +1,195 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "16",
+              "17",
+              "28"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Src",
+            "taxon": "unknown"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "osteoclasts",
+            "taxon": "unknown"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 80,
+            "passage_index": 1,
+            "quote": "Src is a nonreceptor tyrosine kinase essential for the activation of osteoclasts",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "activation of osteoclasts",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Src is described as essential for osteoclast activation.",
+        "uncertainties": [
+          "The passage states a general role/essentiality statement rather than a specific experiment.",
+          "Directness of the Src-to-osteoclast activation relationship is not established in the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "metastatic bone disease",
+          "species": "animal models",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Src inhibitors",
+            "taxon": "unknown"
+          },
+          {
+            "annotation_ids": [
+              "21",
+              "22",
+              "24"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone destruction",
+            "taxon": "unknown"
+          },
+          {
+            "annotation_ids": [
+              "23",
+              "29"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "tumor cell growth",
+            "taxon": "unknown"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 376,
+            "passage_index": 1,
+            "quote": "Src inhibitors prevent bone destruction and tumor cell growth in animal models of metastatic bone disease",
+            "start": 271
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone destruction",
+          "intervention": "Src inhibitors",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Src inhibitors are reported to prevent bone destruction and tumor cell growth in animal models of metastatic bone disease.",
+        "uncertainties": [
+          "The sentence also mentions tumor cell growth, but the claim is centered on bone destruction; the specific inhibitor(s) are not named.",
+          "The text does not specify which animal species or whether the effect is mediated through osteoclasts."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        80
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        76
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        271,
+        376
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        136,
+        236
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,183 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "anorexia nervosa",
+          "species": null,
+          "stage": "adolescent girls"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "41",
+              "42"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "hormonal therapy combined with calcium and vitamin D supplementation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "40"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "BMD trajectory",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1102,
+            "passage_index": 1,
+            "quote": "Hormonal therapy combined with calcium and vitamin D supplementation was associated with a more favorable BMD trajectory.",
+            "start": 981
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "more favorable BMD trajectory",
+          "intervention": "Hormonal therapy combined with calcium and vitamin D supplementation",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In adolescent girls with anorexia nervosa, hormonal therapy combined with calcium and vitamin D supplementation was associated with a more favorable bone mineral density trajectory.",
+        "uncertainties": [
+          "The passage reports an association, not a demonstrated causal effect.",
+          "The treatment components are grouped together; the specific contributor(s) to the association are not separable from the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "anorexia nervosa",
+          "species": null,
+          "stage": "adolescent girls"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "higher BMI",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "43",
+              "44"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "hormonal profiles",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1233,
+            "passage_index": 1,
+            "quote": "Higher BMI (used in correlation analyses) was associated with more favorable hormonal profiles (including IGF-1, estradiol and LH)",
+            "start": 1103
+          }
+        ],
+        "experiment": {
+          "assay": "correlation analyses",
+          "dose": null,
+          "duration": null,
+          "endpoint": "more favorable hormonal profiles",
+          "intervention": "Higher BMI",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Among adolescent girls with anorexia nervosa, higher BMI was associated with more favorable hormonal profiles, including IGF-1, estradiol, and LH.",
+        "uncertainties": [
+          "The text describes a correlation/association, not causation.",
+          "BMI is a clinical characteristic rather than a molecular perturbation."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        981,
+        1102
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1092,
+        1170
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1103,
+        1233
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1172,
+        1284
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,120 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "27",
+              "28",
+              "30",
+              "31",
+              "32",
+              "33",
+              "34",
+              "35"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "TNA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "osteoclast markers",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1464,
+            "passage_index": 1,
+            "quote": "knockdown of TNA expression significantly increased the expression of osteoclast markers, thereby promoting osteoclast differentiation and bone resorption.",
+            "start": 1309
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro experiments",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast markers / osteoclast differentiation and bone resorption",
+          "intervention": "knockdown of TNA expression",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Knockdown of TNA expression increased osteoclast marker expression and promoted osteoclast differentiation and bone resorption in vitro.",
+        "uncertainties": [
+          "The exact cell type and species are not stated in the excerpt.",
+          "The evidence span is approximate and may not match the passage offsets exactly.",
+          "The claim combines marker expression with downstream osteoclast phenotypes; the specific molecular marker targets are not named."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1309,
+        1464
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1302,
+        1483
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

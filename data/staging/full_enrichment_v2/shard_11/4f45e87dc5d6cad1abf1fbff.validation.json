@@ -1,0 +1,210 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "primary mouse bone marrow-derived macrophages (BMMs)",
+          "compartment": null,
+          "disease_setting": "non-union microenvironment",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "BMP9",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "19"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-induced osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "20"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "SMAD-ID1 pathway",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1196,
+            "passage_index": 1,
+            "quote": "In vitro studies further validated the in vivo results, confirming that BMP9 promotes M2 macrophage polarization, upregulates chemokines Ccl2 and Ccl7, and inhibits RANKL-induced osteoclastogenesis through the canonical SMAD-ID1 pathway.",
+            "start": 959
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro validation",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "BMP9",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "BMP9 was reported to inhibit RANKL-induced osteoclastogenesis through the canonical SMAD-ID1 pathway in vitro.",
+        "uncertainties": [
+          "The passage states inhibition of RANKL-induced osteoclastogenesis but does not establish whether the effect is direct or indirect.",
+          "BMP9 is mentioned without an explicit molecular form in the text; protein is a text-supported candidate only."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "primary mouse bone marrow-derived macrophages (BMMs)",
+          "compartment": null,
+          "disease_setting": "non-union microenvironment",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "BMP9",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "M2 macrophage polarization",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "17"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:CCL2",
+            "key": "e3",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "Ccl2",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "18"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Ccl7",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1109,
+            "passage_index": 1,
+            "quote": "In vitro studies further validated the in vivo results, confirming that BMP9 promotes M2 macrophage polarization, upregulates chemokines Ccl2 and Ccl7",
+            "start": 959
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro validation",
+          "dose": null,
+          "duration": null,
+          "endpoint": "M2 macrophage polarization; Ccl2 and Ccl7 expression",
+          "intervention": "BMP9",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "BMP9 was reported to promote M2 macrophage polarization and increase expression of the chemokines Ccl2 and Ccl7 in vitro.",
+        "uncertainties": [
+          "The passage groups macrophage polarization and chemokine upregulation in one sentence; the exact causal ordering between them is not specified.",
+          "Ccl2 and Ccl7 are annotated as genes, but the text only states upregulation, not whether protein abundance also changed."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        959,
+        1196
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1216,
+        1363
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        959,
+        1109
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1216,
+        1318
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

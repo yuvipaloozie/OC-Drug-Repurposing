@@ -1,0 +1,213 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "BMMs",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "26",
+              "29",
+              "33",
+              "36",
+              "39",
+              "41",
+              "44",
+              "46"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "TGF-beta3",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastic differentiation and bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "BMMs",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1298,
+            "passage_index": 1,
+            "quote": "The results showed 10 ng/mL of TGF-beta3 significantly suppressed osteoclastic differentiation and bone resorption in BMMs (p < 0.05 vs. RANKL).",
+            "start": 1154
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "10 ng/mL",
+          "duration": null,
+          "endpoint": "osteoclastic differentiation and bone resorption",
+          "intervention": "10 ng/mL of TGF-beta3 treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "TGF-beta3 treatment at 10 ng/mL suppressed osteoclastic differentiation and bone resorption in BMMs.",
+        "uncertainties": [
+          "The exact taxon for BMMs is not stated in the passage.",
+          "The claim combines effects on osteoclastic differentiation and bone resorption in one statement; the individual contribution of each endpoint is not separated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "BMMs",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "26",
+              "29",
+              "33",
+              "36",
+              "39",
+              "41",
+              "44",
+              "46"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "TGF-beta3",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "37",
+              "38"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "LC3-II",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "autophagy",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1380,
+            "passage_index": 1,
+            "quote": "TGF-beta3 augments the expression of LC3-II to stimulate autophagy",
+            "start": 1314
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "LC3-II expression",
+          "intervention": "TGF-beta3 treatment",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "TGF-beta3 increased LC3-II expression to stimulate autophagy in BMMs.",
+        "uncertainties": [
+          "The passage states that LC3-II expression is increased to stimulate autophagy, but it does not separately quantify the autophagy change in this sentence."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1154,
+        1298
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        745,
+        889
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1314,
+        1380
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        776,
+        842
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

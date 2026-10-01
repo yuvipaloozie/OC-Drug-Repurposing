@@ -1,0 +1,111 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "level of roughness of the underlying adhesive surface",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "sealing zone",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "F-actin",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 342,
+            "passage_index": 1,
+            "quote": "that the level of roughness of the underlying adhesive surface has a profound effect on the formation and stability of the sealing zone and the associated F-actin",
+            "start": 180
+          },
+          {
+            "end": 478,
+            "passage_index": 1,
+            "quote": "The smooth surfaces induce the formation of small and unstable actin rings with a typical lifespan of approximately 8 minutes, whereas the sealing zones formed on the rough calcite surfaces are considerably larger, and remain stable for more than 6 hours.",
+            "start": 332
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "formation and stability of sealing zone / actin rings",
+          "intervention": "smooth and rough calcite crystals as substrate topographies",
+          "outcome_change": "other",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Surface roughness of the underlying adhesive substrate affects osteoclast sealing zone formation and stability; smooth surfaces produce small, unstable actin rings, while rough calcite surfaces produce larger, stable sealing zones.",
+        "uncertainties": [
+          "The passage describes substrate topography effects, not a molecular mechanism for a specific gene or protein.",
+          "The exact causal mediator between roughness and osteoclast behavior is not identified.",
+          "The claim combines two related outcomes (formation and stability) from the same reported result."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        180,
+        342
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        79,
+        183
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

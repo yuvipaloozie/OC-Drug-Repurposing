@@ -1,0 +1,226 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW 264.7 cells",
+          "compartment": null,
+          "disease_setting": "osteoclastogenesis under oxidative stress",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "45"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "KAE",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast formation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "60"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "RAW 264.7 cells",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "61"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "LPS",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1044,
+            "passage_index": 1,
+            "quote": "KAE can reduce the OS of RAW 264.7 cells stimulated by LPS",
+            "start": 986
+          },
+          {
+            "end": 1082,
+            "passage_index": 1,
+            "quote": "inhibit the formation of osteoclasts",
+            "start": 1046
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast formation",
+          "intervention": "KAE",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Kaempferol treatment was reported to reduce oxidative stress in RAW 264.7 cells stimulated by LPS and to inhibit osteoclast formation.",
+        "uncertainties": [
+          "The quoted text combines two outcomes (reduced oxidative stress and inhibited osteoclast formation); the regulatory object here is limited to osteoclast formation.",
+          "RAW 264.7 is a cell line, while the species inference comes from the passage context and is not directly stated for the cells themselves."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW 264.7 cells",
+          "compartment": null,
+          "disease_setting": "osteoclastogenesis under oxidative stress",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "45"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "KAE",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "64",
+              "66",
+              "67",
+              "69",
+              "71"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "SRC, NF-kappaB, AKT1, NOS3 and MMP2",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1492,
+            "passage_index": 1,
+            "quote": "KAE exerted a down-regulatory effect on the expression of proto-oncogene tyrosine protein kinase (SRC), nuclear factor kappa-B (NF-kappaB), Serine/Threonine Kinase-1 (AKT1), Nitric Oxide Synthase 3 (NOS3) and Matrix Metallopeptidase-2 (MMP2)",
+            "start": 1251
+          }
+        ],
+        "experiment": {
+          "assay": "target gene expression assay",
+          "dose": null,
+          "duration": null,
+          "endpoint": "expression of SRC, NF-kappaB, AKT1, NOS3 and MMP2",
+          "intervention": "KAE",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Kaempferol was reported to down-regulate the expression of SRC, NF-kappaB, AKT1, NOS3 and MMP2.",
+        "uncertainties": [
+          "The passage reports a collective down-regulatory effect on several genes; individual gene-specific effects are not separately resolved here.",
+          "NF-kappaB is presented as a gene annotation in the packet, but the text also uses it as part of a pathway-style axis description."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        986,
+        1044
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        766,
+        825
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1046,
+        1082
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        827,
+        860
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1251,
+        1492
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1389,
+        1650
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

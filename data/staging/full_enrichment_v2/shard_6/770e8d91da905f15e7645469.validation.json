@@ -1,0 +1,217 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "4"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ritonavir",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis and function",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 113,
+            "passage_index": 0,
+            "quote": "The HIV protease inhibitor ritonavir blocks osteoclastogenesis and function by impairing RANKL-induced signaling.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis and function",
+          "intervention": "ritonavir",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Ritonavir blocks osteoclastogenesis and osteoclast function.",
+        "uncertainties": [
+          "Title-level statement only; no separate experimental details in the quoted span."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "4",
+              "35",
+              "37",
+              "40",
+              "45",
+              "51"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ritonavir",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "41",
+              "42"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "RANKL-induced signaling",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "43",
+              "44",
+              "47"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "NF-kappaB and Akt signaling pathways",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 113,
+            "passage_index": 0,
+            "quote": "The HIV protease inhibitor ritonavir blocks osteoclastogenesis and function by impairing RANKL-induced signaling.",
+            "start": 0
+          },
+          {
+            "end": 936,
+            "passage_index": 1,
+            "quote": "ritonavir impairs receptor activator of nuclear factor kappaB ligand-induced (RANKL-induced) activation of NF-kappaB and Akt signaling pathways, both critical to osteoclast formation and function.",
+            "start": 740
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "RANKL-induced signaling / NF-kappaB and Akt signaling pathways",
+          "intervention": "ritonavir",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Ritonavir impairs RANKL-induced signaling.",
+        "uncertainties": [
+          "The abstract specifies inhibition of RANKL-induced NF-kappaB and Akt signaling, but does not establish a direct molecular target or directness of the effect."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        113
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        119
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        0,
+        113
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        119
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        740,
+        936
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        854,
+        1010
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,104 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "postmenopausal osteoporosis",
+          "species": "rat",
+          "stage": "postmenopausal osteoporosis"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "67",
+              "68"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "NRG and NRG-D",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "osteoporotic changes",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "70"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": "rat"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "unknown",
+            "surface": "BALP",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1220,
+            "passage_index": 1,
+            "quote": "NRG-D significantly attenuated osteoporotic changes, evidenced by a reduction in the bone resorption marker RANKL and an increase in the bone formation marker BALP",
+            "start": 1090
+          }
+        ],
+        "experiment": {
+          "assay": "serum biochemical analyses; micro-computed tomography; histopathological assessments",
+          "dose": "10 and 25 mg/kg",
+          "duration": "four weeks",
+          "endpoint": "osteoporotic changes",
+          "intervention": "NRG and NRG-D treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In the rat postmenopausal osteoporosis model, treatment with NRG and NRG-D attenuated osteoporotic changes, with reduced RANKL and increased BALP reported as markers of this improvement.",
+        "uncertainties": [
+          "The treatment groups combine two compounds in one sentence; the specific effect of NRG versus NRG-D is not separated in the quoted span.",
+          "BALP is reported as a bone formation marker, but the entity form is not explicitly identified in the text beyond the acronym."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [],
+  "valid_envelope": true
+}

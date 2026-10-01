@@ -1,0 +1,181 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "hyaluronan synthesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast-mediated bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 466,
+            "passage_index": 1,
+            "quote": "Previously published data demonstrating a linkage between induction of hyaluronan synthesis and osteoclast-mediated bone resorption",
+            "start": 335
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The abstract states that prior studies linked induction of hyaluronan synthesis with osteoclast-mediated bone resorption.",
+        "uncertainties": [
+          "This is a review statement rather than a new experimental result.",
+          "The text describes a linkage, not a directional causal effect."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "hypothesis",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone surfaces",
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "8",
+              "10",
+              "11",
+              "12",
+              "13"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "hyaluronan",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast binding to bone surfaces",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 615,
+            "passage_index": 1,
+            "quote": "Suggestions are made involving the cell binding ability of hyaluronan and its potential to mediate osteoclast binding to bone surfaces",
+            "start": 481
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "binding",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The abstract suggests that hyaluronan may help mediate osteoclast binding to bone surfaces.",
+        "uncertainties": [
+          "The wording is speculative ('potential to mediate'), so this is a hypothesis rather than an observed effect.",
+          "No experiment, species, or assay is stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        335,
+        466
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        180,
+        257
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        481,
+        615
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        269,
+        403
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

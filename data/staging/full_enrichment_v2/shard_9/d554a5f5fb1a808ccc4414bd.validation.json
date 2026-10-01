@@ -1,0 +1,378 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 cells and BMMs",
+          "compartment": null,
+          "disease_setting": "rheumatoid arthritis / collagen-induced arthritis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "48",
+              "49",
+              "62",
+              "63",
+              "65",
+              "67",
+              "68",
+              "69",
+              "73",
+              "74",
+              "75"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "6-OAP",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-induced osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "53"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "58"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone destruction",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 521,
+            "passage_index": 1,
+            "quote": "6-O-angeloylplenolin (6-OAP), a pseudoguaianolide from Euphorbia thymifolia Linn widely used for the treatment of RA in traditional Chinese medicine, could inhibit RANKL-induced osteoclastogenesis and bone resorption in both RAW264.7 cells and BMMs from 1 muM and protect a collagen-induced arthritis (CIA) mouse model from bone destruction in vivo.",
+            "start": 172
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP staining and histological analysis are mentioned for the in vivo effect",
+          "dose": "1 muM; 1 or 5 mg/kg, i.g.",
+          "duration": null,
+          "endpoint": "osteoclastogenesis, bone resorption, and bone destruction",
+          "intervention": "6-OAP",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "6-O-angeloylplenolin (6-OAP) inhibited RANKL-induced osteoclastogenesis and bone resorption in vitro, and it also protected the CIA mouse model from bone destruction.",
+        "uncertainties": [
+          "The quoted span combines in vitro and in vivo results; the effect is not separated into distinct experiments here.",
+          "Species for the in vitro cell assays is not explicitly stated in the sentence, although the mouse CIA model is explicit."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "48",
+              "49",
+              "62",
+              "63",
+              "65",
+              "67",
+              "68",
+              "69",
+              "73",
+              "74",
+              "75"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "6-OAP",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "protein",
+            "surface": "c-Src",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1139,
+            "passage_index": 1,
+            "quote": "Molecular docking indicated that c-Src might be a target of 6-OAP and that phosphorylation of c-Src was suppressed by 6-OAP treatment. CETSA and SPR assay further confirmed the potential interaction between 6-OAP and c-Src.",
+            "start": 916
+          },
+          {
+            "end": 1512,
+            "passage_index": 1,
+            "quote": "In summary, the results demonstrated that the function of c-Src was disrupted by 6-OAP, which led to the suppression of downstream signaling vital to osteoclast differentiation and function.",
+            "start": 1322
+          }
+        ],
+        "experiment": {
+          "assay": "molecular docking, CETSA and SPR assay are mentioned",
+          "dose": null,
+          "duration": null,
+          "endpoint": "phosphorylation of c-Src",
+          "intervention": "6-OAP treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "6-OAP suppressed phosphorylation of c-Src and was reported to disrupt c-Src function.",
+        "uncertainties": [
+          "The text distinguishes computational prediction, binding assays, and the phosphorylation result; direct inhibition of c-Src is not explicitly proven by a single assay."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "48",
+              "49",
+              "62",
+              "63",
+              "65",
+              "67",
+              "68",
+              "69",
+              "73",
+              "74",
+              "75"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "6-OAP",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "70"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "NF-kappaB",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "71"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "c-Fos",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "72"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "NFATc1",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1321,
+            "passage_index": 1,
+            "quote": "Three signaling molecules downstream of c-Src that are vital to the differentiation and function of osteoclasts, NF-kappaB, c-Fos and NFATc1, were also suppressed by 6-OAP in vitro.",
+            "start": 1140
+          },
+          {
+            "end": 1280,
+            "passage_index": 1,
+            "quote": "NF-kappaB, c-Fos and NFATc1",
+            "start": 1253
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "NF-kappaB, c-Fos and NFATc1 suppression",
+          "intervention": "6-OAP in vitro",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "6-OAP suppressed downstream osteoclast-signaling molecules NF-kappaB, c-Fos, and NFATc1 in vitro.",
+        "uncertainties": [
+          "The sentence names three downstream signaling molecules together; the exact individual effect on each molecule is grouped in one statement."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        172,
+        521
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        353,
+        789
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        916,
+        1139
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1143,
+        1287
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1322,
+        1512
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1358,
+        1466
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1140,
+        1321
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1304,
+        1460
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1253,
+        1280
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1434,
+        1459
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

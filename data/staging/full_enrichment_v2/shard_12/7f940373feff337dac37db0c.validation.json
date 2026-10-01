@@ -1,0 +1,233 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "in vitro and in vivo",
+          "disease_setting": "bone resorption",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "cofilin",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "20",
+              "29",
+              "33"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone density",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "podosomes",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "21",
+              "31"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 650,
+            "passage_index": 1,
+            "quote": "Conditional deletion of cofilin in OCs in mice, driven by the cathepsin K promoter (Ctsk-Cre), impaired bone resorption in vivo, increasing bone density.",
+            "start": 497
+          },
+          {
+            "end": 723,
+            "passage_index": 1,
+            "quote": "In vitro, OCs were not able to organize podosomes into peripheral belts.",
+            "start": 651
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption; podosome belt formation; bone density",
+          "intervention": "conditional deletion of cofilin in OCs in mice driven by the cathepsin K promoter (Ctsk-Cre)",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Conditional deletion of cofilin in osteoclasts in mice impaired bone resorption in vivo, increased bone density, and prevented proper podosome belt formation in vitro.",
+        "uncertainties": [
+          "Exact character offsets are best-effort and may need validator correction.",
+          "The sentence also reports increased bone density, which is captured in the summary but not as a separate regulatory edge."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "podosomes",
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "cofilin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "22",
+              "23",
+              "25",
+              "30",
+              "32"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:CTTN",
+            "key": "e2",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "protein",
+            "surface": "CTTN",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1048,
+            "passage_index": 1,
+            "quote": "Cofilin interacts with CTTN in podosomes and phosphorylation of either protein disrupts this interaction,",
+            "start": 943
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "interaction; disruption by phosphorylation",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "binding",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Cofilin interacts with cortactin in podosomes, and phosphorylation of either protein disrupts this interaction.",
+        "uncertainties": [
+          "The text states an interaction and its disruption by phosphorylation, but does not specify the phosphorylated residue or whether the interaction is direct physical binding versus complex association."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        497,
+        650
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        300,
+        370
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        651,
+        723
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        372,
+        464
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        943,
+        1048
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        597,
+        701
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,230 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "bone marrow ablation",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "17",
+              "18",
+              "19",
+              "21",
+              "22",
+              "24"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "MPSS",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "ruffled border formation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": "rat"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1381,
+            "passage_index": 1,
+            "quote": "However, high dose MPSS inhibits both bone formation and resorption",
+            "start": 1314
+          },
+          {
+            "end": 1499,
+            "passage_index": 1,
+            "quote": "and inhibits ruffled border formation in osteoclasts.",
+            "start": 1446
+          }
+        ],
+        "experiment": {
+          "assay": "TEM",
+          "dose": "100 mg/kg/day",
+          "duration": "3 days",
+          "endpoint": "ruffled border formation",
+          "intervention": "high dose MPSS treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "MPSS treatment decreased ruffled border formation in osteoclasts in the MPSS-treated group compared with control.",
+        "uncertainties": [
+          "The text states inhibited ruffled border formation but does not establish a direct molecular target or mechanism.",
+          "Ruffled border change is described for osteoclasts in the treated group; directness is not demonstrated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "no_effect",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "bone marrow ablation",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "16",
+              "17",
+              "18",
+              "19",
+              "21",
+              "22",
+              "24"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "MPSS",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast number",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "20",
+              "23"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "cathepsin K",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 953,
+            "passage_index": 1,
+            "quote": "However, there were no differences between the groups in the osteoclast number, the expression of mRNAs for osteoblast differentiation markers, and alkaline phosphatase and cathepsin K judged by immunohistochemistry.",
+            "start": 737
+          }
+        ],
+        "experiment": {
+          "assay": "tartrate-resistant acid phosphatase staining",
+          "dose": "100 mg/kg/day",
+          "duration": "3 days",
+          "endpoint": "osteoclast number",
+          "intervention": "high dose MPSS treatment",
+          "outcome_change": "no_detected_change",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "MPSS treatment did not change the osteoclast number or the cathepsin K level judged by immunohistochemistry.",
+        "uncertainties": [
+          "The no-difference statement also mentions cathepsin K and alkaline phosphatase, but this claim is limited to osteoclast number.",
+          "The sentence groups several endpoints together, so the specific assay/endpoint mapping is approximate."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1314,
+        1381
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1134,
+        1204
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1446,
+        1499
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1248,
+        1318
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        737,
+        953
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        797,
+        891
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

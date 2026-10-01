@@ -1,0 +1,126 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "monocytes",
+          "compartment": "alveolar bone",
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "21",
+              "22",
+              "28",
+              "38",
+              "39"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "parathyroid hormone",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "monocytes osteoclastic differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast cells",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 938,
+            "passage_index": 1,
+            "quote": "Parathyroid hormone administration facilitates PDLCs osteogenic differentiation and monocytes osteoclastic differentiation synchronously.",
+            "start": 801
+          },
+          {
+            "end": 800,
+            "passage_index": 1,
+            "quote": "The expression of osteogenic markers and the number and surface of osteoclast cells were promoted.",
+            "start": 702
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "monocytes osteoclastic differentiation; osteoclast cell number and surface",
+          "intervention": "parathyroid hormone administration",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Parathyroid hormone administration was reported to promote monocytes osteoclastic differentiation, and the number and surface of osteoclast cells were increased in the study context.",
+        "uncertainties": [
+          "The text reports combined osteogenic and osteoclastic effects; the exact causal linkage for each endpoint is not separated in the abstract.",
+          "Species is supported by the mouse model sentence, but the osteoclastic differentiation assay context is not fully specified."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        801,
+        938
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        921,
+        1055
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        702,
+        800
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1056,
+        1153
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

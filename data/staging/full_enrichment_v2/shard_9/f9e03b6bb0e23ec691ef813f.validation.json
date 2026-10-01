@@ -1,0 +1,94 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "material-induced bone formation",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "17",
+              "18"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "tricalcium phosphate",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "mitochondrial oxidative phosphorylation (OXPHOS)",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 371,
+            "passage_index": 1,
+            "quote": "Here, we identify mitochondrial oxidative phosphorylation (OXPHOS) as an early and indispensable pathway activated specifically by an osteoinductive tricalcium phosphate (TCPS) in material-induced bone formation.",
+            "start": 159
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "OXPHOS activation",
+          "intervention": "osteoinductive tricalcium phosphate (TCPS)",
+          "outcome_change": "increased",
+          "perturbation_type": "gain_of_function"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The osteoinductive tricalcium phosphate (TCPS) specifically activates mitochondrial oxidative phosphorylation (OXPHOS) early in material-induced bone formation.",
+        "uncertainties": [
+          "The passage states activation and importance, but does not specify the molecular mechanism of TCPS action on OXPHOS."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        159,
+        371
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        82,
+        167
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

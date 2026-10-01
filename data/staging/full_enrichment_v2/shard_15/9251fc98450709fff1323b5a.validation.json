@@ -1,0 +1,194 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "29"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "p130Cas",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "32"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteopetrosis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "33"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast dysfunction",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 930,
+            "passage_index": 1,
+            "quote": "osteoclast-specific p130Cas-deficient mice exhibit osteopetrosis due to osteoclast dysfunction",
+            "start": 836
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteopetrosis",
+          "intervention": "osteoclast-specific p130Cas deficiency",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Osteoclast-specific p130Cas deficiency was reported to cause osteopetrosis due to osteoclast dysfunction.",
+        "uncertainties": [
+          "The passage links osteopetrosis to osteoclast dysfunction, but does not specify the molecular mechanism beyond the deficiency phenotype.",
+          "The exact molecular form of p130Cas is inferred from the knockout/deficiency context."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "OSCC cells",
+          "compartment": null,
+          "disease_setting": "oral squamous cell carcinoma",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "44"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "p130Cas",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "42"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "e2",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "receptor activator of NF-kappaB ligand",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1428,
+            "passage_index": 1,
+            "quote": "The knockdown of p130Cas in OSCC cells suppressed the cell growth, the expression of receptor activator of NF-kappaB ligand",
+            "start": 1305
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "expression of receptor activator of NF-kappaB ligand",
+          "intervention": "knockdown of p130Cas",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Knockdown of p130Cas in OSCC cells suppressed RANKL expression.",
+        "uncertainties": [
+          "The sentence also reports reduced cell growth and bone invasion, but this claim is limited to the RANKL expression effect.",
+          "The provided existing-node suggestion is unverified and the taxon is not explicitly stated in the sentence."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        836,
+        930
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        915,
+        993
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1305,
+        1428
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1588,
+        1656
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,101 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone marrow microenvironment",
+          "disease_setting": "bone loss",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "Biomaterials",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption functions",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 646,
+            "passage_index": 1,
+            "quote": "Biomaterials enable sophisticated regulation of the BME through biomimetic design and functionalization strategies. They not only activate osteoblast signaling pathways to promote bone formation but also inhibit osteoclast differentiation and bone resorption functions.",
+            "start": 377
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation and bone resorption functions",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The review states that biomaterials can inhibit osteoclast differentiation and bone resorption functions in the bone marrow microenvironment.",
+        "uncertainties": [
+          "Review/background statement rather than a primary experiment.",
+          "The text also mentions bone resorption functions; this is captured as a second phenotype entity, but the exact mechanistic subject for that clause is not separately demonstrated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        377,
+        646
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        409,
+        491
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

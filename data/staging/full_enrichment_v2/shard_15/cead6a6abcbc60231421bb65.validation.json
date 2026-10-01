@@ -1,0 +1,200 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "in vivo",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "24"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Zeb1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "23"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1237,
+            "passage_index": 1,
+            "quote": "Mechanistically, Zeb1 acts in a rheostat-like fashion to modulate murine and human osteoclast activity by transcriptionally repressing an ATP-buffering enzyme, mitochondrial creatine kinase 1 (MtCK1), thereby controlling the phosphocreatine energy shuttle and mitochondrial respiration.",
+            "start": 951
+          },
+          {
+            "end": 950,
+            "passage_index": 1,
+            "quote": "In vivo, Zeb1-null osteoclasts assume a hyperactivated state, markedly decreasing bone density due to excessive resorptive activity.",
+            "start": 818
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast activity / resorptive activity; bone density",
+          "intervention": "Zeb1-null",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Loss of Zeb1 is reported to produce hyperactivated osteoclasts and excessive bone-resorptive activity, with decreased bone density in vivo.",
+        "uncertainties": [
+          "The sentence links the Zeb1-null state to hyperactivation and decreased bone density, but does not specify the causal assay details in the excerpt.",
+          "Species is not specified for the in vivo result beyond being in vivo."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "murine and human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "24"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Zeb1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "mitochondrial creatine kinase 1 (MtCK1)",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1237,
+            "passage_index": 1,
+            "quote": "Mechanistically, Zeb1 acts in a rheostat-like fashion to modulate murine and human osteoclast activity by transcriptionally repressing an ATP-buffering enzyme, mitochondrial creatine kinase 1 (MtCK1), thereby controlling the phosphocreatine energy shuttle and mitochondrial respiration.",
+            "start": 951
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast activity / energy metabolism",
+          "intervention": "not stated",
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Zeb1 is described as transcriptionally repressing MtCK1 in murine and human osteoclasts, thereby modulating osteoclast activity and energy metabolism.",
+        "uncertainties": [
+          "The text states transcriptional repression, but does not establish whether the regulation is direct.",
+          "MtCK1 is presented as an enzyme/protein name; no identifier is provided in the packet."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        951,
+        1237
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        402,
+        534
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        818,
+        950
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        269,
+        401
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        951,
+        1237
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        402,
+        690
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

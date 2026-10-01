@@ -1,0 +1,202 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "mitochondria",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "7"
+            ],
+            "existing_node_id": "CHEBI:26523",
+            "key": "e2",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "compound",
+            "surface": "reactive oxygen species",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation and maturation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 424,
+            "passage_index": 1,
+            "quote": "Osteoclasts are the key cells in bone tissue that regulate bone resorption, and their homeostasis is crucial for maintaining the homeostasis of the oral and maxillofacial bone tissue. Mitochondria, known as the \"powerhouses\" of the cell, not only affect cellular energy supply but also modulate the levels of reactive oxygen species, thus becoming one of the key factors regulating osteoclast differentiation and maturation.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The review states that mitochondria modulate reactive oxygen species levels and are key factors regulating osteoclast differentiation and maturation.",
+        "uncertainties": [
+          "Review-level background statement rather than a primary experimental result.",
+          "The text does not specify a direct mechanism or molecular form for mitochondria."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "oral bone disorders",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "8"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "mitochondrial dysfunction",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "9",
+              "11"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "oral bone defects",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "10"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "periodontal disease",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 828,
+            "passage_index": 1,
+            "quote": "It also discusses the association between mitochondrial dysfunction and pathological processes such as oral bone defects and periodontal disease",
+            "start": 684
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The review reports an association between mitochondrial dysfunction and oral bone-related pathological processes such as oral bone defects and periodontal disease.",
+        "uncertainties": [
+          "This is a review statement about association, not a causal experiment.",
+          "The passage groups multiple pathological processes together; directionality is not specified."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        424
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        304
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        684,
+        828
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        367,
+        479
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

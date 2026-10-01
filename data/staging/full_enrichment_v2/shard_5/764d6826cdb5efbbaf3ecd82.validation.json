@@ -1,0 +1,435 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "233328"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "LRRK1",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "14628"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:OSTM1",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "OSTM1",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 360,
+            "passage_index": 1,
+            "quote": "LRRK1 regulates osteoclast activity remain incompletely defined. We previously identified that phosphorylation of OSTM1 at threonine 328 and serine 329 was compromised in LRRK1-deficient osteoclasts.",
+            "start": 161
+          },
+          {
+            "end": 328,
+            "passage_index": 1,
+            "quote": "OSTM1 at threonine 328 and serine 329 was compromised",
+            "start": 275
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "OSTM1 phosphorylation",
+          "intervention": "LRRK1-deficient",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In LRRK1-deficient osteoclasts, OSTM1 phosphorylation at T328/S329 was reduced/compromised.",
+        "uncertainties": [
+          "The text links LRRK1 deficiency to reduced OSTM1 phosphorylation, but does not establish direct enzymatic causality.",
+          "Phosphorylation is represented as an activity-level effect rather than a specific biochemical reaction."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "in vitro",
+          "disease_setting": null,
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "14628"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:OSTM1",
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "phosphomimetic OSTM1 variant",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "233328"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "LRRK1-null osteoclasts",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "MESH:D014091"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "resorptive activity",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 669,
+            "passage_index": 1,
+            "quote": "LRRK1 regulation of osteoclast functions, we expressed a phosphomimetic OSTM1 variant in LRRK1-null osteoclasts. Overexpression of phosphomimetic, but not a dephosphomimetic variant, partially restored resorptive activity in LRRK1-deficient osteoclasts in vitro.",
+            "start": 407
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "resorptive activity",
+          "intervention": "overexpression of phosphomimetic OSTM1 variant",
+          "outcome_change": "increased",
+          "perturbation_type": "gain_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Expression of phosphomimetic OSTM1 in LRRK1-null osteoclasts partially restored resorptive activity in vitro; the dephosphomimetic variant did not.",
+        "uncertainties": [
+          "The rescue was only partial.",
+          "The dephosphomimetic variant is mentioned as not restoring activity, but no separate edge is extracted for that comparison."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "in vivo",
+          "disease_setting": null,
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "14628"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:OSTM1",
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "OSTM1-T328E/S329D expression",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "MESH:D014091"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast resorptive activity",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone formation",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "trabecular architecture",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 937,
+            "passage_index": 1,
+            "quote": "Lrrk1-deficient background. Ostm1-T328E/S329D KI mice displayed normal skeletal development and bone remodeling.",
+            "start": 825
+          },
+          {
+            "end": 1196,
+            "passage_index": 1,
+            "quote": "Lrrk1 crossed with the Lrrk1-deficient background. OSTM1-T328E/S329D expression increased osteoclast resorptive activity and bone formation and partially improved trabecular architecture, although bone volume remained unchanged.",
+            "start": 1080
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast resorptive activity / bone formation / trabecular architecture",
+          "intervention": "Ostm1-T328E/S329D knock-in on Lrrk1-deficient background",
+          "outcome_change": "increased",
+          "perturbation_type": "gain_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In Lrrk1-deficient mice crossed with Ostm1-T328E/S329D knock-in mice, OSTM1 T328E/S329D expression increased osteoclast resorptive activity and bone formation and partially improved trabecular architecture, while bone volume remained unchanged.",
+        "uncertainties": [
+          "The text combines several outcomes in one experiment; the claim focuses on the resorptive activity outcome.",
+          "Bone volume remained unchanged, so improvement was partial."
+        ]
+      },
+      "errors": [
+        "invented annotation ID",
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mice and humans",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "233328"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "LRRK1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D014091"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast-mediated bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D010022"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteopetrosis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 127,
+            "passage_index": 1,
+            "quote": "LRRK1 is essential for osteoclast-mediated bone resorption, and loss of LRRK1 function causes osteopetrosis in mice and humans.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c4",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "LRRK1 is described as essential for osteoclast-mediated bone resorption, and loss of LRRK1 function causes osteopetrosis in mice and humans.",
+        "uncertainties": [
+          "This is a background statement rather than a newly tested experiment.",
+          "Species are given jointly in the text; specific attribution per outcome is not separated."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        161,
+        360
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        283,
+        345
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        275,
+        328
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        397,
+        444
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        407,
+        669
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        454,
+        653
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        825,
+        937
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        947,
+        1072
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c4",
+      "corrected_offsets": [
+        0,
+        127
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        122,
+        247
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

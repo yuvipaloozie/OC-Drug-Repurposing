@@ -1,0 +1,149 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "macrophages",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "43",
+              "50",
+              "57",
+              "61",
+              "67"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "irisin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "51",
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Tumor necrosis factor-alpha",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "55",
+              "56",
+              "58",
+              "60",
+              "64",
+              "66"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Heat shock protein 90",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "MAPK signaling cascade",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "macrophages",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "53",
+              "54",
+              "59"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "LPS",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1171,
+            "passage_index": 1,
+            "quote": "in vitro assays revealed that exogenous irisin administration potently suppresses Tumor necrosis factor-alpha (TNF-alpha) production in Lipopolysaccharide (LPS)-stimulated macrophages by directly downregulating Heat shock protein 90 (HSP90) and subsequently inhibiting the Mitogen-activated protein kinase (MAPK) signaling cascade.",
+            "start": 840
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro assays",
+          "dose": null,
+          "duration": null,
+          "endpoint": "TNF-alpha production",
+          "intervention": "exogenous irisin administration",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Exogenous irisin suppresses TNF-alpha production in LPS-stimulated macrophages, with the text attributing this to downregulation of HSP90 and inhibition of MAPK signaling.",
+        "uncertainties": [
+          "The passage links irisin to TNF-alpha suppression through HSP90 downregulation and MAPK inhibition, but the exact molecular form of irisin is not specified in the text.",
+          "The macrophage species is not stated in the cited sentence.",
+          "LPS is part of the experimental context, but the text does not specify a separate causal edge from LPS to TNF-alpha in this claim."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        840,
+        1171
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1030,
+        1287
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

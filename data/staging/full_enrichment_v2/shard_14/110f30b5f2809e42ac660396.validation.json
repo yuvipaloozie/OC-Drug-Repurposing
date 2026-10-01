@@ -1,0 +1,181 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "3"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Prdx1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 103,
+            "passage_index": 0,
+            "quote": "Antioxidant enzyme Prdx1 inhibits osteoclastogenesis via suppressing ROS and NFATc1 signaling pathways.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": null,
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Prdx1 is described as inhibiting osteoclastogenesis, with suppression of ROS and NFATc1 signaling pathways.",
+        "uncertainties": [
+          "Title-level statement summarizes the study rather than a standalone experiment.",
+          "ROS and NFATc1 are mentioned as suppressed pathways, but this claim is centered on osteoclastogenesis as the object."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "31"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Prdx1 protein",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "34"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "NFATc1",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 678,
+            "passage_index": 1,
+            "quote": "Recombinant Prdx1 protein was found to dose-dependently inhibit ROS production and osteoclast differentiation. Mechanistically, Prdx1 protein also attenuated NFATc1 activation",
+            "start": 503
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "dose-dependently",
+          "duration": null,
+          "endpoint": "NFATc1 activation",
+          "intervention": "recombinant Prdx1 protein",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Recombinant Prdx1 protein dose-dependently decreased NFATc1 activation.",
+        "uncertainties": [
+          "The evidence span is a contiguous excerpt that joins two adjacent sentences to include both the intervention and the mechanistic outcome.",
+          "The text also reports decreased ROS production and osteoclast differentiation, but those are not separately encoded in this claim."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        103
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        104
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        503,
+        678
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        500,
+        670
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

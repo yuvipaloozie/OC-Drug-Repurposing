@@ -1,0 +1,103 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone marrow",
+          "disease_setting": null,
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "26",
+              "29",
+              "30",
+              "31",
+              "32",
+              "34",
+              "37",
+              "39",
+              "40",
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "SPOCK2",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1030,
+            "passage_index": 1,
+            "quote": "Using female mice deficient for SPOCK2, we assessed the role of SPOCK2 in influencing bone formation, the BMM and hematopoiesis. Using micro-computed tomography we found a significant decrease in trabecular bone volume, bone mineral density and thickness, but increased cortical mineral density in SPOCK2 knockout (KO) versus wildtype (WT) bones. C-terminal telopeptide of type I collagen, a measure of bone resorption, was significantly increased in bone marrow supernatants of SPOCK2 KO mice.",
+            "start": 536
+          }
+        ],
+        "experiment": {
+          "assay": "micro-computed tomography; bone marrow supernatants",
+          "dose": null,
+          "duration": null,
+          "endpoint": "C-terminal telopeptide of type I collagen",
+          "intervention": "SPOCK2 knockout (KO)",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In SPOCK2-knockout mice, bone resorption was increased compared with wildtype controls.",
+        "uncertainties": [
+          "The reported increase is measured via a bone resorption marker (C-terminal telopeptide of type I collagen), not a direct osteoclast assay.",
+          "The text also reports several other bone and bone-marrow changes, but this claim is restricted to the resorption-related outcome."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        536,
+        1030
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        599,
+        750
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

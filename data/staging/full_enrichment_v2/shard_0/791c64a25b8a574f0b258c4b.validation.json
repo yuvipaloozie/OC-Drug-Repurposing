@@ -1,0 +1,314 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": "LOCAL:protein:mouse:TNFRSF11A",
+            "key": "e1",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "protein",
+            "surface": "glutaminase 1",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "25"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Glutamine",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "26"
+            ],
+            "existing_node_id": "CHEBI:16015",
+            "key": "e3",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "compound",
+            "surface": "glutamate",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 85,
+            "passage_index": 1,
+            "quote": "Glutamine is a conditionally essential amino acid, and glutaminase 1 (GLS1) catalyzes",
+            "start": 0
+          },
+          {
+            "end": 120,
+            "passage_index": 1,
+            "quote": " its conversion to glutamate, which",
+            "start": 85
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "metabolic_conversion",
+        "local_claim_id": "c1",
+        "reaction": {
+          "direction": "as_written",
+          "enzyme": "e1",
+          "products": [
+            {
+              "entity": "e3",
+              "stoichiometry": null
+            }
+          ],
+          "substrates": [
+            {
+              "entity": "e2",
+              "stoichiometry": null
+            }
+          ]
+        },
+        "regulatory": null,
+        "summary": "GLS1 catalyzes conversion of glutamine to glutamate.",
+        "uncertainties": [
+          "The enzyme is referred to as GLS1 in background text; no identifier annotation is provided for the enzyme entity.",
+          "Existing-node suggestion for glutamate is a provider hint and not independently validated here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclast-lineage cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mice",
+          "stage": "postnatal"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Gls1",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "3",
+              "40"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFRSF11A",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "complex",
+            "surface": "Tnfrsf11a-expressing cells",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone mass",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "4",
+              "36"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "postnatal growth retardation",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 135,
+            "passage_index": 0,
+            "quote": "Conditional deletion of glutaminase 1 in Tnfrsf11a-expressing cells reduces bone mass and induces postnatal growth retardation in mice.",
+            "start": 0
+          },
+          {
+            "end": 513,
+            "passage_index": 1,
+            "quote": "In this study, we generated Tnfrsf11aCre; Gls1flox/flox (cKO) mice to conditionally delete Gls1 in osteoclast-lineage cells and investigated its function in skeletal homeostasis.",
+            "start": 335
+          },
+          {
+            "end": 669,
+            "passage_index": 1,
+            "quote": "These mice exhibited reduced bone mass due to impaired osteoclast activity and decreased osteoblast numbers, suggesting disrupted bone remodeling dynamics.",
+            "start": 514
+          },
+          {
+            "end": 997,
+            "passage_index": 1,
+            "quote": "osteoblast function was preserved under monoculture and co-culture with osteoclasts",
+            "start": 914
+          },
+          {
+            "end": 1231,
+            "passage_index": 1,
+            "quote": "cKO mice appeared phenotypically normal at birth, they developed severe postnatal growth retardation and hypoglycemia",
+            "start": 1114
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone mass; postnatal growth retardation",
+          "intervention": "conditional delete Gls1 in osteoclast-lineage cells (Tnfrsf11aCre; Gls1flox/flox cKO)",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Conditional deletion of Gls1 in Tnfrsf11a-expressing cells in mice reduced bone mass and caused postnatal growth retardation.",
+        "uncertainties": [
+          "The title states reduced bone mass and induced postnatal growth retardation, while the abstract additionally attributes the bone phenotype to impaired osteoclast activity and decreased osteoblast numbers.",
+          "Tnfrsf11a-expressing cells may include cell types beyond osteoclast-lineage cells; the exact causal cell population is not fully resolved in the abstract."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        85
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        79
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        85,
+        120
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        80,
+        115
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        0,
+        135
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        129
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        335,
+        513
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        191,
+        326
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        514,
+        669
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        327,
+        466
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        914,
+        997
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        740,
+        816
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1114,
+        1231
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        841,
+        955
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

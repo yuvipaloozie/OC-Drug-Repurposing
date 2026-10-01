@@ -1,0 +1,193 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "LepR+ cells",
+          "compartment": "bone",
+          "disease_setting": null,
+          "species": "mice",
+          "stage": "5-month-old"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "34",
+              "35",
+              "44",
+              "51",
+              "52",
+              "55"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Hes1",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "femoral bone volume/total volume (BV/TV)",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 716,
+            "passage_index": 1,
+            "quote": "Male and female 5-month-old LepR-Cre;Hes1Delta/Delta mice exhibited an increase in femoral bone volume/total volume (BV/TV) due to an increase in trabecular number; vertebral (L3) and cortical bone was not affected.",
+            "start": 501
+          }
+        ],
+        "experiment": {
+          "assay": "bone histomorphometry",
+          "dose": null,
+          "duration": null,
+          "endpoint": "femoral bone volume/total volume (BV/TV)",
+          "intervention": "LepR-Cre;Hes1Delta/Delta mice compared to LepRloxP/loxP littermates",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Inactivation of Hes1 in LepR+ cells increased femoral bone volume/total volume and trabecular number, while vertebral and cortical bone were not affected.",
+        "uncertainties": [
+          "Exact passage-relative offsets are best-effort.",
+          "The text combines increased BV/TV with increased trabecular number and no effect on vertebral/cortical bone; the claim captures the main bone-volume result."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteogenic cultures",
+          "compartment": "bone marrow stromal cell cultures",
+          "disease_setting": null,
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "34",
+              "35",
+              "44",
+              "51",
+              "52",
+              "55"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Hes1",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "45",
+              "46",
+              "54"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Tnfsf11",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1088,
+            "passage_index": 1,
+            "quote": "although Tnfsf11 (encoding RANKL) was suppressed in osteogenic cultures of Hes1Delta/Delta cells.",
+            "start": 991
+          }
+        ],
+        "experiment": {
+          "assay": "bone marrow stromal cell cultures / osteogenic cultures",
+          "dose": null,
+          "duration": null,
+          "endpoint": "Tnfsf11 expression",
+          "intervention": "Hes1 deletion in Hes1Delta/Delta cells",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Hes1 deletion suppressed Tnfsf11 expression in osteogenic cultures of Hes1Delta/Delta cells.",
+        "uncertainties": [
+          "Exact passage-relative offsets are best-effort.",
+          "The text states suppression of Tnfsf11 in osteogenic cultures, but does not specify direct regulation by HES1."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        501,
+        716
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        475,
+        690
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        991,
+        1088
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1067,
+        1169
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

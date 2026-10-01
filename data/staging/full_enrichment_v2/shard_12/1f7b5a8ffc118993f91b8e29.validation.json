@@ -1,0 +1,289 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "Type 2 diabetes",
+          "species": null,
+          "stage": "older"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D011733"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Pyridoxamine",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "AGEs",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone formation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 269,
+            "passage_index": 1,
+            "quote": "Pyridoxamine (PM) is a vitamin B6 metabolite which inhibits formation of AGEs.",
+            "start": 191
+          },
+          {
+            "end": 388,
+            "passage_index": 1,
+            "quote": "OBJECTIVE: We hypothesized that PM treatment in older T2D patients, by inhibiting AGEs, would increase bone formation.",
+            "start": 270
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone formation",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Pyridoxamine is described as inhibiting formation of advanced glycation endproducts, and the authors hypothesized this would increase bone formation in older T2D patients.",
+        "uncertainties": [
+          "AGEs are referred to as a class/abbreviation rather than a specifically identified molecular entity.",
+          "The hypothesis about increasing bone formation is proposed, not demonstrated in the quoted text."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "Type 2 diabetes",
+          "species": "human",
+          "stage": "older"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D011733"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "PM",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "P1NP",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone mineral density",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption markers",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 618,
+            "passage_index": 1,
+            "quote": "PM 200 mg twice daily for one year. MAIN OUTCOMES: The primary outcome was the change in the bone formation marker P1NP.",
+            "start": 498
+          },
+          {
+            "end": 982,
+            "passage_index": 1,
+            "quote": "RESULTS: P1NP increased 23.0% with PM (95% CI: 9, 37; within-group p=0.028) vs. 4.1% with placebo (-9, 17; within-group p=0.576; between-groups p=0.056).",
+            "start": 829
+          },
+          {
+            "end": 1077,
+            "passage_index": 1,
+            "quote": "BMD increased at the femoral neck (PM: 2.6+-5% vs. placebo: -0.9+-4%; between-groups p=0.007).",
+            "start": 983
+          },
+          {
+            "end": 1125,
+            "passage_index": 1,
+            "quote": "Bone resorption markers and SAF did not change.",
+            "start": 1078
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "200 mg twice daily",
+          "duration": "one year",
+          "endpoint": "P1NP",
+          "intervention": "Oral PM 200 mg twice daily for one year",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e4",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In the randomized trial, pyridoxamine treatment increased the bone formation marker P1NP and increased femoral neck bone mineral density; bone resorption markers did not change.",
+        "uncertainties": [
+          "P1NP is a biomarker of bone formation rather than a direct molecular target.",
+          "The reported effect was within-group and between-groups p=0.056, so the magnitude of the treatment effect is modest.",
+          "Bone resorption markers are stated not to change, but the specific marker panel is not named."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        191,
+        269
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        311,
+        390
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        270,
+        388
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        392,
+        489
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        498,
+        618
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        618,
+        674
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        829,
+        982
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        842,
+        961
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        983,
+        1077
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        963,
+        1057
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1078,
+        1125
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1059,
+        1112
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

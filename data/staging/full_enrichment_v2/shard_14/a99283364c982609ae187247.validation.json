@@ -1,0 +1,254 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "type 2 diabetes",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "25",
+              "26",
+              "35",
+              "37",
+              "43",
+              "45"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "type 2 diabetes",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "31",
+              "32",
+              "39",
+              "40",
+              "47"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "osteopontin",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "33",
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANK",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "34",
+              "42",
+              "46"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 700,
+            "passage_index": 1,
+            "quote": "The expression levels of osteopontin (OPN), receptor activator for nuclear factor-kappa (RANK) and Receptor Activator of Nuclear Factor-kappa B Ligand (RANKL) were observed using immunohistochemistry and RT-qPCR.",
+            "start": 488
+          },
+          {
+            "end": 1319,
+            "passage_index": 1,
+            "quote": "Immunohistochemistry and RT-qPCR showed that the expression levels of osteopontin (OPN), receptor activator for nuclear factor-kappa (RANK), and receptor activator of nuclear factor-kappa B ligand (RANKL) in both groups increased over time but were higher in diabetic mice compared to controls.",
+            "start": 1025
+          }
+        ],
+        "experiment": {
+          "assay": "immunohistochemistry and RT-qPCR",
+          "dose": null,
+          "duration": null,
+          "endpoint": "expression levels of osteopontin, RANK and RANKL",
+          "intervention": "comparison of diabetic mice vs controls",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In type 2 diabetic mice, the expression levels of osteopontin/OPN, RANK, and RANKL were higher than in controls.",
+        "uncertainties": [
+          "The text reports the three markers together; the regulatory object is represented with osteopontin as the primary linked entity while RANK and RANKL are listed as additional related entities.",
+          "The passage reports higher expression in diabetic mice compared to controls, but does not specify causal molecular direction."
+        ]
+      },
+      "errors": [
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "mandibles",
+          "disease_setting": "type 2 diabetes",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "25",
+              "26",
+              "35",
+              "37",
+              "43",
+              "45"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "type 2 diabetes",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1000,
+            "passage_index": 1,
+            "quote": "Histological staining showed that diabetic mice had more osteoclasts and bone resorption",
+            "start": 912
+          }
+        ],
+        "experiment": {
+          "assay": "histological staining",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclasts and bone resorption",
+          "intervention": "comparison of diabetic mice vs controls",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e6",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Type 2 diabetic mice had more osteoclasts and bone resorption than controls.",
+        "uncertainties": [
+          "The evidence span states both more osteoclasts and bone resorption; the object is summarized as bone resorption with osteoclasts captured as a related measured phenotype.",
+          "No direct molecular mechanism is demonstrated by this comparison."
+        ]
+      },
+      "errors": [
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        488,
+        700
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        610,
+        754
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1025,
+        1319
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1031,
+        1189
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        912,
+        1000
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        818,
+        885
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

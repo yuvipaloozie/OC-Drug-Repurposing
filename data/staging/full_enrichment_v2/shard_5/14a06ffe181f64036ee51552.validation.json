@@ -1,0 +1,93 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone tissue",
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Exercise",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "RNA",
+            "surface": "miRNAs",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 705,
+            "passage_index": 1,
+            "quote": "Exercise induces changes of miRNAs expression",
+            "start": 660
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "miRNAs expression",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Exercise is described as changing miRNA expression in bone tissue, which is presented as one way exercise regulates bone metabolism.",
+        "uncertainties": [
+          "This is a review-level general statement, not a primary experimental result.",
+          "No specific miRNA species are named in the supplied text.",
+          "The claim is about bone tissue generally, not osteoclast-specific evidence."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        660,
+        705
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        467,
+        510
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

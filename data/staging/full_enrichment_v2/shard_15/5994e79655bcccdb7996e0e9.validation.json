@@ -1,0 +1,109 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "6"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Kaempferol",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation and bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "7",
+              "8",
+              "9",
+              "10",
+              "11"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "TNF-alpha/NF-kappaB and SRC/PI3K/AKT signaling pathways",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 140,
+            "passage_index": 0,
+            "quote": "Kaempferol inhibits osteoclast differentiation and bone resorption by targeting the TNF-alpha/NF-kappaB and SRC/PI3K/AKT signaling pathways.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation and bone resorption",
+          "intervention": "kaempferol",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Kaempferol is reported to inhibit osteoclast differentiation and bone resorption, with the paper framing this effect as targeting TNF-alpha/NF-kappaB and SRC/PI3K/AKT signaling pathways.",
+        "uncertainties": [
+          "The title states the relationship succinctly, but the exact experimental context is not specified in the title alone.",
+          "The pathway-targeting phrase may reflect interpretation rather than a directly demonstrated molecular interaction."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        140
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        141
+      ],
+      "passage_index": 0
+    }
+  ],
+  "valid_envelope": true
+}

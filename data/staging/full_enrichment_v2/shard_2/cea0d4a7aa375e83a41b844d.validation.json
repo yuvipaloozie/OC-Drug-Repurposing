@@ -1,0 +1,175 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "these two compounds",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "podosome structure",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 783,
+            "passage_index": 1,
+            "quote": "these two compounds caused destabilization of the podosome structure",
+            "start": 715
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "podosome structure destabilization",
+          "intervention": "two compounds",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Two compounds caused destabilization of podosome structure, consistent with an anti-osteoclastic effect in osteoclast-related organization.",
+        "uncertainties": [
+          "The exact compound identities are not named in the abstract span.",
+          "The phrase links the outcome to osteoclast-related structure, but no direct molecular mechanism is stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "monocytes",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": "differentiation into osteoclasts"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "these two compounds",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "cellular differentiation of monocytes into osteoclasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 958,
+            "passage_index": 1,
+            "quote": "and also attenuated cellular differentiation of monocytes into osteoclasts, without affecting cell viability",
+            "start": 850
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "cellular differentiation of monocytes into osteoclasts",
+          "intervention": "two compounds",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Two compounds attenuated differentiation of monocytes into osteoclasts without affecting viability.",
+        "uncertainties": [
+          "The exact compound identities are not named in the abstract span.",
+          "'Without affecting cell viability' is stated, but no separate viability assay details are provided."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        715,
+        783
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        654,
+        718
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        850,
+        958
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        719,
+        818
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

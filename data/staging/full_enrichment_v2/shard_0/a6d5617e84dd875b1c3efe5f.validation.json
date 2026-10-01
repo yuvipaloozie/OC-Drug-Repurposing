@@ -1,0 +1,162 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "metabolic acidosis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "42",
+              "43",
+              "47",
+              "59",
+              "61",
+              "64"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "OGR1",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "39",
+              "44",
+              "55",
+              "60",
+              "62",
+              "65"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "metabolic acidosis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activity",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 473,
+            "passage_index": 1,
+            "quote": "To test whether direct effects on osteoclast OGR1 are critical for metabolic acidosis stimulated bone resorption, we generated knockout mice with an osteoclast-specific deletion of OGR1 (knockout mice).",
+            "start": 271
+          },
+          {
+            "end": 1094,
+            "passage_index": 1,
+            "quote": "Osteoclasts derived from the marrow of knockout mice demonstrated decreased pit formation, osteoclast staining and osteoclast-specific gene expression compared to those from wild type mice.",
+            "start": 905
+          },
+          {
+            "end": 1533,
+            "passage_index": 1,
+            "quote": "Thus, loss of osteoclast OGR1 decreased both basal and metabolic acidosis-induced osteoclast activity indicating osteoclast OGR1 is important in mediating metabolic acidosis-induced bone resorption.",
+            "start": 1335
+          }
+        ],
+        "experiment": {
+          "assay": "pit formation; osteoclast staining; osteoclast-specific gene expression",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast activity",
+          "intervention": "osteoclast-specific deletion of OGR1",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Osteoclast-specific deletion of OGR1 in mice decreased basal and metabolic acidosis-induced osteoclast activity, including reduced pit formation and osteoclast marker expression.",
+        "uncertainties": [
+          "The molecular form of OGR1 is not explicitly distinguished as gene versus protein in the text.",
+          "The negative regulatory sign is inferred from the knockout outcome, not shown as a direct mechanistic inhibition."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        271,
+        473
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        263,
+        417
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        905,
+        1094
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        716,
+        900
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1335,
+        1533
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1466,
+        1645
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,224 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "sera",
+          "disease_setting": "alcohol use disorder",
+          "species": "women",
+          "stage": "young to middle-aged"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "27",
+              "28"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "alcohol use disorder",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "34",
+              "38"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "vitamin D deficiency",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "30",
+              "35"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:ACP5",
+            "key": "e3",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "protein",
+            "surface": "tartrate-resistant acid phosphatase 5b",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 629,
+            "passage_index": 1,
+            "quote": "young to middle-aged women with alcohol use disorder (AUD). METHODS: Levels of vitamin D and the bone-resorption marker tartrate-resistant acid phosphatase 5b were measured in the sera of 25 women with AUD",
+            "start": 424
+          },
+          {
+            "end": 1019,
+            "passage_index": 1,
+            "quote": "Of the 25 women with AUD, 19 (76%) had vitamin D deficiency (<20 ng/mL), and most of the patients showed relatively higher tartrate-resistant acid phosphatase 5b levels at baseline considering their premenopausal age.",
+            "start": 802
+          }
+        ],
+        "experiment": {
+          "assay": "measured in the sera",
+          "dose": null,
+          "duration": "eight weeks",
+          "endpoint": "serum vitamin D and tartrate-resistant acid phosphatase 5b levels",
+          "intervention": "AUD rehabilitation program",
+          "outcome_change": "not_stated",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In young to middle-aged women with alcohol use disorder, vitamin D deficiency was common and serum tartrate-resistant acid phosphatase 5b was relatively high at baseline.",
+        "uncertainties": [
+          "The text reports prevalence and baseline levels in an AUD cohort, but does not establish a causal direction between AUD and vitamin D deficiency or TRAP5b elevation.",
+          "The suggested existing node is unverified and may not match the human marker described in the passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "no_effect",
+        "context": {
+          "cell_type": null,
+          "compartment": "sera",
+          "disease_setting": "alcohol use disorder",
+          "species": "women",
+          "stage": "young to middle-aged"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "30",
+              "35"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:ACP5",
+            "key": "e1",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "protein",
+            "surface": "tartrate-resistant acid phosphatase 5b",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1116,
+            "passage_index": 1,
+            "quote": "Although the levels did not change significantly at week eight of the AUD rehabilitation program",
+            "start": 1020
+          },
+          {
+            "end": 982,
+            "passage_index": 1,
+            "quote": "tartrate-resistant acid phosphatase 5b levels at baseline",
+            "start": 925
+          }
+        ],
+        "experiment": {
+          "assay": "measured in the sera",
+          "dose": null,
+          "duration": "eight weeks",
+          "endpoint": "serum tartrate-resistant acid phosphatase 5b levels",
+          "intervention": "AUD rehabilitation program",
+          "outcome_change": "no_detected_change",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "unknown",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e1",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Serum tartrate-resistant acid phosphatase 5b levels did not change significantly after eight weeks of the AUD rehabilitation program.",
+        "uncertainties": [
+          "The passage does not specify whether the unchanged levels are relative to admission values, control subjects, or another comparator beyond the stated baseline-to-week-eight comparison."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        424,
+        629
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        553,
+        707
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        802,
+        1019
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        879,
+        1077
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1020,
+        1116
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1091,
+        1198
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        925,
+        982
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1028,
+        1077
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

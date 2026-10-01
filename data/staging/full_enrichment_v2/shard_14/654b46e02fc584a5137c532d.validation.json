@@ -1,0 +1,111 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteopetrotic",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "gene",
+            "surface": "c-src",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "dysfunctional osteoclasts",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 114,
+            "passage_index": 0,
+            "quote": "dysfunctional osteoclasts in c-src deficient mice.",
+            "start": 64
+          },
+          {
+            "end": 528,
+            "passage_index": 1,
+            "quote": "c-src deficient (c-src-/-) mice, another osteopetrotic model, develop dysfunctional osteoclasts due to a lack of ruffled borders.",
+            "start": 399
+          }
+        ],
+        "experiment": {
+          "assay": "histological assessment",
+          "dose": null,
+          "duration": null,
+          "endpoint": "dysfunctional osteoclasts",
+          "intervention": "c-src deficient (c-src-/-) mice",
+          "outcome_change": "other",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In c-src-deficient mice, osteoclasts are reported to be dysfunctional because they lack ruffled borders.",
+        "uncertainties": [
+          "The text links dysfunction to lack of ruffled borders, but does not establish a direct molecular mechanism.",
+          "The claim is based on a disease model description rather than an explicit causal experiment on c-src itself."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        64,
+        114
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        64,
+        113
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        399,
+        528
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        535,
+        613
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

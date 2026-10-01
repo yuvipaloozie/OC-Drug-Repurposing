@@ -1,0 +1,101 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoclast",
+          "compartment": null,
+          "disease_setting": "bone loss",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "13",
+              "14",
+              "15",
+              "16"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Src",
+            "taxon": "null"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast-mediated bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 370,
+            "passage_index": 1,
+            "quote": "Src also has a specific role in bone biology. Src's essential role in osteoclast-mediated bone resorption relies on its high expression in this cell type",
+            "start": 217
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Src is described as having an essential role in osteoclast-mediated bone resorption, with this role linked to high expression in osteoclasts.",
+        "uncertainties": [
+          "This is a review-style background statement rather than an experimental perturbation result.",
+          "The text does not specify the molecular mechanism or directness of Src's role beyond high expression and unspecified substrates.",
+          "Species is not stated in the passage."
+        ]
+      },
+      "errors": [
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        217,
+        370
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        155,
+        265
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

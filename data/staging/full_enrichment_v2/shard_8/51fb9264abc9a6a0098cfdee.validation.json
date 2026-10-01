@@ -1,0 +1,193 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "bone",
+          "disease_setting": "osteopetrotic",
+          "species": "10090",
+          "stage": "aged"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "c-Src",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "cement lines",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "defective osteoclastic resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 356,
+            "passage_index": 1,
+            "quote": "the osteopetrotic c-Src mouse model-where cement lines accumulate and persist as a result of defective osteoclastic resorption",
+            "start": 230
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "cement line accumulation and persistence",
+          "intervention": "c-Src knockout mouse model",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e3"
+        },
+        "summary": "In the c-Src knockout osteopetrotic mouse model, defective osteoclastic resorption is described as causing cement lines to accumulate and persist.",
+        "uncertainties": [
+          "The passage states a model-level background mechanism rather than a directly tested causal experiment.",
+          "c-Src is not explicitly typed as a gene or protein in the text, though knockout wording supports a gene-level perturbation."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone",
+          "disease_setting": "osteopetrotic",
+          "species": "10090",
+          "stage": "1-year-old"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "c-Src-deficient mice",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "long bones",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "strength",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1040,
+            "passage_index": 1,
+            "quote": "three-point bending tests of the long bones of 1-year-old c-Src-deficient mice indicated significantly elevated strength relative to age-matched wild-type bones",
+            "start": 880
+          }
+        ],
+        "experiment": {
+          "assay": "three-point bending tests",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone strength",
+          "intervention": "c-Src deficiency",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In 1-year-old c-Src-deficient mice, long bones showed significantly elevated strength relative to age-matched wild-type bones.",
+        "uncertainties": [
+          "The outcome is measured at the tissue/organ level, not a direct molecular mechanism.",
+          "The passage compares mutant and wild-type bones; it does not establish direct causality beyond the perturbation effect."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        230,
+        356
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        223,
+        324
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        880,
+        1040
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        503,
+        639
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

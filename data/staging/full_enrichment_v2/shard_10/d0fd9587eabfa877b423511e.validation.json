@@ -1,0 +1,116 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "monocytes differentiated to osteoclasts",
+          "compartment": null,
+          "disease_setting": "osteopetrosis",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D010022"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteopetrosis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "defective integrin organization",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 87,
+            "passage_index": 0,
+            "quote": "Osteopetrosis with micro-lacunar resorption because of defective integrin organization.",
+            "start": 0
+          },
+          {
+            "end": 1491,
+            "passage_index": 1,
+            "quote": "In this new type of osteopetrosis, the integrin-organizing complex is dysfunctional",
+            "start": 1408
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro differentiation, phalloidin labeling, western blot, antibody labeling",
+          "dose": null,
+          "duration": null,
+          "endpoint": "cellular defect / osteoclast resorption phenotype",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e1",
+          "sign": "unknown",
+          "subject": "e2"
+        },
+        "summary": "The report describes a form of osteopetrosis associated with defective integrin organization and a dysfunctional integrin-organizing complex.",
+        "uncertainties": [
+          "The text is descriptive and does not include a direct perturbation experiment establishing causality.",
+          "'defective integrin organization' is a process/complex description rather than a standardized entity."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        87
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        86
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1408,
+        1491
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1490,
+        1591
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

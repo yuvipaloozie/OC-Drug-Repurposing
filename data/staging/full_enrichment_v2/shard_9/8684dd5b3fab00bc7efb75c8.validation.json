@@ -1,0 +1,216 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "35",
+              "36",
+              "38",
+              "44",
+              "45",
+              "47"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "GIP",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "37"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "CTX",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "P1NP",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "34",
+              "46"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "healthy individuals",
+            "taxon": "9606"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 828,
+            "passage_index": 1,
+            "quote": "Exogenous administration of GIP suppresses the bone-resorption marker C-terminal telopeptide of type I collagen (CTX) and increases the bone-formation marker procollagen type I N-terminal propeptide (P1NP) in healthy individuals",
+            "start": 600
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone-resorption marker CTX; bone-formation marker P1NP",
+          "intervention": "Exogenous administration of GIP",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Exogenous GIP administration was reported to suppress the bone-resorption marker CTX and increase the bone-formation marker P1NP in healthy individuals.",
+        "uncertainties": [
+          "The passage summarizes findings from a review rather than reporting a single primary experiment.",
+          "P1NP is mentioned as increased, but no separate regulatory edge is encoded here beyond the intervention effect summary."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoclast",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "26",
+              "27",
+              "32",
+              "33",
+              "35",
+              "36",
+              "38",
+              "44",
+              "45",
+              "47"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "GIP",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation and activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 390,
+            "passage_index": 1,
+            "quote": "In vitro studies demonstrate that GIP inhibits osteoclast differentiation and activity",
+            "start": 304
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro studies",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation and activity",
+          "intervention": null,
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The review states that in vitro studies demonstrate GIP inhibits osteoclast differentiation and activity.",
+        "uncertainties": [
+          "This is a review-level summary of prior in vitro studies; the specific experimental system is not described in the abstract.",
+          "The text does not specify whether the effect is direct or indirect."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        600,
+        828
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        741,
+        867
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        304,
+        390
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        135,
+        201
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

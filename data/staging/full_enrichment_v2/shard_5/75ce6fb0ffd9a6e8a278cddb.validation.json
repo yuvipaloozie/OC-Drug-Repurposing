@@ -1,0 +1,230 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "young (<12 weeks)"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "13",
+              "14",
+              "15",
+              "21",
+              "22",
+              "23"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "PTPepsilon",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "trabecular bone mass",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast function",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 405,
+            "passage_index": 1,
+            "quote": "that young (<12 weeks) female mice lacking tyrosine phosphatase epsilon (PTPepsilon) exhibit increased trabecular bone mass due to cell-specific defects in osteoclast function.",
+            "start": 229
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast function",
+          "intervention": "lacking tyrosine phosphatase epsilon (PTPepsilon)",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In female mouse PTPepsilon loss-of-function animals, trabecular bone mass increases and osteoclast function is impaired.",
+        "uncertainties": [
+          "The sentence links increased trabecular bone mass to osteoclast defects, but does not specify a direct molecular mechanism."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "negated_relation",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "13",
+              "14",
+              "15",
+              "21",
+              "22",
+              "23"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "PTPepsilon",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "18"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "19"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Src",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "20"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Pyk2",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "signaling pathways",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1513,
+            "passage_index": 1,
+            "quote": "Stimulation of bone resorption by RANKL and, surprisingly, Src activity and Pyk2 phosphorylation are normal in PTPepsilon-deficient osteoclasts, indicating that loss of PTPepsilon does not cause widespread disruption of these signaling pathways.",
+            "start": 1268
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "RANKL stimulation; Src activity; Pyk2 phosphorylation",
+          "intervention": "PTPepsilon-deficient osteoclasts",
+          "outcome_change": "no_detected_change",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e5",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In PTPepsilon-deficient osteoclasts, RANKL-stimulated bone resorption, Src activity, and Pyk2 phosphorylation are reported as normal, indicating no widespread disruption of those signaling pathways.",
+        "uncertainties": [
+          "The text states normal RANKL-stimulated bone resorption, Src activity, and Pyk2 phosphorylation, but does not separate them into distinct mechanistic edges.",
+          "The object is summarized as signaling pathways; the passage does not establish a direct causal target beyond the reported normal readouts."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        229,
+        405
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        234,
+        405
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1268,
+        1513
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        585,
+        829
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

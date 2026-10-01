@@ -1,0 +1,221 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "39"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "ACOD1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "cis-aconitate",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "40"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "itaconate",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 220,
+            "passage_index": 1,
+            "quote": "The immuneresponsive gene 1 (Irg1) encodes aconitate decarboxylase (ACOD1), which generates itaconate from cis-aconitate in the TCA cycle.",
+            "start": 82
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "itaconate generation from cis-aconitate",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "metabolic_conversion",
+        "local_claim_id": "c1",
+        "reaction": {
+          "direction": "as_written",
+          "enzyme": "e1",
+          "products": [
+            {
+              "entity": "e3",
+              "stoichiometry": null
+            }
+          ],
+          "substrates": [
+            {
+              "entity": "e2",
+              "stoichiometry": null
+            }
+          ]
+        },
+        "regulatory": null,
+        "summary": "ACOD1 is described as converting cis-aconitate to itaconate.",
+        "uncertainties": [
+          "The sentence states an enzyme relationship but does not specify whether ACOD1 is being treated as a gene or protein beyond the enzyme name.",
+          "The reaction direction is taken as written and not independently validated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "45",
+              "49",
+              "52",
+              "64"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "ACOD1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 495,
+            "passage_index": 1,
+            "quote": "Stable ACOD1 overexpression in RAW264.7 cells shifted cellular metabolism towards glycolysis, as indicated by enhanced mTOR activation, increased 4E-BP1 phosphorylation, and reduced ATP levels.",
+            "start": 302
+          },
+          {
+            "end": 545,
+            "passage_index": 1,
+            "quote": "ACOD1 cells displayed impaired osteoclastogenesis",
+            "start": 496
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "Stable ACOD1 overexpression",
+          "outcome_change": "decreased",
+          "perturbation_type": "gain_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Stable ACOD1 overexpression in RAW264.7 cells impaired osteoclastogenesis.",
+        "uncertainties": [
+          "The quoted evidence shows overexpression and the impaired osteoclastogenesis outcome, but the mechanistic linkage is indirect.",
+          "RAW264.7 cell lineage/species is not explicitly stated in the passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        82,
+        220
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        82,
+        138
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        302,
+        495
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        193,
+        242
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        496,
+        545
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        243,
+        293
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

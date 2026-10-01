@@ -1,0 +1,214 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "HFD-induced obesity",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "defined 12-member Oligo-Mouse-Microbiota (Oligo-MM12)",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "structural adaptations",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "skeleton",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 666,
+            "passage_index": 1,
+            "quote": "Micro-CT analysis revealed that only colonized mice exhibited structural adaptations, namely increased cortical thickness and trabecular area, in response to HFD, whereas GF mice failed to remodel their skeleton",
+            "start": 455
+          },
+          {
+            "end": 732,
+            "passage_index": 1,
+            "quote": "despite broadly comparable weight gain trajectories and adiposity",
+            "start": 667
+          }
+        ],
+        "experiment": {
+          "assay": "Micro-CT analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "skeletal structural adaptations / remodeling",
+          "intervention": "colonized with the defined 12-member Oligo-Mouse-Microbiota (Oligo-MM12)",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In HFD-fed mice, colonization with the defined Oligo-MM12 microbiota was associated with skeletal structural adaptation, while germ-free mice failed to remodel their skeleton.",
+        "uncertainties": [
+          "The passage contrasts colonized and germ-free mice, but the specific causal mediator of the skeletal effect is not established.",
+          "The exact entity corresponding to 'structural adaptations' is a phenotype-level summary rather than a molecular mechanism."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "circulating",
+          "disease_setting": "HFD-induced obesity",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "colonized mice",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [
+              "34"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "beta-CTX",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1218,
+            "passage_index": 1,
+            "quote": "These metabolic patterns correlated with reduced beta-CTX levels in colonized mice, indicative of microbiota-mediated suppression of bone resorption",
+            "start": 1070
+          }
+        ],
+        "experiment": {
+          "assay": "serum metabolomics",
+          "dose": null,
+          "duration": null,
+          "endpoint": "circulating beta-CTX levels",
+          "intervention": "colonization with defined microbiota",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Colonized mice had reduced circulating beta-CTX levels, which the authors describe as indicative of microbiota-mediated suppression of bone resorption.",
+        "uncertainties": [
+          "The causal link to bone resorption is presented as an interpretation ('indicative of') rather than a directly tested mechanism.",
+          "beta-CTX is treated as a circulating readout; the exact molecular form is not further specified in the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        455,
+        666
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        265,
+        381
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        667,
+        732
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        389,
+        414
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1070,
+        1218
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1119,
+        1208
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

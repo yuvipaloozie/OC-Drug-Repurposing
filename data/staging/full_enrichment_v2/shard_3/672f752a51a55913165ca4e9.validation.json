@@ -1,0 +1,223 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "GCTB1s; ADSCs",
+          "compartment": null,
+          "disease_setting": "giant cell tumor of bone",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "36",
+              "43",
+              "44",
+              "45",
+              "46"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "WNT5B",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "mineralization",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1476,
+            "passage_index": 1,
+            "quote": "We then knocked out WNT5B in GCTB1s using CRISPR/Cas9 and co-cultured them with ADSCs and observed significant rescue of mineralization in ADSCs relative to ADSCs cultured with GCTB1s expressing WNT5B.",
+            "start": 1275
+          }
+        ],
+        "experiment": {
+          "assay": "co-culture with osteoblast induction medium",
+          "dose": null,
+          "duration": null,
+          "endpoint": "mineralization in ADSCs",
+          "intervention": "WNT5B knockout in GCTB1s using CRISPR/Cas9",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "CRISPR/Cas9 knockout of WNT5B in GCTB1 cells rescued mineralization in co-cultured ADSCs compared with WNT5B-expressing GCTB1 cells.",
+        "uncertainties": [
+          "The causal relationship is inferred from a knockout/rescue experiment rather than a directly stated molecular mechanism.",
+          "WNT5B is annotated as a gene in the source packet, but the claim is about the protein-level functional role in the text context."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "GCTB1s; ADSCs",
+          "compartment": null,
+          "disease_setting": "giant cell tumor of bone",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "27",
+              "33",
+              "34",
+              "35",
+              "38",
+              "41",
+              "42",
+              "47"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "GCTB",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "36",
+              "43",
+              "44",
+              "45",
+              "46"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "WNT5B",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone formation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 538,
+            "passage_index": 1,
+            "quote": "Here, we show that GCTB antagonizes bone formation by expressing WNT5B, which inhibits bone formation.",
+            "start": 436
+          },
+          {
+            "end": 1274,
+            "passage_index": 1,
+            "quote": "GCTB tumors express WNT5B, and we observed that GCTB1s express WNT5B.",
+            "start": 1205
+          }
+        ],
+        "experiment": {
+          "assay": "single-cell RNA sequencing; spatial transcriptome analysis; co-culture",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone formation",
+          "intervention": null,
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e2"
+        },
+        "summary": "The abstract states that GCTB expresses WNT5B and that WNT5B inhibits bone formation.",
+        "uncertainties": [
+          "The statement combines a general conclusion with expression findings; direct mechanistic details are not provided in the cited span."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1275,
+        1476
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1467,
+        1535
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        436,
+        538
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        443,
+        500
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1205,
+        1274
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1269,
+        1300
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

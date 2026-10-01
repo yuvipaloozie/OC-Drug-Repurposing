@@ -1,0 +1,405 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow-derived macrophages",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "during osteoclastogenesis"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "50",
+              "54",
+              "58",
+              "60",
+              "64",
+              "71",
+              "73",
+              "75",
+              "79"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "OI",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "5",
+              "56",
+              "57",
+              "61",
+              "81"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Nrf2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "ubiquitin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "4",
+              "63",
+              "68",
+              "80"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Hrd1",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1112,
+            "passage_index": 1,
+            "quote": "Mechanistically, we observed that OI enhanced Nrf2 expression by suppressing its association with ubiquitin via inhibition of the E3 ubiquitin ligase (Hrd1).",
+            "start": 955
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "Nrf2 expression; Nrf2-ubiquitin association",
+          "intervention": "4-octyl itaconate (OI)",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Octyl itaconate increased Nrf2 expression by suppressing its association with ubiquitin through inhibition of Hrd1.",
+        "uncertainties": [
+          "The text states suppression of Nrf2-ubiquitin association and inhibition of Hrd1, but does not establish whether the Hrd1 effect is direct."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "50",
+              "54",
+              "58",
+              "60",
+              "64",
+              "71",
+              "73",
+              "75",
+              "79"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "OI",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "65"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "LPS",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "66"
+            ],
+            "existing_node_id": "CHEBI:26523",
+            "key": "e3",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "compound",
+            "surface": "reactive oxygen species",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "67"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "inflammatory responses",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "4",
+              "63",
+              "68",
+              "80"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Hrd1",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1207,
+            "passage_index": 1,
+            "quote": "OI also inhibited LPS-induced the reactive oxygen species and inflammatory responses via Hrd1.",
+            "start": 1113
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "reactive oxygen species; inflammatory responses",
+          "intervention": "OI",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Octyl itaconate inhibited LPS-induced reactive oxygen species and inflammatory responses.",
+        "uncertainties": [
+          "The sentence attributes the effect 'via Hrd1', but the causal chain is not experimentally decomposed in the abstract."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ovariectomy-induced osteoporosis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "49",
+              "50",
+              "54",
+              "58",
+              "60",
+              "64",
+              "71",
+              "73",
+              "75",
+              "79"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Octyl itaconate",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "51",
+              "76"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "72"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 411,
+            "passage_index": 1,
+            "quote": "4-octyl itaconate (OI) on osteoclast differentiation in vitro and in vivo. Firstly, we demonstrated that",
+            "start": 307
+          },
+          {
+            "end": 747,
+            "passage_index": 1,
+            "quote": "Furthermore, it significantly inhibited fibrous actin ring formation and bone resorption in vitro.",
+            "start": 649
+          },
+          {
+            "end": 1425,
+            "passage_index": 1,
+            "quote": "OI effectively suppressed ovariectomy-induced bone loss.",
+            "start": 1369
+          }
+        ],
+        "experiment": {
+          "assay": "tartrate-resistant acid phosphatase staining; micro-computed tomography and histologic analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation; bone resorption; ovariectomy-induced bone loss",
+          "intervention": "4-octyl itaconate (OI)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Octyl itaconate suppressed osteoclastogenesis in vitro and in vivo.",
+        "uncertainties": [
+          "The abstract combines multiple endpoints across in vitro and in vivo experiments; the exact effect size and timing are not stated."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        307,
+        411
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        396,
+        498
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1369,
+        1425
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1496,
+        1531
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        955,
+        1112
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1016,
+        1178
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1113,
+        1207
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1178,
+        1305
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

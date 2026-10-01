@@ -1,0 +1,170 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "primary murine bone marrow stromal cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "murine",
+          "stage": "early in the differentiation process"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "oxidative phosphorylation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D000255"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "adenosine triphosphate (ATP) generation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1514,
+            "passage_index": 1,
+            "quote": "oxidative phosphorylation drives adenosine triphosphate (ATP) generation early in the differentiation process",
+            "start": 1405
+          }
+        ],
+        "experiment": {
+          "assay": "Seahorse XFe metabolic flux analyses; untargeted metabolomics",
+          "dose": null,
+          "duration": null,
+          "endpoint": "ATP generation",
+          "intervention": "osteoblast differentiation",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Early in osteoblast differentiation, oxidative phosphorylation drives ATP generation.",
+        "uncertainties": [
+          "The text describes a differentiation-stage association rather than a direct mechanistic test.",
+          "ATP generation is a process/phenotype rather than a specifically named molecular entity."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "mature osteoblasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "murine",
+          "stage": "mature"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "glycolysis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "mature osteoblasts",
+            "taxon": "murine"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1656,
+            "passage_index": 1,
+            "quote": "while mature osteoblasts depend on glycolysis",
+            "start": 1617
+          }
+        ],
+        "experiment": {
+          "assay": "Seahorse XFe metabolic flux analyses; untargeted metabolomics",
+          "dose": null,
+          "duration": null,
+          "endpoint": "dependence on glycolysis",
+          "intervention": "osteoblast differentiation",
+          "outcome_change": "other",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "positive",
+          "subject": "e3"
+        },
+        "summary": "Mature osteoblasts depend on glycolysis.",
+        "uncertainties": [
+          "The statement is descriptive and does not by itself establish a perturbation experiment.",
+          "The phrase 'depend on' is functional language and not a direct measurement of glycolytic flux."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1405,
+        1514
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1556,
+        1616
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

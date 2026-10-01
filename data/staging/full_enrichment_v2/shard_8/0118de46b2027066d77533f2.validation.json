@@ -1,0 +1,128 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D010024"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Osteoporosis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone mineral density (BMD)",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D050723"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "fracture",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 120,
+            "passage_index": 1,
+            "quote": "Osteoporosis is a geriatric metabolic ailment distinguished by low bone mineral density (BMD) and strength",
+            "start": 14
+          },
+          {
+            "end": 454,
+            "passage_index": 1,
+            "quote": "The loss in BMD markedly enhances the risk of fracture, non-skeletal injury, and subsequent pain",
+            "start": 358
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "fracture risk",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The review states that osteoporosis is characterized by low bone mineral density and that reduced BMD increases fracture risk.",
+        "uncertainties": [
+          "The passage is a review and describes general background rather than a specific experiment.",
+          "The text links low BMD to fracture risk, but does not establish a direct molecular mechanism."
+        ]
+      },
+      "errors": [
+        "invented annotation ID",
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        14,
+        120
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        91,
+        196
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        358,
+        454
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        454,
+        544
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

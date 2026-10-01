@@ -1,0 +1,187 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "SBMA",
+          "species": "Homo sapiens",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D001851"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Low bone turnover",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D050723"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "fractures",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1720,
+            "passage_index": 1,
+            "quote": "Low bone turnover and vitamin D deficiency are associated with these fractures",
+            "start": 1642
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "fractures",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Low bone turnover was associated with fractures in SBMA patients.",
+        "uncertainties": [
+          "The sentence groups low bone turnover and vitamin D deficiency together, so the exact contribution of low bone turnover alone is not separately quantified."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "SBMA",
+          "species": "Homo sapiens",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D014808"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "vitamin D deficiency",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D050723"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "fractures",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1720,
+            "passage_index": 1,
+            "quote": "vitamin D deficiency are associated with these fractures",
+            "start": 1664
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "fractures",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Vitamin D deficiency was associated with fractures in SBMA patients.",
+        "uncertainties": [
+          "The claim is association only; the passage does not establish causality."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1642,
+        1720
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1739,
+        1808
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1664,
+        1720
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1761,
+        1808
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

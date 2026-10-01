@@ -1,0 +1,236 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "hBMSCs and RAW 264.7 macrophages",
+          "compartment": null,
+          "disease_setting": "radiation-induced bone loss",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "NFATc1/MDs",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 379,
+            "passage_index": 1,
+            "quote": "NFATc1/MDs were synthesized and characterized using TEM and confocal microscopy.",
+            "start": 299
+          },
+          {
+            "end": 745,
+            "passage_index": 1,
+            "quote": "They suppressed osteoclastogenesis",
+            "start": 711
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro assessment",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "NFATc1 siRNA-loaded microdroplets (NFATc1/MDs)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "NFATc1 siRNA-loaded microdroplets suppressed osteoclastogenesis in vitro.",
+        "uncertainties": [
+          "The quoted suppression statement is general and does not specify which cell type drove the osteoclastogenesis readout.",
+          "NFATc1/MDs is a treatment formulation rather than a single molecular species."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "radiation-induced bone loss",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "NFATc1/MDs",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "25",
+              "26",
+              "27",
+              "28",
+              "32",
+              "33",
+              "34",
+              "39"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "NFATc1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "35",
+              "36"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "cathepsin K",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "37",
+              "38"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "TNF-alpha",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast numbers",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1034,
+            "passage_index": 1,
+            "quote": "In vivo, NFATc1/MDs preserved bone microstructure, reduced osteoclast numbers, and downregulated NFATc1, cathepsin K (CTSK), and tumor necrosis factor-alpha (TNF-alpha) expression.",
+            "start": 854
+          }
+        ],
+        "experiment": {
+          "assay": "in vivo rat radiation-induced bone loss model",
+          "dose": null,
+          "duration": null,
+          "endpoint": "NFATc1, cathepsin K (CTSK), and TNF-alpha expression; osteoclast numbers",
+          "intervention": "NFATc1/MDs",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In irradiated rats, NFATc1/MDs reduced osteoclast numbers and downregulated NFATc1, cathepsin K (CTSK), and TNF-alpha expression.",
+        "uncertainties": [
+          "The passage bundles several outputs; only the NFATc1 expression decrease is mapped as the primary regulatory object here.",
+          "The text does not specify whether downregulation is direct or indirect."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        299,
+        379
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        270,
+        319
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        711,
+        745
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        457,
+        493
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        854,
+        1034
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        670,
+        779
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

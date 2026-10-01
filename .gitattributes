@@ -14,3 +14,16 @@ schemas/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 
 # Preserve upstream vendor files verbatim, including license whitespace.
 assets/vendor/** -whitespace
+
+# Preserve exact API response bytes used by discovery passage checksums.
+data/raw/discovery_pilot/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+# Preserve the single-drug label snapshot used by offline replay.
+data/drug_demo/*.html -text
+
+# Frozen extraction inputs, budgets, and patches are byte-addressed.
+data/staging/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+# Upstream source snapshots intentionally retain publisher whitespace.
+data/raw/** -whitespace
+data/drug_demo/*.html -whitespace

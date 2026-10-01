@@ -1,0 +1,194 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "bone defect",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "11",
+              "12",
+              "15",
+              "17"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "nerve growth factor",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone repair combined with inflammation resolution",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1331,
+            "passage_index": 1,
+            "quote": "Exogenous nerve growth factor (NGF) supplement effectively activated neural reaction and accelerated bone repair combined with inflammation resolution in vivo.",
+            "start": 1172
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone repair combined with inflammation resolution",
+          "intervention": "Exogenous nerve growth factor (NGF) supplement",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Exogenous NGF supplementation activated a neural reaction and accelerated bone repair with inflammation resolution in vivo.",
+        "uncertainties": [
+          "The text also mentions activation of neural reaction, but the claim here links NGF to the reported in vivo repair/inflammation outcome.",
+          "Species and experimental details beyond 'in vivo' are not stated in the passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "macrophages",
+          "compartment": null,
+          "disease_setting": "bone regeneration microenvironment",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "11",
+              "12",
+              "15",
+              "17"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "NGF",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "complex",
+            "surface": "macrophages",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "anti-inflammatory, regenerative and bone metabolism related genes and functions",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1536,
+            "passage_index": 1,
+            "quote": "Further bulk RNA-seq analysis provided evidence of significant enhancement of anti-inflammatory, regenerative and bone metabolism related genes and functions in macrophages upon exogenous NGF stimulation.",
+            "start": 1332
+          }
+        ],
+        "experiment": {
+          "assay": "bulk RNA-seq",
+          "dose": null,
+          "duration": null,
+          "endpoint": "anti-inflammatory, regenerative and bone metabolism related genes and functions",
+          "intervention": "exogenous NGF stimulation",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e4",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Exogenous NGF stimulation was associated with increased anti-inflammatory, regenerative, and bone-metabolism-related gene/function signatures in macrophages.",
+        "uncertainties": [
+          "The endpoint is a broad gene/function signature rather than a single defined molecular entity.",
+          "The passage does not specify whether the effect is direct or mediated through other cells."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1172,
+        1331
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1272,
+        1431
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1332,
+        1536
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1453,
+        1656
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

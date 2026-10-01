@@ -1,0 +1,174 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "sarcopenia-osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "46"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "chronic low-grade inflammation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "pathway",
+            "surface": "dysregulated energy metabolism",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 897,
+            "passage_index": 1,
+            "quote": "Its pathophysiology is a self-sustaining vicious cycle where chronic low-grade inflammation (inflammaging) and dysregulated energy metabolism (notably mitochondrial dysfunction and insulin resistance) reciprocally amplify each other",
+            "start": 665
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The review states that chronic low-grade inflammation and dysregulated energy metabolism reciprocally amplify each other in sarcopenia-osteoporosis.",
+        "uncertainties": [
+          "This is a narrative review statement rather than a primary experimental result.",
+          "The text describes reciprocal amplification, but no direction-specific causal experiment is provided."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "sarcopenia-osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "61"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "inflammation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "58",
+              "59",
+              "60"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "PI3K/AKT/mTOR",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1509,
+            "passage_index": 1,
+            "quote": "inflammation disrupts metabolic pathways (e.g. PI3K/AKT/mTOR), while metabolic stress releases DAMPs that further fuel inflammation",
+            "start": 1402
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "metabolic pathways (e.g. PI3K/AKT/mTOR)",
+          "intervention": null,
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The review states that inflammation disrupts PI3K/AKT/mTOR metabolic pathways.",
+        "uncertainties": [
+          "The statement is from a review and does not specify a particular experiment.",
+          "The text names a pathway example rather than a directly measured molecular entity."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        665,
+        897
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        827,
+        977
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

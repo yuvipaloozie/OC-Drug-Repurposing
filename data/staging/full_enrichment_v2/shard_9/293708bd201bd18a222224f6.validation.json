@@ -1,0 +1,207 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "40",
+              "43",
+              "47",
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "(S)-STO021",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 644,
+            "passage_index": 1,
+            "quote": "bisphosphonate indanone compound (S)-STO021 as a novel SERbeta agonist",
+            "start": 574
+          },
+          {
+            "end": 731,
+            "passage_index": 1,
+            "quote": "exhibited excellent dual functional effects of inhibiting osteoclast resorption",
+            "start": 652
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast resorption",
+          "intervention": "(S)-STO021",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The compound (S)-STO021 was reported to inhibit osteoclast resorption.",
+        "uncertainties": [
+          "The abstract does not specify the assay used to measure osteoclast resorption.",
+          "The claim is about a compound effect in an osteoporosis context, but the exact osteoclast cell system is not stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "40",
+              "43",
+              "47",
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "(S)-STO021",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "44",
+              "45"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "TAK1/MKK6/p38 signal",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 882,
+            "passage_index": 1,
+            "quote": "antiosteoporosis efficacy of (S)-STO021 was achieved through inhibiting the TAK1/MKK6/p38 signal",
+            "start": 786
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "TAK1/MKK6/p38 signal",
+          "intervention": "(S)-STO021",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The anti-osteoporosis effect of (S)-STO021 was described as involving inhibition of the TAK1/MKK6/p38 signaling pathway.",
+        "uncertainties": [
+          "The passage states the pathway was inhibited, but does not identify which components were directly measured versus inferred.",
+          "MKK6 is mentioned in the pathway string but is not separately annotated in the packet."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        574,
+        644
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        776,
+        823
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        652,
+        731
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        843,
+        885
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        786,
+        882
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        988,
+        1032
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

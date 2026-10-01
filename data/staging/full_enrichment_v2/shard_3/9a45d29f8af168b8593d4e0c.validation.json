@@ -1,0 +1,225 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteolytic disease",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "24",
+              "27",
+              "28",
+              "29"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "XL019",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "3",
+              "30"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "MAPK signaling pathway",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 117,
+            "passage_index": 0,
+            "quote": "Xl019, a novel JAK inhibitor, suppressed osteoclasts differentiation induced by RANKL through MAPK signaling pathway.",
+            "start": 0
+          },
+          {
+            "end": 931,
+            "passage_index": 1,
+            "quote": "Furthermore, Western blot and molecular docking studies demonstrated that XL019 inhibited RANKL-induced osteoclastogenesis by suppressing MAPK signaling.",
+            "start": 778
+          }
+        ],
+        "experiment": {
+          "assay": "Western blot and molecular docking studies",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation / osteoclastogenesis",
+          "intervention": "XL019",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "XL019 inhibited RANKL-induced osteoclastogenesis, with the study reporting suppression of MAPK signaling as the proposed mechanism.",
+        "uncertainties": [
+          "The text links MAPK suppression to the osteoclastogenesis effect, but directness is not established.",
+          "RANKL is tagged as a gene in the provider data, but the passage does not specify molecular form beyond the name."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteolytic disease",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "24",
+              "27",
+              "28",
+              "29"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "XL019",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast-specific genes and proteins expression",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 777,
+            "passage_index": 1,
+            "quote": "It was found that XL019 could impair osteoclasts formation, interfere with bone resorption ability and downregulate the osteoclast-specific genes and proteins expression.",
+            "start": 607
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast-specific genes and proteins expression",
+          "intervention": "XL019",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e5",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "XL019 downregulated osteoclast-specific genes and proteins expression during inhibition of osteoclast formation and bone resorption.",
+        "uncertainties": [
+          "The exact genes/proteins are not named in the passage.",
+          "Bone resorption ability is mentioned, but the claim here is limited to expression changes because that is the directly stated effect."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        117
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        118
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        778,
+        931
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        856,
+        1017
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        607,
+        777
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        669,
+        828
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,103 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "bone tumors",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "20"
+            ],
+            "existing_node_id": "CHEBI:16651",
+            "key": "e1",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "compound",
+            "surface": "lactate",
+            "taxon": "null"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "nutrient depletion",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 296,
+            "passage_index": 1,
+            "quote": "Tumor-derived lactate and nutrient depletion suppress T cell function while promoting osteoclast activation",
+            "start": 189
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast activation",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The review states that tumor-derived lactate and nutrient depletion promote osteoclast activation in bone tumors.",
+        "uncertainties": [
+          "The sentence combines lactate and nutrient depletion; the exact contribution of each factor to osteoclast activation is not separated.",
+          "This is a review/background statement, not a primary experiment."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        189,
+        296
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        253,
+        330
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

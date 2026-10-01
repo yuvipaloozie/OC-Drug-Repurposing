@@ -1,0 +1,246 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone",
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "21"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:SRC",
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Src tyrosine kinase",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "18"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "mice",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 168,
+            "passage_index": 1,
+            "quote": "Src tyrosine kinase was the first gene product shown to have an essential function in bone using recombinant DNA technology after its expression was knocked out in mice",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": "not_stated",
+          "dose": null,
+          "duration": "approximately 15 years ago",
+          "endpoint": "essential function in bone",
+          "intervention": "Src tyrosine kinase expression was knocked out in mice",
+          "outcome_change": "not_stated",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "unknown",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "unresolved",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Src tyrosine kinase is described as having an essential function in bone, based on knockout in mice.",
+        "uncertainties": [
+          "The passage states a knockout in mice but does not specify the measured phenotype or direction of change.",
+          "Species is supported by the text for the knockout context, but the molecular form of Src is inferred from the phrase 'tyrosine kinase' and the existing-node suggestion."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoclast",
+          "compartment": "bone",
+          "disease_setting": "increased bone resorption",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "21"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:SRC",
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Src kinase",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast formation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast survival",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 396,
+            "passage_index": 1,
+            "quote": "Since then, our understanding of the regulation of bone catabolism has advanced significantly with the identification of other key enzymes that regulate osteoclast formation, activation, and survival",
+            "start": 197
+          },
+          {
+            "end": 472,
+            "passage_index": 1,
+            "quote": " after their knockout in mice or recognition of mutations in them in humans.",
+            "start": 396
+          },
+          {
+            "end": 1836,
+            "passage_index": 1,
+            "quote": "highlight in a variety of models of increased bone resorption the effects of Src kinase inhibitors that have been targeted to bone to limit potential adverse effects on other cells.",
+            "start": 1655
+          }
+        ],
+        "experiment": {
+          "assay": "review statement",
+          "dose": null,
+          "duration": null,
+          "endpoint": "regulation of osteoclast formation, activation, and survival",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The review states that signaling pathways regulate osteoclast formation, activation, and survival, with specific reference to Src tyrosine kinase and downstream signaling.",
+        "uncertainties": [
+          "This is a review/background statement rather than a direct experiment.",
+          "The text groups multiple osteoclast-related processes; only one regulatory object is populated as required by the schema, while the others are mentioned in the summary."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        168
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        154
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        197,
+        396
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        204,
+        338
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        396,
+        472
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        338,
+        392
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1655,
+        1836
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        519,
+        661
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

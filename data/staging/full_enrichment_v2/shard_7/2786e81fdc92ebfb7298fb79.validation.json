@@ -1,0 +1,403 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "myeloid cells",
+          "compartment": null,
+          "disease_setting": "inflammatory bone loss",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "99982"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "LSD1",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "10090"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "female mice",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "MESH:D001847",
+              "MESH:D007249"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "inflammatory bone loss",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D010518"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "periodontitis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D001168"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "K/BxN serum-transfer arthritis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 214,
+            "passage_index": 1,
+            "quote": "Osteoclasts, which are derived from myeloid precursors, are essential for physiologic bone remodeling but also mediate pathological bone loss in inflammatory diseases such as periodontitis and rheumatoid arthritis.",
+            "start": 0
+          },
+          {
+            "end": 803,
+            "passage_index": 1,
+            "quote": "In this study, we show that LSD1LysM-Cre female mice are similarly resistant to inflammatory bone loss in both ligature-induced periodontitis and K/BxN serum-transfer arthritis models.",
+            "start": 619
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "inflammatory bone loss resistance",
+          "intervention": "myeloid-specific deletion of LSD1 (LSD1LysM-Cre)",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Myeloid-specific deletion of LSD1 in female mice is reported to make them resistant to inflammatory bone loss in ligature-induced periodontitis and K/BxN serum-transfer arthritis models.",
+        "uncertainties": [
+          "The abstract states resistance in two disease models but does not provide quantitative effect sizes.",
+          "The regulatory sign reflects the observed perturbation outcome, not a direct molecular mechanism."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "preosteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "99982"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "LSD1",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "21803"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TGFB1",
+            "key": "e3",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "TGF-beta",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "21926"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNF",
+            "key": "e4",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "TNF",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1173,
+            "passage_index": 1,
+            "quote": "Notably, LSD1 deletion blocked osteoclastogenesis even under TGF-beta and TNF co-stimulation, which is an alternative RANKL-independent differentiation pathway.",
+            "start": 1013
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "LSD1 deletion",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "LSD1 deletion blocked osteoclastogenesis even when preosteoclasts were co-stimulated with TGF-beta and TNF, indicating the perturbation reduces osteoclast differentiation under that alternative pathway.",
+        "uncertainties": [
+          "The passage does not specify whether TGF-beta and TNF refer to proteins or genes in the experiment context.",
+          "The claim is about a blocked differentiation response, not a direct biochemical interaction."
+        ]
+      },
+      "errors": [
+        "invented annotation ID",
+        "invented existing node ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "mandibular-derived preosteoclasts",
+          "compartment": null,
+          "disease_setting": "ligature-induced periodontitis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "99982"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "LSD1",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "216799"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Nlrp3",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "15251"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Hif1alpha",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "16365"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Acod1",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "pathway",
+            "surface": "inflammatory and metabolic programs",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1173,
+            "passage_index": 1,
+            "quote": "Bulk RNA-seq of mandibular-derived preosteoclasts from LSD1LysM-Cre mice with ligature-induced periodontitis revealed the upregulation of genes involved in inflammation, lipid metabolism, and immune response. Notably, LSD1 deletion blocked osteoclastogenesis even under TGF-beta and TNF co-stimulation, which is an alternative RANKL-independent differentiation pathway.",
+            "start": 804
+          },
+          {
+            "end": 1376,
+            "passage_index": 1,
+            "quote": "Upregulation of Nlrp3, Hif1alpha, and Acod1 in LSD1LysM-Cre preosteoclasts suggests that LSD1 is essential for repressing inflammatory and metabolic programs that otherwise hinder osteoclast commitment.",
+            "start": 1174
+          }
+        ],
+        "experiment": {
+          "assay": "bulk RNA-seq",
+          "dose": null,
+          "duration": null,
+          "endpoint": "gene upregulation in RNA-seq",
+          "intervention": "LSD1 deletion",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e5",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Bulk RNA-seq of LSD1-deficient preosteoclasts showed upregulation of Nlrp3, Hif1alpha, and Acod1, which the authors interpret as evidence that LSD1 normally represses inflammatory and metabolic programs.",
+        "uncertainties": [
+          "The inferred repression relationship is a textual interpretation from the authors, not a directly demonstrated mechanism.",
+          "The passage reports upregulation of multiple genes but does not assign separate causal roles for each gene."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        214
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        171
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        619,
+        803
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        438,
+        555
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1013,
+        1173
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        774,
+        888
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        804,
+        1173
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        566,
+        773
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1174,
+        1376
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        889,
+        1103
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

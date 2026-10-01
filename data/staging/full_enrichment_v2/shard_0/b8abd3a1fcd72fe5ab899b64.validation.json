@@ -1,0 +1,239 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow-derived macrophages (BMMs)",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "25"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "CsCA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast numbers",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 857,
+            "passage_index": 1,
+            "quote": "At the established non-cytotoxic dose, the effects of CsCA on osteoclast morphology and activity were observed via TRAcP staining and F-actin ring formation assay.",
+            "start": 694
+          },
+          {
+            "end": 1359,
+            "passage_index": 1,
+            "quote": "TRAcP staining revealed a significant reduction in osteoclast numbers in CsCA-treated groups.",
+            "start": 1266
+          },
+          {
+            "end": 1436,
+            "passage_index": 1,
+            "quote": "F-actin ring formation assays demonstrated abnormal cytoskeletal structures.",
+            "start": 1360
+          }
+        ],
+        "experiment": {
+          "assay": "TRAcP staining; F-actin ring formation assay",
+          "dose": "non-cytotoxic dose; concentrations <= 40 mug/mL",
+          "duration": null,
+          "endpoint": "osteoclast numbers; osteoclast morphology and activity",
+          "intervention": "CsCA-treated groups",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "CsCA treatment reduced osteoclast numbers and impaired osteoclast morphology/activity in mouse bone marrow-derived macrophages.",
+        "uncertainties": [
+          "The exact molecular composition of CsCA is not specified beyond 'crude antigen'.",
+          "Osteoclast number reduction and abnormal F-actin structures are separate readouts under the same treatment."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow-derived macrophages (BMMs)",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "osteoclast differentiation"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "25"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "CsCA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "34",
+              "39"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "NFATc1",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1589,
+            "passage_index": 1,
+            "quote": "RT-PCR results showed significantly downregulated expression of osteoclast differentiation-related genes, including NFATc1, c-Fos, Acp5, CTSK and MMP-9.",
+            "start": 1437
+          },
+          {
+            "end": 1667,
+            "passage_index": 1,
+            "quote": "Western Blot confirmed reduced protein expression levels of NFATc1 and c-Fos.",
+            "start": 1590
+          }
+        ],
+        "experiment": {
+          "assay": "RT-PCR; Western Blot",
+          "dose": "non-cytotoxic dose; concentrations <= 40 mug/mL",
+          "duration": null,
+          "endpoint": "NFATc1 expression",
+          "intervention": "CsCA-treated groups",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "CsCA treatment downregulated NFATc1 expression during osteoclast differentiation.",
+        "uncertainties": [
+          "The passage reports expression changes for multiple genes; this claim extracts NFATc1 as one supported example.",
+          "The text does not distinguish whether the protein-level reduction is direct or indirect."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        694,
+        857
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        819,
+        911
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1266,
+        1359
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1126,
+        1189
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1360,
+        1436
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1191,
+        1250
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1437,
+        1589
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1264,
+        1359
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1590,
+        1667
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1361,
+        1439
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

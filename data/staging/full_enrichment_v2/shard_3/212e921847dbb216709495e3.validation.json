@@ -1,0 +1,181 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "an expanding array of drugs",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastic bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 624,
+            "passage_index": 1,
+            "quote": "These novel treatments include an expanding array of drugs that primarily inhibit osteoclastic bone resorption: estrogenic compounds, bisphosphonates",
+            "start": 475
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastic bone resorption",
+          "intervention": null,
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The review states that an expanding array of drugs primarily inhibits osteoclastic bone resorption.",
+        "uncertainties": [
+          "The subject is a general drug class rather than a single agent.",
+          "The passage is a review-style background statement, not a primary experimental result."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "23",
+              "24"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "intermittent parathyroid hormone (PTH) therapy",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "16",
+              "25"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoporotic fractures",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1056,
+            "passage_index": 1,
+            "quote": "The advent of intermittent parathyroid hormone (PTH) therapy has provided proof-of-principle that osteoblast-targeted (anabolic) agents can effectively prevent osteoporotic fractures, and is likely to be followed by the introduction of other therapies based on PTH",
+            "start": 792
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoporotic fractures",
+          "intervention": "intermittent parathyroid hormone (PTH) therapy",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The review says intermittent parathyroid hormone therapy provided proof-of-principle that osteoblast-targeted agents can prevent osteoporotic fractures.",
+        "uncertainties": [
+          "This is presented as proof-of-principle in a review, not as a directly described study design in the abstract.",
+          "The sentence refers broadly to osteoblast-targeted agents; the specific causal contribution of PTH to fracture prevention is summarized rather than experimentally detailed here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        475,
+        624
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        602,
+        748
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        792,
+        1056
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        751,
+        1065
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

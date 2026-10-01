@@ -1,0 +1,220 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow-derived macrophages",
+          "compartment": null,
+          "disease_setting": "osteoarthritis",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "61"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "DZ2002",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "74",
+              "75"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "M-CSF/RANKL-induced osteoclastogenesis",
+            "taxon": "rat"
+          },
+          {
+            "annotation_ids": [
+              "67",
+              "76"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:ACP5",
+            "key": "e3",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "phenotype",
+            "surface": "TRAP-positive OCs",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1225,
+            "passage_index": 1,
+            "quote": "DZ2002 in mitigating osteoclastogenesis induced by M-CSF/RANKL",
+            "start": 1163
+          },
+          {
+            "end": 1295,
+            "passage_index": 1,
+            "quote": "a reduction in TRAP-positive OCs and bone resorption",
+            "start": 1243
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP staining; analysis of bone resorption pits; F-actin ring formation",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis; TRAP-positive osteoclasts; bone resorption",
+          "intervention": "DZ2002",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "DZ2002 treatment decreased M-CSF/RANKL-induced osteoclastogenesis, with fewer TRAP-positive osteoclasts and less bone resorption.",
+        "uncertainties": [
+          "Offsets for the second evidence span are approximate.",
+          "M-CSF/RANKL and TRAP are provider-tagged as genes but the passage context suggests signaling factors and a phenotypic readout; molecular form is therefore ambiguous.",
+          "Existing-node suggestion for TRAP is unverified and may not match the paper context exactly."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoarthritis",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "87"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "DZ2002",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "69",
+              "71",
+              "83",
+              "85",
+              "86"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "MIA-induced osteoarthritis progression",
+            "taxon": "rat"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1524,
+            "passage_index": 1,
+            "quote": "DZ2002 also alleviates MIA-induced pain, cartilage degradation, and bone loss",
+            "start": 1447
+          }
+        ],
+        "experiment": {
+          "assay": "Von Frey filament testing; analysis of weight-bearing behaviors; micro-CT imaging",
+          "dose": null,
+          "duration": null,
+          "endpoint": "pain; cartilage degradation; bone loss",
+          "intervention": "DZ2002",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "DZ2002 alleviated MIA-induced osteoarthritis outcomes in rats, including pain, cartilage degradation, and bone loss.",
+        "uncertainties": [
+          "The quoted span is part of a broader sentence describing multiple in vivo outcomes; the exact causal scope is broad.",
+          "MIA is annotated as a chemical and is used here as the OA model inducer, but the claim is about the rat OA phenotype rather than MIA itself."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1163,
+        1225
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1220,
+        1287
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1243,
+        1295
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1364,
+        1412
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1447,
+        1524
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1574,
+        1663
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

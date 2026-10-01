@@ -1,0 +1,146 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "proximal femora",
+          "disease_setting": "steroid-associated osteonecrosis (SAON)",
+          "species": "rabbit",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "RNA",
+            "surface": "Src siRNA",
+            "taxon": "rabbit"
+          },
+          {
+            "annotation_ids": [
+              "49",
+              "53",
+              "61",
+              "62",
+              "65",
+              "67",
+              "68",
+              "71",
+              "73",
+              "74",
+              "75",
+              "76",
+              "79",
+              "82",
+              "83"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "VEGF",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "vascular hyperpermeability",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "47",
+              "48",
+              "56",
+              "58",
+              "60",
+              "66",
+              "87"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "SAON",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "57",
+              "59"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "rabbit",
+            "taxon": "rabbit"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1384,
+            "passage_index": 1,
+            "quote": "Src siRNA inhibited VEGF-mediated vascular hyperpermeability",
+            "start": 1324
+          }
+        ],
+        "experiment": {
+          "assay": "dynamic contrast-enhanced (DCE) MRI",
+          "dose": null,
+          "duration": "2, 4, and 6 weeks after SAON induction",
+          "endpoint": "VEGF-mediated vascular hyperpermeability",
+          "intervention": "Src siRNA",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In the rabbit SAON model, Src siRNA treatment decreased VEGF-mediated vascular hyperpermeability.",
+        "uncertainties": [
+          "The quoted span supports inhibition of VEGF-mediated vascular hyperpermeability, but does not by itself establish a direct molecular interaction between Src siRNA and VEGF or Src.",
+          "Src siRNA is treated as an RNA intervention, but the precise molecular entity targeted in the construct is not fully specified in the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1324,
+        1384
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1468,
+        1528
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

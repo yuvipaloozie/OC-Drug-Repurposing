@@ -1,0 +1,190 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "peri-implantitis",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "42",
+              "43",
+              "45",
+              "46"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "L-MOF-agomir implants",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "44"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 916,
+            "passage_index": 1,
+            "quote": "rat peri-implantitis model, the L-MOF-agomir implants featured strong immunomodulatory activity of macrophage polarization and alleviated ligation-induced bone resorption.",
+            "start": 745
+          }
+        ],
+        "experiment": {
+          "assay": "ligation-induced rat peri-implantitis model",
+          "dose": null,
+          "duration": null,
+          "endpoint": "ligation-induced bone resorption",
+          "intervention": "L-MOF-agomir implants",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In a ligation-induced rat peri-implantitis model, L-MOF-agomir implants alleviated ligation-induced bone resorption.",
+        "uncertainties": [
+          "The passage links the implant to reduced bone resorption in a disease model, but does not specify the cellular mediator in the same sentence.",
+          "No dose or treatment duration is provided."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "macrophages",
+          "compartment": null,
+          "disease_setting": "peri-implantitis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "32",
+              "33",
+              "36",
+              "37",
+              "38"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "L-MOF-agomir titanium plate",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "39"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "LPS-stimulated macrophages",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "M1 to M2",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 704,
+            "passage_index": 1,
+            "quote": "L-MOF-agomir nanomembrane (L-MOF-agomir) implant, which could load and sustain the release of miR-27a agomir. In vitro, the L-MOF-agomir titanium plate promoted the repolarization of LPS-stimulated macrophages from M1 to M2",
+            "start": 571
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro",
+          "dose": null,
+          "duration": null,
+          "endpoint": "macrophage repolarization from M1 to M2",
+          "intervention": "L-MOF-agomir titanium plate",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In an in vitro LPS-stimulated macrophage system, the L-MOF-agomir titanium plate promoted macrophage repolarization from M1 to M2.",
+        "uncertainties": [
+          "The passage does not specify the exact molecular form of the active agent beyond the implant/titanium plate description.",
+          "Directness and mechanism are not experimentally established in the quoted sentence."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        745,
+        916
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        857,
+        1040
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

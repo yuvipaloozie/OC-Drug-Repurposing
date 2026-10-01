@@ -1,0 +1,562 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW 264.7 macrophages",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "44",
+              "45"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Bio",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "48",
+              "49"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "receptor activator of nuclear factor-kappaB ligand",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "50",
+              "51",
+              "56"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "TRAP",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 528,
+            "passage_index": 1,
+            "quote": "Bio inhibited receptor activator of nuclear factor-kappaB ligand (RANKL)-induced osteoclastogenesis in RAW 264.7 macrophages, reducing tartrate-resistant acid phosphatase (TRAP) activity and bone resorption.",
+            "start": 321
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis, TRAP activity, bone resorption",
+          "intervention": "Bio",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Bio inhibited RANKL-induced osteoclastogenesis in RAW 264.7 macrophages and reduced TRAP activity and bone resorption.",
+        "uncertainties": [
+          "RANKL is annotated as a gene in the provider data but the text presents it as a ligand; molecular form is therefore not fully resolved.",
+          "The direction/sign are inferred from the stated inhibition of an induced phenotype, not from a direct molecular target assay."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "intracellular",
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "47",
+              "52",
+              "59",
+              "70",
+              "71"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Bio",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "53"
+            ],
+            "existing_node_id": "CHEBI:26523",
+            "key": "e2",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "compound",
+            "surface": "ROS",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "54",
+              "55",
+              "58",
+              "60",
+              "65",
+              "68"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "RNA",
+            "surface": "microRNA (miR)-21",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 628,
+            "passage_index": 1,
+            "quote": "Bio suppressed intracellular ROS and downregulated primary, precursor and mature microRNA (miR)-21.",
+            "start": 529
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "intracellular ROS and miR-21 abundance",
+          "intervention": "Bio",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Bio suppressed intracellular ROS and downregulated microRNA-21.",
+        "uncertainties": [
+          "The text combines ROS suppression and miR-21 downregulation in one sentence; the molecular effect on ROS is activity-related, while miR-21 is an RNA abundance change.",
+          "Existing-node suggestion for ROS is unverified."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "54",
+              "55",
+              "58",
+              "60",
+              "65",
+              "68"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "compound",
+            "surface": "miR-21 inhibitor",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "54",
+              "55",
+              "58",
+              "60",
+              "65",
+              "68"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "RNA",
+            "surface": "miR-21",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "50",
+              "51",
+              "56"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "TRAP",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "57"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:CTSK",
+            "key": "e4",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "protein",
+            "surface": "Cathepsin K",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 726,
+            "passage_index": 1,
+            "quote": "miR-21 inhibitor suppressed TRAP activity and Cathepsin K expression, as opposed to miR-21 mimic.",
+            "start": 629
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "TRAP activity and Cathepsin K expression",
+          "intervention": "miR-21 inhibitor",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "A miR-21 inhibitor reduced TRAP activity and Cathepsin K expression, whereas a miR-21 mimic had the opposite effect.",
+        "uncertainties": [
+          "The passage states an opposing effect for a miR-21 mimic, but does not quantify it here.",
+          "The exact molecular form of the inhibitor is not stated in the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "47",
+              "52",
+              "59",
+              "70",
+              "71"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Bio",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "69"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "beta-catenin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "protein",
+            "surface": "NF-kappaB p65",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1147,
+            "passage_index": 1,
+            "quote": "Western blot showed beta-catenin upregulation and total NF-kappaB p65 suppression after Bio treatment.",
+            "start": 1045
+          }
+        ],
+        "experiment": {
+          "assay": "Western blot",
+          "dose": null,
+          "duration": null,
+          "endpoint": "beta-catenin; total NF-kappaB p65",
+          "intervention": "Bio",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c5",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Bio treatment upregulated beta-catenin and suppressed total NF-kappaB p65.",
+        "uncertainties": [
+          "The claim is based on western blot results, which indicate abundance rather than direct activity.",
+          "The p65 entity is mentioned in text but not annotated in the provider entities."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "osteoblast-osteoclast crosstalk environment",
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "61",
+              "63"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:PTEN",
+            "key": "e1",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "PTEN",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "64"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:NFATC1",
+            "key": "e2",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "NFATc1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "60",
+              "65",
+              "68"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "RNA",
+            "surface": "miR-21",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 948,
+            "passage_index": 1,
+            "quote": "Bio synergistically enhanced miR-21 target genes (PTEN and PDCD4) expression, whereas PTEN knockdown suppressed NFATc1 osteoclast marker expression via miR-21 inhibition.",
+            "start": 778
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "NFATc1 osteoclast marker expression",
+          "intervention": "PTEN knockdown",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c4",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In an osteoblast-osteoclast crosstalk environment, PTEN knockdown suppressed NFATc1 osteoclast marker expression via miR-21 inhibition.",
+        "uncertainties": [
+          "The sentence also mentions Bio-enhanced PTEN and PDCD4 expression, but the causal relation for the PTEN knockdown result is the extractable mechanism here.",
+          "The exact cell type is described as a crosstalk environment rather than a single cell line."
+        ]
+      },
+      "errors": [
+        "invented existing node ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        321,
+        528
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        298,
+        403
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        529,
+        628
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        404,
+        457
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        629,
+        726
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        742,
+        855
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c4",
+      "corrected_offsets": [
+        778,
+        948
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        901,
+        1091
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c5",
+      "corrected_offsets": [
+        1045,
+        1147
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1180,
+        1299
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,118 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 cells",
+          "compartment": null,
+          "disease_setting": "RANKL-induced",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "6"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Zanthoxylum bungeanum seed oil",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "8",
+              "9",
+              "10"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "ERK/c-JUN/NFATc1 pathway",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "11"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "RAW264.7 cells",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 164,
+            "passage_index": 0,
+            "quote": "Zanthoxylum bungeanum seed oil inhibits RANKL-induced osteoclastogenesis by suppressing ERK/c-JUN/NFATc1 pathway and regulating cell cycle arrest in RAW264.7 cells.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "Zanthoxylum bungeanum seed oil",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Zanthoxylum bungeanum seed oil inhibits RANKL-induced osteoclastogenesis, with the title also stating suppression of the ERK/c-JUN/NFATc1 pathway and regulation of cell-cycle arrest in RAW264.7 cells.",
+        "uncertainties": [
+          "The title states pathway suppression and cell-cycle arrest, but the claim is anchored only to the explicit osteoclastogenesis inhibition wording.",
+          "RAW264.7 is a cell line; species is not stated in the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        164
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        163
+      ],
+      "passage_index": 0
+    }
+  ],
+  "valid_envelope": true
+}

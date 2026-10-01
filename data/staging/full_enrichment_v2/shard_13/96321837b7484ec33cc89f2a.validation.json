@@ -1,0 +1,189 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "2",
+              "3"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "MK 801",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast attachment to bone",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast apoptosis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 806,
+            "passage_index": 1,
+            "quote": " This antagonist had no effect on osteoclast attachment to bone and did not induce osteoclast apoptosis.",
+            "start": 702
+          }
+        ],
+        "experiment": {
+          "assay": "autoradiography; in vitro assay of bone resorption",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast attachment to bone; osteoclast apoptosis",
+          "intervention": "MK 801",
+          "outcome_change": "no_detected_change",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The NMDA receptor channel blocker MK 801 had no effect on osteoclast attachment to bone and did not induce osteoclast apoptosis.",
+        "uncertainties": [
+          "The quoted sentence reports two outcomes; the regulatory object is anchored to attachment to bone, while apoptosis is summarized separately.",
+          "Directness of the effect is not established."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "2",
+              "3"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "MK 801",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts with actin ring structures",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 958,
+            "passage_index": 1,
+            "quote": " In contrast, MK 801 rapidly decreased the percentage of osteoclasts with actin ring structures that are associated with actively resorbing osteoclasts.",
+            "start": 806
+          }
+        ],
+        "experiment": {
+          "assay": "autoradiography",
+          "dose": null,
+          "duration": "rapidly",
+          "endpoint": "percentage of osteoclasts with actin ring structures",
+          "intervention": "MK 801",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "MK 801 rapidly decreased the percentage of osteoclasts with actin ring structures.",
+        "uncertainties": [
+          "The sentence links actin ring structures to actively resorbing osteoclasts, but the causal mechanism is not directly proven in this passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        702,
+        806
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        706,
+        811
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        806,
+        958
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        811,
+        964
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

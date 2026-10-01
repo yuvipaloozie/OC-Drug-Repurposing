@@ -1,0 +1,203 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7",
+          "compartment": null,
+          "disease_setting": "osteoarthritis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "67"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "magnoflorine",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "66"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1042,
+            "passage_index": 1,
+            "quote": "and inhibited RANKL-induced osteoclastogenesis.",
+            "start": 995
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro experiments",
+          "dose": "25-100 mug/mL",
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "magnoflorine (25-100 mug/mL)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Magnoflorine inhibited RANKL-induced osteoclastogenesis in the reported in vitro setting.",
+        "uncertainties": [
+          "The sentence reports the effect in a multi-cell in vitro context; the exact cell type linked specifically to osteoclastogenesis is not isolated in the text.",
+          "RANKL is annotated as a gene by the provider, but the text only supports the surface form RANKL in the induction phrase."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7",
+          "compartment": null,
+          "disease_setting": "osteoarthritis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "67"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "magnoflorine",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "68"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "p38 MAPK",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "69"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "NF-kappaB",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1137,
+            "passage_index": 1,
+            "quote": "Mechanistically, magnoflorine suppressed abnormal activation of the p38 MAPK/NF-kappaB pathway",
+            "start": 1043
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro experiments",
+          "dose": "25-100 mug/mL",
+          "duration": null,
+          "endpoint": "p38 MAPK/NF-kappaB pathway activation",
+          "intervention": "magnoflorine",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Magnoflorine suppressed abnormal activation of the p38 MAPK/NF-kappaB pathway.",
+        "uncertainties": [
+          "The pathway is named as a combined pathway in the text; the specific molecular target within the pathway is not fully resolved.",
+          "Provider annotations split the pathway components into separate gene-like entities, but the claim is about pathway activation rather than gene abundance."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        995,
+        1042
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1147,
+        1198
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1043,
+        1137
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1204,
+        1278
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

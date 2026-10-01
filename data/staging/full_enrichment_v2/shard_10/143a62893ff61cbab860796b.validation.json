@@ -1,0 +1,193 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "marrow",
+          "disease_setting": "osteoporosis",
+          "species": "Human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "24",
+              "28",
+              "29",
+              "30",
+              "34",
+              "35",
+              "38",
+              "39",
+              "40",
+              "41",
+              "43"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "marrow fatty acid biology",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "42"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoporotic bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1284,
+            "passage_index": 1,
+            "quote": "Collectively, current evidence supports an association between marrow fatty acid biology and osteoporotic bone loss.",
+            "start": 1168
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoporotic bone loss association",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The review states that marrow fatty acid biology is associated with osteoporotic bone loss.",
+        "uncertainties": [
+          "Review-level summary rather than a primary experiment.",
+          "The text does not specify a causal direction or mechanism for the association."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "38",
+              "39",
+              "40"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "unsaturated fatty acids",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1167,
+            "passage_index": 1,
+            "quote": "Experimental evidence demonstrates that saturated fatty acids (e.g., palmitic acid) induce lipotoxicity and osteoblast dysfunction, whereas unsaturated fatty acids (e.g., oleic acid and n-3 polyunsaturated fatty acids) exert protective effects via modulation of mesenchymal stem cell differentiation, osteoclastogenesis, ferroptosis, autophagy, and mitochondrial metabolism.",
+            "start": 793
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "unsaturated fatty acids (e.g., oleic acid and n-3 polyunsaturated fatty acids)",
+          "outcome_change": "other",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The review reports that experimental unsaturated fatty acids exert protective effects via modulation of osteoclastogenesis.",
+        "uncertainties": [
+          "The sentence reports modulation/protective effects but does not specify whether osteoclastogenesis increases or decreases.",
+          "This is a review summary, not a directly described individual experiment."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1168,
+        1284
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1238,
+        1346
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        793,
+        1167
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        883,
+        1100
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

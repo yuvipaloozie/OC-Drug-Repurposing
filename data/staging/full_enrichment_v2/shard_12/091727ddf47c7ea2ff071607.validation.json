@@ -1,0 +1,94 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "hypothesis",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "28"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "OP",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1621,
+            "passage_index": 1,
+            "quote": "the KEGG pathway analysis indicated the estrogen signaling pathway, osteoclast differentiation, and HIF-1 signaling pathway might have critical effects on the development of OP",
+            "start": 1445
+          }
+        ],
+        "experiment": {
+          "assay": "KEGG pathway analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "pathway enrichment analysis",
+          "intervention": "KEGG pathway analysis",
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The KEGG pathway analysis suggested that the osteoclast differentiation pathway might have critical effects on the development of osteoporosis.",
+        "uncertainties": [
+          "The passage reports pathway enrichment and a suggested effect, not a direct experiment on osteoclast differentiation.",
+          "The claim is framed for osteoporosis development, not a measured osteoclast phenotype."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1445,
+        1621
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1592,
+        1693
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

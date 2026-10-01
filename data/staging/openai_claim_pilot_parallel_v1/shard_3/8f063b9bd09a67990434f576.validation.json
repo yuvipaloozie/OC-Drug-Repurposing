@@ -1,0 +1,123 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "type 1 diabetes",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "34",
+              "36",
+              "40",
+              "45"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "type 1 diabetes",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "OGTT",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "37",
+              "38",
+              "39",
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "CTX",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "46"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1334,
+            "passage_index": 1,
+            "quote": "Participants with type 1 diabetes displayed impaired suppression of CTX-assessed bone resorption",
+            "start": 1238
+          }
+        ],
+        "experiment": {
+          "assay": "measurements of carboxy-terminal type I collagen crosslinks (CTX)",
+          "dose": null,
+          "duration": null,
+          "endpoint": "CTX-assessed bone resorption",
+          "intervention": "oral glucose tolerance test",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e2"
+        },
+        "summary": "In participants with type 1 diabetes, suppression of CTX-assessed bone resorption during OGTT was impaired.",
+        "uncertainties": [
+          "Quoted span is a best-effort offset estimate for the sentence fragment.",
+          "CTX is annotated to CYP27A1 by the provider, but the abstract text supports CTX as a bone resorption marker; molecular form is therefore set to protein from text context rather than the provider tag.",
+          "The claim concerns suppression of a marker of bone resorption, not osteoclasts directly."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1238,
+        1334
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1689,
+        1775
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

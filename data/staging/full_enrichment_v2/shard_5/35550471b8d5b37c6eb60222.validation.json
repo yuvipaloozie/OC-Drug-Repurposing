@@ -1,0 +1,228 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "B cells within TLSs",
+          "compartment": "TLSs",
+          "disease_setting": "periodontitis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "32",
+              "33"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "activated IgD+CD80+ B cells",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "22",
+              "34",
+              "36"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1125,
+            "passage_index": 1,
+            "quote": "Furthermore, in a mouse periodontitis model, we demonstrated that activated IgD+CD80+ B cells within TLSs promote osteoclastogenesis and bone resorption via RANKL secretion.",
+            "start": 952
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis and bone resorption",
+          "intervention": "mouse periodontitis model",
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In a mouse periodontitis model, activated IgD+CD80+ B cells within TLSs promoted osteoclastogenesis and bone resorption via RANKL secretion.",
+        "uncertainties": [
+          "The sentence links the B-cell effect to RANKL secretion, but does not separate whether the reported subject acts directly on osteoclasts or indirectly through RANKL.",
+          "The exact molecular form of RANKL is ambiguous from text alone despite gene annotations."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "periodontitis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "pathway",
+            "surface": "IFN-I signaling",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "25",
+              "29",
+              "35"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "TLS formation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "22",
+              "34",
+              "36"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "RANKL production",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "37"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "periodontitis bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1312,
+            "passage_index": 1,
+            "quote": "Therapeutically, inhibition of IFN-I signaling disrupted this pathogenic cascade by suppressing TLS formation and subsequent RANKL production, thereby mitigating periodontitis bone loss.",
+            "start": 1126
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "TLS formation, RANKL production, and periodontitis bone loss",
+          "intervention": "inhibition of IFN-I signaling",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Therapeutic inhibition of IFN-I signaling suppressed TLS formation and subsequent RANKL production, mitigating periodontitis bone loss.",
+        "uncertainties": [
+          "The text states a cascade effect; the direct molecular target of the inhibition is not specified.",
+          "The claim combines multiple downstream outcomes in one sentence, so the exact object of the negative regulation is partially composite."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        952,
+        1125
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1122,
+        1299
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1126,
+        1312
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1308,
+        1474
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

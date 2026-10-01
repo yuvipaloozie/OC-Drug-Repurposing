@@ -1,0 +1,226 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "bone",
+          "disease_setting": "fluoride-induced bone damage",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "67",
+              "68"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "CS-SeNPs",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "99",
+              "100",
+              "101",
+              "102",
+              "103"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "OPG/RANKL/NF-kappaB pathway",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "osteoclasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1418,
+            "passage_index": 1,
+            "quote": "CS-SeNPs also enhanced the absorption of calcium and phosphorus by bone tissue and, via the gut-bone axis, inhibited the sustained activation of the bone osteoprotegerin (OPG)/receptor activator of nuclear factor-kappaB ligand (RANKL)/nuclear factor kappa-B (NF-kappaB) pathway, as well as the abnormal activation of osteoclasts",
+            "start": 1090
+          },
+          {
+            "end": 1367,
+            "passage_index": 1,
+            "quote": "osteoprotegerin (OPG)/receptor activator of nuclear factor-kappaB ligand (RANKL)/nuclear factor kappa-B (NF-kappaB) pathway",
+            "start": 1244
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "pathway activation / osteoclast activation",
+          "intervention": "CS-SeNPs",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "CS-SeNPs inhibited sustained activation of the bone OPG/RANKL/NF-kappaB pathway and abnormal activation of osteoclasts.",
+        "uncertainties": [
+          "The text states inhibition of pathway activation and osteoclast activation, but does not specify which pathway component is directly affected.",
+          "'Osteoclasts' are described as abnormally activated; the exact molecular form is not specified in the passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone tissue",
+          "disease_setting": "fluoride-induced bone damage",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "67",
+              "68"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "CS-SeNPs",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "105"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "fluoride-induced bone damage",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1518,
+            "passage_index": 1,
+            "quote": "CS-SeNPs also enhanced the absorption of calcium and phosphorus by bone tissue and, via the gut-bone axis, inhibited the sustained activation of the bone osteoprotegerin (OPG)/receptor activator of nuclear factor-kappaB ligand (RANKL)/nuclear factor kappa-B (NF-kappaB) pathway, as well as the abnormal activation of osteoclasts, thereby restoring bone metabolic balance and effectively alleviating fluoride-induced bone damage.",
+            "start": 1090
+          },
+          {
+            "end": 1641,
+            "passage_index": 1,
+            "quote": "fluoride-induced bone damage",
+            "start": 1628
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone damage",
+          "intervention": "CS-SeNPs",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "CS-SeNPs alleviated fluoride-induced bone damage.",
+        "uncertainties": [
+          "The passage combines multiple outcomes in one sentence; the specific contribution of bone tissue calcium/phosphorus absorption to the phenotype is not separately quantified."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1090,
+        1518
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        669,
+        730
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1090,
+        1418
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        669,
+        804
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1244,
+        1367
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1383,
+        1502
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

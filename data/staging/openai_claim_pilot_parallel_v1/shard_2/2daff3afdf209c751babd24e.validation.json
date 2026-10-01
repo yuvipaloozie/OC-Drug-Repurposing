@@ -1,0 +1,226 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "58",
+              "59"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "TNFSF11",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "41",
+              "42",
+              "43",
+              "44",
+              "51",
+              "56",
+              "57",
+              "60",
+              "63",
+              "65",
+              "66",
+              "67",
+              "68",
+              "69"
+            ],
+            "existing_node_id": null,
+            "key": "DPP4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "DPP-4",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "61",
+              "64"
+            ],
+            "existing_node_id": null,
+            "key": "GLP1R",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "GLP-1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "62"
+            ],
+            "existing_node_id": null,
+            "key": "Blood Glucose",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "blood glucose",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1618,
+            "passage_index": 1,
+            "quote": "receptor activator of nuclear factor kappa B ligand (RANKL), which induces DPP-4 expression in osteoclasts, leading to decreased GLP-1 levels and increased blood glucose levels.",
+            "start": 1441
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "DPP-4 expression, GLP-1 levels, blood glucose levels",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "DPP4",
+          "sign": "positive",
+          "subject": "TNFSF11"
+        },
+        "summary": "The review states that RANKL induces DPP-4 expression in osteoclasts, which is linked to decreased GLP-1 levels and increased blood glucose levels.",
+        "uncertainties": [
+          "The text presents a review-level mechanistic statement, not a primary experiment.",
+          "The GLP-1 entity is annotated to GLP1R in provider data, but the surface text refers to the peptide GLP-1; this mapping is unresolved.",
+          "The causal links from DPP-4 expression to GLP-1 decrease and blood glucose increase are stated in the passage but not experimentally demonstrated here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "37",
+              "38",
+              "41",
+              "42",
+              "43",
+              "44",
+              "51",
+              "56",
+              "57",
+              "60",
+              "63",
+              "65",
+              "66",
+              "67",
+              "68",
+              "69"
+            ],
+            "existing_node_id": null,
+            "key": "DPP4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "DPP-4",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 100,
+            "passage_index": 1,
+            "quote": "BACKGROUND: Dipeptidyl peptidase 4 (DPP-4) plays a crucial role in breaking down various substrates.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "metabolic_conversion",
+        "local_claim_id": "c1",
+        "reaction": {
+          "direction": "unknown",
+          "enzyme": "DPP-4",
+          "products": [],
+          "substrates": []
+        },
+        "regulatory": null,
+        "summary": "DPP-4 is described as playing a crucial role in breaking down various substrates.",
+        "uncertainties": [
+          "The specific substrates and products of the breakdown reaction are not stated in the text.",
+          "The passage is a review/background statement rather than a primary experiment."
+        ]
+      },
+      "errors": [
+        "unknown reaction participant"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        100
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        96
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1441,
+        1618
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1552,
+        1734
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

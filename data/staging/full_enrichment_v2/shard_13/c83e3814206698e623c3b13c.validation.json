@@ -1,0 +1,190 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "LPS-induced inflammatory bone loss",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "79",
+              "80",
+              "83"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "SHP1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "63",
+              "70",
+              "72",
+              "75",
+              "81"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "morin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "OCs",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1262,
+            "passage_index": 1,
+            "quote": "SHP1 knockdown abolished the inhibitory effect of morin on OCs.",
+            "start": 1199
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "inhibitory effect of morin on OCs",
+          "intervention": "SHP1 knockdown",
+          "outcome_change": "other",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "SHP1 knockdown abolished the inhibitory effect of morin on osteoclasts.",
+        "uncertainties": [
+          "The sentence states an abolition of morin's inhibitory effect, not a direct SHP1→osteoclast regulatory mechanism.",
+          "SHP-1 / SHP1 mentions likely refer to the same entity, but the text does not explicitly resolve isoform or protein/gene form."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "LPS-induced inflammatory bone loss",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "70",
+              "72",
+              "75",
+              "81"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Morin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "OCs",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 839,
+            "passage_index": 1,
+            "quote": "LPS stimulation. Morin decreased the number and activity of OCs",
+            "start": 772
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro experiments; in vivo TRAP staining",
+          "dose": null,
+          "duration": null,
+          "endpoint": "number and activity of osteoclasts",
+          "intervention": "morin",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Morin reduced osteoclast number and activity in LPS-stimulated experiments.",
+        "uncertainties": [
+          "The quote spans a sentence boundary and combines the LPS stimulation context with the morin effect.",
+          "OCs is treated as an osteoclast phenotype/entity rather than a mapped gene or protein."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1199,
+        1262
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1320,
+        1387
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

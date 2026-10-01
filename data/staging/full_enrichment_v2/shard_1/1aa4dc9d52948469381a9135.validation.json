@@ -1,0 +1,142 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "macrophage",
+          "compartment": null,
+          "disease_setting": "osteoarthritis",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "47",
+              "48",
+              "49",
+              "50",
+              "59",
+              "60",
+              "61",
+              "65",
+              "66",
+              "67"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Cur-Mg/PLGA MPs",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "macrophage-to-osteoclast differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "68"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:ACOD1",
+            "key": "e4",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "ACOD1",
+            "taxon": "rat"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1362,
+            "passage_index": 1,
+            "quote": "pain, effectively suppress osteoclast activation, and substantially maintain",
+            "start": 1286
+          },
+          {
+            "end": 1556,
+            "passage_index": 1,
+            "quote": "Mechanistic investigations identified that Cur-Mg/PLGA MPs inhibit macrophage-to-osteoclast differentiation through ACOD1-mediated mitochondrial metabolic rewiring",
+            "start": 1393
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "macrophage-to-osteoclast differentiation / osteoclast activation",
+          "intervention": "Cur-Mg/PLGA MPs",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Cur-Mg/PLGA microspheres inhibit macrophage-to-osteoclast differentiation and suppress osteoclast activation in the OA context; the paper attributes this effect to ACOD1-mediated mitochondrial metabolic rewiring.",
+        "uncertainties": [
+          "ACOD1 is mentioned as part of the proposed mechanism, but the text does not specify its direction of change or whether the effect is direct.",
+          "The passage links the result to rat OA models, but the exact in vitro cell source for the macrophage-to-osteoclast differentiation assay is not stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1286,
+        1362
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1398,
+        1476
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1393,
+        1556
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1602,
+        1713
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

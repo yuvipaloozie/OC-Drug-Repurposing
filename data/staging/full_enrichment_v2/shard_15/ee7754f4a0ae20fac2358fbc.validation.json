@@ -1,0 +1,203 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "CKD-related osteoporosis; renal transplant recipients with low bone turnover",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "24",
+              "28"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "teriparatide",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone density",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "29"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "renal transplant recipients with low bone turnover",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 289,
+            "passage_index": 1,
+            "quote": "Vetrano et al. demonstrated that teriparatide can improve bone density in renal transplant recipients with low bone turnover, with a favorable safety profile.",
+            "start": 131
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone density",
+          "intervention": "teriparatide",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Teriparatide was reported to improve bone density in renal transplant recipients with low bone turnover, with a favorable safety profile.",
+        "uncertainties": [
+          "The passage summarizes a cited study rather than presenting the primary experimental details.",
+          "No dose, duration, or assay is stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "CKD",
+          "species": "patient",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "37"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "hypercalcemia",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "39",
+              "40"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "calcium-phosphate metabolism status",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "parathyroid function",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 772,
+            "passage_index": 1,
+            "quote": "The risk of hypercalcemia (22.2%) is associated with the patient's calcium-phosphate metabolism status and parathyroid function.",
+            "start": 644
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "hypercalcemia risk",
+          "intervention": null,
+          "outcome_change": "other",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e1",
+          "sign": "unknown",
+          "subject": "e2"
+        },
+        "summary": "The risk of hypercalcemia was associated with the patient's calcium-phosphate metabolism status and parathyroid function.",
+        "uncertainties": [
+          "The passage states an association, not a causal mechanism.",
+          "The 22.2% figure is included in the text but no study design or comparator is provided."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        131,
+        289
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        129,
+        259
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        644,
+        772
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        729,
+        843
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

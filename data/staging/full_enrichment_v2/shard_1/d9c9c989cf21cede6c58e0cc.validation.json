@@ -1,0 +1,92 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "serum",
+          "disease_setting": "anti-RANKL treatment cessation / overshoot phase",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "complex",
+            "surface": "RANKL-bearing extracellular vesicles",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1443,
+            "passage_index": 1,
+            "quote": "Just before the overshoot phase, the osteoclast precursor cell population expands and RANKL-bearing extracellular vesicles (EVs) became abundant in the serum, leading to robust osteoclastogenesis after cessation of anti-RANKL treatment.",
+            "start": 1207
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis; abundance of RANKL-bearing EVs in serum",
+          "intervention": "cessation of anti-RANKL treatment",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In mice, RANKL-bearing extracellular vesicles became abundant in serum and were described as leading to robust osteoclastogenesis after anti-RANKL treatment was stopped.",
+        "uncertainties": [
+          "The text combines an observed abundance change with a causal phrase; direct mechanistic causality is not independently demonstrated in the excerpt.",
+          "RANKL-bearing extracellular vesicles are not a curated molecular entity and are treated as an unresolved complex-like surface form."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1207,
+        1443
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1471,
+        1698
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

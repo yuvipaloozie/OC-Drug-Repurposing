@@ -1,0 +1,188 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporotic",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "the scaffold",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1281,
+            "passage_index": 1,
+            "quote": "attenuated osteoclast activity",
+            "start": 1251
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro assays",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast activity",
+          "intervention": "functionalized 3D-printed titanium alloy porous scaffold with sequential release of 4-OI and BMP-9",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The scaffold attenuated osteoclast activity in vitro.",
+        "uncertainties": [
+          "The text does not specify which cellular system in the in vitro assays directly measured osteoclast activity.",
+          "The scaffold is described functionally rather than as a defined molecular entity."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporotic",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "the scaffold",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "43"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:NFKB1",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "pathway",
+            "surface": "NF-kappaB signaling",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "44"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "TGF-beta signaling",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1553,
+            "passage_index": 1,
+            "quote": "suppression of NF-kappaB and TGF-beta signaling",
+            "start": 1506
+          }
+        ],
+        "experiment": {
+          "assay": "transcriptome analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "NF-kappaB and TGF-beta signaling",
+          "intervention": "functionalized 3D-printed titanium alloy porous scaffold with sequential release of 4-OI and BMP-9",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Transcriptome analysis reported suppression of NF-kappaB and TGF-beta signaling.",
+        "uncertainties": [
+          "The quote states suppression of two signaling pathways, but the regulatory object field captures only one pathway; the second pathway is represented as a separate entity without a distinct edge.",
+          "Provider annotation 43 may refer to a gene symbol rather than a pathway component, so the mapping is ambiguous."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1251,
+        1281
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1118,
+        1146
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1506,
+        1553
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1695,
+        1737
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

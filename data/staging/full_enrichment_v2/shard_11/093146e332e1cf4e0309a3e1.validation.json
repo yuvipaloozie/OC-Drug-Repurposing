@@ -1,0 +1,112 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow macrophages",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "compound",
+            "surface": "compound 8",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "20"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "bone marrow macrophages",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 640,
+            "passage_index": 1,
+            "quote": "In biological assays, compound 8 significantly inhibited RANKL-induced osteoclastogenesis in bone marrow macrophages,",
+            "start": 523
+          }
+        ],
+        "experiment": {
+          "assay": "biological assays",
+          "dose": null,
+          "duration": null,
+          "endpoint": "RANKL-induced osteoclastogenesis",
+          "intervention": "compound 8",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Compound 8 significantly inhibited RANKL-induced osteoclastogenesis in bone marrow macrophages.",
+        "uncertainties": [
+          "The passage states inhibition of osteoclastogenesis but does not establish a direct molecular target or mechanism.",
+          "RANKL is annotated as a gene here, but the text itself only supports it as the stated upstream inducer."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        523,
+        640
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        522,
+        639
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,236 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone marrow",
+          "disease_setting": "osteoporosis",
+          "species": "mouse",
+          "stage": "naturally aged and ovariectomized"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "63"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "plerixafor",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "RCB numbers",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone mass",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1081,
+            "passage_index": 1,
+            "quote": "plerixafor",
+            "start": 1071
+          },
+          {
+            "end": 1174,
+            "passage_index": 1,
+            "quote": " reduced RCB numbers in BM and increased bone mass in naturally aged and ovariectomized mice",
+            "start": 1082
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "RCB numbers in BM; bone mass",
+          "intervention": "administration of the FDA-approved CXCR4 antagonist, plerixafor",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Plerixafor treatment reduced RCB numbers in bone marrow and increased bone mass in aged/ovariectomized mice.",
+        "uncertainties": [
+          "Exact passage offsets for the full outcome span are approximate.",
+          "The text links increased bone mass to treatment but does not specify a direct molecular mechanism."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone marrow",
+          "disease_setting": "bone loss / osteoporosis",
+          "species": "mouse",
+          "stage": "aged donor RCBs; young NSG; ovariectomized model"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "RCBs",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "38",
+              "58"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastic bone resorption",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 839,
+            "passage_index": 1,
+            "quote": "RCBs from aged mice caused bone loss in young",
+            "start": 794
+          },
+          {
+            "end": 928,
+            "passage_index": 1,
+            "quote": "bone loss in young NSG mice and, in an ovariectomized mouse model, accelerated osteoclastic bone resorption",
+            "start": 821
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone loss; osteoclastic bone resorption",
+          "intervention": "transfer of RCBs from aged mice",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "RCBs from aged mice caused bone loss in young NSG mice and, in an ovariectomized mouse model, accelerated osteoclastic bone resorption.",
+        "uncertainties": [
+          "The exact span boundaries for the second half of the sentence are approximate.",
+          "The passage does not specify whether the osteoclastic bone resorption change is direct or mediated by another factor."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1071,
+        1081
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1177,
+        1187
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1082,
+        1174
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1188,
+        1280
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        794,
+        839
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        881,
+        924
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        821,
+        928
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        927,
+        1014
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

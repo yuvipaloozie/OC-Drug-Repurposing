@@ -1,0 +1,232 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "15"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "c-Src",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast bone resorbing activity",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "16"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteopetrosis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 84,
+            "passage_index": 1,
+            "quote": "The targeted disruption of c-Src impairs osteoclast bone resorbing activity, causing",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast bone resorbing activity",
+          "intervention": "targeted disruption of c-Src",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Targeted disruption of c-Src impairs osteoclast bone resorbing activity and causes osteopetrosis.",
+        "uncertainties": [
+          "The exact organism/cell system is not stated in the abstract excerpt.",
+          "The passage links c-Src disruption to osteopetrosis, but the causal chain is summarized from the sentence rather than separately tested here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "mitochondria",
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "17",
+              "22",
+              "24"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "c-Src",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "23",
+              "25"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "cytochrome c oxidase (Cox)",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Cox activity",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorbing activity of osteoclasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 604,
+            "passage_index": 1,
+            "quote": "where it phosphorylates cytochrome c oxidase (Cox).",
+            "start": 553
+          },
+          {
+            "end": 722,
+            "passage_index": 1,
+            "quote": "Src-induced Cox activity is also required for bone resorbing activity of osteoclasts that require high levels of ATP.",
+            "start": 605
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "Cox activity and osteoclast bone resorbing activity",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "direct",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "c-Src phosphorylates cytochrome c oxidase (Cox) in mitochondria, and Src-induced Cox activity is required for osteoclast bone resorbing activity.",
+        "uncertainties": [
+          "The sentence states phosphorylation, but does not specify whether the phosphorylation changes Cox activity directly or via an intermediate step.",
+          "The claim that Src-induced Cox activity is required for bone resorption is associative within the abstract context and not presented as a separate perturbation experiment."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        84
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        83
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        553,
+        604
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        388,
+        444
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        605,
+        722
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        445,
+        590
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

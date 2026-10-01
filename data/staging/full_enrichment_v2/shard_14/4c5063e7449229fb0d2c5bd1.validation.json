@@ -1,0 +1,210 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow macrophages (BMMs)",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "71",
+              "73",
+              "77",
+              "85",
+              "88",
+              "90",
+              "95",
+              "97",
+              "106",
+              "109",
+              "110"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "KPs",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone marrow macrophages (BMMs)-derived osteoclast differentiation and bone resorption",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1615,
+            "passage_index": 1,
+            "quote": "KPs inhibited bone marrow macrophages (BMMs)-derived osteoclast differentiation and bone resorption",
+            "start": 1516
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": "12 weeks",
+          "endpoint": "osteoclast differentiation and bone resorption",
+          "intervention": "KPs treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Kefir peptides inhibited osteoclast differentiation and bone resorption in bone marrow macrophages.",
+        "uncertainties": [
+          "The cited span states inhibition of osteoclast differentiation and bone resorption together; it does not separate which downstream effect is primary.",
+          "The passage also mentions signaling changes (p38, NF-kappaB, Akt, PLCgamma2, CREB-1, NFATc1, c-Fos), but those were not extracted as separate claims here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "60",
+              "66"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "AKR1A1 protein",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "61"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "D-glucuronate",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "62"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "L-gulonate",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 134,
+            "passage_index": 1,
+            "quote": "catalyzes the transformation of D-glucuronate to L-gulonate",
+            "start": 75
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "metabolic_conversion",
+        "local_claim_id": "c2",
+        "reaction": {
+          "direction": "as_written",
+          "enzyme": "e1",
+          "products": [
+            {
+              "entity": "e3",
+              "stoichiometry": null
+            }
+          ],
+          "substrates": [
+            {
+              "entity": "e2",
+              "stoichiometry": null
+            }
+          ]
+        },
+        "regulatory": null,
+        "summary": "AKR1A1 catalyzes the conversion of D-glucuronate to L-gulonate in vitamin C biosynthesis.",
+        "uncertainties": [
+          "The passage frames this as background biochemical information, not as an experimental perturbation in this study.",
+          "Species is not explicitly stated in the quoted span."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1516,
+        1615
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1768,
+        1839
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        75,
+        134
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        75,
+        133
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

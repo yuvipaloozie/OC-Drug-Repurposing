@@ -1,0 +1,335 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "serum",
+          "disease_setting": "HER2-negative early breast cancer",
+          "species": "patients",
+          "stage": "early breast cancer"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "53"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Denosumab",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "54"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": "9606"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1391,
+            "passage_index": 1,
+            "quote": "Denosumab demonstrated its ability to reduce serum free RANKL levels",
+            "start": 1323
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "120 mg one week apart",
+          "duration": null,
+          "endpoint": "serum free RANKL levels",
+          "intervention": "two doses of single agent denosumab (120 mg one week apart) before surgery",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Denosumab treatment reduced serum free RANKL levels in the trial.",
+        "uncertainties": [
+          "RANKL is mentioned as free serum levels; the exact molecular entity is not further specified in the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "negated_relation",
+        "context": {
+          "cell_type": null,
+          "compartment": "tumor",
+          "disease_setting": "HER2-negative early breast cancer",
+          "species": "patients",
+          "stage": "early breast cancer"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "53",
+              "59",
+              "63",
+              "70",
+              "73",
+              "77",
+              "84",
+              "88"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Denosumab",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "tumor proliferation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "apoptosis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1519,
+            "passage_index": 1,
+            "quote": "However, a reduction in tumor cell proliferation or cell survival was not observed",
+            "start": 1437
+          },
+          {
+            "end": 2469,
+            "passage_index": 1,
+            "quote": "Although preoperative denosumab did not reduce tumor proliferation or increased apoptosis",
+            "start": 2380
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "tumor proliferation and apoptosis",
+          "intervention": "preoperative denosumab",
+          "outcome_change": "no_detected_change",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e5",
+          "sign": "unknown",
+          "subject": "e3"
+        },
+        "summary": "Preoperative denosumab did not reduce tumor proliferation or increase apoptosis.",
+        "uncertainties": [
+          "The abstract states no reduction in proliferation and no increase in apoptosis, but does not provide detailed quantitative results in the extracted span."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "tumor infiltrating lymphocytes",
+          "compartment": "tumor",
+          "disease_setting": "HER2-negative early breast cancer",
+          "species": "patients",
+          "stage": "early breast cancer"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "53",
+              "59",
+              "63",
+              "70",
+              "73",
+              "77",
+              "84",
+              "88"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Denosumab",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "tumor infiltrating lymphocytes (TILs)",
+            "taxon": "9606"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 851,
+            "passage_index": 1,
+            "quote": "a denosumab-driven increase in tumor infiltrating lymphocytes (TILs) was observed",
+            "start": 769
+          },
+          {
+            "end": 1693,
+            "passage_index": 1,
+            "quote": "particularly in the luminal B-like population",
+            "start": 1648
+          },
+          {
+            "end": 1875,
+            "passage_index": 1,
+            "quote": "Denosumab led to increased TILs in both pre-menopausal",
+            "start": 1821
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "120 mg one week apart",
+          "duration": null,
+          "endpoint": "tumor infiltrating lymphocytes (TILs)",
+          "intervention": "two doses of single agent denosumab (120 mg one week apart) before surgery",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "positive",
+          "subject": "e3"
+        },
+        "summary": "Denosumab increased tumor infiltrating lymphocytes in the experimental arm, especially in luminal B-like tumors.",
+        "uncertainties": [
+          "The text does not specify a direct cellular mechanism for the TIL increase.",
+          "The exact TIL measurement assay is not stated."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1323,
+        1391
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        694,
+        760
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1648,
+        1693
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        862,
+        914
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1821,
+        1875
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        964,
+        1014
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1437,
+        1519
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        779,
+        865
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        2380,
+        2469
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2012,
+        2093
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

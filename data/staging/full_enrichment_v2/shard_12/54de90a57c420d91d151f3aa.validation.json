@@ -1,0 +1,107 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "severe obesity",
+          "species": "adolescents",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "Sleeve gastrectomy",
+            "taxon": "null"
+          },
+          {
+            "annotation_ids": [
+              "9",
+              "10"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "C-terminal cross-linking telopeptide (CTX)",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "11",
+              "12"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1577,
+            "passage_index": 1,
+            "quote": "Elevated bone turnover markers, particularly C-terminal cross-linking telopeptide (CTX), indicate increased bone resorption following SG.",
+            "start": 1440
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption / bone turnover markers (CTX)",
+          "intervention": "sleeve gastrectomy",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In adolescents undergoing sleeve gastrectomy, bone resorption markers were elevated, particularly CTX, indicating increased bone resorption after surgery.",
+        "uncertainties": [
+          "The passage is a systematic review summary rather than a single primary experiment.",
+          "CTX is annotated as a gene in provider data, but the text here supports it as a bone turnover marker; molecular form remains unresolved."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1440,
+        1577
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1607,
+        1695
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

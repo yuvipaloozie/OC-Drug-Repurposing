@@ -1,0 +1,183 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoclast",
+          "compartment": "diabetic bone microenvironment",
+          "disease_setting": "diabetes-associated bone loss",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "pyroptotic signaling",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1108,
+            "passage_index": 1,
+            "quote": "In the diabetic bone microenvironment, pyroptosis affects all major bone cell types. Osteoblast pyroptosis suppresses bone formation, osteoclast-associated pyroptotic signaling enhances bone resorption, and osteocyte pyroptosis disrupts mechanotransduction and microarchitectural integrity.",
+            "start": 818
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In the diabetic bone microenvironment, osteoclast-associated pyroptotic signaling is described as enhancing bone resorption.",
+        "uncertainties": [
+          "Review statement rather than primary experimental result.",
+          "The text names osteoclast-associated pyroptotic signaling, but does not define a specific molecular mediator."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone microenvironment",
+          "disease_setting": "diabetes-associated bone loss",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "114548"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "NLRP3 inflammasome",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "834"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "caspase-1",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 661,
+            "passage_index": 1,
+            "quote": "pyroptosis, a highly inflammatory form of programmed cell death, has emerged as a critical mechanistic link between diabetes and bone loss. Pyroptosis is driven by inflammasome activation, particularly the NOD-like receptor family pyrin domain-containing 3 (NLRP3) inflammasome, leading to caspase-1 activation",
+            "start": 351
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "caspase-1 activation",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The review states that pyroptosis is driven by NLRP3 inflammasome activation, which leads to caspase-1 activation.",
+        "uncertainties": [
+          "Review statement rather than primary experimental result.",
+          "The passage also mentions gasdermin-mediated pore formation and cytokine release, but the extracted claim is limited to the explicitly stated NLRP3-to-caspase-1 relationship."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        818,
+        1108
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        905,
+        982
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        351,
+        661
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        601,
+        772
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

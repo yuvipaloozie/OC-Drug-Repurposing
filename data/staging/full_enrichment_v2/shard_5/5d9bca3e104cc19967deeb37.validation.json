@@ -1,0 +1,198 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "mesenchymal stromal cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": "aged"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "15",
+              "16",
+              "17",
+              "21",
+              "24",
+              "25",
+              "27"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "CD45",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "differentiation potential",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 767,
+            "passage_index": 1,
+            "quote": "pharmacological inhibition of CD45-specific phosphatase activity in the aged MSCs restores their differentiation potential to young-like",
+            "start": 631
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "differentiation potential",
+          "intervention": "pharmacological inhibition of CD45-specific phosphatase activity",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Pharmacological inhibition of CD45-specific phosphatase activity in aged mesenchymal stromal cells restores differentiation potential to a young-like state.",
+        "uncertainties": [
+          "The inhibitor compound is not named in the abstract.",
+          "The claim is about MSC differentiation potential, not an osteoclast-specific assay."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "mesenchymal stromal cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": "aged"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "18"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "p38",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "19"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Src",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "20"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "GSK3beta",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1057,
+            "passage_index": 1,
+            "quote": "Investigation of the molecular mechanism involved in the process showed that several regulatory kinases like p38, p44/42, Src, and GSK3beta are in their dephosphorylated form in the aged MSCs, and importantly, this status gets reversed by the application of a CD45-specific PTP inhibitor.",
+            "start": 769
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "dephosphorylated status of regulatory kinases",
+          "intervention": "application of a CD45-specific PTP inhibitor",
+          "outcome_change": "other",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In aged mesenchymal stromal cells, several regulatory kinases are dephosphorylated, and applying a CD45-specific PTP inhibitor reverses this status.",
+        "uncertainties": [
+          "The exact phosphorylation direction after reversal is not specified in the text.",
+          "p44/42 is mentioned in the passage but is not fully represented by a provider annotation here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        631,
+        767
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        551,
+        634
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        769,
+        1057
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        642,
+        801
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

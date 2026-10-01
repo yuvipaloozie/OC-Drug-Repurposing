@@ -1,0 +1,179 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoclast-specific signaling context",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "20"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Sam68",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "OSF",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1542,
+            "passage_index": 1,
+            "quote": "The observed interaction between Sam68 and OSF complements",
+            "start": 1484
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "Sam68-OSF interaction",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Sam68 was reported to interact with OSF, and this interaction was described as observed in the study.",
+        "uncertainties": [
+          "The quote names the interaction but does not specify directionality or mechanism beyond binding/association.",
+          "OSF molecular form is not explicitly stated in the passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "hypothesis",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoclast-specific signaling context",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "25"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Sam68",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "osteoclast-specific signalling pathway",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1744,
+            "passage_index": 1,
+            "quote": "Thus, we propose, that Sam68 functions as a classical scaffold protein in this context, assembling components of an osteoclast-specific signalling pathway.",
+            "start": 1589
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "proposed scaffold role for Sam68",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The authors proposed that Sam68 functions as a scaffold protein assembling components of an osteoclast-specific signaling pathway.",
+        "uncertainties": [
+          "This is a proposed function, not a directly demonstrated causal mechanism.",
+          "The pathway is described generically and is not mapped to a specific named pathway."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1484,
+        1542
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1651,
+        1714
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1589,
+        1744
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1715,
+        1806
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

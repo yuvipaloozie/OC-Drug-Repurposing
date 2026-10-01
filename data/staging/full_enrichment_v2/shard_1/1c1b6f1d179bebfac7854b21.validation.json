@@ -1,0 +1,192 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "local",
+          "disease_setting": "periodontitis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "25",
+              "29"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "APC hydrogel",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "24",
+              "28"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "alveolar bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1060,
+            "passage_index": 1,
+            "quote": "periodontitis, local application of the hydrogel restored microbial homeostasis and reduced alveolar bone loss by approximately 60%.",
+            "start": 928
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "alveolar bone loss",
+          "intervention": "local application of the hydrogel",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Local application of the APC hydrogel in a ligation model of periodontitis reduced alveolar bone loss and restored microbial homeostasis.",
+        "uncertainties": [
+          "The passage combines microbial homeostasis restoration with bone-loss reduction; only the bone-loss outcome is encoded as the regulatory object.",
+          "Species and assay are not stated in the supplied text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "OC precursors",
+          "compartment": null,
+          "disease_setting": "periodontitis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "APC metabolites",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "30"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "cGMP-PKG signaling pathway",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "OC precursors",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1300,
+            "passage_index": 1,
+            "quote": "Mechanistic investigations revealed that APC metabolites activated the cyclic guanosine monophosphate-protein kinase G (cGMP-PKG) signaling pathway in OC precursors, thereby blocking their differentiation into mature, bone-resorbing cells.",
+            "start": 1061
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "cGMP-PKG signaling pathway activation",
+          "intervention": "APC metabolites",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "APC metabolites activated cGMP-PKG signaling in osteoclast precursors, and this was described as blocking their differentiation into mature, bone-resorbing cells.",
+        "uncertainties": [
+          "The text links pathway activation to blocked differentiation, but the causal chain is stated rather than directly tested in the provided excerpt.",
+          "OC precursors are not mapped to a specific molecular form beyond the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        928,
+        1060
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1048,
+        1178
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1061,
+        1300
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1179,
+        1301
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

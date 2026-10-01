@@ -1,0 +1,201 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporotic",
+          "species": "Zebrafish",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "43"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "DEP",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 869,
+            "passage_index": 1,
+            "quote": "DEP exposure in osteoporotic Zebrafish consistently impaired bone regeneration and fracture healing",
+            "start": 770
+          },
+          {
+            "end": 991,
+            "passage_index": 1,
+            "quote": "as evidenced by diminished calcium deposition, reduced alkaline phosphatase activity, and increased osteoclast activity.",
+            "start": 871
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast activity",
+          "intervention": "DEP exposure",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In osteoporotic zebrafish, DEP exposure impaired bone regeneration and fracture healing and was associated with increased osteoclast activity.",
+        "uncertainties": [
+          "The passage bundles several outcomes together; the causal contribution to osteoclast activity is not isolated from the broader bone-regeneration phenotype.",
+          "Direction is inferred from the reported increase in osteoclast activity rather than directly tested as a molecular mechanism."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporotic",
+          "species": "Zebrafish",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "47"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "DEP",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "44",
+              "45"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "aryl hydrocarbon receptor",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1149,
+            "passage_index": 1,
+            "quote": "Mechanistically, DEP was shown to act through the aryl hydrocarbon receptor (AhR) pathway, disrupting the balance between osteoblast and osteoclast activity.",
+            "start": 992
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "AhR pathway involvement",
+          "intervention": "DEP exposure",
+          "outcome_change": "other",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The passage states that DEP acts through the aryl hydrocarbon receptor (AhR) pathway and disrupts the balance between osteoblast and osteoclast activity.",
+        "uncertainties": [
+          "The text does not specify whether DEP activates or inhibits AhR; only pathway involvement is stated.",
+          "The reported disruption of osteoblast/osteoclast balance is not separated into a specific directional effect on each cell type."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        770,
+        869
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        882,
+        975
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        871,
+        991
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        975,
+        1047
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        992,
+        1149
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1061,
+        1237
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

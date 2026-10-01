@@ -1,0 +1,233 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "postmenopausal osteoporosis",
+          "species": "mouse",
+          "stage": "ovariectomized"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "57",
+              "58"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "AA/PC",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone mineral density",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "68"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "OVX mice",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 847,
+            "passage_index": 1,
+            "quote": "AA/PC increased bone mineral density in OVX mice",
+            "start": 799
+          }
+        ],
+        "experiment": {
+          "assay": "Micron-scale computed tomography analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone mineral density",
+          "intervention": "AA/PC",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In ovariectomized mice, the AA/PC herb pair increased bone mineral density compared with the OVX model context described in the abstract.",
+        "uncertainties": [
+          "The abstract does not state whether the effect was compared statistically against AA or PC alone in this sentence.",
+          "AA/PC is a herb pair; the exact active molecular constituents responsible for the phenotype are not isolated in this claim."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "postmenopausal osteoporosis",
+          "species": "mouse",
+          "stage": "ovariectomized"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "57",
+              "58",
+              "61",
+              "62",
+              "65",
+              "66",
+              "69",
+              "70",
+              "72",
+              "73",
+              "74",
+              "75",
+              "82",
+              "83",
+              "84",
+              "85",
+              "91",
+              "92",
+              "97",
+              "98"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "AA/PC",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "nuclear factor of activated T-cells 1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "81",
+              "86",
+              "96"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "ferroptosis pathways",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 981,
+            "passage_index": 1,
+            "quote": "The effects of AA/PC were better than AA or PC alone on inhibiting the bone resorption marker nuclear factor of activated T-cells 1.",
+            "start": 849
+          },
+          {
+            "end": 1549,
+            "passage_index": 1,
+            "quote": "Compared with AA or PC alone, the AA/PC herb pair exerted better effects on regulating crucial ferroptosis pathways, including the system xc-/glutathione/glutathione peroxidase 4, transferrin receptor/ferritin, and acyl-CoA synthetase long chain family member 4/polyunsaturated fatty acids signaling pathways.",
+            "start": 1386
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption marker nuclear factor of activated T-cells 1",
+          "intervention": "AA/PC",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Compared with AA or PC alone, the AA/PC herb pair more strongly inhibited the bone resorption marker nuclear factor of activated T-cells 1 and exerted better effects on ferroptosis-related pathways.",
+        "uncertainties": [
+          "The sentence reports a marker and does not specify whether the effect is on gene expression, protein abundance, or activity.",
+          "The ferroptosis pathway statement is comparative and broad; it does not specify a single directly measured molecular target in this excerpt."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        799,
+        847
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        955,
+        1004
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        849,
+        981
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1006,
+        1090
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

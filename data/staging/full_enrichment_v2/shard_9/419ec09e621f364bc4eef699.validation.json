@@ -1,0 +1,211 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "micro-mass chondrocyte cultures",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "64",
+              "66"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "type 2 collagen",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "65"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Sox9",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "type 10 collagen-expressing hypertrophic chondrocytes",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1289,
+            "passage_index": 1,
+            "quote": "Treatment of micro-mass chondrocyte cultures with RANKL did not affect expression levels of type 2 collagen and Sox9, markers for proliferative chondrocytes, but RANKL reduced the number of type 10 collagen-expressing hypertrophic chondrocytes.",
+            "start": 1045
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "number of type 10 collagen-expressing hypertrophic chondrocytes",
+          "intervention": "Treatment of micro-mass chondrocyte cultures with RANKL",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In micro-mass chondrocyte cultures, RANKL treatment did not change proliferative chondrocyte markers but decreased hypertrophic chondrocytes.",
+        "uncertainties": [
+          "The passage states no effect on type 2 collagen and Sox9, but the main claimed edge here focuses on the decreased hypertrophic chondrocyte population.",
+          "RANKL is annotated as a gene in the provider data, but the text only supports the surface form RANKL in a treatment context."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "micro-mass chondrocyte cultures",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "64",
+              "66"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "type 2 collagen",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "65"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Sox9",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1201,
+            "passage_index": 1,
+            "quote": "Treatment of micro-mass chondrocyte cultures with RANKL did not affect expression levels of type 2 collagen and Sox9, markers for proliferative chondrocytes",
+            "start": 1045
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "expression levels of type 2 collagen and Sox9",
+          "intervention": "Treatment of micro-mass chondrocyte cultures with RANKL",
+          "outcome_change": "no_detected_change",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "RANKL treatment had no detected effect on type 2 collagen and Sox9 expression in micro-mass chondrocyte cultures.",
+        "uncertainties": [
+          "The sentence groups type 2 collagen and Sox9 together; the text does not state separate outcomes for each marker individually."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1045,
+        1289
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1185,
+        1361
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1045,
+        1201
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1185,
+        1295
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

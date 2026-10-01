@@ -1,0 +1,111 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoblasts",
+          "compartment": "bone marrow microenvironment",
+          "disease_setting": "brucellosis",
+          "species": "Brucella abortus",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "the infection",
+            "taxon": "Brucella abortus"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Receptor Activator of Nuclear Factor Kappa-B Ligand (RANKL)",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "osteoblasts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 853,
+            "passage_index": 1,
+            "quote": "However, the infection upregulates Receptor Activator of Nuclear Factor Kappa-B Ligand (RANKL) expression in osteoblasts, which may contribute to osteoclast activation and bone resorption.",
+            "start": 665
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "RANKL expression",
+          "intervention": "Brucella abortus infection",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Brucella abortus infection upregulates RANKL expression in osteoblasts; the authors note this may contribute to osteoclast activation and bone resorption.",
+        "uncertainties": [
+          "The text links increased RANKL to osteoclast activation with 'may contribute', so the osteoclast effect is speculative rather than directly demonstrated.",
+          "The passage does not specify whether RANKL change is at the RNA or protein level.",
+          "The exact biological form of 'the infection' is treated as the Brucella abortus infection context, not a purified factor."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        665,
+        853
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        662,
+        851
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

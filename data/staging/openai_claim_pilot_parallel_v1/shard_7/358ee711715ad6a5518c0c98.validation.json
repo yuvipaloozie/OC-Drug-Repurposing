@@ -1,0 +1,114 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone tissue",
+          "disease_setting": "osteoradionecrosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "radiation therapy",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "osteoclasts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "14",
+              "15",
+              "16",
+              "17",
+              "18",
+              "19",
+              "23",
+              "24",
+              "25"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "ORN",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 513,
+            "passage_index": 1,
+            "quote": "radiation therapy generally inhibits the function of most cells in bone tissue, its specific activation of osteoclasts is a key feature of ORN",
+            "start": 371
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The review states that radiation therapy specifically activates osteoclasts and that this is a key feature of osteoradionecrosis.",
+        "uncertainties": [
+          "This is a review statement rather than a primary experiment.",
+          "The text does not specify the molecular mechanism by which radiation therapy activates osteoclasts."
+        ]
+      },
+      "errors": [
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        371,
+        513
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        119,
+        181
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

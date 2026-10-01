@@ -1,0 +1,200 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "macrophages",
+          "compartment": null,
+          "disease_setting": "periodontitis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "30"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "RSV@Lipo@PMS composite system",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "37",
+              "38"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "lipopolysaccharide-induced inflammation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "macrophages",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1082,
+            "passage_index": 1,
+            "quote": "effectively suppresses lipopolysaccharide-induced inflammation in macrophages",
+            "start": 1005
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "lipopolysaccharide-induced inflammation",
+          "intervention": "RSV@Lipo@PMS",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The RSV@Lipo@PMS composite system suppresses lipopolysaccharide-induced inflammation in macrophages.",
+        "uncertainties": [
+          "Exact offset span is best-effort and should be validator-checked against the passage text.",
+          "The passage does not specify whether the macrophages are from a particular species or line."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "periodontitis",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "30"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "RSV@Lipo@PMS composite system",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "alveolar bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "functional tissue regeneration",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1287,
+            "passage_index": 1,
+            "quote": "In an experimental rat model of periodontitis, local administration significantly inhibits alveolar bone resorption",
+            "start": 1172
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "alveolar bone resorption",
+          "intervention": "local administration",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In a rat model of periodontitis, local administration of the composite system inhibits alveolar bone resorption and promotes functional tissue regeneration.",
+        "uncertainties": [
+          "Exact offset span is best-effort and should be validator-checked against the passage text.",
+          "The sentence also mentions promotion of functional tissue regeneration, but the provided evidence span only supports inhibition of alveolar bone resorption."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1005,
+        1082
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1008,
+        1084
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1172,
+        1287
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1268,
+        1367
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

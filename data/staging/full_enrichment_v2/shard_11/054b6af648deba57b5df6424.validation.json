@@ -1,0 +1,206 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 and MC3T3-E1 cells",
+          "compartment": null,
+          "disease_setting": "high glucose environment",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "CYM",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "OCs differentiation and bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 793,
+            "passage_index": 1,
+            "quote": "CYM had an inhibitory effect on OCs differentiation and bone resorption,",
+            "start": 721
+          }
+        ],
+        "experiment": {
+          "assay": "differentiation and bone resorption of OCs",
+          "dose": null,
+          "duration": null,
+          "endpoint": "OCs differentiation and bone resorption",
+          "intervention": "CYM",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "CYM inhibited osteoclast differentiation and bone resorption.",
+        "uncertainties": [
+          "The abbreviation CYM is not expanded in the supplied text.",
+          "The passage reports combined effects on differentiation and bone resorption rather than separating them into distinct endpoints."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 and MC3T3-E1 cells",
+          "compartment": null,
+          "disease_setting": "high glucose environment",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "CYM",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "RNA",
+            "surface": "mRNAs expression of osteoclast-associated genes",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "23",
+              "24"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "RANKL/RANK/TRAF6 pathway",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 849,
+            "passage_index": 1,
+            "quote": "reduced mRNAs expression of osteoclast-associated genes",
+            "start": 794
+          },
+          {
+            "end": 893,
+            "passage_index": 1,
+            "quote": "downregulated RANKL/RANK/TRAF6 pathway",
+            "start": 855
+          }
+        ],
+        "experiment": {
+          "assay": "mRNAs of osteoclast-related genes",
+          "dose": null,
+          "duration": null,
+          "endpoint": "mRNAs expression of osteoclast-associated genes",
+          "intervention": "CYM",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "CYM reduced osteoclast-associated gene mRNA expression and downregulated the RANKL/RANK/TRAF6 pathway.",
+        "uncertainties": [
+          "The text links the pathway to osteoclast differentiation, but the causal direction within the pathway itself is not established beyond downregulation.",
+          "CYM is not expanded in the supplied text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        721,
+        793
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        723,
+        796
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        794,
+        849
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        798,
+        853
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        855,
+        893
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        856,
+        894
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

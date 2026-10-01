@@ -1,0 +1,107 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteonecrosis of the femoral head",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "39",
+              "40",
+              "42",
+              "43",
+              "44"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Methylprednisolone sodium succinate",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast number",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 808,
+            "passage_index": 1,
+            "quote": "Methylprednisolone sodium succinate (MPSS) or normal saline was administrated at a dose of 100 mg/kg/day from day 7 to 11.",
+            "start": 686
+          },
+          {
+            "end": 1282,
+            "passage_index": 1,
+            "quote": "MPSS-treated group. The newly formed bone volume and the osteoclast number were significantly smaller",
+            "start": 1194
+          }
+        ],
+        "experiment": {
+          "assay": "histology",
+          "dose": "100 mg/kg/day",
+          "duration": "from day 7 to 11",
+          "endpoint": "osteoclast number",
+          "intervention": "Methylprednisolone sodium succinate (MPSS)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In aged female rats with surgically induced osteonecrosis, MPSS treatment was associated with a significantly smaller osteoclast number.",
+        "uncertainties": [
+          "The text reports osteoclast number rather than a direct molecular mechanism.",
+          "The exact causal chain to osteoclast precursor recruitment is stated as a conclusion, not directly demonstrated in the quoted result."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        686,
+        808
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        789,
+        914
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

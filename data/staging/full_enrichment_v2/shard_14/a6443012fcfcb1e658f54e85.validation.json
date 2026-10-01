@@ -1,0 +1,212 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "plasma",
+          "disease_setting": "osteoporosis",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "94"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "alendronate",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "plasma metabolites",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2121,
+            "passage_index": 1,
+            "quote": "alendronate regulated several key plasma metabolites, including certain amino acids, lipids, and glucose",
+            "start": 2017
+          }
+        ],
+        "experiment": {
+          "assay": "metabolomic analyses using the commercially available Biocrates p180 metabolomics kit",
+          "dose": null,
+          "duration": "8 weeks",
+          "endpoint": "plasma metabolomic profiles",
+          "intervention": "ovariectomized rats dosed with alendronate",
+          "outcome_change": "other",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In ovariectomized rat osteoporosis model, alendronate was reported to regulate several plasma metabolites, including amino acids, lipids, and glucose.",
+        "uncertainties": [
+          "The passage does not specify which individual metabolites were increased or decreased.",
+          "The effect sign is not stated, only that metabolites were regulated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "plasma",
+          "disease_setting": "osteoporosis",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "98"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "proline",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "99"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "trans-hydroxyproline",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "100"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "histamine",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "101"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "methionine",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "percent bone volume",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2477,
+            "passage_index": 1,
+            "quote": "There was a correlation between four metabolites (proline, trans-hydroxyproline, histamine, and methionine) and micro-CT measured percent bone volume",
+            "start": 2328
+          }
+        ],
+        "experiment": {
+          "assay": "micro-Computed Tomography (muCT) imaging and plasma metabolomics analysis",
+          "dose": null,
+          "duration": "8 weeks",
+          "endpoint": "correlation between plasma metabolites and micro-CT measured percent bone volume",
+          "intervention": "ovariectomy and drug treatments",
+          "outcome_change": "other",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e5",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In the ovariectomized rat study, four plasma metabolites correlated with micro-CT measured percent bone volume.",
+        "uncertainties": [
+          "The passage states correlation, not causation.",
+          "The relationship direction for each metabolite is not specified."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        2017,
+        2121
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2117,
+        2231
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        2328,
+        2477
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2445,
+        2610
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

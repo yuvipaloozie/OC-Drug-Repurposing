@@ -1,0 +1,227 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "type 2 diabetes",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "16",
+              "19"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "GLP-1 RAs",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone health",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone mass",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "microarchitecture",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 749,
+            "passage_index": 1,
+            "quote": "Preclinical studies suggest potential bone-protective effects, including increased bone mass, improved microarchitecture, and reduced bone resorption.",
+            "start": 599
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone health",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The review states that preclinical studies suggest GLP-1 receptor agonists may have bone-protective effects, including increased bone mass, improved microarchitecture, and reduced bone resorption.",
+        "uncertainties": [
+          "This is a review-level summary of preclinical studies, not a single primary experiment.",
+          "The passage does not specify the exact GLP-1RA compound(s) or whether the effect is direct.",
+          "The quoted text groups multiple bone-related outcomes; the specific regulatory relation to each phenotype is not separately asserted."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "type 2 diabetes",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "16",
+              "19"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "GLP-1 RA therapy",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "13",
+              "18",
+              "20"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "fracture risk",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "14",
+              "15",
+              "21"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "T2D",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1090,
+            "passage_index": 1,
+            "quote": "However, evidence from human studies has been inconsistent. While some findings indicate a possible reduction in fracture risk with long-term GLP-1 RA therapy, further research is needed to clarify their role in bone metabolism and fracture prevention among people with T2D, particularly within the context of cardiovascular outcome trials.",
+            "start": 750
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": "long-term",
+          "endpoint": "fracture risk",
+          "intervention": "long-term GLP-1 RA therapy",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The review reports that human evidence has been inconsistent, while some findings indicate a possible reduction in fracture risk with long-term GLP-1 RA therapy.",
+        "uncertainties": [
+          "The passage says 'possible reduction' and 'some findings indicate', so this is not a definitive causal result.",
+          "The review states human evidence is inconsistent; the direction may not hold across all studies.",
+          "The exact GLP-1RA agent and trial context are not specified in the excerpt."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        599,
+        749
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        620,
+        800
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        750,
+        1090
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        800,
+        1169
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

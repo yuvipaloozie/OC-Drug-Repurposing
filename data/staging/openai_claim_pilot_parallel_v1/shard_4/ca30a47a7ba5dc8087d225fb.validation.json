@@ -1,0 +1,207 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW 264.7 cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "before terminal differentiation into osteoclasts"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Syncytia",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "clusters of zipper-like structures",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "nuclei",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "podosome clusters",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1155,
+            "passage_index": 1,
+            "quote": "Syncytia containing clusters of zipper-like structures had more nuclei than those with podosome clusters.",
+            "start": 1050
+          }
+        ],
+        "experiment": {
+          "assay": "monitor actin dynamics during osteoclast differentiation",
+          "dose": null,
+          "duration": null,
+          "endpoint": "number of nuclei per syncytium",
+          "intervention": "EGFP-actin into RAW 264.7 cells",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "claim1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e2"
+        },
+        "summary": "Syncytia containing clusters of zipper-like structures had more nuclei than syncytia with podosome clusters.",
+        "uncertainties": [
+          "The comparison is correlational within observed syncytia and does not establish causality."
+        ]
+      },
+      "errors": [
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "hypothesis",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "zipper-like actin superstructures",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "cell-cell interaction",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "efficient multinucleation of osteoclasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1611,
+            "passage_index": 1,
+            "quote": "Therefore, we propose that the zipper-like actin superstructures might be involved in cell-cell interaction",
+            "start": 1504
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "claim2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The authors propose that zipper-like actin superstructures might be involved in cell-cell interaction to achieve efficient multinucleation of osteoclasts.",
+        "uncertainties": [
+          "This is a proposal/hypothesis rather than an experimentally demonstrated causal effect.",
+          "The quoted span is truncated; the full proposed relation extends beyond the cited text to multinucleation of osteoclasts."
+        ]
+      },
+      "errors": [
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "claim1",
+      "corrected_offsets": [
+        1050,
+        1155
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1115,
+        1217
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "claim2",
+      "corrected_offsets": [
+        1504,
+        1611
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1742,
+        1840
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

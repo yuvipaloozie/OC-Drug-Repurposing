@@ -1,0 +1,110 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "21",
+              "24",
+              "27",
+              "30",
+              "31",
+              "32"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "RNA",
+            "surface": "Dancr",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activity",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "26"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone deterioration",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 551,
+            "passage_index": 1,
+            "quote": "Dancr Knockout mice display significant trabecular bone deterioration and enhanced osteoclast activity, but minimal alteration of bone formation.",
+            "start": 406
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast activity",
+          "intervention": "Global or osteoclast-specific Dancr Knockout",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Global or osteoclast-specific Dancr knockout mice showed increased osteoclast activity and trabecular bone deterioration.",
+        "uncertainties": [
+          "The quoted sentence combines osteoclast activity and trabecular bone deterioration; the claim focuses on osteoclast activity as the primary endpoint.",
+          "Normal Dancr function is inferred from a loss-of-function phenotype, not directly demonstrated as activation or inhibition."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        406,
+        551
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        511,
+        655
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

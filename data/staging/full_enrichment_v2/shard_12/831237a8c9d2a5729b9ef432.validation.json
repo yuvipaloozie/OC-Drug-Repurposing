@@ -1,0 +1,184 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "BMSCs",
+          "compartment": null,
+          "disease_setting": "senile osteoporosis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "69367"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Grx2",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "BMSC senescence",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1711,
+            "passage_index": 1,
+            "quote": "Grx2 deficiency, in both male and ovariectomized female mice, accelerates bone loss, inhibits osteoblast formation without altering osteoclast function, and exacerbates BMSC senescence.",
+            "start": 1526
+          }
+        ],
+        "experiment": {
+          "assay": "SA-beta-Gal and WB",
+          "dose": null,
+          "duration": null,
+          "endpoint": "BMSC senescence",
+          "intervention": "Grx2 deficiency",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Grx2 deficiency in mice is reported to accelerate bone loss and exacerbate BMSC senescence; the text also says osteoblast formation is inhibited.",
+        "uncertainties": [
+          "The quoted sentence bundles several outcomes; the regulatory link here is mapped specifically to BMSC senescence.",
+          "The text does not separate whether the senescence increase is direct or mediated by other changes."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "no_effect",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "senile osteoporosis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "69367"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Grx2",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast function",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1677,
+            "passage_index": 1,
+            "quote": "without altering osteoclast function",
+            "start": 1641
+          }
+        ],
+        "experiment": {
+          "assay": "not_stated",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast function",
+          "intervention": "Grx2 deficiency",
+          "outcome_change": "no_detected_change",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The passage states that Grx2 deficiency does not alter osteoclast function.",
+        "uncertainties": [
+          "The statement is a negated relation and does not establish any positive regulatory role in osteoclasts."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1526,
+        1711
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1652,
+        1740
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1641,
+        1677
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1708,
+        1738
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

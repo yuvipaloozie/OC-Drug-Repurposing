@@ -1,0 +1,186 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "inflammation-associated skeletal phenotype",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "lymphocyte deletion",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "skeletal phenotype",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 909,
+            "passage_index": 1,
+            "quote": "deletion entirely rescued the skeletal phenotype in Rag2 -/- /Il2rg -/- /SHIP1 -/- mice",
+            "start": 822
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "skeletal phenotype",
+          "intervention": "lymphocyte deletion",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In Rag2-/- /Il2rg-/- /SHIP1-/- mice, lymphocyte deletion fully rescued the skeletal phenotype.",
+        "uncertainties": [
+          "The exact cellular target of the lymphocyte deletion is not specified as a molecular entity.",
+          "The quote supports rescue of phenotype, not a specific osteoclast mechanism."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "SHIP1 deficiency",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "45",
+              "46",
+              "49",
+              "52",
+              "55",
+              "59",
+              "62",
+              "65",
+              "66",
+              "68"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "SHIP1",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "osteoclasts",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1192,
+            "passage_index": 1,
+            "quote": "SHIP1 -/- osteoclasts, however, displayed an intermediate transcriptomic signature between control and Rag2 +/+ /Il2rg +/+ /SHIP1 -/- osteoclasts while exhibiting aberrant in vitro development and functions similar to Rag2 +/+ /Il2rg +/+ /SHIP1 -/- osteoclasts",
+            "start": 932
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "transcriptomic signature; in vitro development and functions",
+          "intervention": "SHIP1-/-",
+          "outcome_change": "other",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "SHIP1-deficient osteoclasts showed an intermediate transcriptomic signature and aberrant in vitro development/functions relative to control and SHIP1-deficient comparison groups.",
+        "uncertainties": [
+          "The passage describes comparative transcriptomic and functional differences, but not a single quantified direction for each endpoint.",
+          "The exact meaning of 'similar to' the comparison group is context-dependent and not mapped to a specific causal sign."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        822,
+        909
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1121,
+        1176
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        932,
+        1192
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1180,
+        1274
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

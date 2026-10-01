@@ -1,0 +1,431 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "70",
+              "75",
+              "81",
+              "87",
+              "91",
+              "94",
+              "101",
+              "107",
+              "109"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "rLGR4-ECD",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "5",
+              "63",
+              "71",
+              "77",
+              "80",
+              "92",
+              "110"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "e2",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "78",
+              "93"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RSPO4",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1035,
+            "passage_index": 1,
+            "quote": "RANKL and RSPO4 was assessed by co-immunoprecipitation",
+            "start": 981
+          },
+          {
+            "end": 1839,
+            "passage_index": 1,
+            "quote": "bound specifically to RANKL and RSPO4",
+            "start": 1802
+          }
+        ],
+        "experiment": {
+          "assay": "co-IP",
+          "dose": null,
+          "duration": null,
+          "endpoint": "binding affinity to RANKL and RSPO4",
+          "intervention": "co-immunoprecipitation (co-IP)",
+          "outcome_change": "not_stated",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "binding",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Recombinant LGR4 extracellular domain bound specifically to RANKL and RSPO4 in co-immunoprecipitation assays.",
+        "uncertainties": [
+          "The text states binding to both RANKL and RSPO4, but the exact subject-object pairing is simplified into a single undirected association for graph compatibility.",
+          "Species for the binding assay is not explicitly stated in the relevant sentence."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow-derived monocytes",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "70",
+              "75",
+              "81",
+              "87",
+              "91",
+              "94",
+              "101",
+              "107",
+              "109"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "rLGR4-ECD",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast formation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1148,
+            "passage_index": 1,
+            "quote": "In vitro, bone marrow-derived monocytes were treated with RANKL and varying concentrations of rLGR4-ECD",
+            "start": 1045
+          },
+          {
+            "end": 1246,
+            "passage_index": 1,
+            "quote": "osteoclast formation was evaluated by TRAP staining, qPCR, and Western blotting",
+            "start": 1167
+          },
+          {
+            "end": 1924,
+            "passage_index": 1,
+            "quote": "rLGR4-ECD dose-dependently inhibited osteoclast formation",
+            "start": 1867
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP staining, qPCR, and Western blotting",
+          "dose": "0-80 ng/mL",
+          "duration": null,
+          "endpoint": "osteoclast formation",
+          "intervention": "rLGR4-ECD treatment with RANKL",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "rLGR4-ECD dose-dependently inhibited osteoclast formation in vitro.",
+        "uncertainties": [
+          "The passage does not explicitly state whether the inhibitory effect is direct or mediated through RANKL binding.",
+          "The exact species for the monocytes is not stated in the abstract."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone",
+          "disease_setting": "breast cancer bone metastasis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "70",
+              "75",
+              "81",
+              "87",
+              "91",
+              "94",
+              "101",
+              "107",
+              "109"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "rLGR4-ECD",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "metastatic burden",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast surface per bone surface",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1409,
+            "passage_index": 1,
+            "quote": "For in vivo evaluation, a breast cancer bone metastasis model was established by intracardiac injection of 4 T1-Luc cells into BALB/c mice",
+            "start": 1271
+          },
+          {
+            "end": 1488,
+            "passage_index": 1,
+            "quote": "Mice were treated daily with 1 mg/kg rLGR4-ECD or PBS via tail vein injection",
+            "start": 1411
+          },
+          {
+            "end": 1598,
+            "passage_index": 1,
+            "quote": "Metastatic burden was monitored by bioluminescence imaging, osteoclast activity by TRAP staining of calvaria",
+            "start": 1490
+          },
+          {
+            "end": 2304,
+            "passage_index": 1,
+            "quote": "In vivo, rLGR4-ECD treatment reduced metastatic burden by 67.3%",
+            "start": 2241
+          }
+        ],
+        "experiment": {
+          "assay": "bioluminescence imaging and TRAP staining of calvaria",
+          "dose": "1 mg/kg",
+          "duration": "daily",
+          "endpoint": "metastatic burden and osteoclast surface per bone surface",
+          "intervention": "rLGR4-ECD or PBS via tail vein injection",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In mice with breast cancer bone metastasis, daily rLGR4-ECD treatment reduced metastatic burden and decreased osteoclast surface per bone surface.",
+        "uncertainties": [
+          "The quoted span for metastatic burden reduction is truncated relative to the full sentence.",
+          "The model is described as a preclinical breast cancer bone metastasis model; direct effects on lung metastasis were not extracted."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        981,
+        1035
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1094,
+        1136
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1802,
+        1839
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1940,
+        1967
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1045,
+        1148
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1195,
+        1263
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1167,
+        1246
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1265,
+        1320
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1867,
+        1924
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2034,
+        2093
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1271,
+        1409
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1458,
+        1579
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1411,
+        1488
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1581,
+        1607
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1490,
+        1598
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1620,
+        1707
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        2241,
+        2304
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2088,
+        2176
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

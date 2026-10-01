@@ -1,0 +1,386 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "postmenopausal osteoporosis",
+          "species": null,
+          "stage": "postmenopausal osteoporosis"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "compound",
+            "surface": "estrogen levels",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "protein",
+            "surface": "Sirtuins (SIRTs)",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 331,
+            "passage_index": 1,
+            "quote": "Estrogen levels are the core factor influencing postmenopausal osteoporosis (PMOP). Estrogen can affect the progression of PMOP by regulating bone metabolism, influencing major signaling pathways related to bone metabolism, and modulating immune responses. When estrogen levels decline, the activity of Sirtuins (SIRTs) is reduced.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "Sirtuins activity",
+          "intervention": null,
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Declining estrogen levels are stated to reduce Sirtuin activity in postmenopausal osteoporosis.",
+        "uncertainties": [
+          "The sentence is a review statement rather than a primary experiment.",
+          "'Estrogen levels' is a broad hormonal state rather than a specific molecular entity."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "postmenopausal osteoporosis",
+          "species": null,
+          "stage": "postmenopausal osteoporosis"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "24",
+              "25",
+              "26"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Sirtuins (SIRTs)",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "oxidative stress (OS)",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "28",
+              "29",
+              "31",
+              "32"
+            ],
+            "existing_node_id": "CHEBI:26523",
+            "key": "e4",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "compound",
+            "surface": "ROS",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1075,
+            "passage_index": 1,
+            "quote": "The reduced activity of SIRTs leads to intensified OS and the excessive accumulation of ROS. In return, ROS suppresses the AMPK signaling pathway and the synthesis of NAD+, which consequently diminishes the function of SIRTs.",
+            "start": 850
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "oxidative stress / ROS accumulation",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e2"
+        },
+        "summary": "The review states that reduced Sirtuin activity leads to intensified oxidative stress and excessive ROS accumulation in PMOP.",
+        "uncertainties": [
+          "The source is a review summary, not an experiment.",
+          "The quote links reduced SIRT activity to ROS/OS changes but does not separate direct from indirect effects."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "postmenopausal osteoporosis",
+          "species": null,
+          "stage": "postmenopausal osteoporosis"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "28",
+              "29",
+              "31",
+              "32"
+            ],
+            "existing_node_id": "CHEBI:26523",
+            "key": "e4",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "compound",
+            "surface": "ROS",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "33"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "pathway",
+            "surface": "AMPK signaling pathway",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 995,
+            "passage_index": 1,
+            "quote": "In return, ROS suppresses the AMPK signaling pathway",
+            "start": 943
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "AMPK signaling pathway",
+          "intervention": null,
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e5",
+          "sign": "negative",
+          "subject": "e4"
+        },
+        "summary": "ROS is stated to suppress AMPK signaling pathway activity in PMOP.",
+        "uncertainties": [
+          "The text is a review statement.",
+          "The pathway effect is described at a high level without mechanistic detail."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "postmenopausal osteoporosis",
+          "species": null,
+          "stage": "postmenopausal osteoporosis"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "28",
+              "29",
+              "31",
+              "32"
+            ],
+            "existing_node_id": "CHEBI:26523",
+            "key": "e4",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "compound",
+            "surface": "ROS",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "34"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "NAD+",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "24",
+              "25",
+              "26"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Sirtuins (SIRTs)",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1075,
+            "passage_index": 1,
+            "quote": "and the synthesis of NAD+, which consequently diminishes the function of SIRTs.",
+            "start": 996
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "NAD+ synthesis / SIRT function",
+          "intervention": null,
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c4",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e6",
+          "sign": "negative",
+          "subject": "e4"
+        },
+        "summary": "ROS is stated to suppress NAD+ synthesis, which in turn diminishes Sirtuin function.",
+        "uncertainties": [
+          "The quote fragment is part of a longer causal chain and does not fully isolate the antecedent in the cited span.",
+          "NAD+ is described as a synthesis target, but no biochemical reaction is specified."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        331
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        127
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        850,
+        1075
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        726,
+        855
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        943,
+        995
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        772,
+        818
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c4",
+      "corrected_offsets": [
+        996,
+        1075
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        818,
+        855
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

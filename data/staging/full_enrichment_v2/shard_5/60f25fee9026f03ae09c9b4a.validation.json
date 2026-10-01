@@ -1,0 +1,324 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "osteoclast differentiation"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "57721"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "METTL14",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "4772"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:NFATC1",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "NFATc1",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast-mediated bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 695,
+            "passage_index": 1,
+            "quote": "METTL14 controls osteoclast-mediated bone resorption by means of the methylation (4249 A)",
+            "start": 607
+          },
+          {
+            "end": 774,
+            "passage_index": 1,
+            "quote": "of the NFATc1 gene during osteoclast differentiation.",
+            "start": 696
+          }
+        ],
+        "experiment": {
+          "assay": "meRIP sequencing; mRNA sequencing; meRIP; luciferase reporter assays; CRISPR/Cas9 conditional knockout mice",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast-mediated bone resorption; NFATc1 methylation",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "METTL14 is reported to control osteoclast-mediated bone resorption by methylating NFATc1 during osteoclast differentiation.",
+        "uncertainties": [
+          "The text states a control/mediation relationship but does not specify the exact molecular mechanism beyond methylation.",
+          "Existing-node mapping for NFATc1 is uncertain because the provider suggestion is unverified and may not match the text's molecular form."
+        ]
+      },
+      "errors": [
+        "invented annotation ID",
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "Exon junction complexes",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "4772"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:NFATC1",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "NFATc1",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "MESH:C005955"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "m6A methylation sites",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e7",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone mass",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 896,
+            "passage_index": 1,
+            "quote": "Exon junction complexes (EJCs) selectively protect the m6A methylation sites of the NFATc1 gene. When the methylation sites are located within short exon fragments (50-200 nt), EJCs prevent their hypermethylation and degradation through the \"shield effect\";",
+            "start": 639
+          },
+          {
+            "end": 1470,
+            "passage_index": 1,
+            "quote": "EJCs act as \"shields\" to regulate the m6A region selectivity of the NFATc1 gene, thereby determining the characteristics of m6A distribution in the gene. Importantly, EJCs can raise the level of m6A methylation of NFATc1 and degrade its mRNA, thereby inhibiting osteoclast differentiation and preserving bone mass.",
+            "start": 1156
+          }
+        ],
+        "experiment": {
+          "assay": "meRIP sequencing; mRNA sequencing; meRIP; luciferase reporter assays; CRISPR/Cas9 conditional knockout mice",
+          "dose": null,
+          "duration": null,
+          "endpoint": "NFATc1 m6A distribution; mRNA degradation; osteoclast differentiation; bone mass",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "binding",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e5"
+        },
+        "summary": "Exon junction complexes are reported to protect NFATc1 m6A sites from hypermethylation and degradation, and this is linked to inhibition of osteoclast differentiation and preservation of bone mass.",
+        "uncertainties": [
+          "The passage combines a mechanistic shielding description with downstream phenotypic conclusions; the exact causal chain and whether the EJC effect is direct are not fully specified.",
+          "The quote refers to m6A sites on NFATc1, but the molecular form of m6A is represented as a compound because no dedicated reaction is stated."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "51441"
+            ],
+            "existing_node_id": null,
+            "key": "e8",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "YTHDF2",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "4772"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:NFATC1",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "NFATc1",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1277,
+            "passage_index": 1,
+            "quote": "YTHDF2 induced the degradation of hypermethylation NFATc1 transcripts without site restriction.",
+            "start": 1184
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "NFATc1 transcript degradation",
+          "intervention": null,
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e8"
+        },
+        "summary": "YTHDF2 is reported to induce degradation of hypermethylated NFATc1 transcripts without site restriction.",
+        "uncertainties": [
+          "The text states degradation of transcripts, but does not specify the assay or whether the effect is direct."
+        ]
+      },
+      "errors": [
+        "invented annotation ID",
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        639,
+        896
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        779,
+        989
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1156,
+        1470
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1370,
+        1578
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,201 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone marrow",
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "13",
+              "14",
+              "15",
+              "16",
+              "19",
+              "21",
+              "22",
+              "23"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "vascular permeability in the bone marrow",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 286,
+            "passage_index": 1,
+            "quote": "RANKL controls vascular permeability in the bone marrow",
+            "start": 231
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "vascular permeability",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "RANKL was reported to control vascular permeability in the bone marrow.",
+        "uncertainties": [
+          "The text states control of vascular permeability but does not specify directionality as activation or inhibition."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "CAR cells",
+          "compartment": "bone marrow",
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "13",
+              "14",
+              "15",
+              "16",
+              "19",
+              "21",
+              "22",
+              "23"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "CAR cells",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "vascular leakage",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 881,
+            "passage_index": 1,
+            "quote": "Specific deletion of RANKL expression in CAR cells abrogated the vascular leakage",
+            "start": 800
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "vascular leakage",
+          "intervention": "Specific deletion of RANKL expression in CAR cells",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e4",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Specific deletion of RANKL expression in CAR cells abrogated vascular leakage, implying a loss-of-function effect on permeability.",
+        "uncertainties": [
+          "The perturbation is cell-type specific, but the causal mechanism is not directly shown.",
+          "The sentence indicates abrogation of leakage but does not establish direct molecular interaction."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        231,
+        286
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        232,
+        289
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        800,
+        881
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        800,
+        883
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

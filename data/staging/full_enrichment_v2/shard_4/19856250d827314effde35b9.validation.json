@@ -1,0 +1,357 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "osteopetrosis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "31",
+              "40"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "cyt-PTPe",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "28",
+              "29",
+              "33",
+              "34",
+              "35",
+              "36",
+              "38",
+              "42",
+              "44",
+              "47",
+              "50",
+              "51"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:SRC",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "protein",
+            "surface": "Src",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "30",
+              "32"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteopetrosis",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 356,
+            "passage_index": 1,
+            "quote": "The non-receptor isoform of protein-tyrosine phosphatase epsilon (cyt-PTPe) supports adhesion of bone-resorbing osteoclasts by activating Src downstream of integrins. Loss of cyt-PTPe reduces Src activity in osteoclasts, reduces resorption of mineralized matrix both in vivo and in cell culture, and induces mild osteopetrosis in young female PTPe KO mice.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": "in vivo and cell culture",
+          "dose": null,
+          "duration": null,
+          "endpoint": "Src activity; resorption of mineralized matrix; osteopetrosis",
+          "intervention": "Loss of cyt-PTPe",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Loss of cyt-PTPe reduced Src activity in osteoclasts and reduced resorption of mineralized matrix; it also induced mild osteopetrosis in young female PTPe KO mice.",
+        "uncertainties": [
+          "The abstract bundles multiple outcomes; the most direct causal link is cyt-PTPe loss leading to reduced Src activity in osteoclasts.",
+          "Species is explicit for the osteopetrosis mouse outcome, but not for the osteoclast culture context."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclast-like cells (OCLs)",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "2",
+              "37",
+              "39",
+              "41",
+              "43",
+              "45",
+              "46",
+              "48",
+              "49"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "GRB2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "28",
+              "29",
+              "33",
+              "34",
+              "35",
+              "36",
+              "38",
+              "42",
+              "44",
+              "47",
+              "50",
+              "51"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:SRC",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "protein",
+            "surface": "Src",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "31",
+              "40"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "cyt-PTPe",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1142,
+            "passage_index": 1,
+            "quote": "Further studies indicated that GRB2 is required for activation of Src by cyt-PTPe in osteoclast-like cells (OCLs) in culture. Overexpression of GRB2 in OCLs increased activating phosphorylation of Src at Tyr-416 and of cyt-PTPe at Tyr-638; opposite results were obtained when GRB2 expression was reduced by shRNA or by gene inactivation.",
+            "start": 805
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "activating phosphorylation of Src at Tyr-416; phosphorylation of cyt-PTPe at Tyr-638",
+          "intervention": "Overexpression of GRB2; GRB2 expression reduced by shRNA or by gene inactivation",
+          "outcome_change": "increased",
+          "perturbation_type": "gain_of_function"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "GRB2 was required for activation of Src by cyt-PTPe in osteoclast-like cells, and GRB2 overexpression increased activating phosphorylation of Src at Tyr-416 and of cyt-PTPe at Tyr-638; GRB2 reduction or inactivation produced opposite results.",
+        "uncertainties": [
+          "The passage also reports reciprocal effects from GRB2 reduction; they are summarized together as opposite results.",
+          "Direct physical binding is mentioned elsewhere in the abstract, but this claim is limited to required/causal activation effects."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow precursors; OCLs",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "2",
+              "37",
+              "39",
+              "41",
+              "43",
+              "45",
+              "46",
+              "48",
+              "49"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "GRB2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone marrow precursors",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "OCLs",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "podosomal adhesion structures",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1580,
+            "passage_index": 1,
+            "quote": "Reduced GRB2 expression also reduced the ability of bone marrow precursors to differentiate into OCLs and reduced the fraction of OCLs in which podosomal adhesion structures assume organization typical of active, resorbing cells.",
+            "start": 1351
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "differentiation into OCLs; fraction of OCLs with active-resorbing podosomal organization",
+          "intervention": "Reduced GRB2 expression",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e4",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Reduced GRB2 expression reduced the ability of bone marrow precursors to differentiate into osteoclast-like cells and reduced the fraction of osteoclast-like cells with podosomal adhesion structures organized like active, resorbing cells.",
+        "uncertainties": [
+          "The endpoint combines differentiation and podosomal organization; the regulatory object was aligned to the podosomal adhesion structure phenotype, while differentiation is described in the summary as an additional outcome."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        356
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        180
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        805,
+        1142
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        741,
+        1244
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1351,
+        1580
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1378,
+        1620
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

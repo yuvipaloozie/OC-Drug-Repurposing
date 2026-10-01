@@ -1,0 +1,110 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "autophagy activity",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone cells",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone homeostasis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 709,
+            "passage_index": 1,
+            "quote": "Numerous studies have found that autophagy activity is essential for the survival, differentiation and function of bone cells, and that regulation of autophagy can affect the metabolism of osteoblasts and osteoclasts, thus affecting bone homeostasis.",
+            "start": 459
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "unknown",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The review states that autophagy activity is essential for the survival, differentiation, and function of bone cells, and that regulating autophagy can affect osteoclast metabolism and bone homeostasis.",
+        "uncertainties": [
+          "This is review-level background, not an experimental perturbation.",
+          "The text mentions osteoblasts and osteoclasts together; the claim focuses on osteoclasts because that is explicitly requested, but the passage is not osteoclast-specific."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        459,
+        709
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        448,
+        540
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

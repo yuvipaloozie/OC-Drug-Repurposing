@@ -1,0 +1,97 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "diabetic bone defect model",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "-"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "D-GSH@QZ",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1367,
+            "passage_index": 1,
+            "quote": "model, the scaffold significantly accelerated tissue repair. Furthermore, transcriptome sequencing of the regenerated tissue in vivo revealed that the scaffold inhibited pathways associated with oxidative stress, inflammation, and bone resorption, including AGE-RAGE, NF-kappaB, and osteoclast differentiation,",
+            "start": 1057
+          }
+        ],
+        "experiment": {
+          "assay": "transcriptome sequencing",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation pathway in regenerated tissue",
+          "intervention": "implantation of the D-GSH@QZ scaffold",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In the diabetic bone defect model, implantation of the D-GSH@QZ scaffold was reported to inhibit the osteoclast differentiation pathway in regenerated tissue.",
+        "uncertainties": [
+          "The reported inhibition is based on transcriptome sequencing of regenerated tissue, so the relation is indirect rather than a demonstrated direct molecular interaction.",
+          "The passage does not specify the exact cellular source or species for the osteoclast differentiation signal."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1057,
+        1367
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1180,
+        1512
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

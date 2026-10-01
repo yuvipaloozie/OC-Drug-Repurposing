@@ -1,0 +1,187 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "femur",
+          "disease_setting": "ovariectomized rat model of postmenopausal osteoporosis",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:C006552"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "kaempferol",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "BMD",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "trabecular microarchitecture",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1978,
+            "passage_index": 1,
+            "quote": "kaempferol significantly improved BMD and enhanced trabecular microarchitecture in OVX rats in a dose-dependent manner",
+            "start": 1909
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "10, 20, and 40 mg/kg",
+          "duration": "12 weeks",
+          "endpoint": "BMD",
+          "intervention": "kaempferol",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Kaempferol treatment in ovariectomized rats improved bone mineral density and trabecular microarchitecture in a dose-dependent manner.",
+        "uncertainties": [
+          "The sentence combines BMD and trabecular microarchitecture; the regulatory object is represented with BMD as the primary phenotype while the summary includes both outcomes."
+        ]
+      },
+      "errors": [
+        "invented annotation ID",
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "femur",
+          "disease_setting": "ovariectomized rat model of postmenopausal osteoporosis",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:C006552"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "kaempferol",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "366957",
+              "64470",
+              "64465",
+              "81767",
+              "295277"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "Rac2, Ddb1, Cdc42, Rpl19, and Hist2h4",
+            "taxon": "rat"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2125,
+            "passage_index": 1,
+            "quote": "kaempferol downregulated five key DEPs-Rac2, Ddb1, Cdc42, Rpl19, and Hist2h4-in the femur",
+            "start": 2036
+          }
+        ],
+        "experiment": {
+          "assay": "proteomic analysis / validation",
+          "dose": "10, 20, and 40 mg/kg",
+          "duration": "12 weeks",
+          "endpoint": "differentially expressed proteins in femur",
+          "intervention": "kaempferol",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Kaempferol downregulated the listed key differentially expressed proteins in femur tissue.",
+        "uncertainties": [
+          "The text reports a set of five proteins as a group; individual protein-level claims are not separated here.",
+          "Molecular forms are inferred from the context of DEPs and provided gene annotations, but the passage does not explicitly distinguish gene versus protein for each name."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        2036,
+        2125
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2191,
+        2280
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

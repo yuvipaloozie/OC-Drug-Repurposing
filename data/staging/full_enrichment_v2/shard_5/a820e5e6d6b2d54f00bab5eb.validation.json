@@ -1,0 +1,197 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "periodontitis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "Iron homeostasis dysregulation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D010518"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "periodontitis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 416,
+            "passage_index": 1,
+            "quote": "Iron homeostasis dysregulation, especially ferroptosis, involves in the progression of periodontitis.",
+            "start": 315
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "periodontitis progression",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The review states that iron homeostasis dysregulation, especially ferroptosis, is involved in periodontitis progression.",
+        "uncertainties": [
+          "This is a narrative review summary, not a primary experiment.",
+          "The text groups ferroptosis with iron homeostasis dysregulation, but the specific causal direction is not experimentally established here."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "periodontitis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D003676"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "iron chelators",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D003676"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "deferoxamine",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "lactoferrin",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1574,
+            "passage_index": 1,
+            "quote": "iron chelators (e.g. deferoxamine) and lactoferrin can inhibit bacterial growth, alleviate ferroptosis, and promote periodontal regeneration.",
+            "start": 1433
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bacterial growth / ferroptosis / periodontal regeneration",
+          "intervention": "iron chelators (e.g. deferoxamine) and lactoferrin",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "unknown",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The review states that iron chelators such as deferoxamine and lactoferrin can inhibit bacterial growth, alleviate ferroptosis, and promote periodontal regeneration.",
+        "uncertainties": [
+          "The passage summarizes preclinical studies without specifying which compound caused which individual outcome.",
+          "Lactoferrin is treated here as a text-supported compound mention, but the exact molecular form is not established in the passage."
+        ]
+      },
+      "errors": [
+        "invented annotation ID",
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        315,
+        416
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        405,
+        492
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1433,
+        1574
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1523,
+        1641
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,244 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "MDA-231 human breast cancer cells",
+          "compartment": null,
+          "disease_setting": "breast cancer",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "73"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "c-src tyrosine kinase",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [
+              "72"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone metastasis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 639,
+            "passage_index": 1,
+            "quote": "A clone of the MDA-231 with the increased capacity of bone metastasis exhibited",
+            "start": 560
+          },
+          {
+            "end": 684,
+            "passage_index": 1,
+            "quote": "elevated c-src tyrosine kinase (TK) activity",
+            "start": 640
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone metastasis capacity and c-src TK activity",
+          "intervention": "comparison of MDA-231-derived clones with different bone metastatic capacity",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In this breast cancer metastasis model, clones with increased bone metastatic capacity had elevated c-src tyrosine kinase activity, linking c-src activity with metastatic propensity.",
+        "uncertainties": [
+          "The text reports a comparison among cell clones rather than a direct causal perturbation.",
+          "Directionality is inferred only as an association from the wording 'exhibited elevated' and not as a tested mechanistic effect."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "MDAsrc527 cells",
+          "compartment": null,
+          "disease_setting": "breast cancer",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "74",
+              "91"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "MDAsrc527",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "69",
+              "75"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteolytic bone metastases",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "88",
+              "96"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "parathyroid hormone-related protein",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 899,
+            "passage_index": 1,
+            "quote": "MDAsrc527 cells caused significantly increased size of the osteolytic bone metastases with increased number of osteoclasts and mitotic cancer cells compared with MDA-231EV or MDAsrcWT.",
+            "start": 715
+          },
+          {
+            "end": 1400,
+            "passage_index": 1,
+            "quote": "The growth in vitro and in vivo and production of parathyroid hormone-related protein, a key cytokine in the pathogenesis of osteolytic bone metastases in breast cancer, were promoted in MDAsrc527",
+            "start": 1204
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "size of osteolytic bone metastases; number of osteoclasts and mitotic cancer cells; growth in vitro and in vivo; parathyroid hormone-related protein production",
+          "intervention": "comparison of MDAsrc527 with MDA-231EV or MDAsrcWT",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Compared with controls, MDAsrc527 cells were associated with larger osteolytic bone metastases, more osteoclasts, and more mitotic cancer cells, and they also showed promoted growth and increased parathyroid hormone-related protein production.",
+        "uncertainties": [
+          "The sentence bundles several outcomes; the specific causal contribution of c-src to each outcome is not separated.",
+          "Osteoclasts are mentioned as an outcome-associated cell count, not as a directly perturbed molecular entity."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        560,
+        639
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        398,
+        480
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        640,
+        684
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        481,
+        520
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        715,
+        899
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        521,
+        649
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1204,
+        1400
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1326,
+        1449
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,153 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "pediatric IBD-related bone resorption",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "66",
+              "73",
+              "77",
+              "80",
+              "85"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "CB2",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [
+              "63",
+              "64",
+              "67",
+              "78",
+              "81",
+              "86"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "TRPV1",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [
+              "55",
+              "57",
+              "58",
+              "68",
+              "74",
+              "76",
+              "79",
+              "82",
+              "89"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "iron",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "OC overactivity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1426,
+            "passage_index": 1,
+            "quote": "TRPV1 receptors on OC activity and on the iron metabolism. RESULTS: We confirmed the well-known roles of CB2 and TRPV1 receptors in bone metabolism and suggested that their stimulation can reduce the OC overactivity induced by iron",
+            "start": 1195
+          },
+          {
+            "end": 1514,
+            "passage_index": 1,
+            "quote": "IBD-related bone resorption.",
+            "start": 1486
+          }
+        ],
+        "experiment": {
+          "assay": "Western blot, TRAP assays, bone resorption assays, and iron assays",
+          "dose": null,
+          "duration": null,
+          "endpoint": "OC activity / osteoclast overactivity",
+          "intervention": "stimulation of CB2 and TRPV1 receptors",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Stimulation of CB2 and TRPV1 receptors was reported to reduce iron-induced osteoclast overactivity / activity.",
+        "uncertainties": [
+          "The paper describes stimulation of both CB2 and TRPV1 together; the text does not isolate which receptor accounts for the effect.",
+          "The exact molecular form of CB2 and TRPV1 is inferred from receptor/gene naming in the text.",
+          "The evidence spans multiple sentences; the quoted span is a contiguous excerpt from the results section rather than a minimal clause."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1195,
+        1426
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1316,
+        1368
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1486,
+        1514
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1607,
+        1630
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

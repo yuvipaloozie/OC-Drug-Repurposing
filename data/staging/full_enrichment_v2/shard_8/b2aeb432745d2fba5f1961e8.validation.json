@@ -1,0 +1,449 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow mesenchymal stem cells",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": "osteogenic differentiation"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "51"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "PML",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "HIF1AN",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1141,
+            "passage_index": 1,
+            "quote": "PML negatively regulated HIF1AN expression by enhancing HIF1AN ubiquitination degradation.",
+            "start": 1051
+          }
+        ],
+        "experiment": {
+          "assay": "western blot",
+          "dose": null,
+          "duration": null,
+          "endpoint": "HIF1AN expression/abundance",
+          "intervention": "PML perturbation",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "PML negatively regulated HIF1AN abundance by promoting HIF1AN ubiquitination and degradation in BMSCs during osteogenic differentiation.",
+        "uncertainties": [
+          "The sentence says 'expression' and 'ubiquitination degradation'; the exact molecular readout is protein abundance rather than RNA.",
+          "Species is not explicitly stated in the quoted passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow mesenchymal stem cells",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": "osteogenic differentiation"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "53"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "PML",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteogenic differentiation of BMSCs",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1231,
+            "passage_index": 1,
+            "quote": "PML knockdown or HIF1AN up-regulation suppressed the osteogenic differentiation of BMSCs.",
+            "start": 1142
+          }
+        ],
+        "experiment": {
+          "assay": "alkaline phosphatase and Alizarin red S stainings",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteogenic differentiation",
+          "intervention": "PML knockdown",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "PML knockdown suppressed osteogenic differentiation of BMSCs.",
+        "uncertainties": [
+          "The sentence combines two perturbations; this claim extracts only the PML knockdown component.",
+          "The passage does not separate the individual effect sizes for knockdown versus HIF1AN up-regulation."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow mesenchymal stem cells",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": "osteogenic differentiation"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "53"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "HIF1AN",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteogenic differentiation of BMSCs",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1231,
+            "passage_index": 1,
+            "quote": "PML knockdown or HIF1AN up-regulation suppressed the osteogenic differentiation of BMSCs.",
+            "start": 1142
+          }
+        ],
+        "experiment": {
+          "assay": "alkaline phosphatase and Alizarin red S stainings",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteogenic differentiation",
+          "intervention": "HIF1AN up-regulation",
+          "outcome_change": "decreased",
+          "perturbation_type": "gain_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "HIF1AN up-regulation suppressed osteogenic differentiation of BMSCs.",
+        "uncertainties": [
+          "The sentence combines two perturbations; this claim extracts only the HIF1AN up-regulation component.",
+          "The passage does not separate the individual effect sizes for knockdown versus HIF1AN up-regulation."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow mesenchymal stem cells",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": "osteogenic differentiation"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "56"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "HIF1alpha",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "57"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "SOD3 promoter region",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1298,
+            "passage_index": 1,
+            "quote": "HIF1alpha directly bound to the SOD3 promoter region.",
+            "start": 1245
+          }
+        ],
+        "experiment": {
+          "assay": "chromatin immunoprecipitation and dual-luciferase reporter assays",
+          "dose": null,
+          "duration": null,
+          "endpoint": "promoter binding",
+          "intervention": "chromatin immunoprecipitation and dual-luciferase reporter assays",
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c4",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "direct",
+          "effect_level": "binding",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "HIF1alpha directly bound to the SOD3 promoter region.",
+        "uncertainties": [
+          "The object is a promoter region rather than a molecular entity with a clear gene/protein form.",
+          "The passage does not state whether this binding was tested in a specific species or cell line beyond BMSCs context."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow mesenchymal stem cells",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": "osteogenic differentiation"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "58"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "PML",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoblast differentiation of BMSCs",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "60"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "LY294002",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1439,
+            "passage_index": 1,
+            "quote": "PML or SOD3 overexpression remarkably promoted the BMSCs osteoblast differentiation under osteogenic medium, which was reversed by LY294002.",
+            "start": 1299
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoblast differentiation",
+          "intervention": "PML overexpression",
+          "outcome_change": "increased",
+          "perturbation_type": "gain_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c5",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "PML overexpression promoted osteoblast differentiation of BMSCs, and the effect was reversed by LY294002.",
+        "uncertainties": [
+          "The sentence combines PML and SOD3 overexpression; this claim extracts only the PML component.",
+          "The reversal by LY294002 is stated, but the target pathway is not explicitly detailed in the quoted span."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1051,
+        1141
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        920,
+        1009
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1142,
+        1231
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1117,
+        1207
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1142,
+        1231
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1117,
+        1207
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c4",
+      "corrected_offsets": [
+        1245,
+        1298
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1283,
+        1332
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c5",
+      "corrected_offsets": [
+        1299,
+        1439
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1440,
+        1591
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

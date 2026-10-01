@@ -1,0 +1,179 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "41"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:PLCG2",
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "PLCgamma2",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "in vitro development and resorptive function of osteoclasts",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1027,
+            "passage_index": 1,
+            "quote": "PLCgamma2 was required for in vitro development and resorptive function of osteoclasts",
+            "start": 941
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro osteoclast cultures",
+          "dose": null,
+          "duration": null,
+          "endpoint": "in vitro development and resorptive function of osteoclasts",
+          "intervention": "PLCgamma2-deficient (PLCgamma2(-/-)) mice",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Loss of PLCgamma2 impaired in vitro osteoclast development and resorptive function.",
+        "uncertainties": [
+          "The quote states that PLCgamma2 was required, but the exact molecular form (gene versus protein) is not explicitly specified in the text.",
+          "The outcome is a combined phenotype term rather than a single measured biochemical variable."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "no_effect",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "41"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:PLCG2",
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "PLCgamma2",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "upregulation of osteoclast-specific gene expression",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1093,
+            "passage_index": 1,
+            "quote": "but not for upregulation of osteoclast-specific gene expression.",
+            "start": 1029
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro osteoclast cultures",
+          "dose": null,
+          "duration": null,
+          "endpoint": "upregulation of osteoclast-specific gene expression",
+          "intervention": "PLCgamma2-deficient (PLCgamma2(-/-)) mice",
+          "outcome_change": "no_detected_change",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "PLCgamma2 loss did not prevent upregulation of osteoclast-specific gene expression.",
+        "uncertainties": [
+          "The passage reports a negative result for gene expression upregulation, but does not specify individual genes.",
+          "The exact molecular form of PLCgamma2 is not explicitly distinguished in the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        941,
+        1027
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        832,
+        918
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1029,
+        1093
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        920,
+        985
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

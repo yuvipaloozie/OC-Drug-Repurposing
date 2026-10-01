@@ -1,0 +1,198 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "bone diseases",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "25",
+              "26",
+              "27",
+              "30",
+              "32",
+              "33",
+              "35",
+              "38",
+              "43"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Nitrogen-containing bisphosphonates",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "29",
+              "37"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "mevalonate pathway",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 158,
+            "passage_index": 1,
+            "quote": "Nitrogen-containing bisphosphonates (N-BPs) are commonly used drugs in the treatment of bone diseases due to their potent inhibition of the mevalonate pathway",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Nitrogen-containing bisphosphonates inhibit the mevalonate pathway.",
+        "uncertainties": [
+          "This is a narrative review/background statement, not a primary experiment.",
+          "The text states inhibition of the mevalonate pathway but does not specify a direct molecular target in this passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoclast",
+          "compartment": null,
+          "disease_setting": "bone diseases",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "25",
+              "26",
+              "27",
+              "30",
+              "32",
+              "33",
+              "35",
+              "38",
+              "43"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Nitrogen-containing bisphosphonates",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 233,
+            "passage_index": 1,
+            "quote": "Nitrogen-containing bisphosphonates (N-BPs) are commonly used drugs in the treatment of bone diseases due to their potent inhibition of the mevalonate pathway, leading to disrupted protein prenylation and reduced osteoclast activity.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast activity",
+          "intervention": null,
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Nitrogen-containing bisphosphonates are described as reducing osteoclast activity.",
+        "uncertainties": [
+          "The passage is a review statement and does not describe a specific experimental system.",
+          "Osteoclasts are mentioned in the sentence, but no species or assay is provided."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        158
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        135
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        0,
+        233
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        197
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

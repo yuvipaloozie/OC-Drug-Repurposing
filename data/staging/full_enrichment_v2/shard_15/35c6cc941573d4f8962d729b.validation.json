@@ -1,0 +1,220 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "OVX-induced bone loss",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "V9302",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorptive function",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "49",
+              "50"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "OVX-induced bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 708,
+            "passage_index": 1,
+            "quote": "deprivation or pharmacological inhibition of Glu transporter ASCT2 by V9302 suppresses osteoclast differentiation and their bone resorptive function. In vivo treatment with V9302",
+            "start": 530
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation and bone resorptive function",
+          "intervention": "V9302 treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "V9302 treatment suppresses osteoclast differentiation and bone resorptive function; the paper also reports improved OVX-induced bone loss in vivo.",
+        "uncertainties": [
+          "The quoted span is a truncated sentence fragment and may not capture the full experimental context.",
+          "The passage combines an in vitro suppression statement with an in vivo bone-loss improvement statement; these are summarized together here but could be split into separate claims."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "OVX-induced bone loss",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "52",
+              "53",
+              "58",
+              "60",
+              "63"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "IL-17",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "54",
+              "55"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "OVX-induced bone loss",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "56",
+              "59",
+              "61"
+            ],
+            "existing_node_id": "CHEBI:18050",
+            "key": "e3",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "compound",
+            "surface": "Glu",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "57"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "alpha-KG",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1188,
+            "passage_index": 1,
+            "quote": "IL-17 mediates the role of IL-17 in promoting osteoclast differentiation and in regulating energy metabolism. In vivo IL-17 treatment exacerbated OVX-induced bone loss, and this effect requires the participation of Glu or its downstream metabolite alpha-KG.",
+            "start": 950
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "OVX-induced bone loss",
+          "intervention": "IL-17 treatment",
+          "outcome_change": "increased",
+          "perturbation_type": "gain_of_function"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In vivo IL-17 treatment exacerbated OVX-induced bone loss, and the effect requires glutamine or its downstream metabolite alpha-KG.",
+        "uncertainties": [
+          "The text says the IL-17 effect requires Glu or alpha-KG, but the causal role of these metabolites is stated as a requirement rather than a direct mechanism.",
+          "The span includes surrounding text from the prior sentence; the exact mechanistic phrasing is partly truncated."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        530,
+        708
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        671,
+        809
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

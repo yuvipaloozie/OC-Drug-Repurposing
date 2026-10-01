@@ -1,0 +1,232 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "rheumatoid arthritis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "complex",
+            "surface": "the coating",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "56"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "mitochondria ROS accumulation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "57"
+            ],
+            "existing_node_id": "CHEBI:29108",
+            "key": "e3",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "phenotype",
+            "surface": "intracellular Ca2+ overload",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "58"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "intracellular O2 levels",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1180,
+            "passage_index": 1,
+            "quote": "Due to the efficient conversion of H2O2 into O2 and robust ROS-scavenging capabilities, the coating mitigates mitochondria ROS accumulation and intracellular Ca2+ overload induced by the pathological microenvironment, while simultaneously elevating intracellular O2 levels, thereby preventing macrophage apoptosis.",
+            "start": 866
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "mitochondria ROS accumulation and intracellular Ca2+ overload; increased intracellular O2 levels",
+          "intervention": "nanozyme-inspired coating (MFO coating)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The MFO coating mitigates mitochondrial ROS accumulation and intracellular Ca2+ overload, and elevates intracellular O2 levels, in the RA pathological microenvironment.",
+        "uncertainties": [
+          "The quote describes multiple outcomes; only one regulatory edge is encoded explicitly while related changes are summarized together.",
+          "The coating is a material/coating, not a clearly resolved molecular entity.",
+          "The provided calcium node suggestion is unverified and may not match the text entity form."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "macrophages",
+          "compartment": null,
+          "disease_setting": "rheumatoid arthritis",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "complex",
+            "surface": "the coating",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "mitophagy",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "59",
+              "60",
+              "61"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "Ca2+-AMPK-mTOR signaling pathway",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e7",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "M2 phenotype",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e8",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1738,
+            "passage_index": 1,
+            "quote": "Meanwhile, by improving the microenvironment, the coating activates moderate mitophagy through the Ca2+-AMPK-mTOR signaling pathway, facilitating the removal of dysfunctional mitochondria and the preservation of mitochondrial dynamics and integrity. As a result, the restored mitochondria reprogram their metabolic pathway from relying on anaerobic to relying on aerobic oxidative phosphorylation, facilitating macrophage polarization toward the M2 phenotype, which not only inhibits osteoclastogenesis but also accelerates osseointegration in rats with RA.",
+            "start": 1181
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "moderate mitophagy; macrophage polarization toward the M2 phenotype; osteoclastogenesis inhibited",
+          "intervention": "nanozyme-inspired coating (MFO coating)",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e5",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "By improving the microenvironment, the coating activates mitophagy through the Ca2+-AMPK-mTOR signaling pathway, and the downstream state is associated with a shift toward M2 macrophages that inhibits osteoclastogenesis.",
+        "uncertainties": [
+          "The passage links several downstream effects in one sentence; the regulatory object is encoded for mitophagy while M2 polarization and osteoclastogenesis are summarized in the claim.",
+          "The direction from mitophagy to osteoclastogenesis is not isolated as a separate direct causal statement.",
+          "Species is explicitly stated for the osseointegration outcome, but the cellular context is inferred from macrophage mentions in the same sentence."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        866,
+        1180
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1004,
+        1310
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1181,
+        1738
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1312,
+        1605
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,101 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclast/osteoblast co-culture system",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Lp.lpp",
+            "taxon": "Lactiplantibacillus plantarum"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 513,
+            "passage_index": 1,
+            "quote": "we investigated the role of lipoproteins derived from the representative probiotic Lactiplantibacillus plantarum (Lp.lpp) in the regulation of bone metabolism. Intraperitoneal administration of Lp.lpp led to substantial trabecular bone loss",
+            "start": 308
+          },
+          {
+            "end": 920,
+            "passage_index": 1,
+            "quote": "Lp.lpp increased osteoclast differentiation and suppressed osteoblast differentiation",
+            "start": 835
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation",
+          "intervention": "Lp.lpp",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Lipoproteins derived from Lactiplantibacillus plantarum increased osteoclast differentiation in the reported study.",
+        "uncertainties": [
+          "The text does not specify the molecular form of Lp.lpp beyond a lipoprotein-enriched fraction.",
+          "The same passage also reports bone loss and suppression of osteoblast differentiation, but these are separate outcomes from the osteoclast differentiation claim."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        835,
+        920
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        788,
+        864
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

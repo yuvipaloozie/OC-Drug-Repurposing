@@ -1,0 +1,203 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "psoriatic disease",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D015535"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Psoriatic disease",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone integrity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1526,
+            "passage_index": 1,
+            "quote": "Psoriatic disease negatively impacted bone integrity.",
+            "start": 1473
+          },
+          {
+            "end": 1673,
+            "passage_index": 1,
+            "quote": "Patients with psoriatic disease seemed to have lower bone density and more microarchitectural alteration that impacted on biomechanics properties.",
+            "start": 1527
+          }
+        ],
+        "experiment": {
+          "assay": "high-resolution peripheral quantitative CT and finite element analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone integrity / bone density / microarchitectural alteration",
+          "intervention": null,
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Psoriatic disease was associated with poorer bone integrity, including lower bone density and altered biomechanics.",
+        "uncertainties": [
+          "The text reports an association/impact statement in a cross-sectional study, not a causal intervention.",
+          "Bone integrity is a composite phenotype; the specific mechanistic mediator is not stated."
+        ]
+      },
+      "errors": [
+        "invented annotation ID",
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "distal interphalangeal joints",
+          "disease_setting": "psoriatic disease",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "nail involvement",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone stiffness",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1413,
+            "passage_index": 1,
+            "quote": "Nail involvement in psoriatic disease was negatively associated with bone stiffness",
+            "start": 1330
+          }
+        ],
+        "experiment": {
+          "assay": "high-resolution peripheral quantitative CT and finite element analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone stiffness",
+          "intervention": null,
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Nail involvement in psoriatic disease was negatively associated with bone stiffness at the proximal and distal regions of the distal interphalangeal joints.",
+        "uncertainties": [
+          "The statement is correlational within a cross-sectional study.",
+          "The exact causal factor for reduced stiffness is not established."
+        ]
+      },
+      "errors": [
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1473,
+        1526
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1624,
+        1692
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1527,
+        1673
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1692,
+        1776
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1330,
+        1413
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1451,
+        1537
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,132 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "human",
+          "stage": "differentiation"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "41",
+              "43",
+              "46",
+              "47",
+              "48",
+              "51",
+              "52",
+              "53",
+              "57",
+              "69",
+              "70"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "MEF2C",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast generation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 741,
+            "passage_index": 1,
+            "quote": "While decreased MEF2C expression resulted in diminished osteoclastogenesis",
+            "start": 667
+          },
+          {
+            "end": 801,
+            "passage_index": 1,
+            "quote": "ectopic expression of MEF2C enhanced osteoclast generation",
+            "start": 743
+          }
+        ],
+        "experiment": {
+          "assay": "transcriptomic and bioinformatic approaches; functional expression perturbation",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "decreased MEF2C expression; ectopic expression of MEF2C",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Decreased MEF2C expression diminished osteoclastogenesis, while ectopic MEF2C expression enhanced osteoclast generation, supporting a positive role for MEF2C in osteoclast differentiation.",
+        "uncertainties": [
+          "Species/context are mixed in the passage (human and mouse osteoclast differentiation are both mentioned).",
+          "The claim is inferred from perturbation outcomes; direct molecular mechanism is stated separately in the text but not extracted here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        667,
+        741
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        596,
+        657
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        743,
+        801
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        659,
+        719
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

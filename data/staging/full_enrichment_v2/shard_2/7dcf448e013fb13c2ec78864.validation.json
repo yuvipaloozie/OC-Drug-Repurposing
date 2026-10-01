@@ -1,0 +1,212 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclast precursors (OCPs)",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "1",
+              "12",
+              "16",
+              "20",
+              "21"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Rotenone",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 41,
+            "passage_index": 0,
+            "quote": "Rotenone impairs osteoclastogenesis by in",
+            "start": 0
+          },
+          {
+            "end": 856,
+            "passage_index": 1,
+            "quote": "We found that rotenone inhibited osteoclastogenesis",
+            "start": 805
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "rotenone",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Rotenone inhibited osteoclastogenesis.",
+        "uncertainties": [
+          "The title states impairment of osteoclastogenesis by inhibiting cell migration, but the specific causal chain is not directly resolved here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclast precursors (OCPs)",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "12",
+              "16",
+              "20",
+              "21"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "rotenone",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "migratory capacity",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "OCPs",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 929,
+            "passage_index": 1,
+            "quote": "markedly impaired the migratory capacity of OCPs. Although the level",
+            "start": 861
+          }
+        ],
+        "experiment": {
+          "assay": "optical tweezers",
+          "dose": null,
+          "duration": null,
+          "endpoint": "migratory capacity of OCPs",
+          "intervention": "rotenone",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Rotenone markedly impaired the migratory capacity of osteoclast precursors.",
+        "uncertainties": [
+          "The passage also says the impaired migration is unlikely to be driven by overall energy shortage, but that mechanistic inference is not directly tested as a separate causal claim."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        41
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        42
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        805,
+        856
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        612,
+        649
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        861,
+        929
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        699,
+        763
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,212 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "38",
+              "41",
+              "50"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Compound 23",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "42",
+              "43",
+              "44",
+              "45"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "BTK-PLCgamma2-Ca2+-NFATc1 signaling pathway",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "46"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 757,
+            "passage_index": 1,
+            "quote": "23 down-regulated the BTK-PLCgamma2-Ca2+-NFATc1 signaling pathway activated by RANKL",
+            "start": 673
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "BTK-PLCgamma2-Ca2+-NFATc1 signaling pathway activity",
+          "intervention": "compound 23",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Compound 23 down-regulated the BTK-PLCgamma2-Ca2+-NFATc1 signaling pathway activated by RANKL.",
+        "uncertainties": [
+          "Offset boundaries are estimated from the passage text and may need validator adjustment.",
+          "RANKL is annotated as a gene in the packet, but the sentence frames it as pathway activation context rather than a mechanistic entity relationship."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "periodontitis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "38",
+              "41",
+              "50"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Compound 23",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "51"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "47"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "alveolar bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 845,
+            "passage_index": 1,
+            "quote": "thus inhibiting osteoclastogenesis and attenuating alveolar bone resorption in a mouse",
+            "start": 759
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "compound 23",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Compound 23 inhibited osteoclastogenesis and attenuated alveolar bone resorption in a mouse periodontitis model.",
+        "uncertainties": [
+          "The quoted evidence span is truncated at 'mouse' because the passage continues beyond the chosen end offset; the full model context is 'mouse periodontitis model'.",
+          "The sentence mentions two outcomes; only the osteoclastogenesis relation is encoded in regulatory fields, while alveolar bone resorption is noted in the summary."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        673,
+        757
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        792,
+        868
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        759,
+        845
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        868,
+        951
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

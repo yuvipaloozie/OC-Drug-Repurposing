@@ -1,0 +1,216 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "primary human PDL fibroblasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "Force application",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "PDLF",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [
+              "30",
+              "32",
+              "35",
+              "39"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1018,
+            "passage_index": 1,
+            "quote": "Force application shifted the PDLF cell cycle to the G0/G1 phase, arresting cell proliferation and leading to elevated collagen production, mild OPG level elevation, and robust RANKL level elevation.",
+            "start": 819
+          }
+        ],
+        "experiment": {
+          "assay": "Analyses included cell proliferation, cell viability, cell cycle, and collagen expression, as well as osteoprotegerin (OPG) and receptor activator of nuclear factor kappa-Beta ligand (RANKL) expression",
+          "dose": null,
+          "duration": null,
+          "endpoint": "RANKL expression",
+          "intervention": "Orthodontic force on the PDLFs was simulated by centrifugation",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Mechanical force application in primary human PDL fibroblasts increased RANKL expression/level and was associated with cell-cycle arrest and increased collagen production.",
+        "uncertainties": [
+          "The passage reports a composite result sentence; the RANKL-specific effect is inferred from the same sentence that also mentions cell-cycle and collagen changes.",
+          "The molecular form of RANKL is text-supported as a gene annotation, but the measured entity could reflect expression level rather than direct protein abundance."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "gingival fibroblasts",
+          "compartment": null,
+          "disease_setting": "inflammation",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "compound",
+            "surface": "inflammatory supernatant",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "30",
+              "32",
+              "35",
+              "39"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "GFs",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [
+              "25",
+              "36",
+              "38"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "Saos2",
+            "taxon": "human"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1252,
+            "passage_index": 1,
+            "quote": "By contrast, the inflammatory supernatant increased RANKL expression in GFs, but not in Saos2 cells.",
+            "start": 1152
+          }
+        ],
+        "experiment": {
+          "assay": "expression analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "RANKL expression in GFs",
+          "intervention": "The inflammatory supernatant was prepared by inoculating human neutrophils with Porphyromonas gingivalis",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "An inflammatory supernatant increased RANKL expression in gingival fibroblasts, but not in Saos2 cells.",
+        "uncertainties": [
+          "The passage states a lack of effect in Saos2 cells, but this is not a mechanistic negation of the positive effect in GFs.",
+          "The exact molecular identity of the inflammatory supernatant is not specified."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        819,
+        1018
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        791,
+        987
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1152,
+        1252
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1260,
+        1345
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,139 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "titanium particle-induced osteolysis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "4",
+              "49",
+              "50",
+              "54",
+              "56",
+              "62",
+              "65",
+              "67"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Chrysin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "5",
+              "6"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "titanium particle-induced osteolysis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "66"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone destruction",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 154,
+            "passage_index": 0,
+            "quote": "Chrysin Protects Against Titanium Particle-Induced Osteolysis by Attenuating Osteoclast Formation and Function by Inhibiting NF-kappaB and MAPK Signaling.",
+            "start": 0
+          },
+          {
+            "end": 1178,
+            "passage_index": 1,
+            "quote": "CHR is a flavonoid with a wide range of anti-inflammatory and anti-tumor effects. However, its effect on osteoclasts remains unknown. In this study, we found the effects of CHR on inhibiting osteoclast differentiation",
+            "start": 1134
+          },
+          {
+            "end": 1681,
+            "passage_index": 1,
+            "quote": "murine calvarial osteolysis model revealed that CHR could protect against particle-induced bone destruction in vivo.",
+            "start": 1565
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation and particle-induced bone destruction",
+          "intervention": "Chrysin",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Chrysin was reported to attenuate osteoclast formation/function and protect against titanium particle-induced osteolysis, i.e. bone destruction.",
+        "uncertainties": [
+          "The abstract states inhibition of osteoclast differentiation and protection against bone destruction, but does not provide detailed effect sizes in the supplied text.",
+          "The exact molecular mechanism is suggested by the title, but the abstract excerpt here does not state the NF-kappaB/MAPK result in detail."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1565,
+        1681
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1720,
+        1836
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

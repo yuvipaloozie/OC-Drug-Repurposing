@@ -1,0 +1,173 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "women",
+          "stage": "healthy"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "dry immersion",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone formation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 694,
+            "passage_index": 1,
+            "quote": "Bone remodeling markers suggest a decreased bone formation coupled with an increased bone resorption.",
+            "start": 593
+          }
+        ],
+        "experiment": {
+          "assay": "bone remodeling markers",
+          "dose": null,
+          "duration": "5-day",
+          "endpoint": "bone formation",
+          "intervention": "5-day dry immersion",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "A 5-day dry immersion in 18 healthy women was associated with decreased bone formation markers.",
+        "uncertainties": [
+          "The text says 'suggest', so the bone formation change is not presented as a definitive causal measurement."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "women",
+          "stage": "healthy"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "dry immersion",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 694,
+            "passage_index": 1,
+            "quote": "Bone remodeling markers suggest a decreased bone formation coupled with an increased bone resorption.",
+            "start": 593
+          }
+        ],
+        "experiment": {
+          "assay": "bone remodeling markers",
+          "dose": null,
+          "duration": "5-day",
+          "endpoint": "bone resorption",
+          "intervention": "5-day dry immersion",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "A 5-day dry immersion in 18 healthy women was associated with increased bone resorption markers.",
+        "uncertainties": [
+          "The text says 'suggest', so the bone resorption change is not presented as a definitive causal measurement."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        593,
+        694
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        489,
+        579
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        593,
+        694
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        489,
+        579
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

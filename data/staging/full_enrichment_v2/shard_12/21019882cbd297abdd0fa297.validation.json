@@ -1,0 +1,119 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": "mature osteoclasts"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "10399"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RACK1 mutant protein",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "6714"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "c-Src",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "8600"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-mediated cytoskeleton",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 718,
+            "passage_index": 1,
+            "quote": "RACK1 mutant protein (mutations of tyrosine 228 and 246 residues to phenylalanine; RACK1 Y228F/Y246F) did not interact with c-Src. The mutant retained its ability to differentiate into osteoclasts; however, the integrity of the RANKL-mediated cytoskeleton, bone resorption activity, and phosphorylation of c-Src was significantly decreased.",
+            "start": 378
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "interaction with c-Src; RANKL-mediated cytoskeleton integrity; bone resorption activity; c-Src phosphorylation",
+          "intervention": "RACK1 Y228F/Y246F mutant protein",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "direct",
+          "effect_level": "binding",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "A RACK1 Y228F/Y246F mutant did not interact with c-Src and showed decreased RANKL-mediated cytoskeleton integrity, bone resorption activity, and c-Src phosphorylation, while retaining osteoclast differentiation ability.",
+        "uncertainties": [
+          "The abstract does not state the species.",
+          "The decreased outcomes are grouped together; the specific effect size for each endpoint is not provided."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        378,
+        718
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        445,
+        589
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,110 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "THP-1-derived osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "18",
+              "21",
+              "23",
+              "27",
+              "30",
+              "31"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "ALD pretreated BG scaffolds",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "29"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "tartrate-resistant acid phosphatase (TRAcP) activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 990,
+            "passage_index": 1,
+            "quote": "human THP-1-derived osteoclasts cultured with 10-8 M ALD pretreated BG scaffolds showed a significant decrease in tartrate-resistant acid phosphatase (TRAcP) activity, and morphological changes indicative of functional inhibition",
+            "start": 761
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "10-8 M",
+          "duration": "5 days",
+          "endpoint": "TRAcP activity; functional inhibition",
+          "intervention": "10-8 M ALD pretreated BG scaffolds",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "ALD-pretreated bioactive glass scaffolds reduced osteoclast activity and showed morphological changes indicative of functional inhibition in human THP-1-derived osteoclasts.",
+        "uncertainties": [
+          "The text attributes the effect to ALD-coated/pretreated bioactive glass scaffolds rather than ALD alone.",
+          "The exact molecular target in osteoclasts is not stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        761,
+        990
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        886,
+        1007
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

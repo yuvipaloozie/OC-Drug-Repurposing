@@ -1,0 +1,122 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "rats",
+          "stage": "growing"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "30"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ACC",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "serum bone resorption biomarkers",
+            "taxon": "Rattus norvegicus"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast metabolism",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1174,
+            "passage_index": 1,
+            "quote": "high-dose ACC decreased serum bone resorption biomarkers",
+            "start": 1118
+          },
+          {
+            "end": 1294,
+            "passage_index": 1,
+            "quote": "and increased BMD. CONCLUSIONS: ACC supplementation can enhance osteoblast metabolism and inhibit osteoclast metabolism",
+            "start": 1175
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "high-dose",
+          "duration": "12 weeks",
+          "endpoint": "serum bone resorption biomarkers",
+          "intervention": "ACC supplementation",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In growing rats, ACC supplementation was reported to decrease serum bone resorption biomarkers, and the authors concluded that ACC inhibits osteoclast metabolism.",
+        "uncertainties": [
+          "The osteoclast-metabolism statement is presented in the authors' conclusion, so direct mechanistic evidence is limited.",
+          "The specific biomarker panel is not named in the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1118,
+        1174
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        650,
+        713
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1175,
+        1294
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        718,
+        816
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

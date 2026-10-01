@@ -1,0 +1,207 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "BMSCs",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "10628"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Txnip",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "8600"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "Rankl",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast formation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone mass",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1320,
+            "passage_index": 1,
+            "quote": "Txnip knockout in BMSCs impaired its osteogenic differentiation, suppressed Rankl expression and subsequent osteoclast formation and thus led to increased bone mass.",
+            "start": 1155
+          }
+        ],
+        "experiment": {
+          "assay": "RNA-Sequencing, Western blotting and immunofluorescence staining; bone histomorphometry and histological analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "Rankl expression; subsequent osteoclast formation; bone mass",
+          "intervention": "Txnip knockout",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Txnip knockout in BMSCs suppressed Rankl expression and reduced subsequent osteoclast formation, with increased bone mass.",
+        "uncertainties": [
+          "The text links decreased Rankl expression to reduced osteoclast formation, but direct molecular causality is not established in the quoted passage.",
+          "Txnip is annotated as a gene; the specific molecular entity acting in cells is not explicitly distinguished as protein versus RNA in the text."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ovariectomy-induced osteoporosis",
+          "species": "null",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "10628"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Txnip",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "MESH:D010024"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "bilateral ovariectomy (OVX)-induced osteoporosis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1585,
+            "passage_index": 1,
+            "quote": "Pharmacological inhibition of Txnip can effectively prevent bilateral ovariectomy (OVX)-induced osteoporosis.",
+            "start": 1476
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "OVX-induced osteoporosis",
+          "intervention": "pharmacological inhibition of Txnip",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Pharmacological inhibition of Txnip was reported to effectively prevent bilateral ovariectomy-induced osteoporosis.",
+        "uncertainties": [
+          "The specific inhibitor is not named in the passage.",
+          "The statement is about prevention of osteoporosis, not a direct molecular mechanism."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1155,
+        1320
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        993,
+        1095
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1476,
+        1585
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1495,
+        1597
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

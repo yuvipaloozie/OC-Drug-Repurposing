@@ -1,0 +1,209 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "15"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "methyl carnosate",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-induced osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 385,
+            "passage_index": 1,
+            "quote": "Here, we report that methyl carnosate, a naturally occurring diterpene from rosemary, inhibits RANKL-induced osteoclastogenesis with an IC50 of 1.2 muM (95% CI: 0.9521-1.372 muM)",
+            "start": 207
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "IC50 of 1.2 muM (95% CI: 0.9521-1.372 muM)",
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "methyl carnosate",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Methyl carnosate inhibits RANKL-induced osteoclastogenesis, with reported IC50 1.2 muM.",
+        "uncertainties": [
+          "The experimental system/cell type is not stated in the supplied text.",
+          "Directness/mechanism of the inhibitory effect is not established by this sentence alone."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "2",
+              "15",
+              "19"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "methyl carnosate",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "RANKL-induced NF-kappaB activity",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "RNA",
+            "surface": "NFATc1 mRNA expression",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 127,
+            "passage_index": 0,
+            "quote": "Methyl carnosate, a carnosic acid derivative, attenuates osteoclastogenesis via modulation of RANKL-induced NF-kappaB activity.",
+            "start": 0
+          },
+          {
+            "end": 615,
+            "passage_index": 1,
+            "quote": "Promoter-reporter analysis further indicates attenuation of RANKL-induced NF-kappaB activity, consistent with downstream suppression of NFATc1 mRNA expression.",
+            "start": 456
+          }
+        ],
+        "experiment": {
+          "assay": "promoter-reporter analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "RANKL-induced NF-kappaB activity",
+          "intervention": "methyl carnosate",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Methyl carnosate attenuates RANKL-induced NF-kappaB activity and is associated with downstream suppression of NFATc1 mRNA expression.",
+        "uncertainties": [
+          "The sentence links NFATc1 mRNA suppression as consistent with the activity change, but does not establish a direct causal chain for NFATc1.",
+          "The experimental system/cell type is not stated in the supplied text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        207,
+        385
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        131,
+        293
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        0,
+        127
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        124
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        456,
+        615
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        295,
+        405
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

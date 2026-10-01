@@ -1,0 +1,118 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW 264.7",
+          "compartment": null,
+          "disease_setting": "bone metastatic disease",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "36"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "LMW-PTP slow isoform",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "38"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Src",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "34",
+              "35",
+              "37"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "RAW 264.7",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 682,
+            "passage_index": 1,
+            "quote": "The knockdown of the LMW-PTP slow isoform decreased osteoclastogenesis of RAW 264.7, showing less active Src.",
+            "start": 573
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "knockdown of the LMW-PTP slow isoform",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Knockdown of the LMW-PTP slow isoform decreased osteoclastogenesis in RAW 264.7 cells, with less active Src reported in the same result statement.",
+        "uncertainties": [
+          "The exact molecular form of LMW-PTP is not explicitly stated in the text beyond 'slow isoform'.",
+          "'Less active Src' is mentioned as accompanying evidence, but the passage does not specify a direct causal link between Src activity and the decreased osteoclastogenesis."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        573,
+        682
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        716,
+        835
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,240 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "cyt-PTP-epsilon",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "12"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "PTP-PEST",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "13"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "PTPoc",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "11"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "SHP-1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 759,
+            "passage_index": 1,
+            "quote": "Recent evidence implicates important regulatory roles for four PTPs (SHP-1, cyt-PTP-epsilon, PTP-PEST, and PTPoc) in osteoclasts. Cyt-PTP-epsilon, PTP-PEST, and PTP-oc are positive regulators of osteoclast activity, while SHP-1 is a negative regulator.",
+            "start": 507
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast activity",
+          "intervention": "review statement",
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e5",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The review states that several protein-tyrosine phosphatases have regulatory roles in osteoclasts, with cyt-PTP-epsilon, PTP-PEST, and PTPoc described as positive regulators of osteoclast activity and SHP-1 described as a negative regulator.",
+        "uncertainties": [
+          "The sentence bundles multiple phosphatases with different signs; this claim uses one representative positive regulator subject while preserving the broader statement in the summary.",
+          "Species is not specified in the abstract."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "13",
+              "15",
+              "17"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "PTP-oc",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "10",
+              "18"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:SRC",
+            "key": "e2",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "protein",
+            "surface": "c-Src",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "19"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "phosphotyrosine-527 residue",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 911,
+            "passage_index": 1,
+            "quote": "Of these PTPs in osteoclasts, only PTP-oc is a positive regulator of c-Src PTK through dephosphorylation of the inhibitory phosphotyrosine-527 residue.",
+            "start": 760
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "c-Src PTK",
+          "intervention": "review statement",
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": {
+          "direction": "unknown",
+          "enzyme": "e1",
+          "products": [],
+          "substrates": [
+            {
+              "entity": "e3",
+              "stoichiometry": null
+            }
+          ]
+        },
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "PTP-oc is described as a positive regulator of c-Src PTK through dephosphorylation of the inhibitory phosphotyrosine-527 residue.",
+        "uncertainties": [
+          "The text states a mechanistic basis via dephosphorylation, but no direct experimental assay is described in the abstract.",
+          "The residue is represented as a substrate-like phosphorylated tyrosine mention; no explicit product is stated."
+        ]
+      },
+      "errors": [
+        "regulatory form mismatch"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        507,
+        759
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        650,
+        760
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        760,
+        911
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        861,
+        1005
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,138 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "human bone marrow mesenchymal stem cells",
+          "compartment": "alveolar bone",
+          "disease_setting": "malocclusion",
+          "species": "rat",
+          "stage": "orthodontic treatment"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Low-intensity pulsed ultrasound",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D001862"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "alveolar bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "4000"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Lamin A/C",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "10413"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Yes-associated protein",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 150,
+            "passage_index": 0,
+            "quote": "Low-intensity pulsed ultrasound reduces alveolar bone resorption during orthodontic treatment via Lamin A/C-Yes-associated protein axis in stem cells.",
+            "start": 0
+          },
+          {
+            "end": 2113,
+            "passage_index": 1,
+            "quote": "LIPUS increased alveolar bone density and decreased vertical bone absorption in vivo.",
+            "start": 2028
+          }
+        ],
+        "experiment": {
+          "assay": "micro-computed tomography and staining of tissue sections",
+          "dose": null,
+          "duration": null,
+          "endpoint": "alveolar bone resorption / vertical bone absorption",
+          "intervention": "LIPUS",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Low-intensity pulsed ultrasound is reported to reduce alveolar bone resorption during orthodontic treatment, with the paper describing a Lamin A/C-Yes-associated protein axis in stem cells as the proposed mechanism.",
+        "uncertainties": [
+          "The title states a mechanistic axis, but the abstract does not demonstrate direct molecular causality between LIPUS, Lamin A/C, and YAP1 beyond the reported rescue/attenuation patterns.",
+          "The abstract reports 'vertical bone absorption' in vivo, which may be intended as bone resorption, but the exact wording is preserved as written."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        150
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        151
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        2028,
+        2113
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2449,
+        2547
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

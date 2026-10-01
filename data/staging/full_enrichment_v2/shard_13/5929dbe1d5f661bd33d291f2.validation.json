@@ -1,0 +1,138 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW 264.7 cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "murine",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D000077385"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "silibinin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "21943"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "CVCL:0493"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "RAW 264.7 cells",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1562,
+            "passage_index": 1,
+            "quote": "RAW 264.7 cells were pre-incubated with 1-20 microM silibinin for 5 days in the presence of RANKL. Non-toxic silibinin markedly attenuated RANK transcription and intracellular adhesion molecule-1 expression elevated by RANKL, thereby suppressing the differentiation of macrophages to multi-nucleated osteoclasts.",
+            "start": 1250
+          },
+          {
+            "end": 1666,
+            "passage_index": 1,
+            "quote": "It was also found that silibinin retarded tartrate-resistant acid phosphatase and cathepsin K induction",
+            "start": 1563
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "1-20 microM",
+          "duration": "5 days",
+          "endpoint": "differentiation of macrophages to multi-nucleated osteoclasts",
+          "intervention": "silibinin",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In murine RAW 264.7 macrophages, silibinin treatment in the presence of RANKL suppressed differentiation toward multinucleated osteoclasts and reduced RANKL-induced osteoclast markers.",
+        "uncertainties": [
+          "The text also reports reduced RANK transcription, ICAM-1 expression, TRAP induction, cathepsin K induction, and MMP-9 activity, but these are not separately normalized into distinct claims here.",
+          "Existing-node suggestion for RANKL may refer to protein/gene form ambiguously; retained as ambiguous."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1250,
+        1562
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1342,
+        1520
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1563,
+        1666
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1520,
+        1615
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

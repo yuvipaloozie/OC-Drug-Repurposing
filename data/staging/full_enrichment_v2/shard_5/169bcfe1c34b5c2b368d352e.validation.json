@@ -1,0 +1,235 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "gingival crevicular fluid and saliva",
+          "disease_setting": null,
+          "species": "human",
+          "stage": "during fixed orthodontic treatment"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "fixed orthodontic forces",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [
+              "19",
+              "23",
+              "25",
+              "28",
+              "29"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "CTX",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "PINP",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1425,
+            "passage_index": 1,
+            "quote": "GCF and salivary CTX levels demonstrated a significant increase from T0 to T1, while PINP levels exhibited a substantial rise from T1 to T2 (p < 0.001).",
+            "start": 1273
+          },
+          {
+            "end": 1934,
+            "passage_index": 1,
+            "quote": "Fixed orthodontic forces elicit sequential resorptive and formative responses in both GCF and saliva.",
+            "start": 1833
+          }
+        ],
+        "experiment": {
+          "assay": "enzyme-linked immunosorbent assay",
+          "dose": null,
+          "duration": "T0 to T1; T1 to T2",
+          "endpoint": "CTX and PINP levels",
+          "intervention": "fixed orthodontic treatment",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e4"
+        },
+        "summary": "Fixed orthodontic forces were reported to elicit sequential resorptive and formative responses in the sampled fluids, with CTX increasing early and PINP rising later.",
+        "uncertainties": [
+          "The concluding statement is a broad interpretation rather than a direct molecular mechanism.",
+          "The passage does not establish a specific osteoclast-specific pathway or direct biochemical interaction."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "gingival crevicular fluid and saliva",
+          "disease_setting": null,
+          "species": "human",
+          "stage": "during fixed orthodontic treatment"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "21",
+              "24",
+              "26",
+              "27",
+              "30",
+              "31"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "VDBP",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "19",
+              "23",
+              "25",
+              "28",
+              "29"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "CTX",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "PINP",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1680,
+            "passage_index": 1,
+            "quote": "Higher VDBP levels in both fluids were found to be negatively associated with increases in CTX and positively associated with increases in PINP (p < 0.05).",
+            "start": 1525
+          }
+        ],
+        "experiment": {
+          "assay": "enzyme-linked immunosorbent assay",
+          "dose": null,
+          "duration": "before treatment, 24-48 h, and day 40",
+          "endpoint": "CTX, PINP and VDBP levels in gingival crevicular fluid and saliva",
+          "intervention": "fixed orthodontic treatment",
+          "outcome_change": "other",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In gingival crevicular fluid and saliva during fixed orthodontic treatment, higher VDBP levels were negatively associated with CTX increases and positively associated with PINP increases.",
+        "uncertainties": [
+          "The claim is correlational; no causal direction is established.",
+          "CTX and PINP are treated as text-supported biomarkers here, but their molecular forms are not specified in the passage."
+        ]
+      },
+      "errors": [
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1525,
+        1680
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1736,
+        1853
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1273,
+        1425
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1001,
+        1120
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1833,
+        1934
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2030,
+        2135
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

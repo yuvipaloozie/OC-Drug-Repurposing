@@ -1,0 +1,187 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "36"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Saracatinib",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 258,
+            "passage_index": 1,
+            "quote": "Saracatinib (AZD0530), an oral Src kinase inhibitor, prevents oestrogen resistance in animal models and reduces osteoclast activity.",
+            "start": 126
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Saracatinib is described as reducing osteoclast activity in animal models.",
+        "uncertainties": [
+          "The sentence is background context rather than a direct osteoclast experiment in this trial.",
+          "Species/model details for the osteoclast activity statement are not specified."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "no_effect",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "metastatic breast cancer",
+          "species": "9606",
+          "stage": "post-menopausal women"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "36",
+              "38",
+              "44",
+              "50",
+              "51",
+              "52",
+              "56"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Saracatinib",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "59"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone metastases",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1507,
+            "passage_index": 1,
+            "quote": "There was no observed beneficial effect on bone metastases.",
+            "start": 1448
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone metastases",
+          "intervention": "saracatinib addition to aromatase inhibitors",
+          "outcome_change": "no_detected_change",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In the clinical trial, saracatinib had no observed beneficial effect on bone metastases.",
+        "uncertainties": [
+          "The passage states no observed beneficial effect, which does not establish a mechanistic anti- or pro-osteoclast effect.",
+          "The exact bone-metastasis assay or measurement method is not stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        126,
+        258
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        270,
+        402
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1448,
+        1507
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1592,
+        1651
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

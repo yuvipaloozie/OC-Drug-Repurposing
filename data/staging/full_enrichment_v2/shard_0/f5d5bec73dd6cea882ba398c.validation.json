@@ -1,0 +1,218 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D001639"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "natural bicarbonate water",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D001862"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 121,
+            "passage_index": 1,
+            "quote": "<b>Background/Objectives</b>: Drinking natural bicarbonate water (NBW) has been associated with decreased bone resorption",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Drinking natural bicarbonate water has been associated with decreased bone resorption.",
+        "uncertainties": [
+          "Association is stated in the background, not as a tested causal result in this abstract."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "urine",
+          "disease_setting": null,
+          "species": "rats",
+          "stage": "10-month-old female"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D001639"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "natural bicarbonate water",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D002118",
+              "MESH:D003404"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "urinary calcium/creatinine ratio",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "10116"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "rats",
+            "taxon": "Rattus norvegicus"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 486,
+            "passage_index": 1,
+            "quote": "Twenty 10-month-old female Sprague Dawley rats were randomly allocated to two experimental groups; one received purified water (PW) and the other was administered NBW over a three-month intervention period.",
+            "start": 280
+          },
+          {
+            "end": 1371,
+            "passage_index": 1,
+            "quote": "The NBW group demonstrated a statistical tendency toward lower urinary calcium/creatinine ratio compared to the PW group.",
+            "start": 1250
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": "three-month intervention period",
+          "endpoint": "urinary calcium/creatinine ratio",
+          "intervention": "NBW vs purified water",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In rats, the NBW group showed a statistical tendency toward a lower urinary calcium/creatinine ratio compared with the purified-water group.",
+        "uncertainties": [
+          "The text reports only a statistical tendency toward lower ratio, not a definitive significant decrease."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        121
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        164,
+        243
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        280,
+        486
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        486,
+        549
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1250,
+        1371
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1471,
+        1562
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,220 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteocytes",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "31"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Rheb1",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "35"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "Tnfsf11",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1217,
+            "passage_index": 1,
+            "quote": "the higher apoptotic ratio in Rheb1-null osteocytes could promote Tnfsf11 expression and lead to an increase in osteoclasts",
+            "start": 1094
+          }
+        ],
+        "experiment": {
+          "assay": "not_stated",
+          "dose": null,
+          "duration": null,
+          "endpoint": "Tnfsf11 expression",
+          "intervention": "Rheb1-null / Rheb1 deletion",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Loss of Rheb1 in osteocytes was reported to promote Tnfsf11 expression, with a proposed link to increased osteoclasts.",
+        "uncertainties": [
+          "The text says 'could promote', so the Tnfsf11 link is presented as a possible mechanism rather than a fully demonstrated direct effect.",
+          "Osteoclast increase is mentioned in the same sentence, but the primary regulatory object here is Tnfsf11 expression."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoblasts/osteocytes",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "38"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Rheb1",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1314,
+            "passage_index": 1,
+            "quote": "indicating increased bone resorption activity in the KO mice. The findings confirmed that Rheb1",
+            "start": 1219
+          },
+          {
+            "end": 1427,
+            "passage_index": 1,
+            "quote": "deletion in osteoblasts/osteocytes led to osteopenia due to impaired bone formation and enhanced bone resorption",
+            "start": 1315
+          }
+        ],
+        "experiment": {
+          "assay": "tartrate-resistant acid phosphatase staining; microcomputed tomography analysis; histomorphometry",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption / osteoclasts",
+          "intervention": "Rheb1 deletion",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e4",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Rheb1 deletion in osteoblasts/osteocytes was reported to increase osteoclasts and enhance bone resorption.",
+        "uncertainties": [
+          "The passage links increased bone resorption with increased osteoclasts, but does not isolate a direct molecular mechanism from Rheb1 to osteoclasts.",
+          "The evidence spans a summary statement and a conclusion; the osteoclast increase is implied rather than quantified in the quoted text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1094,
+        1217
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1219,
+        1338
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1219,
+        1314
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1354,
+        1442
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1315,
+        1427
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1442,
+        1515
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

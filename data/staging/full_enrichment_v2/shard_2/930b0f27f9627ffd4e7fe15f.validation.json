@@ -1,0 +1,215 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "peri-implantitis",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "24",
+              "25"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "senolytics (Dasatinib and Quercetin)",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "26",
+              "27"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "senescence markers",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 865,
+            "passage_index": 1,
+            "quote": "After the administration of senolytics, the number of senescence markers decreased and implant detachment was inhibited.",
+            "start": 745
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "senescence markers",
+          "intervention": "administration of senolytics (Dasatinib and Quercetin)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In the rat peri-implantitis model, administration of senolytics (dasatinib and quercetin) decreased senescence markers.",
+        "uncertainties": [
+          "The sentence reports senescence markers collectively; the specific molecular form of p19/p21/p16 is not resolved from the text.",
+          "The exact contribution of each senolytic compound is not separated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "peri-implantitis",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "24",
+              "25"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "senolytics (Dasatinib and Quercetin)",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "implant detachment",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "23",
+              "29"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "implant loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 865,
+            "passage_index": 1,
+            "quote": "After the administration of senolytics, the number of senescence markers decreased and implant detachment was inhibited.",
+            "start": 745
+          },
+          {
+            "end": 1037,
+            "passage_index": 1,
+            "quote": "This study suggests that senescent cells aggravate peri-implantitis and senolytic administration latently reduces implant loss by inhibiting senescence-related mechanisms.",
+            "start": 866
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": "24 days",
+          "endpoint": "implant detachment / implant loss",
+          "intervention": "administration of senolytics (Dasatinib and Quercetin)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In the rat peri-implantitis model, administration of senolytics inhibited implant detachment and reduced implant loss.",
+        "uncertainties": [
+          "The text gives an explicit inhibition of implant detachment and a suggestive statement about reduced implant loss; these are related but not identical endpoints.",
+          "The duration is reported for implant detachment occurrence, not necessarily for the treatment window."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        745,
+        865
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        658,
+        777
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        745,
+        865
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        658,
+        777
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        866,
+        1037
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        778,
+        948
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

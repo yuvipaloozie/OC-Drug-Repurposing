@@ -1,0 +1,508 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "intracellular",
+          "disease_setting": "osteoporosis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "37",
+              "41",
+              "44",
+              "49",
+              "53",
+              "57"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "EGT",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "34",
+              "46",
+              "59"
+            ],
+            "existing_node_id": "CHEBI:26523",
+            "key": "e3",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "compound",
+            "surface": "ROS",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "47"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "HO-1",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "48"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Catalase",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 664,
+            "passage_index": 1,
+            "quote": "reducing intracellular ROS levels by upregulating key antioxidant enzymes",
+            "start": 591
+          },
+          {
+            "end": 693,
+            "passage_index": 1,
+            "quote": "HO-1 and Catalase",
+            "start": 676
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "intracellular ROS levels",
+          "intervention": "EGT",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "EGT reduces intracellular ROS levels, with the text attributing this to upregulation of HO-1 and Catalase.",
+        "uncertainties": [
+          "The sentence states HO-1 and Catalase upregulation as the likely mechanism, but it does not separately quantify those changes here.",
+          "ROS is annotated as a chemical, but the exact molecular species is not further specified."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "in vitro",
+          "disease_setting": "osteoporosis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "37",
+              "41",
+              "44",
+              "49",
+              "53",
+              "57"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "EGT",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "50"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Trap",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "51"
+            ],
+            "existing_node_id": null,
+            "key": "e7",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "c-Fos",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e8",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Ctsk",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e9",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "MAPK signaling",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 815,
+            "passage_index": 1,
+            "quote": "downregulate the expression of critical osteoclast-specific proteins such as Trap, c-Fos, and Ctsk",
+            "start": 717
+          },
+          {
+            "end": 853,
+            "passage_index": 1,
+            "quote": "through attenuation of MAPK signaling",
+            "start": 816
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "expression of Trap, c-Fos, and Ctsk",
+          "intervention": "EGT",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e6",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "EGT downregulates expression of osteoclast-specific markers Trap, c-Fos, and Ctsk, reported as occurring through attenuation of MAPK signaling.",
+        "uncertainties": [
+          "The text bundles several markers together; only one regulatory edge is represented here.",
+          "The MAPK relation is a stated mechanistic attribution, but direct causality is not demonstrated in the abstract alone."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "in vitro",
+          "disease_setting": "osteoporosis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "37",
+              "41",
+              "44",
+              "49",
+              "53",
+              "57"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "EGT",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "45"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-induced podosome belt formation and osteoclast development",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 470,
+            "passage_index": 1,
+            "quote": "EGT",
+            "start": 467
+          },
+          {
+            "end": 515,
+            "passage_index": 1,
+            "quote": "RANKL",
+            "start": 510
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "podosome belt formation and osteoclast development",
+          "intervention": "EGT",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Ergothioneine (EGT) suppresses RANKL-induced osteoclast development/podosome belt formation in vitro.",
+        "uncertainties": [
+          "The text combines podosome belt formation and osteoclast development into one reported outcome, so the exact object granularity is ambiguous.",
+          "Directness is not established beyond the reported suppression result."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone",
+          "disease_setting": "ovariectomized osteoporosis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "37",
+              "41",
+              "44",
+              "49",
+              "53",
+              "57"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "EGT",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "54"
+            ],
+            "existing_node_id": null,
+            "key": "e10",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "trabecular bone loss",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1180,
+            "passage_index": 1,
+            "quote": "EGT",
+            "start": 1176
+          },
+          {
+            "end": 915,
+            "passage_index": 1,
+            "quote": "bone loss",
+            "start": 906
+          },
+          {
+            "end": 927,
+            "passage_index": 1,
+            "quote": "OVX mice",
+            "start": 919
+          }
+        ],
+        "experiment": {
+          "assay": "micro-CT imaging",
+          "dose": null,
+          "duration": null,
+          "endpoint": "trabecular bone loss",
+          "intervention": "EGT",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c4",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e10",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In ovariectomized mice, EGT protects against trabecular bone loss, possibly by reducing osteoclast numbers.",
+        "uncertainties": [
+          "The reduction in osteoclast numbers is presented as a possible explanation, not a directly measured causal step in the same sentence.",
+          "OVX is used as a model context; the exact disease label is not explicitly expanded in the text."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        510,
+        515
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        581,
+        586
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        591,
+        664
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        662,
+        729
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        676,
+        693
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        747,
+        760
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        717,
+        815
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        843,
+        922
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        816,
+        853
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        928,
+        958
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c4",
+      "corrected_offsets": [
+        906,
+        915
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        977,
+        986
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c4",
+      "corrected_offsets": [
+        919,
+        927
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        990,
+        999
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

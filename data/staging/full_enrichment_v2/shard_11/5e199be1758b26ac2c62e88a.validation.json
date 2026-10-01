@@ -1,0 +1,252 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow macrophages",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "44",
+              "48",
+              "52",
+              "59"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Fu/Pec",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "45",
+              "46",
+              "53",
+              "60"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts differentiated from bone marrow macrophages",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "TRAP activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 667,
+            "passage_index": 1,
+            "quote": "Fu/Pec) powerfully inhibited the induction",
+            "start": 625
+          },
+          {
+            "end": 860,
+            "passage_index": 1,
+            "quote": "in osteoclasts differentiated from bone marrow macrophages (BMMs) by the receptor for activation of nuclear factor-kappaB ligand (RANKL).",
+            "start": 723
+          },
+          {
+            "end": 1286,
+            "passage_index": 1,
+            "quote": "Fu/Pec suppressed RANKL-induced osteoclasts differentiation from BMMs",
+            "start": 1217
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP activity assay",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation; TRAP activity",
+          "intervention": "Fu/Pec",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Fu/Pec inhibited RANKL-induced osteoclast differentiation from bone marrow macrophages and reduced TRAP activity in osteoclasts.",
+        "uncertainties": [
+          "The passage reports both inhibited TRAP induction and suppressed osteoclast differentiation; these are related but distinct readouts.",
+          "Species is not stated in the extracted text for this claim."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "BMMs; osteoclasts",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "44",
+              "48",
+              "52",
+              "59"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Fu/Pec",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "54",
+              "55",
+              "56",
+              "57",
+              "58"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "NFATc1, TRAP, OSCAR, RANK, Src, c-Fos and Mitf",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1608,
+            "passage_index": 1,
+            "quote": "The effects of these fractions on TRAP and alkaline phosphatase (ALP) activities were then examined in differentiated osteoclasts and MC3T3-E1 osteoblasts, respectively. Interestingly, 50-300 kDa Fu/Pec suppressed RANKL-induced osteoclasts differentiation from BMMs but did not synergistically enhance osteoblasts differentiation induced by osteogenic agents. In addition, this fraction inhibited the expressions of NFATc1, TRAP, OSCAR, and RANK, which are all key transcriptional factors involved in osteoclast differentiation, and those of Src, c-Fos and Mitf, as determined by RT-PCR.",
+            "start": 1021
+          }
+        ],
+        "experiment": {
+          "assay": "RT-PCR",
+          "dose": null,
+          "duration": null,
+          "endpoint": "gene expression of osteoclast differentiation markers",
+          "intervention": "50-300 kDa Fu/Pec",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Fu/Pec reduced expression of osteoclast differentiation markers including NFATc1, TRAP, OSCAR, RANK, Src, c-Fos, and Mitf.",
+        "uncertainties": [
+          "The object groups several genes into one extracted expression complex because the passage reports them as a list.",
+          "The exact cell context for the RT-PCR result is described broadly as differentiated osteoclasts; the species is not stated in the extracted text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        625,
+        667
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        776,
+        816
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        723,
+        860
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        917,
+        1043
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1217,
+        1286
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1128,
+        1197
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1021,
+        1608
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1209,
+        1777
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

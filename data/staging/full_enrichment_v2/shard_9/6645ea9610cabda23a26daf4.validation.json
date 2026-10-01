@@ -1,0 +1,220 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "3",
+              "24",
+              "28",
+              "32",
+              "37"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Lefty2",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "4",
+              "30",
+              "31",
+              "33"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-induced osteoclast differentiation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 81,
+            "passage_index": 0,
+            "quote": "Lefty2 prevents RANKL-induced bone loss by inhibiting osteoclast differentiation.",
+            "start": 0
+          },
+          {
+            "end": 524,
+            "passage_index": 1,
+            "quote": "In the present study, we show that Lefty2 dramatically inhibits receptor activator of nuclear factor kappa B ligand (RANKL)-induced osteoclast differentiation.",
+            "start": 365
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "RANKL-induced osteoclast differentiation",
+          "intervention": "Lefty2",
+          "outcome_change": "decreased",
+          "perturbation_type": "gain_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Lefty2 inhibited RANKL-induced osteoclast differentiation.",
+        "uncertainties": [
+          "The text does not specify whether the inhibitory effect is direct or indirect.",
+          "The molecular form of Lefty2 is inferred from the text and provider gene annotation, but the passage itself discusses it as a ligand."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "bone loss",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "3",
+              "24",
+              "28",
+              "32",
+              "37"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Lefty2",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "5",
+              "34"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-induced bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 753,
+            "passage_index": 1,
+            "quote": "Furthermore, administration of exogenous Lefty2 prevented",
+            "start": 696
+          },
+          {
+            "end": 786,
+            "passage_index": 1,
+            "quote": " RANKL-induced bone loss in mice.",
+            "start": 753
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "RANKL-induced bone loss",
+          "intervention": "administration of exogenous Lefty2",
+          "outcome_change": "decreased",
+          "perturbation_type": "gain_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Exogenous Lefty2 prevented RANKL-induced bone loss in mice.",
+        "uncertainties": [
+          "The passage does not provide dose, route, or timing for exogenous Lefty2 administration.",
+          "The mechanism linking Lefty2 to bone loss prevention is not fully specified in the quoted text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        365,
+        524
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        173,
+        260
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        696,
+        753
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        444,
+        502
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        753,
+        786
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        502,
+        580
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,213 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "preosteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "24",
+              "25",
+              "23",
+              "19"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "PF-3758309",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "preosteoclasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 665,
+            "passage_index": 1,
+            "quote": "Here we investigated the possibility of using the anticancer p21-activated kinase 4 (PAK4)-targeted inhibitor PF-3758309 to treat osteoclast-mediated disorders. PAK4 was highly expressed in bone marrow cells and was phosphorylated during their differentiation into osteoclasts, and osteoclast differentiation was significantly inhibited by the dominant negative form of PAK4 and by PF-3758309. Specifically, PF-3758309 significantly inhibited the fusion of preosteoclasts, the podosome formation, and the migration of preosteoclasts.",
+            "start": 132
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation; preosteoclast fusion, podosome formation, and migration",
+          "intervention": "PF-3758309",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "PF-3758309 treatment inhibited osteoclast differentiation and reduced preosteoclast fusion, podosome formation, and migration.",
+        "uncertainties": [
+          "Offsets are best-effort and may need validation against the source passage.",
+          "The passage also describes in vivo antiresorptive activity, but the specific assay details are not stated here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": "differentiation into osteoclasts"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "17",
+              "18",
+              "21",
+              "22",
+              "29",
+              "30"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "dominant negative form of PAK4",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "1",
+              "17",
+              "18",
+              "21",
+              "22",
+              "29",
+              "30"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "PAK4",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 506,
+            "passage_index": 1,
+            "quote": "PAK4 was highly expressed in bone marrow cells and was phosphorylated during their differentiation into osteoclasts, and osteoclast differentiation was significantly inhibited by the dominant negative form of PAK4",
+            "start": 293
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation",
+          "intervention": "dominant negative form of PAK4",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e6",
+          "sign": "negative",
+          "subject": "e4"
+        },
+        "summary": "A dominant negative form of PAK4 inhibited osteoclast differentiation.",
+        "uncertainties": [
+          "The text also states that PAK4 was highly expressed and phosphorylated during differentiation, but that is a separate background observation rather than the perturbation outcome.",
+          "Offsets are best-effort and may need validation against the source passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        132,
+        665
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        338,
+        567
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        293,
+        506
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        354,
+        494
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

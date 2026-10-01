@@ -1,0 +1,192 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclast",
+          "compartment": "bone",
+          "disease_setting": null,
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "71"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:SRC",
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "c-Src",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1361,
+            "passage_index": 1,
+            "quote": "It also impaired osteoclast bone resorption",
+            "start": 1318
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast bone resorption",
+          "intervention": "c-Src suppression",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "c-Src suppression impaired osteoclast bone resorption.",
+        "uncertainties": [
+          "The sentence states impairment 'both directly and by reducing expression by osteoblasts' but does not separate the two mechanisms experimentally.",
+          "The molecular form of c-Src is inferred from the text and provider annotations, not explicitly from a species-specific protein name in the passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoblast",
+          "compartment": "bone",
+          "disease_setting": null,
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "71"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:SRC",
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "c-Src",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "67"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:IL1B",
+            "key": "e2",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "interleukin-1beta",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "68"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:IL6",
+            "key": "e3",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "interleukin-6",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1487,
+            "passage_index": 1,
+            "quote": "It also impaired osteoclast bone resorption both directly and by reducing expression by osteoblasts of the osteoclastogenic cytokines interleukin-1beta and interleukin-6",
+            "start": 1318
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "expression of osteoclastogenic cytokines interleukin-1beta and interleukin-6",
+          "intervention": "c-Src suppression",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "c-Src suppression reduced osteoblast expression of the osteoclastogenic cytokines interleukin-1beta and interleukin-6.",
+        "uncertainties": [
+          "The passage reports reduced expression of two cytokines together; it does not specify whether IL1B and IL6 were measured separately or to what extent each changed.",
+          "The claim concerns osteoblast expression, not osteoclast expression."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1318,
+        1361
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1543,
+        1593
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1318,
+        1487
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1543,
+        1669
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

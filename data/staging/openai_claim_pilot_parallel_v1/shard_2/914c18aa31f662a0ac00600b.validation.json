@@ -1,0 +1,419 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoctes",
+          "compartment": "joint",
+          "disease_setting": "osteoarthritis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "H3K18la",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "29",
+              "43"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "OA joint osteoclasts",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone mineral density",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "35"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "subchondral bone destruction",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 706,
+            "passage_index": 1,
+            "quote": "elevated H3K18la in OA joint osteoclasts, associated with reduced bone mineral density and aggravated subchondral bone destruction.",
+            "start": 575
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "H3K18la in OA joint osteoclasts",
+          "intervention": "mouse OA model (anterior cruciate ligament transection) and RAW264.7 cell experiments",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In the OA mouse/cell context, elevated H3K18la was observed in joint osteoclasts and was associated with reduced bone mineral density and aggravated subchondral bone destruction.",
+        "uncertainties": [
+          "H3K18la molecular form is not explicitly defined in the text.",
+          "The quoted span contains association language, so causality between H3K18la and bone phenotypes is not established by this sentence alone."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 cell experiments",
+          "compartment": null,
+          "disease_setting": "osteoarthritis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "38"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "33",
+              "37",
+              "39"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "lactate",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e7",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "H3K18la",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "32",
+              "40",
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e8",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "oxmacid",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e9",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 883,
+            "passage_index": 1,
+            "quote": "Analysis of TRAP and lactate indicated that RANKL-induced osteoclast differentiation increased lactate production, enhancing H3K18la; oxmacid inhibited both of these processes.",
+            "start": 707
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP and lactate",
+          "dose": null,
+          "duration": null,
+          "endpoint": "lactate production and H3K18la",
+          "intervention": "RANKL-induced osteoclast differentiation; oxmacid-mediated lactate inhibition",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e6",
+          "sign": "positive",
+          "subject": "e5"
+        },
+        "summary": "RANKL-induced osteoclast differentiation increased lactate production and H3K18la, and oxmacid inhibited both processes.",
+        "uncertainties": [
+          "The sentence links lactate production and H3K18la but does not specify whether oxmacid acts directly on lactate or on an upstream process.",
+          "RANKL is tagged as a gene, but the text context is protein-level signaling."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoarthritis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e7",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "H3K18la",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "36"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:ACP5",
+            "key": "e10",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "acid phosphatase 5",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 980,
+            "passage_index": 1,
+            "quote": "H3K18la was enriched at the acid phosphatase 5 promoter and directly promoted its transcription.",
+            "start": 884
+          }
+        ],
+        "experiment": {
+          "assay": "CUT&Tag / promoter enrichment",
+          "dose": null,
+          "duration": null,
+          "endpoint": "transcription of acid phosphatase 5",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "direct",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e10",
+          "sign": "positive",
+          "subject": "e7"
+        },
+        "summary": "H3K18la was enriched at the acid phosphatase 5 promoter and promoted its transcription.",
+        "uncertainties": [
+          "The text names the promoter of acid phosphatase 5, but the sentence does not explicitly distinguish gene versus protein beyond the provider annotation.",
+          "H3K18la molecular form is not explicitly defined."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "joint",
+          "disease_setting": "osteoarthritis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "32",
+              "40",
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e8",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "oxmacid",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e11",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast numbers",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "35",
+              "44"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "subchondral bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1082,
+            "passage_index": 1,
+            "quote": "Local oxmacid injection in OA mice decreased osteoclast numbers and alleviated subchondral bone loss.",
+            "start": 981
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast numbers and subchondral bone loss",
+          "intervention": "Local oxmacid injection",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c4",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e11",
+          "sign": "negative",
+          "subject": "e8"
+        },
+        "summary": "Local oxmacid injection in OA mice decreased osteoclast numbers and alleviated subchondral bone loss.",
+        "uncertainties": [
+          "The quote reports a combined outcome; the specific contribution to each phenotype is not separated in the text.",
+          "The oxmacid identifier is unresolved in the provider data."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        575,
+        706
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        630,
+        778
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        707,
+        883
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        788,
+        942
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        884,
+        980
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        943,
+        1037
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c4",
+      "corrected_offsets": [
+        981,
+        1082
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1038,
+        1171
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

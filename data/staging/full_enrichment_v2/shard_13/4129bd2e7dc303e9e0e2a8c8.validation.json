@@ -1,0 +1,226 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ovariectomized mice",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "28",
+              "29",
+              "32",
+              "33",
+              "34",
+              "35",
+              "37",
+              "38",
+              "40",
+              "41",
+              "42",
+              "43"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "MC-CREVs",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "27",
+              "31",
+              "36",
+              "45"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "ovariectomized mice",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1026,
+            "passage_index": 1,
+            "quote": "Systemic administration of MC-CREVs restored trabecular bone mineral density, bone volume, and trabecular thickness in ovariectomized mice, while the number of osteoclasts on the trabecular bone surface was decreased.",
+            "start": 809
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "trabecular bone mineral density, bone volume, trabecular thickness; osteoclast number",
+          "intervention": "Systemic administration of MC-CREVs",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Systemic administration of MC-CREVs restored trabecular bone measures and decreased osteoclast number in ovariectomized mice.",
+        "uncertainties": [
+          "The passage combines multiple in vivo outcomes in one sentence; the claim summarizes them as a single phenotypic effect.",
+          "MC-CREVs are described as extracellular vesicles, but the molecular form is not explicitly standardized in the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "28",
+              "29",
+              "32",
+              "33",
+              "34",
+              "35",
+              "37",
+              "38",
+              "40",
+              "41",
+              "42",
+              "43"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "MC-CREVs",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast formation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast marker gene expression",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "39"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "e4",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1192,
+            "passage_index": 1,
+            "quote": "In vitro experiments, MC-CREVs suppressed osteoclast formation and osteoclast marker gene expression induced by RANKL more effectively than MT-EVs in RAW264.7 cells.",
+            "start": 1027
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro experiments",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast formation and osteoclast marker gene expression",
+          "intervention": "MC-CREVs",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In RAW264.7 cells, MC-CREVs suppressed RANKL-induced osteoclast formation and osteoclast marker gene expression more effectively than MT-EVs.",
+        "uncertainties": [
+          "The sentence states suppression relative to MT-EVs; the claim records the direct observed decrease caused by MC-CREVs and does not encode the comparison as a separate relation.",
+          "RANKL is annotated as a gene in the packet, but the regulatory context implies a ligand/protein role; this mapping remains provider-only."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        809,
+        1026
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        821,
+        941
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1027,
+        1192
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        941,
+        1131
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

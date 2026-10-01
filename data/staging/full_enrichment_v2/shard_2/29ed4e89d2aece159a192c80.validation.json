@@ -1,0 +1,185 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "fracture",
+          "species": "mouse",
+          "stage": "early fracture healing"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "50"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "heme",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "51"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "27-hydroxycholesterol",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1561,
+            "passage_index": 1,
+            "quote": "communication involving heme and 27-hydroxycholesterol as relatively reduced",
+            "start": 1485
+          }
+        ],
+        "experiment": {
+          "assay": "integrated public mouse omics datasets",
+          "dose": null,
+          "duration": "early fracture healing",
+          "endpoint": "communication involving heme and 27-hydroxycholesterol",
+          "intervention": "fracture",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In the fracture repair atlas, communication involving heme and 27-hydroxycholesterol was prioritized as relatively reduced.",
+        "uncertainties": [
+          "The sentence describes prioritized communication patterns, not a direct biochemical or causal relationship between heme and 27-hydroxycholesterol.",
+          "The directionality between the two chemicals is not stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "macrophages",
+          "compartment": null,
+          "disease_setting": "fracture",
+          "species": "mouse",
+          "stage": "days 1 to 7 post-injury"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "17132"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Maf",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "16658"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:MAFB",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "Mafb",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "M2-like cells",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 967,
+            "passage_index": 1,
+            "quote": "with Maf/Mafb enriched in M2-like cells",
+            "start": 937
+          }
+        ],
+        "experiment": {
+          "assay": "sc/snRNA-seq datasets with multi-algorithm consensus annotation",
+          "dose": null,
+          "duration": "days 1 to 7 post-injury",
+          "endpoint": "macrophage polarization state",
+          "intervention": "fracture",
+          "outcome_change": "other",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In mouse fracture macrophages, Maf and Mafb were enriched in M2-like cells and associated with the M2-like macrophage state.",
+        "uncertainties": [
+          "The text reports enrichment/association, not causation.",
+          "Mafb may refer to the gene or protein; the text does not explicitly resolve molecular form beyond the gene annotation.",
+          "The suggested existing node is unverified and may not match the intended entity."
+        ]
+      },
+      "errors": [
+        "invented annotation ID",
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1485,
+        1561
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1575,
+        1640
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

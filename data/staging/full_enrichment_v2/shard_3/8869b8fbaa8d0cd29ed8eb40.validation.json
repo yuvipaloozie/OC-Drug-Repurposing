@@ -1,0 +1,213 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "diabetic osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "4"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Corylin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "5"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "diabetic osteoporosis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "7"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RAG1",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 88,
+            "passage_index": 0,
+            "quote": "Corylin ameliorates diabetic osteoporosis by inhibiting inflammation via targeting RAG1.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "amelioration of diabetic osteoporosis",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Corylin is reported to ameliorate diabetic osteoporosis, with the title also stating that this occurs via inhibition of inflammation and targeting RAG1.",
+        "uncertainties": [
+          "The title compresses multiple mechanisms; the specific causal contribution of inflammation and RAG1 is not separated in this sentence.",
+          "Species and experimental system are not stated in the title."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "4"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Corylin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "7"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RAG1",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 88,
+            "passage_index": 0,
+            "quote": "via targeting RAG1.",
+            "start": 69
+          },
+          {
+            "end": 88,
+            "passage_index": 0,
+            "quote": "Corylin ameliorates diabetic osteoporosis by inhibiting inflammation via targeting RAG1.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "targeting/binding",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "direct",
+          "effect_level": "binding",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The title states that corylin targets RAG1, indicating a direct binding association between corylin and RAG1.",
+        "uncertainties": [
+          "'Targeting' is taken as a binding/interaction statement from the title; no assay details are provided.",
+          "The molecular form of RAG1 is annotated as gene, but the title does not specify protein versus gene product."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        88
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        87
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        69,
+        88
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        69,
+        87
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        0,
+        88
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        87
+      ],
+      "passage_index": 0
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,181 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "34"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Vitamin D receptor",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoblast-osteoclast coupling",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 609,
+            "passage_index": 1,
+            "quote": "Vitamin D receptor (VDR) signaling regulates myogenic differentiation, neuromuscular junction integrity, osteoblast-osteoclast coupling,",
+            "start": 473
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Vitamin D receptor (VDR) signaling is described as regulating osteoblast-osteoclast coupling.",
+        "uncertainties": [
+          "The statement is a review-level background assertion, not a specific experiment.",
+          "'Osteoblast-osteoclast coupling' is a process rather than a molecular entity, so the exact mechanistic target remains unresolved."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "36"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "VDR",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "38"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "skeletal fragility",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 881,
+            "passage_index": 1,
+            "quote": "Disruption of VDR signaling promotes muscle atrophy, skeletal fragility,",
+            "start": 809
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "skeletal fragility",
+          "intervention": "Disruption of VDR signaling",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Disruption of VDR signaling is reported to promote skeletal fragility.",
+        "uncertainties": [
+          "The passage summarizes a general relationship; no specific experimental system, species, or assay is given.",
+          "The text does not specify whether the effect is direct or mediated through other pathways."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        473,
+        609
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        567,
+        626
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        809,
+        881
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        917,
+        968
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

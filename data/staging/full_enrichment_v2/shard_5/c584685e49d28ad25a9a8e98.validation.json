@@ -1,0 +1,193 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "bone and cartilage diseases",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "25"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "mitochondrial DNA (mtDNA) abnormalities",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "26"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone and cartilage diseases",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 546,
+            "passage_index": 1,
+            "quote": "Recent studies have indicated an association between mitochondrial DNA (mtDNA) abnormalities and the development of bone and cartilage diseases.",
+            "start": 402
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The review states that mitochondrial DNA abnormalities are associated with the development of bone and cartilage diseases.",
+        "uncertainties": [
+          "This is a review statement of association, not a causal experiment.",
+          "The text does not specify a particular osteoclast assay or cell type."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "fracture",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "mtDNA leakage",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "31",
+              "33"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "inflammatory cytokines",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "32"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "fracture healing",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1396,
+            "passage_index": 1,
+            "quote": "mtDNA leakage induces inflammatory cytokines via interferon-related pathways and delays fracture healing.",
+            "start": 1291
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "inflammatory cytokines",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The review states that mtDNA leakage induces inflammatory cytokines via interferon-related pathways and delays fracture healing.",
+        "uncertainties": [
+          "The passage does not identify the specific cytokines.",
+          "The causal link to fracture healing is stated in the same sentence but not separately mechanistically detailed."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        402,
+        546
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        454,
+        575
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1291,
+        1396
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1307,
+        1408
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

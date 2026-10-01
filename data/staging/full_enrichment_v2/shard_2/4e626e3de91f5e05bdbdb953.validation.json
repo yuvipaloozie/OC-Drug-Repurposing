@@ -1,0 +1,347 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "glucocorticoid-induced bone loss",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D003907"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "DEX",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone-degrading capacity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 845,
+            "passage_index": 1,
+            "quote": "While the steroid prolonged longevity of osteoclasts, their bone-degrading capacity was suppressed.",
+            "start": 746
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast longevity",
+          "intervention": "dexamethasone",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Dexamethasone prolonged osteoclast longevity but suppressed their bone-degrading capacity.",
+        "uncertainties": [
+          "The quoted sentence combines two outcomes; the longevity effect and the suppression of bone-degrading capacity are related but distinct.",
+          "Osteoclasts are treated as a cell context here, but the text does not explicitly label them as a cell type in schema terms."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "glucocorticoid-induced bone loss",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D003907"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "DEX",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "12977"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:CSF1",
+            "key": "e2",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "protein",
+            "surface": "M-CSF",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "11848"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:RHOA",
+            "key": "e3",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "protein",
+            "surface": "RhoA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "11651"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Rac",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "57257"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:VAV3",
+            "key": "e5",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "protein",
+            "surface": "Vav3",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 978,
+            "passage_index": 1,
+            "quote": "The inhibitory effect of DEX on bone resorption reflects failure of osteoclasts to organize their cytoskeleton in response to M-CSF.",
+            "start": 846
+          },
+          {
+            "end": 1097,
+            "passage_index": 1,
+            "quote": "DEX specifically arrested M-CSF activation of RhoA, Rac, and Vav3, each of which regulate the osteoclast cytoskeleton.",
+            "start": 979
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "M-CSF activation of RhoA, Rac, and Vav3",
+          "intervention": "dexamethasone",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Dexamethasone inhibited M-CSF activation of RhoA, Rac, and Vav3 in osteoclasts.",
+        "uncertainties": [
+          "The text states that DEX arrested M-CSF activation, but does not specify whether the inhibition is direct.",
+          "Rac is mentioned without a full specific symbol in the annotation; the molecular form is inferred from context and remains somewhat ambiguous."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "glucocorticoid-induced bone loss",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "10090"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "GRoc-/- mice",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "MESH:D003907"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "DEX",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone formation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1355,
+            "passage_index": 1,
+            "quote": "In all circumstances GRoc-/- mice were spared the impact of DEX on osteoclasts and their precursors. Consistent with osteoclasts modulating the osteoblast-suppressive effect of DEX, GRoc-/- mice are protected from the steroid's inhibition of bone formation.",
+            "start": 1098
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone formation",
+          "intervention": "dexamethasone",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e2"
+        },
+        "summary": "GRoc-/- mice were protected from dexamethasone's inhibition of bone formation, supporting an osteoclast-mediated component of the glucocorticoid effect.",
+        "uncertainties": [
+          "The mechanistic role of osteoclasts is presented as a consistency statement rather than a direct perturbation test in this sentence.",
+          "GRoc-/- is a genotype description; no specific molecular entity is named in the passage for the disrupted receptor."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        746,
+        845
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        682,
+        768
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        846,
+        978
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        816,
+        890
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        979,
+        1097
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        891,
+        1127
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1098,
+        1355
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1220,
+        1396
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,244 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "joint inflammation",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "70",
+              "71"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "4-OI@Zn-NH-pyr",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "68",
+              "69"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation and function",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1617,
+            "passage_index": 1,
+            "quote": "receptor activator of nuclear factor-kappaB ligand (RANKL)",
+            "start": 1559
+          },
+          {
+            "end": 1855,
+            "passage_index": 1,
+            "quote": "4-OI@Zn-NH-pyr",
+            "start": 1840
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation and function",
+          "intervention": "4-OI@Zn-NH-pyr",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The compound 4-OI@Zn-NH-pyr suppressed RANKL-induced osteoclast differentiation and function.",
+        "uncertainties": [
+          "The sentence states RANKL-induced osteoclast differentiation and function were suppressed, but does not specify whether the effect is direct on osteoclasts or mediated indirectly.",
+          "Exact experimental assay, dose, and duration are not stated in the supplied text."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "inflammatory macrophages",
+          "compartment": null,
+          "disease_setting": "joint inflammation",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "70",
+              "71"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "4-OI@Zn-NH-pyr",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "65",
+              "66"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Nrf2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "67"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "NF-kappaB",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1439,
+            "passage_index": 1,
+            "quote": "nuclear factor erythroid 2-related factor 2",
+            "start": 1396
+          },
+          {
+            "end": 1534,
+            "passage_index": 1,
+            "quote": "NF-kappaB",
+            "start": 1525
+          },
+          {
+            "end": 1855,
+            "passage_index": 1,
+            "quote": "4-OI@Zn-NH-pyr",
+            "start": 1840
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "Nrf2 activation",
+          "intervention": "4-OI@Zn-NH-pyr",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The compound 4-OI@Zn-NH-pyr activated Nrf2 and was associated with inhibition of NF-kappaB pathways in the anti-inflammatory context described.",
+        "uncertainties": [
+          "The text also mentions inhibition of NF-kappaB pathways, but it does not specify a single direct molecular interaction or whether the pathway effect is direct.",
+          "The supplied passage does not provide assay details, dose, or duration."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1559,
+        1617
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1704,
+        1761
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1396,
+        1439
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1541,
+        1586
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1525,
+        1534
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1670,
+        1679
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

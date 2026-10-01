@@ -1,0 +1,211 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "28"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "hypoxia",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": "LOCAL:protein:mouse:TET2",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "unknown",
+            "surface": "TET activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 632,
+            "passage_index": 1,
+            "quote": "Hypoxia in this range severely limits",
+            "start": 595
+          },
+          {
+            "end": 799,
+            "passage_index": 1,
+            "quote": "osteoclastogenesis, independent of energy metabolism and hypoxia-inducible factor activity. We observe that hypoxia decreases ten-eleven translocation (TET) activity.",
+            "start": 633
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "TET activity",
+          "intervention": "hypoxia",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Hypoxia decreases TET activity in osteoclasts.",
+        "uncertainties": [
+          "TET activity is not a specific molecular entity; the text reports activity, not a gene/protein abundance change.",
+          "The passage does not specify whether the effect is direct or indirect."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "29"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Tet2/3",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "30"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:PRDM1",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "Prdm1",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "32"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:NFATC1",
+            "key": "e3",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "NFATc1",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 949,
+            "passage_index": 1,
+            "quote": "Tet2/3 cooperatively induces Prdm1 expression via oxygen-dependent DNA demethylation, which in turn activates NFATc1 required for osteoclastogenesis.",
+            "start": 800
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "Prdm1 expression",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Tet2/3 induces Prdm1 expression, and Prdm1 activates NFATc1 during osteoclastogenesis.",
+        "uncertainties": [
+          "The sentence also contains a second regulatory step (Prdm1 activates NFATc1); this claim captures only the first step to keep subject/object unambiguous.",
+          "Directness is not established; the mechanism is described via oxygen-dependent DNA demethylation."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        595,
+        632
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        806,
+        843
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        633,
+        799
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        843,
+        883
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        800,
+        949
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        868,
+        1020
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,234 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 osteoclast precursors",
+          "compartment": null,
+          "disease_setting": "titanium wear particle-induced osteolysis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "3"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Xerophilusin B",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "48"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:ACP5",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "TRAP-positive multinucleated osteoclasts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation and resorptive activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1808,
+            "passage_index": 1,
+            "quote": "XB at 10 micromol/L showed no detectable cytotoxicity and was used as the working concentration. Under titanium wear particle stimulation, XB reduced the number of TRAP-positive multinucleated osteoclasts by 56.79%,",
+            "start": 1593
+          },
+          {
+            "end": 1892,
+            "passage_index": 1,
+            "quote": "indicating marked inhibition of osteoclast differentiation and resorptive activity.",
+            "start": 1809
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP staining",
+          "dose": "10 micromol/L",
+          "duration": null,
+          "endpoint": "number of TRAP-positive multinucleated osteoclasts; osteoclast differentiation and resorptive activity",
+          "intervention": "XB at 10 micromol/L; titanium wear particle stimulation",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In titanium wear particle-stimulated RAW264.7 osteoclast precursors, Xerophilusin B reduced TRAP-positive multinucleated osteoclasts and was reported to inhibit osteoclast differentiation and resorptive activity.",
+        "uncertainties": [
+          "The text does not explicitly separate effects on differentiation versus resorptive activity.",
+          "RAW264.7 cell species is not stated in the passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "titanium wear particle-induced osteolysis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "3"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Xerophilusin B",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "protein",
+            "surface": "IKKalpha/beta",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "59"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:RELA",
+            "key": "e3",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "protein",
+            "surface": "p65",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "51",
+              "60",
+              "66",
+              "67"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "pathway",
+            "surface": "NF-kappaB activation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2191,
+            "passage_index": 1,
+            "quote": "At the signaling level, XB blocked abnormal phosphorylation of IKKalpha/beta and p65, restrained NF-kappaB activation,",
+            "start": 2073
+          }
+        ],
+        "experiment": {
+          "assay": "Western blotting",
+          "dose": "10 micromol/L",
+          "duration": null,
+          "endpoint": "phosphorylation of IKKalpha/beta and p65; NF-kappaB activation",
+          "intervention": "XB",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Xerophilusin B blocked abnormal phosphorylation of IKKalpha/beta and p65 and restrained NF-kappaB activation.",
+        "uncertainties": [
+          "The passage reports phosphorylation changes for IKKalpha/beta and p65, but the precise molecular forms are not fully specified in the text.",
+          "NF-kappaB is annotated as a gene in the packet, but the claim concerns pathway activation as stated in the passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1593,
+        1808
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1817,
+        1910
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1809,
+        1892
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1910,
+        1967
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        2073,
+        2191
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2278,
+        2356
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

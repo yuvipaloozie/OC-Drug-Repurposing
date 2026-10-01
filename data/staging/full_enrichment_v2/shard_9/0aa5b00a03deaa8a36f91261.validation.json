@@ -1,0 +1,130 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "Alzheimer's disease",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "upregulated DEGs",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "differentiation of osteoclast",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1031,
+            "passage_index": 1,
+            "quote": "Functional enrichment analysis showed that the response of immune,",
+            "start": 965
+          },
+          {
+            "end": 1113,
+            "passage_index": 1,
+            "quote": "lysosome, and the differentiation of osteoclast",
+            "start": 1066
+          },
+          {
+            "end": 1161,
+            "passage_index": 1,
+            "quote": "were greatly enriched in DEGs with upregulation",
+            "start": 1114
+          }
+        ],
+        "experiment": {
+          "assay": "GO and KEGG enrichment analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "enrichment of osteoclast differentiation among upregulated DEGs",
+          "intervention": "gene expression profile analysis with functional enrichment",
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Functional enrichment analysis reported that osteoclast differentiation was among the terms greatly enriched in the upregulated differentially expressed genes.",
+        "uncertainties": [
+          "This is an enrichment result, not a causal mechanism.",
+          "The passage does not specify which DEGs drive the osteoclast differentiation enrichment."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        965,
+        1031
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        480,
+        545
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1066,
+        1113
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        559,
+        598
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1114,
+        1161
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        600,
+        640
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

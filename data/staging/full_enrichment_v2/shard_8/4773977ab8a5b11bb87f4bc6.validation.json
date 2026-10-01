@@ -1,0 +1,126 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "metabolic bone diseases",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "Exosomes",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone homeostasis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D001851"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "metabolic bone diseases",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 99,
+            "passage_index": 0,
+            "quote": "Exosomal communication: a pivotal regulator of bone homeostasis and a potential therapeutic target.",
+            "start": 0
+          },
+          {
+            "end": 828,
+            "passage_index": 1,
+            "quote": "we have delineated the bone regulatory network of exosomes, elaborated on the specific roles and regulatory mechanisms of exosomes derived from common cell types",
+            "start": 667
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone homeostasis",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The article presents exosomes as a key regulator of bone homeostasis and suggests they may be therapeutic targets for metabolic bone diseases.",
+        "uncertainties": [
+          "The passage is a review-style summary and does not report a specific experiment.",
+          "No osteoclast-specific mechanism is stated in the supplied text.",
+          "The therapeutic-target statement is presented as a proposal/background framing rather than an experimental result."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        99
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        97
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        667,
+        828
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        452,
+        562
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

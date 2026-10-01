@@ -1,0 +1,194 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "serum",
+          "disease_setting": "alcohol use disorder",
+          "species": "Homo sapiens",
+          "stage": "during 2-week alcohol withdrawal"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "PACS score reductions",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "compound",
+            "surface": "increased P1NP levels",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "decreased CTX-1/P1NP ratios",
+            "taxon": "9606"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1457,
+            "passage_index": 1,
+            "quote": "Univariate analysis revealed that reductions in PACS, BDI, and BAI scores during withdrawal correlated with increased P1NP levels and decreased CTX-1/P1NP ratios. However, multivariate analysis indicated that only PACS score reductions correlated with these changes.",
+            "start": 1191
+          }
+        ],
+        "experiment": {
+          "assay": "Enzyme-Linked Immunosorbent Assay",
+          "dose": null,
+          "duration": "2 weeks",
+          "endpoint": "PACS, BDI, and BAI scores; P1NP and CTX-1/P1NP ratios",
+          "intervention": "alcohol withdrawal",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "During alcohol withdrawal in AUD patients, reductions in craving scores were correlated with increased P1NP levels and decreased CTX-1/P1NP ratios; multivariate analysis found this correlation only for PACS reductions.",
+        "uncertainties": [
+          "Association is reported at the level of score reductions and marker changes; causal direction is not established.",
+          "The text does not specify a direct molecular mechanism linking craving and bone turnover markers."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "serum",
+          "disease_setting": "alcohol use disorder",
+          "species": "Homo sapiens",
+          "stage": "during 2-week alcohol withdrawal"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "P1NP",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "CTX-1",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone formation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1045,
+            "passage_index": 1,
+            "quote": "Over the 2-week withdrawal, PACS, BDI, and BAI scores demonstrated significant reductions. P1NP (p < 0.001) and P1NP/CTX-1 ratio increased (p < 0.001), while CTX-1/P1NP ratio decreased (p < 0.001), indicating a propensity toward bone formation. ... Bone metabolism shifted toward increased bone formation and decreased bone resorption during 2-week alcohol withdrawal.",
+            "start": 795
+          }
+        ],
+        "experiment": {
+          "assay": "Enzyme-Linked Immunosorbent Assay",
+          "dose": null,
+          "duration": "2 weeks",
+          "endpoint": "P1NP, P1NP/CTX-1 ratio, CTX-1/P1NP ratio, PACS, BDI, and BAI scores",
+          "intervention": "alcohol withdrawal",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "unknown",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Over 2 weeks of alcohol withdrawal in AUD patients, bone metabolism shifted toward increased bone formation and decreased bone resorption, including increased P1NP and decreased CTX-1/P1NP ratio.",
+        "uncertainties": [
+          "The statement summarizes a composite shift in bone metabolism rather than a direct molecular pathway.",
+          "CTX-1 is treated as a measured marker in serum; the exact molecular form is not specified in the text."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable",
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1191,
+        1457
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1064,
+        1245
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

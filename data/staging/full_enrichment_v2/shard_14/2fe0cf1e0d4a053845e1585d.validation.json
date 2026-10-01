@@ -1,0 +1,189 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone resorption",
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "compound",
+            "surface": "Smoking",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 553,
+            "passage_index": 1,
+            "quote": "Smoking impairs the differentiation of mesenchymal stem cells and osteoblasts in bone formation while promoting osteoclast differentiation in bone resorption.",
+            "start": 395
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The review states that smoking promotes osteoclast differentiation in bone resorption.",
+        "uncertainties": [
+          "The statement is from a review summary, not a primary experiment.",
+          "'Smoking' is an exposure/external factor rather than a molecular entity.",
+          "No direct mechanism is specified for how smoking promotes osteoclast differentiation."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "periodontitis and rheumatoid arthritis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "compound",
+            "surface": "smoking",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Th17 response",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "2",
+              "3"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "receptor activator of NF-kappaB ligand (RANKL) signaling",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 827,
+            "passage_index": 1,
+            "quote": "Furthermore, smoking stimulates the Th17 response to increase inflammatory and osteoclastogenic cytokines that promote the receptor activator of NF-kappaB ligand (RANKL) signaling in osteoclasts, thus exacerbating bone destruction in periodontitis and rheumatoid arthritis.",
+            "start": 554
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "RANKL signaling in osteoclasts",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The review states that smoking stimulates a Th17 response and promotes RANKL signaling in osteoclasts through inflammatory and osteoclastogenic cytokines.",
+        "uncertainties": [
+          "The text describes an indirect pathway involving Th17 response and cytokines.",
+          "RANKL is provider-annotated as a gene, but the quoted text refers to signaling; the exact molecular entity is therefore ambiguous.",
+          "This is review/background language rather than a direct experimental result."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        395,
+        553
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        393,
+        545
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        554,
+        827
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        547,
+        824
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

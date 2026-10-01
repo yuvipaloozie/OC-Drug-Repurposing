@@ -1,0 +1,172 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "hypothesis",
+        "context": {
+          "cell_type": "OP-derived BM-MSCs",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "65"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "BHLHE41",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "66"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "SLC7A11",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1645,
+            "passage_index": 1,
+            "quote": "Network inference further nominated BHLHE41 as a potential upstream driver of SLC7A11",
+            "start": 1560
+          }
+        ],
+        "experiment": {
+          "assay": "regulon analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "upstream driver nomination",
+          "intervention": "network inference using regulon analysis with motif/cis-regulatory evidence",
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Network inference nominated BHLHE41 as a potential upstream driver of SLC7A11 in the osteoporosis context.",
+        "uncertainties": [
+          "The text says 'potential upstream driver', so this is a hypothesis rather than a validated causal mechanism.",
+          "No direct perturbation of BHLHE41 is reported in the abstract."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "BM-MSCs",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "57"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "disulfidptosis score",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoblast-like subset of BM-MSCs",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1037,
+            "passage_index": 1,
+            "quote": "Disulfidptosis score was enriched in the osteoblast-like subset of BM-MSCs",
+            "start": 959
+          }
+        ],
+        "experiment": {
+          "assay": "single-cell RNA sequencing",
+          "dose": null,
+          "duration": null,
+          "endpoint": "disulfidptosis score enrichment",
+          "intervention": "single-cell analyses",
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Disulfidptosis score was enriched in the osteoblast-like subset of BM-MSCs, indicating an association between the stress program and that cell population.",
+        "uncertainties": [
+          "Cell-type wording is descriptive and not a direct perturbation experiment.",
+          "The text does not specify whether the enriched subset is formally a cell type or a state."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1560,
+        1645
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1731,
+        1816
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

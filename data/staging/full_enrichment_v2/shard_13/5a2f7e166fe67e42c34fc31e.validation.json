@@ -1,0 +1,210 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoblasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "humans and mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "1"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "Wnt signaling",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoblast differentiation and activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 961,
+            "passage_index": 1,
+            "quote": "Genetic studies in both humans and mice over the past 15 years have established Wnt signaling as a critical mechanism for stimulating osteoblast differentiation and activity.",
+            "start": 787
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoblast differentiation and activity",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Wnt signaling is described as a critical mechanism that stimulates osteoblast differentiation and activity.",
+        "uncertainties": [
+          "Statement is a review-style summary of prior genetic studies rather than a single newly reported experiment.",
+          "Wnt is provided as a gene annotation hint, but the text here supports a signaling pathway rather than a specific gene product."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoblast-lineage cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "1"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "Wnt signaling",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "cellular metabolism",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "aerobic glycolysis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "14"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "glutamine catabolism",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "15"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "fatty acid oxidation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1180,
+            "passage_index": 1,
+            "quote": "Importantly, recent studies have uncovered that Wnt signaling directly reprograms cellular metabolism by stimulating aerobic glycolysis, glutamine catabolism as well as fatty acid oxidation in osteoblast-lineage cells.",
+            "start": 962
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "cellular metabolism",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "direct",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Wnt signaling is reported to directly reprogram cellular metabolism in osteoblast-lineage cells by stimulating aerobic glycolysis, glutamine catabolism, and fatty acid oxidation.",
+        "uncertainties": [
+          "The passage summarizes 'recent studies' without naming the specific experiments.",
+          "The exact molecular mechanism of the reported metabolic reprogramming is not provided in the passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        787,
+        961
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        567,
+        703
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        962,
+        1180
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        706,
+        885
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

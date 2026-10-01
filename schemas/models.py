@@ -1,15 +1,16 @@
 """
 Data schemas and models for the Osteoclast Mechanism Knowledge Graph.
-Defines the five canonical tables:
+Defines the six canonical tables:
 1. nodes
 2. edges
 3. experiments
 4. edge_evidence
 5. contexts
+6. source_records
 
-Strictly filtered to:
-- Osteoclastogenesis
-- RANKL-induced osteoclast differentiation in RAW 264.7 and primary mouse BMMs.
+Contextual osteoclastogenesis graph:
+- RANKL-induced osteoclast differentiation, including RAW 264.7 and primary mouse BMMs.
+- Additional recorded species and models retain explicit context; mouse is not inferred by default.
 - Metabolic pathways (glycolysis, TCA, amino acids), actin dynamics, syncytium fusion,
   histone states, transcription factors, miRNA, and mRNA translation.
 """
@@ -97,6 +98,8 @@ class Edge:
     context_status: str = "pending"
     legacy_source_record_id: str = ""
     review_note: str = ""
+    causal_basis: str = ""  # e.g. genetic_perturbation_role_inference; not direct drug inhibition
+    effect_level: str = ""  # phenotype, expression, activity; missing for legacy claims
 
     def to_dict(self) -> Dict[str, Any]:
         return asdict(self)
@@ -107,7 +110,7 @@ class Experiment:
     experiment_id: str
     paper_id: str  # PMID:...
     model_system: str  # in_vitro, ex_vivo
-    species: str  # mouse (strictly mouse for BMMs / RAW 264.7)
+    species: str  # Recorded model species; missingness is not silently replaced with mouse.
     cell_type: str  # bone marrow macrophage (BMM), RAW 264.7
     differentiation_stage: str  # uncommitted, early pre-osteoclast, committed mononuclear TRAP+, syncytium, mature multinucleated
     treatment: str  # M-CSF + RANKL, RANKL alone, etc.

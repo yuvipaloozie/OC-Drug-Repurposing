@@ -1,0 +1,163 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "bone surfaces; dentine slices",
+          "disease_setting": "osteopetrosis",
+          "species": "mice",
+          "stage": "mature osteoclasts"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "2",
+              "19",
+              "20",
+              "22",
+              "27",
+              "30",
+              "31"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:SRC",
+            "key": "src",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "pp60c-src",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "21"
+            ],
+            "existing_node_id": null,
+            "key": "osteopetrosis",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteopetrosis",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 180,
+            "passage_index": 1,
+            "quote": "src-deficient mutants develop osteopetrosis.",
+            "start": 136
+          },
+          {
+            "end": 684,
+            "passage_index": 1,
+            "quote": "Increased numbers of multinucleated cells with the morphological characteristics of osteoclasts appeared on bone surfaces, but these cells did not form ruffled borders or normal resorption lacunae.",
+            "start": 487
+          },
+          {
+            "end": 957,
+            "passage_index": 1,
+            "quote": "Increased numbers of multinucleated cells were formed, but unlike normal murine bone marrow cells, they did not form resorption pits.",
+            "start": 824
+          },
+          {
+            "end": 1139,
+            "passage_index": 1,
+            "quote": "These results indicate that osteoclasts appear in the absence of pp60c-src, but that pp60c-src expression is required for mature osteoclasts to form ruffled borders and resorb bone.",
+            "start": 958
+          }
+        ],
+        "experiment": {
+          "assay": "quantitative bone histomorphometry; electron microscopy; dentine slice culture",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast ruffled border formation and bone resorption",
+          "intervention": "targeted disruption of the c-src proto-oncogene in mice",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "osteoclast mature function",
+          "sign": "positive",
+          "subject": "src"
+        },
+        "summary": "In src-deficient mice, osteoclasts still appeared, but mature osteoclast function was impaired: they did not form ruffled borders or normal resorption lacunae, and they did not form resorption pits in dentine slice culture.",
+        "uncertainties": [
+          "The text refers to both c-src proto-oncogene disruption and pp60c-src expression; the exact molecular form is inferred as protein but not explicitly labeled as such in every mention.",
+          "The claim combines in vivo and in vitro observations from the same abstract.",
+          "The provider gene annotation supports Src mapping, but the suggested existing node is unverified."
+        ]
+      },
+      "errors": [
+        "unknown regulatory participant"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        136,
+        180
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        267,
+        315
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        487,
+        684
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        565,
+        701
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        824,
+        957
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        742,
+        878
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        958,
+        1139
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1017,
+        1170
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

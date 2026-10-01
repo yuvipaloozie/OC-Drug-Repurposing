@@ -1,0 +1,96 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "NGPV-infected",
+          "species": "ducks",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "17",
+              "18",
+              "19"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "LAB treatment",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1090,
+            "passage_index": 1,
+            "quote": "Furthermore, LAB treatment alleviated intestinal damage, and reduced the inflammatory response, while also mitigating bone resorption in NGPV-infected ducks.",
+            "start": 933
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption",
+          "intervention": "LAB treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In NGPV-infected ducks, LAB treatment was reported to mitigate bone resorption.",
+        "uncertainties": [
+          "LAB is used as a treatment intervention in the text; the specific bacterial strain or formulation is not resolved from the passage.",
+          "The mechanism is broader than bone resorption and also mentions intestinal damage and inflammation, but only the bone-resorption effect is extracted here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        933,
+        1090
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1258,
+        1387
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

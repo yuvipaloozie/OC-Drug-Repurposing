@@ -1,0 +1,148 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "preosteoclasts",
+          "compartment": "metatarsals",
+          "disease_setting": "osteopetrotic phenotype",
+          "species": "mouse",
+          "stage": "1-wk-old mice"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "29",
+              "31",
+              "37",
+              "38",
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Hck",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "23",
+              "33"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteopetrotic phenotype",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "preosteoclasts",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 340,
+            "passage_index": 1,
+            "quote": "src(-/-)hck(-/-) mice, we examined the individual contribution of Hck in bone homeostasis. Compared to wt mice, hck(-/-) mice exhibited an osteopetrotic phenotype",
+            "start": 178
+          },
+          {
+            "end": 984,
+            "passage_index": 1,
+            "quote": "In vivo, this translated by altered bone homing of preosteoclasts in hck(-/-) mice: in metatarsals of 1-wk-old mice",
+            "start": 869
+          },
+          {
+            "end": 1143,
+            "passage_index": 1,
+            "quote": "reduced numbers of osteoclasts and abnormal developing trabecular bone were observed.",
+            "start": 1058
+          }
+        ],
+        "experiment": {
+          "assay": "in vivo",
+          "dose": null,
+          "duration": "1-wk-old",
+          "endpoint": "osteopetrotic phenotype / altered bone homing of preosteoclasts / reduced numbers of osteoclasts",
+          "intervention": "hck(-/-) mice",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In hck(-/-) mice, Hck loss of function was associated with an osteopetrotic phenotype and altered bone homing/recruitment of osteoclast precursors, with reduced osteoclast numbers in developing trabecular bone.",
+        "uncertainties": [
+          "The text links Hck loss to both osteopetrotic phenotype and altered bone homing/recruitment, but the precise causal chain is not directly dissected.",
+          "The object entity combines phenotype/process language because the passage states recruitment/bone homing rather than a single molecular endpoint."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        178,
+        340
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        271,
+        421
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        869,
+        984
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1031,
+        1114
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1058,
+        1143
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1116,
+        1188
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,192 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "2"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "IL-1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "cytoskeletal organization",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "3",
+              "48"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "complex",
+            "surface": "TRAF6/c-Src complex",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 107,
+            "passage_index": 0,
+            "quote": "IL-1 regulates cytoskeletal organization in osteoclasts via TNF receptor-associated factor 6/c-Src complex.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The title states that IL-1 regulates cytoskeletal organization in osteoclasts via a TRAF6/c-Src complex.",
+        "uncertainties": [
+          "Title-level statement without experimental details in the title itself.",
+          "Complex composition is summarized from the title wording and is not experimentally resolved here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "pOCs",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "murine",
+          "stage": "prefusion cells; multinucleated cells"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "41",
+              "42",
+              "45",
+              "51",
+              "52",
+              "62",
+              "65"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "IL-1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "actin ring formation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 319,
+            "passage_index": 1,
+            "quote": "IL-1 induces actin ring formation and osteoclast activation.",
+            "start": 259
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "actin ring formation and osteoclast activation",
+          "intervention": "IL-1 treatment",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In normal pOCs, IL-1 induces actin ring formation and osteoclast activation.",
+        "uncertainties": [
+          "The sentence states two linked outcomes; the regulatory object is represented as a combined phenotype rather than split into two separate edges."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        259,
+        319
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        258,
+        318
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

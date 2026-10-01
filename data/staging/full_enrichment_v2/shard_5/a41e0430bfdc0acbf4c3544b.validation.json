@@ -1,0 +1,385 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "osteopetrosis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "18"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:PTK2B",
+            "key": "e1",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "Pyk2",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "20"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "mice",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "21"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteopetrosis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 167,
+            "passage_index": 1,
+            "quote": "The protein tyrosine kinase Pyk2 is highly expressed in osteoclasts, where it is primarily localized in podosomes. Deletion of Pyk2 in mice leads to mild osteopetrosis",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "mild osteopetrosis",
+          "intervention": "Deletion of Pyk2",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Deletion of Pyk2 in mice leads to mild osteopetrosis, attributed in the text to impaired osteoclast function.",
+        "uncertainties": [
+          "The causal link to osteoclast impairment is stated in the same sentence but not separately demonstrated here.",
+          "The text uses Pyk2 without distinguishing gene versus protein form."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "cell periphery",
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "22",
+              "27"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:PTK2B",
+            "key": "e1",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "Pyk2-null osteoclasts",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "podosome clusters",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "podosome belt",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "23",
+              "29",
+              "31"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 803,
+            "passage_index": 1,
+            "quote": "Pyk2-null osteoclasts were unable to transform podosome clusters into a podosome belt at the cell periphery; instead of a sealing zone only small actin rings were formed, resulting in impaired bone resorption. Furthermore, in Pyk2-null osteoclasts, Rho activity was enhanced while microtubule acetylation and stability were significantly reduced. Rescue experiments by ectopic expression of wild-type or a variety of Pyk2 mutants in osteoclasts from Pyk2(-/-) mice have shown that the FAT domain of Pyk2 is essential for podosome belt and sealing zone formation as well as for bone resorption.",
+            "start": 210
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption",
+          "intervention": "Pyk2 deletion / Pyk2-null osteoclasts",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Pyk2-null osteoclasts were unable to transform podosome clusters into a podosome belt at the cell periphery, with only small actin rings formed, resulting in impaired bone resorption.",
+        "uncertainties": [
+          "The sentence bundles several osteoclast morphology changes and the bone-resorption outcome; the extracted edge focuses on the reported resorption decrease.",
+          "Directness of the effect is not established."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "22",
+              "27"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:PTK2B",
+            "key": "e1",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "Pyk2-null osteoclasts",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "Rho activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 490,
+            "passage_index": 1,
+            "quote": "Pyk2-null osteoclasts, Rho activity was enhanced while",
+            "start": 436
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "Rho activity",
+          "intervention": "Pyk2 loss",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In Pyk2-null osteoclasts, Rho activity was enhanced.",
+        "uncertainties": [
+          "The text links this observation to Pyk2-null osteoclasts but does not specify the molecular mechanism behind the increase."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "22",
+              "27"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:PTK2B",
+            "key": "e1",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "Pyk2-null osteoclasts",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "microtubule acetylation and stability",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 556,
+            "passage_index": 1,
+            "quote": "while microtubule acetylation and stability were significantly reduced.",
+            "start": 485
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "microtubule acetylation and stability",
+          "intervention": "Pyk2 loss",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c4",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In Pyk2-null osteoclasts, microtubule acetylation and stability were significantly reduced.",
+        "uncertainties": [
+          "The passage combines acetylation and stability into one statement; no separate measurements are provided."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        167
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        120,
+        210
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        210,
+        803
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        211,
+        584
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        436,
+        490
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        332,
+        388
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c4",
+      "corrected_offsets": [
+        485,
+        556
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        378,
+        435
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

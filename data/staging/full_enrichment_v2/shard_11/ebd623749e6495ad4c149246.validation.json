@@ -1,0 +1,309 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "41",
+              "45",
+              "49",
+              "52",
+              "58"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "PTX",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 775,
+            "passage_index": 1,
+            "quote": "PTX has been reported to have antioxidant, anti-inflammatory and anti-obesity properties. However, its effect on osteoporosis has not been clarified. Our study confirmed that PTX could attenuate the formation of osteoclasts and bone resorption on a dose-dependent basis in vitro.",
+            "start": 496
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "dose-dependent",
+          "duration": null,
+          "endpoint": "formation of osteoclasts and bone resorption",
+          "intervention": "PTX",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Pteryxin attenuated osteoclast formation and bone resorption in vitro in a dose-dependent manner.",
+        "uncertainties": [
+          "The exact experimental system for the in vitro assay is not specified in the provided text.",
+          "Bone resorption is described as decreased, but the passage does not specify whether this was a direct effect on osteoclast function or an indirect consequence of reduced osteoclast formation."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "41",
+              "45",
+              "49",
+              "52",
+              "58"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "PTX",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "7",
+              "55",
+              "56"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "reactive oxygen species",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "53",
+              "54",
+              "57"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "MAPK and Ca2+-calcineurin-NFATc1 signaling pathways",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "54",
+              "57"
+            ],
+            "existing_node_id": null,
+            "key": "e7",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "NFATc1",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1269,
+            "passage_index": 1,
+            "quote": "PTX might block the MAPK and Ca2+-calcineurin-NFATc1 signaling pathways by decreasing the reactive oxygen species (ROS) level in osteoclasts to dampen the expression of critical transcriptional NFATc1 and downstream osteoclast-specific genes.",
+            "start": 1027
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "ROS level and signaling pathway activity / NFATc1 expression",
+          "intervention": "PTX",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e5",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Pteryxin may reduce reactive oxygen species in osteoclasts and thereby block MAPK and Ca2+-calcineurin-NFATc1 signaling, with decreased NFATc1 and downstream osteoclast-specific gene expression.",
+        "uncertainties": [
+          "The passage uses hedging terms ('might block') and does not establish directness.",
+          "The claim combines multiple downstream effects (ROS, signaling pathways, NFATc1, downstream genes) without separating them into experimentally distinct steps.",
+          "The text does not specify whether NFATc1 changes were measured at RNA, protein, or activity level."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ovariectomy-induced osteoporosis",
+          "species": "ovariectomy model; postmenopausal women referenced as a simulation context",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "41",
+              "45",
+              "49",
+              "52",
+              "58"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "PTX",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "5",
+              "50"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1117,
+            "passage_index": 1,
+            "quote": "PTX, we could not only confirm that PTX attenuates osteoclast formation and bone resorption in vitro, but also observe that PTX could partially reverse the bone loss caused by OVX",
+            "start": 798
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone loss",
+          "intervention": "PTX",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Pteryxin partially reversed ovariectomy-induced bone loss in vivo.",
+        "uncertainties": [
+          "The organism used for the OVX model is not explicitly stated in the quoted text.",
+          "'Partially reverse' indicates incomplete rescue, but the magnitude is not quantified in the provided passage."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        496,
+        775
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        623,
+        739
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1027,
+        1269
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1154,
+        1451
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

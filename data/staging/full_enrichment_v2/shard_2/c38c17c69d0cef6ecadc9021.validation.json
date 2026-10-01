@@ -1,0 +1,119 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "-"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "CSM3P",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D007249"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "inflammatory bone microenvironment",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone remodeling",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D010024"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoporosis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1541,
+            "passage_index": 1,
+            "quote": "Both in vitro and in vivo evaluations demonstrate the superior efficacy of CSM3P in ameliorating the inflammatory bone microenvironment and rebalancing bone remodeling.",
+            "start": 1373
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro and in vivo evaluations",
+          "dose": null,
+          "duration": null,
+          "endpoint": "inflammatory bone microenvironment and bone remodeling",
+          "intervention": "CSM3P treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "CSM3P treatment was reported to ameliorate the inflammatory bone microenvironment and rebalance bone remodeling in osteoporosis, with both in vitro and in vivo evaluations showing superior efficacy.",
+        "uncertainties": [
+          "The passage reports combined in vitro and in vivo efficacy without separating which outcome belongs to which model.",
+          "The mechanism underlying the phenotypic improvement is described generally and not as a direct molecular interaction."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1373,
+        1541
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1514,
+        1685
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

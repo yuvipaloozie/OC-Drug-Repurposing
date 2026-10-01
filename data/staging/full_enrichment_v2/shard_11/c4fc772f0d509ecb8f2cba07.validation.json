@@ -1,0 +1,110 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "bone metastases",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "48"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Denosumab",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "49"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "44",
+              "50",
+              "51"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone metastases",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1020,
+            "passage_index": 1,
+            "quote": "Denosumab, a subcutaneously administered inhibitor of nuclear factor B ligand (RANKL), have already been approved by Food and Drug Administration (FDA) for their use in treatment of bone metastases.",
+            "start": 822
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "treatment of bone metastases",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Denosumab is described as an inhibitor of RANKL and as approved for treatment of bone metastases.",
+        "uncertainties": [
+          "The passage is a review statement, not an experimental result.",
+          "Direct molecular target engagement is not demonstrated in the cited text.",
+          "RANKL is tagged as a gene by the provider, but the text only supports the surface name and inhibitor relationship."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        822,
+        1020
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        891,
+        987
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

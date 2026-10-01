@@ -1,0 +1,203 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ovariectomy-induced bone loss",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:C000593334"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "CB-839",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "OVX-induced bone loss",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 505,
+            "passage_index": 1,
+            "quote": "To address this issue, age-related and ovariectomy (OVX)-induced bone loss mouse models were used to study the in vivo effects of CB-839, a potent and selective GLS inhibitor, on bone mass and bone turnover.",
+            "start": 298
+          },
+          {
+            "end": 1022,
+            "passage_index": 1,
+            "quote": "We found that inhibiting GLS via CB-839 prevented OVX-induced bone loss",
+            "start": 951
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone loss",
+          "intervention": "CB-839",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In mice, treatment with the glutaminase inhibitor CB-839 prevented ovariectomy-induced bone loss.",
+        "uncertainties": [
+          "The mechanism linking CB-839 to reduced bone loss is not specified in this passage."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ovariectomy-induced osteoporosis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:C000593334"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "CB-839",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "OVX-enhanced osteoclastogenesis",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1801,
+            "passage_index": 1,
+            "quote": "Taken together, our data demonstrated the different outcomes caused by CB-839 treatment between two types of osteoporosis in mice, which were tightly connected to the suppressive effects on both aging-impaired osteoblastogenesis and OVX-enhanced osteoclastogenesis",
+            "start": 1537
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "CB-839",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The paper reports that CB-839 treatment suppressed OVX-enhanced osteoclastogenesis, but the passage does not specify the direct molecular mediator or assay details.",
+        "uncertainties": [
+          "The statement is a concluding interpretation and does not provide the underlying experimental readout in this span.",
+          "The text does not specify whether the effect was direct on osteoclast lineage cells or mediated indirectly through other processes."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        298,
+        505
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        564,
+        670
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        951,
+        1022
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        673,
+        730
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1537,
+        1801
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1858,
+        1946
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,181 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "macrophage cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "36"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "pBTO",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1450,
+            "passage_index": 1,
+            "quote": "Wireless intracellular electric field from pBTO is proved to regulate mitochondrial Mg2+ via MRS2, regulate mitochondrial metabolism, induce macrophage M2 polarization, and inhibit M1 differentiation and osteoclast differentiation in vitro.",
+            "start": 1210
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation",
+          "intervention": "pBTO",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The piezoelectric nanomaterial pBTO was reported to inhibit osteoclast differentiation in vitro.",
+        "uncertainties": [
+          "The quote combines several outcomes; the osteoclast-specific effect is extracted from a broader sentence that also mentions mitochondrial Mg2+, MRS2, mitochondrial metabolism, and macrophage polarization.",
+          "Directness/mechanism for the osteoclast effect is not established from this sentence alone."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "calvaria",
+          "disease_setting": "calvarial inflammatory osteolysis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "43"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "pBTO",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "44"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "inflammatory bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1650,
+            "passage_index": 1,
+            "quote": "Moreover, calvarial inflammatory osteolysis mouse model reveal that pBTO inhibit inflammatory bone resorption by modulating macrophage polarization and osteoclastogenesis via mitochondrial MRS2/Mg2+.",
+            "start": 1451
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "inflammatory bone resorption",
+          "intervention": "pBTO",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In a mouse calvarial inflammatory osteolysis model, pBTO was reported to inhibit inflammatory bone resorption.",
+        "uncertainties": [
+          "The sentence states a model-level outcome and also proposes mediation via macrophage polarization/osteoclastogenesis; only the inhibition of inflammatory bone resorption is extracted as an observed result.",
+          "The phrase 'via mitochondrial MRS2/Mg2+' is retained as reported context but not expanded into a separate mechanism claim because the causal chain is not fully resolved here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1210,
+        1450
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1360,
+        1514
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1451,
+        1650
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1645,
+        1889
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

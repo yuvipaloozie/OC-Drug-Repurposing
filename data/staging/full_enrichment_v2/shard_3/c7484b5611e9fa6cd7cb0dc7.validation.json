@@ -1,0 +1,118 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "8",
+              "9"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "secondary metabolites",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "10",
+              "11"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-induced osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 95,
+            "passage_index": 0,
+            "quote": "Marine natural products that inhibit osteoclastogenesis and promote osteoblast differentiation.",
+            "start": 0
+          },
+          {
+            "end": 715,
+            "passage_index": 1,
+            "quote": "We describe the marine-derived secondary metabolites that can inhibit receptor activator of nuclear factor-kappaB ligand (RANKL)-induced osteoclastogenesis",
+            "start": 560
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The review states that marine-derived secondary metabolites can inhibit RANKL-induced osteoclastogenesis.",
+        "uncertainties": [
+          "This is a review-level statement, not a single primary experiment.",
+          "The exact marine compound(s) are not specified.",
+          "RANKL is annotated as a gene in the provider data, but here it functions as part of a phenotype description rather than an extracted mechanistic entity."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        95
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        92
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        560,
+        715
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        558,
+        781
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,107 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "podosomes and sealing zone",
+          "disease_setting": null,
+          "species": "osteoclasts",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "10097",
+              "10096"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "Arp2/3 complex",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "actin network of podosomes and SZ",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "actin polymerization",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1171,
+            "passage_index": 1,
+            "quote": "(b) the Arp2/3 complex is distributed throughout the actin network of podosomes and SZ, indicating that actin polymerization is concentrated at these regions;",
+            "start": 1013
+          }
+        ],
+        "experiment": {
+          "assay": "replica electron microscopy",
+          "dose": null,
+          "duration": null,
+          "endpoint": "spatial distribution of Arp2/3 complex in actin network",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In osteoclast sealing zones, the Arp2/3 complex is distributed throughout the actin network of podosomes and the sealing zone, which the authors state indicates actin polymerization is concentrated in these regions.",
+        "uncertainties": [
+          "The passage reports spatial distribution and an inferred implication about actin polymerization, not a direct perturbation experiment.",
+          "Taxon is not explicitly stated in the sentence, though the context is osteoclasts."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1013,
+        1171
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1172,
+        1294
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

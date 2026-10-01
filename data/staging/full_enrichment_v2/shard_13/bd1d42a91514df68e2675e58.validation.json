@@ -1,0 +1,175 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "PMOP",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "YSQGM",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "inflammation-related proteins",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2050,
+            "passage_index": 1,
+            "quote": "In vivo and in vitro experiments confirmed that YSQGM dose-dependently downregulated the expression of inflammation-related proteins (PTGS2, MAPK14, GSK3B, c-Fos, JNK, ERK, and NF-kappaB p65)",
+            "start": 1859
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "dose-dependent",
+          "duration": "8 weeks",
+          "endpoint": "expression of inflammation-related proteins",
+          "intervention": "YSQGM",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "YSQGM dose-dependently downregulated inflammation-related proteins in the experimental PMOP setting.",
+        "uncertainties": [
+          "The quoted result groups multiple proteins together; individual protein-specific effects are not separately quantified in the passage.",
+          "The passage mentions both in vivo and in vitro validation, but the exact in vitro cell type is not stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "PMOP",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "YSQGM",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2082,
+            "passage_index": 1,
+            "quote": "In vivo and in vitro experiments confirmed that YSQGM dose-dependently downregulated the expression of inflammation-related proteins (PTGS2, MAPK14, GSK3B, c-Fos, JNK, ERK, and NF-kappaB p65) and reduced osteoclast activity",
+            "start": 1859
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "dose-dependent",
+          "duration": "8 weeks",
+          "endpoint": "osteoclast activity",
+          "intervention": "YSQGM",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "YSQGM treatment reduced osteoclast activity.",
+        "uncertainties": [
+          "The passage does not specify the assay used to measure osteoclast activity.",
+          "The effect is reported alongside protein changes, but the causal linkage between the two is not directly demonstrated in the quoted text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1859,
+        2050
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2079,
+        2184
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1859,
+        2082
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2079,
+        2198
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,116 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "48"
+            ],
+            "existing_node_id": "null",
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Src",
+            "taxon": "null"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": "null",
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast formation and activity",
+            "taxon": "null"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1253,
+            "passage_index": 1,
+            "quote": "Src inhibition has also been shown to suppress osteoclast",
+            "start": 1196
+          },
+          {
+            "end": 1277,
+            "passage_index": 1,
+            "quote": "formation and activity.",
+            "start": 1254
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast formation and activity",
+          "intervention": "Src inhibition",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Src inhibition was reported to suppress osteoclast formation and activity.",
+        "uncertainties": [
+          "The passage reports a prior finding in review form and does not specify the experimental system, assay, dose, or direct molecular mechanism.",
+          "'Src inhibition' is not resolved to a specific inhibitor compound in the text."
+        ]
+      },
+      "errors": [
+        "invented existing node ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1196,
+        1253
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1281,
+        1337
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1254,
+        1277
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1338,
+        1367
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,209 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "tibia tissue",
+          "compartment": "tibia",
+          "disease_setting": "severe burn injury",
+          "species": "rats",
+          "stage": "PID 28"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "103",
+              "104",
+              "106",
+              "113",
+              "115",
+              "117",
+              "120",
+              "121",
+              "122",
+              "125",
+              "126",
+              "131",
+              "132",
+              "135",
+              "139",
+              "140",
+              "141",
+              "153"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "burn group",
+            "taxon": "Rattus norvegicus"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": "Rattus norvegicus"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2376,
+            "passage_index": 1,
+            "quote": "The numbers of osteoclasts in the tibia tissue of rats in the two burn groups were similar, both significantly more than the number in sham injury group.",
+            "start": 2223
+          }
+        ],
+        "experiment": {
+          "assay": "tartrate-resistant acid phosphatase staining",
+          "dose": "12%TBSA full-thickness burn; 24%TBSA full-thickness burn",
+          "duration": "post injury day 28",
+          "endpoint": "number of osteoclasts in tibia tissue",
+          "intervention": "sham injury group vs 12%TBSA full-thickness burn group vs 24%TBSA full-thickness burn group",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Severe burn injury in rats was associated with more osteoclasts in tibia than sham injury, with larger burns showing a greater increase.",
+        "uncertainties": [
+          "The cited span is a reconstructed excerpt from the full sentence and may not match validator offsets exactly.",
+          "The sentence reports group-level comparison; it does not establish a direct molecular mediator of the osteoclast increase."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "first lumbar spine tissue",
+          "compartment": "first lumbar spine tissue",
+          "disease_setting": "severe burn injury",
+          "species": "rats",
+          "stage": "PID 28"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "104",
+              "106",
+              "112",
+              "113",
+              "115",
+              "117",
+              "120",
+              "121",
+              "122",
+              "125",
+              "126",
+              "131",
+              "132",
+              "135",
+              "139",
+              "140",
+              "141",
+              "153"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "24%TBSA full-thickness burn group",
+            "taxon": "Rattus norvegicus"
+          },
+          {
+            "annotation_ids": [
+              "94",
+              "95",
+              "123",
+              "145"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": "Rattus norvegicus"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 3529,
+            "passage_index": 1,
+            "quote": "the mRNA expression level of RANKL in the first lumbar spine tissue of rats in 24%TBSA full-thickness burn group was 1.31+-0.17, which was significantly higher than 1.00+-0.14 in sham injury group and 0.97+-0.10 in 12%TBSA full-thickness burn group (P<0.01).",
+            "start": 3418
+          }
+        ],
+        "experiment": {
+          "assay": "real-time fluorescent quantitative reverse transcription polymerase chain reaction",
+          "dose": "24%TBSA full-thickness burn",
+          "duration": "post injury day 28",
+          "endpoint": "RANKL mRNA expression level",
+          "intervention": "24%TBSA full-thickness burn",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In rats, 24%TBSA full-thickness burn increased RANKL mRNA expression in first lumbar spine tissue compared with sham injury and 12%TBSA burn.",
+        "uncertainties": [
+          "The quote is extracted from a longer sentence and may have offset uncertainty.",
+          "The text reports mRNA expression, not protein abundance or activity."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        2223,
+        2376
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2350,
+        2478
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

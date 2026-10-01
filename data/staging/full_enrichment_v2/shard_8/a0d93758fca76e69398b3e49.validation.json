@@ -1,0 +1,111 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "hypothesis",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "bone regeneration",
+          "species": "swine",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "osteoclast differentiation pathway",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "guided bone self-generation with periosteum-preserved",
+            "taxon": "swine"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1431,
+            "passage_index": 1,
+            "quote": "The major signaling pathways of DEGs enrichment include oxidative phosphorylation, PI3K-Akt signaling pathway, osteoclast differentiation pathway and Wnt signaling. CONCLUSIONS: The oxidoreductase reaction was activated during this bone regeneration process.",
+            "start": 1173
+          },
+          {
+            "end": 1630,
+            "passage_index": 1,
+            "quote": "The oxidative phosphorylation, PI3K-Akt signaling pathway, osteoclast differentiation pathway and Wnt signaling may play important roles in the guided bone self-generation with periosteum-preserved.",
+            "start": 1432
+          }
+        ],
+        "experiment": {
+          "assay": "microarray analysis and GO/pathway enrichment",
+          "dose": null,
+          "duration": "postoperative 9 time points",
+          "endpoint": "differentially expressed gene pathway enrichment",
+          "intervention": "periosteum-preserved guided bone self-generation after rib defects in mature swine",
+          "outcome_change": "other",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The abstract reports that the osteoclast differentiation pathway was among the pathways enriched in differentially expressed genes during guided bone self-generation, and suggests it may play an important role in this process.",
+        "uncertainties": [
+          "The text reports pathway enrichment and a hypothesis about importance, not a causal mechanism.",
+          "The exact molecular actor(s) underlying the pathway association are not identified."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1173,
+        1431
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1119,
+        1214
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1432,
+        1630
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1216,
+        1322
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

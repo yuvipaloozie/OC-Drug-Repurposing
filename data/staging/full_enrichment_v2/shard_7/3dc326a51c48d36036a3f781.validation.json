@@ -1,0 +1,232 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "juvenile"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "25",
+              "27",
+              "28",
+              "31",
+              "35",
+              "39"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "CCFM1445",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast numbers",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 319,
+            "passage_index": 1,
+            "quote": "CCFM1445 increased femur length, bone volume fraction, and cortical bone area",
+            "start": 242
+          },
+          {
+            "end": 508,
+            "passage_index": 1,
+            "quote": "decreased osteoclast numbers.",
+            "start": 479
+          }
+        ],
+        "experiment": {
+          "assay": "Bone histomorphometry",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast numbers",
+          "intervention": "Treatment with CCFM1445",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Treatment with CCFM1445 decreased osteoclast numbers in juvenile mice.",
+        "uncertainties": [
+          "The exact molecular identity of CCFM1445 is not provided beyond the strain label.",
+          "The cited outcome is based on histomorphometry, but the passage does not specify whether the decrease reflects fewer osteoclasts per bone surface, area, or another metric."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "gut microbiota / metabolomic context",
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "juvenile"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "25",
+              "27",
+              "28",
+              "31",
+              "35",
+              "39"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "CCFM1445",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "arginine biosynthesis and metabolic pathway",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "37"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "citrulline",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "36",
+              "38",
+              "40"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "arginine",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1399,
+            "passage_index": 1,
+            "quote": "CCFM1445 also significantly increased the relative abundance of Bifidobacterium, Alistipes, and [Eubacterium] xylanophilum group in the gut microbiota. Targeted metabolomic analysis showed that CCFM1445 modulated the arginine biosynthesis and metabolic pathway, characterized by decreased citrulline and increased levels of arginine and its downstream metabolites.",
+            "start": 1035
+          }
+        ],
+        "experiment": {
+          "assay": "Targeted metabolomic analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "arginine biosynthesis and metabolic pathway; citrulline and arginine levels",
+          "intervention": "CCFM1445 treatment",
+          "outcome_change": "other",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "CCFM1445 modulated the arginine biosynthesis and metabolic pathway, with decreased citrulline and increased arginine and downstream metabolites in mice.",
+        "uncertainties": [
+          "The passage reports pathway modulation and metabolite level changes, but does not specify a direct biochemical reaction or enzyme.",
+          "The exact directionality between CCFM1445 and the pathway is descriptive rather than causal in mechanistic terms."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        242,
+        319
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        390,
+        472
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        479,
+        508
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        593,
+        638
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1035,
+        1399
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1377,
+        1610
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

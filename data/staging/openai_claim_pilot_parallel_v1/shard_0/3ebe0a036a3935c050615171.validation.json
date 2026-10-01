@@ -1,0 +1,220 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "joint",
+          "disease_setting": "arthritis",
+          "species": "rabbits",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "9"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "HFD",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "10",
+              "11",
+              "12",
+              "13",
+              "14",
+              "15"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "rabbits",
+            "taxon": "9986"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "joint injuries",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1009,
+            "passage_index": 1,
+            "quote": "the HFD led to an increase in joint injuries in both induced and non-induced arthritis rabbits",
+            "start": 915
+          }
+        ],
+        "experiment": {
+          "assay": "histopathological and imaging tests",
+          "dose": null,
+          "duration": "12 weeks",
+          "endpoint": "joint injuries",
+          "intervention": "high-fat diet",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "claim1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In rabbits, a high-fat diet increased joint injuries in both induced and non-induced arthritis groups.",
+        "uncertainties": [
+          "HFD is represented as the dietary intervention described in text; no molecular identity is established.",
+          "The text does not isolate a specific osteoclast mechanism; the claim is limited to joint injury outcome."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "subchondral bone",
+          "disease_setting": "arthritis",
+          "species": "rabbits",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "9"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "HFD",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption process",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "subchondral bone",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "10",
+              "11",
+              "12",
+              "13",
+              "14",
+              "15"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "rabbits",
+            "taxon": "9986"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1491,
+            "passage_index": 1,
+            "quote": "Additionally, HFD accelerated the bone resorption process in subchondral bone",
+            "start": 1414
+          }
+        ],
+        "experiment": {
+          "assay": "histopathological and imaging tests",
+          "dose": null,
+          "duration": "12 weeks",
+          "endpoint": "bone resorption process",
+          "intervention": "high-fat diet",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "claim2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In rabbits, a high-fat diet accelerated the bone resorption process in subchondral bone.",
+        "uncertainties": [
+          "The phrase describes a phenotypic process rather than a molecular pathway or cell-specific mechanism.",
+          "No direct osteoclast measure is stated in the excerpt."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "claim1",
+      "corrected_offsets": [
+        915,
+        1009
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        652,
+        741
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "claim2",
+      "corrected_offsets": [
+        1414,
+        1491
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        937,
+        1017
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,215 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "preosteoclast",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "24",
+              "28",
+              "36",
+              "38"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "26SCS",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "32",
+              "33"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "RANKL signalling",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "preosteoclast fusion",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 559,
+            "passage_index": 1,
+            "quote": "26SCS targets K97 in receptor activator of nuclear factor-kappaB (RANK) through geometrically matched sulfate pairs, blocking RANK ligand (RANKL) signalling to arrest preosteoclast fusion",
+            "start": 372
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis; preosteoclast fusion",
+          "intervention": "26SCS",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "26SCS suppresses osteoclastogenesis by blocking RANKL signalling and arresting preosteoclast fusion.",
+        "uncertainties": [
+          "The text links RANK binding and RANKL signalling inhibition in one mechanistic sentence, but directness of the molecular interaction is not fully established from the abstract alone.",
+          "The cell type is inferred from the phrase 'preosteoclast fusion' and is not explicitly stated as an experimental culture system."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "preosteoclast",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "24",
+              "28",
+              "36",
+              "38"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "26SCS",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "PDGF-BB",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "preosteoclast viability",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "angiogenesis-coupled mineralization",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 713,
+            "passage_index": 1,
+            "quote": "while enhancing platelet-derived growth factor-BB (PDGF-BB) secretion via preserved preosteoclast viability to drive angiogenesis-coupled mineralization.",
+            "start": 560
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "PDGF-BB secretion",
+          "intervention": "26SCS",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "26SCS enhances PDGF-BB secretion, attributed to preserved preosteoclast viability, and this is presented as supporting angiogenesis-coupled mineralization.",
+        "uncertainties": [
+          "The phrase 'via preserved preosteoclast viability' describes a proposed mechanism, but the abstract does not separate direct from indirect causality.",
+          "The downstream angiogenesis-coupled mineralization effect is described as a functional consequence, not as a separately measured assay in the abstract."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        372,
+        559
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        479,
+        661
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        560,
+        713
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        662,
+        829
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

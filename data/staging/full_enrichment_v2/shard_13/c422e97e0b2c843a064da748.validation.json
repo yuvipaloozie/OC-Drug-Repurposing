@@ -1,0 +1,179 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "atypical femur fractures",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "20"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Atypical femur fractures (AFF)",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [
+              "21"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "bisphosphonate (BP) treatment",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 159,
+            "passage_index": 1,
+            "quote": "BACKGROUND AND PURPOSE:  Atypical femur fractures (AFF) are associated with bisphosphonate (BP) treatment, although 10-50% of AFF patients have never used BPs.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "unknown",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e1",
+          "sign": "unknown",
+          "subject": "e2"
+        },
+        "summary": "Atypical femur fractures were associated with bisphosphonate treatment, although some patients with AFF had never used bisphosphonates.",
+        "uncertainties": [
+          "Clinical association is reported at the group level; no mechanistic causality is established.",
+          "AFF is a clinical phenotype rather than a molecular entity."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "fracture site",
+          "disease_setting": "incomplete atypical femur fracture",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone volume fraction (BV/TV)",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "non-BP group",
+            "taxon": "9606"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1334,
+            "passage_index": 1,
+            "quote": "The bone volume fraction (BV/TV) was on average 18% lower (95% confidence interval -35 to -1.2) in the non-BP group.",
+            "start": 1218
+          }
+        ],
+        "experiment": {
+          "assay": "histological analysis of biopsies",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone volume fraction (BV/TV)",
+          "intervention": "bisphosphonate exposure status",
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "unknown",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e1",
+          "sign": "unknown",
+          "subject": "e2"
+        },
+        "summary": "In the non-BP group, AFF fracture sites were associated with lower bone volume fraction on average than in the BP group.",
+        "uncertainties": [
+          "This is a between-group comparison in a retrospective study, not a causal perturbation experiment.",
+          "The quoted sentence reports an average difference for the non-BP group relative to the BP group, but does not isolate a direct molecular mechanism."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        159
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        117
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1218,
+        1334
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        722,
+        899
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

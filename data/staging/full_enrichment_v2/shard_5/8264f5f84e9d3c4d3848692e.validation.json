@@ -1,0 +1,203 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "Homo sapiens",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "Probiotic supplementation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "P1NP",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D010024"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoporosis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1458,
+            "passage_index": 1,
+            "quote": "Probiotic supplementation significantly improved bone metabolism. Bone formation markers showed notable increases, including a significant rise in P1NP",
+            "start": 1307
+          }
+        ],
+        "experiment": {
+          "assay": "meta-analysis of randomized controlled trials",
+          "dose": null,
+          "duration": "8 weeks to 12 months",
+          "endpoint": "P1NP",
+          "intervention": "probiotic supplementation",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Probiotic supplementation was associated with an increase in the bone formation marker P1NP in osteoporotic participants.",
+        "uncertainties": [
+          "The intervention is a heterogeneous set of probiotic strains rather than a single defined compound.",
+          "The quote is from a meta-analysis summary, not a single primary experiment."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "Homo sapiens",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "Probiotic supplementation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "CTX-I",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D010024"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoporosis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1629,
+            "passage_index": 1,
+            "quote": "and osteocalcin. Bone resorption markers, especially CTX-I, demonstrated significant reductions (SMD = -0.35; 95% CI: -0.52 to -0.18).",
+            "start": 1495
+          }
+        ],
+        "experiment": {
+          "assay": "meta-analysis of randomized controlled trials",
+          "dose": null,
+          "duration": "8 weeks to 12 months",
+          "endpoint": "CTX-I",
+          "intervention": "probiotic supplementation",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Probiotic supplementation was associated with a reduction in the bone resorption marker CTX-I in osteoporotic participants.",
+        "uncertainties": [
+          "The intervention is a heterogeneous set of probiotic strains rather than a single defined compound.",
+          "The quote is from a meta-analysis summary, not a single primary experiment."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1307,
+        1458
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        879,
+        987
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1495,
+        1629
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        987,
+        1113
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

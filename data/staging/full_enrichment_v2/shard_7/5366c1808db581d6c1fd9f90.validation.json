@@ -1,0 +1,326 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "B16 melanoma cells",
+          "compartment": "bone",
+          "disease_setting": "bone metastasis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "43",
+              "45",
+              "50"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "beta3 integrin",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "42",
+              "55",
+              "57"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone metastasis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "47"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone lesions",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "41",
+              "67"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "B16 melanoma cells",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 270,
+            "passage_index": 1,
+            "quote": "Mice with a targeted deletion of beta3 integrin were used to examine the process by which tumor cells metastasize and destroy bone. Injection of B16 melanoma cells into the left cardiac ventricle resulted in osteolytic bone metastasis in 74% of beta3+/+ mice by 14 days.",
+            "start": 0
+          },
+          {
+            "end": 332,
+            "passage_index": 1,
+            "quote": " In contrast, only 4% of beta3-/- mice developed bone lesions.",
+            "start": 270
+          }
+        ],
+        "experiment": {
+          "assay": "B16 melanoma cell injection into the left cardiac ventricle",
+          "dose": null,
+          "duration": "14 days",
+          "endpoint": "osteolytic bone metastasis / bone lesions",
+          "intervention": "targeted deletion of beta3 integrin",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In mice with targeted deletion of beta3 integrin, B16 melanoma injection produced far fewer bone metastases and bone lesions than in wild-type mice.",
+        "uncertainties": [
+          "The text reports both osteolytic bone metastasis and bone lesions; the exact preferred endpoint for the effect is summarized jointly.",
+          "The molecular form of beta3 integrin is inferred from the gene-style knockout context but not explicitly labeled as protein or gene in the passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone",
+          "disease_setting": "bone metastasis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "58",
+              "60"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Src",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "63"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "tumor-associated bone destruction",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "65"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "tumor cell metastasis to bone",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 896,
+            "passage_index": 1,
+            "quote": "To dissect the roles of osteoclast and platelet beta3 integrins in this model of bone metastasis, osteoclast-defective src-/- mice were used. Src-null mice were protected from tumor-associated bone destruction but were not protected from tumor cell metastasis to bone.",
+            "start": 628
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "tumor-associated bone destruction",
+          "intervention": "src-/- mice",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Src-null mice were protected from tumor-associated bone destruction, but they were not protected from tumor cell metastasis to bone.",
+        "uncertainties": [
+          "The sentence also states no protection from tumor cell metastasis to bone; this is captured as a separate observed result in the summary but not as a second edge because the claim is about loss-of-function effect on bone destruction."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "B16",
+          "compartment": "bone",
+          "disease_setting": "bone metastasis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "66"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "activated alphaIIbbeta3",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "68"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "B16 metastases",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1011,
+            "passage_index": 1,
+            "quote": "In contrast, a highly specific platelet aggregation inhibitor of activated alphaIIbbeta3 prevented B16 metastases.",
+            "start": 897
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "B16 metastases",
+          "intervention": "highly specific platelet aggregation inhibitor of activated alphaIIbbeta3",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "A highly specific inhibitor of activated alphaIIbbeta3 prevented B16 metastases.",
+        "uncertainties": [
+          "The inhibitor is described functionally, but the specific compound name is not stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        270
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        184
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        270,
+        332
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        184,
+        260
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        628,
+        896
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        731,
+        916
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        897,
+        1011
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        917,
+        1028
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

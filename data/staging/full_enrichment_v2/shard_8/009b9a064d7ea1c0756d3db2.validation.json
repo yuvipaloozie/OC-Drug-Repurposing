@@ -1,0 +1,200 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "25"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Iron",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 462,
+            "passage_index": 1,
+            "quote": "Iron, a critical linker between lysosomes and mitochondria, has emerged as a critical mediator of osteoclast activity.",
+            "start": 344
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "unknown",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Iron is described as a critical mediator of osteoclast activity.",
+        "uncertainties": [
+          "Review/summary language rather than a primary experimental result.",
+          "The statement is broad and does not specify whether the effect is direct or indirect."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "hypothesis",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "lysosome-iron-mitochondria axis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "34"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoporosis progression",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "35"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast-mediated bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 730,
+            "passage_index": 1,
+            "quote": "iron in osteoclasts and osteoporosis remains poorly understood. This review aims to bridge this knowledge gap by examining the lysosome-iron-mitochondria axis in osteoclasts. Firstly, we summarized",
+            "start": 533
+          },
+          {
+            "end": 1478,
+            "passage_index": 1,
+            "quote": "the dysregulation of this lysosome-iron-mitochondria axis may drive osteoporosis progression and proposed innovative therapeutic strategies targeting this axis to mitigate osteoclast-mediated bone loss.",
+            "start": 1400
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast-mediated bone loss",
+          "intervention": "targeting this axis",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The review proposes that dysregulation of the lysosome-iron-mitochondria axis may drive osteoporosis progression and that targeting this axis may mitigate osteoclast-mediated bone loss.",
+        "uncertainties": [
+          "This is a review-proposed hypothesis, not an observed experimental result.",
+          "The text uses modal language ('may drive', 'proposed'), so causal direction is not experimentally established."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        344,
+        462
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        418,
+        469
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        533,
+        730
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1251,
+        1400
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

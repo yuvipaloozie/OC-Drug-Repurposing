@@ -1,0 +1,318 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "alphavbeta3 integrin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "15"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "vitronectin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "16"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "osteopontin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "bone sialoprotein",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 268,
+            "passage_index": 1,
+            "quote": "Osteoclasts highly express the alphavbeta3 integrin, which binds to a variety of extracellular matrix proteins including vitronectin, osteopontin and bone sialoprotein.",
+            "start": 100
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "binding of alphavbeta3 integrin to extracellular matrix proteins",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "binding",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In osteoclasts, alphavbeta3 integrin is highly expressed and is reported to bind extracellular matrix proteins such as vitronectin, osteopontin, and bone sialoprotein.",
+        "uncertainties": [
+          "The sentence lists multiple extracellular matrix ligands; the regulatory object is represented with one example ligand while the broader multi-ligand statement is summarized in the claim text.",
+          "Taxon is not explicitly stated for the proteins or cells in the passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "in vitro and in vivo",
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "17"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "RGD-containing peptides",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "18"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "RGD-mimetics",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "alphavbeta3 blocking antibodies",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "19",
+              "29"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "alphavbeta3 integrin",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 466,
+            "passage_index": 1,
+            "quote": "RGD-containing peptides, RGD-mimetics and alphavbeta3 blocking antibodies inhibit bone resorption in vitro and in vivo, suggesting that this integrin plays an important role in osteoclast function.",
+            "start": 269
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption",
+          "intervention": "RGD-containing peptides, RGD-mimetics and alphavbeta3 blocking antibodies",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "RGD-containing peptides, RGD-mimetics, and alphavbeta3 blocking antibodies inhibit bone resorption in vitro and in vivo, suggesting an important role for this integrin in osteoclast function.",
+        "uncertainties": [
+          "The passage reports three inhibitory interventions together; the claim represents one cited subject-object pair while the summary preserves the full combined context.",
+          "The sentence includes an interpretation ('suggesting that this integrin plays an important role'); this is captured only as a summary, not as a causal edge from the integrin to bone resorption."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "cytosolic",
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "17"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "RGD-containing peptides",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "20"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "calcium",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 544,
+            "passage_index": 1,
+            "quote": "RGD-containing peptides were shown to raise cytosolic calcium in osteoclasts.",
+            "start": 467
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "cytosolic calcium",
+          "intervention": "RGD-containing peptides",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "RGD-containing peptides were shown to raise cytosolic calcium in osteoclasts.",
+        "uncertainties": [
+          "The sentence states a calcium increase but does not specify the exact molecular form of calcium signaling or the assay used.",
+          "Cytosolic location is inferred from the wording of the sentence and treated as context rather than a separate mechanistic claim."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        100,
+        268
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        100,
+        168
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        269,
+        466
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        169,
+        335
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        467,
+        544
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        336,
+        395
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

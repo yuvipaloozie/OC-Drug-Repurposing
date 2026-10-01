@@ -1,0 +1,463 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 murine macrophages",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "murine",
+          "stage": "osteoclast-like differentiation"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "36",
+              "40",
+              "44",
+              "46",
+              "53",
+              "57",
+              "63"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "37",
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "RAW264.7",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "35",
+              "39",
+              "43",
+              "45",
+              "47",
+              "48",
+              "52",
+              "54",
+              "55",
+              "56",
+              "59",
+              "61",
+              "62"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "l-CaD",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 433,
+            "passage_index": 1,
+            "quote": "Upon RANKL treatment, RAW264.7",
+            "start": 403
+          },
+          {
+            "end": 561,
+            "passage_index": 1,
+            "quote": "cells undergo cell-cell fusion into multinucleate, and TRAP-positive large OCs with a concomitant increase of l-CaD expression.",
+            "start": 434
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "l-CaD expression",
+          "intervention": "RANKL treatment",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "RANKL treatment was associated with increased l-CaD expression in RAW264.7 cells undergoing osteoclast-like differentiation.",
+        "uncertainties": [
+          "The text does not specify whether the increased l-CaD expression is direct or indirect.",
+          "l-CaD is annotated by the provider as a gene, but the passage describes expression and function at the protein level."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "OCs",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "murine",
+          "stage": "RANKL-induced osteoclastogenesis"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "35",
+              "39",
+              "43",
+              "45",
+              "47",
+              "48",
+              "52",
+              "54",
+              "55",
+              "56",
+              "59",
+              "61",
+              "62"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "l-CaD",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "36",
+              "40",
+              "44",
+              "46",
+              "53",
+              "57",
+              "63"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "42",
+              "58",
+              "60"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "TRAP activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1656,
+            "passage_index": 1,
+            "quote": "With the experiments using dephosphorylated and phosphorylated l-CaD mutants, we further showed that dephosphorylated l-CaD mutant facilitated RANKL-induced TRAP activity with an increased cell fusion index, whereas phosphorylated l-CaD decreased the TRAP activity and cell fusion.",
+            "start": 1375
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "TRAP activity and cell fusion index",
+          "intervention": "dephosphorylated and phosphorylated l-CaD mutants",
+          "outcome_change": "other",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "positive",
+          "subject": "e3"
+        },
+        "summary": "Dephosphorylated l-CaD mutant facilitated RANKL-induced TRAP activity and increased cell fusion index, whereas phosphorylated l-CaD decreased TRAP activity and cell fusion.",
+        "uncertainties": [
+          "The abstract does not specify the exact mutant constructs beyond dephosphorylated versus phosphorylated l-CaD.",
+          "The directionality for the phosphorylation state is relative to the mutant form used in the experiment, not to an endogenous kinase activity."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "OC precursor cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "murine",
+          "stage": "osteoclastogenesis"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "35",
+              "39",
+              "43",
+              "45",
+              "47",
+              "48",
+              "52",
+              "54",
+              "55",
+              "56",
+              "59",
+              "61",
+              "62"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "l-CaD",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "36",
+              "40",
+              "44",
+              "46",
+              "53",
+              "57",
+              "63"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 783,
+            "passage_index": 1,
+            "quote": "Using gain- and loss-of-function in OC precursor cells followed by RANKL induction, we showed that the expression of l-CaD in response to RANKL activation is an important event for osteoclastogenesis, and bone resorption.",
+            "start": 562
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis and bone resorption",
+          "intervention": "gain- and loss-of-function in OC precursor cells followed by RANKL induction",
+          "outcome_change": "other",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "osteoclastogenesis",
+          "sign": "positive",
+          "subject": "e3"
+        },
+        "summary": "Using gain- and loss-of-function experiments followed by RANKL induction, the study reported that l-CaD expression was important for osteoclastogenesis and bone resorption.",
+        "uncertainties": [
+          "The exact gain-of-function and loss-of-function manipulations are not specified in the abstract.",
+          "The claim bundles osteoclastogenesis and bone resorption as reported outcomes without separating their individual dependencies."
+        ]
+      },
+      "errors": [
+        "unknown regulatory participant"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "OCs",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "murine",
+          "stage": "RANKL-induced"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "35",
+              "39",
+              "43",
+              "45",
+              "47",
+              "48",
+              "52",
+              "54",
+              "55",
+              "56",
+              "59",
+              "61",
+              "62"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "l-CaD",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1452,
+            "passage_index": 1,
+            "quote": "while the third peptide did not significantly affect the F-actin binding of l-CaD, and decreased the formation of podosome-like structures in OCs. With the experiments using dephosphorylated and phosphorylated l-CaD mutants,",
+            "start": 1228
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "formation of podosome-like structures",
+          "intervention": "Ser-to-Asp mutation at the Erk-mediated phosphorylation site peptide",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c4",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "podosome-like structures",
+          "sign": "negative",
+          "subject": "e3"
+        },
+        "summary": "The peptide with the Ser-to-Asp mutation at the Erk-mediated phosphorylation site decreased formation of podosome-like structures in RANKL-induced osteoclasts.",
+        "uncertainties": [
+          "The sentence refers to 'the third peptide' rather than explicitly repeating the mutant name in the quoted span.",
+          "The abstract does not specify whether the effect is direct or mediated through other factors."
+        ]
+      },
+      "errors": [
+        "unknown regulatory participant"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        403,
+        433
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        134,
+        165
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        434,
+        561
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        165,
+        241
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        562,
+        783
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        241,
+        387
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1375,
+        1656
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1292,
+        1487
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c4",
+      "corrected_offsets": [
+        1228,
+        1452
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        630,
+        847
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

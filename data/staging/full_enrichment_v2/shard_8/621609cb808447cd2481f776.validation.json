@@ -1,0 +1,196 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "protein",
+            "surface": "Siglecs",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "7305"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "DNAX activation protein of 12 kDa (DAP12)",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "6850"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "spleen tyrosine kinase (Syk)",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 633,
+            "passage_index": 1,
+            "quote": "some Siglecs have a positively charged amino acid residue in the transmembrane domain and associate with DNAX activation protein of 12 kDa (DAP12), which in turn recruits spleen tyrosine kinase (Syk).",
+            "start": 433
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "binding",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e2"
+        },
+        "summary": "DAP12-associated Siglecs are described as associating with DAP12, which recruits Syk.",
+        "uncertainties": [
+          "Review statement; no primary experiment is described in the extracted passage.",
+          "The text states recruitment/association, not a measured biochemical binding assay."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoclast",
+          "compartment": "bone",
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "284266"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Siglec-15",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast development and function",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 844,
+            "passage_index": 1,
+            "quote": "Siglec-15 is conserved throughout vertebrate evolution and plays a role in bone homeostasis by regulating osteoclast development and function.",
+            "start": 702
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast development and function",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Siglec-15 is said to play a role in bone homeostasis by regulating osteoclast development and function.",
+        "uncertainties": [
+          "The passage is a review-style background statement rather than a specific experimental result.",
+          "The direction of the regulation (increase or decrease) is not stated."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        433,
+        633
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        542,
+        678
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        702,
+        844
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        711,
+        823
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

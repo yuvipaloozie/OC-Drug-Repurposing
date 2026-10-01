@@ -1,0 +1,94 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "blood",
+          "disease_setting": "periodontitis and rheumatoid arthritis",
+          "species": "murine",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "50"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "lactate",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "disease severity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 659,
+            "passage_index": 1,
+            "quote": "lactate levels were observed in murine models of PD and RA and correlated positively with disease severity.",
+            "start": 552
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "blood lactate levels and disease severity correlation",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In murine PD and RA models, blood lactate was elevated and positively associated with disease severity.",
+        "uncertainties": [
+          "The passage reports correlation in murine PD and RA models but does not establish causality.",
+          "The exact experimental assay for lactate measurement is not stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        552,
+        659
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        642,
+        750
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

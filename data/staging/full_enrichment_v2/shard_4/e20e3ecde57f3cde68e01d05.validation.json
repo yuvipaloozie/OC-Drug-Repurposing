@@ -1,0 +1,229 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "piglet",
+          "stage": "lactation"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "OPG/RANKL ratio",
+            "taxon": "piglet"
+          },
+          {
+            "annotation_ids": [
+              "35",
+              "36",
+              "39",
+              "40",
+              "41",
+              "42"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "high dietary Ca-P supplementation",
+            "taxon": "piglet"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": "piglet"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1479,
+            "passage_index": 1,
+            "quote": "Notably, the OPG/RANKL ratio, a key marker of inhibited bone resorption, increased by 32.73% and 41.82% in the H2 and H3 groups, respectively (P < 0.01).",
+            "start": 1326
+          }
+        ],
+        "experiment": {
+          "assay": "serum biochemical and hormonal analysis",
+          "dose": "0.79% Ca and 0.39% available P (H2); 0.87% Ca and 0.43% available P (H3)",
+          "duration": "days 17 and 35 of lactation",
+          "endpoint": "OPG/RANKL ratio",
+          "intervention": "graded dietary Ca and P levels during lactation",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e1",
+          "sign": "positive",
+          "subject": "e2"
+        },
+        "summary": "High dietary Ca-P supplementation increased the OPG/RANKL ratio in nursing piglets, compared with control.",
+        "uncertainties": [
+          "The text reports group-level dietary treatment effects rather than a direct molecular perturbation.",
+          "OPG and RANKL are mentioned as markers/ratio, but the underlying molecular form of the ratio is a phenotype rather than a direct interaction."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "piglet",
+          "stage": "postnatal"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "39",
+              "40",
+              "41",
+              "42"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "dietary Ca and P levels",
+            "taxon": "piglet"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "postnatal bone resorption",
+            "taxon": "piglet"
+          },
+          {
+            "annotation_ids": [
+              "49",
+              "50",
+              "60",
+              "61"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "OPG/RANKL/RANK axis",
+            "taxon": "piglet"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2122,
+            "passage_index": 1,
+            "quote": "These findings establish evidence based nutritional thresholds for high-yielding Shenxian sows.",
+            "start": 2027
+          },
+          {
+            "end": 2026,
+            "passage_index": 1,
+            "quote": "Conclusion: Elevating dietary Ca and P levels to 0.79% and 0.39%, respectively, optimally enhances piglet growth performance by modulating the OPG/RANKL/RANK axis and reducing postnatal bone resorption.",
+            "start": 1824
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "0.79% and 0.39%",
+          "duration": null,
+          "endpoint": "postnatal bone resorption",
+          "intervention": "elevating dietary Ca and P levels",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The authors conclude that elevating dietary Ca and P reduces postnatal bone resorption in piglets.",
+        "uncertainties": [
+          "This is a conclusion statement; the exact direct measurement of bone resorption is not described in the quoted sentence.",
+          "The pathway term OPG/RANKL/RANK axis is reported as a mechanistic interpretation rather than a directly assayed molecular event."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1326,
+        1479
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1487,
+        1563
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        2027,
+        2122
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2138,
+        2205
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1824,
+        2026
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2042,
+        2128
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

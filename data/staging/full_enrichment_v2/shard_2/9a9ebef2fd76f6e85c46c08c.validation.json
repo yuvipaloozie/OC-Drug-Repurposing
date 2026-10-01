@@ -1,0 +1,135 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": "osteoclastogenesis"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "A1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast maturation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "25"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:MMP9",
+            "key": "e3",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "protein",
+            "surface": "MMP9",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "26"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:CTSK",
+            "key": "e4",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "protein",
+            "surface": "cathepsin K",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "RAW264.7",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "24"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-induced RAW264.7 osteoclastogenesis model",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 949,
+            "passage_index": 1,
+            "quote": "In a RANKL-induced RAW264.7 osteoclastogenesis model, A1 inhibited osteoclast maturation at non-cytotoxic concentrations, markedly reducing the expression of osteoclast functional proteins (MMP9 and cathepsin K) and disrupting F-actin ring formation and multinucleation.",
+            "start": 679
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro osteoclastogenesis model",
+          "dose": "non-cytotoxic concentrations",
+          "duration": null,
+          "endpoint": "osteoclast maturation; MMP9 and cathepsin K expression",
+          "intervention": "A1",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In a RANKL-induced RAW264.7 osteoclastogenesis model, A1 inhibited osteoclast maturation and reduced expression of the osteoclast functional proteins MMP9 and cathepsin K.",
+        "uncertainties": [
+          "The passage does not state whether the reduction in MMP9 and cathepsin K is direct or indirect.",
+          "RAW264.7 species is not explicitly stated in the passage.",
+          "The exact molecular forms of MMP9 and cathepsin K are inferred from the text and provider annotations, not experimentally validated here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        679,
+        949
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        675,
+        945
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,221 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "M-MDSCs",
+          "compartment": "bone marrow",
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "aged"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "24",
+              "26",
+              "28",
+              "32"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Cd38",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "M-MDSCs",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1143,
+            "passage_index": 1,
+            "quote": "there was 8-fold increase in Cd38 mRNA gene expression",
+            "start": 1089
+          },
+          {
+            "end": 1621,
+            "passage_index": 1,
+            "quote": "that the age-related increase in Cd38 expression in M-MDSCs bias the transcriptome of M-MDSCs towards osteoclastogenesis",
+            "start": 1501
+          }
+        ],
+        "experiment": {
+          "assay": "qRT-PCR",
+          "dose": null,
+          "duration": null,
+          "endpoint": "Cd38 mRNA expression",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In aged mice, M-MDSCs showed an 8-fold increase in Cd38 mRNA expression, and the authors state that age-related Cd38 increase in M-MDSCs biases them toward osteoclastogenesis.",
+        "uncertainties": [
+          "The text links increased Cd38 expression to osteoclastogenic bias, but does not specify a direct molecular mechanism between Cd38 and osteoclastogenesis in the quoted spans."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow-derived M-MDSCs",
+          "compartment": "bone marrow",
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "aged"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "78c",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "24",
+              "26",
+              "28",
+              "32"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "CD38",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenic potential",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "M-MDSCs",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1477,
+            "passage_index": 1,
+            "quote": "and 78c, a small molecule inhibitor of CD38, reduced the mitochondrial oxygen consumption rate and glucose metabolism and inhibited the osteoclastogenic potential of aged mice bone marrow-derived M-MDSCs.",
+            "start": 1273
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenic potential",
+          "intervention": "78c",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The CD38 inhibitor 78c reduced mitochondrial oxygen consumption rate and glucose metabolism and inhibited the osteoclastogenic potential of aged mouse bone marrow-derived M-MDSCs.",
+        "uncertainties": [
+          "The quoted span reports multiple downstream decreases (mitochondrial oxygen consumption rate and glucose metabolism) in addition to reduced osteoclastogenic potential; these are not separated into distinct claims here.",
+          "Directness of the CD38 inhibition effect on the osteoclastogenic phenotype is not established from the abstract alone."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1089,
+        1143
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1083,
+        1132
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1501,
+        1621
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1493,
+        1605
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1273,
+        1477
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1264,
+        1465
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

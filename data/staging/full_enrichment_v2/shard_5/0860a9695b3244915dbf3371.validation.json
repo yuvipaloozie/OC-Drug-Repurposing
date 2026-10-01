@@ -1,0 +1,206 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW 264.7 cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "murine",
+          "stage": "pre-osteoclasts"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "46"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Mg AZ31+SPF+HT extract",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "46",
+              "48"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Mg AZ31+SPF",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "42"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "TRAP-positive and multinucleated cells",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1828,
+            "passage_index": 1,
+            "quote": "a significant reduction in the number of TRAP-positive and multinucleated cells was observed relative to the Mg AZ31+SPF group",
+            "start": 1702
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP staining",
+          "dose": null,
+          "duration": "3- and 6-day treatment periods",
+          "endpoint": "TRAP-positive and multinucleated cells",
+          "intervention": "Mg AZ31+SPF+HT extract",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In RAW 264.7 murine pre-osteoclasts, Mg AZ31+SPF+HT extract reduced TRAP-positive multinucleated cells relative to Mg AZ31+SPF.",
+        "uncertainties": [
+          "Exact span boundaries are estimated from the supplied passage text.",
+          "The quote supports a phenotype-level decrease, not a direct molecular mechanism."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW 264.7 cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "murine",
+          "stage": "pre-osteoclasts"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "46"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Mg AZ31+SPF+HT extract",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "47"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast-specific gene expression",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [
+              "49"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "MMP9",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1953,
+            "passage_index": 1,
+            "quote": "This effect was corroborated by the downregulation of osteoclast-specific gene expression and decreased MMP9 protein levels",
+            "start": 1830
+          }
+        ],
+        "experiment": {
+          "assay": "qRT-PCR and ELISA",
+          "dose": null,
+          "duration": "3- and 6-day treatment periods",
+          "endpoint": "osteoclast-specific gene expression and MMP9 protein levels",
+          "intervention": "Mg AZ31+SPF+HT extract",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Compared with Mg AZ31+SPF, Mg AZ31+SPF+HT extract downregulated osteoclast-specific gene expression and decreased MMP9 protein levels in RAW 264.7 cells.",
+        "uncertainties": [
+          "The sentence combines gene-expression and protein outcomes; the exact genes underlying 'osteoclast-specific gene expression' are not named here.",
+          "Exact span boundaries are estimated from the supplied passage text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1702,
+        1828
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1804,
+        1899
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1830,
+        1953
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1898,
+        2017
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

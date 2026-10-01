@@ -1,0 +1,94 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ovariectomized mice",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "59"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "SSCP",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 832,
+            "passage_index": 1,
+            "quote": "SSCP improved bone mineral density in ovariectomized mice by improving bone volume, trabecular thickness and trabecular number. Histological analysis and tartrate-resistant acid phosphatase (TRAP) staining revealed denser trabeculae and decreased osteoclast activity",
+            "start": 566
+          }
+        ],
+        "experiment": {
+          "assay": "Histological analysis and tartrate-resistant acid phosphatase (TRAP) staining",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast activity",
+          "intervention": "SSCP",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Sheepskin collagen peptide (SSCP) treatment decreased osteoclast activity in ovariectomized mice.",
+        "uncertainties": [
+          "Exact span boundaries are best-effort and may need validation.",
+          "The passage links decreased osteoclast activity with SSCP treatment but does not establish direct molecular targets."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        566,
+        832
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        676,
+        844
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

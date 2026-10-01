@@ -1,0 +1,249 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ovariectomy model",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "6",
+              "53",
+              "54",
+              "65",
+              "69",
+              "74",
+              "78",
+              "84"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Dauricine",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "7",
+              "55",
+              "60",
+              "61",
+              "75",
+              "77",
+              "79",
+              "80",
+              "85"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "ovariectomized-induced bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 43,
+            "passage_index": 0,
+            "quote": "Dauricine attenuates ovariectomized-induced",
+            "start": 0
+          },
+          {
+            "end": 1753,
+            "passage_index": 1,
+            "quote": "administration of Dau to OVX-induced mice",
+            "start": 1712
+          },
+          {
+            "end": 1806,
+            "passage_index": 1,
+            "quote": "bone loss disease",
+            "start": 1789
+          }
+        ],
+        "experiment": {
+          "assay": "micro-CT and histology",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone loss",
+          "intervention": "Dauricine administration",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Dauricine administration attenuates ovariectomy-induced bone loss in mice.",
+        "uncertainties": [
+          "The abstract states the in vivo model is an ovariectomized mouse model, but the exact strain, sex and dosing regimen are not provided in the supplied text.",
+          "The title uses 'ovariectomized-induced' while the abstract uses 'OVX-induced'; both refer to the same disease context but the precise wording differs."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "53",
+              "54",
+              "65",
+              "69",
+              "74",
+              "78",
+              "84"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Dauricine",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "63",
+              "70"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 489,
+            "passage_index": 1,
+            "quote": "Dauricine (Dau) on the formation and function of osteoclasts in vitro",
+            "start": 420
+          },
+          {
+            "end": 1320,
+            "passage_index": 1,
+            "quote": "Dau inhibits RANKL-induced osteoclastogenesis",
+            "start": 1251
+          }
+        ],
+        "experiment": {
+          "assay": "osteoclastogenesis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "Dauricine",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Dauricine inhibits RANKL-induced osteoclastogenesis in vitro.",
+        "uncertainties": [
+          "The text does not specify the exact in vitro cell type or experimental dose/duration.",
+          "RANKL is annotated as a gene in the source packet, but the passage context does not by itself establish a specific molecular form beyond the name used in the paper."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        420,
+        489
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        570,
+        630
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1712,
+        1753
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1870,
+        1909
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1789,
+        1806
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1939,
+        1960
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

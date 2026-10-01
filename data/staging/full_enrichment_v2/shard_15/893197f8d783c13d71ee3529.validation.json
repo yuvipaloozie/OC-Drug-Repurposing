@@ -1,0 +1,228 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "MCF-7 cells",
+          "compartment": null,
+          "disease_setting": "menopausal symptoms",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "25",
+              "27"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "SDGP and LOMIX",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "28",
+              "29",
+              "35",
+              "42"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "ER",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 976,
+            "passage_index": 1,
+            "quote": "Co-treatment with SDGP and LOMIX synergistically enhanced ER[Formula: see text]/ER[Formula: see text] phosphorylation and Akt activation",
+            "start": 840
+          }
+        ],
+        "experiment": {
+          "assay": "ERE-luciferase reporter assays and Western blot analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "ER activation",
+          "intervention": "Co-treatment with SDGP and a linusorb mixture (LOMIX)",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Co-treatment with SDGP and LOMIX increased ER phosphorylation/activation and was reported to increase transcription of ER target genes.",
+        "uncertainties": [
+          "The quote directly states ER phosphorylation and Akt activation; the transcription of ER target genes is described in the surrounding sentence but not fully captured in the cited span.",
+          "ER is annotated as a gene ID in the source, but the text here supports a protein-level activation event rather than a specific gene product form."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 cells",
+          "compartment": null,
+          "disease_setting": "menopausal symptoms",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "25",
+              "27"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "SDGP and LOMIX",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "36"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "NF-[Formula: see text]B",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "MAPK signaling pathways",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "37"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "c-Fos",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "38"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "NFATc1",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1186,
+            "passage_index": 1,
+            "quote": "The combination also suppressed osteoclast differentiation by inhibiting NF-[Formula: see text]B and MAPK signaling pathways, including c-Fos and NFATc1.",
+            "start": 1033
+          }
+        ],
+        "experiment": {
+          "assay": "Anti-osteoclastogenic effects were assessed in RANKL-induced RAW264.7 cells",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation",
+          "intervention": "Co-treatment with SDGP and a linusorb mixture (LOMIX)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "SDGP and LOMIX suppressed osteoclast differentiation and were reported to inhibit NF-kB and MAPK signaling, including c-Fos and NFATc1.",
+        "uncertainties": [
+          "The sentence attributes inhibition to NF-kB and MAPK signaling pathways, but the claim records the directly observed phenotype suppression rather than a separate pathway-edge for each downstream factor.",
+          "RANKL-induced RAW264.7 cells are stated in the abstract, but the phrase 'The combination also suppressed...' does not repeat the model context in the same sentence."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        840,
+        976
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        548,
+        655
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1033,
+        1186
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        656,
+        817
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

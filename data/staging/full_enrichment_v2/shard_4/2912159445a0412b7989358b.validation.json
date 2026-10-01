@@ -1,0 +1,329 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "Mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "BAT removal",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "Nrg4 knockout",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone formation",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "40"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 992,
+            "passage_index": 1,
+            "quote": "Neuregulin 4 (Nrg4) knockout (Nrg4-/-), and BAT transplantation were used to evaluate the role of BAT-secreted Nrg4 in bone homeostasis. In vitro experiments were performed to explore the effects of Nrg4 on osteoclastogenesis and the angiogenesis-osteogenesis coupling. Additionally, exogenous Nrg4 treatment was applied to ovariectomy (OVX)-induced osteoporotic mice to assess its therapeutic potential. BAT removal or Nrg4 knockout resulted in increased bone resorption and decreased bone formation, thereby accelerating bone loss in mice; conversely, BAT transplantation rescued the skeletal phenotype of Nrg4-/- mice.",
+            "start": 371
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption",
+          "intervention": "BAT removal",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "BAT removal or Nrg4 knockout increased bone resorption and decreased bone formation in mice, accelerating bone loss.",
+        "uncertainties": [
+          "The passage also states that Nrg4 knockout caused the same outcome, but this claim is encoded only for BAT removal.",
+          "The text reports both increased bone resorption and decreased bone formation; only one regulatory object is encoded here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "Mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "39",
+              "42",
+              "44",
+              "47",
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Nrg4",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "45",
+              "46"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "NF-kappaB inflammatory signaling pathway",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1236,
+            "passage_index": 1,
+            "quote": "Nrg4 significantly inhibited osteoclastogenesis, at least partially through the NF-kappaB inflammatory signaling pathway, while simultaneously activating the angiogenesis-osteogenesis coupling via PDGF-BB derived from preosteoclasts.",
+            "start": 1003
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro experiments",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "Nrg4",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Nrg4 significantly inhibited osteoclastogenesis, at least partially through the NF-kappaB inflammatory signaling pathway.",
+        "uncertainties": [
+          "The mechanism 'at least partially through the NF-kappaB inflammatory signaling pathway' is stated, but directness is not established.",
+          "The passage does not specify whether Nrg4 is acting as a protein or RNA in the experiment, so the molecular form is based on the gene annotation only."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "OVX-induced osteoporotic mice",
+          "species": "Mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "39",
+              "42",
+              "44",
+              "47",
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Nrg4",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "40",
+              "48"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "36",
+              "37",
+              "38",
+              "49",
+              "50",
+              "51"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "OVX-induced osteoporotic mice",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1341,
+            "passage_index": 1,
+            "quote": "Nrg4 significantly inhibited osteoclastogenesis, at least partially through the NF-kappaB inflammatory signaling pathway, while simultaneously activating the angiogenesis-osteogenesis coupling via PDGF-BB derived from preosteoclasts. Furthermore, exogenous Nrg4 treatment effectively attenuated bone loss in OVX-induced osteoporotic mice.",
+            "start": 1003
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone loss",
+          "intervention": "exogenous Nrg4 treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Exogenous Nrg4 treatment attenuated bone loss in ovariectomy-induced osteoporotic mice.",
+        "uncertainties": [
+          "The passage does not provide dose or duration for exogenous Nrg4 treatment."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        371,
+        992
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        475,
+        726
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1003,
+        1236
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1083,
+        1227
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1003,
+        1341
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1364,
+        1508
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

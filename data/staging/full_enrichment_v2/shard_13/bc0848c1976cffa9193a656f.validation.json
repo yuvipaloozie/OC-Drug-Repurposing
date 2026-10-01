@@ -1,0 +1,108 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "experimental periodontitis",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "25",
+              "29",
+              "32"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "DL76",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "24",
+              "33"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "rats",
+            "taxon": "Rattus norvegicus"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1533,
+            "passage_index": 1,
+            "quote": "DL76 evoked a reduction in (1) lymphocytic infiltration, (2) RANKL and OPG expression as well as (3) bone resorption",
+            "start": 1417
+          }
+        ],
+        "experiment": {
+          "assay": "radiological examinations",
+          "dose": null,
+          "duration": "28 days",
+          "endpoint": "bone resorption",
+          "intervention": "DL76 administered subcutaneously for 28 days",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In rats with experimental periodontitis, DL76 administration reduced bone resorption and was reported to reduce inflammatory infiltration and RANKL/OPG expression.",
+        "uncertainties": [
+          "The quoted span also mentions reduced lymphocytic infiltration and reduced RANKL/OPG expression, but the claim is focused on bone resorption.",
+          "Exact molecular targets of DL76 are not established in the text beyond antagonist/inverse agonist wording."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1417,
+        1533
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1552,
+        1669
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

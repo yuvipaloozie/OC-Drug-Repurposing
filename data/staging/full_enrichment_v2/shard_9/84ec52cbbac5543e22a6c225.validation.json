@@ -1,0 +1,179 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "20"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "SPG",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 384,
+            "passage_index": 1,
+            "quote": "We demonstrated that SPG dose-dependently inhibited osteoclastogenesis and reduced gene expression associated with osteoclast differentiation.",
+            "start": 242
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "SPG",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "SPG dose-dependently inhibited osteoclastogenesis and reduced gene expression associated with osteoclast differentiation.",
+        "uncertainties": [
+          "The passage also mentions reduced gene expression associated with osteoclast differentiation, but the specific genes are not named in the quoted span.",
+          "The experimental cell type for this specific inhibition statement is not explicitly stated in the quoted sentence."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "26"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "SPG",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoblast differentiation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1034,
+            "passage_index": 1,
+            "quote": "In addition, SPG slightly enhanced osteoblast differentiation, as evidenced by increased differentiation marker gene expression and alizarin red staining.",
+            "start": 880
+          }
+        ],
+        "experiment": {
+          "assay": "alizarin red staining",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoblast differentiation",
+          "intervention": "SPG",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "SPG slightly enhanced osteoblast differentiation, with increased differentiation marker gene expression and alizarin red staining.",
+        "uncertainties": [
+          "The quote states the effect was slight, so the magnitude is limited.",
+          "The passage does not specify the model system or cell type for the osteoblast differentiation result in the quoted span."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        242,
+        384
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        242,
+        385
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        880,
+        1034
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        872,
+        1027
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,181 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Moderate-intensity exercise",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1115,
+            "passage_index": 1,
+            "quote": "Moderate-intensity exercise promoted osteoblast activity and suppressed osteoclast activity",
+            "start": 1024
+          }
+        ],
+        "experiment": {
+          "assay": "histological and immunohistochemical analyses",
+          "dose": null,
+          "duration": "long-term",
+          "endpoint": "osteoclast activity",
+          "intervention": "moderate-intensity exercise",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Long-term moderate-intensity exercise suppressed osteoclast activity in mice.",
+        "uncertainties": [
+          "The abstract does not specify the exact molecular mediators responsible for the decreased osteoclast activity.",
+          "The quoted span does not by itself distinguish whether the effect is direct or indirect."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Acute moderate-intensity exercise",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [
+              "21943"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "RANKL",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 869,
+            "passage_index": 1,
+            "quote": "Acute moderate-intensity exercise decreased RANKL level as bone resorption marker",
+            "start": 788
+          }
+        ],
+        "experiment": {
+          "assay": "real-time PCR analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "RANKL level",
+          "intervention": "acute moderate-intensity exercise",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Acute moderate-intensity exercise decreased RANKL level in mice.",
+        "uncertainties": [
+          "RANKL is annotated as a gene by the provider, but the text only states a decreased level and does not specify RNA vs protein.",
+          "The exercise regimen is summarized from the abstract; exact acute protocol details are not provided in the quoted span."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        788,
+        869
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        824,
+        890
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1024,
+        1115
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1033,
+        1094
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,199 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "human gingival fibroblasts",
+          "compartment": null,
+          "disease_setting": "periodontitis",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "rhubarb extract",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "56"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "LPS",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "65"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "NF-kappaB",
+            "taxon": "human"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1203,
+            "passage_index": 1,
+            "quote": "Rhubarb extract inhibited LPS-induced NF-kappaB activation",
+            "start": 1145
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "NF-kappaB activation",
+          "intervention": "rhubarb extract",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In LPS-stimulated human gingival fibroblasts, rhubarb extract inhibited NF-kappaB activation.",
+        "uncertainties": [
+          "Offset is best-effort and may need validator adjustment for exact span boundaries.",
+          "The sentence also mentions cytokine production and downstream ferroptosis-related markers, but this claim extracts only the NF-kappaB effect."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "periodontitis",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "rhubarb extract",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast formation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "80"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "alveolar bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1903,
+            "passage_index": 1,
+            "quote": "In vivo, rhubarb extract reduced periodontal inflammation, collagen degradation, iron deposition, osteoclast formation, and alveolar bone loss",
+            "start": 1761
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast formation",
+          "intervention": "rhubarb extract",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In a rat periodontitis model, rhubarb extract reduced osteoclast formation and alveolar bone loss.",
+        "uncertainties": [
+          "The quoted span also includes several other reduced outcomes; only osteoclast formation is encoded as the object here.",
+          "Offset is best-effort and may need validator adjustment for exact span boundaries."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1145,
+        1203
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1329,
+        1386
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1761,
+        1903
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1948,
+        2070
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

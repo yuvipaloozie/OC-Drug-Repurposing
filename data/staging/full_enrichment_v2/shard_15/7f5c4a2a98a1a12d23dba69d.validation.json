@@ -1,0 +1,232 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclast cultures",
+          "compartment": null,
+          "disease_setting": "bone resorption assay",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "23",
+              "26",
+              "29"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "AHAVSE",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "24",
+              "25",
+              "28"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "resorption pits",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "actin rings",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 704,
+            "passage_index": 1,
+            "quote": "AHAVSE peptide decreased the",
+            "start": 676
+          },
+          {
+            "end": 758,
+            "passage_index": 1,
+            "quote": "number of resorption pits and the total resorbed area",
+            "start": 705
+          },
+          {
+            "end": 956,
+            "passage_index": 1,
+            "quote": "rapid inactivation of osteoclasts with AHAVSE, which is seen as a decrease in the percentage of osteoclasts with actin rings",
+            "start": 832
+          }
+        ],
+        "experiment": {
+          "assay": "pit formation assay",
+          "dose": null,
+          "duration": null,
+          "endpoint": "resorption pits and total resorbed area",
+          "intervention": "treatment of osteoclast cultures with AHAVSE peptide",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "AHAVSE treatment decreased osteoclast resorption pits and total resorbed area, and was associated with rapid inactivation marked by fewer osteoclasts with actin rings.",
+        "uncertainties": [
+          "The text links AHAVSE to both reduced resorption and fewer actin rings, but does not specify whether these are separate causal steps or parallel outcomes."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "bone surface",
+          "disease_setting": "bone resorption assay",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "23",
+              "26",
+              "29"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "the peptide",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "primary attachment of osteoclasts to bone surface",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 578,
+            "passage_index": 1,
+            "quote": "The primary attachment of osteoclasts to bone surface is not affected by the peptide",
+            "start": 494
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "primary attachment of osteoclasts to bone surface",
+          "intervention": "treatment with the peptide",
+          "outcome_change": "no_detected_change",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "AHAVSE did not affect the primary attachment of osteoclasts to the bone surface.",
+        "uncertainties": [
+          "The peptide surface reference is generic in the sentence; the abstract later names AHAVSE as the studied peptide."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        676,
+        704
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        561,
+        590
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        705,
+        758
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        590,
+        647
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        832,
+        956
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        680,
+        770
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        494,
+        578
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        467,
+        542
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

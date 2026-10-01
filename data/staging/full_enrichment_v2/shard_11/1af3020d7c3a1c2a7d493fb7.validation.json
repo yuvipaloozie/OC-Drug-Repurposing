@@ -1,0 +1,193 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "Majeed syndrome",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "accelerated osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "98"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:NFATC1",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "protein",
+            "surface": "NFATc1",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1556,
+            "passage_index": 1,
+            "quote": "Accelerated osteoclastogenesis in the patient with Majeed syndrome was associated with higher NFATc1 levels",
+            "start": 1449
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "accelerated osteoclastogenesis; NFATc1 levels",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In the patient with Majeed syndrome, accelerated osteoclastogenesis was associated with higher NFATc1 levels.",
+        "uncertainties": [
+          "The text reports association rather than a causal mechanism.",
+          "NFATc1 is annotated as a gene in the source, but the regulated molecular form is not explicitly stated.",
+          "The existing node suggestion is unverified and may be taxon- or form-mismatched."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "Majeed syndrome",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "103",
+              "106"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "LPIN2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "107"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "proinflammatory M2-like macrophages",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "intrinsic osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1940,
+            "passage_index": 1,
+            "quote": "LPIN2 deficiency drives differentiation of proinflammatory M2-like macrophages and enhances intrinsic osteoclastogenesis",
+            "start": 1820
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "differentiation of proinflammatory M2-like macrophages; intrinsic osteoclastogenesis",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The authors conclude that LPIN2 deficiency drives differentiation of proinflammatory M2-like macrophages and enhances intrinsic osteoclastogenesis.",
+        "uncertainties": [
+          "This is a conclusion statement rather than a directly described perturbation experiment.",
+          "The sentence also links LPIN2 deficiency to M2-like macrophage differentiation, but only one regulatory edge is encoded here.",
+          "LPIN2 molecular form is inferred from the gene annotation and may not reflect the exact active form in the conclusion."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1449,
+        1556
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1651,
+        1690
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1820,
+        1940
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1905,
+        1988
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

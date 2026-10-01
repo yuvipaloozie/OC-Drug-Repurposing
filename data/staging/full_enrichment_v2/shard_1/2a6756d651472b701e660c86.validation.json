@@ -1,0 +1,180 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "short-term experimentally-controlled low energy availability",
+          "species": "recreational female runners",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "LEA conditions",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "2"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "beta-CTX",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1089,
+            "passage_index": 1,
+            "quote": "beta-CTX was increased over time in both LEA conditions",
+            "start": 1034
+          }
+        ],
+        "experiment": {
+          "assay": "fasted bone markers measured on the mornings immediately before and after each intervention period",
+          "dose": "15 kcal/kgFFM/d",
+          "duration": "five days",
+          "endpoint": "beta-CTX concentration",
+          "intervention": "daily treadmill running with either no additional exercise or an additional 50 jump exercises per day",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In both low-energy-availability conditions, the bone resorption marker beta-CTX increased over time.",
+        "uncertainties": [
+          "The claim concerns a biomarker change in an exercise/energy-restriction intervention, not a direct molecular mechanism.",
+          "Exact causal contribution of LEA versus running or jumping cannot be separated from this sentence alone."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "no_effect",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "short-term experimentally-controlled low energy availability",
+          "species": "recreational female runners",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "50 jumping exercises per day",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "2",
+              "3"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "markers of bone resorption or formation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1549,
+            "passage_index": 1,
+            "quote": "performing 50 jumping exercises during short-term LEA did not have an effect on markers of bone resorption or formation",
+            "start": 1430
+          }
+        ],
+        "experiment": {
+          "assay": "bone markers measured on the mornings immediately before and after each intervention period",
+          "dose": "15 kcal/kgFFM/d",
+          "duration": "five days",
+          "endpoint": "markers of bone resorption or formation",
+          "intervention": "50 jumping exercises during short-term LEA",
+          "outcome_change": "no_detected_change",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Performing 50 jumping exercises during short-term low energy availability did not change markers of bone resorption or formation.",
+        "uncertainties": [
+          "The endpoint is broad and combines multiple markers; the sentence states no effect overall rather than for each marker individually.",
+          "This is a treatment comparison in runners, not a direct mechanistic molecular experiment."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1034,
+        1089
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1158,
+        1213
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1430,
+        1549
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1704,
+        1823
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

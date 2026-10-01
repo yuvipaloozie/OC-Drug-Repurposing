@@ -1,0 +1,223 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "goat",
+          "stage": "young"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "71",
+              "74"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "FGF23",
+            "taxon": "goat"
+          },
+          {
+            "annotation_ids": [
+              "52",
+              "55",
+              "58",
+              "60",
+              "65",
+              "72",
+              "75",
+              "77",
+              "80",
+              "84",
+              "85"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "P-restriction",
+            "taxon": "goat"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 939,
+            "passage_index": 1,
+            "quote": "fibroblast growth factor 23 (FGF23) expression, this was lower with P-restriction.",
+            "start": 857
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": "6-8 weeks",
+          "endpoint": "FGF23 expression",
+          "intervention": "dietary P-restriction",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e1",
+          "sign": "negative",
+          "subject": "e2"
+        },
+        "summary": "P-restriction lowered FGF23 expression in young goats.",
+        "uncertainties": [
+          "The exact mechanistic step linking P-restriction to reduced FGF23 expression is not specified beyond a proposed signaling pathway."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "goat",
+          "stage": "young"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "78"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFRSF11B",
+            "key": "e1",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "OPG",
+            "taxon": "goat"
+          },
+          {
+            "annotation_ids": [
+              "79"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "calcitonin receptor",
+            "taxon": "goat"
+          },
+          {
+            "annotation_ids": [
+              "52",
+              "55",
+              "58",
+              "60",
+              "65",
+              "72",
+              "75",
+              "77",
+              "80",
+              "84",
+              "85"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "P-restriction",
+            "taxon": "goat"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": "goat"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1511,
+            "passage_index": 1,
+            "quote": "an increase in OPG mRNA expression. Additionally, the increased mRNA expression of the calcitonin receptor during P-restriction points to a higher number of osteoclasts.",
+            "start": 1342
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": "6-8 weeks",
+          "endpoint": "OPG mRNA expression and calcitonin receptor mRNA expression",
+          "intervention": "dietary P-restriction",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e1",
+          "sign": "positive",
+          "subject": "e3"
+        },
+        "summary": "P-restriction was associated with increased OPG mRNA expression and an increased calcitonin receptor mRNA expression, which the authors say points to more osteoclasts.",
+        "uncertainties": [
+          "The statement that calcitonin receptor expression points to a higher number of osteoclasts is an inferred interpretation in the abstract, not a direct cell count measurement.",
+          "The mapping of OPG to the suggested existing node is uncertain because the packet's suggested node is unverified and mouse-specific."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        857,
+        939
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        929,
+        1010
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1342,
+        1511
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1367,
+        1598
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

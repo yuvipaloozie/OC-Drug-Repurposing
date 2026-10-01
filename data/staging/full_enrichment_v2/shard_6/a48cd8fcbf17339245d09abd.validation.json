@@ -1,0 +1,343 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "distal femurs",
+          "disease_setting": null,
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "21",
+              "23",
+              "25",
+              "26",
+              "28",
+              "29",
+              "30",
+              "31",
+              "34"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "TriDAP",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoblast",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Runx2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "24"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "mice",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 665,
+            "passage_index": 1,
+            "quote": "Here, we demonstrate that, unlike MDP, TriDAP elicits bone resorption by decreasing osteoblast and Runx2 levels and increasing osteoclasts in the distal femurs of mice intraperitoneally administered TriDAP.",
+            "start": 459
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption; osteoblast and Runx2 levels; osteoclasts",
+          "intervention": "intraperitoneally administered TriDAP",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In mice, intraperitoneal TriDAP treatment elicited bone resorption by decreasing osteoblast and Runx2 levels and increasing osteoclasts in distal femurs.",
+        "uncertainties": [
+          "The sentence combines multiple outcomes; the extracted regulatory relation focuses on TriDAP to osteoblast decrease, while the broader bone-resorption phenotype also includes Runx2 and osteoclast changes.",
+          "Directionality to Runx2 is mentioned in the same span but not fully decomposed into a separate claim here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoblasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "21",
+              "23",
+              "25",
+              "26",
+              "28",
+              "29",
+              "30",
+              "31",
+              "34"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "TriDAP",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Runx2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoblasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 836,
+            "passage_index": 1,
+            "quote": "This treatment inhibited osteoblast differentiation by downregulating Runx2 expression and also decreased the protein stability of Runx2 by increasing its ubiquitination.",
+            "start": 666
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "Runx2 expression; protein stability; osteoblast differentiation",
+          "intervention": "TriDAP treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "TriDAP reduced Runx2 expression and increased Runx2 ubiquitination/protein turnover in osteoblasts, consistent with inhibited osteoblast differentiation.",
+        "uncertainties": [
+          "The quoted span also mentions ubiquitination as a mechanism for reduced Runx2 stability, but the exact molecular intermediates are not specified."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoblast-osteoclast co-culture system",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "21",
+              "23",
+              "25",
+              "26",
+              "28",
+              "29",
+              "30",
+              "31",
+              "34"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "TriDAP",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "osteoblast-osteoclast co-culture system",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "NOD1-deficient osteoblasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1441,
+            "passage_index": 1,
+            "quote": "TriDAP exhibited a marginal increase in osteoclast differentiation in the presence of RANKL, but it enhanced osteoclast differentiation in an osteoblast-osteoclast co-culture system. This suggests that TriDAP directly affects osteoblasts and indirectly affects osteoclasts. TriDAP did not induce osteoclast differentiation in the presence of NOD1-deficient osteoblasts.",
+            "start": 1072
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation",
+          "intervention": "TriDAP",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "TriDAP increased osteoclast differentiation in an osteoblast-osteoclast co-culture system, and TriDAP did not induce osteoclast differentiation when osteoblasts lacked NOD1.",
+        "uncertainties": [
+          "The co-culture result is stated as enhanced osteoclast differentiation, but the mechanism is described as indirect and dependent on osteoblast NOD1 status.",
+          "The presence of RANKL is mentioned in a separate clause; the extracted claim centers on the co-culture system result."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        459,
+        665
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        727,
+        868
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        666,
+        836
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        869,
+        1032
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1072,
+        1441
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1240,
+        1403
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

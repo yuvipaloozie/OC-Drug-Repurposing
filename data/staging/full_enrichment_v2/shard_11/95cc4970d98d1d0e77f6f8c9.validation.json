@@ -1,0 +1,260 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "primary murine bone marrow-derived mononuclear cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "differentiated with M-CSF and RANKL"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "24",
+              "26",
+              "33",
+              "35",
+              "39",
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Roxadustat",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "resorption",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 452,
+            "passage_index": 1,
+            "quote": "primary murine bone marrow-derived mononuclear cells differentiated with M-CSF and RANKL",
+            "start": 364
+          },
+          {
+            "end": 507,
+            "passage_index": 1,
+            "quote": "Cell viability, TRAP staining, bone resorption assays",
+            "start": 454
+          },
+          {
+            "end": 809,
+            "passage_index": 1,
+            "quote": "Roxadustat suppressed osteoclast differentiation and resorption without cytotoxicity in a concentration-dependent manner.",
+            "start": 688
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP staining, bone resorption assays, cell viability",
+          "dose": "concentration-dependent",
+          "duration": null,
+          "endpoint": "osteoclast differentiation and resorption",
+          "intervention": "Roxadustat",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Roxadustat suppressed osteoclast differentiation and resorption in vitro without cytotoxicity, in a concentration-dependent manner.",
+        "uncertainties": [
+          "The passage combines differentiation and resorption in one statement; the specific effect on each endpoint is not separately quantified here.",
+          "Species is inferred from the stated murine cell source, but the exact experimental organism beyond the cells is not fully specified."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclast precursor",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "24",
+              "26",
+              "33",
+              "35",
+              "39",
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Roxadustat",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast precursor proliferation",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "36"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Ki67",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "31",
+              "37",
+              "40"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:ACP5",
+            "key": "e4",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "p27",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1029,
+            "passage_index": 1,
+            "quote": "RNA-seq revealed enrichment of cell cycle pathways; although differentiation was inhibited, roxadustat paradoxically promoted osteoclast precursor proliferation, evidenced by increased Ki67 and decreased p27 expression.",
+            "start": 810
+          }
+        ],
+        "experiment": {
+          "assay": "RNA-seq, flow cytometry, immunofluorescence, Western blot for p27",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast precursor proliferation; Ki67 increased; p27 decreased",
+          "intervention": "Roxadustat",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Roxadustat increased osteoclast precursor proliferation and decreased p27 expression while differentiation was inhibited.",
+        "uncertainties": [
+          "The text links increased Ki67 and decreased p27 to proliferation, but the claim is still indirect for the molecular markers themselves.",
+          "The suggested existing node for p27 is unreliable and appears mismatched to ACP5; existing_node_id was not used for that reason."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        364,
+        452
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        449,
+        517
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        454,
+        507
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        519,
+        563
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        688,
+        809
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        781,
+        871
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        810,
+        1029
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        910,
+        1152
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

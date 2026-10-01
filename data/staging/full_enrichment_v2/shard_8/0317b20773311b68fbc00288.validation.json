@@ -1,0 +1,201 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "chronic myelogenous leukemia",
+          "species": null,
+          "stage": "early treatment"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "26",
+              "30"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "imatinib",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "31"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "hypophosphatemia",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "increased urinary phosphorus excretion",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 527,
+            "passage_index": 1,
+            "quote": "Tyrosine kinase inhibitors (TKIs) are at the forefront of molecular-targeted therapies for cancer. With the advent of imatinib for the treatment of chronic myelogenous leukemia, a new wave of small-molecule therapeutics redefined the oncologic treatment to become chronically administered medications with tolerable side-effect profiles compared with cytotoxic agents. Effects on bone mineral metabolism were observed during early imatinib treatment, in the form of hypophosphatemia with increased urinary phosphorus excretion.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": "early",
+          "endpoint": "hypophosphatemia; increased urinary phosphorus excretion",
+          "intervention": "imatinib treatment",
+          "outcome_change": "other",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Early imatinib treatment was reported to be associated with hypophosphatemia and increased urinary phosphorus excretion.",
+        "uncertainties": [
+          "The text links hypophosphatemia and increased urinary phosphorus excretion to early imatinib treatment, but does not specify causality or directionality beyond association in the review sentence.",
+          "No species or assay is stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "hematopoietic and mesenchymal stem cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "tyrosine kinase inhibitors",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "43"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "hematopoietic and mesenchymal stem cells",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1328,
+            "passage_index": 1,
+            "quote": "bone resorption appears to be a class effect and is likely contributed by TKI effects on the hematopoietic and mesenchymal stem cells. As long-term, prospective, clinical outcomes data accumulate on these targeted therapies, the full extent of off-target side effects on bone health will need to be considered along with the significant benefits of tyrosine kinase inhibition in oncologic treatment.",
+            "start": 929
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The review states that inhibition of bone resorption appears to be a class effect of tyrosine kinase inhibitors and is likely contributed by effects on hematopoietic and mesenchymal stem cells.",
+        "uncertainties": [
+          "This is a review-level background statement, not a primary experiment.",
+          "The phrase 'appears to be' and 'likely contributed' indicate uncertainty; the exact mechanism is not established in the text.",
+          "No direct osteoclast-specific experimental result is stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        527
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        105,
+        208
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        929,
+        1328
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1034,
+        1269
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

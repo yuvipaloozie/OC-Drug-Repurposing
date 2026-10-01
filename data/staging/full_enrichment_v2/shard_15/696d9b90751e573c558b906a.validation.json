@@ -1,0 +1,134 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "ASIC1a",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D000138"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "acidosis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast migration and adhesion",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "integrin/Pyk2/Src signaling pathway",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 90,
+            "passage_index": 0,
+            "quote": "activation of ASIC1a by acidosis increases osteoclast migration and adhesion",
+            "start": 14
+          },
+          {
+            "end": 141,
+            "passage_index": 0,
+            "quote": "modulating integrin/Pyk2/Src signaling pathway.",
+            "start": 94
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast migration and adhesion",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Activation of ASIC1a by acidosis is reported to increase osteoclast migration and adhesion, with the title indicating involvement of the integrin/Pyk2/Src signaling pathway.",
+        "uncertainties": [
+          "Claim is drawn from the title rather than a detailed results sentence; the pathway connection is stated as modulation, not a direct mechanistic assay result.",
+          "Species and cell type are not stated in the cited title span."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        14,
+        90
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        9,
+        90
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        94,
+        141
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        95,
+        141
+      ],
+      "passage_index": 0
+    }
+  ],
+  "valid_envelope": true
+}

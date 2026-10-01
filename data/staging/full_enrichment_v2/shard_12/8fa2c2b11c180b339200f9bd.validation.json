@@ -1,0 +1,218 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclast",
+          "compartment": null,
+          "disease_setting": "osteopetrosis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "c-src gene",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "MESH:D010022"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteopetrosis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "defective osteoclast function",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 131,
+            "passage_index": 1,
+            "quote": "Transgenic mice lacking a functional c-src gene have osteopetrosis, a bone disorder characterized by defective osteoclast function.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteopetrosis",
+          "intervention": "lacking a functional c-src gene",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Mice lacking functional c-src had osteopetrosis, described as a bone disorder with defective osteoclast function.",
+        "uncertainties": [
+          "The text links c-src loss to osteopetrosis and defective osteoclast function, but does not separate these as distinct causal steps.",
+          "Taxon is inferred from the explicit mention of mice; the molecular form is based on the wording 'c-src gene'."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclast",
+          "compartment": "bone slice assay",
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:C001277"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Geldanamycin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:C020754"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "herbimycin A",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:C035359"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "monorden",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D001862"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 449,
+            "passage_index": 1,
+            "quote": "We have investigated the effects of selective protein tyrosine kinase inhibitors that are known to inhibit c-src, on osteoclast activity in the bone slice assay. Geldanamycin, herbimycin A and monorden (0.001-10 microM) all dose-dependently inhibited bone resorption with IC50 values of 8, 70 and 86 nM, respectively.",
+            "start": 132
+          }
+        ],
+        "experiment": {
+          "assay": "bone slice assay",
+          "dose": "0.001-10 microM",
+          "duration": null,
+          "endpoint": "bone resorption",
+          "intervention": "Geldanamycin, herbimycin A and monorden (0.001-10 microM)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Geldanamycin, herbimycin A, and monorden dose-dependently inhibited bone resorption in the bone slice assay.",
+        "uncertainties": [
+          "The sentence groups three compounds; the regulatory subject is represented with one compound key from the quoted span, while the summary covers all three compounds.",
+          "The text states these compounds are known to inhibit c-src, but the direct molecular target effect is not extracted as a separate claim here."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        131
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        79
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        132,
+        449
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        229,
+        366
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

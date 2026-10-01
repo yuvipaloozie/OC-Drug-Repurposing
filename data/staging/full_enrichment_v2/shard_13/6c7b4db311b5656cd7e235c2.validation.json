@@ -1,0 +1,94 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "marrow hematopoietic cells",
+          "compartment": "bone marrow",
+          "disease_setting": null,
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "42"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "CPE",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1350,
+            "passage_index": 1,
+            "quote": "In addition, differentiation of marrow hematopoietic cells toward tartrate-resistant acid phosphatase-positive multinucleated osteoclasts is highly increased in CPE KO mice, but normal in mCPE KI mice.",
+            "start": 1149
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "differentiation toward tartrate-resistant acid phosphatase-positive multinucleated osteoclasts",
+          "intervention": "CPE KO mice",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In mice, CPE deficiency was associated with increased differentiation of marrow hematopoietic cells toward osteoclasts, while the mutant CPE knockin mice were reported as normal for this phenotype.",
+        "uncertainties": [
+          "The quoted span is a best-effort offset estimate and may need validator correction.",
+          "The claim is inferred from a loss-of-function context; direct molecular mechanism is not stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1149,
+        1350
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        994,
+        1125
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

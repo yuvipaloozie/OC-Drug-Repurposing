@@ -1,0 +1,99 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "skeletal muscle",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": "exercise"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "7",
+              "8",
+              "9",
+              "10",
+              "11"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Interleukin-6",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone metabolic processes",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 885,
+            "passage_index": 1,
+            "quote": "Interleukin-6 (IL-6), one of the first muscle-secreted factors to be discovered, not only plays an important role in regulating the function of the muscle itself but also regulates bone metabolic processes in a bidirectional manner through multiple complex signal transduction pathways, thereby affecting the balance between bone formation and bone resorption. The exact mechanism by which IL-6 regulates bone metabolism is not fully understood, and there are few summaries on how exercise affects bone metabolism through IL-6 from skeletal muscles.",
+            "start": 336
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone metabolism",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The review states that skeletal muscle-derived IL-6 regulates bone metabolic processes in a bidirectional manner and affects the balance between bone formation and bone resorption.",
+        "uncertainties": [
+          "This is a review/background statement rather than a primary experimental result.",
+          "The passage does not specify species or a direct causal mechanism.",
+          "The molecular form of IL-6 is inferred from the text label and provider gene annotation, but the passage does not explicitly state protein versus RNA."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        336,
+        885
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        454,
+        1122
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

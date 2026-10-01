@@ -1,0 +1,206 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "protein",
+            "surface": "Lactate dehydrogenase",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "protein",
+            "surface": "NADH oxidase",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "pathway",
+            "surface": "metabolic reprogramming",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteogenic differentiation and regeneration",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 366,
+            "passage_index": 1,
+            "quote": "Lactate dehydrogenase (LDH) cooperates with NADH oxidase (NOX) to drive metabolic reprogramming that enhances osteogenic differentiation and regeneration.",
+            "start": 212
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The abstract states that LDH cooperates with NOX to drive metabolic reprogramming that enhances osteogenic differentiation and regeneration.",
+        "uncertainties": [
+          "The statement is presented as background in the abstract rather than a specific experimental result.",
+          "The text does not specify whether the LDH-NOX relationship is direct or indirect."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "fracture healing",
+          "species": "mouse and rabbit",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "single-atom-engineered implant",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "15"
+            ],
+            "existing_node_id": "CHEBI:29108",
+            "key": "e2",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "phenotype",
+            "surface": "calcium influx",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "16"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Piezo1",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 974,
+            "passage_index": 1,
+            "quote": "After 5 weeks of implantation, the single-atom-engineered implant promotes calcium influx through the mechanosensitive Piezo1 channel",
+            "start": 841
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": "5 weeks",
+          "endpoint": "calcium influx",
+          "intervention": "single-atom-engineered implant",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The single-atom-engineered implant is reported to promote calcium influx through the Piezo1 channel.",
+        "uncertainties": [
+          "The sentence links calcium influx to the Piezo1 channel, but does not explicitly state that Piezo1 itself changes in abundance or activity.",
+          "The implant material is not otherwise chemically specified."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        212,
+        366
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        201,
+        302
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        841,
+        974
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        628,
+        735
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

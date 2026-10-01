@@ -1,0 +1,183 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "tibial tissue",
+          "disease_setting": "ovariectomy-induced osteoporosis",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "CCL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "NF-kappaB",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2837,
+            "passage_index": 1,
+            "quote": "significantly decreasing NF-kappaB expression and increasing IkappaBalpha expression",
+            "start": 2753
+          }
+        ],
+        "experiment": {
+          "assay": "Western blotting",
+          "dose": "high-dose",
+          "duration": null,
+          "endpoint": "NF-kappaB expression",
+          "intervention": "high-dose CCL",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In ovariectomy-induced osteoporotic rats, high-dose Cuscuta chinensis treatment decreased NF-kappaB expression.",
+        "uncertainties": [
+          "Quote spans a sentence fragment rather than the full causal sentence; offsets are best-effort.",
+          "CCL is an herbal extract/mixture, so the molecular form is only approximately represented as compound.",
+          "NF-kappaB is treated as a complex-like entity here; exact molecular entity form is not fully specified in the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "tibial tissue",
+          "disease_setting": "ovariectomy-induced osteoporosis",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "CCL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "36",
+              "42",
+              "51",
+              "52",
+              "55"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "IkappaBalpha",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2837,
+            "passage_index": 1,
+            "quote": "significantly decreasing NF-kappaB expression and increasing IkappaBalpha expression",
+            "start": 2753
+          }
+        ],
+        "experiment": {
+          "assay": "Western blotting",
+          "dose": "high-dose",
+          "duration": null,
+          "endpoint": "IkappaBalpha expression",
+          "intervention": "high-dose CCL",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In ovariectomy-induced osteoporotic rats, high-dose Cuscuta chinensis treatment increased IkappaBalpha expression.",
+        "uncertainties": [
+          "Quote spans a sentence fragment rather than the full causal sentence; offsets are best-effort.",
+          "CCL is an herbal extract/mixture, so the molecular form is only approximately represented as compound.",
+          "The text uses IkappaBalpha, which may denote the IκBα protein/gene; form is not fully disambiguated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        2753,
+        2837
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2898,
+        2974
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        2753,
+        2837
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2898,
+        2974
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

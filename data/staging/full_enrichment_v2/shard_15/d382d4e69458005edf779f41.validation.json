@@ -1,0 +1,97 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "23410"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "SIRT3",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "osteoclasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 410,
+            "passage_index": 1,
+            "quote": "SIRT3 is a class of mitochondrial protein deacetylase that influences various mitochondrial functions and is involved in the mechanisms underlying resistance to aging; regulation of bone marrow mesenchymal stem cells, osteoblasts, and osteoclasts;",
+            "start": 163
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The review states that SIRT3 is involved in regulation of osteoclasts and other bone-related processes, but it does not specify a direct mechanism in this passage.",
+        "uncertainties": [
+          "This is a review statement rather than a primary experimental result.",
+          "The passage does not specify whether the relationship is direct, causal, or cell-type specific."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        163,
+        410
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        259,
+        372
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

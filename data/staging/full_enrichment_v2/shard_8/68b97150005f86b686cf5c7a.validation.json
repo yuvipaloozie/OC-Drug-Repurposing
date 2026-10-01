@@ -1,0 +1,94 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "bone remodeling",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "24"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ICA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 631,
+            "passage_index": 1,
+            "quote": "ICA promotes the osteogenic differentiation of mesenchymal stem cells (MSCs) and enhances bone matrix formation by regulating signaling pathways such as Akt and Wnt/beta-catenin. It concurrently inhibits osteoclast activity to maintain the balance of bone remodeling, thereby simultaneously stimulating new bone regeneration and suppressing bone resorption.",
+            "start": 274
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast activity",
+          "intervention": "Icariin (ICA)",
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Icariin is described as inhibiting osteoclast activity, thereby suppressing bone resorption and supporting bone remodeling balance.",
+        "uncertainties": [
+          "Review abstract summarizes prior studies rather than reporting a single primary experiment.",
+          "The specific osteoclast model, species, and assay are not stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        274,
+        631
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        349,
+        481
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

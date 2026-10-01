@@ -1,0 +1,293 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow-derived macrophages (BMMs)",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "50",
+              "52",
+              "57",
+              "59"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Mkrn1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "41",
+              "51",
+              "54"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1643,
+            "passage_index": 1,
+            "quote": "Mkrn1 significantly influences RANKL-induced osteoclastogenesis. Overexpression of Mkrn1 in BMMs enhanced osteoclast differentiation by promoting Akt phosphorylation and inhibiting AMPK phosphorylation upon RANKL stimulation. Conversely, siRNA-mediated downregulation of MKRN1 reduced Akt phosphorylation and increased AMPK phosphorylation, impairing osteoclastogenesis.",
+            "start": 1273
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP staining",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation",
+          "intervention": "Mkrn1 overexpression using a retrovirus or silencing using small interfering RNA (siRNA) in bone marrow-derived macrophages (BMMs)",
+          "outcome_change": "increased",
+          "perturbation_type": "gain_of_function"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Mkrn1 is reported to positively regulate RANKL-induced osteoclastogenesis, with overexpression enhancing osteoclast differentiation and downregulation impairing it.",
+        "uncertainties": [
+          "The passage combines overexpression and siRNA experiments; the causal details for each direction are summarized together.",
+          "The exact molecular form of MKRN1 is inferred from gene tagging and phosphorylation context, but the text does not explicitly distinguish gene versus protein for every mention."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow-derived macrophages (BMMs)",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "55",
+              "56"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "MKRN1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "53",
+              "56"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Akt",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "protein",
+            "surface": "AMPK",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1643,
+            "passage_index": 1,
+            "quote": "Akt and AMPK activation. The bone phenotype of Mkrn1-deficient mice was investigated through bone analysis. This study revealed that Mkrn1 significantly influences RANKL-induced osteoclastogenesis. Overexpression of Mkrn1 in BMMs enhanced osteoclast differentiation by promoting Akt phosphorylation and inhibiting AMPK phosphorylation upon RANKL stimulation. Conversely, siRNA-mediated downregulation of MKRN1 reduced Akt phosphorylation and increased AMPK phosphorylation, impairing osteoclastogenesis.",
+            "start": 1140
+          }
+        ],
+        "experiment": {
+          "assay": "Western blot analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "Akt phosphorylation",
+          "intervention": "siRNA-mediated downregulation of MKRN1",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "siRNA-mediated downregulation of MKRN1 reduced Akt phosphorylation and increased AMPK phosphorylation in BMMs, impairing osteoclastogenesis.",
+        "uncertainties": [
+          "The text reports phosphorylation changes rather than direct enzymatic activity.",
+          "AMPK is mentioned in the same sentence but the regulatory edge extracted here is the MKRN1-to-Akt phosphorylation effect."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "57",
+              "59"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Mkrn1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone volume",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1747,
+            "passage_index": 1,
+            "quote": "Mkrn1 knockout mice revealed a phenotype with increased bone volume.",
+            "start": 1679
+          }
+        ],
+        "experiment": {
+          "assay": "bone analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone volume",
+          "intervention": "Mkrn1 knockout mice",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Mkrn1 knockout mice showed a phenotype with increased bone volume.",
+        "uncertainties": [
+          "The passage states a phenotype in knockout mice but does not specify the exact anatomical site or quantitative magnitude."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1273,
+        1643
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1346,
+        1552
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1140,
+        1643
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1492,
+        1750
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1679,
+        1747
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1752,
+        1843
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

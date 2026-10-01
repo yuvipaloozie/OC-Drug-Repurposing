@@ -1,0 +1,197 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "fungal infections",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "-"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "10-ZOL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "squalene synthesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D013185"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "squalene",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1375,
+            "passage_index": 1,
+            "quote": "Rescue with exogenous squalene revealed that 10-ZOL, like ZOL, acts by inhibiting squalene synthesis",
+            "start": 1275
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "squalene synthesis inhibition inferred from rescue",
+          "intervention": "exogenous squalene rescue",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Exogenous squalene rescue indicates that 10-ZOL inhibits squalene synthesis.",
+        "uncertainties": [
+          "The claim is inferred from a rescue experiment rather than a direct biochemical assay of squalene synthesis.",
+          "The passage does not specify the fungal species or cell type used for this result."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mammalian",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "-"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "10-ZOL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D017382"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "toxic oxygen radicals",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1586,
+            "passage_index": 1,
+            "quote": "these lipid changes compromised plasma membrane structure and integrity and caused an accumulation of toxic oxygen radicals",
+            "start": 1463
+          }
+        ],
+        "experiment": {
+          "assay": "cell-based assays",
+          "dose": null,
+          "duration": null,
+          "endpoint": "accumulation of toxic oxygen radicals",
+          "intervention": "10-ZOL",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "10-ZOL caused an accumulation of toxic oxygen radicals.",
+        "uncertainties": [
+          "The sentence links the oxygen-radical accumulation to lipid changes; the direct causal step from 10-ZOL is not experimentally separated in the text."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1275,
+        1375
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1414,
+        1501
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1463,
+        1586
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1566,
+        1641
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

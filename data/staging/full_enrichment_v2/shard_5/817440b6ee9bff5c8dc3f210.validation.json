@@ -1,0 +1,227 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "menopause-like rat model / OVX-induced model",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "52",
+              "53",
+              "60"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "TH",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "61"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "NFATc1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "62"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "c-Fos",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1231,
+            "passage_index": 1,
+            "quote": "TH significantly inhibited the initial osteoclast differentiation via the NFATc1/c-Fos",
+            "start": 1145
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "initial osteoclast differentiation",
+          "intervention": "administration of TH",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Taraxaci Herba (TH) was reported to significantly inhibit initial osteoclast differentiation, with the paper attributing this effect to the NFATc1/c-Fos mechanism.",
+        "uncertainties": [
+          "The exact molecular causal link between TH and NFATc1/c-Fos is stated as a mechanism in the abstract, but directness is not established.",
+          "The evidence span is a partial sentence; the quote reflects the contiguous reported result."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "femur",
+          "disease_setting": "ovariectomy-induced osteoporosis / OVX-induced model",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "46",
+              "48",
+              "52",
+              "53",
+              "60"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "TH",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone density",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "67"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1321,
+            "passage_index": 1,
+            "quote": "bone density in the femur of osteoporotic rats was increased, and",
+            "start": 1256
+          },
+          {
+            "end": 1666,
+            "passage_index": 1,
+            "quote": "TH on OVX-induced bone loss.",
+            "start": 1630
+          }
+        ],
+        "experiment": {
+          "assay": "histological analysis / micro-CT",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone density in the femur",
+          "intervention": "administration of TH",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "After TH administration in ovariectomy-induced osteoporotic rats, femoral bone density increased and the study reported an inhibitory effect on OVX-induced bone loss.",
+        "uncertainties": [
+          "The abstract also states an inhibitory effect on OVX-induced bone loss; the provided span for that phrase is truncated and does not fully include the preceding causal verb in the same contiguous quote."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1145,
+        1231
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1261,
+        1351
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1256,
+        1321
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1388,
+        1453
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

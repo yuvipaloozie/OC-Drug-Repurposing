@@ -1,0 +1,136 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "complex",
+            "surface": "OM/Cur@NPs",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "40",
+              "41",
+              "45",
+              "46"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "TNF-alpha",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "47"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "pro-osteoclastogenic effects",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1029,
+            "passage_index": 1,
+            "quote": "we evaluated the effects of cell membrane-coated nanoparticles on osteoblasts and osteoclasts formation under TNF-alpha stimulation in vitro.",
+            "start": 888
+          },
+          {
+            "end": 1504,
+            "passage_index": 1,
+            "quote": "attenuating the synergistic pro-osteoclastogenic effects of TNF-alpha and RANKL.",
+            "start": 1424
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclasts formation / pro-osteoclastogenic effects under TNF-alpha stimulation",
+          "intervention": "OM/Cur@NPs",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "OM/Cur@NPs attenuated the TNF-alpha- and RANKL-associated pro-osteoclastogenic effects in vitro.",
+        "uncertainties": [
+          "The passage states attenuation of pro-osteoclastogenic effects, but does not specify a direct molecular target of OM/Cur@NPs within the osteoclastogenesis pathway.",
+          "Cell type is described only generally as in vitro osteoblasts and osteoclasts formation; no specific osteoclast lineage or culture system is given."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        888,
+        1029
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1086,
+        1177
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1424,
+        1504
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1608,
+        1675
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

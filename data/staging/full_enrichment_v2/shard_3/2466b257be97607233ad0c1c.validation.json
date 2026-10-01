@@ -1,0 +1,190 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 macrophages-derived osteoclastic cells",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "59",
+              "69",
+              "81",
+              "83",
+              "85",
+              "91",
+              "101"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "SPS-CF",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 837,
+            "passage_index": 1,
+            "quote": "SPS-CF (50 mug/mL) significantly suppressed tartrate-resistant acid phosphatase (TRAP) activity, actin ring formation, and expression of matrix metalloproteinase 9 (MMP-9), cathepsin K, TRAF6, p-Pyk2, c-Cbl, c-Src, gelsolin, carbonic anhydrase II (CA II), and integrin beta3",
+            "start": 563
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "50 mug/mL",
+          "duration": null,
+          "endpoint": "TRAP activity, actin ring formation, and expression of osteoclast-associated markers",
+          "intervention": "SPS-CF (50 mug/mL)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "SPS-CF suppressed osteoclast differentiation and bone resorptive function in vitro, including reduced TRAP activity, actin ring formation, and several osteoclast-associated markers.",
+        "uncertainties": [
+          "The exact molecular targets underlying the phenotype are described as downregulated markers, but directness is not established.",
+          "The passage combines differentiation and bone resorptive function into one outcome; the object is summarized as an osteoclast phenotype."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ovariectomized mouse osteoporosis model",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "59",
+              "69",
+              "81",
+              "83",
+              "85",
+              "91",
+              "101"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "SPS-CF",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone mineral density",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1243,
+            "passage_index": 1,
+            "quote": "SPS-CF (400 mg/kg/day) to OVX mice significantly augmented the bone mineral density (BMD) and serum osteoprotegerin (OPG)/RANKL ratio",
+            "start": 1110
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "400 mg/kg/day",
+          "duration": null,
+          "endpoint": "bone mineral density (BMD)",
+          "intervention": "Oral administration of SPS-CF (400 mg/kg/day)",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Oral SPS-CF treatment in ovariectomized mice increased bone mineral density and the serum OPG/RANKL ratio.",
+        "uncertainties": [
+          "The same sentence also reports an increase in the serum OPG/RANKL ratio, but that is not captured as a separate object in this claim."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        563,
+        837
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        749,
+        1023
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1110,
+        1243
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1041,
+        1171
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

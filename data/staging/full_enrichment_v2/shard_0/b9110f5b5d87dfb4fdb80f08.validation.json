@@ -1,0 +1,224 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "type 2 diabetes",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "aPDT",
+            "taxon": "Rattus norvegicus"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "implant removal torque",
+            "taxon": "Rattus norvegicus"
+          },
+          {
+            "annotation_ids": [
+              "28",
+              "39",
+              "40",
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "type 2 diabetic rats",
+            "taxon": "Rattus norvegicus"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 895,
+            "passage_index": 1,
+            "quote": "In T2D animals, aPDT significantly enhanced implant removal torque.",
+            "start": 828
+          }
+        ],
+        "experiment": {
+          "assay": "biomechanical",
+          "dose": null,
+          "duration": "28 days post-surgery",
+          "endpoint": "implant removal torque",
+          "intervention": "antimicrobial photodynamic therapy (methylene blue and 660 nm diode laser)",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In type 2 diabetic rats, aPDT significantly enhanced implant removal torque.",
+        "uncertainties": [
+          "The passage does not specify whether the effect is direct or mediated by other changes."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "type 2 diabetes",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "26",
+              "29",
+              "33",
+              "36",
+              "38",
+              "42",
+              "43",
+              "44"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Resveratrol",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "glycemic control",
+            "taxon": "Rattus norvegicus"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "body weight",
+            "taxon": "Rattus norvegicus"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 810,
+            "passage_index": 1,
+            "quote": "Resveratrol improved glycemic control",
+            "start": 773
+          },
+          {
+            "end": 827,
+            "passage_index": 1,
+            "quote": "and body weight.",
+            "start": 811
+          }
+        ],
+        "experiment": {
+          "assay": "study outcome",
+          "dose": "100 mg/kg",
+          "duration": "beginning 7 days later",
+          "endpoint": "glycemic control",
+          "intervention": "systemic resveratrol (100 mg/kg)",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e5",
+          "sign": "positive",
+          "subject": "e4"
+        },
+        "summary": "Resveratrol improved glycemic control and body weight.",
+        "uncertainties": [
+          "The sentence also mentions body weight improvement, but the regulatory object is limited to glycemic control as stated in the claim fields."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        828,
+        895
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        838,
+        901
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        773,
+        810
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        574,
+        607
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        811,
+        827
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        612,
+        625
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,173 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "acute myocardial infarction",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Upregulated DEGs",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1121,
+            "passage_index": 1,
+            "quote": "Upregulated DEGs showed significant enrichment in the biological process, single-organism cellular process, response to stimulus and stress, and osteoclast differentiation and lysosome.",
+            "start": 936
+          }
+        ],
+        "experiment": {
+          "assay": "bioinformatics functional enrichment analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "gene expression enrichment",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Upregulated differentially expressed genes were enriched in the osteoclast differentiation pathway.",
+        "uncertainties": [
+          "The text reports enrichment, not a causal effect on osteoclast differentiation.",
+          "The specific upstream genes driving the enrichment are not individually identified in the quoted sentence."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "hypothesis",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "myocardial infarction",
+          "species": "human",
+          "stage": "acute phase"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "23",
+              "29"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "STAT3",
+            "taxon": "9606"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1717,
+            "passage_index": 1,
+            "quote": "CONCLUSION: Cytokine-mediated inflammation, lysosome and osteoclast differentiation, and metabolism processes, as well as STAT3 may be involved in the acute phase of MI.",
+            "start": 1548
+          }
+        ],
+        "experiment": {
+          "assay": "bioinformatics analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "acute phase involvement",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "unknown",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "acute phase of MI",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The authors propose that STAT3 may be involved in the acute phase of myocardial infarction.",
+        "uncertainties": [
+          "The wording 'may be involved' is speculative and does not establish a causal mechanism.",
+          "No direct experimental perturbation of STAT3 is described."
+        ]
+      },
+      "errors": [
+        "unknown regulatory participant"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        936,
+        1121
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        781,
+        899
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1548,
+        1717
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1578,
+        1653
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

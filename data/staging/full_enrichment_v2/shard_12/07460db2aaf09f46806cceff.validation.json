@@ -1,0 +1,134 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": "older adults"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "adjunct tendon vibration",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone mineral density (BMD) T-score",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone turnover markers",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D010024"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "older adults with osteoporosis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 83,
+            "passage_index": 1,
+            "quote": "To evaluate the association between adjunct tendon vibration",
+            "start": 23
+          },
+          {
+            "end": 1952,
+            "passage_index": 1,
+            "quote": "Adjunct tendon vibration was associated with a more favourable BMD trajectory and changes in bone turnover markers in older adults with osteoporosis receiving standard care.",
+            "start": 1779
+          }
+        ],
+        "experiment": {
+          "assay": "analysis of covariance (ANCOVA); linear mixed-effects model with repeated BMD measurements",
+          "dose": null,
+          "duration": "12 months",
+          "endpoint": "post-intervention BMD T-score; changes in bone turnover markers",
+          "intervention": "adjunct tendon vibration therapy in addition to usual care",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Adjunct tendon vibration was associated with a more favorable bone mineral density trajectory and changes in bone turnover markers in older adults with osteoporosis receiving standard care.",
+        "uncertainties": [
+          "The paper emphasizes the finding should be interpreted as associative rather than causal.",
+          "The intervention is non-pharmacological; no molecular mechanism is specified."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        23,
+        83
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        48,
+        109
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1779,
+        1952
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1587,
+        1727
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

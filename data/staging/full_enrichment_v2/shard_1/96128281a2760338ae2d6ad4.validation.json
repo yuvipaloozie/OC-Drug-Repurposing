@@ -1,0 +1,186 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "BMSCs",
+          "compartment": "marrow",
+          "disease_setting": null,
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "45",
+              "47",
+              "51"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:CTTN",
+            "key": "e1",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "protein",
+            "surface": "cortactin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "46",
+              "50"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "e2",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1368,
+            "passage_index": 1,
+            "quote": "cortactin-silenced BMSCs expressed higher levels of RANKL than control BMSCs did",
+            "start": 1288
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "RANKL expression",
+          "intervention": "cortactin-silenced BMSCs",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "expression",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Silencing cortactin in bone marrow stromal cells increased RANKL expression.",
+        "uncertainties": [
+          "The text links cortactin silencing to higher RANKL in BMSCs, but does not specify the molecular form of cortactin beyond a gene annotation.",
+          "The exact experimental assay used to measure RANKL is not stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "BMSCs",
+          "compartment": "marrow",
+          "disease_setting": null,
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "45",
+              "47",
+              "51"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:CTTN",
+            "key": "e1",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "protein",
+            "surface": "cortactin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1478,
+            "passage_index": 1,
+            "quote": "silencing mTOR mitigated the stimulation of osteoblast and adipocyte differentiation induced by cortactin overexpression. Notably, transplantation of cortactin-silenced bone marrow stromal cells (BMSCs) into the marrow of mice led to a reduction in trabecular bone mass, accompanied by a decrease in osteoblasts and an increase in osteoclasts. Furthermore, cortactin-silenced BMSCs expressed higher levels of RANKL than control BMSCs did, and promoted osteoclast differentiation when cocultured with bone marrow-derived osteoclast precursor cells.",
+            "start": 931
+          }
+        ],
+        "experiment": {
+          "assay": "coculture with bone marrow-derived osteoclast precursor cells",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation",
+          "intervention": "cortactin-silenced BMSCs",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Cortactin-silenced BMSCs promoted osteoclast differentiation in coculture with bone marrow-derived osteoclast precursor cells.",
+        "uncertainties": [
+          "The statement combines coculture results with other in vivo outcomes in the surrounding sentence; the extracted claim is limited to the explicit coculture effect.",
+          "The causal mediator is not isolated; the text suggests RANKL involvement but does not prove direct causation for the coculture effect."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1288,
+        1368
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1620,
+        1709
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        931,
+        1478
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1714,
+        1828
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

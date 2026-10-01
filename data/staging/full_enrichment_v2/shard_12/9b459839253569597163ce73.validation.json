@@ -1,0 +1,191 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "obese diet",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "14"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "CrPic",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 868,
+            "passage_index": 1,
+            "quote": "Supplementation with CrPic with no change in diet stimulated bone metabolism only at the molecular level, towards increased osteoclastogenesis",
+            "start": 726
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "0.3 mg/kg body weight",
+          "duration": "chronic",
+          "endpoint": "osteoclastogenesis",
+          "intervention": "chromium picolinate (CrPic) supplementation with no change in diet",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In rats, chromium picolinate supplementation without changing the diet stimulated bone metabolism toward increased osteoclastogenesis.",
+        "uncertainties": [
+          "The passage describes an overall study context in obese-diet rats; the specific osteoclastogenesis readout is reported at the molecular level.",
+          "The exact experimental assay for osteoclastogenesis is not stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "high-fat diet",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "15",
+              "16",
+              "20",
+              "21"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "CrNPs",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone turnover",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1087,
+            "passage_index": 1,
+            "quote": "In contrast, CrNPs added to the high-fat diet effectively regulated bone turnover by increasing both osteoblastogenesis and osteoclastogenesis, with these changes directed more towards bone formation",
+            "start": 888
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "0.3 mg/kg body weight",
+          "duration": "chronic",
+          "endpoint": "osteoclastogenesis",
+          "intervention": "CrNPs added to the high-fat diet",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In rats fed a high-fat diet, chromium nanoparticles supplementation increased osteoclastogenesis as part of regulating bone turnover.",
+        "uncertainties": [
+          "The text also states that the overall changes were directed more towards bone formation, so the osteoclastogenesis increase is part of a broader bone-turnover effect.",
+          "The exact assay and measurement details are not provided."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        726,
+        868
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        828,
+        924
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        888,
+        1087
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        968,
+        1117
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

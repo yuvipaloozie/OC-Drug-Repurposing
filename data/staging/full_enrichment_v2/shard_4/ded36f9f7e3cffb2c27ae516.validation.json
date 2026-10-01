@@ -1,0 +1,128 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "inflammatory osteolysis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "5"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "6-Hydroxyflavone",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "6",
+              "7"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "Inflammatory Osteolysis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "8"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Nrf2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "9"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "pathway",
+            "surface": "Calcium signaling pathways",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 132,
+            "passage_index": 0,
+            "quote": "6-Hydroxyflavone Attenuates Inflammatory Osteolysis by Inhibiting Osteoclast Activation via the Nrf2 and Calcium Signaling Pathways.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast activation",
+          "intervention": "6-Hydroxyflavone",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "6-Hydroxyflavone is described as attenuating inflammatory osteolysis by inhibiting osteoclast activation, with Nrf2 and calcium signaling pathways named as the implicated pathways.",
+        "uncertainties": [
+          "Only the title was provided; no experimental details, model system, assay, dose, or duration are stated.",
+          "The phrase 'via the Nrf2 and Calcium Signaling Pathways' names implicated pathways, but the exact causal roles of Nrf2 and calcium signaling are not experimentally specified in the supplied text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        132
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        131
+      ],
+      "passage_index": 0
+    }
+  ],
+  "valid_envelope": true
+}

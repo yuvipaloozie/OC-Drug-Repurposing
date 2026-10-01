@@ -1,0 +1,200 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "serum",
+          "disease_setting": "ovariectomized rats",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:C120040"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "tectoridin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "-"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "CTX-1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "compound",
+            "surface": "NTx",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1112,
+            "passage_index": 1,
+            "quote": "The treatment elevated serum bone-specific alkaline phosphatase (BALP) and procollagen type I N-terminal propeptide (PINP) levels, and decreased levels of bone resorption markers CTX-1 and NTx.",
+            "start": 919
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "10 and 20 mg/kg bw",
+          "duration": "four-week period",
+          "endpoint": "serum CTX-1 and NTx levels",
+          "intervention": "tectoridin treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Tectoridin treatment decreased the bone resorption markers CTX-1 and NTx in ovariectomized rats.",
+        "uncertainties": [
+          "NTx is mentioned in the outcome but lacks a provider annotation ID.",
+          "The quote supports decreased CTX-1 and NTx levels, but the regulatory object is represented with one key for CTX-1; the combined outcome is summarized in the claim."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "serum/tissue",
+          "disease_setting": "ovariectomized rats",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:C120040"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "tectoridin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "24887",
+              "25402",
+              "24224"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Bax/Caspase3 and Bcl2",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1515,
+            "passage_index": 1,
+            "quote": "Tectoridin also inhibited inflammatory proteins and exhibited anti-apoptotic effects on Bax/Caspase3 and Bcl2 expression.",
+            "start": 1394
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "10 and 20 mg/kg bw",
+          "duration": "four-week period",
+          "endpoint": "inflammatory proteins and Bax/Caspase3 expression; Bcl2 expression increased as part of anti-apoptotic effects",
+          "intervention": "tectoridin treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Tectoridin reduced inflammatory proteins and showed anti-apoptotic effects on Bax/Caspase3 and Bcl2 expression in ovariectomized rats.",
+        "uncertainties": [
+          "The passage groups multiple proteins and effects together, so the exact direction for each individual marker is partially compressed in the summary.",
+          "The phrase 'inhibited inflammatory proteins' does not identify the specific proteins."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        919,
+        1112
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1245,
+        1304
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1394,
+        1515
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1541,
+        1692
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

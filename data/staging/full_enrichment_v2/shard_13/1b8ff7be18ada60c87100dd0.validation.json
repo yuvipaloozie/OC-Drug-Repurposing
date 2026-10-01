@@ -1,0 +1,120 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "mouse bone marrow-derived monocyte/macrophages",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "45"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Kurarinone",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "7"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "mouse bone marrow-derived monocyte/macrophages",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 150,
+            "passage_index": 0,
+            "quote": "inhibits RANKL-induced osteoclastogenesis in mouse bone marrow-derived monocyte/macrophages.",
+            "start": 58
+          },
+          {
+            "end": 1566,
+            "passage_index": 1,
+            "quote": "KR effectively inhibits osteoclast differentiation and bone resorption without cellular toxicity.",
+            "start": 1469
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation and bone resorption",
+          "intervention": "Kurarinone (KR)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Kurarinone (KR) inhibits osteoclast differentiation and bone resorption in vitro in mouse bone marrow-derived monocyte/macrophages.",
+        "uncertainties": [
+          "The abstract states both osteoclastogenesis and bone resorption effects, but the exact experimental assay details and dose/duration are not provided.",
+          "The title mentions RANKL-induced osteoclastogenesis, while the abstract sentence explicitly states osteoclast differentiation and bone resorption; these are related but not identical endpoints."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1469,
+        1566
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1218,
+        1315
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

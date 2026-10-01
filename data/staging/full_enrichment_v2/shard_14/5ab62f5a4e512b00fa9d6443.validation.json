@@ -1,0 +1,170 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "peri-implantitis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "MSC-EVs",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "34",
+              "35",
+              "36"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "PI3K/AKT and Wnt/beta-catenin",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1065,
+            "passage_index": 1,
+            "quote": "They directly stimulate osteogenesis by transferring pro-osteogenic miRNAs and proteins, activating key pathways like PI3K/AKT and Wnt/beta-catenin.",
+            "start": 917
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteogenesis",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "MSC-EVs are described as directly stimulating osteogenesis by activating PI3K/AKT and Wnt/beta-catenin pathways.",
+        "uncertainties": [
+          "The sentence is a narrative review summary rather than a primary experimental result.",
+          "The pathway object is a composite of two pathways named together in one sentence."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "peri-implantitis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "MSC-EVs",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1417,
+            "passage_index": 1,
+            "quote": "Concurrenty, MSC-EVs inhibit bone resorption by favorably modulating the RANKL/OPG balance and directly interfering with osteoclast differentiation.",
+            "start": 1264
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption / osteoclast differentiation",
+          "intervention": null,
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "MSC-EVs are described as inhibiting bone resorption by directly interfering with osteoclast differentiation.",
+        "uncertainties": [
+          "This is a review statement, not a standalone experiment.",
+          "The sentence also mentions RANKL/OPG balance, but the extracted object here is osteoclast differentiation."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        917,
+        1065
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        904,
+        1053
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,191 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "patients",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "31",
+              "38",
+              "43"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Ibuprofen",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "1",
+              "36",
+              "37",
+              "44",
+              "49"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "tooth movement",
+            "taxon": "human"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1147,
+            "passage_index": 1,
+            "quote": "The mean cumulative tooth movement over 3 months was significantly lower in the Ibuprofen group (2.85 +- 0.32 mm) compared to the Paracetamol group (3.45 +- 0.41 mm; P < 0.01).",
+            "start": 971
+          }
+        ],
+        "experiment": {
+          "assay": "clinical measurement",
+          "dose": "400 mg",
+          "duration": "3 days",
+          "endpoint": "rate of tooth movement / cumulative tooth movement over 3 months",
+          "intervention": "Systemic administration of Ibuprofen, 400 mg, taken thrice daily for 3 days following appliance activation",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In the clinical trial, systemic ibuprofen was associated with a lower rate of orthodontic tooth movement than paracetamol.",
+        "uncertainties": [
+          "The exact quoted span may begin earlier in the sentence than the provided offset indicates.",
+          "Comparison is against paracetamol, not placebo, so the effect is relative within this trial."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "gingival crevicular fluid",
+          "disease_setting": null,
+          "species": "patients",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "31",
+              "38",
+              "43"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Ibuprofen",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "40"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Prostaglandin E2",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1352,
+            "passage_index": 1,
+            "quote": "Biochemical analysis revealed that Group A exhibited significantly reduced concentrations of Prostaglandin E2 (145.2 +- 22.1 pg/mL) compared to Group B (210.5 +- 35.4 pg/mL; P < 0.001) at the T1 interval.",
+            "start": 1148
+          }
+        ],
+        "experiment": {
+          "assay": "Enzyme-Linked Immunosorbent Assay",
+          "dose": "400 mg",
+          "duration": "3 days",
+          "endpoint": "Prostaglandin E2 concentration",
+          "intervention": "Systemic administration of Ibuprofen, 400 mg, taken thrice daily for 3 days following appliance activation",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Ibuprofen treatment reduced gingival crevicular fluid Prostaglandin E2 concentration relative to paracetamol.",
+        "uncertainties": [
+          "The effect is reported for Group A versus Group B; the text does not explicitly restate the group assignment in this sentence.",
+          "The exact quoted span may begin earlier in the sentence than the provided offset indicates."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        971,
+        1147
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1010,
+        1139
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1148,
+        1352
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1268,
+        1397
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

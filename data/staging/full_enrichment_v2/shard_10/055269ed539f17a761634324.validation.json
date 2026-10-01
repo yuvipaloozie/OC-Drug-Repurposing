@@ -1,0 +1,97 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "bone metastatic cancer",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "24"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Biphosphonates",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "23"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "bone pain and skeletal related events",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 338,
+            "passage_index": 1,
+            "quote": "Biphosphonates introduced the concept of disease-modifying therapy, by effectively reducing bone pain and skeletal related events in patients suffering from bone metastatic cancer.",
+            "start": 158
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone pain and skeletal related events",
+          "intervention": "Biphosphonates",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Bisphosphonates were reported to effectively reduce bone pain and skeletal-related events in patients with bone metastatic cancer.",
+        "uncertainties": [
+          "The text does not specify which bisphosphonate compound was used.",
+          "The outcome is reported in a review sentence without a primary experimental assay or dose.",
+          "The object combines two clinical outcomes into one phenotype phrase."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        158,
+        338
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        151,
+        331
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

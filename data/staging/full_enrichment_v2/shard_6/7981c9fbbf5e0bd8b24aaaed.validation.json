@@ -1,0 +1,222 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoblast and osteoclast",
+          "compartment": null,
+          "disease_setting": "GDD",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "39"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Compound C",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "protein",
+            "surface": "AMPK",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "46",
+              "49"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone phenotype of GDD",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1229,
+            "passage_index": 1,
+            "quote": "Inhibiting AMPK reduced glycolysis in osteoblast and maintained the mitochondrial homeostasis between osteoblast and osteoclast by suppressing PGC1a and promoting PGC1b respectively, to restrain bone formation and restore osteoclastogenesis.",
+            "start": 988
+          },
+          {
+            "end": 1343,
+            "passage_index": 1,
+            "quote": "AMPK inhibitor reversed the bone phenotype of GDD by restraining bone formation and restoring osteoclastogenesis.",
+            "start": 1230
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone phenotype reversal; osteoclastogenesis restored",
+          "intervention": "Compound C; AMPK inhibitor",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e3"
+        },
+        "summary": "AMPK inhibition with Compound C reversed the GDD bone phenotype by restraining bone formation and restoring osteoclastogenesis.",
+        "uncertainties": [
+          "The passage states an AMPK inhibitor was used, but does not specify within the quoted sentence whether Compound C alone is the inhibitor in every reported outcome.",
+          "The mechanism linking AMPK inhibition to osteoclastogenesis restoration is described as part of a broader phenotype change rather than a direct osteoclast-specific assay result."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "GDD",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "233246"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "ANO5",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "protein",
+            "surface": "AMPK",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 987,
+            "passage_index": 1,
+            "quote": "ANO5 mutation promoted the phosphorylation of AMPK, the classical sensor of energy metabolism.",
+            "start": 893
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "AMPK phosphorylation",
+          "intervention": "ANO5 mutation",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In the GDD mouse model, ANO5 mutation increased AMPK phosphorylation.",
+        "uncertainties": [
+          "The text links ANO5 mutation to increased AMPK phosphorylation, but does not establish direct molecular causality."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        893,
+        987
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1008,
+        1082
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        988,
+        1229
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1090,
+        1211
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1230,
+        1343
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1213,
+        1299
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,245 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "preosteoblasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "postnatal"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "12387"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "beta-catenin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "preosteoblasts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "10090"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "mice",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "fat mass",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "energy expenditure",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 525,
+            "passage_index": 1,
+            "quote": "beta-catenin knock-out (beta-cat KO) mice by crossing the osterix-cre transgenic mice with beta-cateninflox/flox mice. First, we identified that postnatal deletion of beta-catenin in preosteoblasts led to decreased fat mass and increased energy expenditure in mice",
+            "start": 261
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "fat mass; energy expenditure",
+          "intervention": "postnatal deletion of beta-catenin in preosteoblasts",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Postnatal deletion of beta-catenin in preosteoblasts in mice decreased fat mass and increased energy expenditure.",
+        "uncertainties": [
+          "The text links the same perturbation to two phenotype outcomes; the claim records the reduced fat mass outcome explicitly and the increased energy expenditure in the summary.",
+          "The exact molecular form of beta-catenin in the perturbation is gene-level from the text, but the causal entity may be protein-mediated."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "beta-cat KO mice",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "18383"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFRSF11B",
+            "key": "e1",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "Osteoprotegerin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D001862"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "fat mass",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "energy expenditure",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "10090"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "mice",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 691,
+            "passage_index": 1,
+            "quote": "Osteoprotegerin administration largely rescued the decreased fat mass and partly normalized the energy expenditure accompanied by the inhibition of bone resorption.",
+            "start": 527
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption; fat mass; energy expenditure",
+          "intervention": "Osteoprotegerin administration",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Osteoprotegerin administration largely rescued the decreased fat mass and partly normalized energy expenditure, accompanied by inhibition of bone resorption in beta-cat KO mice.",
+        "uncertainties": [
+          "The passage states multiple linked outcomes; the regulatory edge is extracted for the explicitly stated inhibition of bone resorption, while the rescue of fat mass and energy expenditure is summarized as additional observed outcomes.",
+          "Provider-suggested existing node mapping for Osteoprotegerin is unverified and may refer to protein rather than gene-level wording in text."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        261,
+        525
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        261,
+        339
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        527,
+        691
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        679,
+        834
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

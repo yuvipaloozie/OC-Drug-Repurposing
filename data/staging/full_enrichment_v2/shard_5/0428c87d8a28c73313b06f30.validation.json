@@ -1,0 +1,352 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "46",
+              "47",
+              "50",
+              "51",
+              "59",
+              "77"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Dickkopf-1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "48",
+              "52",
+              "63",
+              "64",
+              "78"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "Wnt/beta-catenin signaling pathway",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 264,
+            "passage_index": 1,
+            "quote": "Dickkopf-1 (DKK-1) is a potent inhibitor of the Wnt/beta-catenin signaling pathway and plays a critical role",
+            "start": 156
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "DKK-1 is described as a potent inhibitor of Wnt/beta-catenin signaling in osteoporosis-related context.",
+        "uncertainties": [
+          "This is a background statement in the introduction, not an experimental perturbation result.",
+          "Species is not explicitly stated for DKK-1 in this sentence."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "human bone marrow mesenchymal stem cells (hMSCs)",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "humanized anti-DKK-1 monoclonal antibody (IgG4)",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "48",
+              "52",
+              "63",
+              "64",
+              "78"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "Wnt/beta-catenin signaling",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "53"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "hMSCs",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [
+              "54",
+              "67"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "ALP",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [
+              "56",
+              "68",
+              "69",
+              "79"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "OPG",
+            "taxon": "human"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1646,
+            "passage_index": 1,
+            "quote": "In hMSCs, the antibody restored Wnt/beta-catenin signaling, as evidenced by nuclear beta-catenin accumulation, GSK-3beta phosphorylation, and c-Myc upregulation, leading to increased ALP activity, OPG secretion, and mineralization.",
+            "start": 1415
+          },
+          {
+            "end": 810,
+            "passage_index": 1,
+            "quote": "The antibody's ability to restore Wnt/beta-catenin signaling was evaluated in human bone marrow mesenchymal stem cells (hMSCs) by Western blotting.",
+            "start": 663
+          }
+        ],
+        "experiment": {
+          "assay": "Western blotting; ALP activity assay; Alizarin Red S staining",
+          "dose": null,
+          "duration": null,
+          "endpoint": "Wnt/beta-catenin signaling; ALP activity; OPG secretion; mineralization",
+          "intervention": "humanized anti-DKK-1 monoclonal antibody (IgG4)",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "A humanized anti-DKK-1 monoclonal antibody restored Wnt/beta-catenin signaling in human MSCs, with downstream increases in ALP activity, OPG secretion, and mineralization.",
+        "uncertainties": [
+          "The text reports multiple downstream readouts together; the precise causal chain is not separately dissected.",
+          "Antibody molecular form is inferred from the phrase 'monoclonal antibody (IgG4)'."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoblast-osteoclast Transwell co-culture model",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "humanized anti-DKK-1 monoclonal antibody (IgG4)",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "70",
+              "71",
+              "72",
+              "73",
+              "74",
+              "75"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast marker gene expression",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "58",
+              "76"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "TRAP-positive multinucleated cell formation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2001,
+            "passage_index": 1,
+            "quote": "In the Transwell co-culture model, the antibody restored the OPG/sRANKL molar ratio and significantly suppressed osteoclast marker gene expression (ACP5, CALCR, CTSK, ITGB3, MMP9, and NFATC1) as well as TRAP-positive multinucleated cell formation (from 29 +- 5 per field in the undifferentiated control to 2 +- 1 per field in the antibody-treated group).",
+            "start": 1647
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP staining and qPCR",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast marker gene expression; TRAP-positive multinucleated cell formation",
+          "intervention": "humanized anti-DKK-1 monoclonal antibody (IgG4)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In an osteoblast-osteoclast co-culture model, the antibody reduced osteoclast marker expression and TRAP-positive multinucleated cell formation.",
+        "uncertainties": [
+          "The co-culture model includes multiple cell types; the direct responding cell type is not isolated in the text.",
+          "The passage reports a reduction in both marker expression and TRAP-positive multinucleated cells, but does not separate individual marker effects."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        156,
+        264
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        289,
+        395
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1415,
+        1646
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        830,
+        1127
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        663,
+        810
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        734,
+        821
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1647,
+        2001
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1838,
+        2143
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,197 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "29"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "PPb",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-induced OC formation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 827,
+            "passage_index": 1,
+            "quote": "Further pharmacological evidence suggested that the identified PPb significantly inhibited RANKL-induced OC formation",
+            "start": 710
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "OC formation",
+          "intervention": "PPb",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "PPb inhibited RANKL-induced osteoclast formation in the reported pharmacological experiments.",
+        "uncertainties": [
+          "Exact evidence span boundaries are best-effort and may need validation against the source text.",
+          "The passage also states additional outcomes (gene/protein expression, F-actin rings, bone resorption) that are not separately extracted here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": "early stage of OC differentiation"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "29"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "PPb",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Src kinase",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "MAPK signaling pathways",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "PI3K/AKT signaling pathways",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1253,
+            "passage_index": 1,
+            "quote": "Mechanistic studies showed that in the early stage of OC differentiation, PPb directly targeted Src kinase to suppress the activation of Src and its downstream MAPK and PI3K/AKT signaling pathways",
+            "start": 1057
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "Src activation; downstream MAPK and PI3K/AKT signaling",
+          "intervention": "PPb",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "direct",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "PPb directly targeted Src kinase and suppressed Src activation, with downstream MAPK and PI3K/AKT signaling pathway inhibition described in the study.",
+        "uncertainties": [
+          "The quote links direct targeting to suppression of Src activation; pathway suppression is included as downstream context, not as a separate direct interaction claim.",
+          "Exact evidence span boundaries are best-effort and may need validation against the source text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        710,
+        827
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        836,
+        938
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1057,
+        1253
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1300,
+        1466
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

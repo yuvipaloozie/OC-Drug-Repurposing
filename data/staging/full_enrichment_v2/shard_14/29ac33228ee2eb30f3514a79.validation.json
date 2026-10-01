@@ -1,0 +1,285 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "RANK signaling",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "19",
+              "24",
+              "26",
+              "31",
+              "33"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "PRMT6",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 515,
+            "passage_index": 1,
+            "quote": "By transcriptional sequence and ATAC analysis, this study identifies that activation of RANK signaling upregulates PRMT6 by epigenetic modification, triggering a metabolic switching from fatty acids oxidation toward glycolysis.",
+            "start": 288
+          }
+        ],
+        "experiment": {
+          "assay": "transcriptional sequence and ATAC analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "PRMT6 expression",
+          "intervention": "activation of RANK signaling",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Activation of RANK signaling upregulates PRMT6, associated with a metabolic switch from fatty acid oxidation toward glycolysis.",
+        "uncertainties": [
+          "The sentence also mentions metabolic switching, but the direct regulatory object here is PRMT6 expression.",
+          "Directness of the RANK signaling to PRMT6 upregulation is not established beyond the text statement."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "21",
+              "26"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Prmt6",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "22"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "pathway",
+            "surface": "HIF-1alpha-mediated glycolysis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 650,
+            "passage_index": 1,
+            "quote": "Conversely, Prmt6 deficiency reverses this shift, markedly reducing HIF-1alpha-mediated glycolysis and enhancing fatty acid oxidation.",
+            "start": 516
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "HIF-1alpha-mediated glycolysis",
+          "intervention": "Prmt6 deficiency",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e2"
+        },
+        "summary": "Prmt6 deficiency reduces HIF-1alpha-mediated glycolysis.",
+        "uncertainties": [
+          "The quote also reports enhanced fatty acid oxidation, which is not encoded in this single claim.",
+          "The molecular form of HIF-1alpha-mediated glycolysis is pathway-level and somewhat ambiguous from the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ovariectomized (OVX) mice",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "19",
+              "21",
+              "24",
+              "26",
+              "31",
+              "33"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "PRMT6",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 784,
+            "passage_index": 1,
+            "quote": "PRMT6 deficiency or inhibitor impedes osteoclast differentiation and alleviates bone loss in ovariectomized (OVX) mice.",
+            "start": 665
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation",
+          "intervention": "PRMT6 deficiency or inhibitor",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e2"
+        },
+        "summary": "PRMT6 deficiency or inhibition impedes osteoclast differentiation and alleviates bone loss in ovariectomized mice.",
+        "uncertainties": [
+          "The text combines two interventions (deficiency or inhibitor) and two outcomes (osteoclast differentiation and bone loss); only one regulatory edge is encoded here.",
+          "The specific inhibitor is not named in the passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        288,
+        515
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        205,
+        227
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        516,
+        650
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        227,
+        361
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        665,
+        784
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        361,
+        479
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

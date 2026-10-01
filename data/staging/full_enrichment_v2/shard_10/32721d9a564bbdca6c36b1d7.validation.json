@@ -1,0 +1,365 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ovariectomy-induced bone loss",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "compound",
+            "surface": "LWDHW",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "46"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1317,
+            "passage_index": 1,
+            "quote": "In OVX mice, LWDHW significantly alleviated bone loss and deterioration of bone microarchitecture, accompanied by reduced serum beta-CTX levels and decreased osteoclast numbers in femoral tissues.",
+            "start": 1121
+          }
+        ],
+        "experiment": {
+          "assay": "microCT, histological examination, immunohistochemistry, ELISA",
+          "dose": "9.75 g/kg/day",
+          "duration": "8 weeks",
+          "endpoint": "bone loss and osteoclast numbers",
+          "intervention": "oral LWDHW at 9.75 g/kg/day for 8 weeks",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In ovariectomized mice, LWDHW treatment alleviated bone loss and reduced osteoclast numbers.",
+        "uncertainties": [
+          "The quoted evidence also mentions reduced serum beta-CTX and bone microarchitecture changes, but the main extracted object is bone loss.",
+          "LWDHW is a formula/mixture and is represented here as an unresolved compound-level intervention."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "BMMs",
+          "compartment": null,
+          "disease_setting": "osteoclast differentiation assay",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "compound",
+            "surface": "LWDHW",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "43"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:ACP5",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "53"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "54"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:CSF1",
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "M-CSF",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "55"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:CTSK",
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Ctsk",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "56"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:MMP9",
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "MMP9",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "57"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:NFATC1",
+            "key": "e7",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Nfatc1",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1779,
+            "passage_index": 1,
+            "quote": "Primary bone marrow-derived macrophages (BMMs) were treated with LWDHW and then subjected to TRAP staining and qRT-PCR. ... In vitro, TRAP staining demonstrated that LWDHW inhibited RANKL/M-CSF-induced osteoclast differentiation of BMMs and downregulated the expression of Ctsk, MMP9, and Nfatc1.",
+            "start": 1200
+          },
+          {
+            "end": 1640,
+            "passage_index": 1,
+            "quote": "RANKL/M-CSF-induced osteoclast differentiation of BMMs and downregulated the expression of Ctsk, MMP9, and Nfatc1",
+            "start": 1527
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP staining and qRT-PCR",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation and marker expression",
+          "intervention": "LWDHW treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "LWDHW treatment inhibited RANKL/M-CSF-induced osteoclast differentiation in BMMs and decreased osteoclast marker expression.",
+        "uncertainties": [
+          "The text attributes the effect to LWDHW treatment, but direct molecular targets are not established.",
+          "The evidence span includes marker downregulation; this claim focuses on the differentiation phenotype rather than separate gene-expression edges."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "BMMs",
+          "compartment": null,
+          "disease_setting": "osteoclast differentiation assay",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "compound",
+            "surface": "LWDHW",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "50",
+              "58",
+              "59"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:NFKB1",
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "P65",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "50",
+              "58",
+              "59"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:NFKB1",
+            "key": "e3",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "protein",
+            "surface": "p-P65",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "60",
+              "61"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "IkappaBalpha",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1810,
+            "passage_index": 1,
+            "quote": "Western blot analysis further showed that protein levels of P65, p-P65, IkappaBalpha, and p-IkappaBalpha were significantly decreased in BMMs following LWDHW treatment.",
+            "start": 1642
+          },
+          {
+            "end": 2021,
+            "passage_index": 1,
+            "quote": "NF-kappaB",
+            "start": 2012
+          }
+        ],
+        "experiment": {
+          "assay": "western blot",
+          "dose": null,
+          "duration": null,
+          "endpoint": "protein levels of P65, p-P65, IkappaBalpha, and p-IkappaBalpha",
+          "intervention": "LWDHW treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "LWDHW treatment reduced NF-kappaB-related signaling readouts in BMMs, including P65, p-P65, IkappaBalpha, and p-IkappaBalpha protein levels.",
+        "uncertainties": [
+          "The passage reports protein-level changes for several NF-kappaB pathway readouts; the extracted object key uses P65 as the representative readout.",
+          "The exact molecular form of 'P65' and 'p-P65' is somewhat ambiguous in the annotation set."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1121,
+        1317
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1168,
+        1407
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1527,
+        1640
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1644,
+        1758
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1642,
+        1810
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1791,
+        1888
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

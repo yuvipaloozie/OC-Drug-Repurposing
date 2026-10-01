@@ -1,0 +1,216 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoblasts",
+          "compartment": null,
+          "disease_setting": "osteolytic bone metastasis of breast cancer",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D024502"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "alphaTP-suc",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "21943",
+              "8600"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "4T1-induced RANKL expression",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "osteoblasts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1377,
+            "passage_index": 1,
+            "quote": "decreased osteoclastogenesis by inhibiting 4T1-induced RANKL expression in osteoblasts",
+            "start": 1291
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "intraperitoneal injection of alphaTP-suc",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "alpha-tocopheryl succinate decreased 4T1-induced RANKL expression in osteoblasts and thereby decreased osteoclastogenesis.",
+        "uncertainties": [
+          "The passage links decreased osteoclastogenesis to inhibition of RANKL expression, but does not establish direct molecular binding or the specific osteoblast subtype.",
+          "RANKL is annotated as a gene/protein-like entity in the source packet; the exact molecular form in this context is not fully specified."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "null",
+          "compartment": "femur",
+          "disease_setting": "bone destruction",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D024502"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "alphaTP-suc",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D001847"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone destruction",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast numbers",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1544,
+            "passage_index": 1,
+            "quote": "4T1-induced bone destruction was ameliorated by alphaTP-suc, with in vivo analysis showing reduced tumor burden and osteoclast numbers",
+            "start": 1410
+          }
+        ],
+        "experiment": {
+          "assay": "microcomputed tomography analysis and histomorphometric analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone destruction",
+          "intervention": "intraperitoneal injection of alphaTP-suc",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "alpha-tocopheryl succinate ameliorated 4T1-induced bone destruction in mice and reduced osteoclast numbers in vivo.",
+        "uncertainties": [
+          "The sentence combines multiple outcomes (bone destruction, tumor burden, osteoclast numbers); the causal contribution of each is not separately resolved."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1291,
+        1377
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1490,
+        1575
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1410,
+        1544
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1590,
+        1676
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

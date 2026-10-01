@@ -1,0 +1,195 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteogenesis imperfecta",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "EED",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteogenic differentiation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 37,
+            "passage_index": 0,
+            "quote": "Inhibition of EED enhances osteogenic",
+            "start": 0
+          },
+          {
+            "end": 872,
+            "passage_index": 1,
+            "quote": "through targeting its essential component embryonic ectoderm development (EED) enhances osteogenic differentiation",
+            "start": 758
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteogenic differentiation",
+          "intervention": "inhibition of EED",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Inhibition of EED was reported to enhance osteogenic differentiation.",
+        "uncertainties": [
+          "The text describes inhibition of EED rather than a direct molecular mechanism.",
+          "The specific experimental system for the osteogenic differentiation result is not fully detailed in the quoted spans."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteogenesis imperfecta",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "EED",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone architecture",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "24",
+              "25",
+              "26",
+              "27"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "male Col1a2 +/G610C OI mouse models",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 939,
+            "passage_index": 1,
+            "quote": "through targeting its essential component embryonic ectoderm development (EED) enhances osteogenic differentiation, improves bone architecture in male Col1a2 +/G610C OI mouse models",
+            "start": 758
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone architecture",
+          "intervention": "inhibition of EED",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Inhibition of EED was reported to improve bone architecture in a male Col1a2 +/G610C osteogenesis imperfecta mouse model.",
+        "uncertainties": [
+          "The passage does not specify the exact assay used to assess bone architecture.",
+          "The model is described as male Col1a2 +/G610C OI mice, but the text does not further detail genotype or timing."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        758,
+        872
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        461,
+        545
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        758,
+        939
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        461,
+        583
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

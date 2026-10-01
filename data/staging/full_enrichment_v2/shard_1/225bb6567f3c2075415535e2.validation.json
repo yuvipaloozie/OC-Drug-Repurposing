@@ -1,0 +1,129 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "hypophosphatasia",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D019379"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "teriparatide",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D005266"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bilateral femoral pseudofractures",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D007014"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "hypophosphatasia",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1732,
+            "passage_index": 1,
+            "quote": "teriparatide (Forsteo , 20 microg/day, subcutaneous) for 18 months. Markers of bone formation and bone resorption increased twofold at 3 months of treatment. At 6 months of treatment with teriparatide normal levels of alkaline phosphatase as well as pyridoxal 5'-phosphate were measured. Early signs of fracture healing were observed at 6 months, and after 18 months of teriparatide treatment, the complete healing of both femoral pseudofractures was proven by X-ray and a computed tomography scan.",
+            "start": 1234
+          },
+          {
+            "end": 1967,
+            "passage_index": 1,
+            "quote": "teriparatide induces beneficial clinical, biochemical, and radiological responses and may provide an efficient treatment option for adults with hypophosphatasia and pseudofractures or poor healing fractures.",
+            "start": 1760
+          }
+        ],
+        "experiment": {
+          "assay": "X-ray and computed tomography scan",
+          "dose": "20 microg/day",
+          "duration": "18 months",
+          "endpoint": "healing of bilateral femoral pseudofractures",
+          "intervention": "teriparatide (Forsteo , 20 microg/day, subcutaneous)",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Teriparatide treatment was reported to successfully treat bilateral femoral pseudofractures in a patient with hypophosphatasia, with complete healing after 18 months and early healing signs by 6 months.",
+        "uncertainties": [
+          "Single-patient case report; generalizability is limited.",
+          "The passage also reports biochemical changes, but the mechanistic basis is not established."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1234,
+        1732
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1513,
+        1621
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1760,
+        1967
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1695,
+        1827
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

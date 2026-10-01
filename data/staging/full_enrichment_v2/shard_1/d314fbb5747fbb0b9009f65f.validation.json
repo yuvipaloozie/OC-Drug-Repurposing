@@ -1,0 +1,209 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "21"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "INO4",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "22"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ATP",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "19"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "hLRRK1 KD",
+            "taxon": "9606"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 379,
+            "passage_index": 1,
+            "quote": "INO4 at 16 nM completely blocked ATP binding to hLRRK1 KD in an in vitro pulldown assay",
+            "start": 292
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro pulldown assay",
+          "dose": "16 nM",
+          "duration": null,
+          "endpoint": "ATP binding to hLRRK1 KD",
+          "intervention": "INO4",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "direct",
+          "effect_level": "binding",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "IN04 treatment inhibited LRRK1 kinase-domain ATP binding in an in vitro pulldown assay.",
+        "uncertainties": [
+          "Chemical is spelled IN04 in the title/other passages and INO4 in this sentence; identity is inferred from text context.",
+          "The claim concerns ATP binding to the kinase domain, not full-length LRRK1."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "bone slices",
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "20",
+              "23",
+              "25",
+              "28",
+              "29",
+              "30"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "IN04",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "32",
+              "33"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "OCs",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 679,
+            "passage_index": 1,
+            "quote": "while the number of OCs on bone slices were comparable for OCs treated with IN04 and DMSO, IN04 treatment of OCs significantly impaired their ability to resorb bone. The area of pits on bone slices was reduced by 43% at 5 muM and 83% at 10 muM as compared to DMSO",
+            "start": 416
+          }
+        ],
+        "experiment": {
+          "assay": "differentiation and pit assays",
+          "dose": "5 muM and 10 muM",
+          "duration": null,
+          "endpoint": "bone resorption / pit area",
+          "intervention": "IN04 treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "IN04 treatment impaired osteoclast bone-resorption function and reduced pit area, while osteoclast number was comparable between treatments.",
+        "uncertainties": [
+          "The text reports comparable osteoclast numbers, so the impaired function is separate from differentiation/formation.",
+          "The molecular target mediating the phenotype is inferred but not directly established by this sentence."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        292,
+        379
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        461,
+        542
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        416,
+        679
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        571,
+        742
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

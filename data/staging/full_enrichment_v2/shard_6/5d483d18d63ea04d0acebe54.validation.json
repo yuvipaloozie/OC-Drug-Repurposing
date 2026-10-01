@@ -1,0 +1,366 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "EKO",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "25",
+              "36"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:SRC",
+            "key": "e1",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "protein",
+            "surface": "PTPe",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "29",
+              "33",
+              "37",
+              "39",
+              "42",
+              "43"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:SRC",
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Src",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "26",
+              "28",
+              "32",
+              "38",
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "EKO osteoclasts",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 641,
+            "passage_index": 1,
+            "quote": "We show here that EKO podosomes are disorganized, unusually stable, and reorganize poorly in response to physical contact. Phosphorylation and activities of Src, Pyk2, and Rac are decreased and Rho activity is increased in EKO osteoclasts, suggesting that integrin signaling is defective in these cells.",
+            "start": 338
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "Src phosphorylation and activity; podosome organization/stability",
+          "intervention": "female mice lacking PTPe (EKO mice)",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In osteoclasts lacking PTPe, Src phosphorylation/activity is reduced and podosomes are disorganized and unusually stable, consistent with defective integrin signaling.",
+        "uncertainties": [
+          "The passage reports multiple correlated changes in EKO osteoclasts; the direct causal link between PTPe loss and Src reduction is inferred from perturbation.",
+          "The existing-node suggestion for Src appears conflicting with the textual entity PTPe; no node mapping was asserted for PTPe beyond the provider annotation."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "EKO",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "pathway",
+            "surface": "integrin activation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "25",
+              "36"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:SRC",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "protein",
+            "surface": "cyt-PTPe",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "29",
+              "33",
+              "37",
+              "39",
+              "42",
+              "43"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:SRC",
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Src",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "34"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "Y638",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "35"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Y638F-cyt-PTPe",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 854,
+            "passage_index": 1,
+            "quote": "Integrin activation regulates cyt-PTPe by inducing Src-dependent phosphorylation of cyt-PTPe at Y638. This phosphorylation event is crucial because wild-type-but not Y638F-cyt-PTPe binds and further activates Src",
+            "start": 642
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "Src-dependent phosphorylation of cyt-PTPe at Y638 and Src binding/activation",
+          "intervention": "integrin activation; Y638F mutation",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e3"
+        },
+        "summary": "Integrin activation induces Src-dependent phosphorylation of cyt-PTPe at Y638, and this phosphorylation is required for cyt-PTPe to bind and further activate Src.",
+        "uncertainties": [
+          "The exact causal subject for the phosphorylation event is integrin activation, but the regulatory field is constrained to one subject; Src is captured as the explicitly named dependent factor.",
+          "The molecular form of cyt-PTPe is protein by context, but the passage does not explicitly state whether the active species is the protein isoform or the gene product."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "EKO",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "29",
+              "33",
+              "37",
+              "39",
+              "42",
+              "43"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:SRC",
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Src",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "protein",
+            "surface": "Rho",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "40"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Rho kinase",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "podosomal stability phenotype",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "26",
+              "28",
+              "32",
+              "38",
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "EKO osteoclasts",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1157,
+            "passage_index": 1,
+            "quote": "and restores normal stability to podosomes in EKO osteoclasts. Increasing Src activity or inhibiting Rho or its downstream effector Rho kinase in EKO osteoclasts rescues their podosomal stability phenotype, indicating that cyt-PTPe affects podosome stability by functioning upstream of these molecules.",
+            "start": 855
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "podosomal stability",
+          "intervention": "Increasing Src activity or inhibiting Rho or its downstream effector Rho kinase",
+          "outcome_change": "increased",
+          "perturbation_type": "gain_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e4",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Increasing Src activity or inhibiting Rho/Rho kinase rescues the podosomal stability phenotype in EKO osteoclasts, indicating these manipulations counter the instability phenotype.",
+        "uncertainties": [
+          "This sentence combines three manipulations (Src, Rho, and Rho kinase) into one rescue statement; the extracted regulatory edge uses Src as the most directly named positive factor for stability.",
+          "The passage also states that the rescue indicates cyt-PTPe functions upstream of these molecules, but that broader upstream relationship is not separately encoded here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        338,
+        641
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        214,
+        435
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        642,
+        854
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        436,
+        644
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        855,
+        1157
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        645,
+        866
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}
