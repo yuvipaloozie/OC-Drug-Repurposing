@@ -1,0 +1,189 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "monocytes",
+          "compartment": null,
+          "disease_setting": "rheumatoid arthritis",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "CVCL:WA83"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "RA-SF",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "6364"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "CCL20",
+            "taxon": "9606"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1472,
+            "passage_index": 1,
+            "quote": "RA-SF increases carnitine abundance and CCL20 production in hypoxia",
+            "start": 1405
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "CCL20 production",
+          "intervention": "RA-synovial fluid (RA-SF)",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In human monocytes, RA-synovial fluid increased CCL20 production in hypoxia.",
+        "uncertainties": [
+          "RA-SF is annotated as a CellLine in the packet, but the text describes synovial fluid; molecular form is therefore unresolved.",
+          "The quote also mentions carnitine abundance, but this claim extracts only the stated CCL20 production effect."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "monocytes",
+          "compartment": null,
+          "disease_setting": "hypoxia",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D000860"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Hypoxia",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "6364"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "CCL20",
+            "taxon": "9606"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1004,
+            "passage_index": 1,
+            "quote": "Hypoxia exacerbated monocyte-derived CCL20 and IL-1beta release in response to LPS",
+            "start": 922
+          }
+        ],
+        "experiment": {
+          "assay": "ELISA",
+          "dose": null,
+          "duration": null,
+          "endpoint": "CCL20 release",
+          "intervention": "hypoxia",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Hypoxia increased CCL20 release from monocyte-derived cells in response to LPS.",
+        "uncertainties": [
+          "The sentence also mentions IL-1beta, but this claim is limited to CCL20.",
+          "The phrase 'in response to LPS' indicates the endpoint context, but it is not parsed as an independent causal claim about LPS."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1405,
+        1472
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1519,
+        1588
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        922,
+        1004
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        594,
+        686
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,387 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "60532"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "WTAP",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 324,
+            "passage_index": 1,
+            "quote": "Osteoporosis, characterized by imbalanced bone homeostasis, is driven by excessive osteoclast-mediated bone resorption, yet the epitranscriptomic regulation via m6A modification remains unclear. Here, we identify WTAP, a component of the m6A methyltransferase complex, as a critical negative regulator of osteoclastogenesis.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "WTAP is described as a negative regulator of osteoclastogenesis.",
+        "uncertainties": [
+          "Claim is stated as a summary/background finding, not tied to a specific experiment in the sentence cited.",
+          "WTAP molecular form is not explicitly resolved beyond gene annotation."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "60532"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Wtap",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast formation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D058866"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoporotic bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 424,
+            "passage_index": 1,
+            "quote": "Myeloid-specific Wtap knockout in mice exacerbates osteoclast formation and osteoporotic bone loss.",
+            "start": 325
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast formation and osteoporotic bone loss",
+          "intervention": "myeloid-specific Wtap knockout",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Myeloid-specific Wtap knockout in mice increased osteoclast formation and osteoporotic bone loss.",
+        "uncertainties": [
+          "The sentence bundles two outcomes; the extracted regulatory object captures osteoclast formation, while bone loss is represented separately as another outcome entity.",
+          "Myeloid-specific cell context is not otherwise detailed."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclast differentiation",
+          "compartment": "nucleus",
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "16601"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "KLF9",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "60532"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Wtap",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 802,
+            "passage_index": 1,
+            "quote": "KLF9, induced during osteoclast differentiation, translocates to the nucleus to directly repress Wtap transcription",
+            "start": 687
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "Wtap transcription",
+          "intervention": null,
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "direct",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "KLF9 directly represses Wtap transcription.",
+        "uncertainties": [
+          "The sentence states direct repression but does not provide the experimental assay in the excerpt.",
+          "Cell type context is inferred from the same sentence and surrounding phrase, not from a dedicated experiment description."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:C000600259"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "pexidartinib",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "12978"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:CSF1R",
+            "key": "e2",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "CSF1R",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D001847"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1293,
+            "passage_index": 1,
+            "quote": "Therapeutically, targeting this axis via AAV-mediated Wtap overexpression or pharmacological CSF1R inhibition with pexidartinib effectively ameliorates bone loss in osteoporotic mice.",
+            "start": 1110
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone loss",
+          "intervention": "pharmacological CSF1R inhibition with pexidartinib",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c4",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Pharmacological CSF1R inhibition with pexidartinib ameliorated bone loss in osteoporotic mice.",
+        "uncertainties": [
+          "The excerpt combines pexidartinib with CSF1R inhibition; the direct causal target is stated but the exact assay details are not given.",
+          "Existing-node suggestion for CSF1R may refer to protein, but the text itself only supports the gene name."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        324
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        110
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        325,
+        424
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        223,
+        301
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        687,
+        802
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        836,
+        916
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c4",
+      "corrected_offsets": [
+        1110,
+        1293
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1295,
+        1398
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

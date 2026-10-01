@@ -1,0 +1,196 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "alveolar septal area",
+          "disease_setting": "ovariectomized (OVX) rat model",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:C547512"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Eldecalcitol",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activity",
+            "taxon": "rat"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2264,
+            "passage_index": 1,
+            "quote": "Eldecalcitol treatment effectively inhibits osteoclast activity, reduces bone resorption, and significantly mitigates the reduction of sclerostin expression in osteocytes induced by ovariectomy.",
+            "start": 2070
+          }
+        ],
+        "experiment": {
+          "assay": "histological analyses / TRAP staining",
+          "dose": "0.03 microg/kg/day",
+          "duration": "2 weeks",
+          "endpoint": "osteoclast activity",
+          "intervention": "Eldecalcitol treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In ovariectomized rats, Eldecalcitol treatment was reported to inhibit osteoclast activity.",
+        "uncertainties": [
+          "The claim is based on the authors' summary statement rather than a quantified primary result in the quoted span.",
+          "Osteoclast activity is inferred from the text and not a directly named molecular entity."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteocytes",
+          "compartment": "alveolar septal area",
+          "disease_setting": "ovariectomized (OVX) rat model",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:C547512"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Eldecalcitol",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "80722"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:SOST",
+            "key": "e3",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "sclerostin expression",
+            "taxon": "rat"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "ovariectomy",
+            "taxon": "rat"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2264,
+            "passage_index": 1,
+            "quote": "significantly mitigates the reduction of sclerostin expression in osteocytes induced by ovariectomy.",
+            "start": 2164
+          }
+        ],
+        "experiment": {
+          "assay": "sclerostin/TRAP/silver triple staining",
+          "dose": "0.03 microg/kg/day",
+          "duration": "2 weeks",
+          "endpoint": "sclerostin expression in osteocytes",
+          "intervention": "Eldecalcitol treatment",
+          "outcome_change": "other",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Eldecalcitol treatment lessened the ovariectomy-associated reduction in sclerostin expression in osteocytes.",
+        "uncertainties": [
+          "The quoted span describes mitigation of a reduction rather than a directly stated increase, so the direction is relative to ovariectomy.",
+          "The provider-proposed SOST mapping is unverified and species resolution is uncertain."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        2070,
+        2264
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1727,
+        1829
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        2164,
+        2264
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1793,
+        1829
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

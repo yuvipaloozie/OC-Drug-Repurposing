@@ -1,0 +1,232 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "cancer",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "43"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "SRC",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "50"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "FAK",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "51"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "paxillin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "cancer cell motility",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1146,
+            "passage_index": 1,
+            "quote": "SRC phosphorylation regulated the activation of cytoskeletal regulators FAK and paxillin, thereby controlling cancer cell motility.",
+            "start": 1015
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "activation of FAK and paxillin; cancer cell motility",
+          "intervention": "SRC phosphorylation",
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "SRC phosphorylation was reported to regulate activation of FAK and paxillin, with an effect on cancer cell motility.",
+        "uncertainties": [
+          "The sentence links SRC phosphorylation to activation of FAK and paxillin, but does not establish direct physical interaction.",
+          "Species and cell type are not stated in the quoted sentence."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "in vivo",
+          "disease_setting": "breast cancer",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "49"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "SRC",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "cell motility",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "F-actin remodeling",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone density",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "44",
+              "45"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone metastasis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1331,
+            "passage_index": 1,
+            "quote": "Genetic deletion or pharmacological inhibition of SRC significantly suppressed cell motility, reduced F-actin remodeling, increased bone density, and inhibited bone metastasis in vivo.",
+            "start": 1147
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "cell motility; F-actin remodeling; bone density; bone metastasis",
+          "intervention": "Genetic deletion or pharmacological inhibition of SRC",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Genetic deletion or pharmacological inhibition of SRC was reported to suppress cell motility, reduce F-actin remodeling, increase bone density, and inhibit bone metastasis in vivo.",
+        "uncertainties": [
+          "The abstract combines genetic deletion and pharmacological inhibition, so the exact contribution of each is not separated.",
+          "The text does not specify species or the cell type for this summary sentence.",
+          "The regulatory sign is inferred from the perturbation result rather than stated as a direct molecular inhibition relation."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1015,
+        1146
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        641,
+        771
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1147,
+        1331
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        778,
+        982
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

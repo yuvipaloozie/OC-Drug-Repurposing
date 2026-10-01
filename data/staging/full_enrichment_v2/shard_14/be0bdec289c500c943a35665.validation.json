@@ -1,0 +1,181 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 cells",
+          "compartment": null,
+          "disease_setting": "osteoarthritis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "65"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Rehmanniae Radix Prae-parata",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "66"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "TRAP",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1685,
+            "passage_index": 1,
+            "quote": "The results showed that Rehmanniae Radix Prae-parata inhibited the TRAP activity",
+            "start": 1605
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro experiments",
+          "dose": null,
+          "duration": null,
+          "endpoint": "TRAP activity",
+          "intervention": "Rehmanniae Radix Praeparata",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Rehmanniae Radix Praeparata inhibited TRAP activity in the osteoclast model.",
+        "uncertainties": [
+          "The text links the TRAP inhibition to osteoarthritis treatment, but the specific causal chain to bone resorption is inferential in the abstract rather than a separately tested endpoint."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoarthritis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "78"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Rehmanniae Radix Praeparata",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "79"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "SRC",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2440,
+            "passage_index": 1,
+            "quote": "Therefore, SRC was selected for subsequent verification, and Rehmanniae Radix Praeparata decreased the gene expression level of SRC",
+            "start": 2309
+          }
+        ],
+        "experiment": {
+          "assay": "RT-qPCR",
+          "dose": null,
+          "duration": null,
+          "endpoint": "SRC gene expression level",
+          "intervention": "Rehmanniae Radix Praeparata",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Rehmanniae Radix Praeparata decreased the gene expression level of SRC.",
+        "uncertainties": [
+          "The passage states a gene expression decrease; it does not by itself specify whether the same effect occurred in the osteoclast model used for TRAP activity."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1605,
+        1685
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        593,
+        637
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        2309,
+        2440
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2449,
+        2506
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

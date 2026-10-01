@@ -1,0 +1,216 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "inflammatory osteolysis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "-"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Cu4 clusters",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "18024"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "nuclear factor erythroid 2-related factor 2 (Nrf2) signaling pathway",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1462,
+            "passage_index": 1,
+            "quote": "nuclear factor erythroid 2-related factor 2 (Nrf2) signaling pathway, inhibit the",
+            "start": 1381
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "Nrf2 signaling pathway activation",
+          "intervention": "Cu4 clusters",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Cu4 clusters activate the Nrf2 signaling pathway in the reported inflammatory osteolysis context.",
+        "uncertainties": [
+          "The quoted span is part of a longer sentence that also mentions NF-kappaB inhibition; the evidence here supports only the Nrf2 activation portion."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "calvarial bone",
+          "disease_setting": "LPS-induced calvarial osteolysis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "-"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Cu4 clusters",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "18033"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:NFKB1",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "pathway",
+            "surface": "nuclear factor-kappaB (NF-kappaB)",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast formation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1813,
+            "passage_index": 1,
+            "quote": "inhibit the activation of key inflammatory pathways such as nuclear factor-kappaB (NF-kappaB), regulate iron homeostasis (Ferro-orange staining showed that the positive cell ratio in the lps group was as high as 54.1%, while it dropped to 9.96% in the 20 microg/mL Cu4 clusters group) and lipid peroxidation to block ferroptosis, and reduce osteoclast formation.",
+            "start": 1451
+          },
+          {
+            "end": 2019,
+            "passage_index": 1,
+            "quote": "mice, Cu4 clusters significantly alleviated bone resorption, restoring bone volume/tissue volume (BV/TV) by 57.6% (91.7% of control group) and reducing osteoclast number",
+            "start": 1850
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "20 microg/mL",
+          "duration": null,
+          "endpoint": "NF-kappaB activation; osteoclast formation; osteoclast number",
+          "intervention": "Cu4 clusters",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Cu4 clusters inhibit NF-kappaB activation and are reported to reduce osteoclast formation in the inflammatory osteolysis setting.",
+        "uncertainties": [
+          "The text links multiple downstream effects in one sentence; the evidence supports NF-kappaB inhibition and a separate reduction in osteoclast formation, but directness is not established.",
+          "The provided existing-node suggestion for NFKB1 is ambiguous because the passage names the NF-kappaB pathway rather than a specific subunit."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1381,
+        1462
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1558,
+        1640
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1451,
+        1813
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1631,
+        1888
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1850,
+        2019
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2027,
+        2070
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

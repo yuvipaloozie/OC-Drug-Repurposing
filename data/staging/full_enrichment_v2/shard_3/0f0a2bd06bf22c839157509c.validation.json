@@ -1,0 +1,258 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "CD14(+) monocytes",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "41",
+              "43",
+              "46",
+              "48",
+              "54",
+              "61",
+              "69",
+              "71"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "IL-33",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [
+              "55",
+              "62"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "TRAP-positive multinuclear OCs",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [
+              "4",
+              "5",
+              "44",
+              "45",
+              "74",
+              "75"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "human CD14(+) monocytes",
+            "taxon": "human"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 91,
+            "passage_index": 0,
+            "quote": "Interleukin-33 stimulates formation of functional osteoclasts from human CD14(+) monocytes.",
+            "start": 0
+          },
+          {
+            "end": 282,
+            "passage_index": 1,
+            "quote": "IL-33 stimulates formation of tartrate-resistant acid phosphatase (TRAP)(+) multinuclear OCs from monocytes.",
+            "start": 174
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "formation of TRAP-positive multinuclear osteoclasts",
+          "intervention": "IL-33",
+          "outcome_change": "increased",
+          "perturbation_type": "gain_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "IL-33 stimulates formation of TRAP-positive multinuclear osteoclasts from human CD14-positive monocytes.",
+        "uncertainties": [
+          "The text uses both 'functional osteoclasts' and 'TRAP(+) multinuclear OCs'; these are treated as the same reported phenotype in context, but exact equivalence is not independently verified.",
+          "IL-33 is annotated as a gene in the source packet, but the molecular form is interpreted from the text as a protein/cytokine candidate."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "CD14(+) monocytes",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "47",
+              "49"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "anti-ST2 antibody",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "55",
+              "62"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "This action",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [
+              "47",
+              "49"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "ST2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "41",
+              "43",
+              "46",
+              "48",
+              "54",
+              "61",
+              "69",
+              "71"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "IL-33",
+            "taxon": "human"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 494,
+            "passage_index": 1,
+            "quote": "This action was suppressed by anti-ST2 antibody, suggesting that IL-33 acts through its receptor ST2, but not by the receptor activator of NF-kappaB ligand (RANKL) decoy, osteoprotegerin, or anti-RANKL antibody.",
+            "start": 283
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "IL-33-induced osteoclastogenic action",
+          "intervention": "anti-ST2 antibody",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Anti-ST2 antibody suppressed the IL-33-induced osteoclastogenic action in human CD14-positive monocytes, consistent with ST2 involvement.",
+        "uncertainties": [
+          "The suppressed 'action' is a reference to the IL-33-induced effect rather than a directly named molecular endpoint.",
+          "The text states this as suggestive of ST2 involvement, but the causal mechanism remains unresolved from the abstract alone."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        91
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        89
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        174,
+        282
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        152,
+        240
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        283,
+        494
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        242,
+        489
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

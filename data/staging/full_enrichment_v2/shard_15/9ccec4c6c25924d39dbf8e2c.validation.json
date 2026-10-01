@@ -1,0 +1,125 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "Bmi-1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D016301"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "alveolar bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "autophagy",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 78,
+            "passage_index": 0,
+            "quote": "Bmi-1 alleviates alveolar bone resorption through the regulation of autophagy.",
+            "start": 0
+          },
+          {
+            "end": 1750,
+            "passage_index": 1,
+            "quote": "CONCLUSIONS: Bmi-1 alleviates alveolar bone resorption by regulating autophagy, indicating",
+            "start": 1660
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The paper concludes that Bmi-1 alleviates alveolar bone resorption through regulation of autophagy.",
+        "uncertainties": [
+          "The claim is taken from the title/conclusion statement rather than a single detailed mechanistic assay.",
+          "Bmi-1 molecular form is not explicitly specified in the text."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        78
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        77
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1660,
+        1750
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1790,
+        1880
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

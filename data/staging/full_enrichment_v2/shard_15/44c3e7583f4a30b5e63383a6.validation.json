@@ -1,0 +1,176 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "in vivo and in vitro",
+          "disease_setting": "talaromycosis-related bone destruction",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "39",
+              "44",
+              "47",
+              "48"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "TM infection",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1529,
+            "passage_index": 1,
+            "quote": "TM infection enhanced osteoclast differentiation through the activation of MAPK signaling pathways, including p38, ERK, and JNK",
+            "start": 1402
+          }
+        ],
+        "experiment": {
+          "assay": "Western blot",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation",
+          "intervention": "Talaromyces marneffei (TM) infection",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "TM infection enhanced osteoclast differentiation and was reported to activate MAPK signaling pathways including p38, ERK, and JNK.",
+        "uncertainties": [
+          "The extracted span supports MAPK pathway activation as part of the reported mechanism, but not direct molecular interaction.",
+          "The exact experimental system for the differentiation assay is not fully specified in the span."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "in vivo",
+          "disease_setting": "talaromycosis-related bone destruction",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "39",
+              "44",
+              "47",
+              "48"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "TM infection",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1055,
+            "passage_index": 1,
+            "quote": "TM infection led to increased osteoclast activity and significant bone destruction",
+            "start": 995
+          }
+        ],
+        "experiment": {
+          "assay": "Micro CT, hematoxylin and eosin staining, tartrate-resistant acid phosphatase staining, F-actin staining, and Western blotting",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast activity",
+          "intervention": "Talaromyces marneffei (TM) infection",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "TM infection increased osteoclast activity and was reported with significant bone destruction in mice.",
+        "uncertainties": [
+          "The quoted span does not include the entire sentence context about bone destruction, which is summarized from the same result sentence.",
+          "TM infection is treated as the intervention context; the exact causal agent and infection model details are not fully specified in the extracted span."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1402,
+        1529
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1638,
+        1756
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

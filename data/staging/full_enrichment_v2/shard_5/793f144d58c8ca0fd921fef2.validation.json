@@ -1,0 +1,114 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteocyte",
+          "compartment": "mid-cortex near lacunae",
+          "disease_setting": null,
+          "species": "murine",
+          "stage": "lactation"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "3",
+              "5"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "MMP13",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "PLR",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 639,
+            "passage_index": 1,
+            "quote": "We used SRmicroCT imaging to conduct an in-depth spatial analysis of the impact of lactation and osteocyte-intrinsic MMP13 deletion on PLR in murine bone.",
+            "start": 485
+          },
+          {
+            "end": 1008,
+            "passage_index": 1,
+            "quote": "Our findings reveal that osteocyte-intrinsic MMP13 is crucial for lactation-induced PLR near lacunae in the mid-cortex but not for whole-bone resorption.",
+            "start": 855
+          }
+        ],
+        "experiment": {
+          "assay": "SRmicroCT imaging",
+          "dose": null,
+          "duration": null,
+          "endpoint": "PLR near lacunae in the mid-cortex",
+          "intervention": "osteocyte-intrinsic MMP13 deletion",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In murine bone, osteocyte-intrinsic MMP13 deletion was studied during lactation and was reported to be crucial for lactation-induced PLR near lacunae in the mid-cortex.",
+        "uncertainties": [
+          "The text states the deletion was 'crucial' but does not directly specify a molecular mechanism or directness.",
+          "The abstract does not state whether the observed effect is cell-autonomous beyond 'osteocyte-intrinsic'."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        485,
+        639
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        478,
+        629
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        855,
+        1008
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        842,
+        994
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,109 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "hematopoietic stem cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "19",
+              "20",
+              "25",
+              "26",
+              "31",
+              "32",
+              "33"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "AhR",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "hematopoietic stem cells",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone-related transcriptomes",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 569,
+            "passage_index": 1,
+            "quote": "The AhR knockout in hematopoietic stem cells showed alteration in several novel bone-related transcriptomes",
+            "start": 462
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone-related transcriptomes",
+          "intervention": "AhR knockout",
+          "outcome_change": "other",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "AhR knockout in hematopoietic stem cells was reported to alter several bone-related transcriptomes.",
+        "uncertainties": [
+          "The text reports alteration in transcriptomes without specifying which transcripts increased or decreased.",
+          "Species is not stated in the passage, so taxon remains unresolved."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        462,
+        569
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        559,
+        649
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

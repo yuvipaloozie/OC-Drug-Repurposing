@@ -1,0 +1,229 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow-derived macrophages (BMMs)",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "compound",
+            "surface": "LCM",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "43",
+              "48",
+              "51"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "NF-kappaB pathway",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "44"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "IKKalpha",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "45"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "IkappaBalpha",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "46"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "p65",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1760,
+            "passage_index": 1,
+            "quote": "Transcriptome analysis revealed NF-kappaB pathway suppression. Western blotting confirmed that LCM reduced phosphorylation of IKKalpha, IkappaBalpha, and p65. Regulation of TLR6 can restore NF-kappaB activation and osteoclast function.",
+            "start": 1525
+          }
+        ],
+        "experiment": {
+          "assay": "transcriptome sequencing; Western blotting",
+          "dose": null,
+          "duration": null,
+          "endpoint": "NF-kappaB pathway suppression / phosphorylation of IKKalpha, IkappaBalpha, and p65",
+          "intervention": "LCM treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "LCM suppressed NF-kappaB pathway signaling, including reduced phosphorylation of IKKalpha, IkappaBalpha, and p65.",
+        "uncertainties": [
+          "The pathway suppression is supported by transcriptome analysis, while reduced phosphorylation is a downstream signaling readout; direct molecular target is not established.",
+          "The sentence about TLR6 restoring NF-kappaB activation is presented as a general statement and not extracted as a separate causal claim here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow-derived macrophages (BMMs)",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "compound",
+            "surface": "LCM",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "21943"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-treated BMMs",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "33"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "TRAP-positive cell number",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1075,
+            "passage_index": 1,
+            "quote": "LCM demonstrated favorable biocompatibility while significantly reducing TRAP-positive cell number, F-actin ring formation, and bone resorption area in RANKL-treated BMMs.",
+            "start": 904
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP staining, F-actin ring imaging, resorption pit assay",
+          "dose": null,
+          "duration": "8 weeks",
+          "endpoint": "osteoclast differentiation / osteoclastogenesis readouts",
+          "intervention": "oral LCM",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "LCM treatment reduced osteoclastogenesis-related readouts in RANKL-treated BMMs.",
+        "uncertainties": [
+          "The exact molecular form of LCM is not specified in the text.",
+          "The quote bundles multiple osteoclastogenesis readouts; the claim is summarized at the phenotype level."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        904,
+        1075
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        611,
+        732
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1525,
+        1760
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1631,
+        1888
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

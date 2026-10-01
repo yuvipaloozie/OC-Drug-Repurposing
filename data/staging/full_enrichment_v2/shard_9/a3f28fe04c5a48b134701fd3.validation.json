@@ -1,0 +1,146 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 cells",
+          "compartment": null,
+          "disease_setting": "chronic kidney disease-mineral and bone disorder",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "SQYSD",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "105"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-induced differentiation of osteoclasts",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "106"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Wnt5a",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "107"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RhoA",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "108"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Pkn3",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2878,
+            "passage_index": 1,
+            "quote": "In vitro, SQYSD inhibited RANKL-induced differentiation of osteoclasts",
+            "start": 2808
+          },
+          {
+            "end": 2951,
+            "passage_index": 1,
+            "quote": " and formation of the F-actin ring, accompanied by the downregulation of ",
+            "start": 2878
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro validation",
+          "dose": null,
+          "duration": null,
+          "endpoint": "RANKL-induced differentiation of osteoclasts",
+          "intervention": "SQYSD",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Shenqi Yanshen Decoction inhibited RANKL-induced osteoclast differentiation in vitro; the effect was accompanied by downregulation of Wnt5a, RhoA, and Pkn3.",
+        "uncertainties": [
+          "Offsets for the second evidence span are approximate because the passage text was reconstructed from the supplied packet; the quoted text is contiguous but may not uniquely delimit the full sentence.",
+          "The species assignment for the in vitro RAW264.7 experiment is supported by the mouse-model context and provider annotations, but RAW264.7 itself is not explicitly annotated as a species in the packet."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        2808,
+        2878
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2981,
+        3051
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        2878,
+        2951
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        3130,
+        3203
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

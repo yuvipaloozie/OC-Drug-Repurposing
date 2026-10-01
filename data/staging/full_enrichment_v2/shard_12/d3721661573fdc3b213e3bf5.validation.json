@@ -1,0 +1,272 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "experimental periodontitis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D004958"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "E2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D014091"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "alveolar bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast numbers",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1087,
+            "passage_index": 1,
+            "quote": "OVX mice, E2 supplementation increased osteoclast numbers",
+            "start": 1029
+          },
+          {
+            "end": 1742,
+            "passage_index": 1,
+            "quote": "E2 increased alveolar bone resorption",
+            "start": 1705
+          }
+        ],
+        "experiment": {
+          "assay": "histological analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "alveolar bone resorption",
+          "intervention": "E2 supplementation after OVX",
+          "outcome_change": "increased",
+          "perturbation_type": "gain_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In OVX mice with experimental periodontitis, E2 supplementation increased alveolar bone resorption and increased osteoclast numbers.",
+        "uncertainties": [
+          "The quote links E2 supplementation to increased osteoclast numbers and a separate sentence to increased alveolar bone resorption; the exact causal linkage between the two outcomes is stated only at the abstract level.",
+          "OVX is part of the experimental context, but the claim extracts the E2 supplementation effect as reported."
+        ]
+      },
+      "errors": [
+        "invented annotation ID",
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow cells",
+          "compartment": null,
+          "disease_setting": "experimental periodontitis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D004958"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "E2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "21943"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "e3",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "compound",
+            "surface": "estrogen receptor antagonist",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D013629"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "tamoxifen",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1484,
+            "passage_index": 1,
+            "quote": "E2 promoted osteoclast differentiation in vitro, and treatment with E2 prior to RANKL stimulation further increased the number of osteoclasts.",
+            "start": 1342
+          },
+          {
+            "end": 1547,
+            "passage_index": 1,
+            "quote": "This effect was suppressed by an estrogen receptor antagonist.",
+            "start": 1485
+          },
+          {
+            "end": 1691,
+            "passage_index": 1,
+            "quote": "Moreover, E2 enhanced the expression of osteoclast differentiation-associated genes in the presence of RANKL, an effect abolished by tamoxifen.",
+            "start": 1548
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation",
+          "intervention": "E2 prior to RANKL stimulation; estrogen receptor antagonist; tamoxifen",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "E2 promoted osteoclast differentiation in vitro, and an estrogen receptor antagonist or tamoxifen suppressed this effect.",
+        "uncertainties": [
+          "The passage combines multiple related readouts (differentiation, osteoclast number, and osteoclast differentiation-associated gene expression) under the same E2/RANKL context.",
+          "The text states suppression by an estrogen receptor antagonist and abolition by tamoxifen, but does not specify whether these were separate experiments or doses."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1705,
+        1742
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1099,
+        1131
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1342,
+        1484
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1489,
+        1608
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1485,
+        1547
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1609,
+        1707
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1548,
+        1691
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1708,
+        1827
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

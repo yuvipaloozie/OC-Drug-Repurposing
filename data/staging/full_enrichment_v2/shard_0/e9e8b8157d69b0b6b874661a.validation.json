@@ -1,0 +1,193 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 macrophage-derived osteoclast precursor cells",
+          "compartment": null,
+          "disease_setting": "PMOP",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "44"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Nrf2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1175,
+            "passage_index": 1,
+            "quote": "Nrf2 knockdown impaired osteogenic capacity in UMR-106 cells and enhanced osteoclast differentiation in RAW264.7 cells.",
+            "start": 1056
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation",
+          "intervention": "Nrf2 knockdown",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Nrf2 knockdown in RAW264.7 cells enhanced osteoclast differentiation.",
+        "uncertainties": [
+          "The passage links Nrf2 knockdown to enhanced osteoclast differentiation, but does not establish direct molecular mechanism.",
+          "Cell-type context is stated for RAW264.7 cells, while the broader study also includes UMR-106 cells and OVX rats."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 macrophage-derived osteoclast precursor cells",
+          "compartment": null,
+          "disease_setting": "PMOP",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "47",
+              "50",
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Nrf2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "48",
+              "49"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "tert-butylhydroquinone",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1330,
+            "passage_index": 1,
+            "quote": "activation of Nrf2 using tert-butylhydroquinone (TBHQ) promoted bone formation and suppressed osteoclast differentiation and bone resorption.",
+            "start": 1189
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation",
+          "intervention": "tert-butylhydroquinone (TBHQ)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e3"
+        },
+        "summary": "Activation of Nrf2 with tert-butylhydroquinone (TBHQ) suppressed osteoclast differentiation in RAW264.7 cells.",
+        "uncertainties": [
+          "The sentence attributes the effect to Nrf2 activation by TBHQ, but the direct molecular target relationship is not established in the text.",
+          "The same sentence also reports an effect on bone resorption, but that endpoint is not separately extracted here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1056,
+        1175
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1144,
+        1239
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1189,
+        1330
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1291,
+        1419
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

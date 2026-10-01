@@ -1,0 +1,189 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "gelsolin-null",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "22"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "gelsolin deficiency",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "podosome assembly",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 581,
+            "passage_index": 1,
+            "quote": "gelsolin deficiency blocks podosome assembly and alpha(v)beta(3)-stimulated signaling related to motility in gelsolin-null mice",
+            "start": 454
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "podosome assembly",
+          "intervention": "gelsolin deficiency",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In gelsolin-null mice, gelsolin deficiency blocked podosome assembly and alpha(v)beta(3)-stimulated signaling related to motility in osteoclasts.",
+        "uncertainties": [
+          "The text also mentions alpha(v)beta(3)-stimulated signaling related to motility, but the quoted span is summarized at a higher level as a combined observed result.",
+          "Gelsolin is annotated as a gene/protein candidate, but the claim here is framed at the deficiency/phenotype level."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "gelsolin deficiency",
+          "species": "mice",
+          "stage": "with age"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "24",
+              "26"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "gelsolin-deficient mice",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "trabecular and cortical bone thickness",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "mechanically stronger bones",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1185,
+            "passage_index": 1,
+            "quote": "With age, the gelsolin-deficient mice expressed increased trabecular and cortical bone thickness producing mechanically stronger bones.",
+            "start": 1050
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "trabecular and cortical bone thickness",
+          "intervention": "gelsolin deficiency",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "With age, gelsolin-deficient mice had increased trabecular and cortical bone thickness and mechanically stronger bones.",
+        "uncertainties": [
+          "The sentence links increased bone thickness with stronger bones, but the causal mechanism is not established beyond the reported association in the text.",
+          "Species is supported by the passage, but the affected cell type is not specified for this outcome."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        454,
+        581
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        655,
+        727
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1050,
+        1185
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1113,
+        1261
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

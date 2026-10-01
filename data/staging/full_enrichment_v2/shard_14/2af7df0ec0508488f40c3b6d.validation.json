@@ -1,0 +1,267 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "primary human enthesis cells",
+          "compartment": null,
+          "disease_setting": "ankylosing spondylitis",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "66",
+              "67"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "TNF and IL-17A",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "64",
+              "68"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "IL-33",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "62",
+              "63"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "primary human enthesis cells",
+            "taxon": "human"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 438,
+            "passage_index": 1,
+            "quote": "human enthesis cells were isolated from surgically harvested human enthesis tissues",
+            "start": 355
+          },
+          {
+            "end": 1233,
+            "passage_index": 1,
+            "quote": "synergistic stimulation by TNF and IL-17A significantly upregulated IL-33 at both the transcriptomic and protein levels",
+            "start": 1114
+          }
+        ],
+        "experiment": {
+          "assay": "bulk RNA sequencing and Western blotting",
+          "dose": null,
+          "duration": null,
+          "endpoint": "IL-33 expression",
+          "intervention": "TNF and IL-17A stimulation",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Synergistic TNF and IL-17A stimulation upregulated IL-33 in primary human enthesis cells, at both transcript and protein levels.",
+        "uncertainties": [
+          "The subject is a combined stimulation condition rather than a single molecular entity.",
+          "IL-33 remains unresolved as gene versus protein in the annotation layer."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclast precursors",
+          "compartment": null,
+          "disease_setting": "ankylosing spondylitis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "90865"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "IL-33",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "99",
+              "100"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "p38 MAPK-NFATc1 signaling pathway",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "osteoclast precursors",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 117,
+            "passage_index": 0,
+            "quote": "via inhibition of osteoclast differentiation",
+            "start": 73
+          },
+          {
+            "end": 1567,
+            "passage_index": 1,
+            "quote": "Mechanistically, IL-33 significantly inhibited osteoclastogenesis by suppressing the p38 MAPK-NFATc1 signaling pathway in osteoclast precursors.",
+            "start": 1423
+          }
+        ],
+        "experiment": {
+          "assay": "osteoclast differentiation assays",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "IL-33",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "IL-33 is reported to inhibit osteoclast differentiation / osteoclastogenesis, with suppression of the p38 MAPK-NFATc1 pathway in osteoclast precursors.",
+        "uncertainties": [
+          "The text provides a mechanism statement but does not establish direct molecular binding or enzymatic action.",
+          "IL-33 is tagged as a gene in provider annotations; the text context does not unambiguously resolve protein versus gene form."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        73,
+        117
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        77,
+        109
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1423,
+        1567
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1867,
+        1945
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        355,
+        438
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        474,
+        549
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1114,
+        1233
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1239,
+        1332
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

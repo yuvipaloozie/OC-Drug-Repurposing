@@ -1,0 +1,382 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow stem cells",
+          "compartment": null,
+          "disease_setting": "ovariectomized osteoporotic context",
+          "species": "mice",
+          "stage": "OVX"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "100102"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "PCSK9",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone mineral density",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D056828",
+              "MESH:D001847"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "estrogen deficiency-induced bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 96,
+            "passage_index": 1,
+            "quote": "PCSK9",
+            "start": 91
+          },
+          {
+            "end": 228,
+            "passage_index": 1,
+            "quote": "ovariectomized (OVX) mice serum, approximately 3-fold",
+            "start": 175
+          },
+          {
+            "end": 326,
+            "passage_index": 1,
+            "quote": "which correlates strongly with decreased bone mineral density",
+            "start": 265
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone mineral density",
+          "intervention": "ovariectomized (OVX) mice",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In OVX mice, PCSK9 was reported to be upregulated and this increase correlated with decreased bone mineral density, suggesting an association with estrogen deficiency-induced bone loss.",
+        "uncertainties": [
+          "The passage reports correlation/association rather than a demonstrated causal mechanism.",
+          "The exact molecular form of PCSK9 is not explicitly distinguished in the text beyond the gene annotation."
+        ]
+      },
+      "errors": [
+        "invented annotation ID",
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "mice",
+          "stage": "OVX"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "100102"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "PCSK9",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D010024"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoporosis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone microarchitecture",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "trabecular bone volume fraction (BV/TV)",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 486,
+            "passage_index": 1,
+            "quote": "Genetic knockout of PCSK9 was found to ameliorate osteoporosis by improving bone microarchitecture",
+            "start": 388
+          },
+          {
+            "end": 571,
+            "passage_index": 1,
+            "quote": "increasing trabecular bone volume fraction (BV/TV) by 50%, enhancing bone formation",
+            "start": 488
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoporosis",
+          "intervention": "Genetic knockout of PCSK9",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Genetic knockout of PCSK9 ameliorated osteoporosis and improved bone microarchitecture in OVX mice.",
+        "uncertainties": [
+          "The text does not establish direct molecular mechanism for the phenotype change.",
+          "Additional readouts (PINP, beta-CTX) are reported but not separately parsed into a distinct mechanism claim."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "mice",
+          "stage": "OVX osteoporotic"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "100102"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "RNA",
+            "surface": "siPCSK9",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "100102"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "PCSK9",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D001847"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1075,
+            "passage_index": 1,
+            "quote": "This novel system facilitated efficient bone-specific enrichment (fluorescence intensity in bone increased by 60%) and the successful delivery of siPCSK9, resulting in potent silencing of bone marrow PCSK9 expression",
+            "start": 859
+          },
+          {
+            "end": 1159,
+            "passage_index": 1,
+            "quote": "In OVX osteoporotic mice, this targeted intervention markedly attenuated bone loss",
+            "start": 1077
+          }
+        ],
+        "experiment": {
+          "assay": "fluorescence intensity in bone",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone loss",
+          "intervention": "bone-targeted exosome delivery system with anti-sclerostin fragment delivering siPCSK9",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "A bone-targeted exosome system delivering siPCSK9 silenced bone marrow PCSK9 expression and attenuated bone loss in OVX osteoporotic mice.",
+        "uncertainties": [
+          "The delivery system is a compound/construct rather than a single molecular entity, so the intervention subject is not reduced to one component.",
+          "The quote states attenuation of bone loss and silencing of PCSK9 expression, but does not distinguish direct from indirect effects."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        175,
+        228
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        166,
+        214
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        265,
+        326
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        235,
+        287
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        388,
+        486
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        292,
+        392
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        488,
+        571
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        394,
+        463
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        859,
+        1075
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        842,
+        1000
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1077,
+        1159
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1013,
+        1098
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,181 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "62"
+            ],
+            "existing_node_id": "CHEBI:17234",
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "high glucose",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "protein",
+            "surface": "AMPK",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 798,
+            "passage_index": 1,
+            "quote": "high glucose promoted the expression of AMPK, p-AMPK",
+            "start": 746
+          }
+        ],
+        "experiment": {
+          "assay": "protein and mRNA expression",
+          "dose": null,
+          "duration": null,
+          "endpoint": "AMPK expression",
+          "intervention": "high glucose",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In high glucose, AMPK expression was increased.",
+        "uncertainties": [
+          "The passage also mentions p-AMPK in the same phrase, but this claim is limited to AMPK expression."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7",
+          "compartment": null,
+          "disease_setting": "high glucose environment",
+          "species": "mouse",
+          "stage": "osteoclasts"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "53",
+              "59",
+              "61",
+              "71",
+              "89"
+            ],
+            "existing_node_id": "CHEBI:17234",
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ZOL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation and bone absorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1239,
+            "passage_index": 1,
+            "quote": "Upon addition of ZOL to high glucose, the expression of AMPK, p-AMPK increased and the expression of NFATc1, SYK, CTSK, TRAP decreased, while osteoclast differentiation and bone absorption were further inhibited.",
+            "start": 1027
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation and bone absorption",
+          "intervention": "ZOL added to high glucose",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Adding zoledronate in high glucose further inhibited osteoclast differentiation and bone absorption.",
+        "uncertainties": [
+          "The phenotype outcome is stated together with changes in AMPK pathway gene expression; the direct mediator is not established by this sentence alone."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        746,
+        798
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        854,
+        910
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1027,
+        1239
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1131,
+        1313
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

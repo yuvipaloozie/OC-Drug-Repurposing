@@ -1,0 +1,196 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "serum",
+          "disease_setting": "COVID-19",
+          "species": "Homo sapiens",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "CTX-I",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [
+              "60"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "COVID-19 patients",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [
+              "56"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "CRP",
+            "taxon": "9606"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1417,
+            "passage_index": 1,
+            "quote": "Serum CTX-I levels were significantly higher in COVID-19 patients than in the control group (p < 0.05). Furthermore, a positive weak relationship was detected between CRP and CTX-I (r = 0.303, p < 0.05).",
+            "start": 1214
+          }
+        ],
+        "experiment": {
+          "assay": "enzyme-linked immunosorbent assay (ELISA)",
+          "dose": null,
+          "duration": null,
+          "endpoint": "serum CTX-I concentration",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Serum CTX-I levels were higher in COVID-19 patients than in controls, and CRP showed a weak positive correlation with CTX-I.",
+        "uncertainties": [
+          "CTX-I is a biomarker term rather than a specific molecular entity in the text; the molecular form is unresolved.",
+          "The CRP-CTX-I relationship is correlational, not causal."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "CTX-I",
+            "taxon": "null"
+          },
+          {
+            "annotation_ids": [
+              "45",
+              "46",
+              "61"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": "null"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 354,
+            "passage_index": 1,
+            "quote": "C-terminal cross-linking telopeptide (CTX-I) is released during mature bone resorption and is a biomarker for predicting bone resorption.",
+            "start": 217
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "CTX-I is described as being released during mature bone resorption and as a biomarker for predicting bone resorption.",
+        "uncertainties": [
+          "This is background framing, not an experimental perturbation result.",
+          "CTX-I molecular identity is not specified beyond the biomarker name."
+        ]
+      },
+      "errors": [
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1214,
+        1417
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        966,
+        1100
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        217,
+        354
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        255,
+        384
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

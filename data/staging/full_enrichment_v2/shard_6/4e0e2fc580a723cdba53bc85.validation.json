@@ -1,0 +1,216 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "pyogenic spondylodiscitis",
+          "species": "rat",
+          "stage": "acute phase"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activity",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "acute phase",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "10116"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "rat",
+            "taxon": "rat"
+          },
+          {
+            "annotation_ids": [
+              "MESH:D015299"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "pyogenic spondylodiscitis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1714,
+            "passage_index": 1,
+            "quote": "Histomorphometry demonstrated increased osteoclast activity (Oc.S/BS, Oc.N/BS) and osteoblast surface (Ob.S/BS) in the acute phase",
+            "start": 1584
+          }
+        ],
+        "experiment": {
+          "assay": "histomorphometry",
+          "dose": "107 CFU/ml, 100 mul",
+          "duration": "2 weeks",
+          "endpoint": "osteoclast activity (Oc.S/BS, Oc.N/BS)",
+          "intervention": "Staphylococcus aureus ATCC 29213 injected into the C6/7 disc space",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e1",
+          "sign": "positive",
+          "subject": "e4"
+        },
+        "summary": "In the rat pyogenic spondylodiscitis model, the acute phase showed increased osteoclast activity in the discitis segment.",
+        "uncertainties": [
+          "The text reports a model-level acute-phase increase rather than a molecular mechanism.",
+          "The exact causal role of pyogenic spondylodiscitis versus the bacterial inoculation is not distinguished in the abstract."
+        ]
+      },
+      "errors": [
+        "invented annotation ID",
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "pyogenic spondylodiscitis",
+          "species": "rat",
+          "stage": "acute phase to later observation periods"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast indices",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "time",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "10116"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "rat",
+            "taxon": "rat"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1817,
+            "passage_index": 1,
+            "quote": "with osteoclast indices decreasing over time, whereas osteoblast surface remained relatively elevated",
+            "start": 1716
+          }
+        ],
+        "experiment": {
+          "assay": "bone histomorphometry",
+          "dose": "107 CFU/ml, 100 mul",
+          "duration": "4-6 weeks",
+          "endpoint": "osteoclast indices",
+          "intervention": "Staphylococcus aureus ATCC 29213 injected into the C6/7 disc space",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e1",
+          "sign": "negative",
+          "subject": "e2"
+        },
+        "summary": "Osteoclast indices decreased over time in the model after the acute phase.",
+        "uncertainties": [
+          "This is a temporal trend, not a specific molecular perturbation.",
+          "The text does not specify which osteoclast index changed most strongly."
+        ]
+      },
+      "errors": [
+        "invented annotation ID",
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1584,
+        1714
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1592,
+        1690
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1716,
+        1817
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1691,
+        1764
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

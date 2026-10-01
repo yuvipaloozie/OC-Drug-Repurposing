@@ -1,0 +1,201 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "calcium deficiency",
+          "species": "mice",
+          "stage": "female; lactation or low-calcium diet"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "20"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Fndc5",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteocytic osteolysis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastic bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 527,
+            "passage_index": 1,
+            "quote": "KO female mice were partially protected from osteocytic osteolysis and osteoclastic bone resorption when allowed to lactate or when placed on a low-calcium diet.",
+            "start": 366
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteocytic osteolysis and osteoclastic bone resorption",
+          "intervention": "mice lacking Fndc5 (knockout [KO])",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Female mice lacking Fndc5 were partially protected from osteocytic osteolysis and osteoclastic bone resorption when allowed to lactate or when placed on a low-calcium diet.",
+        "uncertainties": [
+          "The quoted text reports protection from two related bone-resorption phenotypes in the same sentence; the primary regulatory object is represented as osteocytic osteolysis.",
+          "Direct molecular mechanism is not stated, only a perturbation-associated phenotype change.",
+          "The exact causal contribution of lactation versus low-calcium diet is not separable from this span."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteocytes",
+          "compartment": null,
+          "disease_setting": "null",
+          "species": "mice",
+          "stage": "male"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "20"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Fndc5",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [
+              "26",
+              "27"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "genes associated with steroid and fatty acid metabolism",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "genes associated with bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1412,
+            "passage_index": 1,
+            "quote": "Male KO osteocytes had lower expression of genes associated with steroid and fatty acid metabolism, but higher expression of genes associated with bone resorption compared to male WT.",
+            "start": 1229
+          }
+        ],
+        "experiment": {
+          "assay": "osteocyte transcriptomics",
+          "dose": null,
+          "duration": null,
+          "endpoint": "expression of genes associated with steroid and fatty acid metabolism",
+          "intervention": "mice lacking Fndc5 (knockout [KO])",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In male KO osteocytes, genes associated with steroid and fatty acid metabolism were expressed at lower levels, while genes associated with bone resorption were expressed at higher levels than in male WT.",
+        "uncertainties": [
+          "The sentence also reports higher expression of genes associated with bone resorption, but that second effect is not encoded in this single claim.",
+          "The biological meaning of the gene sets is associative rather than a specific molecular pathway."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        366,
+        527
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        111,
+        246
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1229,
+        1412
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        724,
+        853
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

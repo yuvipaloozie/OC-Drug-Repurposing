@@ -1,0 +1,214 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow-derived macrophages",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "20409"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "SH3P2",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 750,
+            "passage_index": 1,
+            "quote": "Osteoclast differentiation based on cellular multinuclearity induced by macrophage colony-stimulating factor and receptor activator of nuclear factor-kappaB ligand (RANKL) was enhanced in bone marrow-derived macrophages lacking SH3P2.",
+            "start": 516
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation based on cellular multinuclearity",
+          "intervention": "SH3P2 lacking",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In SH3P2 knockout osteoclast precursor cells, osteoclast differentiation was enhanced, supporting a negative role for SH3P2 in this phenotype.",
+        "uncertainties": [
+          "The text links the increased differentiation to SH3P2 loss in bone marrow-derived macrophages, but does not establish direct molecular mechanism from this passage alone."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "membrane fraction / plasma membrane",
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "20409"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "SH3P2",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "71602"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Myo1E",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "plasma membrane localization",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1030,
+            "passage_index": 1,
+            "quote": "Myo1E in the membrane fraction increased in SH3P2-KO cells.",
+            "start": 971
+          },
+          {
+            "end": 948,
+            "passage_index": 1,
+            "quote": "RANKL induced SH3P2 dephosphorylation, which increased the association of actin-dependent motor protein myosin 1E (Myo1E) with SH3P2 and thereby prevented Myo1E localization to the plasma membrane.",
+            "start": 751
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "Myo1E in the membrane fraction",
+          "intervention": "SH3P2-KO",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Loss of SH3P2 increased the membrane-associated fraction of Myo1E, consistent with SH3P2 restraining Myo1E plasma membrane localization.",
+        "uncertainties": [
+          "The sentence about RANKL-induced dephosphorylation and prevented plasma membrane localization is mechanistic context, but the most direct observed outcome here is increased membrane fraction in SH3P2-KO cells.",
+          "The specific molecular form of 'membrane localization' is treated as a phenotype because the text does not define a discrete molecular entity."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        516,
+        750
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        520,
+        714
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        971,
+        1030
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        937,
+        992
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        751,
+        948
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        789,
+        923
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,129 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone",
+          "disease_setting": "bone metastasis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "31",
+              "32",
+              "33",
+              "36",
+              "44",
+              "52",
+              "54"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "TGF-beta",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastic bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "osteoclasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 280,
+            "passage_index": 1,
+            "quote": "transforming growth factor-beta (TGF-beta), a cytokine stored in the mineralized matrix and unleashed during osteoclastic bone resorption.",
+            "start": 142
+          },
+          {
+            "end": 452,
+            "passage_index": 1,
+            "quote": "Once activated, TGF-beta fuels a self-reinforcing \"vicious cycle\": it co-opts tumor cells to undergo epithelial-to-mesenchymal transition, recruits and primes osteoclasts,",
+            "start": 281
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e1",
+          "sign": "positive",
+          "subject": "e2"
+        },
+        "summary": "The review states that TGF-beta is unleashed during osteoclastic bone resorption and that, once activated, it recruits and primes osteoclasts.",
+        "uncertainties": [
+          "The passage is a review and presents these as summary statements rather than results from a single experiment.",
+          "The exact biological form of osteoclasts is not specified in the text.",
+          "The causal relationship is described narratively; directness is not established."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        142,
+        280
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        256,
+        375
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        281,
+        452
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        376,
+        449
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

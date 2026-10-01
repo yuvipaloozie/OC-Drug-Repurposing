@@ -1,0 +1,334 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "37",
+              "38",
+              "43",
+              "49"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Rarres2",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 970,
+            "passage_index": 1,
+            "quote": "rarres2 knockout (Rarres2-/-) mice and examined the role of chemerin as a determinant of osteoblast and osteoclast differentiation in Mc3t3-E1 and Raw264.7 cell lines. RESULTS: The results showed that the bone mineral density and volume score, trabecular thickness, weight and bone formation marker BALP increased, but Tb.Sp and bone resorption marker TRACP-5b decreased in Rarres2-/- mice. Furthermore, the mRNA and protein expression of biomarkers of osteoblasts (beta-catenin, RANKL and OPG) significantly increased, but those of osteoclasts (CTSK and RANK) decreased in Rarres2-/- mice.",
+            "start": 380
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption marker TRACP-5b; osteoclast markers CTSK and RANK",
+          "intervention": "Rarres2 knockout (Rarres2-/-)",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In Rarres2 knockout mice, bone formation markers and bone mass measures increased, while bone resorption markers and osteoclast markers decreased.",
+        "uncertainties": [
+          "The passage bundles multiple phenotypes in one knockout experiment; the claim summarizes them at a high level.",
+          "Chemerin and Rarres2 are treated as the same entity in the text, but the molecular form/context is not fully resolved beyond the provided passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "Mc3t3-E1 and Raw264.7",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "33",
+              "34",
+              "35",
+              "36",
+              "40",
+              "51",
+              "56",
+              "59",
+              "61",
+              "62"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "chemerin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "46",
+              "54"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "48",
+              "55"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:CTSK",
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "CTSK",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "gene",
+            "surface": "RANK",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "45",
+              "52",
+              "60"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "beta-catenin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "47",
+              "53"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFRSF11B",
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "OPG",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1133,
+            "passage_index": 1,
+            "quote": "chemerin markedly suppressed beta-catenin and OPG, but increased RANKL, CTSK and RANK expression. Moreover, knockdown of chemerin using RNA interference",
+            "start": 981
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "RANKL, CTSK and RANK expression",
+          "intervention": "chemerin",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Chemerin treatment in vitro increased osteoclast-associated markers RANKL, CTSK, and RANK expression, while suppressing beta-catenin and OPG.",
+        "uncertainties": [
+          "The sentence reports several markers together; the regulatory object is represented with one marker as the primary object while the summary preserves the full set.",
+          "The text does not establish directness of regulation."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "Mc3t3-E1 and Raw264.7",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "33",
+              "34",
+              "35",
+              "36",
+              "40",
+              "51",
+              "56",
+              "59",
+              "61",
+              "62"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "chemerin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis genes",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1286,
+            "passage_index": 1,
+            "quote": "chemerin using RNA interference enhanced osteoblastogenesis genes and inhibited osteoclastogenesis genes in Mc3t3-E1 and Raw264.7 cells. CONCLUSIONS: Taken together, these data suggest",
+            "start": 1102
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis genes",
+          "intervention": "RNA interference knockdown of chemerin",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "RNA interference knockdown of chemerin enhanced osteoblastogenesis genes and inhibited osteoclastogenesis genes in Mc3t3-E1 and Raw264.7 cells.",
+        "uncertainties": [
+          "The passage combines osteoblastogenesis and osteoclastogenesis outcomes; only the osteoclast-related portion is modeled in the regulatory object.",
+          "The cell lines are named in the text, but species is not explicitly stated there."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        380,
+        970
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        444,
+        1125
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        981,
+        1133
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1045,
+        1179
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1102,
+        1286
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1166,
+        1333
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

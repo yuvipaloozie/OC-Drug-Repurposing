@@ -1,0 +1,183 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "rheumatoid arthritis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "68",
+              "69"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "SD282",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "69"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "STAT3 phosphorylation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1072,
+            "passage_index": 1,
+            "quote": "SD282 blocked STAT3 phosphorylation",
+            "start": 1037
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "STAT3 phosphorylation",
+          "intervention": "SD282 treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "SD282 treatment blocked STAT3 phosphorylation.",
+        "uncertainties": [
+          "The sentence states phosphorylation was blocked but does not specify whether the effect is direct.",
+          "STAT3 is annotated as a gene in the source packet; the phosphorylation target is treated as an unresolved molecular entity rather than forcing a specific protein mapping."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "murine and human immune cells",
+          "compartment": null,
+          "disease_setting": "collagen-induced arthritis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "70",
+              "74",
+              "77"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "SD282",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1216,
+            "passage_index": 1,
+            "quote": "SD282 suppressed osteoclast differentiation",
+            "start": 1173
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation",
+          "intervention": "SD282 treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "SD282 treatment suppressed osteoclast differentiation.",
+        "uncertainties": [
+          "The text links suppression of osteoclast differentiation to downregulation of RANKL, MMP9, and NFATC1 signaling pathways, but does not separately state the molecular mechanism for each target in a way that supports direct edges."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1037,
+        1072
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1205,
+        1242
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1173,
+        1216
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1341,
+        1382
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

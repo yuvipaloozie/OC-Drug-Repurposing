@@ -1,0 +1,201 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "primary hyperparathyroidism",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "34",
+              "35",
+              "64"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "Primary hyperparathyroidism",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [
+              "36",
+              "37",
+              "53",
+              "59"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "parathyroid hormone",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "38",
+              "51",
+              "54"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "hypercalcemia",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 137,
+            "passage_index": 1,
+            "quote": "Primary hyperparathyroidism (PHPT) is characterised by autonomous overproduction of parathyroid hormone (PTH), resulting in hypercalcemia",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "hypercalcemia and multisystem complications",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Primary hyperparathyroidism is described as autonomous overproduction of parathyroid hormone, resulting in hypercalcemia and multisystem complications.",
+        "uncertainties": [
+          "The sentence is a general disease description, not an experimental test of regulation.",
+          "PTH is annotated as a gene by the provider, but the text refers to the hormone; molecular form remains only text-supported candidate."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "primary hyperparathyroidism",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "minimally invasive parathyroidectomy",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [
+              "37",
+              "53",
+              "59"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "PTH",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1394,
+            "passage_index": 1,
+            "quote": "she underwent minimally invasive parathyroidectomy (MIP) with an immediate postoperative fall in PTH, indicating biochemical cure",
+            "start": 1265
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": "immediate postoperative",
+          "endpoint": "PTH",
+          "intervention": "minimally invasive parathyroidectomy (MIP)",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "After minimally invasive parathyroidectomy, the patient had an immediate postoperative fall in PTH, which the report describes as biochemical cure.",
+        "uncertainties": [
+          "This is a clinical outcome after surgery, not a molecular mechanism with established directness.",
+          "The subject is a procedure rather than a molecule."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        137
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        107,
+        231
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1265,
+        1394
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1418,
+        1519
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

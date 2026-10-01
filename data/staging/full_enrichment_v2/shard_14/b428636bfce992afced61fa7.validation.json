@@ -1,0 +1,458 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "in vitro",
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "differentiated osteoclasts"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "21",
+              "23",
+              "24",
+              "25",
+              "38",
+              "39"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "CD82",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast fusion",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "actin assembly",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 674,
+            "passage_index": 1,
+            "quote": "In vitro, there is an increase in osteoclast fusion and defects in actin assembly in both gKO and cKO mice, irrespective of sex.",
+            "start": 546
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast fusion",
+          "intervention": "conditional loss of CD82 (cKO) and global loss of CD82 (gKO)",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Loss of CD82 in osteoclasts increases osteoclast fusion and causes defects in actin assembly.",
+        "uncertainties": [
+          "The quoted sentence combines increased fusion with actin assembly defects; the exact causal linkage between the two outcomes is not specified.",
+          "The molecular form of CD82 is inferred from context rather than explicitly stated in the result sentence."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "in vitro",
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "in vitro differentiated osteoclasts"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "21",
+              "23",
+              "24",
+              "25",
+              "38",
+              "39"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "CD82",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "29"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "CTX",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "31"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Src",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "32",
+              "36"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Syk",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "33",
+              "37"
+            ],
+            "existing_node_id": null,
+            "key": "e7",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Vav",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 766,
+            "passage_index": 1,
+            "quote": "This is accompanied by altered osteoclast morphology and decreased release of CTX in vitro.",
+            "start": 675
+          },
+          {
+            "end": 898,
+            "passage_index": 1,
+            "quote": "Integrin alphavbeta3 expression is reduced, while integrin beta1 is increased. Signaling to Src, Syk, and Vav are also compromised.",
+            "start": 767
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro",
+          "dose": null,
+          "duration": null,
+          "endpoint": "CTX release",
+          "intervention": "loss of CD82",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Loss of CD82 decreases CTX release and compromises signaling to Src, Syk, and Vav in osteoclasts.",
+        "uncertainties": [
+          "The sentence also mentions altered morphology and compromised signaling to Src, Syk, and Vav; these are captured only as supporting evidence, not as separately modeled mechanisms here.",
+          "CTX is treated as an annotated entity as provided, although the surface form is abbreviated and its molecular form is not explicit in text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "in vitro",
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "differentiated osteoclasts"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "21",
+              "23",
+              "24",
+              "25",
+              "38",
+              "39"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "CD82",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e8",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "integrin alphavbeta3",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "30"
+            ],
+            "existing_node_id": null,
+            "key": "e9",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "integrin beta1",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 898,
+            "passage_index": 1,
+            "quote": "Integrin alphavbeta3 expression is reduced, while integrin beta1 is increased. Signaling to Src, Syk, and Vav are also compromised.",
+            "start": 767
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro",
+          "dose": null,
+          "duration": null,
+          "endpoint": "integrin alphavbeta3 expression",
+          "intervention": "loss of CD82",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "expression",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e8",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Loss of CD82 reduces integrin alphavbeta3 expression and increases integrin beta1 expression in osteoclasts.",
+        "uncertainties": [
+          "The quote states both reduced integrin alphavbeta3 and increased integrin beta1; only the first is modeled as the main object here.",
+          "The molecular form of integrin alphavbeta3 is not explicitly specified in text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "differentiated osteoclasts",
+          "compartment": "in vitro",
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "differentiated"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "21",
+              "23",
+              "24",
+              "25",
+              "38",
+              "39"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "CD82",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "34"
+            ],
+            "existing_node_id": null,
+            "key": "e10",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Clec2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "35"
+            ],
+            "existing_node_id": null,
+            "key": "e11",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Podoplanin",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1100,
+            "passage_index": 1,
+            "quote": "We further discovered that expression of Clec2 and its ligand, Podoplanin, molecules that also signal to Syk and Vav, are increased in differentiated osteoclasts. Loss of CD82 reduces their expression.",
+            "start": 899
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro",
+          "dose": null,
+          "duration": null,
+          "endpoint": "expression of Clec2 and Podoplanin",
+          "intervention": "loss of CD82",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c4",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "expression",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e10",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Loss of CD82 reduces the expression of Clec2 and its ligand Podoplanin in differentiated osteoclasts.",
+        "uncertainties": [
+          "The quote reports Clec2 and Podoplanin together; the object is represented by Clec2 as the primary cited entity with Podoplanin included in the summary.",
+          "Directionality for each downstream signaling relationship to Syk and Vav is not separately extracted."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        546,
+        674
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        623,
+        749
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        675,
+        766
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        751,
+        802
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        767,
+        898
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        841,
+        893
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        767,
+        898
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        841,
+        937
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c4",
+      "corrected_offsets": [
+        899,
+        1100
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        944,
+        1108
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

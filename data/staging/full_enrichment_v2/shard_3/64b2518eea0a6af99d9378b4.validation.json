@@ -1,0 +1,190 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "20",
+              "21",
+              "22",
+              "25",
+              "28"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "PMSA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "CaN",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 646,
+            "passage_index": 1,
+            "quote": "PMSA bound to CaN and suppressed its phosphatase activity",
+            "start": 589
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "calcineurin phosphatase activity",
+          "intervention": "PMSA treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "PMSA treatment suppressed calcineurin phosphatase activity in osteoclasts.",
+        "uncertainties": [
+          "The sentence states that PMSA bound to CaN, but the exact directness of the inhibition is not explicitly characterized beyond binding and suppression."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "20",
+              "21",
+              "22",
+              "25",
+              "28"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "PMSA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "23",
+              "24",
+              "26",
+              "27"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "phospho-NFATc1",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 917,
+            "passage_index": 1,
+            "quote": "PMSA treatment resulted in altered NFATc1-related signaling and increased phospho-NFATc1 levels in osteoclasts",
+            "start": 807
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "phospho-NFATc1 levels",
+          "intervention": "PMSA treatment",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "PMSA treatment increased phospho-NFATc1 levels in osteoclasts.",
+        "uncertainties": [
+          "The passage also mentions altered NFATc1-related signaling, but the specific signaling component(s) other than phospho-NFATc1 are not resolved."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        589,
+        646
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        656,
+        713
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        807,
+        917
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1023,
+        1134
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

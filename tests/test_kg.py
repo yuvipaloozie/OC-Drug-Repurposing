@@ -1,5 +1,6 @@
 """Topology regression checks for the legacy claim inventory, not evidence validation."""
 import os
+import csv
 import sys
 import json
 import unittest
@@ -27,15 +28,21 @@ class TestOsteoclastKG(unittest.TestCase):
         cls.edges = [{**e, "source": reverse[e["source"]], "target": reverse[e["target"]]} for e in cls.kg_data["edges"]]
 
     def test_pure_biological_node_count(self):
-        """Verifies exactly 267 pure biological nodes and zero drug nodes."""
-        self.assertEqual(len(self.kg_data["nodes"]), 267)
+        """Verifies exported entity IDs match canonical tables and no drug nodes are introduced."""
+        with (self.data_dir / "nodes.csv").open(encoding="utf-8") as handle:
+            canonical = {r["node_id"] for r in csv.DictReader(handle)}
+        self.assertEqual({n["id"] for n in self.kg_data["nodes"]}, canonical)
+        self.assertGreaterEqual(len(canonical), 267)
         for nid, n in self.nodes.items():
             self.assertNotEqual(n.get("type"), "drug", f"Drug node found: {nid}")
             self.assertFalse(nid.startswith("CHEMBL:"), f"Exogenous drug node found: {nid}")
 
     def test_consolidated_edge_count(self):
-        """Verifies exactly 334 unique consolidated edges and zero redundancy."""
-        self.assertEqual(len(self.edges), 334)
+        """Verifies canonical claim IDs survive export without duplicate context-specific relationships."""
+        with (self.data_dir / "edges.csv").open(encoding="utf-8") as handle:
+            canonical = {r["edge_id"] for r in csv.DictReader(handle)}
+        self.assertEqual({e["edge_id"] for e in self.edges}, canonical)
+        self.assertGreaterEqual(len(canonical), 338)
 
         # Check that there are no duplicate edges between same (source, target) with same sign
         edge_pairs = set()
@@ -46,7 +53,7 @@ class TestOsteoclastKG(unittest.TestCase):
 
     def test_canonical_rankl_signaling_axis(self):
         """Verifies TNFSF11 -> TNFRSF11A -> TRAF6 -> IKBKB -> NFKB1 -> NFATC1."""
-        edge_map = {(e["source"], e["target"]): e for e in self.edges}
+        edge_map = {(e["source"], e["target"]): e for e in self.edges if not e["edge_id"].startswith("edge:full:")}
 
         self.assertIn(("HGNC:TNFSF11", "HGNC:TNFRSF11A"), edge_map)
         self.assertEqual(edge_map[("HGNC:TNFSF11", "HGNC:TNFRSF11A")]["sign"], 1)
@@ -65,7 +72,7 @@ class TestOsteoclastKG(unittest.TestCase):
 
     def test_irf8_blimp1_transcriptional_brake(self):
         """Verifies Blimp1 (PRDM1) -| IRF8 -| NFATc1 (double negative sign)."""
-        edge_map = {(e["source"], e["target"]): e for e in self.edges}
+        edge_map = {(e["source"], e["target"]): e for e in self.edges if not e["edge_id"].startswith("edge:full:")}
 
         self.assertIn(("HGNC:PRDM1", "HGNC:IRF8"), edge_map)
         self.assertEqual(edge_map[("HGNC:PRDM1", "HGNC:IRF8")]["sign"], -1)
@@ -75,7 +82,7 @@ class TestOsteoclastKG(unittest.TestCase):
 
     def test_src_cytoskeleton_axis(self):
         """Verifies c-Src -> Vav3 -> Rac1 podosome / sealing zone pathway."""
-        edge_map = {(e["source"], e["target"]): e for e in self.edges}
+        edge_map = {(e["source"], e["target"]): e for e in self.edges if not e["edge_id"].startswith("edge:full:")}
 
         self.assertIn(("HGNC:SRC", "HGNC:VAV3"), edge_map)
         self.assertEqual(edge_map[("HGNC:SRC", "HGNC:VAV3")]["sign"], 1)

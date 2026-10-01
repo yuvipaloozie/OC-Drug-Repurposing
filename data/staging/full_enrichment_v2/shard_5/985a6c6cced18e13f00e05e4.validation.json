@@ -1,0 +1,188 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclast",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "28"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:PLCG2",
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "PLCgamma2",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "31"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:SRC",
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Src",
+            "taxon": "null"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 757,
+            "passage_index": 1,
+            "quote": "PLCgamma2 was found to be an important regulator of alpha(v)beta(3) integrin-mediated bone osteoclast cell adhesion, migration, and bone resorption. Adhesion-induced PYK2 and Src phosphorylation is decreased in the absence of PLCgamma2,",
+            "start": 521
+          }
+        ],
+        "experiment": {
+          "assay": "analysis of primary cells",
+          "dose": null,
+          "duration": null,
+          "endpoint": "adhesion-induced Src phosphorylation",
+          "intervention": "absence of PLCgamma2",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In PLCgamma2-null mouse osteoclasts, adhesion-induced Src phosphorylation was decreased compared with wild type.",
+        "uncertainties": [
+          "The text reports decreased Src phosphorylation, not a direct biochemical interaction mechanism.",
+          "Species support comes from 'mice' in the abstract and provider annotations; Src taxon is not explicitly stated in the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclast",
+          "compartment": "sealing actin ring",
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "32",
+              "35",
+              "37"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:PLCG2",
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "PLCgamma2",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "33",
+              "36",
+              "38",
+              "39"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:SRC",
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Src",
+            "taxon": "null"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1229,
+            "passage_index": 1,
+            "quote": "Importantly, PLCgamma2 was found to be required for proper localization of Src to the sealing actin ring, and this function required both its catalytic activity and adapter domains. Based on these results, we propose that PLCgamma2 influences Src activation by mediating the localization of Src to the integrin complex and thereby regulating integrin-mediated functions in the osteoclast.",
+            "start": 841
+          }
+        ],
+        "experiment": {
+          "assay": "analysis of primary cells",
+          "dose": null,
+          "duration": null,
+          "endpoint": "Src localization to the sealing actin ring",
+          "intervention": "absence of PLCgamma2",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "PLCgamma2 was required for proper localization of Src to the sealing actin ring in osteoclasts, and the authors state that this function depended on PLCgamma2 catalytic activity and adapter domains.",
+        "uncertainties": [
+          "The sentence mixes an observed requirement with a proposed mechanism; only the requirement for localization is extracted as the observed result.",
+          "Directness of the localization effect is not established."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        521,
+        757
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        623,
+        765
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        841,
+        1229
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        804,
+        1067
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

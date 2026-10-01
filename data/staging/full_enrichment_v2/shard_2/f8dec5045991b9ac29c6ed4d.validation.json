@@ -1,0 +1,216 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "bone metabolism markers",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone metabolism",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "systemic bone tissue",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 283,
+            "passage_index": 1,
+            "quote": "By measuring bone metabolism markers, the overall state of bone metabolism and dynamic changes in systemic bone tissue can be reflected.",
+            "start": 147
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Measuring bone metabolism markers can reflect the overall state of bone metabolism and dynamic changes in systemic bone tissue.",
+        "uncertainties": [
+          "This is a general statement about biomarker utility, not a measured experimental effect.",
+          "The specific markers are not individually mechanistically characterized in the passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "Bones",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone formation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "complex",
+            "surface": "osteoclasts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "complex",
+            "surface": "osteoblasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 146,
+            "passage_index": 1,
+            "quote": "Bones possess metabolic activity, with their homeostasis maintained by bone resorption and bone formation mediated by osteoclasts and osteoblasts.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e4"
+        },
+        "summary": "Bone homeostasis is maintained by bone resorption and bone formation mediated by osteoclasts and osteoblasts.",
+        "uncertainties": [
+          "The sentence is a general background statement, not an experiment.",
+          "The text does not specify whether the mediation is direct or indirect.",
+          "The role of osteoblasts is described in the same sentence, but only one regulatory relation is encoded here."
+        ]
+      },
+      "errors": [
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        146
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        97
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        147,
+        283
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        98,
+        237
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

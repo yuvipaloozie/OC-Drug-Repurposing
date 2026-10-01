@@ -1,0 +1,106 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "vitamin D toxicity",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "48",
+              "46"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Vitamin D and its metabolites",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastic bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "49"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "hypercalcemia",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 786,
+            "passage_index": 1,
+            "quote": "Vitamin D and its metabolites in moderate levels can induce hypercalcemia, as indicated by the elevation of osteoclastic bone resorption",
+            "start": 650
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "moderate levels",
+          "duration": null,
+          "endpoint": "osteoclastic bone resorption",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The review states that vitamin D and its metabolites in moderate levels can induce osteoclastic bone resorption, which is listed as one indicator of vitamin D toxicity-associated hypercalcemia.",
+        "uncertainties": [
+          "The passage is a review statement rather than a primary experiment.",
+          "The wording links osteoclastic bone resorption to hypercalcemia as an indicator, not as a separately tested causal pathway."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        650,
+        786
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        725,
+        823
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

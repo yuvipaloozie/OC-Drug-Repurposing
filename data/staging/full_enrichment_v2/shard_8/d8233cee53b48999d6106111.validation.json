@@ -1,0 +1,222 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "postmenopausal osteoporosis / oophorectomy-induced bone loss",
+          "species": "not stated",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "44",
+              "45"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "L. acidophilus and butyrate",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast formation and bone resorption activity",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "46"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1168,
+            "passage_index": 1,
+            "quote": "In vivo experiments confirmed that the intervention of L. acidophilus and butyrate significantly inhibited osteoclast formation and bone resorption activity",
+            "start": 1012
+          },
+          {
+            "end": 1334,
+            "passage_index": 1,
+            "quote": "effectively reduced systemic bone loss induced by oophorectomy",
+            "start": 1272
+          }
+        ],
+        "experiment": {
+          "assay": "in vivo experiments",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast formation and bone resorption activity; systemic bone loss",
+          "intervention": "intervention of L. acidophilus and butyrate",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In vivo intervention with Lactobacillus acidophilus and butyrate significantly inhibited osteoclast formation and bone resorption activity, and reduced systemic bone loss induced by oophorectomy.",
+        "uncertainties": [
+          "The phrase combines two interventions; the text does not separate the individual contribution of Lactobacillus acidophilus versus butyrate in this sentence.",
+          "Species for the in vivo model is not stated in the extracted passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "postmenopausal osteoporosis",
+          "species": "not stated",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "41",
+              "45",
+              "48",
+              "50",
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "butyrate",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1533,
+            "passage_index": 1,
+            "quote": "Consistently, in vitro experiments have confirmed that butyrate can directly inhibit the formation of osteoclasts and bone resorption activity.",
+            "start": 1390
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro experiments",
+          "dose": null,
+          "duration": null,
+          "endpoint": "formation of osteoclasts and bone resorption activity",
+          "intervention": "butyrate",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "direct",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In vitro, butyrate directly inhibited osteoclast formation and bone resorption activity.",
+        "uncertainties": [
+          "The passage states direct inhibition of osteoclast formation and bone resorption activity, but does not specify the assay details or model system."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1012,
+        1168
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        555,
+        672
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1272,
+        1334
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        734,
+        803
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1390,
+        1533
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        805,
+        905
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

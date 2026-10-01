@@ -1,0 +1,131 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "21",
+              "22",
+              "23",
+              "24",
+              "25",
+              "26",
+              "27",
+              "28",
+              "30",
+              "31"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "cortactin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "sealing zones",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 492,
+            "passage_index": 1,
+            "quote": "we depleted cortactin by RNA interference.",
+            "start": 450
+          },
+          {
+            "end": 604,
+            "passage_index": 1,
+            "quote": "Cortactin-depleted osteoclasts displayed a complete loss of bone resorption with no formation of sealing zones.",
+            "start": 493
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption and sealing zone formation",
+          "intervention": "cortactin depletion by RNA interference",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Cortactin depletion by RNA interference in osteoclasts caused a complete loss of bone resorption and no formation of sealing zones.",
+        "uncertainties": [
+          "The text links cortactin depletion to both loss of bone resorption and no sealing zone formation; the extracted regulatory edge is summarized at the phenotype level rather than as a direct molecular mechanism.",
+          "Species is not stated explicitly in the passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        450,
+        492
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        444,
+        485
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        493,
+        604
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        486,
+        599
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

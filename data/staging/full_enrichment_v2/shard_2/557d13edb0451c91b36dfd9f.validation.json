@@ -1,0 +1,197 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoarthritis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "56"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Y2641",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "60"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-induced osteoclastogenic inhibition",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 711,
+            "passage_index": 1,
+            "quote": "RANKL-induced osteoclastogenic inhibition (IC50 = 109.1 nM), and had",
+            "start": 643
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "109.1 nM",
+          "duration": null,
+          "endpoint": "osteoclastogenic inhibition",
+          "intervention": "Y2641",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Y2641 inhibited RANKL-induced osteoclastogenesis.",
+        "uncertainties": [
+          "The text states RANKL-induced osteoclastogenic inhibition, but does not specify the exact osteoclast assay or cell system in the abstract."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoarthritis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "64",
+              "67",
+              "70"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Y2641",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "57",
+              "60",
+              "65"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "58",
+              "66"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "protein",
+            "surface": "TNF-alpha",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 918,
+            "passage_index": 1,
+            "quote": "SPR assays demonstrated the binding affinity of Y2641 to RANKL (Kd = 3.984 muM) and TNF-alpha (Kd = 18.59 muM)",
+            "start": 808
+          }
+        ],
+        "experiment": {
+          "assay": "SPR",
+          "dose": null,
+          "duration": null,
+          "endpoint": "binding affinity",
+          "intervention": "SPR assays",
+          "outcome_change": "other",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "direct",
+          "effect_level": "binding",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "SPR assays showed that Y2641 binds RANKL and TNF-alpha.",
+        "uncertainties": [
+          "The quoted span supports binding to RANKL; TNF-alpha binding is also stated in the same sentence but not encoded in the single regulatory object."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        643,
+        711
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        774,
+        845
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        808,
+        918
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        946,
+        1050
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

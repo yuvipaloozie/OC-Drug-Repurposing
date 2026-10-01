@@ -1,0 +1,207 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow-derived macrophage cultures",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "42",
+              "45",
+              "46",
+              "48",
+              "55",
+              "58",
+              "62"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "CSL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "49",
+              "50",
+              "51"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "RANKL-induced NF-kappaB and extracellular signal-regulated kinase (ERK) MAPK activation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "52",
+              "60"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "c-Fos",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "53",
+              "61"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "NFATc1",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1248,
+            "passage_index": 1,
+            "quote": "CSL abolished RANKL-induced NF-kappaB and extracellular signal-regulated kinase (ERK) MAPK activation, which effectively impaired the induction of c-Fos and nuclear factor of activated T cells (NFATc1).",
+            "start": 1046
+          }
+        ],
+        "experiment": {
+          "assay": "western blotting; reverse transcription-quantitative PCR",
+          "dose": null,
+          "duration": null,
+          "endpoint": "NF-kappaB and ERK MAPK activation; c-Fos and NFATc1 induction",
+          "intervention": "ethanol extract of CSL",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The ethanol extract of Coriandrum sativum L. abolished RANKL-induced NF-kappaB and ERK MAPK activation and thereby impaired c-Fos and NFATc1 induction.",
+        "uncertainties": [
+          "The sentence also states an inferred downstream effect on c-Fos and NFATc1 induction, but the primary regulatory object here is the pathway activation itself.",
+          "Offsets are approximate for the long quoted sentence fragment and may require validator correction if the passage segmentation differs."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow-derived macrophage cultures",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "39",
+              "54"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ethanol extract of CSL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "47"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-induced osteoclast differentiation and bone resorption activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 852,
+            "passage_index": 1,
+            "quote": "ethanol extract of CSL inhibited RANKL-induced osteoclast differentiation and bone resorption activity in bone marrow-derived macrophage cultures.",
+            "start": 709
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation and bone resorption activity",
+          "intervention": "ethanol extract of CSL",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The ethanol extract of Coriandrum sativum L. inhibited RANKL-induced osteoclast differentiation and bone resorption activity in bone marrow-derived macrophage cultures.",
+        "uncertainties": [
+          "The exact quoted span is a sentence fragment starting at the extracted offset; surrounding sentence context indicates the same experiment.",
+          "CSL is an extract from Coriandrum sativum L., but the extract entity is not separately normalized here."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1046,
+        1248
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1163,
+        1672
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

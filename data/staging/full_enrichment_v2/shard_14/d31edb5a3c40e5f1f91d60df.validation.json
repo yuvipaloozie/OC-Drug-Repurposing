@@ -1,0 +1,251 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "bone resorption",
+          "species": null,
+          "stage": "normal OCLs"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "3",
+              "54",
+              "56"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "tyrphostin A9",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "actin ring formation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "38",
+              "55",
+              "59"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "2",
+              "33",
+              "37",
+              "39",
+              "41",
+              "42",
+              "43",
+              "49",
+              "51",
+              "57"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "c-Src",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1339,
+            "passage_index": 1,
+            "quote": "In normal OCLs, the tyrosine kinase inhibitor tyrphostin A9 inhibits actin ring formation, bone resorption and tyrosine phosphorylation of several proteins, including c-Src.",
+            "start": 1166
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "actin ring formation",
+          "intervention": "tyrphostin A9",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Tyrphostin A9 treatment in normal osteoclasts inhibited actin ring formation, bone resorption, and tyrosine phosphorylation of several proteins, including c-Src.",
+        "uncertainties": [
+          "The passage lists multiple inhibited endpoints; only actin ring formation is encoded as the regulatory object here.",
+          "The mechanism by which tyrphostin A9 reduces these outcomes is not established in the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "basal membrane",
+          "disease_setting": "bone resorption",
+          "species": "mouse",
+          "stage": "prefusion osteoclasts"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "20779"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Src",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "(alpha)(v)(beta)(3) integrins",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "50",
+              "52",
+              "53",
+              "58"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "OCLs",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1164,
+            "passage_index": 1,
+            "quote": "hyperclustering of (alpha)(v)(beta)(3) integrins together with microfilament and signalling proteins in the basal membrane of Src-deficient OCLs",
+            "start": 1020
+          },
+          {
+            "end": 670,
+            "passage_index": 1,
+            "quote": "Src(-/-) mice or their normal littermates",
+            "start": 629
+          }
+        ],
+        "experiment": {
+          "assay": "cocultures of osteoblasts and spleen cells",
+          "dose": null,
+          "duration": null,
+          "endpoint": "integrin clustering/localization",
+          "intervention": "Src(-/-) mice",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Src deficiency in osteoclasts was associated with hyperclustering of αvβ3 integrins together with microfilament and signalling proteins in the basal membrane.",
+        "uncertainties": [
+          "The text reports hyperclustering in Src-deficient osteoclasts but does not establish a direct molecular interaction between Src and integrins.",
+          "OCLs is not explicitly expanded in the passage, so the molecular form is inferred only as a phenotype/cell-state label."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1020,
+        1164
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1270,
+        1389
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        629,
+        670
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        780,
+        813
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1166,
+        1339
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1423,
+        1538
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

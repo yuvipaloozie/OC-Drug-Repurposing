@@ -1,0 +1,238 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteocytes",
+          "compartment": "bone",
+          "disease_setting": "type 1 diabetes mellitus",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "48",
+              "49",
+              "50"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "diabetic mice",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "53"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:SOST",
+            "key": "e2",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "phenotype",
+            "surface": "sclerostin expression",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone volume",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone formation indices",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 957,
+            "passage_index": 1,
+            "quote": "Decreased bone volume in diabetic mice was associated with increased sclerostin expression in osteocytes and attenuation of bone formation indices without changes in bone resorption.",
+            "start": 775
+          }
+        ],
+        "experiment": {
+          "assay": "muCT; histomorphometry; histology; Raman spectroscopy; RNAseq analyses",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone volume; sclerostin expression; bone formation indices; bone resorption",
+          "intervention": "naturally occurring hyperglycemia and insulin treatment",
+          "outcome_change": "other",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In diabetic NOD mice, decreased bone volume was associated with increased sclerostin expression in osteocytes and reduced bone formation indices, without changes in bone resorption.",
+        "uncertainties": [
+          "Association is reported; no causal direction is established.",
+          "The provider-suggested mapping for sclerostin appears to refer to the protein/gene SOST, but the text only explicitly supports sclerostin expression."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone",
+          "disease_setting": "type 1 diabetes mellitus",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "45",
+              "46",
+              "59",
+              "60",
+              "61"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "diabetic NOD mice",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "62"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "pyruvate dehydrogenase kinase isoenzyme 4",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "glucose transporter 1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "63"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "phosphorylated-AKT",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1644,
+            "passage_index": 1,
+            "quote": "Dysregulation of genes involved in fatty acid oxidation, transport, and synthesis was found in diabetic NOD mice. Specifically, pyruvate dehydrogenase kinase isoenzyme 4 and glucose transporter 1 levels were increased, whereas phosphorylated-AKT levels were significantly reduced in diabetic NOD mice.",
+            "start": 1343
+          }
+        ],
+        "experiment": {
+          "assay": "RNAseq analyses",
+          "dose": null,
+          "duration": null,
+          "endpoint": "pyruvate dehydrogenase kinase isoenzyme 4 levels",
+          "intervention": "naturally occurring hyperglycemia",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In diabetic NOD mice, pyruvate dehydrogenase kinase isoenzyme 4 and glucose transporter 1 levels were increased, whereas phosphorylated-AKT levels were significantly reduced.",
+        "uncertainties": [
+          "The text reports multiple expression changes; this claim captures only the increase of PDK4 and does not encode the separate AKT decrease as a direct causal relation.",
+          "Glucose transporter 1 was not annotated in the provider data; its molecular form is unresolved."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        775,
+        957
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        876,
+        978
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1343,
+        1644
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1448,
+        1700
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

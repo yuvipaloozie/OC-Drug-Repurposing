@@ -1,0 +1,475 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": "extracellular",
+          "disease_setting": "periodontitis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "54",
+              "57",
+              "60",
+              "62",
+              "68",
+              "72",
+              "78",
+              "80",
+              "82",
+              "83",
+              "87",
+              "89"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "CD73",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [
+              "58"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "5'-adenosine monophosphate",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "59"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "adenosine",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 473,
+            "passage_index": 1,
+            "quote": "CD73 is able to catabolize 5'-adenosine monophosphate into adenosine at the extracellular level",
+            "start": 378
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "extracellular catabolism of 5'-adenosine monophosphate to adenosine",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "metabolic_conversion",
+        "local_claim_id": "c1",
+        "reaction": {
+          "direction": "as_written",
+          "enzyme": "e1",
+          "products": [
+            {
+              "entity": "e3",
+              "stoichiometry": null
+            }
+          ],
+          "substrates": [
+            {
+              "entity": "e2",
+              "stoichiometry": null
+            }
+          ]
+        },
+        "regulatory": null,
+        "summary": "CD73 is described as converting extracellular 5'-adenosine monophosphate to adenosine.",
+        "uncertainties": [
+          "The sentence is presented as background rather than a direct experimental result in this study.",
+          "Entity taxon for CD73 is inferred from the murine context of the abstract, but the enzyme statement itself is general."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "in vitro",
+          "disease_setting": "periodontitis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "54",
+              "57",
+              "60",
+              "62",
+              "68",
+              "72",
+              "78",
+              "80",
+              "82",
+              "83",
+              "87",
+              "89"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "CD73",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "mitochondrial metabolism",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "pathway",
+            "surface": "oxidative phosphorylation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e7",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "mitochondrial membrane potential",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "81"
+            ],
+            "existing_node_id": null,
+            "key": "e8",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "hydrogen peroxide",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1410,
+            "passage_index": 1,
+            "quote": "CD73-deficient animals also showed increased osteoclastogenesis in vitro",
+            "start": 1338
+          },
+          {
+            "end": 1594,
+            "passage_index": 1,
+            "quote": "with increased mitochondrial metabolism typified by excessive activation of oxidative phosphorylation, increased mitochondrial membrane potential and accumulation of hydrogen peroxide",
+            "start": 1411
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "CD73-deficient animals",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e4",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In mice, CD73 deficiency increased osteoclastogenesis in vitro and was accompanied by increased mitochondrial metabolism, including excessive oxidative phosphorylation, increased mitochondrial membrane potential, and hydrogen peroxide accumulation.",
+        "uncertainties": [
+          "The text bundles several downstream metabolic readouts together; direct causality from CD73 loss to each readout is not separately established.",
+          "The specific osteoclast cell type used in vitro is not described in the excerpt."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "experimental periodontitis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "54",
+              "57",
+              "60",
+              "62",
+              "68",
+              "72",
+              "78",
+              "80",
+              "82",
+              "83",
+              "87",
+              "89"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "CD73",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [
+              "84"
+            ],
+            "existing_node_id": null,
+            "key": "e9",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "alveolar bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1872,
+            "passage_index": 1,
+            "quote": "CD73 deficiency also resulted in increased alveolar bone loss in experimental periodontitis.",
+            "start": 1780
+          }
+        ],
+        "experiment": {
+          "assay": "experimental periodontitis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "alveolar bone loss",
+          "intervention": "CD73 deficiency",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e9",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "CD73 deficiency increased alveolar bone loss in experimental periodontitis in mice.",
+        "uncertainties": [
+          "The excerpt does not specify the exact model details for experimental periodontitis beyond the general disease setting."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "gingival samples",
+          "compartment": null,
+          "disease_setting": "severe (Grade C) periodontitis",
+          "species": "patients",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "54",
+              "57",
+              "60",
+              "62",
+              "68",
+              "72",
+              "78",
+              "80",
+              "82",
+              "83",
+              "87",
+              "89"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "CD73",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [
+              "70",
+              "85",
+              "86"
+            ],
+            "existing_node_id": null,
+            "key": "e10",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "severe (Grade C) periodontitis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2009,
+            "passage_index": 1,
+            "quote": "Correlative studies of gingival samples from severe (Grade C) periodontitis showed decreased levels of CD73 compared to healthy controls",
+            "start": 1873
+          }
+        ],
+        "experiment": {
+          "assay": "correlative studies of gingival samples",
+          "dose": null,
+          "duration": null,
+          "endpoint": "CD73 levels",
+          "intervention": null,
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c4",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e1",
+          "sign": "unknown",
+          "subject": "e10"
+        },
+        "summary": "In severe periodontitis patient gingival samples, CD73 levels were lower than in healthy controls.",
+        "uncertainties": [
+          "This is a correlation in patient samples and does not establish causality.",
+          "The exact measurement platform for CD73 levels is not specified."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        378,
+        473
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        396,
+        581
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1338,
+        1410
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1664,
+        1735
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1411,
+        1594
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1736,
+        1848
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1780,
+        1872
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1890,
+        2017
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c4",
+      "corrected_offsets": [
+        1873,
+        2009
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2065,
+        2178
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

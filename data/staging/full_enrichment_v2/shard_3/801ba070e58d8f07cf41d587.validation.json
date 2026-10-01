@@ -1,0 +1,226 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "alveolar bone",
+          "disease_setting": "age-related alveolar bone resorption",
+          "species": "mice",
+          "stage": "aged"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "20"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "D + Q",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "SnCs",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 622,
+            "passage_index": 1,
+            "quote": "mice received D + Q treatment to assess therapeutic effects",
+            "start": 563
+          },
+          {
+            "end": 1261,
+            "passage_index": 1,
+            "quote": "D + Q treatment improved these conditions by reducing CEJ-ABC distance, enhancing periodontal ligament health, and boosting bone metabolism. It also lowered the expression of SnCs, SASP, and neutrophil markers.",
+            "start": 1051
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "SnCs expression",
+          "intervention": "D + Q treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In aged mice, dasatinib plus quercetin treatment reduced senescence-associated cell burden and related inflammatory markers.",
+        "uncertainties": [
+          "The text combines multiple outcomes in one treatment result sentence; the quoted evidence supports the overall treatment effect but not a direct molecular mechanism.",
+          "SnCs is treated here as a text-supported phenotype/marker term rather than a specific resolved molecular entity."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "alveolar bone",
+          "disease_setting": "age-related alveolar bone resorption",
+          "species": "mice",
+          "stage": "aged"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "20"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "D + Q",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "SASP",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "neutrophil markers",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1261,
+            "passage_index": 1,
+            "quote": "D + Q treatment improved these conditions by reducing CEJ-ABC distance, enhancing periodontal ligament health, and boosting bone metabolism. It also lowered the expression of SnCs, SASP, and neutrophil markers.",
+            "start": 1051
+          },
+          {
+            "end": 1407,
+            "passage_index": 1,
+            "quote": "D + Q treatment effectively mitigates alveolar bone aging by clearing SnCs, lowering SASP levels, and reducing neutrophil aggregation",
+            "start": 1274
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "SASP expression",
+          "intervention": "D + Q treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Dasatinib plus quercetin treatment lowered SASP expression and neutrophil markers in aged mouse alveolar bone.",
+        "uncertainties": [
+          "The passage also mentions neutrophil aggregation/markers, but the exact assay and whether markers refer to transcriptional or protein-level readouts are not stated.",
+          "This is a treatment-outcome observation, not evidence of a direct target-specific inhibitory mechanism."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        563,
+        622
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        664,
+        724
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1051,
+        1261
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1140,
+        1217
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1051,
+        1261
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1140,
+        1217
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1274,
+        1407
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1356,
+        1407
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

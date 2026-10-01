@@ -1,0 +1,209 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "prostate cancer",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "45"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Src",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast physiology",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 893,
+            "passage_index": 1,
+            "quote": "It is also intimately involved in positively regulating osteoclast physiology.",
+            "start": 815
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Src is described as positively regulating osteoclast physiology in the review background.",
+        "uncertainties": [
+          "Review/background statement rather than a primary experiment.",
+          "The text does not specify the molecular mechanism by which Src regulates osteoclast physiology."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "cancer / advanced castration-resistant prostate cancer",
+          "species": "patients",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "46"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "AZD0530",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "47"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "dasatinib",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "markers of bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1113,
+            "passage_index": 1,
+            "quote": "Src inhibitors like AZD0530 and dasatinib",
+            "start": 1072
+          },
+          {
+            "end": 1265,
+            "passage_index": 1,
+            "quote": "Both compounds reduced markers of bone resorption, in patients with cancer and those with advanced castration-resistant prostate cancer, respectively.",
+            "start": 1115
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "markers of bone resorption",
+          "intervention": "Src inhibitors like AZD0530 and dasatinib",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In preclinical and clinical studies, Src inhibitors AZD0530 and dasatinib reduced markers of bone resorption in patients.",
+        "uncertainties": [
+          "The sentence attributes the reduction to both compounds together and does not separate which inhibitor caused which outcome.",
+          "The specific assay and dosing are not stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        815,
+        893
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        887,
+        965
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1072,
+        1113
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1003,
+        1039
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1115,
+        1265
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1108,
+        1260
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

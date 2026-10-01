@@ -1,0 +1,103 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "chordoma",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone microenvironment-dominant",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "19"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "denosumab",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 875,
+            "passage_index": 1,
+            "quote": "chordoma into three molecular subtypes: bone microenvironment-dominant, mesenchymal-derived, and mesenchymal-to-epithelial transition-mediated pattern. The three subtypes exhibit discrete clinical prognosis and distinct biological attributes of osteoclastogenesis and immunogenicity, oxidative phosphorylation, and receptor tyrosine kinase activation, suggesting targeted therapeutic strategies of denosumab",
+            "start": 468
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The bone microenvironment-dominant chordoma subtype is reported to have distinct biological attributes including osteoclastogenesis, and the authors suggest denosumab as a targeted therapeutic strategy for that subtype.",
+        "uncertainties": [
+          "The passage states an association between subtype and biological attributes, but does not specify a causal relationship or direction.",
+          "Denosumab is mentioned as a suggested therapeutic strategy, not as an experimentally tested perturbation in the quoted text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        468,
+        875
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        547,
+        968
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

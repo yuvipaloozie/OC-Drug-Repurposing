@@ -1,0 +1,306 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW 264.7 cells",
+          "compartment": null,
+          "disease_setting": "osteoclast research",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "1% FBS",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "10"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "RAW 264.7 cells",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "9"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "10% FBS",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 847,
+            "passage_index": 1,
+            "quote": "Osteoclasts were successfully generated in medium supplemented with 1% FBS, and exhibited prolonged longevity and similar bone resorbing ability to those generated in medium supplemented with 10% FBS, although the osteoclasts were smaller in size.",
+            "start": 600
+          }
+        ],
+        "experiment": {
+          "assay": "comparison of osteoclast capacity and bone resorption",
+          "dose": "1% FBS versus 10% FBS",
+          "duration": null,
+          "endpoint": "osteoclastogenesis, longevity, bone resorbing ability, cell size",
+          "intervention": "medium supplemented with 1% FBS",
+          "outcome_change": "other",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "RANKL-induced RAW264.7 cells cultured in 1% FBS generated osteoclasts with prolonged longevity, similar bone resorbing ability to 10% FBS conditions, and smaller size.",
+        "uncertainties": [
+          "The exact causal direction relative to 10% FBS is comparative rather than a simple activation/inhibition statement.",
+          "Cell line and RANKL context are inferred from surrounding text and provider annotations."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoclast research",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "1% FBS",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "electron transport chain",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "oxidative phosphorylation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "osteoclast signaling pathway",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1449,
+            "passage_index": 1,
+            "quote": "Our study demonstrated that a total of 100 proteins were differentially expressed in cells cultured in medium containing 1% FBS, of which 29 proteins were upregulated, and 71 proteins were downregulated. Bioinformatics analysis showed that the electron transport chain and oxidative phosphorylation pathways were downregulated obviously; however, the osteoclast signaling pathway was unaffected.",
+            "start": 1054
+          }
+        ],
+        "experiment": {
+          "assay": "proteomics and bioinformatics analyses",
+          "dose": "1% FBS",
+          "duration": null,
+          "endpoint": "pathway activity by bioinformatics analysis",
+          "intervention": "cells cultured in medium containing 1% FBS",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Proteomics/bioinformatics analysis found that the electron transport chain and oxidative phosphorylation pathways were downregulated, while the osteoclast signaling pathway was unaffected, in cells cultured with 1% FBS.",
+        "uncertainties": [
+          "The passage states pathway downregulation in bioinformatics analysis; direct molecular mechanism is not established.",
+          "A separate no-effect claim for the osteoclast signaling pathway is present in the same quoted span but not encoded in this single regulatory record."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "no_effect",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoclast research",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "1% FBS",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "osteoclast signaling pathway",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1449,
+            "passage_index": 1,
+            "quote": "however, the osteoclast signaling pathway was unaffected.",
+            "start": 1392
+          }
+        ],
+        "experiment": {
+          "assay": "bioinformatics analysis",
+          "dose": "1% FBS",
+          "duration": null,
+          "endpoint": "osteoclast signaling pathway",
+          "intervention": "cells cultured in medium containing 1% FBS",
+          "outcome_change": "no_detected_change",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Bioinformatics analysis reported that the osteoclast signaling pathway was unaffected in cells cultured with 1% FBS.",
+        "uncertainties": [
+          "The passage indicates lack of detected change, which does not exclude subtle or unmeasured effects."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        600,
+        847
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        390,
+        563
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1054,
+        1449
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        704,
+        876
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1392,
+        1449
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        799,
+        876
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

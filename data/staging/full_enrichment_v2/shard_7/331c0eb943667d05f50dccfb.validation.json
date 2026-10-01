@@ -1,0 +1,176 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW 264.7 cell line-derived osteoclasts",
+          "compartment": null,
+          "disease_setting": "estrogen withdrawal",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "E2-WD",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "15"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:RHOA",
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RhoA",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 913,
+            "passage_index": 1,
+            "quote": "those that underwent E2-WD had a faster rate of microtubule (MT) growth, reduced RhoA activation, and shorter podosome lifespan",
+            "start": 786
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "RhoA activation",
+          "intervention": "estrogen withdrawal (E2-WD)",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Osteoclasts that underwent estrogen withdrawal showed reduced RhoA activation compared with osteoclasts exposed to estrogen continuously.",
+        "uncertainties": [
+          "The text states reduced RhoA activation but does not establish a direct molecular mechanism.",
+          "E2-WD is an experimental condition rather than a specific molecular entity."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW 264.7 cell line-derived osteoclasts",
+          "compartment": null,
+          "disease_setting": "estrogen withdrawal",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "E2-WD",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "resorptive activity",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 708,
+            "passage_index": 1,
+            "quote": "We found that a greater population of osteoclasts that underwent E2-WD contained a podosome belt necessary for osteoclasts to adhere and resorb bone and possessed elevated resorptive activity compared to osteoclasts exposed to estrogen (E2) continuously.",
+            "start": 454
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "resorptive activity",
+          "intervention": "estrogen withdrawal (E2-WD)",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Osteoclasts that underwent estrogen withdrawal had elevated resorptive activity compared with osteoclasts exposed to estrogen continuously.",
+        "uncertainties": [
+          "The comparison is against osteoclasts exposed to estrogen continuously; the text does not specify the assay used to quantify resorptive activity."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        786,
+        913
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        592,
+        662
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        454,
+        708
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        233,
+        357
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

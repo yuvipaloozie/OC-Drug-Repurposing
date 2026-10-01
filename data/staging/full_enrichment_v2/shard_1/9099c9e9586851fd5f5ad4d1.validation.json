@@ -1,0 +1,127 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "MDCK cells",
+          "compartment": "apical surface",
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "11",
+              "14",
+              "17"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:SRC",
+            "key": "e1",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "protein",
+            "surface": "v-Src",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "12"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "MDCK cells",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "apical pinocytosis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 288,
+            "passage_index": 1,
+            "quote": "Src on cortical actin dynamics and polarized endocytosis in MDCK cells harboring a thermosensitive v-src mutant. Shifting monolayers established at 40 degrees C (non-permissive temperature) to 34 degrees C (permissive temperature) rapidly reactivated v-Src kinase",
+            "start": 25
+          },
+          {
+            "end": 564,
+            "passage_index": 1,
+            "quote": "but tight junctions and cell polarity resisted for >6 h. At this interval, activated v-src was recruited on apical vesicles, induced cortactin-associated apical circular ruffles productive of macropinosomes, thereby accelerating apical pinocytosis by approximately fivefold.",
+            "start": 290
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": ">6 h",
+          "endpoint": "apical pinocytosis",
+          "intervention": "shifting monolayers established at 40 degrees C to 34 degrees C",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In MDCK cells harboring thermosensitive v-src, shifting from non-permissive to permissive temperature reactivated v-Src and was followed by apical circular ruffling/macropinosome formation and about fivefold increased apical pinocytosis.",
+        "uncertainties": [
+          "The text describes a thermosensitive v-src mutant and temperature shift; it does not establish a direct biochemical mechanism.",
+          "Species is not explicitly stated in the passage, though the provider annotation suggests mouse SRC; keep taxon support limited to context from the source packet.",
+          "The claim concerns MDCK cells and apical pinocytosis, not osteoclasts, although the title notes possible relevance to osteoclast differentiation."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        25,
+        288
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        124,
+        289
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        290,
+        564
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        291,
+        454
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

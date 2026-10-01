@@ -1,0 +1,188 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mice",
+          "stage": "aged"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "38"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "PTH",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 828,
+            "passage_index": 1,
+            "quote": "High-frequency PTH administration improved trabecular bone volume in both age groups, but caused cortical bone thinning, increased porosity, and elevated osteoclast activity in aged mice.",
+            "start": 641
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast activity",
+          "intervention": "High-frequency PTH administration",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "High-frequency PTH administration was associated with elevated osteoclast activity in aged mice.",
+        "uncertainties": [
+          "The passage reports association with elevated osteoclast activity in aged mice, but does not specify a direct molecular mechanism.",
+          "PTH is annotated as a gene in the provider data, but the text supports a hormonal administration context rather than a gene perturbation."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoblast-lineage-enriched cell",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mice",
+          "stage": "aged"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "36"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "PTH",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "mechanistic Target of Rapamycin Complex 1 pathway",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "senescent osteoblast-lineage-enriched cell accumulation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1059,
+            "passage_index": 1,
+            "quote": "PTH induces senescent osteoblast-lineage-enriched cell accumulation in aged, but not young mice, accompanied by upregulation of senescence-associated markers and activation of the mechanistic Target of Rapamycin Complex 1 pathway.",
+            "start": 829
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "activation of the mechanistic Target of Rapamycin Complex 1 pathway",
+          "intervention": "PTH administration",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "PTH administration in aged mice was accompanied by activation of the mTORC1 pathway in senescent osteoblast-lineage-enriched cells.",
+        "uncertainties": [
+          "The sentence combines senescent cell accumulation and pathway activation; direct causality between PTH and mTORC1 is stated but the molecular intermediates are not provided.",
+          "Cell type wording is descriptive and not a controlled cell line name."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        641,
+        828
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        475,
+        553
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        829,
+        1059
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        555,
+        758
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

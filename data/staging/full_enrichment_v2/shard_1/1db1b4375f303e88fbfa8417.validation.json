@@ -1,0 +1,122 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "22",
+              "24",
+              "27",
+              "28",
+              "29",
+              "33",
+              "36",
+              "38",
+              "40"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Ctdnep1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1075,
+            "passage_index": 1,
+            "quote": "Small interfering RNA-mediated knockdown of Ctdnep1 increased tartrate-resistant acid phosphatase-positive multinucleated osteoclasts and the expression of osteoclast marker genes, including Acp5, Ctsk, and Nfatc1.",
+            "start": 861
+          },
+          {
+            "end": 118,
+            "passage_index": 0,
+            "quote": "Ctdnep1 phosphatase is required for negative regulation of RANKL-induced osteoclast differentiation in RAW264.7 cells.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation / TRAP-positive multinucleated osteoclasts and marker gene expression",
+          "intervention": "small interfering RNA-mediated knockdown of Ctdnep1",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Small interfering RNA knockdown of Ctdnep1 increased osteoclast differentiation-related phenotypes in RANKL-induced RAW264.7 cells, including more TRAP-positive multinucleated osteoclasts and higher osteoclast marker expression.",
+        "uncertainties": [
+          "The text links the observation to RANKL-induced RAW264.7 cells, but the species is not explicitly stated in the supplied passage.",
+          "Ctdnep1 is treated as a gene-level perturbation target here; the text also refers to the phosphatase protein, so molecular form is not fully disambiguated.",
+          "The title states negative regulation, but the extracted claim is limited to the observed knockdown effect and does not assert direct mechanism."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        861,
+        1075
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        795,
+        981
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        118
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        119
+      ],
+      "passage_index": 0
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,124 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:C094148"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "magnolin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "MAPK pathways",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "RAW264.7 cells",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 959,
+            "passage_index": 1,
+            "quote": "magnolin inhibited osteoclast differentiation through inactivating MAPK pathways and downregulating NFATc1, c-Fos, tartrate-resistant acid phosphatase, and cathepsin K in RANKL-treated RAW264.7 cells.",
+            "start": 759
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation",
+          "intervention": "magnolin",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Magnolin treatment inhibited osteoclast differentiation in RANKL-treated RAW264.7 cells, with reduced MAPK pathway activity and decreased osteoclast markers.",
+        "uncertainties": [
+          "The exact cell species for RAW264.7 is not stated in the passage.",
+          "RANKL is mentioned as a treatment context, but its molecular form is not explicitly stated in the text."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        759,
+        959
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        583,
+        785
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

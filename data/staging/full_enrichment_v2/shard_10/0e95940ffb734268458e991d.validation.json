@@ -1,0 +1,389 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "OCs",
+          "compartment": null,
+          "disease_setting": "OVX-induced bone loss",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D004958"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "E2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "OCs",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "MPPD",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 963,
+            "passage_index": 1,
+            "quote": "E2 and Methyl-piperidino-pyrazole hydrate dihydrochloride (MPPD), an estrogen receptor alpha (ERalpha) antagonist, augmented the OC size.",
+            "start": 853
+          },
+          {
+            "end": 523,
+            "passage_index": 1,
+            "quote": "E2 injection after OVX in mice. In vitro, OCs were analyzed by TRAP staining",
+            "start": 447
+          },
+          {
+            "end": 1899,
+            "passage_index": 1,
+            "quote": "bone resorption",
+            "start": 1885
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP staining; serum CTX-1; in vitro OC analyses",
+          "dose": null,
+          "duration": null,
+          "endpoint": "OC size / bone resorption",
+          "intervention": "E2 injection after OVX; MPPD, an ERalpha antagonist",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Estradiol (E2) treatment in ovariectomized mice decreased osteoclast size and bone-resorption markers, while the ERalpha antagonist MPPD augmented osteoclast size.",
+        "uncertainties": [
+          "The quoted passage combines several outcomes; the specific numeric magnitude is not provided.",
+          "OCs is not explicitly resolved to a molecular entity in the text."
+        ]
+      },
+      "errors": [
+        "invented annotation ID",
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "OCs",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D004958"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "E2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "13982"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "ERalpha",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "21943"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "protein",
+            "surface": "c-Src",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1162,
+            "passage_index": 1,
+            "quote": "ERalpha signaling affected receptor activator of nuclear factor kappaB ligand (RANKL)-induced actin ring formation by rapidly decreasing a proto-oncogene tyrosine-protein kinase, cellular sarcoma (c-Src) (Y416) phosphorylation in OCs.",
+            "start": 928
+          },
+          {
+            "end": 1162,
+            "passage_index": 1,
+            "quote": "receptor activator of nuclear factor kappaB ligand (RANKL)-induced actin ring formation by rapidly decreasing a proto-oncogene tyrosine-protein kinase, cellular sarcoma (c-Src) (Y416) phosphorylation in OCs.",
+            "start": 955
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "c-Src Y416 phosphorylation; actin ring formation",
+          "intervention": "E2 exposure",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "E2/ERalpha signaling reduced RANKL-induced c-Src Y416 phosphorylation in osteoclasts, which the paper links to impaired actin ring formation.",
+        "uncertainties": [
+          "The text states an association with impaired actin ring formation, but the causal chain is partly interpretive.",
+          "RANKL is named as the stimulus, but the direct regulatory target in the quoted result is c-Src phosphorylation."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "OCs",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D004958"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "E2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "237038"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "NOX1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "19247"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "SHP2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "13982"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "ERalpha",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "protein",
+            "surface": "c-Src",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1377,
+            "passage_index": 1,
+            "quote": "E2 exposure decreased physical interactions between NADPH oxidase 1 (NOX1) and the oxidized form of c-Src homology 2 (SH2)-containing protein tyrosine phosphatase 2 (SHP2), leading to higher levels of reduced SHP2.",
+            "start": 1163
+          },
+          {
+            "end": 1488,
+            "passage_index": 1,
+            "quote": "ERalpha formed a complex with the reduced form of SHP2 and c-Src to decrease c-Src activation upon E2 exposure",
+            "start": 1378
+          }
+        ],
+        "experiment": {
+          "assay": "immunoprecipitation coupled with Western blot",
+          "dose": null,
+          "duration": null,
+          "endpoint": "physical interaction between NOX1 and oxidized SHP2; complex formation with ERalpha, SHP2 and c-Src",
+          "intervention": "E2 exposure",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "association",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "binding",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "E2 exposure decreased the physical interaction between NOX1 and oxidized SHP2, and ERalpha formed a complex with reduced SHP2 and c-Src during this response.",
+        "uncertainties": [
+          "The passage describes multiple interaction changes in one sentence; the exact stoichiometry and complex composition are not fully specified.",
+          "The text says 'reduced form of SHP2' but does not distinguish whether the observed interaction is direct or indirect."
+        ]
+      },
+      "errors": [
+        "invented annotation ID",
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        447,
+        523
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        606,
+        668
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        928,
+        1162
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1042,
+        1235
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        955,
+        1162
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1114,
+        1235
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1163,
+        1377
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1374,
+        1568
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1378,
+        1488
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1531,
+        1631
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

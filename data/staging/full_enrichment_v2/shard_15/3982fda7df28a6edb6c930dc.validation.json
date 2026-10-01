@@ -1,0 +1,283 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow-derived macrophages",
+          "compartment": null,
+          "disease_setting": "osteolytic disease models",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:C000609015"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "LY900009",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "21943",
+              "21943"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast formation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "resorptive function",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 350,
+            "passage_index": 1,
+            "quote": "LY900009, a gamma-secretase inhibitor, and its capacity to suppress RANKL-induced osteoclastogenesis through modulation of Notch signaling.",
+            "start": 211
+          },
+          {
+            "end": 623,
+            "passage_index": 1,
+            "quote": "Using bone marrow-derived macrophages, we performed comprehensive in vitro evaluations of cytotoxicity, differentiation, and functional assays. Gene and protein expression analyses using qPCR and western blotting were used to elucidate the underlying molecular mechanisms.",
+            "start": 351
+          },
+          {
+            "end": 1032,
+            "passage_index": 1,
+            "quote": "LY900009 inhibited RANKL-induced osteoclast formation and resorptive function in a dose-dependent manner without cytotoxicity at therapeutic concentrations. This treatment significantly reduced the number of TRAP-positive osteoclasts, impaired actin belt formation, and suppressed bone matrix degradation.",
+            "start": 727
+          }
+        ],
+        "experiment": {
+          "assay": "cytotoxicity, differentiation, functional assays; qPCR and western blotting",
+          "dose": "dose-dependent; therapeutic concentrations",
+          "duration": null,
+          "endpoint": "osteoclastogenesis / osteoclast formation and resorptive function",
+          "intervention": "LY900009",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "LY900009 suppressed RANKL-induced osteoclastogenesis and osteoclast resorptive function, reducing osteoclast formation and bone matrix degradation without cytotoxicity at therapeutic concentrations.",
+        "uncertainties": [
+          "RANKL is provider-tagged as a Gene, but the text does not explicitly specify molecular form beyond the name.",
+          "The claim combines several closely related osteoclast phenotypes reported in adjacent sentences."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow-derived macrophages",
+          "compartment": null,
+          "disease_setting": "osteolytic disease models",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:C000609015"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "LY900009",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "Notch signaling",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "11651"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "pathway",
+            "surface": "MAPK/Akt pathways",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1236,
+            "passage_index": 1,
+            "quote": "LY900009 disrupted Notch signaling and the downstream MAPK/Akt pathways.",
+            "start": 1164
+          },
+          {
+            "end": 1371,
+            "passage_index": 1,
+            "quote": "In vivo administration substantially reduced LPS-induced bone destruction, improving bone parameters and reducing osteoclast presence.",
+            "start": 1237
+          }
+        ],
+        "experiment": {
+          "assay": "qPCR and western blotting",
+          "dose": null,
+          "duration": null,
+          "endpoint": "Notch signaling / MAPK/Akt pathway activity",
+          "intervention": "LY900009",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "LY900009 disrupted Notch signaling and the downstream MAPK/Akt pathways.",
+        "uncertainties": [
+          "The abstract states pathway disruption but does not specify direct molecular targets or whether MAPK/Akt was measured separately from Notch signaling.",
+          "Species/context for the signaling statement is inferred from the same study but not restated in the exact sentence."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        211,
+        350
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        320,
+        430
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        351,
+        623
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        430,
+        614
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        727,
+        1032
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        614,
+        859
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1164,
+        1236
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1273,
+        1360
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1237,
+        1371
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1360,
+        1457
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,101 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone surface",
+          "disease_setting": "ovariectomized (OVX) mice / estrogen deficiency-induced bone loss",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "54",
+              "57",
+              "66",
+              "67",
+              "70",
+              "74",
+              "76",
+              "78"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "MMF",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1483,
+            "passage_index": 1,
+            "quote": "For bone turnover, MMF increased the number of osteoblasts on the bone surface of OVX mice as well as the level of serum bone formation marker P1NP, while decreasing the number of osteoclasts and the level of serum bone resorption marker beta-CTX",
+            "start": 1237
+          }
+        ],
+        "experiment": {
+          "assay": "bone turnover evaluation",
+          "dose": null,
+          "duration": "8 weeks",
+          "endpoint": "number of osteoclasts on the bone surface",
+          "intervention": "MMF exposure",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In ovariectomized mice, MMF exposure decreased osteoclast number on bone surface.",
+        "uncertainties": [
+          "The quoted span includes multiple bone-turnover outcomes; the osteoclast-specific decrease is embedded in a longer sentence.",
+          "MMF is a magnetic field intervention rather than a conventional molecular compound, but it is presented as the treatment in the study."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1237,
+        1483
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1540,
+        1697
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

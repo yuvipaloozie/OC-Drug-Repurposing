@@ -1,0 +1,203 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "43",
+              "47",
+              "48",
+              "56",
+              "61"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "4,4'-dimethoxychalcone",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "45",
+              "46",
+              "49",
+              "55",
+              "63"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Protein Tyrosine Phosphatase 1B",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 671,
+            "passage_index": 1,
+            "quote": "Protein Tyrosine Phosphatase 1B (PTP1B) as a novel, direct target of DMC. We demonstrated that DMC inhibits PTP1B activity",
+            "start": 549
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "PTP1B activity",
+          "intervention": "4,4'-dimethoxychalcone (DMC)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "direct",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "DMC was reported to directly inhibit PTP1B activity.",
+        "uncertainties": [
+          "The passage states direct targeting/inhibition but does not provide assay details in the extracted span."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ovariectomy (OVX)",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "43",
+              "44",
+              "47",
+              "48",
+              "56",
+              "61"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "DMC",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "57"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone strength",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1059,
+            "passage_index": 1,
+            "quote": "In vivo, DMC administration rescued bone loss and restored bone strength in an ovariectomy (OVX) mouse model",
+            "start": 951
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone loss",
+          "intervention": "DMC administration",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In an ovariectomy mouse model, DMC administration rescued bone loss and restored bone strength.",
+        "uncertainties": [
+          "The span combines two outcomes (bone loss rescue and bone strength restoration); only the bone-loss relation is encoded in the regulatory object."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        549,
+        671
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        679,
+        809
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        951,
+        1059
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1152,
+        1208
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,220 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "periodontal tissues",
+          "disease_setting": "periodontitis",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "32"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "tumor necrosis factor receptor superfamily member 11A",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [
+              "32"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RANK",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [
+              "21",
+              "22",
+              "24",
+              "26",
+              "33",
+              "39"
+            ],
+            "existing_node_id": null,
+            "key": "e7",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "periodontitis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e8",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1362,
+            "passage_index": 1,
+            "quote": "tumor necrosis factor receptor superfamily member 11A (RANK) expression was elevated in PD, with the highest levels in osteoclasts",
+            "start": 1232
+          }
+        ],
+        "experiment": {
+          "assay": "single-cell RNA sequencing data",
+          "dose": null,
+          "duration": null,
+          "endpoint": "TNFRSF11A expression",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e5",
+          "sign": "positive",
+          "subject": "e7"
+        },
+        "summary": "TNFRSF11A (RANK) expression was elevated in periodontitis, with the highest levels in osteoclasts.",
+        "uncertainties": [
+          "The sentence reports an expression pattern in periodontitis rather than a causal perturbation.",
+          "The exact span for the quoted evidence is approximate within the abstract."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "fibroblasts",
+          "compartment": "periodontal tissues",
+          "disease_setting": "periodontitis",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "28",
+              "36"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:IL1B",
+            "key": "e1",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "Interleukin-1 beta",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [
+              "34",
+              "35"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "TNFSF11",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "fibroblasts",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "neutrophils",
+            "taxon": "human"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1694,
+            "passage_index": 1,
+            "quote": "interleukin-1 beta secretion by neutrophils was shown to induce TNFSF11 expression in fibroblasts",
+            "start": 1600
+          }
+        ],
+        "experiment": {
+          "assay": "single-cell RNA sequencing data and in vitro experiments",
+          "dose": null,
+          "duration": null,
+          "endpoint": "TNFSF11 expression",
+          "intervention": "Interleukin-1 beta secretion by neutrophils",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Interleukin-1 beta secretion by neutrophils induced TNFSF11 expression in fibroblasts.",
+        "uncertainties": [
+          "The passage does not specify whether the IL1B effect on TNFSF11 is direct or indirect.",
+          "The text does not state the molecular form of IL1B beyond the annotated gene/protein name.",
+          "The evidence span is approximate and taken from the abstract sentence describing the in vitro finding."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1232,
+        1362
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1268,
+        1384
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

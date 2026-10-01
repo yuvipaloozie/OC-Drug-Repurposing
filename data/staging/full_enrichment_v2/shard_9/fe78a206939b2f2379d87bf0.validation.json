@@ -1,0 +1,218 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "26"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "DBZ",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "28"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:NFATC1",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "protein",
+            "surface": "NFATc1",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 566,
+            "passage_index": 1,
+            "quote": "Attenuating Notch signaling by DBZ suppressed the expression of NFATc1",
+            "start": 496
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "NFATc1 expression",
+          "intervention": "gamma-secretase inhibitor dibenzazepine (DBZ)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "expression",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In osteoclasts, treatment with the gamma-secretase inhibitor DBZ suppressed NFATc1 expression.",
+        "uncertainties": [
+          "The text links the effect to attenuating Notch signaling, but directness of DBZ on NFATc1 expression is not established.",
+          "Species is not explicitly stated in the quoted text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "31"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "DBZ",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "32",
+              "34",
+              "36",
+              "38",
+              "44"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:PTK2B",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "protein",
+            "surface": "PYK2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "33",
+              "45"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:SRC",
+            "key": "e3",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "protein",
+            "surface": "c-Src",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 859,
+            "passage_index": 1,
+            "quote": "DBZ suppressed the autophosphorylation of PYK2, which is essential for the formation of the podosome belt and sealing zone",
+            "start": 737
+          },
+          {
+            "end": 896,
+            "passage_index": 1,
+            "quote": "with reduced c-Src/PYK2 interaction",
+            "start": 861
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "PYK2 autophosphorylation; c-Src/PYK2 interaction",
+          "intervention": "gamma-secretase inhibitor dibenzazepine (DBZ)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "activity",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In osteoclasts, DBZ suppressed PYK2 autophosphorylation and reduced c-Src/PYK2 interaction.",
+        "uncertainties": [
+          "The reduced c-Src/PYK2 interaction is stated but not separately encoded as a distinct claim.",
+          "Species is not explicitly stated in the quoted text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        496,
+        566
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        478,
+        547
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        737,
+        859
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        798,
+        893
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        861,
+        896
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        898,
+        929
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

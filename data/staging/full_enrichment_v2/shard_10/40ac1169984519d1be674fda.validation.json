@@ -1,0 +1,92 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "healthy volunteers",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "inhibitors of Src",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 444,
+            "passage_index": 1,
+            "quote": "Phase I data from healthy volunteers also suggest that inhibitors of Src prevent bone resorption.",
+            "start": 347
+          }
+        ],
+        "experiment": {
+          "assay": "Phase I data",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption",
+          "intervention": "inhibitors of Src",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In phase I data from healthy volunteers, inhibitors of Src were suggested to prevent bone resorption.",
+        "uncertainties": [
+          "The sentence says 'suggest', so the effect is not presented as definitive.",
+          "No specific inhibitor compound is named."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        347,
+        444
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        346,
+        443
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

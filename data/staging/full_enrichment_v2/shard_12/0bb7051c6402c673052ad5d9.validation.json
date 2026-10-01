@@ -1,0 +1,209 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "31"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Chronic low-grade inflammation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "32",
+              "39",
+              "43",
+              "48",
+              "49",
+              "5",
+              "28"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoporosis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 494,
+            "passage_index": 1,
+            "quote": "Chronic low-grade inflammation is now recognized as a significant contributor to osteoporosis, particularly in postmenopausal women and the elderly.",
+            "start": 346
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Chronic low-grade inflammation is described as a significant contributor to osteoporosis, especially in postmenopausal women and the elderly.",
+        "uncertainties": [
+          "Review/background statement rather than a primary experimental result.",
+          "The passage states an association/contribution, but not a specific mechanistic test or directionally causal experiment."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "T cells and B cells",
+          "compartment": null,
+          "disease_setting": "inflammatory environments",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "Immune cells",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "secreted cytokines",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "34"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption and formation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "35",
+              "42",
+              "47"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "net bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 687,
+            "passage_index": 1,
+            "quote": "Immune cells, such as T cells and B cells, and their secreted cytokines directly influence bone resorption and formation, tipping the balance toward net bone loss in inflammatory environments.",
+            "start": 495
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "direct",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Immune cells and their secreted cytokines are described as directly influencing bone resorption and formation, shifting the balance toward net bone loss in inflammatory environments.",
+        "uncertainties": [
+          "The statement is general background in a review and does not report a specific experiment.",
+          "The passage mentions immune cells and cytokines together; the exact molecular subjects are not resolved into a single measured entity."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        346,
+        494
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        385,
+        574
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        495,
+        687
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        587,
+        807
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,196 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "Osteoclasts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "skeletal development",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "calcium metabolism",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 205,
+            "passage_index": 1,
+            "quote": "Osteoclasts are multinucleated cells responsible for bone resorption and play important roles in normal skeletal development, in the maintenance of its integrity throughout life, and in calcium metabolism.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The review states that osteoclasts are responsible for bone resorption and are involved in skeletal development, maintenance of skeletal integrity, and calcium metabolism.",
+        "uncertainties": [
+          "This is a review-style background statement rather than an experimentally tested causal claim.",
+          "The passage groups several roles together; the extracted relation captures the general association with bone resorption."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "osteoclasts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "4",
+              "5"
+            ],
+            "existing_node_id": "CHEBI:29108",
+            "key": "e2",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "compound",
+            "surface": "extracellular and intracellular calcium concentrations",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 640,
+            "passage_index": 1,
+            "quote": "They are also subjected to negative feedback regulation by extracellular and intracellular calcium concentrations.",
+            "start": 526
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e1",
+          "sign": "negative",
+          "subject": "e2"
+        },
+        "summary": "The review states that osteoclast differentiation and function are negatively regulated by extracellular and intracellular calcium concentrations.",
+        "uncertainties": [
+          "The passage describes negative feedback regulation in general terms and does not specify an experiment or molecular mechanism.",
+          "The text mentions both extracellular and intracellular calcium together; the claim preserves them as a combined regulator rather than separating directions."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        205
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        142
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        526,
+        640
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        500,
+        709
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

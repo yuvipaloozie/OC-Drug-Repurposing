@@ -1,0 +1,114 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "NFAT signal",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "1"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteopenia",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone-resorbing activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 127,
+            "passage_index": 0,
+            "quote": "Activation of NFAT signal in vivo leads to osteopenia associated with increased osteoclastogenesis and bone-resorbing activity.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteopenia associated with increased osteoclastogenesis and bone-resorbing activity",
+          "intervention": "Activation of NFAT signal",
+          "outcome_change": "increased",
+          "perturbation_type": "gain_of_function"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Activation of NFAT signaling in vivo is associated with osteopenia and increased osteoclastogenesis/bone-resorbing activity.",
+        "uncertainties": [
+          "Title-level statement only; no separate experimental details or species are provided in the title."
+        ]
+      },
+      "errors": [
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        127
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        128
+      ],
+      "passage_index": 0
+    }
+  ],
+  "valid_envelope": true
+}

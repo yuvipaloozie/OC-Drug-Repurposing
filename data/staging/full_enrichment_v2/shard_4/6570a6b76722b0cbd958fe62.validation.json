@@ -1,0 +1,215 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "acute recessive osteopetrosis",
+          "species": "humans",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "21",
+              "22",
+              "23",
+              "24",
+              "26",
+              "30",
+              "31"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "sorting nexin 10",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [
+              "18",
+              "19",
+              "25",
+              "27"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "acute recessive osteopetrosis",
+            "taxon": "human"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 751,
+            "passage_index": 1,
+            "quote": "recessive osteopetrosis",
+            "start": 728
+          },
+          {
+            "end": 823,
+            "passage_index": 1,
+            "quote": "sorting nexin 10 (SNX10)",
+            "start": 799
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "acute recessive osteopetrosis",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Acute recessive osteopetrosis is described as being caused by mutations in SNX10 in humans.",
+        "uncertainties": [
+          "The passage is a review/summary statement rather than a primary experiment.",
+          "The exact causal direction is stated in prose but not experimentally demonstrated in this excerpt.",
+          "SNX10 species/taxon is inferred from the human disease context and annotations, not directly established as a human gene in the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "hypothesis",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "membrane compartments",
+          "disease_setting": "acute recessive osteopetrosis",
+          "species": "humans",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "22",
+              "23",
+              "24",
+              "26",
+              "30",
+              "31"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "SNX10",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "complex",
+            "surface": "membrane compartments",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "OCLs",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1165,
+            "passage_index": 1,
+            "quote": "we hypothesize here that, by virtue of its specific roles in vesicular trafficking, SNX10 serves as a key selective regulator of the composition of diverse membrane compartments in OCLs, thereby affecting critical processes",
+            "start": 983
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "membrane compartment composition in osteoclasts",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The authors hypothesize that SNX10 acts as a key selective regulator of membrane compartment composition in osteoclasts and thereby affects ruffled-border-linked acidification and cell-cell fusion.",
+        "uncertainties": [
+          "This is explicitly framed as a hypothesis, not an observed experiment.",
+          "The downstream processes mentioned in the sentence are not separately extracted because they are presented as part of the hypothesis statement."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        728,
+        751
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        855,
+        878
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        799,
+        823
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        926,
+        952
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

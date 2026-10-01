@@ -1,0 +1,124 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "periodontal tissues",
+          "disease_setting": "periodontitis",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "58"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Chronic alcohol consumption",
+            "taxon": "rats"
+          },
+          {
+            "annotation_ids": [
+              "59"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "inflammatory infiltration",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "alveolar bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 951,
+            "passage_index": 1,
+            "quote": "Chronic alcohol consumption significantly aggravated",
+            "start": 899
+          },
+          {
+            "end": 1029,
+            "passage_index": 1,
+            "quote": " inflammatory infiltration and alveolar bone resorption in periodontal tissues",
+            "start": 951
+          }
+        ],
+        "experiment": {
+          "assay": "hematoxylin-eosin (HE) staining and Micro-CT analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "inflammatory infiltration and alveolar bone resorption",
+          "intervention": "chronic alcohol consumption",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In rats, chronic alcohol consumption aggravated inflammatory infiltration and alveolar bone resorption in periodontal tissues.",
+        "uncertainties": [
+          "The sentence reports two outcomes together; the regulatory object is represented with one primary phenotype term plus a second phenotype entity listed separately.",
+          "The text does not specify whether the effect is direct or mediated through other changes."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        899,
+        951
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1019,
+        1070
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        951,
+        1029
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1071,
+        1118
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

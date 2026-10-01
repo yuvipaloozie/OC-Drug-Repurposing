@@ -24,7 +24,7 @@
   const svgNS = 'http://www.w3.org/2000/svg';
   const svgEl = (tag, attrs, text) => { const e = document.createElementNS(svgNS, tag); Object.entries(attrs || {}).forEach(([k,v]) => e.setAttribute(k,v)); if (text !== undefined) e.textContent = text; return e; };
   document.querySelector(`[data-nav="${mode}"]`).setAttribute('aria-current','page');
-  $('page-description').textContent = mode === 'graph' ? 'Choose a target to explore its neighborhood. Drag nodes to arrange the graph; double-click a node to explore its connections.' : 'Inspect a single molecule’s shape. Browse experimental structures and predicted protein models.';
+  $('page-description').textContent = mode === 'graph' ? 'Choose a target to explore its neighborhood. Drag nodes to arrange the graph; double-click a node to explore its connections.' : 'Inspect a single molecule’s shape. Browse protein structures and computed small-molecule conformers.';
   $('total-nodes').textContent = data.nodes.length;
   const modules = [...new Set(data.nodes.map(n => n.physiological_pillar).filter(Boolean))].sort();
   modules.forEach(m => { const option = make('option',human(m)); option.value = m; $('module').append(option); });
@@ -154,6 +154,16 @@
   function evidenceMatches(e){const value=$('evidence-filter').value;return value==='all'||evidenceFlags(e)[value];}
   $('evidence-tools').hidden=mode!=='graph';
   $('evidence-filter').onchange=()=>{const settling=!!pendingLayout;drawGraph();if(settling)fitGraph();};
+  $('connectivity-tools').hidden=mode!=='graph';
+  $('connectivity-filter').max=Math.max(1,...[...incident.values()].map(edges=>edges.length));
+  function updateConnectivity(){
+    const threshold=Number($('connectivity-filter').value);
+    $('connectivity-value').value=String(threshold);
+    $('connectivity-filter').setAttribute('aria-valuetext',`${threshold} or more recorded relationships`);
+    drawGraph();
+  }
+  $('connectivity-filter').oninput=updateConnectivity;
+  $('reset-connectivity').onclick=()=>{$('connectivity-filter').value='0';updateConnectivity();};
   function drawGraph() {
     cancelAnimationFrame(animation);
     if(pendingLayout){positions=pendingLayout;pendingLayout=null;}
@@ -163,6 +173,10 @@
     if (scope === 'neighbors') ids = new Set([rootId,...allNeighbors]);
     else { const module = $('module').value; ids = new Set(data.nodes.filter(n => module === 'all' || n.physiological_pillar === module).map(n => n.id)); }
     $('neighbor-pagination').hidden = true;
+    const scopeCount=ids.size, threshold=Number($('connectivity-filter').value);
+    ids=new Set([...ids].filter(id=>incident.get(id).length>=threshold));
+    const rootHidden=scope==='neighbors'&&!ids.has(rootId);
+    $('connectivity-note').textContent=`${ids.size} of ${scopeCount} entities shown. Total incoming + outgoing recorded relationships across the full KG (self-links count once), before evidence filtering; not evidence strength.${rootHidden?' Neighborhood center is below the threshold. Reset to show it.':''}`;
     viewNodes = data.nodes.filter(n => ids.has(n.id));
     const scopedEdges = data.edges.filter(e => ids.has(e.source) && ids.has(e.target));
     viewEdges = scopedEdges.filter(evidenceMatches);
@@ -178,6 +192,8 @@
       allNeighbors.forEach((id,i)=>{const angle=-Math.PI/2+i*Math.PI*2/allNeighbors.length;positions.set(id,{x:Math.cos(angle)*radius,y:Math.sin(angle)*radius*.72});});
       for(let i=0;i<300;i++)if(!separate([...positions.values()]))break;
     }
+    positions=new Map([...positions].filter(([id])=>ids.has(id)));
+    for(const [id] of positions)if(previous.has(id))positions.set(id,previous.get(id));
     // Clicking a canvas node inspects it without losing a hand-arranged layout.
     if(previous.size===positions.size&&[...positions.keys()].every(id=>previous.has(id))){positions=previous;}
     const W = 176, H = 66;
@@ -192,7 +208,7 @@
       path.dataset.evidence=evidenceStyle;
       path.setAttribute('opacity',active?(evidenceStyle==='quarantined'?.5:.85):(evidenceStyle==='quarantined'?.18:.32));
       if(evidenceStyle!=='reviewed')path.setAttribute('stroke-dasharray',evidenceStyle==='pending'?'6 4':'2 5');
-      path.append(svgEl('title',{},`${symbol(nodes.get(e.source))} → ${symbol(nodes.get(e.target))}: ${human(e.relation)} · ${Object.keys(flags).filter(k=>flags[k]).join(", ")} · ${e.evidence_eligible?"scoring eligible":"not scoring eligible"}`)); scene.append(path);
+      path.append(svgEl('title',{},`${symbol(nodes.get(e.source))} → ${symbol(nodes.get(e.target))}: ${human(e.relation)} · ${Object.keys(flags).filter(k=>flags[k]).join(", ")} · ${e.evidence_eligible?"strict experimental evidence":"outside strict experimental subset"}`)); scene.append(path);
     });
     viewNodes.forEach(n => {
       const p = positions.get(n.id), active=n.id===selected.id;
@@ -207,7 +223,7 @@
       group.addEventListener('pointerdown',e=>{if(e.button!==0)return;e.stopPropagation();moved=false;cancelAnimationFrame(animation);const p=positions.get(n.id);drag={id:n.id,x:e.clientX,y:e.clientY,nx:p.x,ny:p.y};});
       group.addEventListener('click',() => {if(moved)return;const now=performance.now();if(lastNodeClick?.id===n.id&&now-lastNodeClick.time<450){lastNodeClick=null;openNeighborhood(n);}else{lastNodeClick={id:n.id,time:now};select(n);}}); group.addEventListener('keydown',e => {if(['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(e.key)){e.preventDefault();cancelAnimationFrame(animation);const p=positions.get(n.id);p.x+=e.key==='ArrowRight'?20:e.key==='ArrowLeft'?-20:0;p.y+=e.key==='ArrowDown'?20:e.key==='ArrowUp'?-20:0;updateGeometry();return;}if(e.key==='Enter'||e.key===' '){e.preventDefault();if(e.shiftKey)openNeighborhood(n);else select(n);}}); scene.append(group);
     });
-    $('graph-empty').hidden = viewNodes.length > 0; $('graph-empty').textContent = 'No entities in this view.';
+    $('graph-empty').hidden = viewNodes.length > 0; $('graph-empty').textContent = 'No entities meet this connectivity threshold. Lower Minimum connections or select Reset.';
   }
   function updateTransform(){ $('graph-scene').setAttribute('transform',`translate(${panX} ${panY}) scale(${scale})`); $('zoom-label').textContent=`${Math.round(scale*100)}%`; }
   function fitGraph(){
@@ -221,24 +237,26 @@
     resetModel();
     structureOptions=[];
     const candidates=selected.structure_candidates||{};
-    const uniprot=String(candidates.uniprot_id||'');
+    const small=candidates.small_molecule;
+    if(small && /^(intracellular|extracellular)_compound$/.test(selected.type) && /^assets\/structures\/chebi_\d+\.sdf$/.test(small.sdf_url||''))structureOptions.push({label:`RDKit · ${small.registry_name}`,url:small.source_url,kind:'sdf',id:small.registry_id,metadata:small});
+    const uniprot=String(selected.type==='protein'?candidates.uniprot_id||'':'');
     // Syntax is only an eligibility check; it is not a registry or identity verification.
     if (/^(?:[OPQ][0-9][A-Z0-9]{3}[0-9]|[A-NR-Z][0-9](?:[A-Z][A-Z0-9]{2}[0-9]){1,2})$/.test(uniprot)) structureOptions.push({label:`AlphaFold · ${uniprot}`,url:`https://alphafold.ebi.ac.uk/entry/${uniprot}`,kind:'alphafold',id:uniprot});
-    const pdbs=[...new Set([...(Array.isArray(candidates.pdb_structures)?candidates.pdb_structures:[]),candidates.primary_pdb].filter(p=>/^[1-9][a-zA-Z0-9]{3}$/.test(p||'')))];
+    const pdbs=selected.type==='protein'?[...new Set([...(Array.isArray(candidates.pdb_structures)?candidates.pdb_structures:[]),candidates.primary_pdb].filter(p=>/^[1-9][a-zA-Z0-9]{3}$/.test(p||'')))]:[];
     pdbs.forEach(p=>structureOptions.push({label:`PDB · ${p}`,url:`https://www.rcsb.org/structure/${p}`,kind:'pdb',id:p}));
     $('structure-source').replaceChildren();
     structureOptions.forEach((o,i)=>{const opt=make('option',o.label);opt.value=i;$('structure-source').append(opt);});
     if(!structureOptions.length){const opt=make('option','No usable structure identifier');$('structure-source').append(opt);}
     $('structure-source').disabled=structureOptions.length<2;
     const sourceNote=$('structure-source-note');sourceNote.hidden=mode!=='structure';
-    sourceNote.textContent=structureOptions.length===1
+    sourceNote.textContent=small ? `${small.registry_name} · ${small.registry_id} · formula ${small.formula} · charge ${small.formal_charge}. ${small.note}` : structureOptions.length===1
       ? `One candidate recorded: ${structureOptions[0].label}. ${pdbs.length?'No other usable identifier is recorded.':'No usable PDB identifier is recorded.'} Select Load 3D structure; the entity/species mapping is unverified.`
       : structureOptions.length>1
         ? `${structureOptions.length} candidates recorded. Choose a source, then select Load 3D structure. Entity/species mappings are unverified.`
         : 'No usable structure identifier is recorded. Placeholder IDs are excluded.'; $('load-structure').disabled=!structureOptions.length;
-    $('structure-message').textContent=structureOptions.length?'Explore this molecule in 3D':'No protein structure available';
-    $('structure-explanation').textContent=structureOptions.length?'Choose a source above, then load the interactive structure. Drag to rotate and scroll to zoom. Structure downloads require internet access.':'The repository has no usable AlphaFold or PDB identifier for this entity. RNA, genes, metabolites, reactions and pathways are not protein entities.';
-    $('structure-status').textContent=structureOptions.length?'Unverified legacy structure identifiers. Source identity/species may differ from this KG entity; these are candidates, not validated mappings.':'No substitute structure has been loaded.';
+    $('structure-message').textContent=structureOptions.length?'Explore this molecule in 3D':'No molecular structure available';
+    $('structure-explanation').textContent=structureOptions.length?'Choose a source above, then load the interactive structure. Drag to rotate and scroll to zoom. Protein downloads require internet access; generated compound models are stored locally.':(candidates.small_molecule_unavailable || 'No supported coordinates recorded. Genes, reactions and pathways do not have a single molecular conformation; RNA requires a sequence-specific structure source.');
+    $('structure-status').textContent=small ? `${small.method} · RDKit ${small.rdkit_version}. Computed display model stored locally; not an experimental structure.` : structureOptions.length?'Unverified legacy structure identifiers. Source identity/species may differ from this KG entity; these are candidates, not validated mappings.':'No substitute structure has been loaded.';
     $('external-structure').hidden=!structureOptions.length;
     if(structureOptions.length)$('external-structure').href=structureOptions[0].url;
     else $('external-structure').removeAttribute('href');
@@ -268,6 +286,7 @@
     $('load-structure').disabled=true;$('load-structure').textContent='Loading…';$('structure-message').textContent='Loading molecular coordinates';$('structure-explanation').textContent='Retrieving the selected structure from its source.';
     try{
       await loadLibrary();if(serial!==loadSerial)return;
+      let format='pdb';
       let pdbUrl=`https://files.rcsb.org/download/${encodeURIComponent(option.id)}.pdb`,description=`PDB ${option.id} · Experimental coordinates. Check source for molecule and species.`;
       if(option.kind==='alphafold'){
         const response=await fetch(`https://alphafold.ebi.ac.uk/api/prediction/${encodeURIComponent(option.id)}`,{signal});if(!response.ok)throw new Error('No AlphaFold model could be retrieved for this identifier.');
@@ -276,11 +295,15 @@
         const safeUrl=new URL(entry.pdbUrl);if(safeUrl.protocol!=='https:'||safeUrl.hostname!=='alphafold.ebi.ac.uk')throw new Error('Unexpected coordinate source.');
         pdbUrl=safeUrl.href;description=`${entry.organismScientificName||'Species not provided'} · ${entry.uniprotDescription||option.id} · AlphaFold predicted model`;
       }
+      if(option.kind==='sdf'){
+        pdbUrl=option.metadata.sdf_url;format='sdf';
+        description=`${option.metadata.registry_name} · ${option.metadata.method} · computed display model`;
+      }
       const response=await fetch(pdbUrl,{signal});if(!response.ok)throw new Error('The coordinate file could not be retrieved.');const pdb=await response.text();if(serial!==loadSerial)return;
       $('structure-frame').hidden=false;
       if(!modelViewer)modelViewer=window.$3Dmol.createViewer($('structure-frame'),{backgroundColor:'#f8fbfc',antialias:true});
-      modelViewer.clear();const model=modelViewer.addModel(pdb,'pdb');const atomCount=model.selectedAtoms({}).length;if(!atomCount)throw new Error('No atoms were found in this coordinate file.');
-      modelViewer.setStyle({},{cartoon:{color:'#419b91'}});modelViewer.setStyle({hetflag:true},{stick:{radius:.15,colorscheme:'Jmol'}});modelViewer.resize();modelViewer.zoomTo();modelViewer.render();
+      modelViewer.clear();const model=modelViewer.addModel(pdb,format);const atomCount=model.selectedAtoms({}).length;if(!atomCount)throw new Error('No atoms were found in this coordinate file.');
+      if(format==='sdf'){modelViewer.setStyle({},{stick:{radius:.17,colorscheme:'Jmol'},sphere:{scale:.25,colorscheme:'Jmol'}});}else{modelViewer.setStyle({},{cartoon:{color:'#419b91'}});modelViewer.setStyle({hetflag:true},{stick:{radius:.15,colorscheme:'Jmol'}});}modelViewer.resize();modelViewer.zoomTo();modelViewer.render();
       $('structure-placeholder').hidden=true;$('reset-structure').disabled=false;$('structure-status').textContent=`${description} · ${atomCount.toLocaleString()} atoms. Drag to rotate; scroll to zoom.`;
     }catch(error){if(serial!==loadSerial)return;$('structure-frame').hidden=true;$('structure-placeholder').hidden=false;$('structure-message').textContent='Structure could not be loaded';$('structure-explanation').textContent=error.name==='AbortError'?'The source request timed out. Try again or open the source record.':`${error.message} Try again or use Open source.`;$('structure-status').textContent='No model displayed. A source link is available above.';}
     finally{clearTimeout(timeout);if(serial===loadSerial){$('load-structure').disabled=false;$('load-structure').textContent='Load 3D structure';}}

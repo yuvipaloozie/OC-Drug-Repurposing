@@ -1,0 +1,278 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "periodontitis and type2 diabetes",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D010518"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Periodontitis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D003920"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "type2 diabetes",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D001847"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 125,
+            "passage_index": 1,
+            "quote": "Periodontitis and type2 diabetes are chronic inflammatory diseases resulting in osteoclastogenesis and bone loss.",
+            "start": 12
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "unknown",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The abstract states that periodontitis and type 2 diabetes are chronic inflammatory diseases associated with osteoclastogenesis and bone loss.",
+        "uncertainties": [
+          "The sentence is a general background statement rather than an experimental result.",
+          "The text links both periodontitis and type 2 diabetes to osteoclastogenesis and bone loss, but the exact causal direction for each disease is not separately specified."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "PBMCs",
+          "compartment": "in vitro",
+          "disease_setting": "periodontitis with type2 diabetes",
+          "species": null,
+          "stage": "cultured"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D003924"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "type2 diabetes",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "TRAP positive cells",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "3569"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "interleukin 6",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "1593"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "CTx",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "54"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "TRAP5b",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 974,
+            "passage_index": 1,
+            "quote": "cultured PBMCs from periodontitis and T2D subjects demonstrated a higher number of TRAP positive cells",
+            "start": 872
+          },
+          {
+            "end": 838,
+            "passage_index": 1,
+            "quote": "Serum interleukin 6 (IL6), C- terminal telopeptide of Type I collagen (CTx), tartrate resistant acid phosphatase 5b (TRAP5b) and alkaline phosphatase (ALP) were estimated in all groups.",
+            "start": 653
+          },
+          {
+            "end": 1149,
+            "passage_index": 1,
+            "quote": "IL6, CTx and TRAP5b levels were significantly elevated in T2D with periodontitis, compared to normal subjects with or without periodontitis.",
+            "start": 1009
+          }
+        ],
+        "experiment": {
+          "assay": "immunoblotting; serum estimation",
+          "dose": null,
+          "duration": null,
+          "endpoint": "TRAP positive cells; serum IL6, CTx and TRAP5b",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Cultured PBMCs from periodontitis subjects with type 2 diabetes showed a higher number of TRAP-positive cells, and serum IL6, CTx, and TRAP5b were elevated in the T2D with periodontitis group.",
+        "uncertainties": [
+          "The compared groups are described narratively; the sentence does not specify a single pairwise contrast for every marker.",
+          "TRAP positive cells are a phenotype readout, but the underlying cell type and molecular mechanism are not specified in the provided text."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        12,
+        125
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        12,
+        122
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        872,
+        974
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        605,
+        713
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        653,
+        838
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        813,
+        932
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1009,
+        1149
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1073,
+        1180
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

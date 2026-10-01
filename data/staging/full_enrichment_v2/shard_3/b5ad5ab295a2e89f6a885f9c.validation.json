@@ -1,0 +1,226 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mice",
+          "stage": "ovariectomized"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D000068698"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "tenofovir",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "20354"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Sema4D",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1124,
+            "passage_index": 1,
+            "quote": "Sema4D expression, and dipyridamole reverted the expression in an A2A-dependent manner.",
+            "start": 1053
+          },
+          {
+            "end": 903,
+            "passage_index": 1,
+            "quote": "tenofovir showed an increased expression",
+            "start": 863
+          }
+        ],
+        "experiment": {
+          "assay": "histology",
+          "dose": "75 mg/Kg/day",
+          "duration": "5 weeks",
+          "endpoint": "expression of Sema4D",
+          "intervention": "tenofovir 75 mg/Kg/day",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In ovariectomized female C57Bl/6/A2AKO mice, tenofovir treatment increased Sema4D expression compared with control mice, and dipyridamole reversed that expression change in an A2A-dependent manner.",
+        "uncertainties": [
+          "The quoted span combines the tenofovir increase and the dipyridamole reversal; the primary causal effect extracted here is the tenofovir-associated increase in Sema4D expression.",
+          "Sema4D is annotated as a gene in the source, but the sentence describes expression/secretion, so the molecular form is only a text-supported candidate protein."
+        ]
+      },
+      "errors": [
+        "invented annotation ID",
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclast precursors",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "murine",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D000068698"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "tenofovir",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "20354"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Sema4D",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D004176"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "dipyridamole",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 742,
+            "passage_index": 1,
+            "quote": "Primary murine-induced osteoclast/osteoblast were challenged with tenofovir/dipyridamole 1 muM each",
+            "start": 643
+          },
+          {
+            "end": 1159,
+            "passage_index": 1,
+            "quote": "tenofovir increases Sema4D expression and secretion in osteoclast precursors, and pre-treatment with dipyridamole reverted this effect.",
+            "start": 1024
+          }
+        ],
+        "experiment": {
+          "assay": "RT-PCR, Western blot and immunostaining",
+          "dose": "1 muM each",
+          "duration": null,
+          "endpoint": "Sema4D expression and secretion",
+          "intervention": "tenofovir/dipyridamole 1 muM each",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e4",
+          "sign": "positive",
+          "subject": "e3"
+        },
+        "summary": "In primary murine osteoclast/osteoblast cultures, tenofovir increased Sema4D expression and secretion in osteoclast precursors, and dipyridamole pretreatment reverted this effect.",
+        "uncertainties": [
+          "The passage also mentions dipyridamole pretreatment reversing the effect; that reversal is not separated into its own mechanistic direction here.",
+          "The cell culture description is broad ('osteoclast/osteoblast'); the claim is narrowed to the explicitly stated osteoclast precursors."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        863,
+        903
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1009,
+        1048
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        643,
+        742
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        797,
+        844
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1024,
+        1159
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1170,
+        1266
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

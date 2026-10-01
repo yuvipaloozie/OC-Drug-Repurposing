@@ -1,0 +1,258 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW 264.7 cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "osteoclastogenesis"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "11"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "RAW 264.7 cells",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "12"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "16",
+              "17",
+              "18"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Src",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 386,
+            "passage_index": 1,
+            "quote": "RAW 264.7 cells were cultured and induced with RANKL on",
+            "start": 331
+          },
+          {
+            "end": 895,
+            "passage_index": 1,
+            "quote": "Src expression was also most pronounced in osteoclasts on glass slides, with decreased levels observed on bone and dentin.",
+            "start": 773
+          }
+        ],
+        "experiment": {
+          "assay": "histological and molecular techniques",
+          "dose": null,
+          "duration": null,
+          "endpoint": "Src expression",
+          "intervention": "cultured and induced with RANKL on glass, bone, and dentin slides",
+          "outcome_change": "other",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "unknown",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In RAW 264.7 cells induced with RANKL, Src expression varied by substrate and was highest on glass, with lower levels on bone and dentin.",
+        "uncertainties": [
+          "The substrate variable is described at the culture level, but no direct causal mechanism for Src regulation is experimentally demonstrated in the abstract.",
+          "Src expression differences are comparative across substrates; the exact quantitative values are not provided."
+        ]
+      },
+      "errors": [
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "osteoclastogenesis"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "glass slides",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "bone slides",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "dentin slides",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e7",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "13",
+              "14"
+            ],
+            "existing_node_id": null,
+            "key": "e8",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "ACP5 (TRAP)",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "15"
+            ],
+            "existing_node_id": null,
+            "key": "e9",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "CTSK",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 772,
+            "passage_index": 1,
+            "quote": "Osteoclasts cultured on glass slides possessed the greatest number of nuclei and the highest expression levels of ACP5 (TRAP) and CTSK, with osteoclasts on bone and dentin slides displaying progressively lower levels.",
+            "start": 555
+          }
+        ],
+        "experiment": {
+          "assay": "histological and molecular techniques",
+          "dose": null,
+          "duration": null,
+          "endpoint": "number of nuclei and ACP5/TRAP and CTSK expression",
+          "intervention": "culture on glass, bone, and dentin slides",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e7",
+          "sign": "positive",
+          "subject": "e4"
+        },
+        "summary": "Glass, bone, and dentin substrates were associated with different osteoclastogenic outcomes, with glass yielding the greatest multinucleation and ACP5/TRAP and CTSK expression, and bone and dentin showing progressively lower levels.",
+        "uncertainties": [
+          "The abstract reports comparative outcomes across substrates but does not specify whether substrate alone is sufficient to cause the phenotype changes or whether other culture variables contributed.",
+          "The term 'osteoclasts' is used in the results without detailing the differentiation stage for each substrate condition."
+        ]
+      },
+      "errors": [
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        331,
+        386
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        417,
+        470
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        773,
+        895
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        859,
+        940
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        555,
+        772
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        568,
+        849
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

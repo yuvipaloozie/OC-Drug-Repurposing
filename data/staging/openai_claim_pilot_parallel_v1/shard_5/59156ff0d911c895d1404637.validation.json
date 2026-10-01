@@ -1,0 +1,324 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mice",
+          "stage": "adult"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "30",
+              "32",
+              "34",
+              "37",
+              "40",
+              "42",
+              "47",
+              "50",
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "TRAF1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "31",
+              "33",
+              "35",
+              "38",
+              "48",
+              "51"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone mass",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 568,
+            "passage_index": 1,
+            "quote": "TRAF1 knockout inhibits osteoclastogenesis and increases bone mass in both normal and ovariectomized adult mice",
+            "start": 457
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "TRAF1 knockout",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "TRAF1 knockout inhibited osteoclastogenesis and increased bone mass in adult mice.",
+        "uncertainties": [
+          "The same sentence also reports increased bone mass, which is captured as a separate phenotype within the quoted span.",
+          "The passage does not specify the exact mouse strain or cell type."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclast",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "30",
+              "32",
+              "34",
+              "37",
+              "40",
+              "42",
+              "47",
+              "50",
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "TRAF1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast OXPHOS",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "5",
+              "41",
+              "45",
+              "46",
+              "49",
+              "53"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:AKT1",
+            "key": "e6",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "AKT",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 705,
+            "passage_index": 1,
+            "quote": "TRAF1 promotes osteoclast OXPHOS by increasing the phosphorylation level of AKT.",
+            "start": 625
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast OXPHOS",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e5",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "TRAF1 promoted osteoclast OXPHOS by increasing AKT phosphorylation.",
+        "uncertainties": [
+          "The text links the effect on OXPHOS to AKT phosphorylation, but does not establish direct molecular interaction.",
+          "AKT is annotated as a gene mention, but the active molecular form is not explicitly stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": "during osteoclastogenesis"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "34",
+              "37",
+              "40",
+              "42",
+              "47",
+              "50",
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "TRAF1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "36"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoporosis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 456,
+            "passage_index": 1,
+            "quote": "TRAF1 is markedly upregulated during osteoclastogenesis and is positively associated with osteoporosis.",
+            "start": 353
+          }
+        ],
+        "experiment": {
+          "assay": "RNA-sequencing",
+          "dose": null,
+          "duration": null,
+          "endpoint": "TRAF1 expression during osteoclastogenesis; association with osteoporosis",
+          "intervention": "RNA-sequencing",
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "TRAF1 was reported to be positively associated with osteoporosis and upregulated during osteoclastogenesis.",
+        "uncertainties": [
+          "The passage states association, not causation.",
+          "Species for the association sentence is not explicitly stated."
+        ]
+      },
+      "errors": [
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        353,
+        456
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        478,
+        581
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        457,
+        568
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        478,
+        589
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        625,
+        705
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        750,
+        830
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

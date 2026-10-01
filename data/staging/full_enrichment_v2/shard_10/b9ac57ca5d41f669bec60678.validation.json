@@ -1,0 +1,213 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "25"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "NBD peptide",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone-resorbing activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 617,
+            "passage_index": 1,
+            "quote": "NBD peptide dose-dependently blocked the bone-resorbing activity of osteoclasts by reducing area, volume (p < 0.001) and depths (p < 0.05) of pits",
+            "start": 471
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "dose-dependently",
+          "duration": null,
+          "endpoint": "bone-resorbing activity",
+          "intervention": "NBD peptide",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The NBD peptide reduced osteoclast bone-resorbing activity in a dose-dependent manner.",
+        "uncertainties": [
+          "The exact assay for bone-resorbing activity is not stated in the cited sentence.",
+          "Osteoclasts are treated as the cellular context, but the text does not specify species."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "29"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "NBD peptide",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "30",
+              "31"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-induced c-Src kinase activity",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "31"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "c-Src kinase",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "30"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1088,
+            "passage_index": 1,
+            "quote": "NBD peptide dose-dependently reduced the RANKL-induced c-Src kinase activity",
+            "start": 1012
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "dose-dependently",
+          "duration": null,
+          "endpoint": "c-Src kinase activity",
+          "intervention": "NBD peptide",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The NBD peptide reduced RANKL-induced c-Src kinase activity.",
+        "uncertainties": [
+          "The text indicates RANKL-induced activity, but does not separately state whether the peptide acted directly on c-Src kinase.",
+          "Species and assay details are not specified in the quoted sentence."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        471,
+        617
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        562,
+        695
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1012,
+        1088
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1103,
+        1179
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

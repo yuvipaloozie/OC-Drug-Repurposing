@@ -1,0 +1,162 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "MC3T3-E1 pre-osteoblasts",
+          "compartment": "in vitro",
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "LMWPTP",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "6714"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "pY(527)-Src",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "6714"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "pY(416)-Src",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "protein",
+            "surface": "dephosphorylated pY(527)-Src",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "protein",
+            "surface": "dephosphorylated pY(416)-Src",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1404,
+            "passage_index": 1,
+            "quote": "LMWPTP dephosphorylated pY(527)-Src and pY(416)-Src in vitro",
+            "start": 1344
+          },
+          {
+            "end": 1446,
+            "passage_index": 1,
+            "quote": "with greater specificity for pY(527)Src.",
+            "start": 1406
+          }
+        ],
+        "experiment": {
+          "assay": "incubating immunoprecipitated Src with LMWPTP followed by assay of the residual Src activity using Sam68 as substrate",
+          "dose": null,
+          "duration": null,
+          "endpoint": "Src dephosphorylation",
+          "intervention": "incubating immunoprecipitated Src with LMWPTP",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "metabolic_conversion",
+        "local_claim_id": "c1",
+        "reaction": {
+          "direction": "as_written",
+          "enzyme": "e1",
+          "products": [
+            {
+              "entity": "e4",
+              "stoichiometry": null
+            },
+            {
+              "entity": "e5",
+              "stoichiometry": null
+            }
+          ],
+          "substrates": [
+            {
+              "entity": "e2",
+              "stoichiometry": null
+            },
+            {
+              "entity": "e3",
+              "stoichiometry": null
+            }
+          ]
+        },
+        "regulatory": null,
+        "summary": "LMWPTP dephosphorylated Src at pY(527) and pY(416) in vitro, with greater specificity for pY(527)Src.",
+        "uncertainties": [
+          "The text does not specify a species.",
+          "Product entities are represented as dephosphorylated Src forms because no separate canonical product name is given."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1344,
+        1404
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1325,
+        1384
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1406,
+        1446
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1386,
+        1431
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

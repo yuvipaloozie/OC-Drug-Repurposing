@@ -1,0 +1,94 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "51"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "DEHP",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "chronic bone disorders",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 500,
+            "passage_index": 1,
+            "quote": "Growing evidence indicates a strong association between DEHP exposure and the incidence of chronic bone disorders, including osteoporosis (OP), osteoarthritis (OA), and osteonecrosis of the femoral head (ONFH).",
+            "start": 290
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "DEHP exposure is reported to be strongly associated with chronic bone disorders, including osteoporosis, osteoarthritis, and osteonecrosis of the femoral head.",
+        "uncertainties": [
+          "This is a literature-level association statement, not a direct experimental perturbation.",
+          "The passage groups multiple diseases under chronic bone disorders; the specific strength or causality for each disorder is not established here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        290,
+        500
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        291,
+        503
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

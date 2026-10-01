@@ -1,0 +1,164 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "breast cancer-induced osteoclastogenesis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "1"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Oroxylin A",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 77,
+            "passage_index": 0,
+            "quote": "Oroxylin A suppresses breast cancer-induced osteoclastogenesis and osteolysis",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "Oroxylin A",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Oroxylin A is reported to suppress breast cancer-induced osteoclastogenesis.",
+        "uncertainties": [
+          "Title text summarizes the study but does not specify the exact experimental context for this suppression claim."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "breast cancer-induced osteoclastogenesis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "32"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "OA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RON protein",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1637,
+            "passage_index": 1,
+            "quote": "OA bound directly to the RON protein",
+            "start": 1601
+          }
+        ],
+        "experiment": {
+          "assay": "molecular dynamics simulation and CETSA",
+          "dose": null,
+          "duration": null,
+          "endpoint": "binding to RON protein",
+          "intervention": "Oroxylin A",
+          "outcome_change": "not_stated",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "direct",
+          "effect_level": "binding",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Oroxylin A is stated to bind directly to RON protein.",
+        "uncertainties": [
+          "The quote supports direct binding, but it does not by itself establish downstream causality."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1601,
+        1637
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1847,
+        1883
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

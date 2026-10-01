@@ -1,0 +1,97 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "middle ear",
+          "disease_setting": "osteopetrotic mice",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "28",
+              "29"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "either cytokine RANKL or transcription factor c-Fos deficiency",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "31"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "hearing loss",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 668,
+            "passage_index": 1,
+            "quote": "The auditory brainstem response showed that mice of both genotypes experienced hearing loss, and laser Doppler vibrometry revealed that the malleus behind the tympanic membrane failed to vibrate.",
+            "start": 473
+          }
+        ],
+        "experiment": {
+          "assay": "auditory brainstem response; laser Doppler vibrometry",
+          "dose": null,
+          "duration": null,
+          "endpoint": "hearing loss; malleus failed to vibrate",
+          "intervention": "deficiency of either cytokine RANKL or transcription factor c-Fos",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In osteopetrotic mice lacking osteoclasts because of RANKL or c-Fos deficiency, both genotypes had hearing loss and the malleus failed to vibrate.",
+        "uncertainties": [
+          "The subject combines two alternative deficiencies from the text; the sentence reports both genotypes together rather than separating RANKL and c-Fos effects.",
+          "The passage also states that osteoclasts are lacking, but the claim here is anchored to the stated genetic deficiencies rather than assigning a separate osteoclast node."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        473,
+        668
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        468,
+        664
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

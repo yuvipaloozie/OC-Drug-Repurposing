@@ -1,0 +1,196 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "3"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "DPHB",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "4"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "pathway",
+            "surface": "NF-kappaB and MAPK signaling",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 122,
+            "passage_index": 0,
+            "quote": "DPHB inhibits osteoclastogenesis by suppressing NF-kappaB and MAPK signaling and alleviates inflammatory bone destruction.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "DPHB",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "DPHB inhibits osteoclastogenesis and suppresses NF-kappaB and MAPK signaling.",
+        "uncertainties": [
+          "The title combines osteoclastogenesis inhibition with pathway suppression; the exact causal direction between pathway suppression and osteoclastogenesis is not separately quantified.",
+          "NF-kappaB and MAPK are grouped together in the text rather than reported as separate edges."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "LPS-induced inflammatory osteolysis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "43",
+              "48",
+              "49",
+              "56",
+              "58"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "DPHB",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "57"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone destruction",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1311,
+            "passage_index": 1,
+            "quote": "In a LPS-induced inflammatory osteolysis mouse model, intraperitoneal administration of DPHB significantly alleviated bone destruction",
+            "start": 1177
+          }
+        ],
+        "experiment": {
+          "assay": "Micro-CT scanning, histological staining, and enzyme-linked immunosorbent assay (ELISA)",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone destruction",
+          "intervention": "intraperitoneal administration of DPHB",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e5",
+          "sign": "negative",
+          "subject": "e4"
+        },
+        "summary": "In an LPS-induced inflammatory osteolysis mouse model, DPHB administration alleviated bone destruction.",
+        "uncertainties": [
+          "The sentence reports a treated mouse model, but the exact dose and duration are not stated.",
+          "The passage does not isolate whether the bone-protective effect is direct or mediated through upstream signaling changes."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        122
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        127
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1177,
+        1311
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1301,
+        1433
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

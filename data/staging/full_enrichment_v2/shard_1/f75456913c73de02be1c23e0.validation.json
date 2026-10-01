@@ -1,0 +1,208 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "3",
+              "31",
+              "32",
+              "33"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Osteoprotegerin",
+            "taxon": "rat"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 276,
+            "passage_index": 1,
+            "quote": "Osteoprotegerin (OPG) inhibits bone resorption and osteoclast activity",
+            "start": 206
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Osteoprotegerin is described as inhibiting bone resorption and osteoclast activity.",
+        "uncertainties": [
+          "The sentence is a background statement rather than an experimental result.",
+          "The passage does not specify whether the inhibition of osteoclast activity is direct or indirect."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "postmenopausal osteoporosis",
+          "species": "rat",
+          "stage": "ovariectomized / postmenopausal osteoporosis model"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "34",
+              "38",
+              "43",
+              "46",
+              "49",
+              "50"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "mcOPG",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "35",
+              "36"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "mcPTHrP",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone microstructure",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1244,
+            "passage_index": 1,
+            "quote": "In a proof-of-concept study, stepwise treatment with mcOPG and mcPTHrP on an OVX rat model significantly improved bone microstructure compared to treatment with mcOPG or mcPTHrP alone.",
+            "start": 1060
+          }
+        ],
+        "experiment": {
+          "assay": "micro-CT",
+          "dose": "mcOPG (80 microg/kg); mcPTHrP (80 microg/kg)",
+          "duration": "mcOPG after 8 weeks of OVX; mcPTHrP once a week for 3 weeks after 16 weeks of OVX; bone microstructure evaluated 24 weeks after OVX",
+          "endpoint": "bone microstructure",
+          "intervention": "stepwise treatment with mcOPG and mcPTHrP",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Stepwise treatment with mcOPG and mcPTHrP improved bone microstructure in ovariectomized rats compared with single-treatment groups.",
+        "uncertainties": [
+          "The outcome is reported for combined stepwise treatment, so attribution to mcOPG alone is not supported by this sentence.",
+          "The text does not state a direct molecular mechanism for the improved bone microstructure."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        206,
+        276
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        203,
+        258
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1060,
+        1244
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        855,
+        1032
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

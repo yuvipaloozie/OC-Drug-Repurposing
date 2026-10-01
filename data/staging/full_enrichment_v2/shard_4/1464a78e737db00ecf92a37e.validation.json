@@ -1,0 +1,243 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "steroid-associated osteonecrosis / steroid-associated osteoporosis",
+          "species": "rabbit",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "56"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Src",
+            "taxon": "rabbit"
+          },
+          {
+            "annotation_ids": [
+              "56"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "RNA",
+            "surface": "Src siRNA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "65",
+              "68"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": "rabbit"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "cortical bone thickness",
+            "taxon": "rabbit"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 595,
+            "passage_index": 1,
+            "quote": "Src siRNA",
+            "start": 582
+          },
+          {
+            "end": 1099,
+            "passage_index": 1,
+            "quote": "bone loss in trabecular bone and increase cortical bone thickness",
+            "start": 1034
+          }
+        ],
+        "experiment": {
+          "assay": "micro-CT and histological analysis",
+          "dose": null,
+          "duration": "2, 4, and 6 weeks after induction; week 6 analysis",
+          "endpoint": "bone loss; cortical bone thickness",
+          "intervention": "Src siRNA",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e2"
+        },
+        "summary": "In a rabbit steroid-associated osteonecrosis/osteoporosis model, Src siRNA treatment prevented steroid-associated bone loss in trabecular bone and increased cortical bone thickness.",
+        "uncertainties": [
+          "The passage combines two outcomes in one sentence; the causal contribution of Src siRNA to each outcome is not separately quantified.",
+          "Src is annotated as a gene from provider data, but the text does not specify protein versus gene product in the assay context."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "steroid-associated osteonecrosis / steroid-associated osteoporosis",
+          "species": "rabbit",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "66",
+              "71"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Src",
+            "taxon": "rabbit"
+          },
+          {
+            "annotation_ids": [
+              "56"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "RNA",
+            "surface": "Src siRNA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "eroded bone surfaces",
+            "taxon": "rabbit"
+          },
+          {
+            "annotation_ids": [
+              "67"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastic bone resorption",
+            "taxon": "rabbit"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1235,
+            "passage_index": 1,
+            "quote": "Src",
+            "start": 1223
+          },
+          {
+            "end": 1286,
+            "passage_index": 1,
+            "quote": "decreased the eroded bone surfaces suggesting decreased osteoclastic bone resorption",
+            "start": 1202
+          }
+        ],
+        "experiment": {
+          "assay": "histomorphometry",
+          "dose": null,
+          "duration": "week 6 after induction",
+          "endpoint": "eroded bone surfaces; osteoclastic bone resorption",
+          "intervention": "Src siRNA",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e6",
+          "sign": "negative",
+          "subject": "e2"
+        },
+        "summary": "Src siRNA treatment decreased eroded bone surfaces, suggesting reduced osteoclastic bone resorption in the rabbit model.",
+        "uncertainties": [
+          "The text uses 'suggesting' for the osteoclastic bone resorption interpretation, so the mechanistic link is inferential from the perturbation rather than directly measured as osteoclast activity.",
+          "The exact molecular form of Src targeted by siRNA is not explicitly stated in the passage."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1034,
+        1099
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1111,
+        1162
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1202,
+        1286
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1339,
+        1432
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

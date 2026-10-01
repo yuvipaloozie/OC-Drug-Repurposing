@@ -1,0 +1,92 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "probiotics",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 790,
+            "passage_index": 1,
+            "quote": "The animal and human studies demonstrate the positive effects of probiotics on bone health parameters like reduced osteoclastogenesis",
+            "start": 657
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "adequate amounts",
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "probiotics",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The review states that probiotic studies have shown reduced osteoclastogenesis in the context of osteoporosis prevention/management.",
+        "uncertainties": [
+          "This is a review-level summary rather than a single primary experiment.",
+          "The passage does not specify the probiotic species, formulation, model, or whether the effect is direct."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        657,
+        790
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        779,
+        885
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

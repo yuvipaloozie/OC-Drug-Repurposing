@@ -1,0 +1,214 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "13",
+              "14",
+              "17",
+              "20",
+              "23"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "alkaline water",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "19"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "bicarbonate-rich formulations",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1143,
+            "passage_index": 1,
+            "quote": "Modest effects on hydration markers, urinary pH, and selected indicators of bone resorption have been reported, especially with bicarbonate-rich formulations.",
+            "start": 985
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "selected indicators of bone resorption",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e5",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The review reports modest effects on selected indicators of bone resorption, especially with bicarbonate-rich alkaline water formulations.",
+        "uncertainties": [
+          "The passage reports modest effects and does not specify the individual bone resorption markers.",
+          "This is a review statement, not a primary experimental result in the supplied text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "gastroesophageal reflux",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "13",
+              "14",
+              "17",
+              "20",
+              "23"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "alkaline water",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "protein",
+            "surface": "pepsin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "18"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "reflux-related symptoms",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 984,
+            "passage_index": 1,
+            "quote": "The most consistent findings relate to gastrointestinal effects, particularly pepsin inactivation and potential improvement in reflux-related symptoms.",
+            "start": 833
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "pepsin inactivation; reflux-related symptoms",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The review states that alkaline water shows the most consistent gastrointestinal effects, specifically pepsin inactivation and possible improvement in reflux-related symptoms.",
+        "uncertainties": [
+          "Narrative review summary rather than a single primary experiment.",
+          "Pepsin is not explicitly annotated in the source packet.",
+          "The evidence is described as potential/consistent findings, not a definitive causal clinical effect."
+        ]
+      },
+      "errors": [
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        833,
+        984
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        483,
+        598
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        985,
+        1143
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        601,
+        719
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

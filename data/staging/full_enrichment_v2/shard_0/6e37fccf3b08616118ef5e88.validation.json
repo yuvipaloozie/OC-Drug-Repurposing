@@ -1,0 +1,106 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone",
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "osteoclasts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D010024"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoporosis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 269,
+            "passage_index": 1,
+            "quote": "Osteoporosis is a common metabolic bone disease that results from the imbalance of homeostasis within the bone. Intra-bone homeostasis is dependent on a precise dynamic balance between bone resorption by osteoclasts and bone formation by mesenchymal lineage osteoblasts",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Osteoporosis is described as involving an imbalance between bone resorption by osteoclasts and bone formation by osteoblasts.",
+        "uncertainties": [
+          "The passage is a general review statement and does not report an experiment.",
+          "Osteoclasts are mentioned in the context of bone resorption, but no direct regulatory mechanism is described."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        269
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        77,
+        222
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,218 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "25"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "L. plantarum",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 778,
+            "passage_index": 1,
+            "quote": "intraperitoneal administration of L. plantarum induced bone",
+            "start": 719
+          },
+          {
+            "end": 831,
+            "passage_index": 1,
+            "quote": "bone destruction by increasing osteoclast differentiation",
+            "start": 774
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation",
+          "intervention": "intraperitoneal administration of L. plantarum",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Intraperitoneal administration of L. plantarum in mice induced bone destruction by increasing osteoclast differentiation.",
+        "uncertainties": [
+          "The text links increased osteoclast differentiation to bone destruction but does not specify the direct molecular mechanism.",
+          "L. plantarum is treated as the intervention/organism in the text; no molecular identifier is provided."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "calvarial bone",
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "31"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "L. plantarum",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "29"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 945,
+            "passage_index": 1,
+            "quote": "when L. plantarum was implanted into mouse calvarial bone",
+            "start": 888
+          },
+          {
+            "end": 985,
+            "passage_index": 1,
+            "quote": "it potently augmented bone resorption.",
+            "start": 947
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption",
+          "intervention": "L. plantarum implanted into mouse calvarial bone",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "When L. plantarum was implanted into mouse calvarial bone, it potently augmented bone resorption.",
+        "uncertainties": [
+          "The statement reports bone resorption as the outcome; it does not identify a specific osteoclast molecular target."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        719,
+        778
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        714,
+        776
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        774,
+        831
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        888,
+        939
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        888,
+        945
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        951,
+        995
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        947,
+        985
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        996,
+        1037
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

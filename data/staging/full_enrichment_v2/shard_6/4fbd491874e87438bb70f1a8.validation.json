@@ -1,0 +1,536 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "OVX-induced osteoporosis",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "92"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "VPA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "67"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "OVX",
+            "taxon": "Rattus norvegicus"
+          },
+          {
+            "annotation_ids": [
+              "83"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "64"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoporosis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 863,
+            "passage_index": 1,
+            "quote": "OVX induced bone loss, oxidative stress (elevated MDA/Fe2+, decreased SOD/GSH), and ferroptosis activation (increased ACSL4/NCOA4, decreased GPX4/FTH1).",
+            "start": 711
+          },
+          {
+            "end": 974,
+            "passage_index": 1,
+            "quote": "VPA reversed these changes, improved bone density and microarchitecture, and reduced bone resorption.",
+            "start": 873
+          }
+        ],
+        "experiment": {
+          "assay": "micro-CT",
+          "dose": "100 mg/kg/d",
+          "duration": "12 weeks",
+          "endpoint": "bone loss / bone density / microarchitecture / bone resorption",
+          "intervention": "low-dose VPA (100 mg/kg/d) for 12 weeks",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In OVX rats, low-dose VPA reversed OVX-induced bone loss and improved bone density/microarchitecture, with reduced bone resorption.",
+        "uncertainties": [
+          "The quoted passage combines several outcomes; the edge is summarized at the phenotype level.",
+          "Bone resorption is mentioned as reduced, but the specific cellular mediator is not isolated in this span."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "98",
+              "102"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "VPA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "99",
+              "107",
+              "110"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "EZH2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "H3K27me3",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "100",
+              "106",
+              "111"
+            ],
+            "existing_node_id": null,
+            "key": "e7",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "NCOA4",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e8",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "pathway",
+            "surface": "ferritinophagy",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "101"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "ferroptosis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1275,
+            "passage_index": 1,
+            "quote": "VPA activated EZH2/H3K27me3 signaling, enhancing H3K27me3 enrichment at the NCOA4 promoter to suppress ferritinophagy and ferroptosis.",
+            "start": 1141
+          },
+          {
+            "end": 1336,
+            "passage_index": 1,
+            "quote": "VPA also inhibited RANKL-induced osteoclast differentiation.",
+            "start": 1276
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "low-dose / 1 mM in vitro context mentioned in abstract",
+          "duration": "12 weeks in rats; in vitro duration not stated",
+          "endpoint": "NCOA4 promoter-associated ferritinophagy and ferroptosis",
+          "intervention": "VPA treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e7",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "VPA activated EZH2/H3K27me3 signaling and increased H3K27me3 enrichment at the NCOA4 promoter, suppressing ferritinophagy and ferroptosis.",
+        "uncertainties": [
+          "The mechanistic sentence links EZH2/H3K27me3 activation to NCOA4 promoter enrichment and suppression of ferritinophagy/ferroptosis; direct molecular causality is not separately demonstrated in the abstract.",
+          "H3K27me3 is a histone mark rather than a gene/protein, so its molecular form is left unresolved."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "104",
+              "108"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "VPA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e9",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "103"
+            ],
+            "existing_node_id": null,
+            "key": "e10",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1336,
+            "passage_index": 1,
+            "quote": "VPA also inhibited RANKL-induced osteoclast differentiation.",
+            "start": 1276
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "low-dose / not further specified",
+          "duration": null,
+          "endpoint": "osteoclast differentiation",
+          "intervention": "VPA treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e9",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "VPA inhibited RANKL-induced osteoclast differentiation.",
+        "uncertainties": [
+          "The passage does not specify the osteoclast model or whether the effect was direct versus indirect.",
+          "RANKL is annotated as a gene in the packet, but the abstract only states it as the inducing factor."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "MC3T3-E1 cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "77"
+            ],
+            "existing_node_id": null,
+            "key": "e11",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "MC3T3-E1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "93",
+              "94",
+              "95",
+              "98"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "VPA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "79",
+              "95"
+            ],
+            "existing_node_id": null,
+            "key": "e12",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "erastin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "97"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "ferroptosis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 557,
+            "passage_index": 1,
+            "quote": "MC3T3-E1 cells",
+            "start": 543
+          },
+          {
+            "end": 629,
+            "passage_index": 1,
+            "quote": "VPA (0.5-3 mM), erastin was used to induce ferroptosis.",
+            "start": 574
+          },
+          {
+            "end": 1123,
+            "passage_index": 1,
+            "quote": "VPA attenuated erastin-induced lipid peroxidation, mitochondrial damage, and ferroptosis.",
+            "start": 1034
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "0.5-3 mM",
+          "duration": null,
+          "endpoint": "lipid peroxidation / mitochondrial damage / ferroptosis",
+          "intervention": "VPA pretreatment followed by erastin",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c4",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In MC3T3-E1 cells pretreated with VPA, VPA attenuated erastin-induced lipid peroxidation, mitochondrial damage, and ferroptosis.",
+        "uncertainties": [
+          "The abstract does not state whether the attenuation of ferroptosis is direct or mediated by another pathway in this cell model.",
+          "The quoted evidence spans the cell context and the outcome across separate sentences."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        711,
+        863
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        872,
+        1032
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        873,
+        974
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1034,
+        1097
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1141,
+        1275
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1302,
+        1424
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1276,
+        1336
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1437,
+        1470
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1276,
+        1336
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1437,
+        1470
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c4",
+      "corrected_offsets": [
+        543,
+        557
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        704,
+        721
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c4",
+      "corrected_offsets": [
+        574,
+        629
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        735,
+        770
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c4",
+      "corrected_offsets": [
+        1034,
+        1123
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1146,
+        1292
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,216 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "cancellous bone",
+          "disease_setting": "osteoporosis",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "46",
+              "52",
+              "83"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoporotic cancellous bone",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "enhanced osteoclast activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1448,
+            "passage_index": 1,
+            "quote": "amino acid, purine, energy, one-carbon, and phospholipid metabolism",
+            "start": 1381
+          },
+          {
+            "end": 1522,
+            "passage_index": 1,
+            "quote": "converging on impaired osteoblast function, enhanced osteoclast activity",
+            "start": 1450
+          }
+        ],
+        "experiment": {
+          "assay": "multivariate analysis combined with machine learning approaches; pathway enrichment",
+          "dose": null,
+          "duration": null,
+          "endpoint": "enhanced osteoclast activity",
+          "intervention": "pathway enrichment analysis of untargeted metabolomics data",
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Pathway enrichment in osteoporotic cancellous bone was reported to converge on enhanced osteoclast activity.",
+        "uncertainties": [
+          "The statement is an interpretation from pathway enrichment, not a direct measurement of osteoclast activity.",
+          "The causal direction is not established in the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "cancellous bone",
+          "disease_setting": "osteoporosis",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "46",
+              "52",
+              "83"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoporotic cancellous bone",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [
+              "54",
+              "81"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "phenylalanine",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 985,
+            "passage_index": 1,
+            "quote": "amino acids (phenylalanine",
+            "start": 959
+          },
+          {
+            "end": 1752,
+            "passage_index": 1,
+            "quote": "phenylalanine",
+            "start": 1739
+          }
+        ],
+        "experiment": {
+          "assay": "dual-platform gas/liquid chromatography-mass spectrometry",
+          "dose": null,
+          "duration": null,
+          "endpoint": "phenylalanine abundance",
+          "intervention": "untargeted metabolomics of osteoporotic cancellous bone versus non-osteoporotic controls",
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Osteoporotic cancellous bone showed decreased phenylalanine abundance in the metabolomic analysis.",
+        "uncertainties": [
+          "The passage reports a metabolomic association rather than a causal mechanism.",
+          "The quoted evidence spans are partial and rely on list context for the decrease statement."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable",
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        959,
+        985
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1065,
+        1089
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1381,
+        1448
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1487,
+        1517
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1450,
+        1522
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1519,
+        1576
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

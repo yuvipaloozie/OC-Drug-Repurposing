@@ -1,0 +1,189 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "serum",
+          "disease_setting": "pseudarthrosis after anterior cervical discectomy and fusion",
+          "species": "Human",
+          "stage": "postoperative six weeks"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "40",
+              "42",
+              "55"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "CTX",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "groups",
+            "taxon": "9606"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2320,
+            "passage_index": 1,
+            "quote": "while CTX levels remained comparable between the groups.",
+            "start": 2264
+          }
+        ],
+        "experiment": {
+          "assay": "serum marker measurement",
+          "dose": null,
+          "duration": "six weeks postoperative",
+          "endpoint": "CTX level by group",
+          "intervention": "comparison of CTX levels across fusion outcomes",
+          "outcome_change": "no_detected_change",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "unknown",
+          "subject": "e3"
+        },
+        "summary": "CTX levels were comparable between the fused and pseudarthrosis groups, indicating no detected group difference for this marker.",
+        "uncertainties": [
+          "The text reports comparability between groups, not a mechanistic relationship.",
+          "CTX is annotated as a gene by the provider, but the passage supports only a serum marker mention."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "serum",
+          "disease_setting": "pseudarthrosis after anterior cervical discectomy and fusion",
+          "species": "Human",
+          "stage": "postoperative six weeks"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "DeltaP1NP",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "one-year fusion status",
+            "taxon": "9606"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1869,
+            "passage_index": 1,
+            "quote": "DeltaP1NP was a significant predictor of one-year fusion status",
+            "start": 1816
+          },
+          {
+            "end": 2036,
+            "passage_index": 1,
+            "quote": "(P=0.039)",
+            "start": 2027
+          }
+        ],
+        "experiment": {
+          "assay": "logistic regression",
+          "dose": null,
+          "duration": "six weeks postoperative to one year",
+          "endpoint": "one-year fusion status",
+          "intervention": "postoperative measurement of DeltaP1NP",
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "An early postoperative increase in P1NP was associated with one-year pseudarthrosis after ACDF; DeltaP1NP was a significant predictor in logistic regression.",
+        "uncertainties": [
+          "P1NP is treated here as a measured bone turnover marker; the passage does not establish a molecular mechanism.",
+          "The direction of the association is reported as prediction of fusion status, not a causal effect."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        2027,
+        2036
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1871,
+        1878
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        2264,
+        2320
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1914,
+        1974
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

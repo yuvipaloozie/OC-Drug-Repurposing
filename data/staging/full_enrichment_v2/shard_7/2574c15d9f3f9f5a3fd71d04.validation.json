@@ -1,0 +1,190 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "compound",
+            "surface": "drugs",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastic bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 586,
+            "passage_index": 1,
+            "quote": "These novel treatments include an expanding array of drugs that primarily inhibit osteoclastic bone resorption",
+            "start": 476
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The review states that some novel osteoporosis treatments primarily inhibit osteoclastic bone resorption.",
+        "uncertainties": [
+          "Generic drug class is described, not a specific agent or experiment.",
+          "No direct experimental assay or quantitative result is provided."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "29",
+              "30"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "intermittent para-thyroid hormone (PTH) therapy",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "compound",
+            "surface": "osteoblast-targeted (anabolic) agents",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "20",
+              "31"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoporotic fractures",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 991,
+            "passage_index": 1,
+            "quote": "The advent of intermittent para-thyroid hormone (PTH) therapy has provided proof-of-principle that osteo-blast-targeted (anabolic) agents can effectively prevent osteoporotic fractures",
+            "start": 807
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoporotic fractures",
+          "intervention": "intermittent para-thyroid hormone (PTH) therapy",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e2"
+        },
+        "summary": "The review says intermittent PTH therapy provided proof-of-principle that osteoblast-targeted anabolic agents can prevent osteoporotic fractures.",
+        "uncertainties": [
+          "The passage is a review-style background statement rather than a primary experiment.",
+          "The text attributes proof-of-principle to intermittent PTH therapy but does not describe the underlying study design or assay."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        476,
+        586
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        559,
+        637
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        807,
+        991
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        871,
+        1018
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

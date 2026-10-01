@@ -1,0 +1,164 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "Mexican cohort / women",
+          "stage": "pregnancy and early postpartum"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "49",
+              "53",
+              "57"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "rs731236 CC genotype",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [
+              "35",
+              "37",
+              "48",
+              "54",
+              "56"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "VDR",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "NTx level",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "38",
+              "43",
+              "55",
+              "58"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1151,
+            "passage_index": 1,
+            "quote": "The rs731236 CC genotype (VDR, TaqI) was associated with a significantly lower NTx level",
+            "start": 1063
+          },
+          {
+            "end": 1213,
+            "passage_index": 1,
+            "quote": "24% reduction; p = 0.005), indicating a protective effect.",
+            "start": 1155
+          },
+          {
+            "end": 1395,
+            "passage_index": 1,
+            "quote": "Genetic variation in VDR (rs731236) was associated with lower maternal bone resorption",
+            "start": 1309
+          }
+        ],
+        "experiment": {
+          "assay": "random-effects regression and generalized additive models",
+          "dose": null,
+          "duration": "each trimester and at one month postpartum",
+          "endpoint": "urinary N-telopeptide of type I collagen (NTx) / bone resorption",
+          "intervention": "genotyping six SNPs in ESR1 and VDR genes",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The VDR rs731236 CC genotype was associated with a significantly lower level of urinary N-telopeptide, indicating lower maternal bone resorption during pregnancy and early postpartum.",
+        "uncertainties": [
+          "Association is observational and does not establish causality.",
+          "The specific molecular form for the genotype is unresolved; the claim concerns a variant genotype rather than gene expression or protein activity.",
+          "The phenotype object reflects bone resorption measured by urinary NTx rather than a direct molecular assay of osteoclast function."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1063,
+        1151
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1006,
+        1096
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1155,
+        1213
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1122,
+        1163
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1309,
+        1395
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1170,
+        1257
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

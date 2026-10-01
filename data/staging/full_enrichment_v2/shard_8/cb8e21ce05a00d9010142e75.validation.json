@@ -1,0 +1,185 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "periodontal health",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "\"Medicine food homology\" plants",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 128,
+            "passage_index": 0,
+            "quote": "\"Medicine food homology\" plants promote periodontal health: antimicrobial, anti-inflammatory, and inhibition of bone resorption.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption",
+          "intervention": null,
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "MFH plants are described as promoting periodontal health by inhibiting bone resorption.",
+        "uncertainties": [
+          "This is a review/title statement rather than a primary experimental result.",
+          "The passage does not specify which plant, compound, or mechanism is responsible."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "periodontitis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "MFH plants",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "inflammatory reactions",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 756,
+            "passage_index": 1,
+            "quote": "lowering the host's inflammatory reactions and halting the loss of alveolar bone.",
+            "start": 675
+          },
+          {
+            "end": 535,
+            "passage_index": 1,
+            "quote": "periodontitis",
+            "start": 523
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "inflammatory reactions",
+          "intervention": null,
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The abstract states that MFH plants lower inflammatory reactions in periodontitis.",
+        "uncertainties": [
+          "The text is a review summary and does not report a specific experiment.",
+          "No specific molecular mediator of inflammation is named."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        128
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        97
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        675,
+        756
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        649,
+        710
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

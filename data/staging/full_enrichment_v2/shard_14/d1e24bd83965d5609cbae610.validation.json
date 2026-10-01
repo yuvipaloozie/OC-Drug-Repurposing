@@ -1,0 +1,193 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteogenesis imperfecta and glucocorticoid-induced osteoporosis",
+          "species": null,
+          "stage": "children"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "35",
+              "49"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "These drugs",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 836,
+            "passage_index": 1,
+            "quote": "These drugs slow bone resorption",
+            "start": 804
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption",
+          "intervention": null,
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Bisphosphonates are described as slowing bone resorption.",
+        "uncertainties": [
+          "The text refers to a review summary rather than a single primary experiment.",
+          "'These drugs' refers back to bisphosphonates in the surrounding sentence."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteogenesis imperfecta and glucocorticoid-induced osteoporosis",
+          "species": null,
+          "stage": "children"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "35",
+              "49"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Bisphosphonates",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "BMD",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "34",
+              "38",
+              "43"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "fracture rates",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 803,
+            "passage_index": 1,
+            "quote": "Bisphosphonates, commonly used in treating osteogenesis imperfecta and glucocorticoid-induced osteoporosis, have proven effective in increasing BMD and lowering fracture rates.",
+            "start": 627
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "BMD",
+          "intervention": "Bisphosphonates",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Bisphosphonates are reported to increase bone mineral density and lower fracture rates in children.",
+        "uncertainties": [
+          "The sentence summarizes prior evidence in a review; the primary study design is not provided."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        804,
+        836
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        805,
+        840
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        627,
+        803
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        680,
+        801
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

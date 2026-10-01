@@ -1,0 +1,314 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ovariectomized osteoporosis",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "49",
+              "50",
+              "51",
+              "52",
+              "57",
+              "62",
+              "65",
+              "66"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Tanshinone",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "58",
+              "59",
+              "60",
+              "61",
+              "64",
+              "69"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:PHGDH",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "Phgdh",
+            "taxon": "rat"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1021,
+            "passage_index": 1,
+            "quote": "Tanshinone upregulated Phgdh mRNA levels",
+            "start": 981
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "Phgdh mRNA levels",
+          "intervention": "tanshinone treatment",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Tanshinone treatment increased Phgdh mRNA levels in ovariectomized rats.",
+        "uncertainties": [
+          "The claim concerns mRNA levels, not protein abundance or activity.",
+          "Species is inferred from the rat context in the abstract; the PHGDH node suggestion is mouse protein and is not directly established by the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "BMSCs",
+          "compartment": null,
+          "disease_setting": "ovariectomized osteoporosis",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "41",
+              "43",
+              "48",
+              "49",
+              "50",
+              "51",
+              "52",
+              "57",
+              "62",
+              "65",
+              "66"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "tanshinone",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "58",
+              "59",
+              "60",
+              "61",
+              "64",
+              "69"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:PHGDH",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "protein",
+            "surface": "phosphoglycerate dehydrogenase",
+            "taxon": "rat"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "BMSC stemness and senescence",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1184,
+            "passage_index": 1,
+            "quote": "and inhibition of phosphoglycerate dehydrogenase Phgdh, the protein encoded by the Phgdh gene, abolished the effects of tanshinone on BMSC stemness and senescence",
+            "start": 1022
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "tanshinone effects on BMSC stemness and senescence",
+          "intervention": "inhibition of phosphoglycerate dehydrogenase",
+          "outcome_change": "no_detected_change",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "unknown",
+          "subject": "e2"
+        },
+        "summary": "Inhibition of phosphoglycerate dehydrogenase (Phgdh/PHGDH) abolished the effects of tanshinone on BMSC stemness and senescence.",
+        "uncertainties": [
+          "The text says the inhibition abolished tanshinone effects, but it does not specify the inhibitor or whether inhibition was direct.",
+          "The causal role is inferred from perturbation and does not establish direct binding or enzymatic mechanism.",
+          "The endpoint combines stemness and senescence rather than separating them into distinct measured outcomes."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "BMSCs",
+          "compartment": null,
+          "disease_setting": "ovariectomized osteoporosis",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "41",
+              "43",
+              "48",
+              "49",
+              "50",
+              "51",
+              "52",
+              "57",
+              "62",
+              "65",
+              "66"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Tanshinone treatment",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "alveolar bone structure",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "stemness and senescence status of BMSCs",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 668,
+            "passage_index": 1,
+            "quote": "Tanshinone treatment restored alveolar bone structure in OVX rats as well as the stemness and senescence status of BMSCs isolated from OVX rats.",
+            "start": 563
+          }
+        ],
+        "experiment": {
+          "assay": "micro-CT for bone structure; BMSC isolation for stemness and senescence analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "alveolar bone structure and BMSC stemness/senescence status",
+          "intervention": "tanshinone treatment",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Tanshinone treatment restored alveolar bone structure and the stemness and senescence status of BMSCs from ovariectomized rats.",
+        "uncertainties": [
+          "The sentence reports multiple phenotypic outcomes together; the specific direction for the BMSC stemness/senescence phenotype is summarized as restoration rather than a single numeric change."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        981,
+        1021
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        759,
+        799
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1022,
+        1184
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        797,
+        924
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,214 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "Raw264.7 and bone marrow-derived macrophages (BMDMs)",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "15"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Eupatilin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "Raw264.7 and bone marrow-derived macrophages (BMDMs)",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-induced differentiation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 564,
+            "passage_index": 1,
+            "quote": "Eupatilin can efficiently obstruct the differentiation of Raw264.7 and bone marrow-derived macrophages (BMDMs) induced by RANKL",
+            "start": 437
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "differentiation of Raw264.7 and BMDMs induced by RANKL",
+          "intervention": "Eupatilin",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Eupatilin treatment suppressed RANKL-induced osteoclast differentiation/osteoclastogenesis in vitro.",
+        "uncertainties": [
+          "The passage describes differentiation of Raw264.7 cells and BMDMs, but does not specify species for these cells."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "Raw264.7 and BMDMs",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "15"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Eupatilin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "protein",
+            "surface": "Siglec-15",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "pathway",
+            "surface": "MAPKs/NF-kappaB signaling pathways",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 961,
+            "passage_index": 1,
+            "quote": "Eupatilin notably downregulated the expression of Siglec-15",
+            "start": 902
+          },
+          {
+            "end": 1243,
+            "passage_index": 1,
+            "quote": "Eupatilin repressed MAPKs/NF-kappaBsignaling pathways",
+            "start": 1190
+          }
+        ],
+        "experiment": {
+          "assay": "RNA sequencing; mechanistic investigations",
+          "dose": null,
+          "duration": null,
+          "endpoint": "Siglec-15 expression; MAPKs/NF-kappaB signaling pathway activity",
+          "intervention": "Eupatilin",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Eupatilin downregulated Siglec-15 expression and repressed MAPK signaling in the study system.",
+        "uncertainties": [
+          "The passage states repression of MAPKs/NF-kappaB signaling pathways, but does not separate MAPK from NF-kappaB effects into distinct quantified endpoints."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        437,
+        564
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        422,
+        539
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        902,
+        961
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        648,
+        705
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1190,
+        1243
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        819,
+        860
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

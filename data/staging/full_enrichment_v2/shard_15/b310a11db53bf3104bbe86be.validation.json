@@ -1,0 +1,248 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ovariectomized (OVX)-mediated bone microarchitectural disorders",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "33",
+              "37",
+              "39",
+              "40",
+              "42",
+              "46",
+              "51",
+              "53"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "NK",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "50"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-induced osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1101,
+            "passage_index": 1,
+            "quote": "Meanwhile, prevent the Akt and NFkappaB signalling pathways by down-regulating c-Src and TRAF6 thereby effectively inhibiting RANKL-induced osteoclastogenesis.",
+            "start": 942
+          },
+          {
+            "end": 1262,
+            "passage_index": 1,
+            "quote": "In addition, oral administration of NK to mice significantly elevated bone mass and ameliorated ovariectomized (OVX)-mediated bone microarchitectural disorders.",
+            "start": 1102
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "oral administration of NK",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Nodakenin treatment inhibited RANKL-induced osteoclastogenesis.",
+        "uncertainties": [
+          "The sentence is grammatically awkward; the causal reading is limited to the explicitly stated inhibition of RANKL-induced osteoclastogenesis.",
+          "The exact cellular assay for osteoclastogenesis is not stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "RANKL-induced osteoclastogenesis",
+          "species": "null",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "33",
+              "37",
+              "39",
+              "40",
+              "42",
+              "46",
+              "51",
+              "53"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "NK",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "c-Src",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "49"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "TRAF6",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "43",
+              "47"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Akt",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "48"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "NFkappaB",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1101,
+            "passage_index": 1,
+            "quote": "Meanwhile, prevent the Akt and NFkappaB signalling pathways by down-regulating c-Src and TRAF6 thereby effectively inhibiting RANKL-induced osteoclastogenesis.",
+            "start": 942
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "c-Src and TRAF6; Akt and NFkappaB signaling",
+          "intervention": "NK treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Nodakenin was described as down-regulating c-Src and TRAF6 and preventing Akt and NFkappaB signaling in the context of inhibiting RANKL-induced osteoclastogenesis.",
+        "uncertainties": [
+          "The source sentence compresses several effects into one clause; the exact directionality between NK and the Akt/NFkappaB pathway is implied but not cleanly parsed.",
+          "c-Src is not provider-annotated in the packet, so its entity mapping is text-supported but unresolved."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        942,
+        1101
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1010,
+        1226
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1102,
+        1262
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1228,
+        1337
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        942,
+        1101
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1010,
+        1226
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

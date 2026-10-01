@@ -1,0 +1,201 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "ectomesenchymal stem cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "30"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Opa1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "EMSCs",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "29"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "EV-Mito",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 631,
+            "passage_index": 1,
+            "quote": "We generated these vesicles from ectomesenchymal stem cells (EMSCs) lacking Opa1, a key regulator of mitochondrial dynamics. Knocking out this gene substantially boosts vesicle production",
+            "start": 444
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "vesicle production",
+          "intervention": "Opa1 knockout",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Knocking out Opa1 in ectomesenchymal stem cells substantially increased EV-Mito vesicle production.",
+        "uncertainties": [
+          "The text links Opa1 knockout to increased vesicle production but does not specify whether the abundance change is direct or mediated by other factors.",
+          "Species is not explicitly stated for the EMSC source in the quoted span."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "calvarial defects",
+          "compartment": null,
+          "disease_setting": "MRSA-infected bone defect",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "35"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "SPMiL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "31"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "EV-Mito",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1141,
+            "passage_index": 1,
+            "quote": "In tests using MRSA-infected rat calvarial defects, SPMiL released LL37 continuously to eliminate the resistant bacteria while simultaneously transferring functional mitochondria into recipient cells. These transplanted organelles promoted osteogenic differentiation and suppressed osteoclast activity through metabolic reprogramming, antioxidant effects, and restoration of mitochondrial membrane potential.",
+            "start": 733
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast activity",
+          "intervention": "SPMiL carrying LL37 and EV-Mito",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e2"
+        },
+        "summary": "In MRSA-infected rat calvarial defects, the SPMiL treatment with EV-Mito suppressed osteoclast activity.",
+        "uncertainties": [
+          "The suppression of osteoclast activity is attributed in the text to transplanted organelles and multiple mechanisms, but direct causality for EV-Mito alone is not separately established.",
+          "The exact experimental assay for osteoclast activity is not stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        444,
+        631
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        633,
+        727
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        733,
+        1141
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        861,
+        1110
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

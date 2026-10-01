@@ -1,0 +1,179 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": "periodontal tissues",
+          "disease_setting": "periodontitis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "29"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "Nrf2 signaling",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast-driven bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 623,
+            "passage_index": 1,
+            "quote": "Nrf2 signaling has been associated with enhanced oxidative injury, NF-kappaB and NLRP3 inflammasome activation, osteoclast-driven bone resorption",
+            "start": 478
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Impaired Nrf2 signaling is associated with osteoclast-driven bone resorption in periodontal tissues.",
+        "uncertainties": [
+          "The passage states an association in a review, not a primary experiment.",
+          "The text refers to impaired Nrf2 signaling broadly; no direct causal mechanism is established."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "hypothesis",
+        "context": {
+          "cell_type": null,
+          "compartment": "periodontal model",
+          "disease_setting": "periodontitis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "32"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "Nrf2 activation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone destructive responses",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 843,
+            "passage_index": 1,
+            "quote": "Experimental studies suggest that Nrf2 activation can restore the redox balance and attenuate inflammation and bone destructive responses in a periodontal model",
+            "start": 683
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone destructive responses",
+          "intervention": "Nrf2 activation",
+          "outcome_change": "decreased",
+          "perturbation_type": "gain_of_function"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Experimental studies suggest that Nrf2 activation can restore redox balance and attenuate inflammation and bone destructive responses in a periodontal model.",
+        "uncertainties": [
+          "The sentence is framed as 'Experimental studies suggest', so the claim is tentative and review-level.",
+          "The specific experimental system and exact intervention are not described in the passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        478,
+        623
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        569,
+        670
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        683,
+        843
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        804,
+        923
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

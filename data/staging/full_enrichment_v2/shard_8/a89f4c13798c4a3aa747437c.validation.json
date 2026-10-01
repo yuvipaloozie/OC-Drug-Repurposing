@@ -1,0 +1,216 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": "osteoclast precursors"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "45"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "niloticin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": "LOCAL:protein:mouse:TNFRSF11A",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "protein",
+            "surface": "RANK",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "41",
+              "40"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "RANKL-RANK interaction",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 940,
+            "passage_index": 1,
+            "quote": "niloticin directly binds to RANK with an equilibrium dissociation constant of 5.8 muM, blocking RANKL-RANK interaction,",
+            "start": 821
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "5.8 muM",
+          "duration": null,
+          "endpoint": "RANKL-RANK interaction",
+          "intervention": "niloticin",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "direct",
+          "effect_level": "binding",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Niloticin directly binds RANK and blocks the RANKL-RANK interaction, which the paper reports as inhibiting osteoclastogenesis.",
+        "uncertainties": [
+          "Exact species is not stated in the extracted sentence; suggested mouse node mapping for RANK is unverified.",
+          "The quote supports direct binding and blocking of interaction, but not a broader causal mechanism beyond the stated text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclast precursors",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "45"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "niloticin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "46",
+              "48",
+              "49",
+              "50",
+              "51",
+              "52",
+              "53",
+              "54",
+              "55"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "RANKL-induced AKT, MAPK, and NF-kappaB pathways",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "56",
+              "57",
+              "58",
+              "59",
+              "60"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "NFATc1, c-Fos, TRAP, c-Src, beta3-Integrin, and cathepsin K",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1311,
+            "passage_index": 1,
+            "quote": "thereby inhibiting RANKL-induced AKT, MAPK (p38, JNK, and ERK1/2), and NF-kappaB (IKKalpha/beta, IkappaBalpha, and p65) pathways activation, and reducing the expression of key osteoclast differentiation-related regulatory factors (NFATc1, c-Fos, TRAP, c-Src, beta3-Integrin, and cathepsin K) in osteoclast precursors, ultimately negatively regulating osteoclastogenesis.",
+            "start": 941
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "pathway activation and expression of osteoclast differentiation-related regulatory factors",
+          "intervention": "niloticin",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Niloticin decreased RANKL-induced AKT, MAPK, and NF-kappaB pathway activation and reduced expression of osteoclast differentiation-related factors in osteoclast precursors.",
+        "uncertainties": [
+          "The passage combines multiple downstream readouts; the claim summarizes them as one observed result.",
+          "Exact molecular forms for p38, JNK, ERK1/2, IKKalpha/beta, IkappaBalpha, and p65 are not fully disambiguated in text beyond pathway context."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        821,
+        940
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        884,
+        1009
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        941,
+        1311
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1009,
+        1477
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

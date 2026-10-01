@@ -1,0 +1,186 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "Homo sapiens",
+          "stage": "postmenopausal women"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D007529"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "isoflavones",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "beta cross-linked C-telopeptide of type 1 collagen (beta-CrossLaps)",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:C015484"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "pyridinoline (PYD)",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1009,
+            "passage_index": 1,
+            "quote": "isoflavones significantly reduced bone resorption markers, that is, beta cross-linked C-telopeptide of type 1 collagen (beta-CrossLaps) (MD = - 0.0943 ng/mL; P = 0.0071) and pyridinoline (PYD) (SMD = - 0.9111; P = 0.0247)",
+            "start": 884
+          }
+        ],
+        "experiment": {
+          "assay": "systematic review and meta-analysis of randomized controlled trials",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption markers",
+          "intervention": "isoflavone intervention",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Isoflavone interventions significantly reduced bone resorption markers beta-CrossLaps and pyridinoline (PYD) in randomized controlled trials of postmenopausal women.",
+        "uncertainties": [
+          "The passage reports pooled trial outcomes rather than a single primary experiment.",
+          "beta-CrossLaps and PYD are described as bone resorption markers; their molecular form is not directly established by the text beyond being biomarkers."
+        ]
+      },
+      "errors": [
+        "invented annotation ID",
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "Homo sapiens",
+          "stage": "postmenopausal women"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D007529"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "isoflavone interventions",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "3479"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "insulin-like growth factor type 1 (IGF-1)",
+            "taxon": "Homo sapiens"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1819,
+            "passage_index": 1,
+            "quote": "Hormones involved in regulating bone metabolism, particularly insulin-like growth factor type 1 (IGF-1), exhibited significant increases following isoflavone interventions",
+            "start": 1648
+          }
+        ],
+        "experiment": {
+          "assay": "systematic review and meta-analysis of randomized controlled trials",
+          "dose": null,
+          "duration": null,
+          "endpoint": "IGF-1",
+          "intervention": "isoflavone intervention",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Isoflavone interventions significantly increased insulin-like growth factor 1 (IGF-1) in postmenopausal women.",
+        "uncertainties": [
+          "The passage summarizes a meta-analysis, so the underlying primary assays are not specified.",
+          "IGF-1 is annotated as a gene in the source packet, but the text here refers to a circulating hormone/marker."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1648,
+        1819
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1869,
+        1971
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

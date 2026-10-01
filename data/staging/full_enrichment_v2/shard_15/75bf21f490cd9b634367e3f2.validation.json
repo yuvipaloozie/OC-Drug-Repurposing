@@ -1,0 +1,207 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "periarticular synovial tissues",
+          "compartment": "periarticular synovial tissues",
+          "disease_setting": "aseptic loosening following total hip arthroplasty",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "58191"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "RNA",
+            "surface": "CXCL16 mRNA expression",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [
+              "8600",
+              "690"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "RANKL/OPG ratio",
+            "taxon": "human"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1824,
+            "passage_index": 1,
+            "quote": "Dual-immunofluorescence staining indicated an increase in the RANKL/OPG ratio in the experimental group, with a positive linear correlation between CXCL16 mRNA expression and the RANKL/OPG ratio",
+            "start": 1630
+          },
+          {
+            "end": 1844,
+            "passage_index": 1,
+            "quote": "(r = .919, p < .01)",
+            "start": 1825
+          }
+        ],
+        "experiment": {
+          "assay": "Dual-immunofluorescence staining; RT-PCR; statistical correlation",
+          "dose": null,
+          "duration": null,
+          "endpoint": "RANKL/OPG ratio and CXCL16 mRNA expression correlation",
+          "intervention": "case-control comparison of revision THA for aseptic loosening versus primary THA controls",
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "CXCL16 mRNA expression was positively associated with the RANKL/OPG ratio in periarticular synovial tissues from the aseptic loosening group.",
+        "uncertainties": [
+          "The text reports correlation, not causation.",
+          "RANKL and OPG are annotated genes, but the ratio itself is not a specific molecular entity."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "hypothesis",
+        "context": {
+          "cell_type": "periarticular synovial tissues",
+          "compartment": "periprosthetic synovial tissues",
+          "disease_setting": "aseptic loosening following total hip arthroplasty",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "58191"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "CXCL16",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation and activity",
+            "taxon": "human"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2090,
+            "passage_index": 1,
+            "quote": "CONCLUSION: Our findings reveal a significant association between elevated CXCL16 expression and an increased RANKL/OPG ratio in periprosthetic synovial tissues, suggesting a role for CXCL16 in promoting osteoclast differentiation and activity.",
+            "start": 1846
+          }
+        ],
+        "experiment": {
+          "assay": "association analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation and activity",
+          "intervention": "case-control comparison",
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The authors suggest that elevated CXCL16 may promote osteoclast differentiation and activity in aseptic loosening.",
+        "uncertainties": [
+          "This is a conclusion-level inference from association data, not a direct perturbation experiment.",
+          "The text does not demonstrate direct mechanistic causality."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1630,
+        1824
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        178,
+        257
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1825,
+        1844
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        266,
+        280
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1846,
+        2090
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        309,
+        424
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

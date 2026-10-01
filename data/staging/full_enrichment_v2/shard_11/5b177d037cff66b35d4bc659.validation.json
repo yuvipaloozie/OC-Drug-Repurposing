@@ -1,0 +1,224 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "inflammatory osteolysis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "4"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Trifolirhizin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast formation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "inflammatory osteolysis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "5",
+              "6"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "pathway",
+            "surface": "RANKL-induced activation of NF-kappaB and MAPK signaling pathways",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "7"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ROS",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 168,
+            "passage_index": 0,
+            "quote": "Trifolirhizin reduces osteoclast formation and prevents inflammatory osteolysis by inhibiting RANKL-induced activation of NF-kappaB and MAPK signaling pathways and ROS.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "ROS / signaling pathway activation",
+          "intervention": "trifolirhizin",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e5",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Trifolirhizin is reported to reduce osteoclast formation and prevent inflammatory osteolysis by inhibiting RANKL-induced activation of NF-kappaB and MAPK signaling pathways and ROS.",
+        "uncertainties": [
+          "The title combines multiple effects; the exact causal chain among ROS, signaling pathways, osteoclast formation, and osteolysis is not separated into distinct experiments in the title alone.",
+          "RANKL and NF-kappaB provider annotations are treated as text-supported candidates, but their molecular forms are not independently established here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "LPS-mediated inflammatory osteolysis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "66",
+              "69"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "TRI",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast formation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "67",
+              "68"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "lipopolysaccharide (LPS)-mediated inflammatory osteolysis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1659,
+            "passage_index": 1,
+            "quote": "TRI inhibited osteoclast formation and ameliorated lipopolysaccharide (LPS)-mediated inflammatory osteolysis.",
+            "start": 1550
+          }
+        ],
+        "experiment": {
+          "assay": "micro-CT and histological examination",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast formation / inflammatory osteolysis",
+          "intervention": "TRI treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In the abstract, trifolirhizin inhibited osteoclast formation and ameliorated lipopolysaccharide-mediated inflammatory osteolysis.",
+        "uncertainties": [
+          "The abstract reports treatment effects in a mouse model, but the exact quantitative effect is not provided in the extracted span.",
+          "The sentence links two outcomes with one intervention; separate effect sizes are not stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        168
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        169
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1550,
+        1659
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1719,
+        1851
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

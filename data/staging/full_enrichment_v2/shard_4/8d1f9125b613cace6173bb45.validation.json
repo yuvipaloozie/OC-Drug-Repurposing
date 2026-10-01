@@ -1,0 +1,104 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow macrophage lineage cells",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "3",
+              "20",
+              "21",
+              "24"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Wnt7b",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 84,
+            "passage_index": 0,
+            "quote": "Wnt7b Inhibits Osteoclastogenesis via AKT Activation and Glucose Metabolic Rewiring.",
+            "start": 0
+          },
+          {
+            "end": 744,
+            "passage_index": 1,
+            "quote": "Wnt7b, a potent Wnt ligand that enhances bone formation and increases bone mass, also abolishes osteoclastogenesis in vitro.",
+            "start": 620
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast formation and activity",
+          "intervention": "enforced expression of Wnt in bone marrow macrophage lineage cells",
+          "outcome_change": "decreased",
+          "perturbation_type": "gain_of_function"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Wnt7b is reported to inhibit osteoclastogenesis, including abolishing osteoclastogenesis in vitro.",
+        "uncertainties": [
+          "The abstract and title support inhibition of osteoclastogenesis, but the exact molecular form of Wnt7b (gene vs protein) is not explicitly distinguished in the text.",
+          "The quoted intervention in the abstract refers to enforced expression of Wnt in bone marrow macrophage lineage cells, which is broader than Wnt7b-specific perturbation.",
+          "Species is not explicitly stated in the supplied passages."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        620,
+        744
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        705,
+        831
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

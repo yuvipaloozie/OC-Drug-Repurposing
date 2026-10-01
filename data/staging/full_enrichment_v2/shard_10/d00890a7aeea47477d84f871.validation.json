@@ -1,0 +1,246 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow macrophages (BMMs)",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "61",
+              "66",
+              "67",
+              "75",
+              "81",
+              "84",
+              "86",
+              "96",
+              "103",
+              "106"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "okanin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "76",
+              "87"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-induced osteoclast differentiation",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1053,
+            "passage_index": 1,
+            "quote": "okanin (1.25-20 muM) during RANKL-induced osteoclast differentiation",
+            "start": 985
+          },
+          {
+            "end": 1719,
+            "passage_index": 1,
+            "quote": "okanin dose-dependently inhibited RANKL-induced osteoclast differentiation and disrupted F-actin ring formation without cytotoxicity",
+            "start": 1587
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro cell-based assays",
+          "dose": "1.25-20 muM",
+          "duration": null,
+          "endpoint": "RANKL-induced osteoclast differentiation; F-actin ring formation",
+          "intervention": "okanin (1.25-20 muM)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Okanin inhibited RANKL-induced osteoclast differentiation in vitro and reduced osteoclast formation/function markers.",
+        "uncertainties": [
+          "The text also mentions changes in c-Fos, NFATc1, and signaling molecules, but the directly supported claim here is the inhibition of osteoclast differentiation and related phenotype endpoints.",
+          "Species is inferred from BMM context and the mouse study, but the specific in vitro cell source is not explicitly labeled as mouse in the quoted span."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ovariectomy-induced osteoporosis / bone loss",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "61",
+              "66",
+              "67",
+              "75",
+              "81",
+              "84",
+              "86",
+              "96",
+              "103",
+              "106"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "okanin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "82",
+              "83",
+              "104",
+              "105"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "OVX mice",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "68",
+              "110"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1588,
+            "passage_index": 1,
+            "quote": "OVX mice, okanin dose-dependently preserved trabecular bone architecture in OVX mice",
+            "start": 1500
+          },
+          {
+            "end": 2244,
+            "passage_index": 1,
+            "quote": "improving bone volume fraction (BV/TV), trabecular number (Tb.N), and thickness (Tb.Th), while reducing osteoclast numbers",
+            "start": 2122
+          }
+        ],
+        "experiment": {
+          "assay": "micro-CT, histological, and TRAP staining analyses",
+          "dose": "2 or 10 mg/kg",
+          "duration": "8 weeks",
+          "endpoint": "trabecular bone loss / osteoclast numbers / BV/TV, Tb.N, Tb.Th",
+          "intervention": "okanin (2 or 10 mg/kg, i.p.)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In OVX mice, okanin preserved trabecular bone architecture and reduced osteoclast numbers, indicating attenuation of bone loss.",
+        "uncertainties": [
+          "The passage describes improved bone microarchitecture and reduced osteoclast numbers; the specific causal path to bone loss attenuation is supported at the phenotype level, not as a direct molecular mechanism.",
+          "OVX is treated as an ovariectomy-induced osteoporosis model in the text, but the exact disease label in the annotations is unfilled."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        985,
+        1053
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1117,
+        1186
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1587,
+        1719
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1194,
+        1275
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        2122,
+        2244
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1589,
+        1677
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

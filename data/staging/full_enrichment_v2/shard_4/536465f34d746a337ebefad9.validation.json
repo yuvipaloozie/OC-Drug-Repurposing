@@ -1,0 +1,222 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "periodontitis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "48"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "EXO@Lip-Res",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "69",
+              "70"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Janus kinase 2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "71",
+              "72"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "signal transducer and activator of transcription 3",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "73"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:MAPK14",
+            "key": "e4",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "protein",
+            "surface": "p38 mitogen-activated protein kinase",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1751,
+            "passage_index": 1,
+            "quote": "Janus kinase 2 (JAK2)/signal transducer and activator of transcription 3 (STAT3) and p38 mitogen-activated protein kinase (MAPK) pathways",
+            "start": 1614
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "signaling pathway activity",
+          "intervention": "EXO@Lip-Res treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "EXO@Lip-Res treatment was reported to inhibit JAK2/STAT3 and p38 MAPK signaling pathways in the described anti-inflammatory context.",
+        "uncertainties": [
+          "The passage names JAK2/STAT3 and p38 MAPK together, but the exact subject-object pairing for each pathway component is not separately specified.",
+          "The provided existing-node suggestion for p38 MAPK may not match the species/context in this paper."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "periodontal tissues",
+          "disease_setting": "experimental periodontitis",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "48",
+              "51",
+              "54",
+              "56",
+              "74",
+              "79"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "EXO@Lip-Res",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast numbers",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "80",
+              "81"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "alveolar bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2128,
+            "passage_index": 1,
+            "quote": "rat model of experimental periodontitis demonstrated that EXO@Lip-Res treatment reduced alveolar bone loss by 30%, diminished inflammatory infiltrates, reduced osteoclast numbers",
+            "start": 1950
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast numbers",
+          "intervention": "EXO@Lip-Res treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In a rat model of experimental periodontitis, EXO@Lip-Res treatment reduced alveolar bone loss and reduced osteoclast numbers.",
+        "uncertainties": [
+          "The sentence combines multiple outcomes; the specific quantitative change applies to alveolar bone loss, while osteoclast numbers are reported as reduced without a numeric value.",
+          "No direct osteoclast differentiation or resorption assay is stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1614,
+        1751
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1748,
+        1880
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1950,
+        2128
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2084,
+        2248
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

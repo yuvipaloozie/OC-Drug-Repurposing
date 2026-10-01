@@ -1,0 +1,189 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoblast",
+          "compartment": "bone",
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "bone modeling and remodeling"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "21",
+              "23",
+              "29",
+              "32"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:SIRT1",
+            "key": "e1",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "Sirt1",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "pathway",
+            "surface": "glycolysis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1030,
+            "passage_index": 1,
+            "quote": "Sirt1 deletion inhibited glycolysis",
+            "start": 995
+          }
+        ],
+        "experiment": {
+          "assay": "metabolomics analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "glycolysis",
+          "intervention": "Tamoxifen-inducible osteoblast-specific Sirt1 conditional knockout (cKO) mice",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In osteoblast-specific Sirt1 conditional knockout mice, Sirt1 deletion was reported to inhibit glycolysis.",
+        "uncertainties": [
+          "The text states a cKO model in osteoblasts, but the exact molecular form of Sirt1 being perturbed is represented from gene annotations only.",
+          "Directness of the inhibition is not established beyond the reported statement."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoblast",
+          "compartment": "bone",
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "bone modeling and remodeling"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "21",
+              "23",
+              "29",
+              "32"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:SIRT1",
+            "key": "e1",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "Sirt1",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "30",
+              "31",
+              "33"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Glutamine oxaloacetic transaminase 1",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1137,
+            "passage_index": 1,
+            "quote": "directly binding to and increasing the acetylation level of Glutamine oxaloacetic transaminase 1 (GOT1)",
+            "start": 1034
+          }
+        ],
+        "experiment": {
+          "assay": "immunoprecipitation, gene knockout, and site-mutation experiments",
+          "dose": null,
+          "duration": null,
+          "endpoint": "acetylation level of GOT1",
+          "intervention": "Tamoxifen-inducible osteoblast-specific Sirt1 conditional knockout (cKO) mice",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "direct",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Sirt1 deletion was reported to increase the acetylation level of GOT1.",
+        "uncertainties": [
+          "The sentence combines direct binding with increased acetylation; the exact causal chain is not fully separable from the excerpt.",
+          "GOT1 is annotated as a gene here; the corresponding protein form is not explicitly stated in the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        995,
+        1030
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1078,
+        1114
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1034,
+        1137
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1118,
+        1219
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

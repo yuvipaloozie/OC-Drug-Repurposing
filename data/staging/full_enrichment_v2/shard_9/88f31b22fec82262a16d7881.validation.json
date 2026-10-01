@@ -1,0 +1,197 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "murine",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "beta-adrenoceptor signaling",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 739,
+            "passage_index": 1,
+            "quote": "experimental murine models, where beta-adrenoceptor signaling was shown to increase bone resorption",
+            "start": 640
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In experimental murine models, beta-adrenoceptor signaling was reported to increase bone resorption.",
+        "uncertainties": [
+          "The passage summarizes prior experimental findings rather than describing a new experiment in this article.",
+          "The specific beta-adrenoceptor subtype is not stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "PPGLs",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "32",
+              "40",
+              "43"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "PPGLs",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone mineral density (BMD)",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "trabecular bone score",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "serum C-terminal telopeptides",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1374,
+            "passage_index": 1,
+            "quote": "a few retrospective studies have evaluated bone turnover markers and bone mineral density (BMD) in these patients, consistently showing lower BMD and trabecular bone score, as well as elevated serum C-terminal telopeptides levels, compared to healthy controls with partial reversibility following surgical resection of the tumor",
+            "start": 1046
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone mineral density and related bone turnover markers",
+          "intervention": "surgical resection of the tumor",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In patients with PPGLs, retrospective studies consistently found lower BMD and trabecular bone score, with elevated serum C-terminal telopeptides levels compared with healthy controls, and partial reversibility after surgical resection of the tumor.",
+        "uncertainties": [
+          "This is a summary of retrospective studies, not a single primary experiment.",
+          "The quote combines multiple outcomes; only the stated comparisons are extracted."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        640,
+        739
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        750,
+        817
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1046,
+        1374
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1122,
+        1271
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

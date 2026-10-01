@@ -1,0 +1,228 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 monocyte/macrophage cell line",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "TSH",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "AMPK signaling pathway",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 71,
+            "passage_index": 0,
+            "quote": "AMPK signaling pathway.",
+            "start": 48
+          },
+          {
+            "end": 1293,
+            "passage_index": 1,
+            "quote": "TSH inhibits osteoclast differentiation by activating the AMPK signaling pathway",
+            "start": 1213
+          }
+        ],
+        "experiment": {
+          "assay": "RNA-seq sequencing",
+          "dose": null,
+          "duration": null,
+          "endpoint": "AMPK signaling pathway activity",
+          "intervention": "TSH",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The study reports that TSH activates the AMPK signaling pathway as the proposed mechanism for inhibiting osteoclast differentiation.",
+        "uncertainties": [
+          "The pathway activation is stated in the conclusion; the abstract also says TSH was 'targeted' to AMPK by RNA-seq, which is less specific than a direct mechanistic assay.",
+          "The exact abstract span in the packet is truncated in the evidence quote because offsets were not fully recoverable from the provided text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 monocyte/macrophage cell line",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "TSH",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [
+              "CVCL:0493"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "RAW264.7",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 71,
+            "passage_index": 0,
+            "quote": "TSH inhibits osteoclast differentiation through AMPK signaling pathway.",
+            "start": 0
+          },
+          {
+            "end": 899,
+            "passage_index": 1,
+            "quote": "In vitro, experiments confirmed that TSH inhibited osteoclast differentiation in mouse RAW264.7 monocyte",
+            "start": 795
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation",
+          "intervention": "TSH",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "TSH treatment inhibited osteoclast differentiation in a mouse RAW264.7 cell context.",
+        "uncertainties": [
+          "The quoted evidence for the abstract is truncated because the exact offset span was not fully recoverable from the supplied packet.",
+          "TSH is treated as a text-supported compound-like intervention here; the passage does not specify a molecular identifier."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        71
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        70
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        795,
+        899
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        835,
+        943
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        48,
+        71
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        48,
+        70
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1213,
+        1293
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1336,
+        1403
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,112 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Exercise",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": "CHEBI:29108",
+            "key": "e2",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "compound",
+            "surface": "circulating serum calcium",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "22"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "parathyroid hormone",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 224,
+            "passage_index": 1,
+            "quote": "Exercise can decrease circulating serum calcium and increase parathyroid hormone and bone resorption.",
+            "start": 123
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The abstract states that exercise can decrease circulating serum calcium and increase parathyroid hormone and bone resorption.",
+        "uncertainties": [
+          "This is a general background statement, not a reported result from the protocol.",
+          "The passage mentions additional effects on parathyroid hormone and bone resorption, but they are not encoded in this single regulatory claim."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        123,
+        224
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        195,
+        292
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

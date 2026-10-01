@@ -1,0 +1,186 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "type 2 diabetic mice",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "57",
+              "65",
+              "70",
+              "74"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "NR",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "64",
+              "71"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1068,
+            "passage_index": 1,
+            "quote": "NR effectively ameliorated insulin resistance, improved bone microarchitecture, and bone quality, reduced bone resorption",
+            "start": 947
+          },
+          {
+            "end": 1470,
+            "passage_index": 1,
+            "quote": "NR ameliorated the disorder of the oxidative phosphorylation process (OXPHOS) in diabetic mice",
+            "start": 1396
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone loss",
+          "intervention": "NR was administered to high-fat diet (HFD)/streptozotocin (STZ)-induced type 2 diabetic mice (T2DM)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In high-fat diet/streptozotocin-induced type 2 diabetic mice, nicotinamide riboside treatment reduced bone loss and improved bone microarchitecture and bone quality.",
+        "uncertainties": [
+          "The text reports multiple bone-related improvements; the extracted claim focuses on the explicitly stated reduction in bone loss.",
+          "Direct molecular target of NR in bone tissue is not established in the abstract."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "diabetic mice",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "57",
+              "65",
+              "70",
+              "74"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "NR",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "oxidative phosphorylation process (OXPHOS)",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1470,
+            "passage_index": 1,
+            "quote": "NR ameliorated the disorder of the oxidative phosphorylation process (OXPHOS) in diabetic mice",
+            "start": 1396
+          }
+        ],
+        "experiment": {
+          "assay": "RNA sequences were measured",
+          "dose": null,
+          "duration": null,
+          "endpoint": "OXPHOS disorder",
+          "intervention": "NR",
+          "outcome_change": "other",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In diabetic mice, nicotinamide riboside ameliorated the disorder of oxidative phosphorylation (OXPHOS).",
+        "uncertainties": [
+          "The abstract states improvement of OXPHOS disorder but does not specify a direct biochemical target or directionality at the molecular level."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        947,
+        1068
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        681,
+        715
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

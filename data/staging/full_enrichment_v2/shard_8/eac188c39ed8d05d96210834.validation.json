@@ -1,0 +1,346 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "41",
+              "44",
+              "46",
+              "60",
+              "62"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFRSF11B",
+            "key": "e1",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "protein",
+            "surface": "OPG",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "43",
+              "45",
+              "53",
+              "54",
+              "58",
+              "64"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:NFKB1",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "pathway",
+            "surface": "NF-kappaB",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "56"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:RELA",
+            "key": "e3",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "protein",
+            "surface": "p65",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "55"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:NFKBIA",
+            "key": "e4",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "protein",
+            "surface": "IkappaBalpha",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1159,
+            "passage_index": 1,
+            "quote": "Pyroptosis-related proteins (NLRP3, cleaved caspase-1, cleaved GSDMD) were upregulated. Transcriptomic analysis highlighted NF-kappaB pathway activation, confirmed by western blot (P-NF-kappaB, P-IkappaBalpha) and immunofluorescence (p65 nuclear translocation). Scanning electron microscopy directly visualized membrane rupture and pore formation, and bone resorption pit assays showed impaired resorptive function (P < 0.01). qRT-PCR validated downregulation of osteoclast marker genes and upregulation of pyroptosis-related genes.",
+            "start": 627
+          }
+        ],
+        "experiment": {
+          "assay": "western blot and immunofluorescence",
+          "dose": null,
+          "duration": null,
+          "endpoint": "NF-kappaB activation",
+          "intervention": "OPG treatment",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "OPG treatment was associated with activation of NF-kappaB signaling in osteoclasts, including phosphorylation events and p65 nuclear translocation.",
+        "uncertainties": [
+          "The text reports pathway activation and marker changes, but does not establish direct binding or a direct molecular target relationship.",
+          "Provider entity mapping for NF-kappaB is ambiguous because the text names a pathway while suggested nodes are individual proteins."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "59"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "QNZ",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "41",
+              "44",
+              "46",
+              "60",
+              "62"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFRSF11B",
+            "key": "e2",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "protein",
+            "surface": "OPG",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "42",
+              "49",
+              "57",
+              "61",
+              "63"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "pyroptosis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1219,
+            "passage_index": 1,
+            "quote": "The NF-kappaB inhibitor QNZ blocked OPG-induced pyroptosis.",
+            "start": 1160
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "OPG-induced pyroptosis",
+          "intervention": "QNZ",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The NF-kappaB inhibitor QNZ blocked OPG-induced pyroptosis in osteoclasts.",
+        "uncertainties": [
+          "The sentence reports blockade of OPG-induced pyroptosis, but does not specify whether QNZ acted directly on NF-kappaB in this experiment versus another upstream mechanism."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "41",
+              "44",
+              "46",
+              "60",
+              "62"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFRSF11B",
+            "key": "e1",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "protein",
+            "surface": "OPG",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "osteoclasts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "42",
+              "49",
+              "57",
+              "61",
+              "63"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "pyroptosis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 464,
+            "passage_index": 1,
+            "quote": "OPG induced pyroptosis in osteoclasts via the NF-kappaB pathway. Osteoclasts were treated with OPG",
+            "start": 364
+          },
+          {
+            "end": 626,
+            "passage_index": 1,
+            "quote": "and assessed for pyroptotic markers, NF-kappaB activation, morphology, and bone resorption. OPG dose-dependently decreased osteoclast viability, induced membrane rupture (LDH release, P < 0.01), and increased IL-18/IL-1beta secretion (P < 0.01).",
+            "start": 381
+          }
+        ],
+        "experiment": {
+          "assay": "LDH release assay",
+          "dose": "dose-dependent",
+          "duration": null,
+          "endpoint": "viability, membrane rupture, IL-18/IL-1beta secretion",
+          "intervention": "OPG treatment",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "OPG treatment of osteoclasts decreased viability and induced pyroptosis-associated membrane rupture and cytokine release.",
+        "uncertainties": [
+          "The abstract states osteoclasts were treated with OPG, but does not specify species or osteoclast origin.",
+          "LDH release and cytokine secretion are reported as pyroptosis-associated readouts rather than a direct mechanistic molecular target."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        381,
+        626
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        464,
+        614
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        627,
+        1159
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        615,
+        1002
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1160,
+        1219
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1228,
+        1297
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,3 +1,5 @@
+> Historical design comparison: schema counts, claimed curation status, and superiority statements below have not been independently validated and do not describe the current release. Use [the current quality report](RESOLUTION_QUALITY_PASS.md) for measured implementation status.
+
 > Historical pre-repair report. Superseded for current schema/readiness by [SCHEMA_AND_PROVENANCE_REPAIR.md](SCHEMA_AND_PROVENANCE_REPAIR.md). Claims of verification or benchmark readiness below were not independently established.
 
 # In-Depth Schema Comparison: Osteoclast Knowledge Graph (OCKG) vs. Published Benchmarks

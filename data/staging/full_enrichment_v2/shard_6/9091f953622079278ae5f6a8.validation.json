@@ -1,0 +1,180 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "progenitor cells of hematopoietic origin",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "18"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "(R)-TEMOSPho",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast maturation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 390,
+            "passage_index": 1,
+            "quote": "(R)-TEMOSPho], a derivative of an organic chemical identified from a natural product library, promotes highly efficient megakaryopoiesis. Here, we show that (R)-TEMOSPho blocks osteoclast maturation from progenitor cells of hematopoietic origin, as well as blocking the resorptive function of mature osteoclasts.",
+            "start": 78
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast maturation",
+          "intervention": "(R)-TEMOSPho",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The compound (R)-TEMOSPho blocks osteoclast maturation from hematopoietic progenitor cells and inhibits the resorptive function of mature osteoclasts.",
+        "uncertainties": [
+          "The passage also mentions inhibition of mature osteoclast resorptive function, but this is not separately encoded here.",
+          "Direct molecular target is described as downstream signaling of c-Fms, but the causal relation is presented in text as an explanation rather than a directly demonstrated binding event."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "inflammation-induced bone destruction",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "26"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "(R)-TEMOSPho",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "28"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone destruction",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 796,
+            "passage_index": 1,
+            "quote": "(R)-TEMOSPho blocked inflammation-induced bone destruction by reducing the numbers of osteoclasts produced in mice.",
+            "start": 681
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "inflammation-induced bone destruction",
+          "intervention": "(R)-TEMOSPho",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In mice, (R)-TEMOSPho reduces inflammation-induced bone destruction by reducing the numbers of osteoclasts produced.",
+        "uncertainties": [
+          "The reduction in osteoclast number is described as the apparent basis for reduced bone destruction, but the specific experimental assay is not stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        78,
+        390
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        272,
+        390
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        681,
+        796
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        871,
+        1005
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

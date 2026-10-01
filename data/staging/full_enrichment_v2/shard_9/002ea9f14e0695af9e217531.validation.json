@@ -1,0 +1,103 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "bone marrow",
+          "compartment": "bone marrow",
+          "disease_setting": "metastatic castration-resistant prostate cancer",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Proliferation of prostate cancer cells in the bone marrow",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "35"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteolysis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 316,
+            "passage_index": 1,
+            "quote": "Proliferation of prostate cancer cells in the bone marrow induces osteoclast activation and osteolysis.",
+            "start": 213
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast activation",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Prostate cancer cell proliferation in the bone marrow is described as inducing osteoclast activation and osteolysis.",
+        "uncertainties": [
+          "Abstract/review wording provides a general mechanistic statement rather than a primary experimental result.",
+          "The subject is a cellular process phrase rather than a single molecular entity."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        213,
+        316
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        286,
+        402
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

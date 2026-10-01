@@ -1,0 +1,232 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "protein",
+            "surface": "225RANKL295P",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "protein",
+            "surface": "225RANKL295A",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "56",
+              "57",
+              "58"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "TRAP activity",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption pit formation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1457,
+            "passage_index": 1,
+            "quote": "Results: The intact forms of 225RANKL295P and 225RANKL295A showed the strongest inhibitory effects on TRAP activity and bone resorption pit formation.",
+            "start": 1307
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP and bone resorption pit formation assays",
+          "dose": null,
+          "duration": null,
+          "endpoint": "TRAP activity and bone resorption pit formation",
+          "intervention": "intact forms of 225RANKL295P and 225RANKL295A",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The intact forms of 225RANKL295P and 225RANKL295A showed the strongest inhibitory effects on osteoclast-related TRAP activity and bone resorption pit formation.",
+        "uncertainties": [
+          "The passage reports strongest inhibitory effects for two variants together; it does not separate their individual magnitudes.",
+          "The exact molecular form and species of 225RANKL295P/225RANKL295A are not explicitly stated in the text beyond being RANKL-derived variants."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "1",
+              "34",
+              "35",
+              "40",
+              "43",
+              "50",
+              "53",
+              "59",
+              "60"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activity",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "36",
+              "37",
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e7",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RANK",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "38",
+              "39"
+            ],
+            "existing_node_id": null,
+            "key": "e8",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "LGR4",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 427,
+            "passage_index": 1,
+            "quote": "Osteoporosis is caused by excessive osteoclast activation via the receptor activator nuclear factor kappa B ligand (RANKL), which is released from osteoblasts or osteocytes. RANKL regulates osteoclast activity by binding to the receptor activator of nuclear factor kappa B (RANK) in the canonical pathway or leucine-rich repeat-containing G protein-coupled receptor 4 (LGR4) in the non-canonical pathway.",
+            "start": 23
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast activity regulation",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e6",
+          "sign": "positive",
+          "subject": "e5"
+        },
+        "summary": "RANKL regulates osteoclast activity by binding to RANK in the canonical pathway or LGR4 in the non-canonical pathway.",
+        "uncertainties": [
+          "This is a background mechanistic statement from the abstract, not an experimental perturbation result.",
+          "The text states binding partners and pathways, but directness of the regulation is not experimentally established here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1307,
+        1457
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1475,
+        1569
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        23,
+        427
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        162,
+        505
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

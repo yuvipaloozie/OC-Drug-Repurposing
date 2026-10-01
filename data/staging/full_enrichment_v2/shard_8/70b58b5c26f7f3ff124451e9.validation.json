@@ -1,0 +1,188 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mice",
+          "stage": "6-week-old"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "23"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Pellino-1",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "decreased bone mass",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 801,
+            "passage_index": 1,
+            "quote": "conditional Knockout (cKO) of Pellino-1 in 6-week-old mice resulted in decreased bone mass",
+            "start": 711
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone mass",
+          "intervention": "conditional Knockout (cKO) of Pellino-1",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Conditional knockout of Pellino-1 in 6-week-old mice was associated with decreased bone mass.",
+        "uncertainties": [
+          "The text links Pellino-1 cKO to decreased bone mass but does not specify the intermediate molecular mechanism."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow monocytes (BMMs)",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mice",
+          "stage": "6-week-old"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "23",
+              "28"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Pellino-1",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activity",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 807,
+            "passage_index": 1,
+            "quote": "the increased number of tartrate-resistant acid phosphatase (TRAP)-positive cells and serum levels of C-terminal telopeptides of type I collagen, a marker of bone resorption, in 6-week-old Pellino-1 cKO mice implied a connection between Pellino-1 and the osteoclast population",
+            "start": 611
+          },
+          {
+            "end": 1366,
+            "passage_index": 1,
+            "quote": "Enhanced TRAP activity and upregulation of osteoclast genes in BMMs from the cKO mice indicate that Pellino-1 deletion affects osteoclast differentiation",
+            "start": 1213
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP activity; serum C-terminal telopeptides of type I collagen; osteoclast gene expression",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast activity",
+          "intervention": "conditional Knockout (cKO) of Pellino-1",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Conditional knockout of Pellino-1 in 6-week-old mice was associated with increased osteoclast activity, including more TRAP-positive cells and higher serum C-terminal telopeptides of type I collagen.",
+        "uncertainties": [
+          "The passage combines multiple osteoclast-related readouts; it does not isolate a single direct molecular target."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        711,
+        801
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        502,
+        610
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1213,
+        1366
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        854,
+        964
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

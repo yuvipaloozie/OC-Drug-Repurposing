@@ -1,0 +1,216 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "39",
+              "44",
+              "46",
+              "48",
+              "49",
+              "53",
+              "55",
+              "60"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Compound I",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 698,
+            "passage_index": 1,
+            "quote": "Compound I required higher concentrations (100 nM) to inhibit differentiation and activity of osteoclasts.",
+            "start": 592
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "100 nM",
+          "duration": null,
+          "endpoint": "osteoclast differentiation and activity",
+          "intervention": "Compound I",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Compound I is reported to require higher concentration to inhibit osteoclast differentiation and activity.",
+        "uncertainties": [
+          "The text states inhibition at higher concentration, but does not separate effects on differentiation versus activity.",
+          "Directness is not established from the abstract alone."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "33",
+              "34"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:SRC",
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Src-null mice",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "35"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "36",
+              "37"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Abl-null mice",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "38"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteopenic",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 178,
+            "passage_index": 1,
+            "quote": "Src-null mice have higher bone mass because of decreased bone resorption and increased bone formation, whereas Abl-null mice are osteopenic, because of decreased bone formation. ",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption",
+          "intervention": null,
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Src-null mice are described as having higher bone mass because of decreased bone resorption and increased bone formation, while Abl-null mice are described as osteopenic because of decreased bone formation.",
+        "uncertainties": [
+          "The sentence is a background explanation rather than a dedicated experiment.",
+          "The exact mechanistic link between Src-null status and bone mass is stated as 'because of' in the source text, but no assay details are provided."
+        ]
+      },
+      "errors": [
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        178
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        263
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        592,
+        698
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        769,
+        875
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

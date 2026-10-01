@@ -1,0 +1,128 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "skeletal abnormalities",
+          "species": "broilers",
+          "stage": "early dietary supplementation"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "29"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "L-malic acid",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "36",
+              "40",
+              "44",
+              "46",
+              "47"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "TCA activity",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone health",
+            "taxon": "broilers"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1649,
+            "passage_index": 1,
+            "quote": "Early dietary supplementation with L-malic acid improved bone health in broilers by increasing TCA activity",
+            "start": 1542
+          },
+          {
+            "end": 1772,
+            "passage_index": 1,
+            "quote": "an increased OPG/RANKL ratio.",
+            "start": 1743
+          }
+        ],
+        "experiment": {
+          "assay": "multi-omics analyses",
+          "dose": null,
+          "duration": "early",
+          "endpoint": "TCA activity; bone health",
+          "intervention": "L-malic acid supplementation",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Early dietary L-malic acid supplementation improved bone health in broilers and was reported to increase TCA activity.",
+        "uncertainties": [
+          "The text links increased TCA activity to improved bone health, but does not specify a direct molecular target for L-malic acid.",
+          "OPG/RANKL ratio is mentioned as an outcome-related marker, but the passage does not specify the underlying entities' molecular forms beyond gene annotations."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1542,
+        1649
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1723,
+        1783
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1743,
+        1772
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1899,
+        1940
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

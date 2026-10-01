@@ -1,0 +1,208 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "PMOP",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "1"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Catharanthine tartrate",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "protein",
+            "surface": "HIF-1alpha",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 82,
+            "passage_index": 0,
+            "quote": "Catharanthine tartrate ameliorates osteoclastogenesis by destabilizing HIF-1alpha.",
+            "start": 0
+          },
+          {
+            "end": 1297,
+            "passage_index": 1,
+            "quote": "CAT inhibits PMOP through",
+            "start": 1272
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "Catharanthine Tartrate (CAT)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Catharanthine tartrate/CAT is reported to ameliorate osteoclastogenesis and the paper states this is via destabilizing HIF-1alpha.",
+        "uncertainties": [
+          "Title summarizes the mechanism but does not specify the experimental system.",
+          "The exact molecular target relationship for HIF-1alpha is stated as a mechanism, not a direct binding assay."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "PMOP",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "22",
+              "26",
+              "27",
+              "28",
+              "33",
+              "34"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "CAT",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "protein",
+            "surface": "HIF-1alpha",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 924,
+            "passage_index": 1,
+            "quote": "CAT inhibited osteoclast activity by enhancing the ubiquitination-mediated proteasomal degradation of HIF-1alpha, which reduced oxidative stress and subsequently suppressed osteoclast activity.",
+            "start": 731
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro",
+          "dose": null,
+          "duration": null,
+          "endpoint": "HIF-1alpha degradation / osteoclast activity",
+          "intervention": "Catharanthine Tartrate (CAT)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "CAT inhibited osteoclast activity by promoting ubiquitination-mediated proteasomal degradation of HIF-1alpha, which the abstract says reduced oxidative stress and suppressed osteoclast activity.",
+        "uncertainties": [
+          "The sentence combines HIF-1alpha degradation, oxidative stress, and osteoclast activity; only the degradation relation is directly encoded here.",
+          "Directness of the HIF-1alpha mechanism is not experimentally established in the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1272,
+        1297
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1355,
+        1383
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        731,
+        924
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        814,
+        985
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

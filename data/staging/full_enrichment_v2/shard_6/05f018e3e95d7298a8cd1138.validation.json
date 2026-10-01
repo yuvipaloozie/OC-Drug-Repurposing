@@ -1,0 +1,209 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "BMMs",
+          "compartment": null,
+          "disease_setting": "osteoclast differentiation / osteoclastogenesis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "730249"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:ACOD1",
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Irg1",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "BMMs",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "4772"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:NFATC1",
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Nfatc1",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "MESH:C005229"
+            ],
+            "existing_node_id": "CHEBI:30805",
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "itaconate",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 541,
+            "passage_index": 1,
+            "quote": "Irg1-deficiency BMMs, along with the expression of genes associated with osteoclastogenesis. Irg1 knockout promoted the expression of Nfatc1 and F-actin ring formation, with the inhibited production of itaconate.",
+            "start": 329
+          }
+        ],
+        "experiment": {
+          "assay": "RNA-seq and in vitro osteoclast differentiation analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation; Nfatc1 expression; F-actin ring formation; itaconate production",
+          "intervention": "Irg1-deficiency / Irg1 knockout",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Irg1 deficiency/knockout increased osteoclast differentiation in BMMs and promoted expression of osteoclastogenesis-related genes, including Nfatc1, with reduced itaconate production.",
+        "uncertainties": [
+          "The passage combines multiple outcomes from the same perturbation; the primary regulated object is stated as osteoclastogenesis-related gene expression, while the sign for itaconate production is inferred from the wording 'inhibited production'.",
+          "The molecular form of BMMs is not specified in the text."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoclastogenesis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "730249"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:ACOD1",
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Irg1",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "2869"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Grk5",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 709,
+            "passage_index": 1,
+            "quote": "we proved that Grk5 expression was increased the most. Inhibition of Grk5 attenuated the effect of Irg1 in the osteoclastogenesis.",
+            "start": 579
+          }
+        ],
+        "experiment": {
+          "assay": "RNA-seq; osteoclastogenesis assay",
+          "dose": null,
+          "duration": null,
+          "endpoint": "Grk5 expression; osteoclastogenesis",
+          "intervention": "Irg1 knockout; Grk5 inhibition",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Grk5 expression increased after Irg1 knockout, and inhibiting Grk5 attenuated the osteoclastogenic effect of Irg1 loss.",
+        "uncertainties": [
+          "The specific Grk5 inhibition method is not stated.",
+          "The text does not separate whether the increased Grk5 expression and the attenuation by Grk5 inhibition come from the same experimental setup."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        329,
+        541
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        243,
+        378
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        579,
+        709
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        651,
+        740
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

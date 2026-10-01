@@ -1,0 +1,225 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "stromal cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "42",
+              "43",
+              "47",
+              "51",
+              "58",
+              "67",
+              "72",
+              "73"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "DHA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "48",
+              "49",
+              "66",
+              "74"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "TNF-alpha",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "stromal-dependent osteoclast formation and bone resorption",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "45",
+              "46",
+              "50",
+              "53",
+              "55",
+              "57",
+              "59",
+              "62",
+              "69",
+              "71",
+              "75"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "GPR120",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1443,
+            "passage_index": 1,
+            "quote": "We summarized that DHA suppressed TNF-alpha-induced stromal-dependent osteoclast formation and bone resorption via GPR120.",
+            "start": 1321
+          }
+        ],
+        "experiment": {
+          "assay": "histological and microfocus computed tomography analyses",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast formation and bone resorption",
+          "intervention": "DHA",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e5",
+          "sign": "negative",
+          "subject": "e3"
+        },
+        "summary": "DHA was summarized as suppressing TNF-alpha-induced stromal-dependent osteoclast formation and bone resorption via GPR120.",
+        "uncertainties": [
+          "This sentence is a summary/conclusion statement in the abstract; it does not by itself specify the exact underlying assay-level mechanism.",
+          "The role of GPR120 is stated as part of the summary, but the directness of the DHA-GPR120 relationship is not established here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "stromal cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "107221"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "GPR120",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast number and bone resorption",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1260,
+            "passage_index": 1,
+            "quote": "Osteoclast number and bone resorption were found to be significantly increased in chimeric mice, which did not express GPR120 in stromal cells, compared to chimeric mice, which expressed GPR120 in stromal cells.",
+            "start": 1049
+          }
+        ],
+        "experiment": {
+          "assay": "histological and microfocus computed tomography analyses",
+          "dose": "TNF-alpha injection",
+          "duration": null,
+          "endpoint": "osteoclast number and bone resorption",
+          "intervention": "did not express GPR120 in stromal cells",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In stromal cells, lack of GPR120 was associated with increased osteoclast number and bone resorption compared with stromal cells that expressed GPR120.",
+        "uncertainties": [
+          "The quoted passage describes a chimeric-mouse comparison rather than a direct molecular assay of GPR120 activity.",
+          "The exact causal contribution of stromal-cell GPR120 versus other chimeric compartments is not fully resolved in the abstract."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1049,
+        1260
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1065,
+        1216
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1321,
+        1443
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1466,
+        1599
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

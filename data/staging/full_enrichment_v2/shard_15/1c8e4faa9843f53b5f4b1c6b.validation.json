@@ -1,0 +1,189 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "alveolar bone and periodontal ligament",
+          "disease_setting": "orthodontic tooth movement",
+          "species": "rat",
+          "stage": "pubertal"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "testosterone deficiency",
+            "taxon": "Rattus norvegicus"
+          },
+          {
+            "annotation_ids": [
+              "24"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "high-dose AAS",
+            "taxon": "Rattus norvegicus"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone microarchitecture",
+            "taxon": "Rattus norvegicus"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "root resorption",
+            "taxon": "Rattus norvegicus"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1239,
+            "passage_index": 1,
+            "quote": "Both testosterone deficiency and high-dose AAS lead to significant changes in bone microarchitecture, resulting in reduced trabecular thickness, decreased bone connectivity, and bone lacunae. Testosterone dysfunction was associated with greater rotation and intrusion of the moved tooth. High-dose AAS intensified the inflammatory infiltrate and root resorption.",
+            "start": 877
+          }
+        ],
+        "experiment": {
+          "assay": "micro-CT, RT-qPCR, immunohistochemistry",
+          "dose": "replacement and high doses",
+          "duration": "5 and 10 days post-OTM",
+          "endpoint": "bone microarchitecture and root resorption",
+          "intervention": "orchiectomy; testosterone undecanoate replacement and high-dose administration",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Testosterone dysfunction in the rat orthodontic-tooth-movement model was associated with worsened bone-related phenotypes, including reduced trabecular thickness, decreased bone connectivity, bone lacunae, and increased root resorption/inflammation at high-dose AAS exposure.",
+        "uncertainties": [
+          "The quoted sentence combines multiple outcomes from different perturbations; the direction for the specific link from testosterone deficiency to each individual microarchitectural change is summarized at a high level.",
+          "The claim includes high-dose AAS effects, but the regulatory subject is represented as testosterone deficiency because the sentence aggregates both perturbations."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "alveolar bone and periodontal ligament",
+          "disease_setting": "orthodontic tooth movement",
+          "species": "rat",
+          "stage": "pubertal"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "testosterone disturbances",
+            "taxon": "Rattus norvegicus"
+          },
+          {
+            "annotation_ids": [
+              "34",
+              "35"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "Rank/Rankl/Opg pathway",
+            "taxon": "Rattus norvegicus"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1588,
+            "passage_index": 1,
+            "quote": "Testosterone dysfunction altered the expression of key genes involved in bone metabolism, including Runx2, Bmp2, Spp1, and Bglap. The Rank/Rankl/Opg pathway was also deregulated due to testosterone disturbances. AAS at replacement doses did not normalize the inflammatory infiltrate, OTM, and the expression of the studied genes to control levels.",
+            "start": 1218
+          }
+        ],
+        "experiment": {
+          "assay": "RT-qPCR",
+          "dose": "replacement and high doses",
+          "duration": "5 and 10 days post-OTM",
+          "endpoint": "gene expression and pathway deregulation",
+          "intervention": "orchiectomy; testosterone undecanoate replacement and high-dose administration",
+          "outcome_change": "other",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Testosterone disturbances altered expression of bone-metabolism genes and deregulated the Rank/Rankl/Opg pathway in the orthodontic movement model.",
+        "uncertainties": [
+          "The sentence names multiple genes, but only the Rank/Rankl/Opg pathway is modeled as a claim target here.",
+          "The pathway deregulation is stated, but the exact direction of change (up or down) is not specified."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        877,
+        1239
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        552,
+        762
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

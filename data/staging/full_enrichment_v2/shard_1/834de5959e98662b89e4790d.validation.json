@@ -1,0 +1,195 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "arthritis",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "31",
+              "32",
+              "33",
+              "46",
+              "49",
+              "58"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "arthritis group",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "47",
+              "48",
+              "51",
+              "53",
+              "56"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone formation markers (N-MID, Total-P1NP, OC, BSAP)",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1014,
+            "passage_index": 1,
+            "quote": "Bone formation markers (N-MID, Total-P1NP, OC, BSAP) were lower, and bone resorption markers",
+            "start": 922
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone formation markers",
+          "intervention": null,
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In the arthritis group, bone formation markers were lower than in healthy controls.",
+        "uncertainties": [
+          "The text reports a group comparison, not a specific causal mechanism.",
+          "The marker set includes several biomarkers; individual marker-level effects are not separated in the sentence."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "arthritis",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "31",
+              "32",
+              "33",
+              "46",
+              "49",
+              "58"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "arthritis group",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption markers (beta-CrossLaps, CTX-I)",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1073,
+            "passage_index": 1,
+            "quote": "bone resorption markers (beta-CrossLaps, CTX-I) were higher in the arthritis group",
+            "start": 991
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption markers",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In the arthritis group, bone resorption markers were higher than in healthy controls.",
+        "uncertainties": [
+          "The text reports a group comparison, not a causal effect.",
+          "The marker set includes multiple biomarkers; the increase is not resolved at the individual marker level in this sentence."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        922,
+        1014
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        895,
+        984
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        991,
+        1073
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        959,
+        1022
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

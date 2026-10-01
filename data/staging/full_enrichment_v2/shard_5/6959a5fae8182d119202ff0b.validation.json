@@ -1,0 +1,102 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "mesenchymal-type cells",
+          "compartment": "mouse muscle tissue",
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Bone morphogenetic protein",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "mesenchymal-type cells",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoprogenitor cells",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 126,
+            "passage_index": 1,
+            "quote": "Bone morphogenetic protein (BMP) irreversibly induced the differentiation of mesenchymal-type cells into osteoprogenitor cells",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "differentiation of mesenchymal-type cells into osteoprogenitor cells",
+          "intervention": "BMP",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Bone morphogenetic protein irreversibly induced differentiation of mesenchymal-type cells into osteoprogenitor cells in mice.",
+        "uncertainties": [
+          "The passage reports differentiation outcome, not a molecular mechanism or direct target interaction.",
+          "BMP is named as the inducing factor, but the exact molecular form is not specified beyond the text.",
+          "The species context is inferred from the passage and the provided mouse annotation; the cellular taxon for mesenchymal-type and osteoprogenitor cells is not explicitly specified separately."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        126
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        93
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

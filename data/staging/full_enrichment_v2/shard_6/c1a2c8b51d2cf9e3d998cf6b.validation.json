@@ -1,0 +1,179 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "diabetic and non-diabetic populations",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "15"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Metformin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption markers",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1252,
+            "passage_index": 1,
+            "quote": "Metformin significantly reduced both bone resorption, bone formation markers",
+            "start": 1176
+          }
+        ],
+        "experiment": {
+          "assay": "random-effects meta-analysis of clinical trials",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption markers",
+          "intervention": "metformin",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Metformin treatment was associated with reduced bone resorption markers in clinical trials.",
+        "uncertainties": [
+          "The passage reports surrogate biomarker changes, not direct bone outcomes.",
+          "The quote combines resorption and formation markers; the specific resorption clause is summarized from the stated result."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "diabetic and non-diabetic populations",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "15"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Metformin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone formation markers",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1252,
+            "passage_index": 1,
+            "quote": "Metformin significantly reduced both bone resorption, bone formation markers",
+            "start": 1176
+          }
+        ],
+        "experiment": {
+          "assay": "random-effects meta-analysis of clinical trials",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone formation markers",
+          "intervention": "metformin",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Metformin treatment was associated with reduced bone formation markers in clinical trials.",
+        "uncertainties": [
+          "The passage reports surrogate biomarker changes, not direct bone outcomes.",
+          "The quote combines resorption and formation markers; the specific formation clause is summarized from the stated result."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1176,
+        1252
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1466,
+        1531
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1176,
+        1252
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1466,
+        1531
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

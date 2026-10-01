@@ -1,0 +1,260 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "40",
+              "52",
+              "53",
+              "63",
+              "69",
+              "70"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "ferroptosis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "3",
+              "38",
+              "54",
+              "62",
+              "64",
+              "71"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoporosis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 115,
+            "passage_index": 0,
+            "quote": "Ferroptosis-mediated osteoclast-osteoblast crosstalk: signaling pathways governing bone remodeling in osteoporosis.",
+            "start": 0
+          },
+          {
+            "end": 347,
+            "passage_index": 1,
+            "quote": "ferroptosis, an iron-dependent form of regulated cell death driven by lipid peroxidation, in this process.",
+            "start": 241
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The review states that ferroptosis is implicated in osteoporosis and linked to osteoclast-osteoblast crosstalk during bone remodeling.",
+        "uncertainties": [
+          "The passage is a review/title-level statement, so this is an association rather than a direct experimental causal result.",
+          "Osteoclast-osteoblast crosstalk is mentioned in the title but not mechanistically resolved in the abstract text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "65"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "iron overload",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "46",
+              "47",
+              "48",
+              "66"
+            ],
+            "existing_node_id": "CHEBI:26523",
+            "key": "e4",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "compound",
+            "surface": "reactive oxygen species",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "43",
+              "44",
+              "56",
+              "67"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "GPX4",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "51",
+              "68"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "lipid peroxidation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1490,
+            "passage_index": 1,
+            "quote": "Mechanistically, iron overload promotes ROS production via the Fenton reaction, inactivates GPX4, and triggers a lipid peroxidation cascade.",
+            "start": 1350
+          },
+          {
+            "end": 678,
+            "passage_index": 1,
+            "quote": "Key molecular hallmarks include glutathione peroxidase 4 (GPX4) inactivation and the intracellular generation of unstable hydroxyl radicals and reactive oxygen species (ROS) accumulation. These accumulated ROS further participate in the oxidation of polyunsaturated fatty acids (PUFAs), generating and accumulating lipid peroxides",
+            "start": 348
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "ROS production",
+          "intervention": "iron overload",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "positive",
+          "subject": "e3"
+        },
+        "summary": "The review states that iron overload promotes ROS production via the Fenton reaction, inactivates GPX4, and triggers lipid peroxidation, which contributes to ferroptosis.",
+        "uncertainties": [
+          "The text summarizes mechanisms in a review; it does not report a primary experiment here.",
+          "GPX4 inactivation and lipid peroxidation are stated as mechanistic hallmarks, but the exact causal direction between each step and ferroptosis is summarized rather than experimentally demonstrated in this passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        115
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        113
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        241,
+        347
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        357,
+        463
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1350,
+        1490
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1472,
+        1638
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        348,
+        678
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        579,
+        821
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

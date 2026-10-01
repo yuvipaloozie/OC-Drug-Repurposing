@@ -1,0 +1,378 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "mitochondria",
+          "disease_setting": "ionizing radiation exposure",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "IR exposure",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "mitochondrial activity",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "39",
+              "42",
+              "46",
+              "47"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ROS",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "osteoclasts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "40",
+              "49"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:SIRT3",
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Sirt3",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 901,
+            "passage_index": 1,
+            "quote": "IR exposure also increased mitochondrial activity and ROS production in osteoclasts.",
+            "start": 817
+          },
+          {
+            "end": 959,
+            "passage_index": 1,
+            "quote": "Deletion of Sirt3 abrogated these effects of IR exposure.",
+            "start": 902
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "mitochondrial activity and ROS production",
+          "intervention": "IR exposure; Sirt3 deletion",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Ionizing radiation increased mitochondrial activity and ROS production in osteoclasts, and Sirt3 deletion abrogated these effects.",
+        "uncertainties": [
+          "The text states increased mitochondrial activity and ROS production together; the specific direction of each sub-effect is explicit, but the causal mechanism is not.",
+          "Sirt3 deletion is described as abrogating the IR effects; the direct target relationship is not experimentally dissected here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "mitochondria",
+          "disease_setting": "ionizing radiation exposure",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "48"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Mito-TEMPO",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "46",
+              "47"
+            ],
+            "existing_node_id": "CHEBI:26523",
+            "key": "e2",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "phenotype",
+            "surface": "mitochondrial ROS production",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "49"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:SIRT3",
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Sirt3",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast maturation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1417,
+            "passage_index": 1,
+            "quote": "Mito-TEMPO",
+            "start": 1407
+          },
+          {
+            "end": 1461,
+            "passage_index": 1,
+            "quote": "Inhibition of mitochondrial ROS production via Mito-TEMPO recapitulated the effects of Sirt3 deletion",
+            "start": 1360
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "mitochondrial ROS production; osteoclast maturation and mitochondrial activity",
+          "intervention": "Mito-TEMPO",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Inhibition of mitochondrial ROS production with Mito-TEMPO recapitulated the effects of Sirt3 deletion on osteoclast maturation and mitochondrial activity during ionizing radiation exposure.",
+        "uncertainties": [
+          "The quote says the treatment recapitulated Sirt3 deletion effects, but the text does not establish a direct molecular target beyond mitochondrial ROS inhibition."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "ionizing radiation exposure-induced bone disorders",
+          "species": "mice",
+          "stage": "young adult"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "36"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:SIRT3",
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Sirt3",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "37"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "loss of bone mass",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast maturation and function",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 840,
+            "passage_index": 1,
+            "quote": "Deletion of Sirt3 greatly attenuated the IR exposure-induced loss of bone mass in young adult mice.",
+            "start": 742
+          },
+          {
+            "end": 816,
+            "passage_index": 1,
+            "quote": "This effect was associated with impaired osteoclast maturation and function, thus suppressing excessive bone resorption.",
+            "start": 696
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "loss of bone mass",
+          "intervention": "deletion of Sirt3",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Deletion of Sirt3 attenuated ionizing radiation-induced loss of bone mass in young adult mice, with associated impairment of osteoclast maturation and function.",
+        "uncertainties": [
+          "The sentence links impaired osteoclast maturation/function as an associated consequence rather than a separate tested causal step.",
+          "Existing-node suggestion maps SIRT3 to a protein node, but the text/annotation support is gene-level; keep molecular form as gene."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        696,
+        816
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        841,
+        960
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        817,
+        901
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        960,
+        1057
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        902,
+        959
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1058,
+        1104
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1407,
+        1417
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1541,
+        1551
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1360,
+        1461
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1522,
+        1604
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

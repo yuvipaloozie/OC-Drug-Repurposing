@@ -1,0 +1,99 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "calvarial bone cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "embryo"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "16"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Genistein",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "13",
+              "14",
+              "15",
+              "17"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 599,
+            "passage_index": 1,
+            "quote": "Genistein, a potent inhibitor of tyrosine kinase, markedly inhibited bone resorption stimulated by the fimbriae.",
+            "start": 487
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption stimulated by the fimbriae",
+          "intervention": "Genistein",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Genistein inhibited bone resorption stimulated by Porphyromonas gingivalis fimbriae in vitro.",
+        "uncertainties": [
+          "The exact molecular target of genistein is not established here; the text states only that it is a tyrosine kinase inhibitor.",
+          "The quoted evidence links genistein to inhibition of fimbria-stimulated bone resorption, not necessarily a direct effect on osteoclasts specifically."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        487,
+        599
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        601,
+        713
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

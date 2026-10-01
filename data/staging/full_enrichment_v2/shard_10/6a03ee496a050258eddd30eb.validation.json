@@ -1,0 +1,103 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoblasts",
+          "compartment": "bone",
+          "disease_setting": "osteopenic ovariectomized rats",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "29"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ADP-1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "receptor-activator of nuclear kappa B ligand",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoblasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1197,
+            "passage_index": 1,
+            "quote": "Additionally, ADP-1 suppressed the production of receptor-activator of nuclear kappa B ligand from osteoblasts",
+            "start": 1087
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "production of receptor-activator of nuclear kappa B ligand",
+          "intervention": "ADP-1",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "ADP-1 suppressed production of receptor-activator of nuclear kappa B ligand from osteoblasts, which the authors describe as contributing to reduced osteoclast function.",
+        "uncertainties": [
+          "The quoted span is a partial sentence and does not include the downstream clause about osteoclast function.",
+          "The molecule named receptor-activator of nuclear kappa B ligand is not explicitly annotated in the packet."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1087,
+        1197
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        893,
+        1002
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

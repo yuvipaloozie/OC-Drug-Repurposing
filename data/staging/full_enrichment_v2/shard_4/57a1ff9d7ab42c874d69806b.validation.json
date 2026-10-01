@@ -1,0 +1,147 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "bone metastatic breast cancer",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "52",
+              "60",
+              "62",
+              "64",
+              "72",
+              "75",
+              "77"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "L: -serine",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "human osteoclasts",
+            "taxon": "9606"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 96,
+            "passage_index": 0,
+            "quote": "Enhanced serine production by bone metastatic breast cancer cells stimulates osteoclastogenesis.",
+            "start": 0
+          },
+          {
+            "end": 1125,
+            "passage_index": 1,
+            "quote": "In addition, we observed that L: -serine is essential",
+            "start": 1072
+          },
+          {
+            "end": 1179,
+            "passage_index": 1,
+            "quote": "for the formation of bone resorbing human osteoclasts",
+            "start": 1126
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "formation of bone resorbing human osteoclasts / osteoclastogenesis",
+          "intervention": "L: -serine",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "L-serine is reported to stimulate osteoclastogenesis / formation of bone-resorbing human osteoclasts.",
+        "uncertainties": [
+          "The text states an essential/stimulating role but does not provide a specific dose, duration, or assay.",
+          "Directness is not established; the mechanism could be indirect."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        96
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        94
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1072,
+        1125
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        734,
+        784
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1126,
+        1179
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        786,
+        830
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

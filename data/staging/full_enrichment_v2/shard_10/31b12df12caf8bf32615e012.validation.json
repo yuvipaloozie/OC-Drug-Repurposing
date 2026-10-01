@@ -1,0 +1,222 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW 264.7 cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": "differentiating"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "16846"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "leptin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "pro-inflammatory mediators",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "CVCL:0493"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "RAW 264.7 cells",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 158,
+            "passage_index": 1,
+            "quote": "Leptin",
+            "start": 152
+          },
+          {
+            "end": 1113,
+            "passage_index": 1,
+            "quote": "The expression of inflammatory mediators was increased in differentiating RAW 264.7 cells.",
+            "start": 1023
+          },
+          {
+            "end": 1531,
+            "passage_index": 1,
+            "quote": "leptin can stimulate the expression of pro-inflammatory mediators in differentiating osteoclasts.",
+            "start": 1434
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "expression of pro-inflammatory mediators",
+          "intervention": "leptin stimulation",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Leptin increased expression of pro-inflammatory mediators in differentiating RAW 264.7 cells.",
+        "uncertainties": [
+          "The text does not specify which inflammatory mediators were measured.",
+          "Leptin is tagged as a gene by the provider, but the passage describes it as a hormone; molecular form is treated as a protein candidate."
+        ]
+      },
+      "errors": [
+        "invented annotation ID",
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "negated_relation",
+        "context": {
+          "cell_type": "RAW 264.7 cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": "differentiation"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "16846"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "leptin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 914,
+            "passage_index": 1,
+            "quote": "The findings revealed that leptin did not substantially affect osteoclastogenesis",
+            "start": 833
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "leptin",
+          "outcome_change": "no_detected_change",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Leptin did not substantially affect osteoclastogenesis.",
+        "uncertainties": [
+          "The phrase says 'did not substantially affect', which is a negative result rather than proof of no biology.",
+          "The exact experimental quantification is not stated in the abstract."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1023,
+        1113
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1138,
+        1231
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1434,
+        1531
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1738,
+        1815
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        833,
+        914
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1005,
+        1075
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

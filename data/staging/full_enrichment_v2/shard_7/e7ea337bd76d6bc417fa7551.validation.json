@@ -1,0 +1,199 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW/C4",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "32"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "RNA",
+            "surface": "Epha4 small interfering RNAs",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "average size",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "33"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "RNA",
+            "surface": "Ctsk mRNA expression level",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 306,
+            "passage_index": 1,
+            "quote": "Epha4 small interfering RNAs (siRNAs) increased average size, Ctsk mRNA expression level, and bone resorption activity",
+            "start": 188
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "average size, Ctsk mRNA expression level, and bone resorption activity",
+          "intervention": "Epha4 small interfering RNAs (siRNAs)",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e4",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In RAW/C4 cells, Epha4 siRNA treatment increased osteoclast-like cell size, Ctsk mRNA expression, and bone resorption activity.",
+        "uncertainties": [
+          "The quote supports increased size, Ctsk mRNA expression, and bone resorption activity, but the regulatory object was simplified to bone resorption activity.",
+          "Cell line is annotated as RAW/C4, but the osteoclast-like state is described in text rather than by a formal cell-type label in the packet."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclast precursors",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "35"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "EfnA4-fc chimeric protein",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "cell size and resorption activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 476,
+            "passage_index": 1,
+            "quote": "with EfnA4-fc chimeric protein reduced cell size and resorption activity",
+            "start": 404
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "cell size and resorption activity",
+          "intervention": "EfnA4-fc chimeric protein",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Activation of EphA4 signaling with EfnA4-fc chimeric protein reduced osteoclast cell size and resorption activity in osteoclast precursors.",
+        "uncertainties": [
+          "The passage says the treatment activates EphA4 signaling, but the specific molecular form mediating the effect is the EfnA4-fc chimeric protein as written.",
+          "The evidence span is a fragment from the sentence and does not include the full antecedent phrase 'Activation of the EphA4 signaling in osteoclast precursors'."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        188,
+        306
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        257,
+        375
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        404,
+        476
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        462,
+        545
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

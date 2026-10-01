@@ -1,0 +1,213 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "on dentine discs",
+          "disease_setting": null,
+          "species": null,
+          "stage": "mature osteoclasts"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "extracellular pH",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast resorptive activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 140,
+            "passage_index": 1,
+            "quote": "Osteoclast activity is regulated by extracellular pH, whereby bone resorption is near-maximally activated at pH 7.0 but limited at >=pH 7.4.",
+            "start": 0
+          },
+          {
+            "end": 470,
+            "passage_index": 1,
+            "quote": "This study examined the effects of low pH on osteoclast fusion, multi-nucleation, resorption and cell transcriptome. Osteoclasts were cultured on dentine discs at pH 7.4 (control) or pH 7.0 (acidified) for 5-7 days. Osteoclast number and resorptive activity were 1.9-fold and 6.7-fold higher, respectively, in acidified cultures.",
+            "start": 141
+          }
+        ],
+        "experiment": {
+          "assay": "culture on dentine discs",
+          "dose": "pH 7.0 versus pH 7.4",
+          "duration": "5-7 days",
+          "endpoint": "osteoclast number and resorptive activity",
+          "intervention": "pH 7.0 acidified versus pH 7.4 control culture conditions",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Culturing osteoclasts under acidified extracellular pH increased osteoclast number and resorptive activity compared with pH 7.4 control cultures.",
+        "uncertainties": [
+          "Extracellular pH is treated as an experimental condition rather than a molecular effector.",
+          "The text also reports decreased cell size and nuclei per cell, which are not captured in this claim."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": "mature osteoclasts"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "acidified conditions",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast size and nuclei per cell",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 763,
+            "passage_index": 1,
+            "quote": "However, acidified osteoclasts were smaller, with fewer nuclei than controls (53 mum diameter with 9 +- 1 nuclei/cell versus 100 mum with 24 +- 3 nuclei/cell). mRNA expression analysis revealed that osteoclast formation and resorption-associated genes were increased in acidified osteoclasts.",
+            "start": 471
+          },
+          {
+            "end": 1099,
+            "passage_index": 1,
+            "quote": "Switching mature osteoclasts formed for 5 days at pH 7.4 to acidified conditions decreased cell size 30 % within 4 h, resulting in a 2-fold increase in osteoclast numbers after 24 h. Resorptive activity in cells switched to pH 7.0 was visible within 8 h, and by 24 h resorption area was comparable to continually acidified osteoclasts.",
+            "start": 764
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "pH 7.0 versus pH 7.4",
+          "duration": "within 4 h; nuclei/number changes reported at 24 h",
+          "endpoint": "cell size and nuclei per cell",
+          "intervention": "switching mature osteoclasts from pH 7.4 to acidified conditions",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Acidified extracellular pH reduced osteoclast size and the number of nuclei per cell, consistent with reduced fusion/multinucleation.",
+        "uncertainties": [
+          "The relationship to fusion/multinucleation is inferred from fewer nuclei per cell, not directly measured as a molecular mechanism.",
+          "The same passage also reports increased osteoclast numbers after switching, which is not the primary endpoint of this claim."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        140
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        123
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        141,
+        470
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        123,
+        329
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        471,
+        763
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        329,
+        524
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        764,
+        1099
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        524,
+        744
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

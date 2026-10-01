@@ -1,0 +1,183 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "hens",
+          "stage": "19-week-old"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "13",
+              "16",
+              "17"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "D. officinale leaf powder",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "VEGFA",
+            "taxon": "9031"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1082,
+            "passage_index": 1,
+            "quote": "Tibial and femoral bone strength and mineral density did not differ significantly among treatments (p > 0.05). However, tibial breaking strength displayed upward trends in both supplemented groups (p = 0.08), and similar tendencies were observed for femoral bone mineral content and bone density (p = 0.08). At the molecular level, dietary supplementation produced selective changes in gene expression. The low-dose diet significantly increased VEGFA expression (p < 0.05)",
+            "start": 610
+          }
+        ],
+        "experiment": {
+          "assay": "gene expression",
+          "dose": "1200 mg/kg",
+          "duration": "16 weeks",
+          "endpoint": "VEGFA expression",
+          "intervention": "dietary supplementation with 1200 mg/kg D. officinale leaf powder",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Dietary D. officinale leaf powder supplementation in laying hens increased VEGFA expression in the low-dose group.",
+        "uncertainties": [
+          "The quoted span contains the outcome but not the full treatment-arm sentence; the intervention is supported by nearby passage text.",
+          "The molecular form of the dietary supplement is not fully specified beyond leaf powder."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "hens",
+          "stage": "19-week-old"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "13",
+              "16",
+              "17"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "D. officinale leaf powder",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "TGF-beta1",
+            "taxon": "9031"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1176,
+            "passage_index": 1,
+            "quote": "The low-dose diet significantly increased VEGFA expression (p < 0.05), whereas the high-dose diet resulted in significantly higher TGF-beta1 expression (p < 0.05).",
+            "start": 1013
+          }
+        ],
+        "experiment": {
+          "assay": "gene expression",
+          "dose": "3600 mg/kg",
+          "duration": "16 weeks",
+          "endpoint": "TGF-beta1 expression",
+          "intervention": "dietary supplementation with 3600 mg/kg D. officinale leaf powder",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Dietary D. officinale leaf powder supplementation in laying hens increased TGF-beta1 expression in the high-dose group.",
+        "uncertainties": [
+          "The treatment arm is inferred from the preceding passage context linking low-dose and high-dose diets to 1200 and 3600 mg/kg supplementation.",
+          "The molecular form of the dietary supplement is not fully specified beyond leaf powder."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        610,
+        1082
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        608,
+        1078
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1013,
+        1176
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1009,
+        1100
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,237 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "64177"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Trpv6",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "MESH:D010024"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoporosis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D014091"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone formation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1319,
+            "passage_index": 1,
+            "quote": "knockout of Trpv6 induced osteoporosis and enhanced bone resorption in mice, but did not affect bone formation.",
+            "start": 1208
+          }
+        ],
+        "experiment": {
+          "assay": "micro-computed tomography and histological analyses",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoporosis and bone resorption",
+          "intervention": "knockout of Trpv6",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In mice, Trpv6 knockout induced osteoporosis and increased bone resorption without affecting bone formation.",
+        "uncertainties": [
+          "The text reports two outcomes together; the exact causal split between osteoporosis and increased bone resorption is not separately quantified.",
+          "Bone formation is mentioned as unaffected, but no separate mechanistic claim is extracted for that negated result."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "cell membrane",
+          "disease_setting": null,
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "64177"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Trpv6",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation and function",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "11651"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "IGF-PI3K-AKT signalling pathway",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1488,
+            "passage_index": 1,
+            "quote": "Trpv6, which was distributed on the cell membrane of osteoclasts, acted as a negative regulator for osteoclast differentiation and function.",
+            "start": 1348
+          },
+          {
+            "end": 1757,
+            "passage_index": 1,
+            "quote": "Mechanistically, Trpv6 suppressed osteoclastogenesis by decreasing the ratios of phosphoprotein/total protein in the IGF-PI3K-AKT signalling pathway. Blocking of the IGF-PI3K-AKT pathway significantly alleviated the inhibitory effect of Trpv6 on osteoclasts formation.",
+            "start": 1489
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP staining and pit formation assays; qRT-PCR; cell immunofluorescence and Western blotting",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation and bone resorption viability",
+          "intervention": "silenced or overexpressed Trpv6 in osteoclasts via lentivirus transfection",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Trpv6 suppressed osteoclastogenesis and osteoclast function, and blocking the IGF-PI3K-AKT pathway alleviated this inhibitory effect.",
+        "uncertainties": [
+          "The sentence combines multiple mechanistic statements; the directness of the link from Trpv6 to the IGF-PI3K-AKT pathway is not established as direct physical interaction.",
+          "The pathway-blocking result is described as alleviating the inhibitory effect, but the specific blocker is not named."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1208,
+        1319
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        678,
+        808
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1348,
+        1488
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1500,
+        1646
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1489,
+        1757
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1648,
+        1936
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

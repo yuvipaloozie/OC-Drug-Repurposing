@@ -1,0 +1,192 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "diabetic bone defect model",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "29",
+              "48"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "D-GSH@QZ",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "28",
+              "40"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "diabetic bone defect model",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "tissue repair",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1117,
+            "passage_index": 1,
+            "quote": "After implantation in the diabetic bone defect model, the scaffold significantly accelerated tissue repair.",
+            "start": 1010
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "tissue repair",
+          "intervention": "D-GSH@QZ scaffold implantation",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "After implantation in the diabetic bone defect model, the D-GSH@QZ scaffold accelerated tissue repair.",
+        "uncertainties": [
+          "The passage does not specify the organism species or the exact assay used for tissue repair."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "regenerated tissue in vivo",
+          "disease_setting": "diabetic bone defect",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "29",
+              "48"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "scaffold",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1366,
+            "passage_index": 1,
+            "quote": "transcriptome sequencing of the regenerated tissue in vivo revealed that the scaffold inhibited pathways associated with oxidative stress, inflammation, and bone resorption, including AGE-RAGE, NF-kappaB, and osteoclast differentiation",
+            "start": 1131
+          }
+        ],
+        "experiment": {
+          "assay": "transcriptome sequencing",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation pathway",
+          "intervention": "D-GSH@QZ scaffold implantation",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Transcriptome sequencing indicated that the scaffold inhibited pathways associated with osteoclast differentiation.",
+        "uncertainties": [
+          "The passage refers to pathway-level inhibition in transcriptome data, not a direct molecular inhibition assay.",
+          "The scaffold is named generically in the sentence; the earlier text identifies it as D-GSH@QZ."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1010,
+        1117
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1128,
+        1192
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1131,
+        1366
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1311,
+        1410
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

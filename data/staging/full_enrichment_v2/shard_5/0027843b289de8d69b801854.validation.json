@@ -1,0 +1,194 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "BM-MSCs",
+          "compartment": null,
+          "disease_setting": "active vitamin D insufficiency / osteoporosis",
+          "species": "Mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "68"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "1,25(OH)2D3",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "69"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:SIRT1",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "Sirt1",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "70"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "vitamin D receptor",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1348,
+            "passage_index": 1,
+            "quote": "1,25(OH)2D3 transcriptionally upregulated Sirt1 expression in BM-MSCs through vitamin D receptor binding to the Sirt1 gene promoter",
+            "start": 1217
+          }
+        ],
+        "experiment": {
+          "assay": "transcriptional regulation; promoter binding context",
+          "dose": null,
+          "duration": null,
+          "endpoint": "Sirt1 expression",
+          "intervention": "1,25(OH)2D3",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "direct",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "1,25(OH)2D3 upregulated Sirt1 expression in BM-MSCs via vitamin D receptor binding to the Sirt1 promoter.",
+        "uncertainties": [
+          "Species is supported by the mouse/BM-MSC context, but Sirt1 may refer to gene or protein in the underlying biology.",
+          "The exact directness of promoter binding is stated in text, but the downstream functional chain is broader than this single relation."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "mesenchymal stem cells",
+          "compartment": null,
+          "disease_setting": "bone loss / osteoporosis",
+          "species": "Mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "65"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:SIRT1",
+            "key": "e1",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "Sirt1",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "67"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastic bone resorption",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1215,
+            "passage_index": 1,
+            "quote": "Overexpression of Sirt1 in mesenchymal stem cells corrected bone loss by inhibiting oxidative stress, DNA damage, osteocyte senescence and senescence-associated secretory phenotype, promoting osteoblastic bone formation, and reducing osteoclastic bone resorption",
+            "start": 953
+          }
+        ],
+        "experiment": {
+          "assay": "not stated",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastic bone resorption",
+          "intervention": "Overexpression of Sirt1",
+          "outcome_change": "decreased",
+          "perturbation_type": "gain_of_function"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Overexpression of Sirt1 in mesenchymal stem cells reduced osteoclastic bone resorption.",
+        "uncertainties": [
+          "The statement bundles multiple downstream effects; only the reduction of osteoclastic bone resorption is extracted here.",
+          "The molecular form of Sirt1 is unresolved from the text alone and could refer to gene/protein activity in this context."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1217,
+        1348
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1308,
+        1427
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        953,
+        1215
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1010,
+        1073
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

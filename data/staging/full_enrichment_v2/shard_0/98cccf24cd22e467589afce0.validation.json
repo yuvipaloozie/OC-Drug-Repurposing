@@ -1,0 +1,217 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "periapical lesions",
+          "disease_setting": "apical periodontitis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "49",
+              "63",
+              "66",
+              "69"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Nlrp3",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "50",
+              "58",
+              "65"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 840,
+            "passage_index": 1,
+            "quote": "A mouse model of apical periodontitis was established to study the role of Nlrp3 knockout in periapical bone resorption",
+            "start": 721
+          },
+          {
+            "end": 1359,
+            "passage_index": 1,
+            "quote": "Using a mouse model of apical periodontitis, we observe that Nlrp3 deficiency is resistant to bone resorption.",
+            "start": 1249
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption",
+          "intervention": "Nlrp3 knockout / Nlrp3 deficiency",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In a mouse model of apical periodontitis, Nlrp3 deficiency was reported to make bone resorption resistant, consistent with reduced bone resorption after Nlrp3 loss of function.",
+        "uncertainties": [
+          "The text combines a knockout model with a general statement of resistance; direct molecular mechanism is not established by this sentence alone."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "periapical lesions",
+          "disease_setting": "apical periodontitis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "61",
+              "62",
+              "63"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "Nlrp3 deficiency",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "60"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1698,
+            "passage_index": 1,
+            "quote": "In terms of the mechanism of action, Nlrp3 deficiency directly inhibits the osteoclast differentiation and bone loss through JNK/MAPK and NF-kappaB pathways.",
+            "start": 1541
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation and bone loss",
+          "intervention": "Nlrp3 deficiency",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "direct",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The authors report that Nlrp3 deficiency directly inhibits osteoclast differentiation and bone loss, and they attribute this to JNK/MAPK and NF-kappaB pathways.",
+        "uncertainties": [
+          "The sentence links Nlrp3 deficiency to both osteoclast differentiation and bone loss, but the text does not separate which downstream effect is primary.",
+          "The pathway terms are mentioned as mediators, but direct biochemical causality is not independently demonstrated here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        721,
+        840
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        801,
+        913
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1249,
+        1359
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1119,
+        1180
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1541,
+        1698
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1694,
+        1819
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

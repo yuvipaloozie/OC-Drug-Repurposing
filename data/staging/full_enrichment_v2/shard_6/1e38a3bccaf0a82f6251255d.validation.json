@@ -1,0 +1,216 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Zoledronic acid",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast function",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "47"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "hydroxyapatite",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 222,
+            "passage_index": 1,
+            "quote": "It inhibits osteoclast function by binding to hydroxyapatite, reducing bone resorption",
+            "start": 136
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Zoledronic acid is described as inhibiting osteoclast function and reducing bone resorption.",
+        "uncertainties": [
+          "This is a background mechanistic statement in the abstract, not an experiment in the reported cases.",
+          "The text also mentions binding to hydroxyapatite, but the exact mechanistic chain is not further detailed."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "9606",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "60",
+              "74"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "zoledronic acid",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "62",
+              "64",
+              "69",
+              "71",
+              "73"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Zoledronic acid-induced uveitis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 962,
+            "passage_index": 1,
+            "quote": "Both patients received IV zoledronic acid",
+            "start": 921
+          },
+          {
+            "end": 1103,
+            "passage_index": 1,
+            "quote": "Within a few days after infusion, both developed symptoms consistent with Zoledronic acid-induced uveitis (ZAIU)",
+            "start": 991
+          }
+        ],
+        "experiment": {
+          "assay": "clinical evaluation",
+          "dose": null,
+          "duration": "within a few days after infusion",
+          "endpoint": "zoledronic acid-induced uveitis / acute anterior uveitis symptoms",
+          "intervention": "IV zoledronic acid",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "After IV zoledronic acid infusion, both reported patients developed symptoms consistent with zoledronic acid-induced acute anterior uveitis.",
+        "uncertainties": [
+          "This is a case-series observation; causality is described as consistent with and induced by the drug in the text, but direct experimental causation is not established.",
+          "The passage uses both 'uveitis' and 'acute anterior uveitis'; the extracted endpoint is normalized from the reported context."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        136,
+        222
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        194,
+        283
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        921,
+        962
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        928,
+        960
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        991,
+        1103
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        962,
+        1071
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

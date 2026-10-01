@@ -1,0 +1,190 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "unknown",
+          "compartment": "serum",
+          "disease_setting": "lactation",
+          "species": "mice",
+          "stage": "day 7 of lactation"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "36",
+              "37",
+              "39",
+              "44",
+              "45",
+              "47",
+              "51",
+              "54",
+              "58"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "FGF-21",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1243,
+            "passage_index": 1,
+            "quote": "At day 7 of lactation there was a 2.4-fold increase in serum FGF-21 vs baseline (P < .0001), a 8-fold increase in hepatic FGF-21 mRNA (P < .03)",
+            "start": 1100
+          }
+        ],
+        "experiment": {
+          "assay": "longitudinal characterization",
+          "dose": null,
+          "duration": "day 7 of lactation",
+          "endpoint": "serum FGF-21; hepatic FGF-21 mRNA",
+          "intervention": "normal lactation",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e1",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In lactating B6 mice, circulating FGF-21 and hepatic FGF-21 mRNA increased at day 7 of lactation.",
+        "uncertainties": [
+          "The passage reports both serum protein level and hepatic mRNA in the same sentence; the regulatory field collapses them into a single abundance increase for the FGF-21 entity.",
+          "Exact molecular form for circulating FGF-21 is not explicitly distinguished from the gene annotation in the source packet."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "unknown",
+          "compartment": "bone",
+          "disease_setting": "lactation",
+          "species": "mice",
+          "stage": "lactation"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "50"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Fgf21",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "trabecular and cortical bone masses",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone formation",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "43",
+              "56"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1989,
+            "passage_index": 1,
+            "quote": "mice. Because FGF-21 levels rose rapidly at day 7 of lactation in B6 lactating mice, we next examined lactating mice with a deletion in the Fgf21 gene. Trabecular and cortical bone masses were maintained throughout lactation in FGF-21(-/-) mice, and pup growth was normal. Compared with lactating control mice, lactating FGF-21(-/-) mice exhibited an increase in bone formation, but no change in bone resorption.",
+            "start": 1688
+          }
+        ],
+        "experiment": {
+          "assay": "longitudinal characterization",
+          "dose": null,
+          "duration": "throughout lactation",
+          "endpoint": "bone formation; trabecular and cortical bone masses; bone resorption",
+          "intervention": "deletion in the Fgf21 gene",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Deletion of Fgf21 in lactating mice maintained trabecular and cortical bone mass and increased bone formation, with no change in bone resorption.",
+        "uncertainties": [
+          "The evidence spans multiple reported outcomes (bone mass, bone formation, and bone resorption) from the same perturbation.",
+          "The exact molecular form underlying the deletion is the gene Fgf21; the claim does not establish a direct molecular mechanism."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1100,
+        1243
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1170,
+        1288
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

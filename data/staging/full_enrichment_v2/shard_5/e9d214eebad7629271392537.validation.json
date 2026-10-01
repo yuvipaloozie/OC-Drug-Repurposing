@@ -1,0 +1,143 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "skeleton",
+          "disease_setting": "CKD",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "monoclonal Ab to activin A",
+            "taxon": "null"
+          },
+          {
+            "annotation_ids": [
+              "MESH:D012080"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "CKD",
+            "taxon": "null"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast number",
+            "taxon": "null"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "eroded surfaces",
+            "taxon": "null"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast-driven remodeling",
+            "taxon": "null"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1037,
+            "passage_index": 1,
+            "quote": "To examine the effect of activin A signaling, some Alport mice were treated with a monoclonal Ab to activin A or an isotype matched IgG beginning at 75 days of life until euthanasia.",
+            "start": 855
+          },
+          {
+            "end": 1309,
+            "passage_index": 1,
+            "quote": "However, the Activin A antibody was active in the skeleton, disrupting the effect of CKD to stimulate osteoclast number, eroded surfaces and the stimulation of osteoclast-driven remodeling.",
+            "start": 1120
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": "beginning at 75 days of life until euthanasia",
+          "endpoint": "osteoclast number",
+          "intervention": "treatment with a monoclonal Ab to activin A",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "claim1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In CKD mice, treatment with an activin A monoclonal antibody was active in the skeleton and disrupted CKD-stimulated osteoclast number, eroded surfaces, and osteoclast-driven remodeling.",
+        "uncertainties": [
+          "The text reports a combined skeletal effect on osteoclast number, eroded surfaces, and osteoclast-driven remodeling; the exact contribution to each endpoint is not separately quantified.",
+          "The antibody is described as active in the skeleton, but direct molecular target engagement and mechanism are not established in the passage."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "claim1",
+      "corrected_offsets": [
+        855,
+        1037
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        947,
+        1058
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "claim1",
+      "corrected_offsets": [
+        1120,
+        1309
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1141,
+        1268
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

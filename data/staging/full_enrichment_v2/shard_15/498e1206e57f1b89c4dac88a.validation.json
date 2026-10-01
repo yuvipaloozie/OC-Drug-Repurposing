@@ -1,0 +1,291 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "bone loss",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "53",
+              "56",
+              "60",
+              "62",
+              "65",
+              "66",
+              "69",
+              "74",
+              "77",
+              "81",
+              "84",
+              "86",
+              "90"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ERI",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "57",
+              "58",
+              "67",
+              "68",
+              "82",
+              "83",
+              "85"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "LDHB",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1843,
+            "passage_index": 1,
+            "quote": "ERI directly and stably targets LDHB.",
+            "start": 1806
+          }
+        ],
+        "experiment": {
+          "assay": "molecular docking; surface plasmon resonance (SPR); cellular thermal shift assay (CETSA)",
+          "dose": null,
+          "duration": null,
+          "endpoint": "ERI-LDHB interaction/target engagement",
+          "intervention": "Eriodictyol",
+          "outcome_change": "not_stated",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "association",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "direct",
+          "effect_level": "binding",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The abstract states that Eriodictyol directly and stably targets LDHB.",
+        "uncertainties": [
+          "The sentence reports target engagement, but the exact molecular form of LDHB protein versus gene is not explicitly distinguished in the passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "bone loss",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "53",
+              "56",
+              "60",
+              "62",
+              "65",
+              "66",
+              "69",
+              "74",
+              "77",
+              "81",
+              "84",
+              "86",
+              "90"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ERI",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "61",
+              "75",
+              "78",
+              "92"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "NLRP3 inflammasome",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1848,
+            "passage_index": 1,
+            "quote": "NLRP3 inflammasome activation via enhancing mitophagy. In addition, ERI modulated",
+            "start": 1760
+          }
+        ],
+        "experiment": {
+          "assay": "western blotting and qPCR; transcriptomic profiling",
+          "dose": null,
+          "duration": null,
+          "endpoint": "NLRP3 inflammasome activation",
+          "intervention": "Eriodictyol",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Eriodictyol was reported to inactivate the NLRP3 inflammasome in this study.",
+        "uncertainties": [
+          "The passage links NLRP3 inactivation to enhanced mitophagy and reduced ROS, but the exact causal chain is not fully disentangled in the text."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "bone loss",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "53",
+              "56",
+              "60",
+              "62",
+              "65",
+              "66",
+              "69",
+              "74",
+              "77",
+              "81",
+              "84",
+              "86",
+              "90"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ERI",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "pathway",
+            "surface": "mitophagy",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1818,
+            "passage_index": 1,
+            "quote": "via enhancing mitophagy and reducing",
+            "start": 1788
+          }
+        ],
+        "experiment": {
+          "assay": "transcriptomic profiling; western blotting; qPCR",
+          "dose": null,
+          "duration": null,
+          "endpoint": "mitophagy activation",
+          "intervention": "Eriodictyol",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Eriodictyol was reported to enhance mitophagy in the study.",
+        "uncertainties": [
+          "The text does not specify whether the mitophagy effect was direct or mediated through LDHB/PINK1/Parkin signaling."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1806,
+        1843
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1952,
+        1991
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

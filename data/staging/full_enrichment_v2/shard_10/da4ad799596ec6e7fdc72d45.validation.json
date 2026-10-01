@@ -1,0 +1,202 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "MALPs",
+          "compartment": "bone",
+          "disease_setting": null,
+          "species": "mice",
+          "stage": "adult"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "MALPs",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "trabecular bone mass",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [
+              "21",
+              "28",
+              "36"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1032,
+            "passage_index": 1,
+            "quote": "RANKL deficiency in MALPs induced at 3 months of age rapidly increased trabecular bone mass in long bones as well as vertebrae due to diminished bone resorption",
+            "start": 872
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "trabecular bone mass",
+          "intervention": "RANKL deficiency in MALPs induced at 3 months of age",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Induced RANKL deficiency in MALPs at 3 months of age rapidly increased trabecular bone mass and was associated with diminished bone resorption in adult mice.",
+        "uncertainties": [
+          "The passage links increased trabecular bone mass to diminished bone resorption, but does not specify a direct molecular mechanism.",
+          "RANKL is treated as the perturbed factor, while the text does not establish whether the causal effect is direct or mediated through other cells."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone",
+          "disease_setting": null,
+          "species": "mice",
+          "stage": "adult"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "27",
+              "34"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "iCKO mice",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [
+              "33"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone healing",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1312,
+            "passage_index": 1,
+            "quote": "Furthermore, bone healing after drill-hole injury was delayed in iCKO mice.",
+            "start": 1237
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone healing after drill-hole injury",
+          "intervention": "RANKL deficiency in MALPs",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In RANKL-deficient iCKO mice, bone healing after drill-hole injury was delayed.",
+        "uncertainties": [
+          "The abbreviation iCKO is not expanded in the passage, so the exact manipulated construct is only partially specified.",
+          "The passage states delayed healing but does not quantify the delay."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        872,
+        1032
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        358,
+        472
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1237,
+        1312
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1253,
+        1439
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

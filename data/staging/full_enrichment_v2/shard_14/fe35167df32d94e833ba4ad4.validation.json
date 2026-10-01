@@ -1,0 +1,287 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "NGPV-infected SBDS",
+          "species": "ducks",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "13"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ABX",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "SBDS clinical symptoms",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 815,
+            "passage_index": 1,
+            "quote": "SBDS clinical symptoms were alleviated in ducks treated with ABX, but not in FMT ducks",
+            "start": 729
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "SBDS clinical symptoms",
+          "intervention": "antibiotics (ABX) treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Antibiotic treatment (ABX) alleviated SBDS clinical symptoms in NGPV-infected ducks.",
+        "uncertainties": [
+          "The passage also mentions FMT, but the extracted claim is limited to the ABX-treated group.",
+          "Species is stated as ducks; the specific duck taxon is not given."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "NGPV-infected SBDS",
+          "species": "ducks",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "15"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ABX",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "21"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Malt1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "NF-kappaB",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1821,
+            "passage_index": 1,
+            "quote": "ABX treatment reduced the mucosa-associated lymphoid tissue lymphoma translocation protein 1 (Malt1) and nuclear factor kappaB (NF-kappaB) expression, which are correlated with systemic inflammation in SBDS ducks",
+            "start": 1609
+          }
+        ],
+        "experiment": {
+          "assay": "qPCR",
+          "dose": null,
+          "duration": null,
+          "endpoint": "Malt1 expression",
+          "intervention": "ABX treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "ABX treatment reduced Malt1 and NF-kappaB expression in NGPV-infected ducks.",
+        "uncertainties": [
+          "The sentence also reports reduced NF-kappaB expression, but the regulatory fields are filled for the Malt1 expression claim only.",
+          "Directness is not established; the passage reports an outcome of treatment."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "cecum",
+          "disease_setting": "NGPV-infected SBDS",
+          "species": "ducks",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "18"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ABX",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "19"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "SCFAs production",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1600,
+            "passage_index": 1,
+            "quote": "the results revealed that ABX treatment mitigated the decreased abundance",
+            "start": 1532
+          },
+          {
+            "end": 1594,
+            "passage_index": 1,
+            "quote": "as well as increased SCFAs production",
+            "start": 1557
+          }
+        ],
+        "experiment": {
+          "assay": "gas chromatography",
+          "dose": null,
+          "duration": null,
+          "endpoint": "SCFAs production",
+          "intervention": "ABX treatment",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "ABX treatment increased short-chain fatty acids (SCFAs) production in NGPV-infected ducks.",
+        "uncertainties": [
+          "The passage states increased SCFAs production but does not specify individual fatty acids.",
+          "The citation spans are split because the relevant outcome is expressed across two nearby clauses."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        729,
+        815
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        320,
+        404
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1609,
+        1821
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1693,
+        1861
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1557,
+        1594
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1610,
+        1691
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

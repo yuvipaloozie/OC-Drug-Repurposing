@@ -1,0 +1,215 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow-derived macrophages (BMMs)",
+          "compartment": null,
+          "disease_setting": "AOAH deficiency",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "56"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "AOAH",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption capacity",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone marrow-derived macrophages",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1000,
+            "passage_index": 1,
+            "quote": "AOAH depletion enhanced the osteoclast differentiation and bone resorption capacity of bone marrow-derived macrophages (BMMs).",
+            "start": 874
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation and bone resorption capacity",
+          "intervention": "AOAH depletion",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "AOAH deficiency increased osteoclast differentiation and bone resorption capacity in bone marrow-derived macrophages from mice.",
+        "uncertainties": [
+          "The text combines two outcomes (osteoclast differentiation and bone resorption capacity); the regulatory object is simplified to osteoclast differentiation while the second outcome is captured in the summary."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow-derived macrophages (BMMs)",
+          "compartment": null,
+          "disease_setting": "AOAH deficiency",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "73"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "rAOAH",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption capacity",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "72"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Aoah-/- BMMs",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1109,
+            "passage_index": 1,
+            "quote": "The enhanced osteoclast differentiation and bone resorption capacity of Aoah-/- BMMs were reversed by rAOAH.",
+            "start": 1001
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation and bone resorption capacity",
+          "intervention": "rAOAH",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Recombinant AOAH reversed the enhanced osteoclast differentiation and bone resorption capacity caused by AOAH deficiency in Aoah-/- BMMs.",
+        "uncertainties": [
+          "The text states a reversal of an enhanced phenotype rather than a standalone inhibition claim; direct molecular target relationships are not established."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        874,
+        1000
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        861,
+        985
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1001,
+        1109
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        986,
+        1097
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

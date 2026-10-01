@@ -1,0 +1,230 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteocytes",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "25",
+              "26",
+              "29",
+              "33",
+              "35"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "TGFbeta signaling",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "24",
+              "27",
+              "28",
+              "31",
+              "34"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "RANKL expression",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 873,
+            "passage_index": 1,
+            "quote": "Activation/inactivation of osteocytic TGFbeta signaling stringently promotes/inhibits RANKL expression and osteoclast differentiation in dose- and time-dependent manners.",
+            "start": 703
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": "dose- and time-dependent",
+          "endpoint": "RANKL expression and osteoclast differentiation",
+          "intervention": "activation/inactivation of osteocytic TGFbeta signaling",
+          "outcome_change": "other",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In osteocytes, activation of TGFbeta signaling promotes RANKL expression and osteoclast differentiation, while inactivation inhibits them.",
+        "uncertainties": [
+          "The quoted sentence contains both promotion and inhibition; the summary reflects the overall bidirectional perturbation statement.",
+          "The exact molecular form of RANKL is not explicitly distinguished as RNA, protein, or gene in the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteocytes",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "Wnt signaling",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "20",
+              "22",
+              "24",
+              "27",
+              "28",
+              "31",
+              "34"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "RANKL expression",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "25",
+              "26",
+              "29",
+              "33",
+              "35"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "TGFbeta signaling",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "30"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Smad4",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1035,
+            "passage_index": 1,
+            "quote": "Wnt signaling increases RANKL expression through TGFbeta signaling via the physical interaction of its transcription factor Smad4 with the RANKL promoter region.",
+            "start": 874
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "RANKL expression",
+          "intervention": "Wnt signaling",
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Wnt signaling increases RANKL expression through TGFbeta signaling, with Smad4 physically interacting with the RANKL promoter region.",
+        "uncertainties": [
+          "The mechanism is described as occurring through TGFbeta signaling and via Smad4-DNA promoter interaction, but the direct molecular step linking Wnt signaling to RANKL is not fully resolved in the abstract.",
+          "RANKL is annotated as a gene in the provider data, but the abstract phrase refers to expression rather than a specific molecular species."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        703,
+        873
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        798,
+        946
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        874,
+        1035
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        946,
+        1114
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

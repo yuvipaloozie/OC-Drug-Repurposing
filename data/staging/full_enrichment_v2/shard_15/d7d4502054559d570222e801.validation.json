@@ -1,0 +1,391 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "monocytes differentiated into mature osteoclasts",
+          "compartment": "bone slices",
+          "disease_setting": "musculoskeletal disorders",
+          "species": "patients",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "46",
+              "50",
+              "56",
+              "57",
+              "70",
+              "71"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "radon spa treatment",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "thermal spa treatment",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "mature osteoclasts (mOCs)",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1015,
+            "passage_index": 1,
+            "quote": "Within the scope of the prospective, placebo-controlled RAD-ON02 trial presented here, we analyzed the influence of radon and thermal spa treatment on osteoclastogenesis. From patient blood, we isolate monocytes, seeded them on bone slices and differentiated them in the presence of growth factors into mature osteoclasts (mOCs). Subsequent analysis showed a smaller fraction of mOCs after both treatments, which was even smaller after radon spa treatment.",
+            "start": 559
+          }
+        ],
+        "experiment": {
+          "assay": "analysis of osteoclastogenesis on bone slices",
+          "dose": null,
+          "duration": null,
+          "endpoint": "fraction of mature osteoclasts",
+          "intervention": "radon and thermal spa treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In the RAD-ON02 trial, both radon spa treatment and thermal spa treatment were associated with a smaller fraction of mature osteoclasts, with the reduction described as stronger after radon spa treatment.",
+        "uncertainties": [
+          "The passage combines two treatments; the exact contribution of each treatment to the decrease is not fully separable from the quoted span.",
+          "Radon spa is treated as a compound/intervention label rather than a defined molecular entity."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "serum",
+          "disease_setting": "musculoskeletal disorders",
+          "species": "patients",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "56",
+              "57",
+              "70",
+              "71"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "radon spa treatment",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "59",
+              "60"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "protein",
+            "surface": "receptor activator of NF-kappaB ligand (RANKL)",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [
+              "61",
+              "68"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "OCs",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1281,
+            "passage_index": 1,
+            "quote": "radon spa treatment, we detected in the serum of patients a significant decrease of receptor activator of NF-kappaB ligand (RANKL), which indicates reduced differentiation of OCs.",
+            "start": 1102
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "serum RANKL",
+          "intervention": "radon spa treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Only after radon spa treatment, serum RANKL was significantly decreased, which the authors interpret as indicating reduced osteoclast differentiation.",
+        "uncertainties": [
+          "The quote begins mid-sentence, so the antecedent 'Only after' is truncated in the evidence span.",
+          "The text states an interpretation ('which indicates reduced differentiation of OCs') rather than a direct measurement of osteoclast differentiation."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "no_effect",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "musculoskeletal disorders",
+          "species": "patients",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "49",
+              "62"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "CTX",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [
+              "46",
+              "50",
+              "56",
+              "57",
+              "70",
+              "71"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "both treatments",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1400,
+            "passage_index": 1,
+            "quote": "However, other markers for bone resorption (CTX) and bone formation (OPG, OCN) were not altered after both treatments.",
+            "start": 1282
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "CTX",
+          "intervention": "radon and thermal spa treatment",
+          "outcome_change": "no_detected_change",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c4",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e1",
+          "sign": "unknown",
+          "subject": "e2"
+        },
+        "summary": "CTX was not altered after both treatments.",
+        "uncertainties": [
+          "CTX is annotated as a gene in the packet, but the passage uses it as a bone resorption marker; molecular form is therefore uncertain.",
+          "The quote combines CTX with OPG and OCN, but only CTX is extracted here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "musculoskeletal disorders",
+          "species": "patients",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "72",
+              "73",
+              "74"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "radon treatment",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Treg cells",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Th17 cells",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2470,
+            "passage_index": 1,
+            "quote": "patients enrolled in the RAD-ON02 trial indicate that radon is not alone responsible for the effects on bone metabolism, even though they are more pronounced after radon compared to thermal spa treatment. After radon treatment, the fraction of Treg cells was significantly increased, whereas Th17 cells were not altered.",
+            "start": 2285
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "fraction of Treg cells",
+          "intervention": "radon treatment",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "After radon treatment, the fraction of Treg cells increased, while Th17 cells were not altered.",
+        "uncertainties": [
+          "The evidence span includes a surrounding sentence because the exact antecedent span for the Treg observation is later in the passage.",
+          "The Th17 result is a separate no-effect observation and is not encoded as a causal activation claim."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        559,
+        1015
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1044,
+        1136
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1102,
+        1281
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1258,
+        1432
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c4",
+      "corrected_offsets": [
+        1282,
+        1400
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1450,
+        1530
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

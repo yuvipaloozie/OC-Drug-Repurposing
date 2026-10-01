@@ -1,0 +1,186 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoarthritis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "51"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "HIF-1alpha",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "glycolysis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1669,
+            "passage_index": 1,
+            "quote": "hypoxia-inducible factor-1alpha (HIF-1alpha) regulates glycolysis, mitochondrial",
+            "start": 1589
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "glycolysis",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The review states that HIF-1alpha regulates glycolysis in osteoarthritis under hypoxic, inflammatory, and oxidative-stress conditions.",
+        "uncertainties": [
+          "Review/article-level statement rather than primary experiment.",
+          "The passage also mentions mitochondrial function and inflammatory responses, but only glycolysis is extracted as the object here.",
+          "Taxon and cell type are not specified for this statement."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": "joint microenvironment",
+          "disease_setting": "osteoarthritis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "35",
+              "37"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "HIF-1alpha",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "38"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "cartilage degeneration",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "39"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "synovial inflammation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 776,
+            "passage_index": 1,
+            "quote": "HIF-1alpha, with a focus on its cell type-specific effects in chondrocytes, BMSCs, and macrophages, and discuss how HIF-1alpha-associated intercellular crosstalk may contribute to cartilage degeneration, synovial inflammation, and impaired endogenous repair.",
+            "start": 474
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "cartilage degeneration",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The review says HIF-1alpha-centered metabolic reprogramming in osteoarthritis is discussed as contributing to cartilage degeneration, synovial inflammation, and impaired endogenous repair.",
+        "uncertainties": [
+          "This is a review-level discussion of possible contribution, not a direct experiment.",
+          "The quoted span is long and includes multiple outcomes; only one object is encoded in the regulatory field.",
+          "No species or specific cell line is stated."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1589,
+        1669
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1751,
+        1834
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

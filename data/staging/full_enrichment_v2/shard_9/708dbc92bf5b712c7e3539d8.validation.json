@@ -1,0 +1,187 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "plasma",
+          "disease_setting": "obesity",
+          "species": "Polish participants",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D009765"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Obesity",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "1278"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "P1NP",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1383,
+            "passage_index": 1,
+            "quote": "Obesity and its degree of advancement significantly affected the decrease in the concentration of the marker of bone formation-P1NP-only in the plasma of women.",
+            "start": 1223
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone formation marker P1NP concentration",
+          "intervention": null,
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In women, obesity and greater obesity degree were associated with a decrease in the bone formation marker P1NP in plasma.",
+        "uncertainties": [
+          "Observational association; no intervention or causality is established.",
+          "The molecular form of P1NP is not explicit in the text despite provider gene annotation."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "plasma",
+          "disease_setting": "obesity",
+          "species": "Polish participants",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Excessive body weight",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "1593"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "unknown",
+            "surface": "bone resorption marker",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1495,
+            "passage_index": 1,
+            "quote": "Excessive body weight had no effect on the value of the bone resorption marker in plasma, regardless of gender.",
+            "start": 1384
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption marker value",
+          "intervention": null,
+          "outcome_change": "no_detected_change",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "unknown",
+          "subject": "e3"
+        },
+        "summary": "Excess body weight was reported to have no effect on the plasma value of the bone resorption marker regardless of gender.",
+        "uncertainties": [
+          "This is a no-effect statement from an observational study, not evidence of absence of biology.",
+          "The specific bone resorption marker is not named in the text."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1223,
+        1383
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1329,
+        1490
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1384,
+        1495
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1492,
+        1605
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

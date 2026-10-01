@@ -1,0 +1,126 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "lumbar spine disorders",
+          "species": "9606",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "VBQ scores",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone turnover markers",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "22"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "beta-CTX",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "20"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "25(OH)D3",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "21"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "OC",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1432,
+            "passage_index": 1,
+            "quote": "RESULTS: Comparative analysis showed BTMs varied markedly across VBQ categories (P<0.0001 to P=0.0158), with osteoblast-related markers (25(OH)D3, OC) decreasing and osteoclast-related markers (beta-CTX) increasing with higher VBQ scores.",
+            "start": 1194
+          }
+        ],
+        "experiment": {
+          "assay": "correlation analysis, linear regression, and one-way ANOVA",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone turnover markers",
+          "intervention": "VBQ category comparison",
+          "outcome_change": "other",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "unknown",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "VBQ scores were associated with differences in bone turnover markers across VBQ categories; higher VBQ scores were linked to lower osteoblast-related markers and higher beta-CTX.",
+        "uncertainties": [
+          "Offsets are best-effort and may be slightly imprecise due to passage-length counting.",
+          "VBQ is treated as a phenotype/score rather than a molecular entity.",
+          "The passage reports association across categories rather than a causal mechanism."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1194,
+        1432
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1191,
+        1338
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

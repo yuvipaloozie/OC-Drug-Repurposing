@@ -1,0 +1,231 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 macrophage cells",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "65"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Tri",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "57"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-induced osteoclasts",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 933,
+            "passage_index": 1,
+            "quote": "Tri (5-20 muM) significantly inhibited osteoclast formation",
+            "start": 874
+          },
+          {
+            "end": 988,
+            "passage_index": 1,
+            "quote": " and actin ring formation in RANKL-induced osteoclasts.",
+            "start": 933
+          }
+        ],
+        "experiment": {
+          "assay": "RT-PCR, western blot, or fluorometric assays",
+          "dose": "5-20 muM",
+          "duration": null,
+          "endpoint": "osteoclast formation and actin ring formation",
+          "intervention": "Tri (5-20 muM)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Trilobatin treatment inhibited osteoclast formation and actin ring formation in RANKL-induced osteoclasts in vitro.",
+        "uncertainties": [
+          "The exact cell-level molecular target is not specified in this sentence.",
+          "The quote combines two outcomes; both are reported as inhibited in the same experimental context."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ovariectomized postmenopausal osteoporosis model",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "80"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Tri",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "BMD",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "89",
+              "90"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "OPG/RANKL ratio",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1274,
+            "passage_index": 1,
+            "quote": "Tri to OVX mice augmented BMD and serum OPG/RANKL ratio.",
+            "start": 1218
+          },
+          {
+            "end": 794,
+            "passage_index": 1,
+            "quote": "Bone mineral density (BMD) was determined by pDEXA densitometric measurement",
+            "start": 718
+          }
+        ],
+        "experiment": {
+          "assay": "pDEXA densitometric measurement; ELISA",
+          "dose": null,
+          "duration": null,
+          "endpoint": "BMD and serum OPG/RANKL ratio",
+          "intervention": "Oral administration of Tri",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Oral trilobatin administration increased bone mineral density and the serum OPG/RANKL ratio in ovariectomized mice.",
+        "uncertainties": [
+          "The quote states increased BMD and serum OPG/RANKL ratio, but only BMD is modeled as the regulatory object here.",
+          "The passage does not specify the treatment duration."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        874,
+        933
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1009,
+        1078
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        933,
+        988
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1079,
+        1120
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1218,
+        1274
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1353,
+        1419
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        718,
+        794
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        911,
+        988
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,103 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "bone metabolism-related diseases",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "42"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "luteolin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption function",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1010,
+            "passage_index": 1,
+            "quote": "Luteolin is a natural flavonoid compound renowned for its exceptional medicinal value and is often used to treat various diseases. In vitro studies indicate that luteolin not only protects osteoblast activity and promotes their osteogenic differentiation, but also inhibits osteoclast activation and their bone resorption function.",
+            "start": 679
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro studies",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast activation and bone resorption function",
+          "intervention": null,
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Luteolin is described as inhibiting osteoclast activation and bone resorption function in vitro.",
+        "uncertainties": [
+          "Review/article summary rather than a primary experiment.",
+          "The passage reports two related inhibitory effects; the regulatory object is represented by the first stated phenotype, with the second included in the summary."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        679,
+        1010
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        936,
+        1032
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

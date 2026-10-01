@@ -1,0 +1,179 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": "adults"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "Mediterranean diet",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "23"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "hip and overall fractures",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1688,
+            "passage_index": 1,
+            "quote": "adherence to a Mediterranean diet was associated with a significantly reduced hazard of hip and overall fractures (pooled HR = 0.95, 95% CI 0.93-0.96)",
+            "start": 1538
+          }
+        ],
+        "experiment": {
+          "assay": "meta-analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "hip and overall fractures",
+          "intervention": "Mediterranean diet adherence",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Adherence to a Mediterranean diet was associated with a reduced hazard of hip and overall fractures.",
+        "uncertainties": [
+          "Association is reported at the population level; causality is not established.",
+          "No mechanistic mediator is specified in the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": "adults"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "Calorie restriction",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "27"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption markers",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1756,
+            "passage_index": 1,
+            "quote": "Calorie restriction consistently increased bone resorption markers",
+            "start": 1690
+          }
+        ],
+        "experiment": {
+          "assay": "meta-analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption markers",
+          "intervention": "Calorie restriction",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Calorie restriction consistently increased bone resorption markers.",
+        "uncertainties": [
+          "The specific marker(s) are not named.",
+          "The text does not establish a direct molecular mechanism."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1538,
+        1688
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1762,
+        1865
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1690,
+        1756
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1927,
+        1972
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

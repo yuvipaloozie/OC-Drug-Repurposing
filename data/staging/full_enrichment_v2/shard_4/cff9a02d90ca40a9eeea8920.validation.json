@@ -1,0 +1,188 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "macrophage",
+          "compartment": "lysosomes",
+          "disease_setting": "aseptic loosening",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "multi-ion doped HA nanoparticles",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "M1-M2 transition",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1267,
+            "passage_index": 1,
+            "quote": "Compared to undoped particles, multi-ion doped HA nanoparticles are more easily phagocytosed and degraded within lysosomes, enabling faster ion release and thereby facilitating M1-M2 transition.",
+            "start": 1073
+          }
+        ],
+        "experiment": {
+          "assay": "transcriptomic analysis and particle degradation observations",
+          "dose": null,
+          "duration": null,
+          "endpoint": "M1-M2 transition",
+          "intervention": "multi-ion doped HA nanoparticles compared to undoped particles",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Compared with undoped particles, multi-ion doped hydroxyapatite nanoparticles are more easily phagocytosed and degraded within lysosomes, which enables faster ion release and facilitates M1-to-M2 macrophage transition.",
+        "uncertainties": [
+          "The passage does not specify the exact macrophage subtype nomenclature beyond M1/M2.",
+          "The causal link is described in narrative form and is not explicitly stated as direct."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "macrophage",
+          "compartment": null,
+          "disease_setting": "aseptic loosening",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "44"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "PPAR pathway",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "M2 polarization",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1691,
+            "passage_index": 1,
+            "quote": "This metabolic reprogramming subsequently activates immunoregulatory pathways, with the PPAR pathway serving as a central axis, thereby promoting M2 polarization, inhibiting osteoclastogenesis",
+            "start": 1499
+          }
+        ],
+        "experiment": {
+          "assay": "transcriptomic analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "multi-ion doped HA nanoparticle degradation-mediated ion release",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The PPAR pathway is described as a central axis in the metabolic reprogramming response and is associated with promoting M2 polarization while inhibiting osteoclastogenesis.",
+        "uncertainties": [
+          "The text links PPAR to osteoclastogenesis through a broader metabolic reprogramming narrative, so directness is not established.",
+          "The passage also mentions M2 polarization, but the evidence span for this claim is truncated before the full sentence continues to the final outcome."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1073,
+        1267
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        995,
+        1194
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1499,
+        1691
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1640,
+        1782
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

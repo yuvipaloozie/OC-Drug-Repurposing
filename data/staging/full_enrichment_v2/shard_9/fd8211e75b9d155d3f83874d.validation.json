@@ -1,0 +1,221 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "periodontitis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "36"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "DMF",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "periodontal destruction",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "M1/M2 macrophage ratio",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 530,
+            "passage_index": 1,
+            "quote": "DMF significantly inhibited periodontal destruction, enhanced mitophagy, and decreased the M1/M2 macrophage ratio.",
+            "start": 416
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "periodontal destruction",
+          "intervention": "DMF treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Dimethyl fumarate treatment was reported to inhibit periodontal destruction and reduce the macrophage M1/M2 ratio in periodontitis.",
+        "uncertainties": [
+          "Exact sentence offsets may be approximate because the passage offset map is not fully human-readable here.",
+          "The quoted sentence also mentions enhanced mitophagy, which is not separated into this claim."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW 264.7",
+          "compartment": null,
+          "disease_setting": "periodontitis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "37",
+              "39",
+              "42",
+              "43",
+              "46"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "DMF",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "macrophage polarization",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "M1 macrophages",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "M2 macrophages",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "38"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "RAW 264.7",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 668,
+            "passage_index": 1,
+            "quote": "DMF inhibited macrophage polarization toward M1 macrophages and promoted polarization toward M2 macrophages,",
+            "start": 560
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "macrophage polarization",
+          "intervention": "DMF treatment",
+          "outcome_change": "other",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Dimethyl fumarate was reported to suppress M1 polarization and promote M2 polarization in RAW 264.7 macrophages.",
+        "uncertainties": [
+          "The abstract also states this occurred in vitro in RAW 264.7 cells, but no assay is named.",
+          "The quote is truncated before the final clause about improved mitochondrial function and increased mitophagy."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        416,
+        530
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        551,
+        665
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        560,
+        668
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        695,
+        804
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

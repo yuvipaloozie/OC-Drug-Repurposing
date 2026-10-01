@@ -1,0 +1,209 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "hypothesis",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "bone remodeling",
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "glycolytic flux",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "mitochondrial Oxidative Phosphorylation (OXPHOS)",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "amino-acid utilization",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "12"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "ion-channel-coupled calcium signaling",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "formation-resorption balance",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 401,
+            "passage_index": 1,
+            "quote": "The article advances a hypothesis-driven framework that positions discrete metabolic checkpoints - glycolytic flux, mitochondrial Oxidative Phosphorylation (OXPHOS), amino-acid utilization, and ion-channel-coupled calcium signaling - as tractable levers for restoring formation-resorption balance.",
+            "start": 104
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "restoring formation-resorption balance",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "unknown",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e5",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The review proposes that discrete metabolic checkpoints may be tractable levers for restoring formation-resorption balance in bone remodeling.",
+        "uncertainties": [
+          "The passage presents a review hypothesis rather than an experimental result.",
+          "Multiple metabolic checkpoints are listed together; the specific causal relation for each checkpoint is not separated in the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteolineages",
+          "compartment": "bone remodeling",
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "13"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "TCA-cycle intermediates",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "14",
+              "15"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "RANKL/OPG regulation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 605,
+            "passage_index": 1,
+            "quote": "integrate immune-metabolic coupling that links TCA-cycle intermediates to RANKL/OPG regulation",
+            "start": 511
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "RANKL/OPG regulation",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The review states that immune-metabolic coupling links TCA-cycle intermediates to RANKL/OPG regulation.",
+        "uncertainties": [
+          "The text describes a review synthesis, not a direct experiment.",
+          "The relation is stated as a link/association rather than a directional causal effect."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        104,
+        401
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        121,
+        247
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        511,
+        605
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        290,
+        370
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

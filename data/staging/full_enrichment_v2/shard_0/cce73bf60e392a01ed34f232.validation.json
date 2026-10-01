@@ -1,0 +1,207 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "cortical bone",
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "adult-onset"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "36",
+              "37",
+              "46",
+              "48",
+              "50",
+              "53",
+              "56",
+              "58"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "glucocorticoid receptor",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "cortical bone osteoclasts",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1377,
+            "passage_index": 1,
+            "quote": "this phenotype was associated with an increase in the abundance of cortical bone osteoclasts in female but not male GR-CKO mice",
+            "start": 1250
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "cortical bone osteoclast abundance",
+          "intervention": "adult-onset conditional KO of the GR in Osx-expressing cells",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In female mice with GR conditional knockout in Osx-expressing cells, cortical bone osteoclast abundance increased relative to controls; this was not seen in males.",
+        "uncertainties": [
+          "The passage links the osteoclast increase to a phenotype associated with GR knockout rather than a directly isolated molecular mechanism.",
+          "Sex-specific effect is stated for female but not male mice, but the underlying causal chain is not resolved."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "TD-BMAd",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "adult-onset"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "36",
+              "37",
+              "46",
+              "48",
+              "50",
+              "53",
+              "56",
+              "58"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "glucocorticoid receptor",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "TD-BMAd",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "43",
+              "44",
+              "52",
+              "55"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Rankl",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1643,
+            "passage_index": 1,
+            "quote": "TD-BMAd from female (but not male) GR-CKO mice expressed significantly higher levels of Rankl as compared to cells from GR-WT mice",
+            "start": 1513
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "Rankl expression",
+          "intervention": "GR-CKO versus GR-WT",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "TD-BMAd from female GR-CKO mice expressed higher Rankl levels than TD-BMAd from GR-WT mice.",
+        "uncertainties": [
+          "The text compares TD-BMAd from GR-CKO and GR-WT mice; it does not establish direct binding or a direct regulatory mechanism.",
+          "Rankl is treated as an expression endpoint, but the precise molecular form is not fully resolved beyond the gene annotation."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1250,
+        1377
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1548,
+        1640
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1513,
+        1643
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1641,
+        1746
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

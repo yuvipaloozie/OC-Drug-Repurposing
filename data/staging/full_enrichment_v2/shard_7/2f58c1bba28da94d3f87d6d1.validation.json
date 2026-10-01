@@ -1,0 +1,388 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow-derived macrophages/monocytes",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "murine",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "53",
+              "54",
+              "57",
+              "64",
+              "66",
+              "74",
+              "75",
+              "76",
+              "80",
+              "84",
+              "89"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "6'-O-Galloylpaeoniflorin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "protein",
+            "surface": "M-CSF",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "62",
+              "63",
+              "77"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 665,
+            "passage_index": 1,
+            "quote": "After the culture of primary murine bone",
+            "start": 625
+          },
+          {
+            "end": 1716,
+            "passage_index": 1,
+            "quote": "GPF suppressed the formation of osteoclasts and podosome belts",
+            "start": 1654
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP staining",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast formation / osteoclastogenesis",
+          "intervention": "treated with GPF after induction by M-CSF and RANKL",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "GPF suppressed osteoclast formation/osteoclastogenesis in murine bone marrow-derived macrophages/monocytes induced by M-CSF and RANKL.",
+        "uncertainties": [
+          "The abstract does not separate direct effects on osteoclast differentiation from indirect effects through other pathways.",
+          "M-CSF is mentioned as an inducer in the culture description, but its molecular identity is not explicitly established in the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "primary bone marrow-derived macrophages/monocytes",
+          "compartment": "in vitro",
+          "disease_setting": null,
+          "species": "murine",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "53",
+              "54",
+              "57",
+              "64",
+              "66",
+              "74",
+              "75",
+              "76",
+              "80",
+              "84",
+              "89"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "6'-O-Galloylpaeoniflorin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "59",
+              "60",
+              "69",
+              "78",
+              "86"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "reactive oxygen species",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "pathway",
+            "surface": "MAPKs signaling pathway",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "8",
+              "87"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "c-Fos",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "9",
+              "79",
+              "88"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "NFATc1",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1888,
+            "passage_index": 1,
+            "quote": "GPF suppressed the formation of osteoclasts and podosome belts, as well as bone resorption when induced by RANKL through affecting intracellular ROS activity, MAPKs signaling pathway, and subsequent NFATc1 translocation and expression",
+            "start": 1654
+          }
+        ],
+        "experiment": {
+          "assay": "DCFH-DA for ROS; western blotting and qRT-PCR",
+          "dose": null,
+          "duration": null,
+          "endpoint": "intracellular ROS activity / MAPKs/c-Fos/NFATc1 signaling",
+          "intervention": "GPF treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "GPF reduced intracellular ROS activity and affected the MAPKs/c-Fos/NFATc1 signaling axis in RANKL-induced cells.",
+        "uncertainties": [
+          "The passage links ROS, MAPKs, c-Fos, and NFATc1 in one mechanism statement; the exact direct target among them is not individually resolved.",
+          "c-Fos and NFATc1 are mentioned as part of the signaling pathway statement, but the quoted span does not specify whether GPF directly changes their abundance, activity, or translocation separately."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "in vivo",
+          "disease_setting": "ovariectomy-induced osteoporosis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "53",
+              "54",
+              "57",
+              "64",
+              "66",
+              "74",
+              "75",
+              "76",
+              "80",
+              "84",
+              "89"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "6'-O-Galloylpaeoniflorin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "82"
+            ],
+            "existing_node_id": null,
+            "key": "e7",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "83"
+            ],
+            "existing_node_id": null,
+            "key": "e8",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "ovariectomized mice",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2060,
+            "passage_index": 1,
+            "quote": "In vivo study suggested that exposure to GPF prevented osteoporosis-related bone loss in the ovariectomized mice.",
+            "start": 1947
+          }
+        ],
+        "experiment": {
+          "assay": "micro-CT scan and histological examination",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoporosis-related bone loss",
+          "intervention": "GPF administration",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e7",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In ovariectomized mice, GPF prevented osteoporosis-related bone loss.",
+        "uncertainties": [
+          "The text says 'suggested' for the in vivo study, so the strength of inference is limited by the abstract wording.",
+          "The specific bone compartment or structural metric underlying 'bone loss' is not stated in the abstract."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        625,
+        665
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        786,
+        827
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1654,
+        1716
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1741,
+        1817
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1654,
+        1888
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1836,
+        2084
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1947,
+        2060
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2165,
+        2248
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

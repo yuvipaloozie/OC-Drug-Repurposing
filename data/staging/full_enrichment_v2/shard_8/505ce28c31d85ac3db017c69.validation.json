@@ -1,0 +1,201 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "murine",
+          "stage": "osteoclast precursor cells"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "6",
+              "8",
+              "9",
+              "10"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "receptor activator of nuclear factor kappa-B ligand (RANKL)",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 799,
+            "passage_index": 1,
+            "quote": "Murine macrophages (RAW264.7 cells) were used as an in vitro model to study osteoclastogenesis.",
+            "start": 704
+          },
+          {
+            "end": 917,
+            "passage_index": 1,
+            "quote": "OCPs fusion and formation were induced by using 50 ng/mL receptor activator of nuclear factor kappa-B ligand (RANKL).",
+            "start": 800
+          }
+        ],
+        "experiment": {
+          "assay": "time-lapse holotomographic live-cell recordings; quantitative morphometric analysis",
+          "dose": "50 ng/mL",
+          "duration": "72 h",
+          "endpoint": "fusion and formation / osteoclastogenesis",
+          "intervention": "RANKL",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In murine RAW264.7 cells, RANKL treatment induced osteoclast precursor fusion and formation during osteoclastogenesis.",
+        "uncertainties": [
+          "The text reports induction of fusion and formation, but does not establish a direct molecular mechanism.",
+          "RANKL is annotated as a gene by the provider, but the passage itself describes it as a ligand; molecular form assignment is therefore limited to a text-supported candidate."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclast precursor cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "murine",
+          "stage": "prior to and during fusion"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "11"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "tunneling nanotubes-like membrane tethers (TNTs)",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "directional movement and intercellular contact",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1801,
+            "passage_index": 1,
+            "quote": "Notably, tunneling nanotubes-like membrane tethers (TNTs) frequently appeared before and during fusion and were associated with mediate directional movement and intercellular contact.",
+            "start": 1618
+          }
+        ],
+        "experiment": {
+          "assay": "time-lapse holotomographic live-cell recordings",
+          "dose": null,
+          "duration": "72 h",
+          "endpoint": "fusion-associated morphology and cell contact",
+          "intervention": null,
+          "outcome_change": "other",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Tunneling nanotubes-like membrane tethers were observed before and during fusion and were associated with directional movement and intercellular contact.",
+        "uncertainties": [
+          "The passage states association, not causation, for TNTs and movement/contact.",
+          "The phrase 'mediate directional movement' appears in the source text as written; the intended grammar is unclear."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        704,
+        799
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        561,
+        637
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        800,
+        917
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        640,
+        756
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1618,
+        1801
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1563,
+        1714
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,220 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": "differentiation"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "cdc42v1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "4"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RhoU",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "5"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RhoF",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "filopodia",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1539,
+            "passage_index": 1,
+            "quote": "In addition, cdc42v1, RhoU, and RhoF regulate the formation of 3 types of filopodia during various stages of differentiation",
+            "start": 1415
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "formation of 3 types of filopodia",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "cdc42v1, RhoU, and RhoF regulate formation of filopodia during differentiation.",
+        "uncertainties": [
+          "The sentence names three regulators (cdc42v1, RhoU, and RhoF), but the precise subject-object pairing is not separated in the text.",
+          "No species is stated in the abstract sentence used as evidence."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": "fusion process"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "6"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:RAC1",
+            "key": "e1",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "Rac1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "7"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Rac2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "filament A",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "cell selectivity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1640,
+            "passage_index": 1,
+            "quote": "while Rac1, Rac2, and filament A may be associated with cell selectivity during the fusion process.",
+            "start": 1541
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "cell selectivity during the fusion process",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Rac1, Rac2, and filament A may be associated with cell selectivity during the fusion process.",
+        "uncertainties": [
+          "The text uses 'may be associated', so this is an association rather than a causal claim.",
+          "The specific role of filament A is not resolved.",
+          "The existing-node suggestion for Rac1 is unverified and may be wrong; it is not treated as a confirmed mapping."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1415,
+        1539
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1507,
+        1602
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1541,
+        1640
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1604,
+        1718
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

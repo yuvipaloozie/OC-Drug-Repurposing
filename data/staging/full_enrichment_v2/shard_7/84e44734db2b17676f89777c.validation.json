@@ -1,0 +1,225 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "periodontitis",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "43"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "OG-Ointment",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "alveolar bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "42"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "periodontitis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 960,
+            "passage_index": 1,
+            "quote": "rat",
+            "start": 957
+          },
+          {
+            "end": 972,
+            "passage_index": 1,
+            "quote": "periodontitis",
+            "start": 961
+          },
+          {
+            "end": 894,
+            "passage_index": 1,
+            "quote": "OG-Ointment sig",
+            "start": 879
+          },
+          {
+            "end": 924,
+            "passage_index": 1,
+            "quote": "nificantly reduced alveolar bo",
+            "start": 894
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "alveolar bone resorption",
+          "intervention": "OG-Ointment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In a rat periodontitis model, OG-Ointment significantly reduced alveolar bone resorption.",
+        "uncertainties": [
+          "The cited evidence spans are fragmented because the relevant sentence is long; the underlying quote is present in the passage.",
+          "No assay, dose, or duration is stated."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "macrophages",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "43"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "OG-Ointment",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "40"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ROS",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "macrophages",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 905,
+            "passage_index": 1,
+            "quote": "in vitro, it enhanced bacterial membrane permeability, inhibited P. gingivalis growth, and reduced ROS in macrophages",
+            "start": 882
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "ROS",
+          "intervention": "OG-Ointment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In vitro, OG-Ointment reduced ROS in macrophages.",
+        "uncertainties": [
+          "The passage does not specify the macrophage species or whether ROS refers to a particular ROS species.",
+          "No assay, dose, or duration is stated."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        879,
+        894
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        982,
+        998
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        894,
+        924
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        998,
+        1028
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

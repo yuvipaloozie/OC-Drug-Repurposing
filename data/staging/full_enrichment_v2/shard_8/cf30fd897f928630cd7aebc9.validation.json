@@ -1,0 +1,135 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "primary osteoclasts",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "28",
+              "29",
+              "30",
+              "31"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "FFAR2, FFAR4, FPR1, GPR35",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activity",
+            "taxon": "human"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1330,
+            "passage_index": 1,
+            "quote": "four receptors (FFAR2, FFAR4, FPR1, GPR35)",
+            "start": 1288
+          },
+          {
+            "end": 1363,
+            "passage_index": 1,
+            "quote": "that reduced osteoclast activity",
+            "start": 1331
+          },
+          {
+            "end": 1489,
+            "passage_index": 1,
+            "quote": "activation of these GPCRs reduced osteoclast activity",
+            "start": 1436
+          }
+        ],
+        "experiment": {
+          "assay": "bone resorption assays and measurements of TRAP activity",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast activity",
+          "intervention": "activation of GPCRs",
+          "outcome_change": "decreased",
+          "perturbation_type": "gain_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Activation of four GPCRs (FFAR2, FFAR4, FPR1, and GPR35) reduced osteoclast activity in human primary osteoclasts.",
+        "uncertainties": [
+          "The four receptors are reported together as a set; the text does not separately specify which individual receptor produced which effect in this abstract excerpt.",
+          "Directness is not established beyond the stated activation effect."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1288,
+        1330
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1381,
+        1422
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1331,
+        1363
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1423,
+        1457
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1436,
+        1489
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1490,
+        1544
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

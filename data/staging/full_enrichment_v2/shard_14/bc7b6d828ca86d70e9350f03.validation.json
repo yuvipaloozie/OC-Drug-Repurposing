@@ -1,0 +1,221 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "in vitro",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "1",
+              "10",
+              "12"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "aminooxyacetic acid hemihydrochloride",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "pathway",
+            "surface": "mitochondrial oxidative phosphorylation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 135,
+            "passage_index": 0,
+            "quote": "Aminooxyacetic acid hemihydrochloride inhibits osteoclast differentiation and bone resorption by attenuating oxidative phosphorylation.",
+            "start": 0
+          },
+          {
+            "end": 718,
+            "passage_index": 1,
+            "quote": "We found that the malate-aspartate shuttle inhibitor aminooxyacetic acid hemihydrochloride inhibits osteoclastogenesis and bone resorption by inhibiting exchange of reducing equivalents between the cytosol and the mitochondrial matrix and attenuating mitochondrial oxidative phosphorylation in vitro.",
+            "start": 418
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "aminooxyacetic acid hemihydrochloride treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Aminooxyacetic acid hemihydrochloride inhibits osteoclastogenesis and bone resorption in vitro, with the paper attributing this to attenuation of mitochondrial oxidative phosphorylation and reduced exchange of reducing equivalents.",
+        "uncertainties": [
+          "The passage links the drug to both osteoclastogenesis and bone resorption; this claim records osteoclastogenesis as the object and does not separately encode all downstream phenotypes in one edge.",
+          "Direct molecular target is described mechanistically but not as a direct causal interaction."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ovariectomized mice",
+          "species": "10090",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "1",
+              "10",
+              "12"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "aminooxyacetic acid hemihydrochloride",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "13"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1014,
+            "passage_index": 1,
+            "quote": "treatment with aminooxyacetic acid hemihydrochloride helped recover bone loss in ovariectomized mice",
+            "start": 914
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone loss",
+          "intervention": "treatment with aminooxyacetic acid hemihydrochloride",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Treatment with aminooxyacetic acid hemihydrochloride helped recover bone loss in ovariectomized mice.",
+        "uncertainties": [
+          "The text says 'helped recover bone loss,' which is summarized here as a decrease in bone loss; the exact quantitative effect is not stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        135
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        132
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        418,
+        718
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        106,
+        397
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        914,
+        1014
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1065,
+        1156
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

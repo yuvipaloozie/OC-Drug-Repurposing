@@ -1,0 +1,183 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "L-type protease inhibitors",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "52",
+              "53"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1201,
+            "passage_index": 1,
+            "quote": "the L-type protease inhibitors suppressed the bone resorption",
+            "start": 1140
+          }
+        ],
+        "experiment": {
+          "assay": "not_stated",
+          "dose": "not_stated",
+          "duration": "not_stated",
+          "endpoint": "bone resorption",
+          "intervention": "L-type protease inhibitors",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "L-type protease inhibitors suppressed bone resorption.",
+        "uncertainties": [
+          "The specific inhibitor(s) within the L-type protease inhibitor class are not individually named in the outcome sentence.",
+          "The passage does not specify the biological system or species for the bone resorption observation."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "51"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Cathepsin L and/or K",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "52",
+              "53"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1201,
+            "passage_index": 1,
+            "quote": "Cathepsin L and/or K participate in bone resorption based on bone type-1 collagen degradation and the L-type protease inhibitors suppressed the bone resorption",
+            "start": 1042
+          }
+        ],
+        "experiment": {
+          "assay": "bone type-1 collagen degradation",
+          "dose": "not_stated",
+          "duration": "not_stated",
+          "endpoint": "bone resorption",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Cathepsin L and/or K were stated to participate in bone resorption based on bone type-1 collagen degradation.",
+        "uncertainties": [
+          "The phrase 'participate in' is a functional statement tied to the authors' interpretation rather than a direct mechanistic assay.",
+          "The text does not separate the roles of cathepsin L versus cathepsin K, so the specific causal contributor remains unresolved."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1140,
+        1201
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1203,
+        1222
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1042,
+        1201
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1138,
+        1222
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

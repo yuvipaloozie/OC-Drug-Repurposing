@@ -1,0 +1,97 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "compound",
+            "surface": "PMF metabolites",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "30",
+              "31",
+              "32"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "RANKL/NFATc1/NF-kappaB",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1006,
+            "passage_index": 1,
+            "quote": "PMF metabolites, including flavonoids, polysaccharides, glycosides, and coumarins, exert coordinated osteoprotective effects by enhancing osteogenic pathways (Wnt/beta-catenin, BMP/SMAD), suppressing osteoclastogenic signaling (RANKL/NFATc1/NF-kappaB)",
+            "start": 755
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The review states that plant-derived metabolites are reported to suppress osteoclastogenic signaling involving RANKL, NFATc1, and NF-kappaB in osteoporosis.",
+        "uncertainties": [
+          "This is a review-level background statement, not a primary experimental result.",
+          "The passage names a signaling pathway rather than a specific molecular target or direct mechanism.",
+          "The text does not specify which plant metabolites caused the effect."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        755,
+        1006
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        887,
+        1140
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

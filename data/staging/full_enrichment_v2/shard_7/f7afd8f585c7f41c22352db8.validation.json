@@ -1,0 +1,207 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "macrophages",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "-"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "GL13K-Ti",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 791,
+            "passage_index": 1,
+            "quote": "GL13K-Ti partially inhibited osteoclastogenesis and expression of osteoclast-related genes and proteins",
+            "start": 688
+          }
+        ],
+        "experiment": {
+          "assay": "co-culture",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis and expression of osteoclast-related genes and proteins",
+          "intervention": "GL13K-Ti",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "GL13K-Ti partially inhibited osteoclastogenesis and reduced expression of osteoclast-related genes and proteins.",
+        "uncertainties": [
+          "The exact molecular composition of GL13K-Ti is a material surface rather than a single defined compound.",
+          "The quoted span supports inhibition of osteoclastogenesis, but the gene/protein expression decrease is described in the same sentence without separate quantitative details."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "macrophages",
+          "compartment": "NFATc1 promoter region",
+          "disease_setting": null,
+          "species": null,
+          "stage": "RANKL-induced osteoclastic differentiation"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "-"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "GL13K-Ti",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "H3K27 methylation modifications",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "26"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "NFATc1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "27"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1137,
+            "passage_index": 1,
+            "quote": "GL13K-Ti was found to impact the degree of methylation modifications of H3K27 in the NFATc1 promoter region following RANKL-induced osteoclastic differentiation",
+            "start": 977
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "degree of methylation modifications of H3K27 in the NFATc1 promoter region",
+          "intervention": "GL13K-Ti",
+          "outcome_change": "other",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "unknown",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "GL13K-Ti impacted H3K27 methylation modifications in the NFATc1 promoter region during RANKL-induced osteoclastic differentiation.",
+        "uncertainties": [
+          "The text states an impact on methylation modifications but does not specify whether the degree increased or decreased.",
+          "RANKL is mentioned as part of the differentiation context, not as a directly tested perturbation in the quoted sentence."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        688,
+        791
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        734,
+        837
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        977,
+        1137
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1096,
+        1229
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

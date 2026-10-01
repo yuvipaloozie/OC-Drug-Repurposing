@@ -1,0 +1,208 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoclast",
+          "compartment": "bone marrow niche",
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "mediators",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation and survival",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1002,
+            "passage_index": 1,
+            "quote": "mediators enhance osteoclast differentiation and survival",
+            "start": 945
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Inflammatory mediators from senescent immune cells are described as enhancing osteoclast differentiation and survival.",
+        "uncertainties": [
+          "The statement is a review-level summary, not a primary experimental result.",
+          "The specific mediator(s) responsible are not individually resolved in the passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "aging, postmenopausal osteoporosis, and radiotherapy-associated bone loss",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "38",
+              "39"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "dasatinib plus quercetin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "40"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "fisetin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "senescent-cell burden",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "SASP-related inflammation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "certain skeletal parameters",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1670,
+            "passage_index": 1,
+            "quote": "Preclinical studies, including those using dasatinib plus quercetin, fisetin, and bone-targeted delivery platforms, have demonstrated the capacity to reduce global senescent-cell burden, attenuate SASP-related inflammation, and improve certain skeletal parameters in models of aging, postmenopausal osteoporosis, and radiotherapy-associated bone loss.",
+            "start": 1319
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "global senescent-cell burden",
+          "intervention": "dasatinib plus quercetin, fisetin, and bone-targeted delivery platforms",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Preclinical studies are described as showing that senolytics can reduce senescent-cell burden, attenuate SASP-related inflammation, and improve some skeletal parameters in several bone-loss models.",
+        "uncertainties": [
+          "The passage summarizes multiple preclinical studies rather than one defined experiment.",
+          "The specific contribution of each senolytic or delivery platform is not separated in the text.",
+          "The passage also mentions inflammation and skeletal parameters, but they are not encoded as separate causal edges here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        945,
+        1002
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1033,
+        1090
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1319,
+        1670
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1458,
+        1660
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

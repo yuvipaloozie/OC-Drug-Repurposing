@@ -1,0 +1,117 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "CD14+ peripheral blood monocytes",
+          "compartment": "in vitro",
+          "disease_setting": "radiographic axial spondyloarthritis",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "51",
+              "54",
+              "55",
+              "59",
+              "60"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "bDMARDs",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts and osteoclast precursors",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2042,
+            "passage_index": 1,
+            "quote": "only r-axSpA patients receiving bDMARDs exhibited a reduced ability to develop osteoclasts and osteoclast precursors",
+            "start": 1926
+          },
+          {
+            "end": 2383,
+            "passage_index": 1,
+            "quote": "The process was modulated by treatment with bDMARDs",
+            "start": 2332
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP staining; TRAP5b concentration in supernatants measured by ELISA",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast and osteoclast precursor formation",
+          "intervention": "treatment with bDMARDs",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In r-axSpA patients, treatment with bDMARDs was associated with a reduced ability of peripheral blood monocytes to develop into osteoclasts and osteoclast precursors in vitro.",
+        "uncertainties": [
+          "The text reports association/modulation in patients receiving bDMARDs, not a direct molecular mechanism.",
+          "bDMARDs is a class term; the specific drug(s) are not named."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1926,
+        2042
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2066,
+        2178
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        2332,
+        2383
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2510,
+        2608
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

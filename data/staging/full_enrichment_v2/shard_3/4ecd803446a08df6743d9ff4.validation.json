@@ -1,0 +1,118 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "prepubertal children",
+          "compartment": null,
+          "disease_setting": "short stature children born small for gestational age",
+          "species": "children",
+          "stage": "one year of therapy"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "20",
+              "32"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "Growth hormone therapy",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "25",
+              "26",
+              "30"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "CTX",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 22,
+            "passage_index": 1,
+            "quote": "Growth hormone therapy",
+            "start": 0
+          },
+          {
+            "end": 880,
+            "passage_index": 1,
+            "quote": "A statistically significant increase in bone resorption markers (CTX) was found at both 6 and 12 months.",
+            "start": 776
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": "6 and 12 months",
+          "endpoint": "CTX",
+          "intervention": "growth hormone therapy",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Growth hormone therapy was associated with an increase in the bone resorption marker CTX during follow-up.",
+        "uncertainties": [
+          "CTX is annotated as a gene by the provider, but the text uses it as a bone turnover marker; molecular form is therefore unresolved.",
+          "The quoted evidence span for the increase sentence is approximate because the passage offset boundaries are not explicitly delimited in the packet."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        22
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        111,
+        132
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        776,
+        880
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        548,
+        651
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

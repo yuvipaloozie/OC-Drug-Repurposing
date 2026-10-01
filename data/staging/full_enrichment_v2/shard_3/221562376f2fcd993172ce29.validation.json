@@ -1,0 +1,183 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow derived macrophages",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "36"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "WEAO",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "37"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1262,
+            "passage_index": 1,
+            "quote": "WEAO markedly inhibited osteoclast differentiation by suppressing the receptor activator for nuclear factor-[Formula: see text]B ligand-induced downregulation of inhibitor of DNA binding 2 and V-maf musculoaponeurotic fibrosarcoma oncogene homolog B and the phosphorylation of c-Jun N-terminal kinase, p38, nuclear factor-[Formula: see text]B, c-Src, and Bruton's tyrosine kinase to induce nuclear factor of activated T cells cytoplasmic 1 expression.",
+            "start": 811
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "in vitro osteoclast differentiation",
+          "intervention": "water extract of A. officinarum rhizome (WEAO)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "WEAO inhibited osteoclast differentiation in vitro.",
+        "uncertainties": [
+          "The passage describes an in vitro system but does not state species for the bone marrow derived macrophages.",
+          "The molecular intermediates named in the sentence are part of the observed context, but direct causality is not established from the text alone."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "mature osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "53"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "WEAO",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "54"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "resorbing activity of mature osteoclasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1362,
+            "passage_index": 1,
+            "quote": "WEAO also suppressed the resorbing activity of mature osteoclasts by altering actin ring formation.",
+            "start": 1263
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "resorbing activity",
+          "intervention": "WEAO",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "WEAO suppressed the resorbing activity of mature osteoclasts.",
+        "uncertainties": [
+          "The sentence mentions altered actin ring formation, but the direct mechanistic chain is not established beyond the stated suppression of resorbing activity.",
+          "Species is not stated for the mature osteoclasts."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        811,
+        1262
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        909,
+        1360
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1263,
+        1362
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1515,
+        1603
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

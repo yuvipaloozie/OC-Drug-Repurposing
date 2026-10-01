@@ -1,0 +1,109 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "31"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Denosumab",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "32",
+              "33"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "RANK/RANKL/OPG signaling pathway",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "32"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "e3",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 218,
+            "passage_index": 1,
+            "quote": "Denosumab, a fully humanized monoclonal neutralizing antibody, inhibits activation of the RANK/RANKL/OPG signaling pathway through competitive binding with RANKL, thereby inhibiting osteoclast-mediated bone resorption.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Denosumab is described as inhibiting activation of the RANK/RANKL/OPG signaling pathway through competitive binding with RANKL, which is presented as a mechanism for inhibiting osteoclast-mediated bone resorption.",
+        "uncertainties": [
+          "Review/summary language; mechanism is presented as background rather than a primary experiment.",
+          "RANKL and OPG are annotated as genes in the source, but the text refers to a signaling pathway and does not establish molecular species or species context.",
+          "The text also mentions osteoclast-mediated bone resorption, but the claim is anchored to pathway inhibition rather than a direct experimental measurement."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        218
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        197,
+        388
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

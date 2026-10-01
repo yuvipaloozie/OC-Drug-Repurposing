@@ -1,0 +1,256 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclast-specific",
+          "compartment": null,
+          "disease_setting": "ovariectomized model",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "26",
+              "27",
+              "28",
+              "31",
+              "32",
+              "33",
+              "39",
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "UCHL1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "29"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "mice",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "30",
+              "40",
+              "42"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoporosis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 515,
+            "passage_index": 1,
+            "quote": "Here, we identified the deubiquitinase ubiquitin C-terminal hydrolase 1 (UCHL1) as a negative regulator of osteoclastogenesis by using the GEO database, proteomic analysis, and RNAi. Osteoclast-specific UCHL1 conditional knockout mice exhibited a severe osteoporosis phenotype in an ovariectomized model.",
+            "start": 211
+          }
+        ],
+        "experiment": {
+          "assay": "RNAi; conditional knockout mice",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "osteoclast-specific UCHL1 conditional knockout",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "UCHL1 was identified as a negative regulator of osteoclastogenesis, and osteoclast-specific UCHL1 conditional knockout mice showed a severe osteoporosis phenotype in an ovariectomized model.",
+        "uncertainties": [
+          "The abstract combines identification and knockout findings; the causal mechanism for the negative regulation is not fully specified in this sentence."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "26",
+              "27",
+              "28",
+              "31",
+              "32",
+              "33",
+              "39",
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "UCHL1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "TAZ",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "3",
+              "34",
+              "37",
+              "38"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:NFATC1",
+            "key": "e3",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "NFATC1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "35",
+              "36"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:PPP3CA",
+            "key": "e4",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "protein",
+            "surface": "calcineurin A",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1024,
+            "passage_index": 1,
+            "quote": "Mechanistically, UCHL1 deubiquitinated and stabilized the transcriptional coactivator with PDZ-binding motif (TAZ) at the K46 residue, thereby inhibiting osteoclastogenesis. The TAZ protein underwent K48-linked polyubiquitination, which was degraded by UCHL1. As a substrate of UCHL1, TAZ regulates NFATC1 through a nontranscriptional coactivator function by competing with calcineurin A (CNA) for binding to NFATC1, which inhibits NFATC1 dephosphorylation and nuclear transport to impede osteoclastogenesis.",
+            "start": 516
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": {
+          "direction": "unknown",
+          "enzyme": "e1",
+          "products": [],
+          "substrates": [
+            {
+              "entity": "e2",
+              "stoichiometry": null
+            }
+          ]
+        },
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "UCHL1 deubiquitinated and stabilized TAZ, and TAZ in turn inhibited osteoclastogenesis by competing with calcineurin A for binding to NFATC1 and blocking NFATC1 dephosphorylation and nuclear transport.",
+        "uncertainties": [
+          "The sentence states UCHL1 deubiquitinated and stabilized TAZ, but does not specify a full biochemical substrate-to-product conversion beyond the modification state change.",
+          "The NFATC1/calcineurin A competition is described mechanistically, but the directness and exact molecular form of NFATC1 are not fully resolved from text alone."
+        ]
+      },
+      "errors": [
+        "regulatory form mismatch"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        211,
+        515
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        317,
+        467
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        516,
+        1024
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        469,
+        1105
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

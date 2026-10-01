@@ -1,0 +1,133 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "hypothesis",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "compound",
+            "surface": "molecules",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "18"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "cathepsin K",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 487,
+            "passage_index": 1,
+            "quote": "The next generation of therapies for osteoporosis may include molecules",
+            "start": 416
+          },
+          {
+            "end": 602,
+            "passage_index": 1,
+            "quote": "or cathepsin K, thus",
+            "start": 582
+          },
+          {
+            "end": 730,
+            "passage_index": 1,
+            "quote": "preventing osteoclasts from attaching to bone, form a ruffled border, acidify resorption lacunae or digest organic bone matrix.",
+            "start": 603
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast attachment/ruffled border formation/resorption lacunae acidification/organic bone matrix digestion",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The review proposes that future osteoporosis therapies may include molecules that inhibit cathepsin K, which would prevent osteoclasts from digesting organic bone matrix.",
+        "uncertainties": [
+          "The text is a forward-looking review statement using 'may include', so this is not an observed experimental result.",
+          "No specific inhibitory compound is named.",
+          "Cathepsin K taxon is not explicitly stated in the passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        416,
+        487
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        233,
+        308
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        582,
+        602
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        409,
+        428
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        603,
+        730
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        428,
+        518
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,326 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "bone destruction / osteoporosis / cancer",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "49",
+              "52",
+              "54"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "MSP",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "71"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RON tyrosine kinase",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "host cells",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "57",
+              "58"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:SRC",
+            "key": "e5",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "SRC",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "46",
+              "47",
+              "55"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "e6",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "pathway",
+            "surface": "RANKL signaling",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 852,
+            "passage_index": 1,
+            "quote": "MSP signals through its receptor, RON tyrosine kinase, expressed on host cells, to activate osteoclasts directly by a previously undescribed pathway that is complementary to RANKL signaling and converges on proto-oncogene, non-receptor tyrosine kinase SRC (SRC).",
+            "start": 590
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast activation",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "direct",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "MSP signaling through RON on host cells was reported to directly activate osteoclasts and converge on SRC, complementing RANKL signaling.",
+        "uncertainties": [
+          "The passage states a direct activation pathway but does not specify the molecular form of MSP or SRC beyond text labels.",
+          "Host-cell context is stated, but the specific host cell type is not identified."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "cancer-mediated bone destruction / osteoporosis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "71"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RON kinase",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "59",
+              "60"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "cancer-mediated bone destruction",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "61"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoporosis",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 985,
+            "passage_index": 1,
+            "quote": "Genetic or pharmacologic inhibition of RON kinase blocked cancer-mediated bone destruction and osteoporosis in several mouse models.",
+            "start": 853
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone destruction and osteoporosis",
+          "intervention": "Genetic or pharmacologic inhibition of RON kinase",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Genetic or pharmacologic inhibition of RON kinase blocked cancer-mediated bone destruction and osteoporosis in mouse models.",
+        "uncertainties": [
+          "The text combines genetic and pharmacologic inhibition, so the exact perturbation type is mixed.",
+          "The passage reports blocking of two outcomes; the regulatory object is summarized as the combined bone-destruction phenotype."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "cancer",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "63",
+              "64"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "BMS-777607/ASLAN002",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "markers of bone turnover",
+            "taxon": "human"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1118,
+            "passage_index": 1,
+            "quote": "Furthermore, the RON kinase inhibitor BMS-777607/ASLAN002 altered markers of bone turnover in a first-in-human clinical cancer study",
+            "start": 986
+          }
+        ],
+        "experiment": {
+          "assay": "first-in-human clinical cancer study",
+          "dose": null,
+          "duration": null,
+          "endpoint": "markers of bone turnover",
+          "intervention": "BMS-777607/ASLAN002",
+          "outcome_change": "other",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The RON kinase inhibitor BMS-777607/ASLAN002 altered markers of bone turnover in a first-in-human clinical cancer study.",
+        "uncertainties": [
+          "The direction of the marker change is not stated, only that it was altered.",
+          "The study is clinical, but the specific patient population and assay details are not provided in the abstract."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        590,
+        852
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        587,
+        741
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        853,
+        985
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        743,
+        864
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        986,
+        1118
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        866,
+        984
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

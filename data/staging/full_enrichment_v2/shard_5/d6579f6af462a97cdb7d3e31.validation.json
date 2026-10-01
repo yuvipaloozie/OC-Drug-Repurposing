@@ -1,0 +1,195 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "hypothesis",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "cavity wall",
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "sealing zone displacement",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "10"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "cathepsin K",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "collagen removal from the cavity wall",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "osteoclasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1425,
+            "passage_index": 1,
+            "quote": "sealing zone displacement stringently requires thorough collagen removal from the cavity wall - which renders strong cathepsin K collagenolysis indispensable for engagement of osteoclasts in cavity-enlargement",
+            "start": 1216
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "sealing zone displacement / cavity enlargement",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e1",
+          "sign": "positive",
+          "subject": "e2"
+        },
+        "summary": "The review proposes that strong cathepsin K collagenolysis is required for sealing zone displacement and osteoclast engagement in cavity enlargement.",
+        "uncertainties": [
+          "Review language presents a proposed mechanism rather than a direct experiment.",
+          "The text does not specify species or an experimental assay."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "leading edge",
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "sealing zone",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "generation of new ruffled border at the leading edge",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1528,
+            "passage_index": 1,
+            "quote": "Furthermore, the sealing zone is associated with generation of new ruffled border at the leading edge",
+            "start": 1427
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The sealing zone is described as being associated with generation of new ruffled border at the leading edge.",
+        "uncertainties": [
+          "Association is stated, but no causal direction or experiment is given.",
+          "Ruffled border is not explicitly annotated in the provider data; entity was extracted from text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1216,
+        1425
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1328,
+        1505
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1427,
+        1528
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1507,
+        1609
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

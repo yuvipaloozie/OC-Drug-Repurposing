@@ -1,0 +1,248 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "arginine vasopressin deficiency",
+          "species": "humans",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "AVP-D",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [
+              "63"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "CTX",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "HC",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [
+              "56"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "PP",
+            "taxon": "9606"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1548,
+            "passage_index": 1,
+            "quote": "Median CTX levels were lower in AVP-D (0.373 [0.288-0.513] ng/ml) than in HC (0.592 [0.427-0.729] ng/ml, p=0.021)",
+            "start": 1435
+          },
+          {
+            "end": 1629,
+            "passage_index": 1,
+            "quote": "with no difference between PP (0.514 [0.411-0.618] ng/ml) and the other groups.",
+            "start": 1550
+          }
+        ],
+        "experiment": {
+          "assay": "bone resorption marker measurement",
+          "dose": null,
+          "duration": null,
+          "endpoint": "CTX levels",
+          "intervention": "comparison of AVP-D vs healthy controls and primary polydipsia",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Patients with AVP deficiency had lower CTX levels than healthy controls, with no difference versus primary polydipsia.",
+        "uncertainties": [
+          "This is a group comparison/association rather than a demonstrated causal mechanism.",
+          "CTX is annotated in the source as a disease/chemical tag but the text describes it as a bone resorption marker."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "arginine vasopressin deficiency",
+          "species": "humans",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "AVP-D",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone formation index",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "P1NP/CTX ratio",
+            "taxon": "9606"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1758,
+            "passage_index": 1,
+            "quote": "The bone formation index was higher in AVP-D than in HC (p=0.036), while no difference was observed between PP and either group.",
+            "start": 1630
+          },
+          {
+            "end": 1258,
+            "passage_index": 1,
+            "quote": "The bone formation index (defined as P1NP/CTX ratio) was calculated.",
+            "start": 1190
+          }
+        ],
+        "experiment": {
+          "assay": "calculated P1NP/CTX ratio",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone formation index",
+          "intervention": "comparison of AVP-D vs healthy controls and primary polydipsia",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The bone formation index (P1NP/CTX ratio) was higher in AVP deficiency than in healthy controls.",
+        "uncertainties": [
+          "This is a comparative association, not a causal perturbation experiment.",
+          "The paper reports the index rather than a direct molecular mechanism."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1435,
+        1548
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1487,
+        1563
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1550,
+        1629
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1565,
+        1629
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1630,
+        1758
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1631,
+        1708
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1190,
+        1258
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1385,
+        1429
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

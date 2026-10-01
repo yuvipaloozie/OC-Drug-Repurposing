@@ -1,0 +1,213 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "CKD-MBD",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "pro-inflammatory cytokines",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "48",
+              "49",
+              "51"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "RANKL/RANK/OPG signaling pathway",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "46"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "TNF-alpha",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "protein",
+            "surface": "IL-6",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 936,
+            "passage_index": 1,
+            "quote": "pro-inflammatory cytokines, such as tumor necrosis factor-alpha (TNF-alpha) and interleukin (IL)-6, which are found to facilitate bone resorption through the activation of the receptor activator of NF-kappaB ligand (RANKL)/receptor activator of nuclear factor-kappa B (RANK)/osteoprotegerin (OPG) signaling pathway",
+            "start": 622
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The review states that pro-inflammatory cytokines, including TNF-alpha and IL-6, facilitate bone resorption through activation of the RANKL/RANK/OPG signaling pathway.",
+        "uncertainties": [
+          "This is a review statement rather than a primary experimental result.",
+          "The text does not separate the effects of TNF-alpha from IL-6 or establish direct causality for each cytokine individually."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "macrophage",
+          "compartment": null,
+          "disease_setting": "CKD-MBD",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "40",
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "macrophage-induced VC",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "54"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "NLRP3 inflammasome",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1065,
+            "passage_index": 1,
+            "quote": "Furthermore, macrophage-induced VC is linked to the activation of the NLR family pyrin domain containing 3 (NLRP3) inflammasome",
+            "start": 938
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "NLRP3 inflammasome activation",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The review links macrophage-induced vascular calcification with activation of the NLRP3 inflammasome.",
+        "uncertainties": [
+          "The wording is associative ('linked to') and does not establish directionality or causality.",
+          "Macrophage-induced VC is not a molecular entity, so this claim is a phenotype-to-complex association."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        622,
+        936
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        766,
+        1093
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        938,
+        1065
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1094,
+        1223
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

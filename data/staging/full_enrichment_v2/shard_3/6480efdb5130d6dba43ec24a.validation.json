@@ -1,0 +1,126 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "23"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Denosumab",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "26",
+              "27"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast formation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 123,
+            "passage_index": 1,
+            "quote": "Denosumab is a fully human monoclonal antibody that targets the receptor activator of nuclear factor kappaB ligand (RANKL).",
+            "start": 0
+          },
+          {
+            "end": 287,
+            "passage_index": 1,
+            "quote": "By specifically binding to RANKL, it inhibits osteoclast formation, activation, and survival, thereby reducing bone resorption and increasing bone mineral density.",
+            "start": 124
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast formation / activation / survival; bone resorption; bone mineral density",
+          "intervention": null,
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Denosumab binds RANKL and inhibits osteoclast formation, activation, and survival, thereby reducing bone resorption and increasing bone mineral density.",
+        "uncertainties": [
+          "The abstract states a general mechanism/background effect rather than a new experiment in this report.",
+          "RANKL is tagged as a gene by the provider, but the text supports a ligand/protein role here.",
+          "The exact molecular form of denosumab is a monoclonal antibody/compound rather than a gene or protein."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        123
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        124
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        124,
+        287
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        125,
+        288
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

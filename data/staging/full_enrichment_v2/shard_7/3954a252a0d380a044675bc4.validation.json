@@ -1,0 +1,129 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "RNA",
+            "surface": "microRNA (miRNA)",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "gene expression",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "bone metabolism",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoporosis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 508,
+            "passage_index": 1,
+            "quote": "A growing interest has been devoted to the role that microRNA (miRNA) plays in osteoporosis regulation. A microRNA (miRNA) is a group of small single-stranded RNA molecules involved in regulating gene expression in eukaryotic organisms.",
+            "start": 272
+          },
+          {
+            "end": 703,
+            "passage_index": 1,
+            "quote": "As microRNAs (miRNAs) are key regulators of gene expression and can modulate processes related to bone metabolism, they have become increasingly important for studying osteoporosis pathogenesis.",
+            "start": 509
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "gene expression; bone metabolism processes",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "MicroRNAs are described as key regulators of gene expression and as modulators of bone metabolism processes in the context of osteoporosis.",
+        "uncertainties": [
+          "The passage is a general review statement and does not report a specific experimental perturbation or causal mechanism.",
+          "The text links miRNAs to bone metabolism in osteoporosis broadly, but does not specify individual miRNAs or direct targets."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        272,
+        508
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        196,
+        307
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        509,
+        703
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        307,
+        421
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

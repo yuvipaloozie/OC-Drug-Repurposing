@@ -1,0 +1,198 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "primary hyperparathyroidism",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "15"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "parathyroid hormone",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "16"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone remodelling",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 313,
+            "passage_index": 1,
+            "quote": "Excessive secretion of parathyroid hormone results in increased bone remodelling with an excess of bone resorption.",
+            "start": 198
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone remodelling and bone resorption",
+          "intervention": "excessive secretion of parathyroid hormone",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In primary hyperparathyroidism, excessive secretion of parathyroid hormone is associated with increased bone remodeling and excess bone resorption.",
+        "uncertainties": [
+          "The text reports an overall effect of excessive parathyroid hormone secretion; it does not establish direct molecular causality."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "hyperparathyroidism",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "surgery",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone turnover",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "17",
+              "19"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "fracture risk",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 534,
+            "passage_index": 1,
+            "quote": "Successful surgery for hyperparathyroidism results in a normalization of bone turnover and a decrease of fracture risk.",
+            "start": 415
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "fracture risk",
+          "intervention": "successful surgery for hyperparathyroidism",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Successful surgery for hyperparathyroidism is reported to normalize bone turnover and decrease fracture risk.",
+        "uncertainties": [
+          "The passage combines normalization of bone turnover and decreased fracture risk in one statement; the specific causal linkage between these two outcomes is not separated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        198,
+        313
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        217,
+        336
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        415,
+        534
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        338,
+        448
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

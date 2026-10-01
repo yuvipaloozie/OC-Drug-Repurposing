@@ -1,0 +1,103 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "5"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Puerarin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "integrin-beta3 Pyk2/Src/Cbl signaling pathway",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 112,
+            "passage_index": 0,
+            "quote": "Puerarin specifically disrupts osteoclast activation via blocking integrin-beta3 Pyk2/Src/Cbl signaling pathway.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast activation",
+          "intervention": "Puerarin",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Puerarin is reported to disrupt osteoclast activation, with the title attributing this effect to blocking the integrin-beta3 Pyk2/Src/Cbl signaling pathway.",
+        "uncertainties": [
+          "The title states a mechanism, but the exact experimental context and assay are not specified in the cited span.",
+          "The pathway mention is included as part of the claimed mechanism; the specific molecular directionality among pathway members is not separately resolved here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        112
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        113
+      ],
+      "passage_index": 0
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,138 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "postmenopausal osteoporosis",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "99"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "A-485",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "101"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "GLUD1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "109"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "OP",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "110"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "SENP1",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2075,
+            "passage_index": 1,
+            "quote": "A-485 reduced GLUD1 acetylation and promoted improvement of OP",
+            "start": 2013
+          },
+          {
+            "end": 2116,
+            "passage_index": 1,
+            "quote": "OP, which were reversed by SENP1 knockdown.",
+            "start": 2073
+          }
+        ],
+        "experiment": {
+          "assay": "Western blot; RT-qPCR; in vivo rat OP model",
+          "dose": "100 mg/kg/day",
+          "duration": "six weeks",
+          "endpoint": "GLUD1 acetylation and OP improvement",
+          "intervention": "A-485 treatment; SENP1 knockdown",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "A-485 treatment in ovariectomized rats decreased GLUD1 acetylation and improved postmenopausal osteoporosis, and those effects were reversed when SENP1 was knocked down.",
+        "uncertainties": [
+          "The quoted evidence spans are approximate and may not align exactly with the passage offsets.",
+          "The text reports reversal by SENP1 knockdown, but the causal link from SENP1 to the A-485 effect is not directly mechanistically resolved in the abstract.",
+          "GLUD1 is treated as a protein-level acetylation target from context, but the text does not explicitly name the molecular form."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        2013,
+        2075
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1860,
+        1918
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        2073,
+        2116
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2192,
+        2247
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

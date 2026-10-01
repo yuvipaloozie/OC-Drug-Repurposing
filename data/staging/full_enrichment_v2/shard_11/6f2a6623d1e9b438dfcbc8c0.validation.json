@@ -1,0 +1,175 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "gingival crevicular fluid",
+          "disease_setting": null,
+          "species": "canine",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "periodontal distraction",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1346,
+            "passage_index": 1,
+            "quote": "RANKL levels showed no baseline difference, but were significantly higher in the periodontal distraction group at weeks 1 and 6 (P = 0.010 and P = 0.001, respectively).",
+            "start": 1178
+          }
+        ],
+        "experiment": {
+          "assay": "ELISA test",
+          "dose": null,
+          "duration": "weeks 1 and 6",
+          "endpoint": "RANKL levels",
+          "intervention": "periodontal distraction versus conventional retraction",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Periodontal distraction was associated with higher RANKL levels at weeks 1 and 6 than conventional retraction.",
+        "uncertainties": [
+          "The comparison is between two orthodontic methods, so direct molecular causality is not established.",
+          "The measured material is gingival crevicular fluid; tissue-level source is not fully specified in the claim."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "gingival crevicular fluid",
+          "disease_setting": null,
+          "species": "canine",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "periodontal distraction",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "OPG",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1483,
+            "passage_index": 1,
+            "quote": "OPG levels were initially similar, but by weeks 1 and 6, they were significantly lower in the periodontal distraction group (P = 0.001).",
+            "start": 1347
+          }
+        ],
+        "experiment": {
+          "assay": "ELISA test",
+          "dose": null,
+          "duration": "weeks 1 and 6",
+          "endpoint": "OPG levels",
+          "intervention": "periodontal distraction versus conventional retraction",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Periodontal distraction was associated with lower OPG levels at weeks 1 and 6 than conventional retraction.",
+        "uncertainties": [
+          "The comparison is between two orthodontic methods, so direct molecular causality is not established.",
+          "The measured material is gingival crevicular fluid; tissue-level source is not fully specified in the claim."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1178,
+        1346
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        687,
+        815
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1347,
+        1483
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        815,
+        938
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

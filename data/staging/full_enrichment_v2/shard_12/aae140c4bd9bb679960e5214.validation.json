@@ -1,0 +1,355 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow-derived macrophages",
+          "compartment": null,
+          "disease_setting": "osteoclastogenesis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "40",
+              "49",
+              "50",
+              "53",
+              "55",
+              "57"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Coixol",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "41",
+              "42"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 621,
+            "passage_index": 1,
+            "quote": "coixol on osteoclast formation and function during receptor activator of nuclear factor kappa-B ligand (RANKL)-induced osteoclastogenesis",
+            "start": 484
+          },
+          {
+            "end": 1382,
+            "passage_index": 1,
+            "quote": "Coixol dose-dependently inhibited osteoclast differentiation, disrupted F-actin ring formation, and decreased bone resorption activity",
+            "start": 1248
+          },
+          {
+            "end": 1486,
+            "passage_index": 1,
+            "quote": "these activities were accompanied by the downregulation of key osteoclastogenic genes and proteins",
+            "start": 1388
+          }
+        ],
+        "experiment": {
+          "assay": "tartrate-resistant acid phosphatase staining; F-actin ring formation assays; pit formation assays",
+          "dose": "dose-dependent",
+          "duration": null,
+          "endpoint": "osteoclast differentiation; F-actin ring formation; bone resorption activity",
+          "intervention": "coixol",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Coixol treatment inhibited RANKL-induced osteoclast differentiation and reduced bone resorption activity in bone marrow-derived macrophages, with downregulation of osteoclast-associated genes and proteins.",
+        "uncertainties": [
+          "The passage reports multiple related outcomes; directionality for each specific downstream marker is not separately quantified in the extracted span.",
+          "RANKL is provider-tagged as a gene, but the molecular form here is treated as a protein/growth factor contextually; this mapping is ambiguous."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": "normoxic conditions"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "40",
+              "49",
+              "50",
+              "53",
+              "55",
+              "57"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "coixol",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "46",
+              "47",
+              "51",
+              "56",
+              "58"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:HIF1A",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "protein",
+            "surface": "HIF-1alpha",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1558,
+            "passage_index": 1,
+            "quote": "Under normoxic conditions, coixol increased HIF-1alpha protein levels.",
+            "start": 1488
+          }
+        ],
+        "experiment": {
+          "assay": "Western blot assay",
+          "dose": null,
+          "duration": null,
+          "endpoint": "HIF-1alpha protein levels",
+          "intervention": "coixol",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Under normoxic conditions, coixol increased HIF-1alpha protein levels.",
+        "uncertainties": [
+          "The span states protein levels increased, but does not establish whether this reflects transcriptional or post-transcriptional regulation."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ovariectomized mouse model",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "40",
+              "49",
+              "50",
+              "53",
+              "55",
+              "57"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "coixol",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "5",
+              "54"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1701,
+            "passage_index": 1,
+            "quote": "In ovariectomized mice, coixol significantly attenuated bone loss, improved trabecular bone microstructure, and suppressed osteoclast activity",
+            "start": 1559
+          }
+        ],
+        "experiment": {
+          "assay": "micro-computed tomography; histomorphometric analyses",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone loss; osteoclast activity",
+          "intervention": "coixol",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In ovariectomized mice, coixol attenuated bone loss and suppressed osteoclast activity.",
+        "uncertainties": [
+          "The quoted span bundles several in vivo outcomes; only bone loss is directly modeled in the regulatory object.",
+          "The ovariectomized mouse model is stated, but the sex, age, and treatment duration are not provided."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        484,
+        621
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        619,
+        700
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1248,
+        1382
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        881,
+        1004
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1388,
+        1486
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1009,
+        1146
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1488,
+        1558
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1151,
+        1230
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1559,
+        1701
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1259,
+        1367
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

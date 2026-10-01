@@ -1,0 +1,125 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "semiprofessional male ultramarathon runners",
+          "compartment": "serum",
+          "disease_setting": "ultramarathon running",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "20"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "vitamin D3",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone metabolism",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "28",
+              "29"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "calcium - PTH homeostasis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 761,
+            "passage_index": 1,
+            "quote": "a single high dose of vitamin D3 (cholecalciferol, 150,000 IU) in vegetable oil 24 h before the start of the run",
+            "start": 649
+          },
+          {
+            "end": 1839,
+            "passage_index": 1,
+            "quote": "The observed attenuation of post-exercise bone resorption and enhancement of bone formation suggest that vitamin D supplementation may modulate bone metabolism in response to extreme physical exertion, potentially through effects on calcium - PTH homeostasis.",
+            "start": 1580
+          }
+        ],
+        "experiment": {
+          "assay": "blood samples were collected for analysis at three timepoints",
+          "dose": "150,000 IU",
+          "duration": "24 h before the start of the run",
+          "endpoint": "serum levels of bone turnover markers",
+          "intervention": "single high dose of vitamin D3 (cholecalciferol, 150,000 IU) in vegetable oil 24 h before the start of the run",
+          "outcome_change": "other",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "A single high-dose vitamin D3 supplementation before an ultramarathon was associated with attenuated post-exercise bone resorption and enhanced bone formation, with the authors suggesting a possible effect on calcium-PTH homeostasis.",
+        "uncertainties": [
+          "The claim is an inferred summary from marker changes and the authors' interpretation; the underlying molecular mechanism is not directly established.",
+          "The text does not specify which exact bone turnover markers correspond to the overall bone resorption/formation conclusion beyond PINP and CTX."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        649,
+        761
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        821,
+        935
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1580,
+        1839
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1752,
+        2024
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

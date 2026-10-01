@@ -1,0 +1,184 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "periodontitis",
+          "species": "837",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "31",
+              "32"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "PAF-DS@PDA-MTZ",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "33",
+              "34"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "Porphyromonas gingivalis",
+            "taxon": "837"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1042,
+            "passage_index": 1,
+            "quote": "PAF-DS@PDA-MTZ could quickly kill Porphyromonas gingivalis (P. g.)",
+            "start": 976
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "killing Porphyromonas gingivalis",
+          "intervention": "PAF-DS@PDA-MTZ",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "PAF-DS@PDA-MTZ quickly killed Porphyromonas gingivalis.",
+        "uncertainties": [
+          "Exact biological level of the reported effect is summarized as phenotype because the text states killing rather than a molecular target or pathway.",
+          "The compound contains multiple loaded components, but the text reports the effect for the assembled system rather than a single active ingredient."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "periodontitis",
+          "species": "10116",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "31",
+              "32"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "PAF-DS@PDA-MTZ",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "alveolar bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1237,
+            "passage_index": 1,
+            "quote": "Validation in a rat periodontitis model confirmed the system's efficacy in reducing alveolar bone resorption",
+            "start": 1129
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "alveolar bone resorption",
+          "intervention": "PAF-DS@PDA-MTZ",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In a rat periodontitis model, PAF-DS@PDA-MTZ reduced alveolar bone resorption.",
+        "uncertainties": [
+          "The passage reports validation in a rat model but does not specify assay details or treatment duration.",
+          "The claim concerns a periodontitis model, not an osteoclast-specific readout."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        976,
+        1042
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        907,
+        958
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1129,
+        1237
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1034,
+        1128
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

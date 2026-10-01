@@ -1,0 +1,94 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "obesity",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "53"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "glutamine",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1510,
+            "passage_index": 1,
+            "quote": "In bone, glutamine improved bone quality, along with reduced bone marrow adiposity and decreased bone resorption.",
+            "start": 1397
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": "2-month dietary intervention",
+          "endpoint": "bone resorption",
+          "intervention": "HFD supplemented with glutamine (HFD + G)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In glutamine-supplemented mice, bone resorption was decreased.",
+        "uncertainties": [
+          "The sentence also reports improved bone quality and reduced bone marrow adiposity, but the extracted claim focuses only on decreased bone resorption.",
+          "Direct molecular target of glutamine is not stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1397,
+        1510
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        676,
+        789
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

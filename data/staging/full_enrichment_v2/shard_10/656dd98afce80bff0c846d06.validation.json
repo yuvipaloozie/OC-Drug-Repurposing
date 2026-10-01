@@ -1,0 +1,282 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "33",
+              "36",
+              "40",
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "mitochondrial dysfunction",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "25",
+              "26",
+              "34",
+              "43",
+              "44",
+              "45"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoporosis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 363,
+            "passage_index": 1,
+            "quote": "Mitochondrial dysfunction has been reported",
+            "start": 320
+          },
+          {
+            "end": 470,
+            "passage_index": 1,
+            "quote": "to potentially constitute one of the most crucial mechanisms influencing the pathogenesis of osteoporosis.",
+            "start": 364
+          },
+          {
+            "end": 1157,
+            "passage_index": 1,
+            "quote": "we investigated and analyzed the correlation between mitochondrial dysfunction, encompassing",
+            "start": 1065
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "correlation between mitochondrial dysfunction and osteoporosis",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Mitochondrial dysfunction is reported as an important mechanism influencing the pathogenesis of osteoporosis, and the review describes a correlation between mitochondrial dysfunction and osteoporosis.",
+        "uncertainties": [
+          "This is a review statement, not a primary experimental result.",
+          "The text states a correlation/association and does not establish causal direction."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": "mitochondria",
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "mitochondrial electron transport chain",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "37"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ATP",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "38",
+              "39",
+              "42"
+            ],
+            "existing_node_id": "CHEBI:26523",
+            "key": "e5",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "compound",
+            "surface": "reactive oxygen species (ROS)",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1803,
+            "passage_index": 1,
+            "quote": " mitochondrial DNA (mtDNA) alterations, oxidative phosphorylation (OXPHOS) impairment, mitophagy dysregulation, defects in mitochondrial biogenesis and dynamics, as well as excessive ROS accumulation, with regards to OP (Figure 1). Furthermore, we explore prospective strategies currently available for modulating mitochondria to ameliorate osteoporosis. Undoubtedly, certain therapeutic strategies still require further investigation to ensure their safety and efficacy as clinical treatments. However, from a mitochondrial perspective, the potential for establishing effective and safe therapeutic approaches for osteoporosis appears promising.",
+            "start": 1157
+          },
+          {
+            "end": 1511,
+            "passage_index": 1,
+            "quote": "Furthermore, we explore prospective strategies currently available for modulating mitochondria to ameliorate osteoporosis.",
+            "start": 1389
+          },
+          {
+            "end": 936,
+            "passage_index": 1,
+            "quote": "uncoupled, resulting in reduced ATP synthesis and increased generation of reactive oxygen species (ROS).",
+            "start": 832
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "ATP synthesis",
+          "intervention": null,
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e3"
+        },
+        "summary": "In dysfunctional mitochondria, the mitochondrial electron transport chain is uncoupled, which is described as leading to reduced ATP synthesis and increased reactive oxygen species generation.",
+        "uncertainties": [
+          "The sentence describes a consequence in dysfunctional mitochondria rather than a specific perturbation experiment.",
+          "ROS generation is stated in the same causal context, but the exact causal subject-object pairing is somewhat compressed in the prose."
+        ]
+      },
+      "errors": [
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        320,
+        363
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        124,
+        165
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        364,
+        470
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        166,
+        261
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1065,
+        1157
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        778,
+        876
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1157,
+        1803
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        876,
+        1038
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1389,
+        1511
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        899,
+        976
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        832,
+        936
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        894,
+        1018
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

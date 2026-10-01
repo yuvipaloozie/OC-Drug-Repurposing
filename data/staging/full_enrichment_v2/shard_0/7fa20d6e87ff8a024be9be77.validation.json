@@ -1,0 +1,126 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": "terminally differentiated"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "16",
+              "18"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "RGD-containing peptides",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "RGD-mimetics",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "blocking antibodies to alpha(v)beta3 integrin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "alpha(v)beta3 integrin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "13",
+              "19",
+              "25"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 457,
+            "passage_index": 1,
+            "quote": "RGD (Aug-Gly-Asp)-containing peptides, RGD-mimetics and blocking antibodies to alpha(v)beta3 integrin were shown to inhibit bone resorption in vitro and in vivo",
+            "start": 297
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro and in vivo",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption",
+          "intervention": "RGD-containing peptides, RGD-mimetics and blocking antibodies to alpha(v)beta3 integrin",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e5",
+          "sign": "positive",
+          "subject": "e4"
+        },
+        "summary": "RGD-containing peptides, RGD-mimetics, and blocking antibodies to alpha(v)beta3 integrin inhibited bone resorption, supporting a positive role for this integrin in osteoclast function.",
+        "uncertainties": [
+          "The passage reports multiple perturbing agents together, so the specific contribution of each intervention is not separated.",
+          "alpha(v)beta3 integrin is inferred as the regulated target from the blocking-antibody context; the text does not explicitly state a direct molecular mechanism."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        297,
+        457
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        335,
+        506
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

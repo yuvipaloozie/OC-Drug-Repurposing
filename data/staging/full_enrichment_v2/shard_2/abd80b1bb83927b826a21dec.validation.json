@@ -1,0 +1,203 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "peri-implantitis",
+          "species": "Human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "67"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "CCR2",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [
+              "68"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "CCL2",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [
+              "69"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 833,
+            "passage_index": 1,
+            "quote": "Human peri-implantitis tissues showed increased CCR2 and CCL2 levels, which were positively correlated with bone loss around the implants.",
+            "start": 695
+          }
+        ],
+        "experiment": {
+          "assay": "clinical tissue analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone loss around the implants",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In human peri-implantitis tissues, CCR2 and CCL2 levels were increased and positively correlated with bone loss around the implants.",
+        "uncertainties": [
+          "The sentence reports correlation, not causation.",
+          "CCL2 is mentioned as increased, but the extracted association is centered on CCR2 and bone loss."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "peri-implantitis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "60"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Ccr2",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activity",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "74"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1102,
+            "passage_index": 1,
+            "quote": "Knocking out Ccr2 in an experimental model of peri-implantitis resulted in decreased monocyte and macrophage infiltration, reduced pro-inflammatory cytokine generation and impaired osteoclast activity, leading to reduced inflammation and bone loss around the implants.",
+            "start": 834
+          }
+        ],
+        "experiment": {
+          "assay": "experimental model of peri-implantitis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast activity; inflammation and bone loss around the implants",
+          "intervention": "Knocking out Ccr2",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Knocking out Ccr2 in an experimental peri-implantitis model decreased monocyte and macrophage infiltration, reduced pro-inflammatory cytokine generation, impaired osteoclast activity, and reduced inflammation and bone loss around the implants.",
+        "uncertainties": [
+          "The text links Ccr2 knockout to multiple outcomes; the extracted regulatory edge focuses on impaired osteoclast activity.",
+          "The species is supported by nearby mention of mice, but the perturbation sentence itself does not repeat the species name."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        695,
+        833
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        755,
+        895
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        834,
+        1102
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        897,
+        1177
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,166 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "marrow stromal progenitor cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "30"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "MTSS1",
+            "taxon": "null"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 633,
+            "passage_index": 1,
+            "quote": "MTSS1 promoted the osteogenic differentiation from marrow stromal progenitor cells.",
+            "start": 550
+          }
+        ],
+        "experiment": {
+          "assay": "functional studies",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteogenic differentiation",
+          "intervention": "MTSS1",
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "unknown",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": null,
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "MTSS1 promoted osteogenic differentiation from marrow stromal progenitor cells.",
+        "uncertainties": [
+          "The text does not specify the exact perturbation used in the supporting functional studies for this sentence."
+        ]
+      },
+      "errors": [
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "marrow",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "44"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "MTSS1",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1414,
+            "passage_index": 1,
+            "quote": "Finally, the in vivo transfection of MTSS1 siRNA to the marrow of mice significantly reduced the trabecular bone mass, along with the reduction of trabecular osteoblasts, the accumulation of marrow adipocytes, and the increase of phospho-Src-positive cells on the trabeculae. No change in the number of osteoclasts was observed.",
+            "start": 1086
+          }
+        ],
+        "experiment": {
+          "assay": "in vivo transfection",
+          "dose": null,
+          "duration": null,
+          "endpoint": "trabecular bone mass; trabecular osteoblasts; osteoclast number",
+          "intervention": "MTSS1 siRNA",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "unknown",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": null,
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In vivo MTSS1 siRNA transfection reduced trabecular bone mass and trabecular osteoblasts, and did not change osteoclast number.",
+        "uncertainties": [
+          "The sentence combines several outcomes; the osteoclast finding is a no-effect result rather than a reduction.",
+          "The text does not specify the exact marrow cell population targeted in vivo."
+        ]
+      },
+      "errors": [
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        550,
+        633
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        503,
+        581
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1086,
+        1414
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1255,
+        1610
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

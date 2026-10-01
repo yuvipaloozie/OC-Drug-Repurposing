@@ -1,0 +1,229 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "no_effect",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "chronic kidney disease",
+          "species": "non-diabetic patients with CKD",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "53"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "dapagliflozin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone turnover",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "TRAP-5b",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1371,
+            "passage_index": 1,
+            "quote": "Dapagliflozin significantly reduced proteinuria",
+            "start": 1324
+          },
+          {
+            "end": 2012,
+            "passage_index": 1,
+            "quote": "did not demonstrate any meaningful impact of dapagliflozin on either bone turnover",
+            "start": 1930
+          }
+        ],
+        "experiment": {
+          "assay": "randomized, double-blind, placebo-controlled trial; bone formation and resorption markers",
+          "dose": "10 mg daily",
+          "duration": "12 months",
+          "endpoint": "bone turnover markers",
+          "intervention": "dapagliflozin 10 mg daily or placebo for 12 months",
+          "outcome_change": "no_detected_change",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In this randomized trial, dapagliflozin did not show a meaningful effect on bone turnover markers compared with placebo; TRAP-5b and other markers had no intergroup difference.",
+        "uncertainties": [
+          "The passage summarizes multiple bone markers together; the extracted object 'bone turnover' is a broad phenotype rather than a single molecular entity.",
+          "TRAP-5b is treated as a protein-like marker from the text annotation, but the passage does not specify species or molecular identity beyond the name."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "chronic kidney disease",
+          "species": "non-diabetic patients with CKD",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "53"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "dapagliflozin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "54"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "proteinuria",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1371,
+            "passage_index": 1,
+            "quote": "Dapagliflozin significantly reduced proteinuria",
+            "start": 1324
+          },
+          {
+            "end": 1404,
+            "passage_index": 1,
+            "quote": "compared with placebo (P = .012)",
+            "start": 1372
+          }
+        ],
+        "experiment": {
+          "assay": "randomized, double-blind, placebo-controlled trial",
+          "dose": "10 mg daily",
+          "duration": "12 months",
+          "endpoint": "proteinuria",
+          "intervention": "dapagliflozin 10 mg daily or placebo for 12 months",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Dapagliflozin significantly reduced proteinuria compared with placebo.",
+        "uncertainties": [
+          "The comparison is versus placebo in a clinical trial; direct molecular mechanism is not established."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1324,
+        1371
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1483,
+        1525
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1930,
+        2012
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1871,
+        1945
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1324,
+        1371
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1483,
+        1525
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1372,
+        1404
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1525,
+        1549
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

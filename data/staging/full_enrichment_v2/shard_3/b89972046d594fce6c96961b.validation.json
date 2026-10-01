@@ -1,0 +1,216 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "9606",
+          "stage": "lactation"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "maternal bone resorption",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "postpartum decline in estrogen levels",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [
+              "46"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "PTHrP",
+            "taxon": "9606"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 573,
+            "passage_index": 1,
+            "quote": "Conversely, during lactation, calcium demand is met by maternal bone resorption driven by postpartum decline in estrogen levels and by PTHrP produced by maternal breast tissue.",
+            "start": 397
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e1",
+          "sign": "positive",
+          "subject": "e2"
+        },
+        "summary": "During lactation, maternal bone resorption is driven by postpartum decline in estrogen levels and by PTHrP produced by maternal breast tissue.",
+        "uncertainties": [
+          "The statement is a physiological background description rather than a direct experiment.",
+          "The role of PTHrP is stated as part of a combined explanation with postpartum estrogen decline; the specific causal relation to bone resorption is not isolated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "hypercalcemia",
+          "species": "9606",
+          "stage": "lactation"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "57",
+              "59",
+              "60",
+              "61",
+              "65",
+              "68",
+              "71"
+            ],
+            "existing_node_id": "CHEBI:29108",
+            "key": "e1",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "compound",
+            "surface": "calcium",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "58",
+              "62",
+              "66",
+              "72"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "calcitriol",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "57",
+              "59",
+              "60",
+              "61",
+              "65",
+              "68",
+              "71"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "calcium levels",
+            "taxon": "9606"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1082,
+            "passage_index": 1,
+            "quote": "Reducing her calcium and calcitriol supplementation rapidly normalized her calcium levels.",
+            "start": 992
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": "rapidly",
+          "endpoint": "calcium levels",
+          "intervention": "Reducing her calcium and calcitriol supplementation",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Reducing calcium and calcitriol supplementation rapidly normalized the patient's calcium levels after lactation-associated hypercalcemia.",
+        "uncertainties": [
+          "The intervention combined two supplements, so the effect cannot be attributed to calcium alone.",
+          "The text reports normalization of calcium levels rather than a mechanistic direct target relationship."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        397,
+        573
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        493,
+        620
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        992,
+        1082
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1038,
+        1133
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

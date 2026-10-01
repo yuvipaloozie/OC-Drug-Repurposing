@@ -1,0 +1,209 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "159976",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "30",
+              "31"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "extract of Viscum coloratum (Kom.) Nakai (EVC)",
+            "taxon": "159976"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-induced osteoclast differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "TRAP-positive multinucleated osteoclasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 607,
+            "passage_index": 1,
+            "quote": "extract of Viscum coloratum (Kom.) Nakai (EVC) exhibited extraordinary activity against RANKL-induced osteoclast differentiation",
+            "start": 479
+          },
+          {
+            "end": 690,
+            "passage_index": 1,
+            "quote": "by inhibiting the formation of TRAP-positive multinucleated osteoclasts",
+            "start": 619
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP activity",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation; formation of TRAP-positive multinucleated osteoclasts",
+          "intervention": "extract of Viscum coloratum (Kom.) Nakai (EVC)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Extract of Viscum coloratum inhibited RANKL-induced osteoclast differentiation and reduced formation of TRAP-positive multinucleated osteoclasts.",
+        "uncertainties": [
+          "The exact cellular system for the osteoclast differentiation assay is not stated in the cited spans.",
+          "The pathway involvement is mentioned elsewhere in the abstract but is not encoded here as a separate direct mechanism claim."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "159976",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "30",
+              "31"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "extract of Viscum coloratum (Kom.) Nakai (EVC)",
+            "taxon": "159976"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "NFATc1",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 765,
+            "passage_index": 1,
+            "quote": "TRAP activity, and decreasing osteoclast-specific genes NFATc1 expression",
+            "start": 692
+          }
+        ],
+        "experiment": {
+          "assay": "Western blot",
+          "dose": null,
+          "duration": null,
+          "endpoint": "NFATc1 expression",
+          "intervention": "extract of Viscum coloratum (Kom.) Nakai (EVC)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Extract of Viscum coloratum decreased osteoclast-specific NFATc1 expression in the study.",
+        "uncertainties": [
+          "The text ties this decrease to the broader osteoclast differentiation experiment, but the exact assay details for NFATc1 are not fully specified in the quoted span.",
+          "The claim does not establish whether the effect is direct or indirect."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        479,
+        607
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        434,
+        555
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        619,
+        690
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        562,
+        641
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        692,
+        765
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        641,
+        704
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

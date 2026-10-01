@@ -1,0 +1,226 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 macrophage cell line",
+          "compartment": null,
+          "disease_setting": "rheumatoid arthritis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "21",
+              "22",
+              "25",
+              "30",
+              "34"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "miR-155",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "28",
+              "29"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "SHIP1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "5",
+              "26"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "RAW264.7",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 613,
+            "passage_index": 1,
+            "quote": "MicroRNA 155 (miR-155) is a key proinflammatory regulator in clinical and experimental rheumatoid arthritis (RA). Here we generated a miR-155 genome knockout (GKO) RAW264.7 macrophage cell line using the clustered regulatory interspaced short palindromic repeat (CRISPR)/CRISPR-associated protein 9 (CAS9) technology. While upregulating the Src homology-2 domain-containing inositol 5-phosphatase 1 (SHIP1), the miR-155 GKO line is severely impaired in producing proinflammatory cytokines but slightly increased in osteoclastogenesis upon treatment with receptor activator of nuclear factor-kappaB ligand (RANKL).",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "SHIP1 expression",
+          "intervention": "miR-155 genome knockout (GKO)",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "miR-155 genome knockout in RAW264.7 cells increased SHIP1 expression.",
+        "uncertainties": [
+          "Species is not explicitly stated for the cell line in the passage; mouse context is inferred only from the suggested node and should be treated cautiously.",
+          "The passage states upregulation after knockout; it does not establish direct binding or direct transcriptional regulation."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 macrophage cell line",
+          "compartment": null,
+          "disease_setting": "rheumatoid arthritis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "21",
+              "22",
+              "25",
+              "30",
+              "34"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "miR-155",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "32",
+              "33"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "5",
+              "26"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "RAW264.7",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 613,
+            "passage_index": 1,
+            "quote": "miR-155 GKO line is severely impaired in producing proinflammatory cytokines but slightly increased in osteoclastogenesis upon treatment with receptor activator of nuclear factor-kappaB ligand (RANKL).",
+            "start": 412
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis upon treatment with RANKL",
+          "intervention": "miR-155 genome knockout (GKO)",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In miR-155 genome knockout RAW264.7 macrophages, osteoclastogenesis was slightly increased after RANKL treatment.",
+        "uncertainties": [
+          "The increase is described as slight, so the effect size is small.",
+          "RANKL treatment is mentioned as the condition for the phenotype change, but the passage does not specify dose or assay."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        613
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        113,
+        550
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        412,
+        613
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        525,
+        750
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

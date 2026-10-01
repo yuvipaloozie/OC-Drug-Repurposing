@@ -1,0 +1,227 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [
+              "MESH:D001862"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "2597"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "G3PD",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "LDH",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [
+              "2539"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "G6PD",
+            "taxon": "human"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1001,
+            "passage_index": 1,
+            "quote": "osteoclasts associated with bone resorption were deficient in G3PD, LDH, and G6PD activity.",
+            "start": 910
+          }
+        ],
+        "experiment": {
+          "assay": "in situ quantitative microcytophotometric techniques",
+          "dose": null,
+          "duration": null,
+          "endpoint": "maximal activity of the glycolytic pathway and pentose shunt enzymes",
+          "intervention": "in situ quantitative microcytophotometric techniques",
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Human osteoclasts associated with bone resorption were deficient in G3PD, LDH, and G6PD activity.",
+        "uncertainties": [
+          "The sentence reports deficiency of multiple enzyme activities together; the regulatory object was simplified to one representative enzyme activity.",
+          "LDH was not separately annotated in the provider entities.",
+          "This is an observed association, not a causal perturbation experiment."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "apposed to the bone surface",
+          "disease_setting": null,
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [
+              "MESH:D005227"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "fatty acid oxidation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone surface",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1128,
+            "passage_index": 1,
+            "quote": "However, osteoclasts did demonstrate a capacity for fatty acid oxidation which increased in cells apposed to the bone surface.",
+            "start": 1002
+          }
+        ],
+        "experiment": {
+          "assay": "in situ quantitative microcytophotometric techniques",
+          "dose": null,
+          "duration": null,
+          "endpoint": "fatty acid oxidation capacity",
+          "intervention": "in situ quantitative microcytophotometric techniques",
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Human osteoclasts demonstrated fatty acid oxidation capacity, and this capacity increased in cells apposed to the bone surface.",
+        "uncertainties": [
+          "The increase is described for cells apposed to the bone surface rather than as a direct perturbation effect.",
+          "No specific enzyme entity is named for the fatty acid oxidation capacity."
+        ]
+      },
+      "errors": [
+        "invented annotation ID",
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        910,
+        1001
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1082,
+        1188
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1002,
+        1128
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1188,
+        1286
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

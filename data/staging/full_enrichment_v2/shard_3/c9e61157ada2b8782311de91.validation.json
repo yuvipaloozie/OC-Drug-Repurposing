@@ -1,0 +1,182 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "42"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "saracatinib",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation, polarization and resorptive function",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 650,
+            "passage_index": 1,
+            "quote": "In vitro data showed an inhibitory effect of saracatinib on osteoclast differentiation, polarization and resorptive function.",
+            "start": 525
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation, polarization and resorptive function",
+          "intervention": "treatment with the SRC inhibitor saracatinib (AZD0530)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Saracatinib treatment inhibited osteoclast differentiation, polarization, and resorptive function in vitro.",
+        "uncertainties": [
+          "The text does not specify the exact osteoclast source or species for the in vitro experiment."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "multiple myeloma",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "50",
+              "51",
+              "54",
+              "59"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "saracatinib",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "56"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1127,
+            "passage_index": 1,
+            "quote": "We observed a marked reduction of bone loss after treatment of MM-bearing mice with saracatinib as reflected by a restoration of trabecular bone parameters to levels observed in naive control mice.",
+            "start": 930
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone loss",
+          "intervention": "treatment with saracatinib",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In MM-bearing mice, saracatinib treatment reduced bone loss and restored trabecular bone parameters.",
+        "uncertainties": [
+          "The text links the reduction of bone loss to restoration of trabecular bone parameters, but does not provide a quantitative dose or duration."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        525,
+        650
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        526,
+        650
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        930,
+        1127
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        653,
+        847
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

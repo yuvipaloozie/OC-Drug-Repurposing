@@ -1,0 +1,192 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow-derived macrophages",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "33"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Prussian Blue nanoparticles",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "38"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone marrow-derived macrophages (BMMs) into OCs",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1248,
+            "passage_index": 1,
+            "quote": "effectively inhibit the receptor activator of nuclear factor-kB ligand (RANKL)-induced differentiation of bone marrow-derived macrophages (BMMs) into OCs.",
+            "start": 1094
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "RANKL-induced differentiation of BMMs into OCs",
+          "intervention": "Prussian Blue nanoparticles",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Prussian Blue nanoparticles reduced RANKL-induced differentiation of bone marrow-derived macrophages into osteoclasts.",
+        "uncertainties": [
+          "The exact species for BMMs/OCs is not explicitly stated in the quoted passage.",
+          "RANKL is treated as a text-supported candidate protein name, but the provider gene annotation and existing-node suggestion are unverified."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "33"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Prussian Blue nanoparticles",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "39",
+              "40"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "nuclear factor erythroid 2-related factor 2 (Nrf2)",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1336,
+            "passage_index": 1,
+            "quote": "Mechanistically, PBNPs activated nuclear factor erythroid 2-related factor 2 (Nrf2) and",
+            "start": 1249
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "Nrf2 activation and downstream anti-oxidative product expression",
+          "intervention": "Prussian Blue nanoparticles",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Prussian Blue nanoparticles activated Nrf2 and increased downstream anti-oxidative product expression.",
+        "uncertainties": [
+          "The passage states activation of Nrf2 and downstream anti-oxidative product expression together; the exact downstream entities are not specified in the provided text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1094,
+        1248
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1185,
+        1344
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1249,
+        1336
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1352,
+        1444
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,186 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "20",
+              "22",
+              "23",
+              "25",
+              "27"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:SRC",
+            "key": "e1",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "protein",
+            "surface": "Src",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoblast activities",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone metabolism",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "24"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Src-deficient mice",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "compound",
+            "surface": "low molecular weight Src inhibitors",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "26"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoporosis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1028,
+            "passage_index": 1,
+            "quote": "there is increasing evidence that Src and low molecular weight ptps play a central role in a range of osteoblast activities, from adhesion to differentiation.",
+            "start": 904
+          },
+          {
+            "end": 970,
+            "passage_index": 1,
+            "quote": "A role for Src in bone metabolism was first demonstrated",
+            "start": 914
+          },
+          {
+            "end": 992,
+            "passage_index": 1,
+            "quote": "in Src-deficient mice",
+            "start": 971
+          },
+          {
+            "end": 1097,
+            "passage_index": 1,
+            "quote": "and has since been confirmed using low molecular weight Src inhibitors in animal models of osteoporosis.",
+            "start": 993
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone metabolism / osteoblast activities",
+          "intervention": "Src-deficient mice; low molecular weight Src inhibitors",
+          "outcome_change": "not_stated",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Src is described as playing a central role in osteoblast activities and a role in bone metabolism in mice, with supporting evidence from Src-deficient mice and Src inhibitor studies in osteoporosis models.",
+        "uncertainties": [
+          "The passage is a review summary rather than a single primary experiment.",
+          "The exact direction of the Src perturbation effects on osteoblast activities and bone metabolism is not stated in the cited text.",
+          "Low molecular weight Src inhibitors are mentioned as confirmation in osteoporosis models, but the specific measured outcome is not described."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        914,
+        970
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1044,
+        1097
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        971,
+        992
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1098,
+        1126
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        993,
+        1097
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1141,
+        1233
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

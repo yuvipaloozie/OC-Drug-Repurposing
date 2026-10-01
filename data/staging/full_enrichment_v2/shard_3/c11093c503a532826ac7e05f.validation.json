@@ -1,0 +1,229 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclastlike cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "dynamin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "25",
+              "28",
+              "29",
+              "31",
+              "32",
+              "34",
+              "36",
+              "38",
+              "40",
+              "42",
+              "43",
+              "45"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Pyk2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "26",
+              "30",
+              "33",
+              "35",
+              "37",
+              "39",
+              "41",
+              "44"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Src",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 602,
+            "passage_index": 1,
+            "quote": "and reduces Pyk2 Y402 phosphorylation in a GTPase-dependent manner, leading to decreased Src binding to Pyk2.",
+            "start": 493
+          },
+          {
+            "end": 746,
+            "passage_index": 1,
+            "quote": "Overexpressing dynamin decreased the macrophage colony-stimulating factor- and adhesion-induced phosphorylation of Pyk2 in osteoclastlike cells",
+            "start": 603
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "Pyk2 Y402 phosphorylation; Src binding to Pyk2",
+          "intervention": "Overexpressing dynamin",
+          "outcome_change": "decreased",
+          "perturbation_type": "gain_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Overexpressing dynamin decreased Pyk2 Y402 phosphorylation and reduced Src binding to Pyk2 in osteoclastlike cells.",
+        "uncertainties": [
+          "The text links decreased Src binding as a consequence, but the directness of the dynamin-to-Pyk2 effect is not established.",
+          "Species is not stated in the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "dynamin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "25",
+              "28",
+              "29",
+              "31",
+              "32",
+              "34",
+              "36",
+              "38",
+              "40",
+              "42",
+              "43",
+              "45"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Pyk2",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 455,
+            "passage_index": 1,
+            "quote": "we report here that dynamin associates with Pyk2, independent of dynamin's GTPase activity",
+            "start": 395
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "dynamin-Pyk2 association",
+          "intervention": "none stated",
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Dynamin was reported to associate with Pyk2 in osteoclast-related cells.",
+        "uncertainties": [
+          "The passage states association, not causation.",
+          "Species is not stated in the text."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        493,
+        602
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        458,
+        554
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        603,
+        746
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        555,
+        638
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

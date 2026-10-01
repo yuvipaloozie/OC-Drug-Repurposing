@@ -1,0 +1,219 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "joint tissues",
+          "disease_setting": "inflammatory arthritis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "LKP",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "severe joint destruction",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "55"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "spinal deformities",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "57",
+              "58",
+              "59"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "pro-inflammatory cytokines",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1066,
+            "passage_index": 1,
+            "quote": "LKP injection induces severe joint destruction, spinal deformities, and upregulation of pro-inflammatory cytokines (IL-1beta, IL-6, NF-kappaB) in joint tissues;",
+            "start": 906
+          }
+        ],
+        "experiment": {
+          "assay": "single-nucleus RNA sequencing and functional assays",
+          "dose": null,
+          "duration": null,
+          "endpoint": "severe joint destruction, spinal deformities, and upregulation of pro-inflammatory cytokines in joint tissues",
+          "intervention": "LKP injection",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "LKP injection in BALB/c ZAP70W163C mutant mice induced severe inflammatory arthritis-like pathology, including joint destruction, spinal deformities, and increased pro-inflammatory cytokines in joint tissues.",
+        "uncertainties": [
+          "The passage reports joint-pathology outcomes after LKP injection but does not isolate a single causal molecular target."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "immune-endothelial-fibroblast networks",
+          "disease_setting": "inflammatory arthritis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "T cells",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "60"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Sema4d",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "61"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Plxnb1",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1220,
+            "passage_index": 1,
+            "quote": "immune-endothelial-fibroblast networks are dysregulated, with T cells promoting osteoclastogenesis via ligand-receptor interactions (e.g., Sema4d-Plxnb1)",
+            "start": 1067
+          }
+        ],
+        "experiment": {
+          "assay": "single-nucleus RNA sequencing and functional assays",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "LKP injection",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In the reported immune-endothelial-fibroblast network, T cells were described as promoting osteoclastogenesis through ligand-receptor interactions, including Sema4d-Plxnb1.",
+        "uncertainties": [
+          "The text names a ligand-receptor example but does not state that Sema4d-Plxnb1 is the sole or direct mechanism for the osteoclastogenesis effect."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        906,
+        1066
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        934,
+        1044
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1067,
+        1220
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1310,
+        1433
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

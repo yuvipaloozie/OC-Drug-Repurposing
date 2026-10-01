@@ -1,0 +1,239 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "myeloid cell lineage mature macrophages",
+          "compartment": "bone",
+          "disease_setting": "bone resorptive disorders",
+          "species": "mouse",
+          "stage": "postnatal"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "43",
+              "47",
+              "48",
+              "52",
+              "54",
+              "56",
+              "62",
+              "65",
+              "66",
+              "70"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:EZH2",
+            "key": "e1",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "Ezh2",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "myeloid cell lineage",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "postnatal bone growth",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 858,
+            "passage_index": 1,
+            "quote": "LysM-Cre mice were crossed with Ezh2flox/flox mice to delete Ezh2 in myeloid cell lineage mature macrophages. Conditional knockout of Ezh2 (CKO) in myeloid cell line resulted in significant increases in postnatal bone growth in the first 6 months of life for both male and female mice.",
+            "start": 573
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": "first 6 months of life",
+          "endpoint": "bone growth",
+          "intervention": "Conditional knockout of Ezh2 in myeloid cell lineage",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Conditional knockout of Ezh2 in the myeloid cell lineage increased postnatal bone growth and bone mass in mice.",
+        "uncertainties": [
+          "The text reports bone growth and bone mass effects together, but the exact molecular mechanism linking Ezh2 loss to the phenotype is not established here.",
+          "The entity mapping for Ezh2 is gene-level in text, while the suggested existing node is protein-level."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "myeloid cell lineage mature macrophages",
+          "compartment": "bone tissue",
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "43",
+              "47",
+              "48",
+              "52",
+              "54",
+              "56",
+              "62",
+              "65",
+              "66",
+              "70"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:EZH2",
+            "key": "e1",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "Ezh2",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "67"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:IRF8",
+            "key": "e4",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "IRF8",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "68"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:MAFB",
+            "key": "e5",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "MafB",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "69"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Arg1",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e7",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "H3K27me3",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1905,
+            "passage_index": 1,
+            "quote": "Deletion of Ezh2 also led to an increase in gene expression of osteoclast-suppressive genes IRF8, MafB, and Arg1 due to a decrease in the presence of the suppressive H3K27me3 epigenetic mark.",
+            "start": 1714
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "gene expression of IRF8, MafB, and Arg1",
+          "intervention": "Deletion of Ezh2",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "expression",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e4",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Deletion of Ezh2 increased the expression of osteoclast-suppressive genes IRF8, MafB, and Arg1, coincident with decreased H3K27me3.",
+        "uncertainties": [
+          "The passage states the increase applies to multiple genes; a single regulatory edge cannot fully represent all three without additional separate claims.",
+          "The causal link to decreased H3K27me3 is stated in the text, but direct molecular causality is not experimentally resolved here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        573,
+        858
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        638,
+        767
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1714,
+        1905
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1754,
+        1939
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

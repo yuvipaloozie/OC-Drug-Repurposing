@@ -1,0 +1,237 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "10",
+              "12",
+              "13",
+              "16",
+              "19"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "ERRalpha",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 257,
+            "passage_index": 1,
+            "quote": "ERRalpha not only plays a functional role in osteoblasts but also in osteoclasts",
+            "start": 177
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "unknown",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": null,
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "ERRalpha is described as having a functional role in osteoclasts.",
+        "uncertainties": [
+          "Review text; this is a background statement rather than a primary experimental result.",
+          "The exact molecular role in osteoclasts is not specified beyond 'functional role'."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "hypothesis",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "10",
+              "12",
+              "13",
+              "16",
+              "19"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "ERRalpha",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "adipogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "17"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "insulin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "18"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "leptin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "aging-related changes in bone and cartilage",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 659,
+            "passage_index": 1,
+            "quote": "suggesting that ERRalpha-through its activity in bone resorption and adipogenesis--may regulate the insulin and leptin pathways",
+            "start": 532
+          },
+          {
+            "end": 722,
+            "passage_index": 1,
+            "quote": "and contribute to aging-related changes in bone and cartilage.",
+            "start": 660
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The review proposes that ERRalpha activity in bone resorption and adipogenesis may regulate insulin and leptin pathways and contribute to aging-related changes in bone and cartilage.",
+        "uncertainties": [
+          "The statement is qualified by 'may' and is presented as a review-level suggestion, not an observed experiment.",
+          "The text mentions multiple downstream pathways and phenotypes; only one regulatory object is captured per claim."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        177,
+        257
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        114,
+        174
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        532,
+        659
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        441,
+        540
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        660,
+        722
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        540,
+        643
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

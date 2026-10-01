@@ -1,0 +1,111 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "dry immersion",
+          "species": "9606",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "10",
+              "15",
+              "16"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "women",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [
+              "11",
+              "14"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "men",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption biomarker",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1512,
+            "passage_index": 1,
+            "quote": "although women show lower orthostatic tolerance, greater elevation of the atherogenic index, and increase in bone resorption biomarker.",
+            "start": 1377
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "5-day",
+          "duration": "5-day",
+          "endpoint": "bone resorption biomarker",
+          "intervention": "dry immersion",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "claim1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In the dry immersion study, women showed a greater increase in a bone resorption biomarker than men, alongside other sex-differential responses.",
+        "uncertainties": [
+          "The text reports a sex-based difference but does not specify the exact biomarker name.",
+          "Offsets are approximate and should be validated against the passage text."
+        ]
+      },
+      "errors": [
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "claim1",
+      "corrected_offsets": [
+        1377,
+        1512
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1297,
+        1425
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,106 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "plasma",
+          "disease_setting": "kidney transplantation",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "24"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "free sRANKL",
+            "taxon": "null"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "OPG",
+            "taxon": "null"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": "null"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1354,
+            "passage_index": 1,
+            "quote": "a significant increase in plasma levels of free sRANKL after KT accompanied by a significant reduction in plasma levels of its decoy receptor OPG, suggesting an enhanced bone resorption by osteoclasts mediated by this mechanism",
+            "start": 1127
+          }
+        ],
+        "experiment": {
+          "assay": "prospective evaluation with histomorphometric analysis of bone biopsies and serum biomarkers",
+          "dose": null,
+          "duration": null,
+          "endpoint": "plasma levels of free sRANKL and OPG; bone resorption",
+          "intervention": "kidney transplantation",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "After kidney transplantation, plasma free sRANKL increased while its decoy receptor OPG decreased; the authors interpret this as suggesting enhanced osteoclast-mediated bone resorption.",
+        "uncertainties": [
+          "The claim is observational and post-transplant; it does not establish direct causality for sRANKL acting on osteoclasts.",
+          "The text also mentions OPG reduction, but the extracted regulatory relation is between free sRANKL and bone resorption rather than a direct sRANKL-OPG molecular interaction."
+        ]
+      },
+      "errors": [
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1127,
+        1354
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        956,
+        1125
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

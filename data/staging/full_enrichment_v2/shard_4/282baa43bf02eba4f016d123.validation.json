@@ -1,0 +1,230 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "primary fibroblasts",
+          "compartment": null,
+          "disease_setting": "mandibuloacral dysplasia",
+          "species": "Homo sapiens",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "36"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "MTX2",
+            "taxon": "Homo sapiens"
+          },
+          {
+            "annotation_ids": [
+              "49"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "MTX1",
+            "taxon": "Homo sapiens"
+          },
+          {
+            "annotation_ids": [
+              "51"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "mitochondrial dysfunction",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "39"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "patients' primary fibroblasts",
+            "taxon": "Homo sapiens"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 667,
+            "passage_index": 1,
+            "quote": "Loss of MTX2 in patients' primary fibroblasts leads to loss of Metaxin-1 (MTX1) and mitochondrial dysfunction, including network fragmentation and oxidative phosphorylation impairment.",
+            "start": 483
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "loss of Metaxin-1 and mitochondrial dysfunction",
+          "intervention": "Loss of MTX2",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Loss of MTX2 in patients' primary fibroblasts is reported to cause loss of MTX1 and mitochondrial dysfunction, including network fragmentation and oxidative phosphorylation impairment.",
+        "uncertainties": [
+          "The passage bundles multiple downstream outcomes (loss of MTX1, network fragmentation, and oxidative phosphorylation impairment) into one sentence; directness for each is not individually stated.",
+          "MTX2 loss is described in patients' primary fibroblasts, but the specific intervention method is not stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "fibroblasts",
+          "compartment": null,
+          "disease_setting": "mandibuloacral dysplasia",
+          "species": "Homo sapiens",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "patients' fibroblasts",
+            "taxon": "Homo sapiens"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "induced apoptosis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "cell senescence",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "mitophagy",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "proliferation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 816,
+            "passage_index": 1,
+            "quote": "Furthermore, patients' fibroblasts are resistant to induced apoptosis, leading to increased cell senescence and mitophagy and reduced proliferation.",
+            "start": 668
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "resistance to induced apoptosis",
+          "intervention": "MTX2 loss in patients' fibroblasts is described in the preceding sentence",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Patients' fibroblasts are resistant to induced apoptosis, with increased cell senescence and mitophagy and reduced proliferation reported downstream.",
+        "uncertainties": [
+          "The causal antecedent is inferred from the immediately preceding sentence; the quoted span itself states the phenotype of patients' fibroblasts.",
+          "Increased senescence, mitophagy, and reduced proliferation are reported as downstream consequences, but the text does not specify whether each is directly caused by apoptosis resistance."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        483,
+        667
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        394,
+        576
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        668,
+        816
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        578,
+        749
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

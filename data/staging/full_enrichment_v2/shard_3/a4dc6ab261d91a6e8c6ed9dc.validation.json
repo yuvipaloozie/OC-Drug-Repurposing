@@ -1,0 +1,235 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "MASLD-related bone loss",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "81",
+              "82",
+              "88",
+              "91",
+              "108",
+              "111",
+              "112"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "inulin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "75",
+              "90",
+              "93",
+              "114"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "MASLD-related bone loss",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 853,
+            "passage_index": 1,
+            "quote": "inulin treatment, MASLD-related bone loss was alleviated",
+            "start": 797
+          },
+          {
+            "end": 986,
+            "passage_index": 1,
+            "quote": "Inulin significantly ameliorates MASLD",
+            "start": 949
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "5% inulin",
+          "duration": "16 weeks",
+          "endpoint": "bone loss",
+          "intervention": "5% inulin in the diet",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Inulin treatment alleviated MASLD-related bone loss in mice.",
+        "uncertainties": [
+          "Bone-loss improvement is reported in a MASLD mouse model; the specific osteoclast mechanism is not directly stated in the extracted sentence.",
+          "The wording includes 'ameliorated'/'alleviated,' which supports decreased bone loss but not a precise molecular mechanism."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "MASLD-related bone loss",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "81",
+              "82",
+              "88",
+              "91",
+              "108",
+              "111",
+              "112"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "inulin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "8",
+              "104",
+              "105",
+              "109",
+              "115"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Nrf2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "9",
+              "106",
+              "107",
+              "110",
+              "116"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "GPX4",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1511,
+            "passage_index": 1,
+            "quote": "nuclear factor erythroid 2-related factor 2 (Nrf2) and glutathione peroxidase 4 (GPX4) following inulin intervention",
+            "start": 1395
+          },
+          {
+            "end": 1691,
+            "passage_index": 1,
+            "quote": "inulin intervention indicate the Nrf2/GPX4",
+            "start": 1644
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "5% inulin",
+          "duration": "16 weeks",
+          "endpoint": "protein levels of Nrf2 and GPX4",
+          "intervention": "inulin intervention",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "After inulin intervention, Nrf2 and GPX4 protein levels were elevated.",
+        "uncertainties": [
+          "The abstract states that elevated Nrf2 and GPX4 'indicate' pathway participation, which is suggestive rather than a direct mechanistic demonstration.",
+          "The claim is limited to protein levels; no direct activity assay is described."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        797,
+        853
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        772,
+        832
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1395,
+        1511
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1547,
+        1642
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,198 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "glucocorticoid-induced osteoporosis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "31"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "DEX",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast precursor proliferation and differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 929,
+            "passage_index": 1,
+            "quote": "DEX promotes osteoclast precursor proliferation and differentiation, significantly accelerating bone resorption.",
+            "start": 817
+          },
+          {
+            "end": 687,
+            "passage_index": 1,
+            "quote": "in mice.",
+            "start": 679
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast precursor proliferation and differentiation; bone resorption",
+          "intervention": "dexamethasone",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Dexamethasone promoted osteoclast precursor proliferation and differentiation, accelerating bone resorption in mice.",
+        "uncertainties": [
+          "The passage does not specify whether the effect is direct or mediated by intermediate pathways.",
+          "The text does not separate proliferation from differentiation as distinct measured endpoints."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "glucocorticoid-induced osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "CNPs",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "44"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "e2",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "pathway",
+            "surface": "RANKL-dependent osteoclast formation pathway",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1529,
+            "passage_index": 1,
+            "quote": "Regarding bone resorption, CNPs inhibit the RANKL-dependent osteoclast formation pathway.",
+            "start": 1431
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "RANKL-dependent osteoclast formation pathway",
+          "intervention": "ceria nanoparticles",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Ceria nanoparticles inhibited the RANKL-dependent osteoclast formation pathway.",
+        "uncertainties": [
+          "The sentence states pathway inhibition but does not specify the molecular target or directness.",
+          "The annotation for RANKL is a provider hint; the pathway itself is not explicitly a gene/protein."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        817,
+        929
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        739,
+        823
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        679,
+        687
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        834,
+        847
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

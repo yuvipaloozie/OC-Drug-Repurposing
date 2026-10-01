@@ -1,0 +1,108 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": "monocyte-to-osteoclast differentiation"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "3"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "PU.1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "4"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TET2",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "Tet2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "5"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "DNMT3b",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 130,
+            "passage_index": 0,
+            "quote": "PU.1 target genes undergo Tet2-coupled  demethylation and DNMT3b-mediated  methylation in monocyte-to-osteoclast  differentiation.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "PU.1 target genes are described as undergoing Tet2-coupled demethylation and DNMT3b-mediated methylation during monocyte-to-osteoclast differentiation.",
+        "uncertainties": [
+          "Title-level statement is summary language rather than a detailed experiment.",
+          "The exact molecular roles of PU.1, Tet2, and DNMT3b are not fully specified in the title.",
+          "Existing-node suggestion for TET2 is unverified and may be wrong."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        130
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        131
+      ],
+      "passage_index": 0
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,487 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "56335"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "METTL3",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D014077"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone erosion",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D001847"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 461,
+            "passage_index": 1,
+            "quote": "METTL3 promotes osteoclast differentiation and bone erosion in OP, and its expression positively correlated with bone loss.",
+            "start": 338
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation and bone erosion",
+          "intervention": "METTL3 expression status",
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "METTL3 is reported to promote osteoclast differentiation and bone erosion in osteoporosis, and its expression is positively correlated with bone loss.",
+        "uncertainties": [
+          "The sentence also states a correlation with bone loss, but does not specify a causal relationship for that association.",
+          "No species or cell type is explicitly stated in this span."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ovariectomy-induced osteoporosis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:C042198"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Nimbolide",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "56335"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "METTL3",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "21943"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "e3",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-induced osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D010024",
+              "10090"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "ovariectomy-induced OP",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 860,
+            "passage_index": 1,
+            "quote": "Nimbolide (Nim) as a direct METTL3 inhibitor that disrupts its methyltransferase activity. Nim treatment suppressed RANKL-induced osteoclastogenesis",
+            "start": 712
+          },
+          {
+            "end": 907,
+            "passage_index": 1,
+            "quote": " and attenuated ovariectomy-induced OP in mice.",
+            "start": 860
+          }
+        ],
+        "experiment": {
+          "assay": "molecular docking, dynamics simulation, cellular thermal shift assay and surface plasmon resonance assay",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis and osteoporosis",
+          "intervention": "Nimbolide treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "direct",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Nimbolide directly inhibits METTL3 and suppresses RANKL-induced osteoclastogenesis; in mice it attenuates ovariectomy-induced osteoporosis.",
+        "uncertainties": [
+          "The claim mixes an in vitro osteoclastogenesis result with an in vivo mouse osteoporosis result.",
+          "The direct inhibition statement is supported by the text, but the exact biochemical mechanism of disruption is not further quantified here."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "56335"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "METTL3",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:C005955"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "m6A",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "16971"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "RNA",
+            "surface": "Lrp1 mRNA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "213541"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "YTHDF2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "16971"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "LRP1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:C042198"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Nim",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1235,
+            "passage_index": 1,
+            "quote": "METTL3 installs m6A on Lrp1 mRNA, recruiting the reader YTHDF2 to degrade transcripts and decrease the anti-osteoclastogenic protein LRP1. Nim restored LRP1 by blocking METTL3-mediated m6A methylation",
+            "start": 1035
+          }
+        ],
+        "experiment": {
+          "assay": "multi-omics integration (RNA-seq/MeRIP-seq/RIP-seq) combined with in vitro molecular validation",
+          "dose": null,
+          "duration": null,
+          "endpoint": "m6A methylation on Lrp1 mRNA and LRP1 abundance",
+          "intervention": "Nim treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "METTL3 is said to install m6A on Lrp1 mRNA, recruiting YTHDF2 to degrade the transcript and reduce LRP1; Nimbolide restores LRP1 by blocking METTL3-mediated m6A methylation.",
+        "uncertainties": [
+          "The text states recruitment of YTHDF2 and transcript degradation, but directness of each step is not separately established in the quoted span.",
+          "The claim that Nim restores LRP1 is mechanistic and depends on the preceding methylation statement."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ovariectomy-induced osteoporosis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "56335",
+              "10090"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "AAV9-driven METTL3 overexpression",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "MESH:C042198"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Nim",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "56335"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "METTL3",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1364,
+            "passage_index": 1,
+            "quote": "Critically, AAV9-driven METTL3 overexpression reversed Nim's efficacy in OVX mice.",
+            "start": 1282
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "reversal of Nim efficacy",
+          "intervention": "AAV9-driven METTL3 overexpression",
+          "outcome_change": "increased",
+          "perturbation_type": "gain_of_function"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c4",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "AAV9-driven METTL3 overexpression reversed Nimbolide's efficacy in ovariectomized mice.",
+        "uncertainties": [
+          "The exact phenotype reversed is described as Nim's efficacy, not a single molecular endpoint.",
+          "AAV9-driven delivery is mentioned, but the target tissue/cell type is not specified."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        338,
+        461
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        463,
+        600
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        712,
+        860
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        837,
+        976
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        860,
+        907
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        976,
+        1044
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1035,
+        1235
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1160,
+        1378
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c4",
+      "corrected_offsets": [
+        1282,
+        1364
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1431,
+        1523
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

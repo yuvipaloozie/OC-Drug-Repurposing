@@ -1,0 +1,108 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "periodontitis",
+          "species": "dogs and cats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "724036"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "RANK/RANKL/OPG signaling pathway",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast-mediated bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D010518"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "advanced periodontitis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 777,
+            "passage_index": 1,
+            "quote": "A focus is placed on the RANK/RANKL/OPG signaling pathway, which governs osteoclast-mediated bone resorption, a hallmark of advanced periodontitis.",
+            "start": 630
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast-mediated bone resorption",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The review states that the RANK/RANKL/OPG signaling pathway governs osteoclast-mediated bone resorption and frames this as a hallmark of advanced periodontitis.",
+        "uncertainties": [
+          "This is a review/background statement rather than a primary experimental perturbation.",
+          "The passage does not specify a direct molecular mechanism beyond the pathway-level statement."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        630,
+        777
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        187,
+        334
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

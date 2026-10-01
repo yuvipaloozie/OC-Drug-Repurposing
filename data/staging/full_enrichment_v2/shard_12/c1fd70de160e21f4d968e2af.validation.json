@@ -1,0 +1,143 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "diabetic osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "Autophagy",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone formation and resorption balance",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "30"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "hyperglycemic conditions",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "osteoclasts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "altered bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 289,
+            "passage_index": 1,
+            "quote": "Autophagy, a conserved cellular homeostatic mechanism, serves as a key regulator of bone formation and resorption balance.",
+            "start": 167
+          },
+          {
+            "end": 819,
+            "passage_index": 1,
+            "quote": "Under hyperglycemic conditions, dysregulated autophagy occurs through multiple signaling pathways, including ROS-mTOR, PINK1/Parkin-mediated mitophagy, FoxO transcription factors, AGEs-RAGE and TLR4/NF-kappaB cascades etc. These disturbances manifest distinctly in various cell types: impaired mineralization of osteoblasts, altered bone resorption of osteoclasts,",
+            "start": 455
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The review states that autophagy is a key regulator of the balance between bone formation and resorption, and that in diabetic osteoporosis under hyperglycemic conditions dysregulated autophagy is associated with altered bone resorption in osteoclasts.",
+        "uncertainties": [
+          "Review statement rather than primary experimental result.",
+          "The passage links dysregulated autophagy to altered osteoclast bone resorption, but does not specify a direction of change for osteoclast activity or a direct causal mechanism."
+        ]
+      },
+      "errors": [
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        167,
+        289
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        152,
+        246
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        455,
+        819
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        575,
+        782
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

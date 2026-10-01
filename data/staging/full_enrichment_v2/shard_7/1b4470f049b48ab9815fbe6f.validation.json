@@ -1,0 +1,183 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "PDLSCs",
+          "compartment": null,
+          "disease_setting": "periodontitis",
+          "species": "null",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "36"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "GelMA@G-Rb3",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "49",
+              "50"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "p38/ERK signaling pathway",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1000,
+            "passage_index": 1,
+            "quote": "The in vitro results indicated that GelMA@G-Rb3 significantly alleviated LPS-induced inflammation in PDLSCs by inhibiting the p38/ERK signaling pathway",
+            "start": 849
+          }
+        ],
+        "experiment": {
+          "assay": "Western blot",
+          "dose": null,
+          "duration": null,
+          "endpoint": "LPS-induced inflammation",
+          "intervention": "GelMA@G-Rb3",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In LPS-treated PDLSCs, GelMA@G-Rb3 was reported to alleviate inflammation by inhibiting the p38/ERK signaling pathway.",
+        "uncertainties": [
+          "The text describes pathway-level inhibition in treated cells; it does not establish direct molecular targets or directness of the interaction."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "PDLSCs",
+          "compartment": null,
+          "disease_setting": "periodontitis",
+          "species": "null",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "36"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "GelMA@G-Rb3",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "51",
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "PI3K/AKT signaling pathway",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1046,
+            "passage_index": 1,
+            "quote": "The in vitro results indicated that GelMA@G-Rb3 significantly alleviated LPS-induced inflammation in PDLSCs by inhibiting the p38/ERK signaling pathway and activating the PI3K/AKT signaling pathway",
+            "start": 849
+          }
+        ],
+        "experiment": {
+          "assay": "Western blot",
+          "dose": null,
+          "duration": null,
+          "endpoint": "LPS-induced inflammation",
+          "intervention": "GelMA@G-Rb3",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In LPS-treated PDLSCs, GelMA@G-Rb3 was reported to alleviate inflammation by activating the PI3K/AKT signaling pathway.",
+        "uncertainties": [
+          "The text describes pathway-level activation in treated cells; it does not establish direct molecular targets or directness of the interaction."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        849,
+        1000
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        554,
+        700
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        849,
+        1046
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        554,
+        711
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

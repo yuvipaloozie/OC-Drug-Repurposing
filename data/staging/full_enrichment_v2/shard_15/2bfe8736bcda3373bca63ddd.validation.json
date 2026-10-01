@@ -1,0 +1,212 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 macrophage cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "36"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "VP1u",
+            "taxon": "Human parvovirus B19"
+          },
+          {
+            "annotation_ids": [
+              "38",
+              "46"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "RAW264.7 macrophage cells",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 103,
+            "passage_index": 0,
+            "quote": "Human parvovirus B19 VP1u-induced osteoclastogenesis is enhanced by RANKL in RAW264.7 macrophage cells.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": "up to 7 days",
+          "endpoint": "osteoclastogenesis",
+          "intervention": "RANKL and B19V-VP1u",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e2"
+        },
+        "summary": "RANKL enhanced VP1u-induced osteoclastogenesis in RAW264.7 macrophage cells.",
+        "uncertainties": [
+          "Title-level statement only; no detailed quantitative effect size provided.",
+          "Species of the RAW264.7 system is not explicitly stated in the passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 macrophages",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "36"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "VP1u",
+            "taxon": "Human parvovirus B19"
+          },
+          {
+            "annotation_ids": [
+              "57",
+              "58"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "p38 MAPK",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1222,
+            "passage_index": 1,
+            "quote": "blockade of p38 MAPK nearly abolished VP1u-induced osteoclastogenesis",
+            "start": 1153
+          }
+        ],
+        "experiment": {
+          "assay": "inhibitor experiment",
+          "dose": null,
+          "duration": "up to 7 days",
+          "endpoint": "VP1u-induced osteoclastogenesis",
+          "intervention": "blockade of p38 MAPK",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e2"
+        },
+        "summary": "Blockade of p38 MAPK nearly abolished VP1u-induced osteoclastogenesis.",
+        "uncertainties": [
+          "Exact passage offsets are estimated from the provided text and should be validator-checked.",
+          "The text does not specify the inhibitor identity for p38 MAPK blockade."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        103
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        104
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1153,
+        1222
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1257,
+        1315
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

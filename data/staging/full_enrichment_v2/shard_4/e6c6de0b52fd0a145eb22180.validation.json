@@ -1,0 +1,349 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "110446"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Acyl-CoA Cholesterol Acyltransferase-1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "21943"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 341,
+            "passage_index": 1,
+            "quote": "Acyl-CoA Cholesterol Acyltransferase-1 (ACAT1) is significantly upregulated during receptor activator of nuclear factor kappa-B ligand (RANKL)-induced osteoclastogenesis, and its knockdown potently inhibited osteoclastogenesis.",
+            "start": 114
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "knockdown of ACAT1",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "ACAT1 was upregulated during RANKL-induced osteoclastogenesis, and ACAT1 knockdown inhibited osteoclastogenesis.",
+        "uncertainties": [
+          "The text also states ACAT1 was upregulated during RANKL-induced osteoclastogenesis, but the causal direction of ACAT1's endogenous role is inferred from knockdown rather than directly shown."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ovariectomy-induced bone loss / osteoporosis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:C423185"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Avasimibe",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "21943"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D001847"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "10090"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "OVX mice",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1024,
+            "passage_index": 1,
+            "quote": "Avasimibe (AVA), a specific ACAT1 inhibitor, originally developed for atherosclerosis due to its suppression of cholesterol esterification and anti-inflammatory effects, for osteoporosis treatment. In vitro, AVA markedly suppressed RANKL-induced osteoclastogenesis without cytotoxicity, as demonstrated by tartrate-resistant acid phosphatase (TRAP) staining, immunofluorescence, quantitative real-time PCR (qRT-PCR), and western blot analysis. In vivo, AVA administration effectively attenuated bone loss in ovariectomized (OVX) mice, significantly improving bone mineral density, preserving trabecular microarchitecture.",
+            "start": 403
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP staining, immunofluorescence, qRT-PCR, western blot analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis and bone loss",
+          "intervention": "AVA administration",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Avasimibe suppressed RANKL-induced osteoclastogenesis without cytotoxicity and attenuated bone loss in ovariectomized mice.",
+        "uncertainties": [
+          "The passage combines in vitro osteoclastogenesis and in vivo OVX mouse bone-loss results in one sentence; assay-specific quantitative details are not provided."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:C423185"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Avasimibe",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "12709"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "creatine kinase B",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "18708",
+              "11651"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "PI3K-AKT signaling pathway",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D010725"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "phosphocreatine",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1469,
+            "passage_index": 1,
+            "quote": "Mechanistically, RNA sequencing (RNA-seq) and bioinformatic analysis revealed that AVA downregulates creatine kinase B (CKB), a key mediator identified as upregulated during osteoclastogenesis, consequently inhibiting the phosphatidylinositol 3-kinase-protein kinase B (PI3K-AKT) signaling pathway. Critically, the inhibitory effects of AVA on osteoclast differentiation and PI3K-AKT activation were reversed by exogenous phosphocreatine (PCr).",
+            "start": 1025
+          }
+        ],
+        "experiment": {
+          "assay": "RNA sequencing and bioinformatic analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "CKB expression, PI3K-AKT activation, osteoclast differentiation",
+          "intervention": "AVA treatment; reversal with exogenous phosphocreatine",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Avasimibe downregulated CKB and inhibited PI3K-AKT signaling; the inhibitory effects on osteoclast differentiation and PI3K-AKT activation were reversed by phosphocreatine.",
+        "uncertainties": [
+          "The text links CKB downregulation to PI3K-AKT inhibition as a mechanistic interpretation rather than a directly demonstrated biochemical interaction.",
+          "Phosphocreatine is described as reversing AVA effects, but the exact molecular target of the reversal is not established in the text."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        114,
+        341
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        214,
+        320
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        403,
+        1024
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        532,
+        848
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1025,
+        1469
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1210,
+        1626
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,134 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "23"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "DHEA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "29",
+              "30"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "RANKL/OPG ratio",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 817,
+            "passage_index": 1,
+            "quote": "DHEA promotes osteoblast differentiation and proliferation, regulates the RANKL/OPG ratio, and inhibits osteoclastogenesis",
+            "start": 695
+          },
+          {
+            "end": 838,
+            "passage_index": 1,
+            "quote": "and bone resorption.",
+            "start": 818
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis; bone resorption; RANKL/OPG ratio",
+          "intervention": null,
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The review states that DHEA inhibits osteoclastogenesis and bone resorption, and regulates the RANKL/OPG ratio in bone metabolism.",
+        "uncertainties": [
+          "This is a review summary rather than a primary experimental result.",
+          "The cited span mentions multiple effects; the regulatory object is represented as osteoclastogenesis, with bone resorption and RANKL/OPG ratio captured in the summary."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        695,
+        817
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        426,
+        550
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        818,
+        838
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        550,
+        573
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

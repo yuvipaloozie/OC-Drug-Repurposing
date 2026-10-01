@@ -1,0 +1,228 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "proximal colon and cecum",
+          "disease_setting": null,
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "51",
+              "54",
+              "56",
+              "61",
+              "73"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "DKO mice",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [
+              "6",
+              "72",
+              "75"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Trpv5",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1415,
+            "passage_index": 1,
+            "quote": "Trpv5, which is absent from the intestine, became detectable in the proximal colon and cecum, but not in",
+            "start": 1311
+          },
+          {
+            "end": 1464,
+            "passage_index": 1,
+            "quote": "DKO mice.",
+            "start": 1455
+          }
+        ],
+        "experiment": {
+          "assay": "quantitative real-time PCR",
+          "dose": null,
+          "duration": null,
+          "endpoint": "Trpv5 detectability / expression in proximal colon and cecum",
+          "intervention": "double knockout mouse (Cldn12-/-/ Trpv6D541A/D541A)",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In double-knockout mice lacking Cldn12 and functional Trpv6, Trpv5 became detectable in the proximal colon and cecum, consistent with compensatory upregulation in the intestine.",
+        "uncertainties": [
+          "The text describes detectability/upregulation of Trpv5 in tissue, but does not specify cell type or whether the signal reflects RNA or protein.",
+          "The intervention combines loss of Cldn12 and functional Trpv6, so the contribution of each component is not separately resolved."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone",
+          "disease_setting": null,
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "51",
+              "54",
+              "56",
+              "61",
+              "73"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "DKO mice",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1547,
+            "passage_index": 1,
+            "quote": "Micro-CT of bone revealed reduced trabecular bone volume and thickness, indicating",
+            "start": 1465
+          },
+          {
+            "end": 1612,
+            "passage_index": 1,
+            "quote": "increased bone resorption as a secondary compensatory mechanism.",
+            "start": 1548
+          }
+        ],
+        "experiment": {
+          "assay": "Micro-CT",
+          "dose": null,
+          "duration": null,
+          "endpoint": "trabecular bone loss / bone resorption inference",
+          "intervention": "double knockout mouse (Cldn12-/-/ Trpv6D541A/D541A)",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Bone micro-CT in the double-knockout mice showed reduced trabecular bone volume and thickness, which the authors interpret as increased bone resorption.",
+        "uncertainties": [
+          "The passage infers increased bone resorption from reduced trabecular bone volume and thickness; the resorption mechanism itself is not directly measured here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1311,
+        1415
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1433,
+        1536
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1455,
+        1464
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1561,
+        1606
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1465,
+        1547
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1608,
+        1687
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1548,
+        1612
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1688,
+        1756
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

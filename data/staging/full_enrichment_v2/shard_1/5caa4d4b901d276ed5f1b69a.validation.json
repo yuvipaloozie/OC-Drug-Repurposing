@@ -1,0 +1,193 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "MC3T3-E1 osteoblast model of senescence",
+          "compartment": null,
+          "disease_setting": "D-galactose-induced aging",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "28"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "RPP",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 656,
+            "passage_index": 1,
+            "quote": "RPP significantly enhanced osteogenesis, inhibited bone resorption, and improved systemic antioxidant capacity and bone microarchitecture.",
+            "start": 518
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteogenesis",
+          "intervention": "RPP",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In the reported mouse aging model and MC3T3-E1 osteoblast senescence model, RPP improved bone-related phenotype, including enhanced osteogenesis and reduced bone resorption.",
+        "uncertainties": [
+          "The quote bundles several outcomes; osteogenesis is used as the main object while bone resorption and other phenotypes are mentioned in the same span.",
+          "The exact causal contribution of RPP to each phenotype is not separated in the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "age-related osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "32"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "RPP",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "33"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "YY1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "33",
+              "34"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "AMPK/SIRT1 signaling pathway",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 874,
+            "passage_index": 1,
+            "quote": "RPP directly binds to the transcription factor YY1, thereby activating the AMPK/SIRT1 signaling pathway.",
+            "start": 770
+          }
+        ],
+        "experiment": {
+          "assay": "pull-down assay and molecular docking; siRNA-mediated gene silencing",
+          "dose": null,
+          "duration": null,
+          "endpoint": "YY1 binding / AMPK-SIRT1 signaling",
+          "intervention": "RPP",
+          "outcome_change": "not_stated",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "direct",
+          "effect_level": "binding",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "RPP was reported to directly bind YY1 and activate the AMPK/SIRT1 signaling pathway.",
+        "uncertainties": [
+          "The quote explicitly states direct binding to YY1, but the pathway activation is a downstream statement and is not encoded in the regulatory edge.",
+          "The pathway entity is a text-supported composite and not a curated canonical pathway identifier."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        518,
+        656
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        623,
+        761
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        770,
+        874
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1009,
+        1122
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

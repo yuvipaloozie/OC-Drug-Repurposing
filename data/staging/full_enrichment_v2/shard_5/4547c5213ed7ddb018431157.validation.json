@@ -1,0 +1,97 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "Porphyromonas gingivalis",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "19"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "Porphyromonas gingivalis",
+            "taxon": "837"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "tissue damage and bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 309,
+            "passage_index": 1,
+            "quote": "Porphyromonas gingivalis, a gram-negative, bacterium interacts favourably with host subgingival biofilms to cause adult tooth decay and loss. Consequently, the host is infested with an uncontrollable microbial community and a compromised immune system, ultimately leading to tissue damage and bone resorption.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Porphyromonas gingivalis is described as interacting with host subgingival biofilms and causing tissue damage and bone resorption.",
+        "uncertainties": [
+          "This is background narrative from an abstract, not a controlled experiment.",
+          "The quoted span includes multiple outcomes (tooth decay, tissue damage, bone resorption); only one phenotype object is captured here."
+        ]
+      },
+      "errors": [
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        309
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        149,
+        337
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

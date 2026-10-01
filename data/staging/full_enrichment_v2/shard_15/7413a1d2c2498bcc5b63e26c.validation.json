@@ -1,0 +1,112 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "RANKL-induced bone resorption",
+          "species": "medaka",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:C017154",
+              "MESH:C480521"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "cyanidin and peonidin-3-O-glucoside",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "101168029"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-induced ectopic osteoclast formation",
+            "taxon": "8090"
+          },
+          {
+            "annotation_ids": [
+              "MESH:D001862"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": "8090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 932,
+            "passage_index": 1,
+            "quote": "Cyanidin, peonidin-3-O-glucoside, and resveratrol also reduced RANKL-induced ectopic osteoclast formation and bone resorption",
+            "start": 807
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "1-4 mug/ml",
+          "duration": null,
+          "endpoint": "ectopic osteoclast formation and bone resorption",
+          "intervention": "cyanidin and peonidin-3-O-glucoside",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In transgenic medaka, cyanidin and peonidin-3-O-glucoside reduced RANKL-induced ectopic osteoclast formation and bone resorption.",
+        "uncertainties": [
+          "The passage reports a combined effect for cyanidin, peonidin-3-O-glucoside, and resveratrol; the claim isolates cyanidin and peonidin-3-O-glucoside as text-supported candidates rather than proving each compound alone.",
+          "The text does not establish direct molecular targets or mechanism for the reduction in bone resorption.",
+          "Entity e2 is represented as a phenotype phrase from the text, not as a specific molecular osteoclast marker."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        807,
+        932
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1165,
+        1241
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

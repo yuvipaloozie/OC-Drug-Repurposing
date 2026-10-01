@@ -1,0 +1,120 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "27",
+              "28",
+              "30",
+              "36",
+              "37"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Sirt5",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "31",
+              "32",
+              "33",
+              "34",
+              "38"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Solute Carrier Family 25 Member 4 (Slc25a4)",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "protein",
+            "surface": "desuccinylated Slc25a4 at lysine 147 (K147)",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 688,
+            "passage_index": 1,
+            "quote": "Sirt5 governs mitochondrial homeostasis by desuccinylating Solute Carrier Family 25 Member 4 (Slc25a4) at lysine 147 (K147), as demonstrated by quantitative succinylome profiling and site-directed mutagenesis.",
+            "start": 479
+          }
+        ],
+        "experiment": {
+          "assay": "quantitative succinylome profiling; site-directed mutagenesis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "desuccinylation of Slc25a4 at K147",
+          "intervention": "Sirt5-knockout mice; quantitative succinylome profiling and site-directed mutagenesis",
+          "outcome_change": "not_stated",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "metabolic_conversion",
+        "local_claim_id": "c1",
+        "reaction": {
+          "direction": "as_written",
+          "enzyme": "e1",
+          "products": [
+            {
+              "entity": "e3",
+              "stoichiometry": null
+            }
+          ],
+          "substrates": [
+            {
+              "entity": "e2",
+              "stoichiometry": null
+            }
+          ]
+        },
+        "regulatory": null,
+        "summary": "Sirt5 is reported to desuccinylate Slc25a4 at lysine 147 in the mouse osteoporosis context.",
+        "uncertainties": [
+          "The product is described functionally as a desuccinylated form rather than with an explicit named product entity.",
+          "The passage links the reaction to a mouse osteoporosis model, but the exact cellular compartment is not stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        479,
+        688
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        475,
+        564
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

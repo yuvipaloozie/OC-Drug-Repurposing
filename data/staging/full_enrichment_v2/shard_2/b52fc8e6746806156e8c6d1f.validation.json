@@ -1,0 +1,227 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "31",
+              "35",
+              "38",
+              "42",
+              "45"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "ferroptosis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "36"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone-related diseases",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "25",
+              "26",
+              "27",
+              "29",
+              "37",
+              "39",
+              "40",
+              "41",
+              "43",
+              "44"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "OP",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 845,
+            "passage_index": 1,
+            "quote": "Ferroptosis is an iron-dependent form of modulated cell death with unique traits, including disrupted iron balance, compromised antioxidant defenses, and aberrant lipid peroxidation. Ferroptosis participates in various physiological and pathological processes, and its role in bone-related diseases, particularly OP, is increasingly being explored.",
+            "start": 497
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "role in bone-related diseases",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "unknown",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The review states that ferroptosis is increasingly being explored for its role in bone-related diseases, particularly osteoporosis.",
+        "uncertainties": [
+          "This is a review-level background statement, not a reported experiment.",
+          "The text says the role is being explored, which does not establish directionality or causality."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "25",
+              "26",
+              "27",
+              "29",
+              "37",
+              "39",
+              "40",
+              "41",
+              "43",
+              "44"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoporosis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast-mediated bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoblast-mediated bone formation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 377,
+            "passage_index": 1,
+            "quote": "OP is defined by reduced bone mass and impaired bone microarchitecture, thereby weakening bone strength and elevating fracture risk. Imbalanced bone remodeling is the major pathological mechanism of OP, in which osteoclast-mediated bone resorption exceeds osteoblast-mediated bone formation.",
+            "start": 86
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone remodeling",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e2"
+        },
+        "summary": "In osteoporosis, imbalanced bone remodeling is described as osteoclast-mediated bone resorption exceeding osteoblast-mediated bone formation.",
+        "uncertainties": [
+          "The passage states a disease mechanism background, not an experiment.",
+          "The relation is described narratively; direct molecular causation is not established."
+        ]
+      },
+      "errors": [
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        86,
+        377
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        168,
+        255
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        497,
+        845
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        742,
+        892
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

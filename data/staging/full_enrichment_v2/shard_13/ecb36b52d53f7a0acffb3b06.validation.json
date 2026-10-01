@@ -1,0 +1,225 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "menopause",
+          "species": "human",
+          "stage": "peri- and postmenopausal women"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Mediterranean diet",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "blood pressure",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "12"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "triglyceride concentrations",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "cardiovascular burden",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1145,
+            "passage_index": 1,
+            "quote": "Adherence to the Mediterranean diet consistently demonstrates clinically meaningful reductions in blood pressure and triglyceride concentrations, thereby attenuating cardiovascular burden.",
+            "start": 957
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "blood pressure and triglyceride concentrations",
+          "intervention": "Adherence to the Mediterranean diet",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Adherence to the Mediterranean diet is reported to be associated with lower blood pressure and triglyceride concentrations, which the review frames as reduced cardiovascular burden.",
+        "uncertainties": [
+          "The passage is a review summary rather than a single primary experiment.",
+          "The evidence links diet adherence to outcomes, but the underlying causal mechanism is not specified."
+        ]
+      },
+      "errors": [
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "menopause",
+          "species": "human",
+          "stage": "peri- and postmenopausal women"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "13"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Calcium",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "14"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "vitamin D",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone mineral density",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "15"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "fracture risk",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1255,
+            "passage_index": 1,
+            "quote": "Calcium and vitamin D co-supplementation robustly preserves bone mineral density and mitigates fracture risk.",
+            "start": 1146
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone mineral density",
+          "intervention": "Calcium and vitamin D co-supplementation",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Calcium and vitamin D co-supplementation is reported to preserve bone mineral density and mitigate fracture risk.",
+        "uncertainties": [
+          "The passage summarizes prior studies in a review and does not specify a single study design or mechanism.",
+          "The text states a co-supplementation effect; it does not isolate calcium from vitamin D."
+        ]
+      },
+      "errors": [
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        957,
+        1145
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        957,
+        1044
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1146,
+        1255
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1046,
+        1128
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

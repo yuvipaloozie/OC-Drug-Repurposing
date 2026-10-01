@@ -1,0 +1,94 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "serum",
+          "disease_setting": null,
+          "species": "mice",
+          "stage": "adult male"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "25"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "HPD",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "serum markers of osteoclastic resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1435,
+            "passage_index": 1,
+            "quote": "Serum markers of osteoclastic resorption and osteoblastic formation were increased with HPD",
+            "start": 1344
+          }
+        ],
+        "experiment": {
+          "assay": "serum markers were quantified",
+          "dose": null,
+          "duration": "18 weeks",
+          "endpoint": "serum markers of osteoclastic resorption",
+          "intervention": "Adult male mice were fed a normal phosphate diet (NPD) or HPD for 18 weeks",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In mice, the high-phosphate diet increased serum markers of osteoclastic resorption.",
+        "uncertainties": [
+          "HPD is a diet condition rather than a single molecular entity; the specific causal component is unresolved.",
+          "The text reports serum markers, not direct measurement of osteoclasts themselves."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1344,
+        1435
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1526,
+        1602
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

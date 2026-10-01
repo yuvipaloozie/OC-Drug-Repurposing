@@ -1,0 +1,203 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoarthritis",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "FIR",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "37"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-mediated OC differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "38"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:ACP5",
+            "key": "e3",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "phenotype",
+            "surface": "TRAP activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1364,
+            "passage_index": 1,
+            "quote": "Cellular studies showed FIR inhibited RANKL-mediated OC differentiation, as evidenced by reduced TRAP activity and downregulation",
+            "start": 1235
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro analyses",
+          "dose": null,
+          "duration": "30/60min daily",
+          "endpoint": "RANKL-mediated OC differentiation; TRAP activity",
+          "intervention": "FIR intervention (30/60min daily)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Far-infrared (FIR) therapy inhibited RANKL-mediated osteoclast differentiation and reduced TRAP activity in vitro.",
+        "uncertainties": [
+          "The quoted span is truncated at the sentence boundary in the supplied passage; the claim relies on the full surrounding sentence in the abstract.",
+          "TRAP is annotated as a gene by the provider, but the text here supports a readout of TRAP activity rather than a specific molecular entity role.",
+          "Direct molecular target of FIR is not stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoarthritis",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "FIR",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "F-actin ring formation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "4",
+              "5",
+              "39",
+              "40"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "MAPK/c-Fos/NFATc1 signaling",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1679,
+            "passage_index": 1,
+            "quote": "This finding was supported by disrupting F-actin ring formation and modulating key regulatory proteins via MAPK/c-Fos/NFATc1 signaling",
+            "start": 1545
+          }
+        ],
+        "experiment": {
+          "assay": "transcriptomic profiling; cytoskeletal visualization; proteomic validation",
+          "dose": null,
+          "duration": "30/60min daily",
+          "endpoint": "F-actin ring formation; MAPK/c-Fos/NFATc1 signaling-related regulatory proteins",
+          "intervention": "FIR intervention (30/60min daily)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e5",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "FIR disrupted F-actin ring formation and modulated key regulatory proteins via MAPK/c-Fos/NFATc1 signaling.",
+        "uncertainties": [
+          "The text states modulation via MAPK/c-Fos/NFATc1 signaling but does not specify a direct biochemical target or the exact direction for each component individually.",
+          "F-actin ring formation is treated as a phenotype/readout rather than a molecular complex."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1235,
+        1364
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1359,
+        1495
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1545,
+        1679
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1635,
+        1762
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

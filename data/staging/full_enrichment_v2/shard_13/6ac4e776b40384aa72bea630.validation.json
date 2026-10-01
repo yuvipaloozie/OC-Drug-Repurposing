@@ -1,0 +1,329 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "bone",
+          "disease_setting": null,
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "23387"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "SIK3",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "23387",
+              "10090"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast-specific SIK3 conditional knockout mice",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone mass",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteopetrosis phenotype",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 573,
+            "passage_index": 1,
+            "quote": "We generated osteoclast-specific SIK3 conditional knockout mice and assessed the impact of SIK3 deletion on bone homeostasis. Our findings revealed that SIK3 conditional knockout mice exhibited increased bone mass and an osteopetrosis phenotype",
+            "start": 477
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone mass",
+          "intervention": "SIK3 deletion",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e2"
+        },
+        "summary": "Osteoclast-specific SIK3 conditional knockout mice showed increased bone mass and an osteopetrosis phenotype.",
+        "uncertainties": [
+          "The passage reports a whole-animal phenotype; the mechanistic step linking SIK3 loss to increased bone mass is not directly specified.",
+          "Osteopetrosis is described as a phenotype but not quantified."
+        ]
+      },
+      "errors": [
+        "invented annotation ID",
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "in vitro",
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:C586064"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "pterosin B",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "multinucleated osteoclasts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "resorption activity",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "23387"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "SIK3",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1055,
+            "passage_index": 1,
+            "quote": "Moreover, we assessed the impact of pterosin B, a SIK3 inhibitor, on osteoclast differentiation. The treatment with pterosin B inhibited osteoclast differentiation, reduced the numbers of multinucleated osteoclasts, and suppressed resorption activity in vitro.",
+            "start": 795
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation",
+          "intervention": "pterosin B treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Pterosin B treatment inhibited osteoclast differentiation, reduced multinucleated osteoclast numbers, and suppressed resorption activity in vitro.",
+        "uncertainties": [
+          "The passage does not specify the assay used for differentiation or resorption.",
+          "The statement that pterosin B is a SIK3 inhibitor is present, but direct biochemical inhibition of SIK3 is not demonstrated here."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "in vitro",
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:C586064"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "pterosin B",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "intracellular metabolism",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "tricarboxylic acid cycle",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "oxidative phosphorylation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1412,
+            "passage_index": 1,
+            "quote": "Furthermore, pterosin B treatment altered intracellular metabolism, particularly affecting key metabolic pathways, such as the tricarboxylic acid cycle and oxidative phosphorylation.",
+            "start": 1230
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "intracellular metabolism",
+          "intervention": "pterosin B treatment",
+          "outcome_change": "other",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Pterosin B treatment altered intracellular metabolism, affecting the tricarboxylic acid cycle and oxidative phosphorylation.",
+        "uncertainties": [
+          "The passage is descriptive and does not specify whether pathway activity increased or decreased.",
+          "The metabolic changes are reported in the context of pterosin B treatment, but causal linkage to osteoclast differentiation is not directly established in the quoted text."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        795,
+        1055
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        573,
+        820
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1230,
+        1412
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1186,
+        1414
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

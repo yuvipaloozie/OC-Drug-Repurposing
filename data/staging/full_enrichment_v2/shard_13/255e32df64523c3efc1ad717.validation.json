@@ -1,0 +1,196 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoblasts and synovial fibroblasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "28"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "IL-17",
+            "taxon": "null"
+          },
+          {
+            "annotation_ids": [
+              "29",
+              "30"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "netrin 1",
+            "taxon": "null"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 485,
+            "passage_index": 1,
+            "quote": "IL-17 robustly enhances netrin 1 expression in these cells.",
+            "start": 426
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "netrin 1 expression",
+          "intervention": "IL-17",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "IL-17 increases netrin 1 expression in osteoblasts and synovial fibroblasts.",
+        "uncertainties": [
+          "The passage does not specify whether IL-17 acts directly on the netrin 1 gene/protein or through intermediates.",
+          "The molecular form of IL-17 is not explicitly stated in the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "autoimmune arthritis model; age-related bone destruction",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "35",
+              "39"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "netrin 1",
+            "taxon": "null"
+          },
+          {
+            "annotation_ids": [
+              "36"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone erosion",
+            "taxon": "null"
+          },
+          {
+            "annotation_ids": [
+              "38"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone destruction",
+            "taxon": "null"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 865,
+            "passage_index": 1,
+            "quote": "Strikingly, netrin 1 treatment prevented bone erosion in an autoimmune arthritis model and age-related bone destruction.",
+            "start": 745
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone erosion; age-related bone destruction",
+          "intervention": "netrin 1 treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Netrin 1 treatment prevented bone erosion and age-related bone destruction in in vivo disease models.",
+        "uncertainties": [
+          "The sentence reports two related outcomes; the object was simplified to bone erosion as the primary cited phenotype.",
+          "The model species and treatment conditions are not specified in the abstract sentence."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        426,
+        485
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        473,
+        532
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        745,
+        865
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        787,
+        898
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

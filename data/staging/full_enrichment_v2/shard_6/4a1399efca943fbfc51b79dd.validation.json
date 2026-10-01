@@ -1,0 +1,267 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "periodontitis",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "41",
+              "47",
+              "52",
+              "56",
+              "58",
+              "60",
+              "67",
+              "69"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "TSG-6",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [
+              "75"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "CXCL-9",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "42",
+              "61",
+              "68",
+              "70"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "inflammation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1598,
+            "passage_index": 1,
+            "quote": "Furthermore, local injection of TSG-6 effectively suppressed inflammation",
+            "start": 1525
+          },
+          {
+            "end": 1763,
+            "passage_index": 1,
+            "quote": "and attenuated bone resorption while stimulating type H vessel formation and coupled osteoprogenitor expression by reducing CXC-chemokine ligand (CXCL)-9 secretion.",
+            "start": 1599
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "inflammation and CXCL-9 secretion",
+          "intervention": "local injection of TSG-6",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "TSG-6 was reported to suppress inflammation by reducing CXCL-9 secretion in periodontitis.",
+        "uncertainties": [
+          "The text states reduced CXCL-9 secretion as the mechanism for suppressed inflammation; the exact cellular source of CXCL-9 is not specified."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "human periodontal ligament cells (HPDLCs)",
+          "compartment": null,
+          "disease_setting": "periodontitis",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "41",
+              "47",
+              "52",
+              "56",
+              "58",
+              "60",
+              "67",
+              "69"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "TSG-6",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [
+              "42",
+              "61",
+              "68",
+              "70"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "inflammation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "48",
+              "49",
+              "64",
+              "65",
+              "66",
+              "73",
+              "74"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "cGAS-STING pathway",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1654,
+            "passage_index": 1,
+            "quote": "LPS-induced HPDLCs via maintaining mitochondrial homeostasis and inhibiting cyclic GMP-AMP synthase (cGAS)-stimulator of interferon genes (STING) pathway activation.",
+            "start": 1461
+          },
+          {
+            "end": 1598,
+            "passage_index": 1,
+            "quote": "Furthermore, local injection of TSG-6 effectively suppressed inflammation",
+            "start": 1525
+          }
+        ],
+        "experiment": {
+          "assay": "RNA sequencing, quantitative reverse transcription PCR, immunohistochemistry, immunofluorescence staining, enzyme-linked immunosorbent assays, micro-computed tomography, and western blotting",
+          "dose": null,
+          "duration": null,
+          "endpoint": "inflammation and osteogenesis-related pathway activation",
+          "intervention": "TSG-6",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In lipopolysaccharide-induced human periodontal ligament cells, TSG-6 was reported to alleviate inflammation and promote osteogenesis by inhibiting cGAS-STING pathway activation.",
+        "uncertainties": [
+          "The sentence bundles multiple outcomes, so the exact linkage between TSG-6 and osteogenesis is summarized rather than separated into a distinct claim."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1525,
+        1598
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1672,
+        1740
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1525,
+        1598
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1672,
+        1740
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1599,
+        1763
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1753,
+        1812
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,434 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "87178"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "PNPT1 expression",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D010024"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoporosis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 436,
+            "passage_index": 1,
+            "quote": "causal link connecting PNPT1 expression to osteoporosis risk. For in vivo substantiation, we utilized",
+            "start": 335
+          },
+          {
+            "end": 931,
+            "passage_index": 1,
+            "quote": "MR evaluations pinpointed genetically predicted elevated PNPT1 expression as a potential genetic risk factor for osteoporosis.",
+            "start": 805
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoporosis risk",
+          "intervention": "two-sample Mendelian randomization (MR) strategy",
+          "outcome_change": "not_stated",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Genetically predicted elevated PNPT1 expression was reported as a potential genetic risk factor for osteoporosis in the MR analysis.",
+        "uncertainties": [
+          "The MR result is an association/risk finding, not a direct molecular mechanism.",
+          "Species is not stated for the MR analysis."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 macrophages",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "murine",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "87178"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "PNPT1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone degradation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "mitochondrial depolarization",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D017382"
+            ],
+            "existing_node_id": "CHEBI:26523",
+            "key": "e5",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "compound",
+            "surface": "reactive oxygen species",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "8600"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "RANKL-stimulated RAW264.7 macrophages",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1278,
+            "passage_index": 1,
+            "quote": "In vitro, the ectopic overexpression of PNPT1 significantly enhanced osteoclastogenesis and bone degradation while simultaneously triggering severe mitochondrial depolarization alongside the accumulation of reactive oxygen species (ROS).",
+            "start": 1041
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro assays",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "ectopic overexpression of PNPT1",
+          "outcome_change": "increased",
+          "perturbation_type": "gain_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "PNPT1 overexpression increased osteoclastogenesis and bone degradation and was accompanied by mitochondrial depolarization and ROS accumulation in RANKL-stimulated RAW264.7 cells.",
+        "uncertainties": [
+          "The sentence also reports bone degradation, mitochondrial depolarization, and ROS accumulation; these are associated outcomes in the same experiment but not separated into distinct causal claims here.",
+          "RAW264.7 is a cell line context inferred from the text string; the taxon comes from the provider annotation."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 macrophages",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "murine",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "87178"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Pnpt1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast maturation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1363,
+            "passage_index": 1,
+            "quote": "On the contrary, targeted Pnpt1 silencing markedly suppressed osteoclast maturation.",
+            "start": 1279
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro assays",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast maturation",
+          "intervention": "targeted Pnpt1 silencing",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Targeted Pnpt1 silencing suppressed osteoclast maturation.",
+        "uncertainties": [
+          "The molecular form of Pnpt1 is unresolved between gene and protein in the text, but silencing supports a gene-level perturbation."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 macrophages",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "murine",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "87178"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "PNPT1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "4780"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Nrf2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "23657"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "xCT",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1609,
+            "passage_index": 1,
+            "quote": "Notably, even with a compensatory transcriptional rise in Nrf2 mRNA, PNPT1 overexpression provoked a marked downregulation of Nrf2 and xCT proteins",
+            "start": 1462
+          }
+        ],
+        "experiment": {
+          "assay": "molecular analyses",
+          "dose": null,
+          "duration": null,
+          "endpoint": "Nrf2 and xCT protein levels",
+          "intervention": "PNPT1 overexpression",
+          "outcome_change": "decreased",
+          "perturbation_type": "gain_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c4",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "PNPT1 overexpression reduced Nrf2 and xCT protein levels, despite a compensatory rise in Nrf2 mRNA, consistent with post-transcriptional suppression.",
+        "uncertainties": [
+          "The text explicitly mentions both Nrf2 and xCT proteins; the regulatory object is represented with Nrf2 only, while xCT is noted in the summary.",
+          "The statement includes an interpretation of post-transcriptional suppression, but the claim is based on the observed protein downregulation and mRNA increase."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        335,
+        436
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        250,
+        353
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        805,
+        931
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        356,
+        463
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1041,
+        1278
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        474,
+        626
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1279,
+        1363
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        627,
+        695
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c4",
+      "corrected_offsets": [
+        1462,
+        1609
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        743,
+        823
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

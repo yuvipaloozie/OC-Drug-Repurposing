@@ -1,0 +1,178 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "trabecular bone and bone marrow",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "black bears",
+          "stage": "hibernation"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "hibernation",
+            "taxon": "black bears"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "genes involved in bone resorption, osteoclast differentiation and signaling, and apoptosis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 742,
+            "passage_index": 1,
+            "quote": "Gene set enrichment analysis showed a coordinated down-regulation of genes involved in bone resorption, osteoclast differentiation and signaling, and apoptosis during hibernation.",
+            "start": 563
+          }
+        ],
+        "experiment": {
+          "assay": "gene expression screening / transcriptome sequencing / gene set enrichment analysis",
+          "dose": null,
+          "duration": "4-6 months",
+          "endpoint": "gene expression in gene sets involved in bone resorption, osteoclast differentiation and signaling, and apoptosis",
+          "intervention": "comparison of hibernating and summer active bears through sequencing of the transcriptome",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "During hibernation in black bears, gene sets involved in bone resorption, osteoclast differentiation and signaling, and apoptosis were coordinately down-regulated.",
+        "uncertainties": [
+          "The claim is based on transcriptomic enrichment, not direct measurement of osteoclast activity.",
+          "The exact molecular entities within the down-regulated gene sets are not specified in the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "hypothesis",
+        "context": {
+          "cell_type": "trabecular bone and bone marrow",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "black bears",
+          "stage": "hibernation"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "12",
+              "13"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "AMPK/PGC1alpha pathway",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "mitochondrial oxidation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1482,
+            "passage_index": 1,
+            "quote": "Mitochondrial oxidation was likely up-regulated by transcriptionally induced AMPK/PGC1alpha pathway, an upstream stimulator of mitochondrial function.",
+            "start": 1332
+          }
+        ],
+        "experiment": {
+          "assay": "transcriptome sequencing / gene set analysis",
+          "dose": null,
+          "duration": "4-6 months",
+          "endpoint": "mitochondrial oxidation",
+          "intervention": "transcriptionally induced AMPK/PGC1alpha pathway",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "positive",
+          "subject": "e3"
+        },
+        "summary": "The paper proposes that transcriptionally induced AMPK/PGC1alpha pathway up-regulation likely increases mitochondrial oxidation during hibernation.",
+        "uncertainties": [
+          "The statement is hedged with 'likely', so it is an interpretation rather than a direct causal demonstration.",
+          "The pathway-to-oxidation relationship is not shown by a targeted perturbation experiment."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        563,
+        742
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        283,
+        462
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1332,
+        1482
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        897,
+        1047
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

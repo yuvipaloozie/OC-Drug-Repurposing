@@ -1,0 +1,175 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone metabolism",
+          "disease_setting": "aging-related bone diseases",
+          "species": null,
+          "stage": "aging"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "DNA methylation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoblast-osteoclast balance",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 677,
+            "passage_index": 1,
+            "quote": "In bone metabolism, DNA methylation disrupts the osteoblast-osteoclast balance",
+            "start": 599
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoblast-osteoclast balance",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "DNA methylation is described as disrupting the osteoblast-osteoclast balance in bone metabolism by targeting key factors.",
+        "uncertainties": [
+          "This is a review-style background statement rather than a specific experiment.",
+          "The text does not specify which key factors are targeted."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone metabolism",
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": "aging"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "DNA methyltransferase inhibitors",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone metabolism",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1058,
+            "passage_index": 1,
+            "quote": "Low-dose DNA methyltransferase inhibitors can improve bone metabolism",
+            "start": 989
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "low-dose",
+          "duration": null,
+          "endpoint": "bone metabolism",
+          "intervention": "Low-dose DNA methyltransferase inhibitors",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The review states that low-dose DNA methyltransferase inhibitors can improve bone metabolism.",
+        "uncertainties": [
+          "The passage summarizes potential rather than a specific controlled experiment.",
+          "No specific inhibitor compound is named."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        599,
+        677
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        578,
+        655
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        989,
+        1058
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1054,
+        1114
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

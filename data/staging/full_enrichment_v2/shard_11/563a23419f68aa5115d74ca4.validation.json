@@ -1,0 +1,217 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow-derived macrophages",
+          "compartment": null,
+          "disease_setting": "periodontitis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "27",
+              "29",
+              "34"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "MPRO3",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "bone marrow-derived macrophages",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 820,
+            "passage_index": 1,
+            "quote": "MPRO3 suppressed osteoclast differentiation of bone marrow-derived macrophages",
+            "start": 742
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation",
+          "intervention": "MPRO3 treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "MPRO3 suppressed osteoclast differentiation in bone marrow-derived macrophages.",
+        "uncertainties": [
+          "The exact quote offsets are best-effort and may need validator correction.",
+          "The passage also mentions regulated osteoclastogenesis-related factors, but the specific factors are not named in the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ligature-induced periodontitis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "27",
+              "29",
+              "34"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "MPRO3",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "2",
+              "35"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "alveolar bone loss",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "36"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:ACP5",
+            "key": "e3",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "TRAP-positive osteoclasts",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "37"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "e4",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1068,
+            "passage_index": 1,
+            "quote": "In a mouse model of ligature-induced periodontitis, MPRO3 significantly attenuated alveolar bone loss, accompanied by decreased TRAP-positive osteoclasts, reduced RANKL expression",
+            "start": 889
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "alveolar bone loss",
+          "intervention": "MPRO3",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In ligature-induced periodontitis mice, MPRO3 attenuated alveolar bone loss and was accompanied by fewer TRAP-positive osteoclasts and reduced RANKL expression.",
+        "uncertainties": [
+          "TRAP-positive osteoclasts and RANKL expression are reported as accompanying outcomes, but the specific causal relation to MPRO3 is not separately proven in the sentence.",
+          "RANKL is annotated as a gene by the provider, but the text alone does not resolve gene versus protein form."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        742,
+        820
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        823,
+        899
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        889,
+        1068
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        999,
+        1227
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

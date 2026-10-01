@@ -1,0 +1,367 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone",
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "40",
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "RNA",
+            "surface": "Ccar2 expression",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone mineral density",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 768,
+            "passage_index": 1,
+            "quote": "We find that Ccar2 expression correlates positively with femoral and spine BMD.",
+            "start": 689
+          }
+        ],
+        "experiment": {
+          "assay": "database screen",
+          "dose": null,
+          "duration": null,
+          "endpoint": "correlations between Ccar2 mRNA expression in bone and bone mineral density",
+          "intervention": "public database of inbred mouse strain information",
+          "outcome_change": "other",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Ccar2 expression in bone was positively correlated with femoral and spine bone mineral density in a public inbred mouse strain database.",
+        "uncertainties": [
+          "The association is observational and does not establish causality.",
+          "The text links the correlation to both femoral and spine BMD, but only one combined claim is extracted."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW 264.7 cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "osteoclastogenesis"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "43",
+              "46",
+              "47",
+              "48",
+              "54"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "CCAR2-KO",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast numbers",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1098,
+            "passage_index": 1,
+            "quote": "The CCAR2-KO cells exhibit increased osteoclast numbers",
+            "start": 1043
+          }
+        ],
+        "experiment": {
+          "assay": "CRISPR-Cas9 knockout and osteoclastogenesis assay",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast numbers",
+          "intervention": "CCAR2-knockout (KO) RAW 264.7 cells using CRISPR-Cas9",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "CCAR2 knockout cells showed increased osteoclast numbers during M-CSF- and RANKL-induced osteoclastogenesis.",
+        "uncertainties": [
+          "The passage also reports reduced ROS and decreased apoptosis in the same experiment, but those are not included in this claim."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW 264.7 cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "osteoclastogenesis"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "43",
+              "46",
+              "47",
+              "48",
+              "54"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "CCAR2-KO",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "apoptosis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1157,
+            "passage_index": 1,
+            "quote": "reduced intracellular ROS levels, and decreased apoptosis",
+            "start": 1100
+          }
+        ],
+        "experiment": {
+          "assay": "CRISPR-Cas9 knockout and osteoclastogenesis assay",
+          "dose": null,
+          "duration": null,
+          "endpoint": "apoptosis",
+          "intervention": "CCAR2-knockout (KO) RAW 264.7 cells using CRISPR-Cas9",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "CCAR2 knockout cells showed decreased apoptosis during M-CSF- and RANKL-induced osteoclastogenesis.",
+        "uncertainties": [
+          "The sentence also mentions reduced intracellular ROS levels, which are not extracted as a separate claim here.",
+          "The causal relationship is inferred from perturbation rather than directly demonstrated molecular mechanism."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW 264.7 cells",
+          "compartment": "nucleus",
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "osteoclastogenesis"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "36",
+              "38",
+              "43",
+              "46",
+              "47",
+              "48",
+              "54"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "CCAR2",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [
+              "35",
+              "37",
+              "53",
+              "55"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "ERalpha",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1336,
+            "passage_index": 1,
+            "quote": "Mechanistically, CCAR2 binds to ERalpha, altering its nuclear translocation and increasing apoptotic transcriptional activity.",
+            "start": 1210
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "ERalpha-mediated apoptotic transcriptional activity",
+          "intervention": "CCAR2-knockout (KO) RAW 264.7 cells using CRISPR-Cas9",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c4",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "CCAR2 binds ERalpha and is reported to alter ERalpha nuclear translocation while increasing ERalpha-mediated apoptotic transcriptional activity.",
+        "uncertainties": [
+          "The sentence combines binding with changes in nuclear translocation and transcriptional activity; directness of the regulatory effect on transcriptional activity is not fully resolved from the text alone."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        689,
+        768
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        608,
+        687
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1043,
+        1098
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        811,
+        870
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1100,
+        1157
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        872,
+        906
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c4",
+      "corrected_offsets": [
+        1210,
+        1336
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        908,
+        1020
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,208 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "bone metastases",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "31"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Denosumab",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "30"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast-mediated bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 396,
+            "passage_index": 1,
+            "quote": "Denosumab, a fully human mAb targeting RANKL, can inhibit osteoclast-mediated bone resorption",
+            "start": 303
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast-mediated bone resorption",
+          "intervention": null,
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Denosumab is described as a fully human monoclonal antibody that targets RANKL and can inhibit osteoclast-mediated bone resorption.",
+        "uncertainties": [
+          "This is a review statement rather than a primary experimental result.",
+          "The cited span supports both RANKL targeting and inhibition of osteoclast-mediated bone resorption, but the exact molecular directness of the inhibition is not established in the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone milieu",
+          "disease_setting": "bone metastases",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "35"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "denosumab",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "immune microenvironment",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "anti-tumor immunity",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "compound",
+            "surface": "immunosuppressive factors",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 636,
+            "passage_index": 1,
+            "quote": "Beyond its direct bone remodeling activity, denosumab can also modulate the immune microenvironment, enhance anti-tumor immunity by reducing the release of immunosuppressive factors into the bone milieu",
+            "start": 434
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "anti-tumor immunity",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The review states that denosumab can modulate the immune microenvironment and enhance anti-tumor immunity by reducing immunosuppressive factors in the bone milieu.",
+        "uncertainties": [
+          "The mechanism is presented as review-level background and uses 'can', so it is not a primary observed result.",
+          "The text links the effect to reduced immunosuppressive factors, but the causal chain is descriptive rather than experimentally established here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        303,
+        396
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        385,
+        477
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        434,
+        636
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        478,
+        661
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

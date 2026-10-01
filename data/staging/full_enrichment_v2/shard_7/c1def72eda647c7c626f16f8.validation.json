@@ -1,0 +1,177 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "RANKL-induced osteoclastogenesis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "36"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "RO4929097",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast formation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 519,
+            "passage_index": 1,
+            "quote": "RO4929097, a potent -secretase inhibitor, on RANKL-induced osteoclastogenesis. The cytotoxicity of RO4929097 was evaluated. The suppressive effect and possible molecular mechanism of RO4929097 on RANKL-induced osteoclastogenesis was evaluated both in vitro and in vivo. The IC50 of RO4929097 was 2.93 muM. Treatment with different doses of RO4929097 (100 nM, 200 nM, and 400 nM) effectively reduced osteoclast formation (number and resorption area) in a dose-dependent manner.",
+            "start": 43
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "100 nM, 200 nM, and 400 nM",
+          "duration": null,
+          "endpoint": "osteoclast formation (number and resorption area)",
+          "intervention": "RO4929097 treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "RO4929097 treatment decreased osteoclast formation in a dose-dependent manner.",
+        "uncertainties": [
+          "Exact cell type and assay are not stated in the quoted passage.",
+          "The claim is about a treatment effect on a phenotype; direct molecular target engagement is not established in this text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "RANKL-induced osteoclastogenesis / LPS-induced osteolysis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "39",
+              "42",
+              "45",
+              "48",
+              "53"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "RO4929097",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "44",
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "NFATc1",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 735,
+            "passage_index": 1,
+            "quote": "RO4929097 attenuates RANKL-induced osteoclast formation and NFATc1 protein expression. In accordance with these in vitro observations, RO4929097 attenuated LPS-induced osteolysis in mice. In conclusion, our findings indicate that Notch may represent a potential therapeutic target for the treatment of osteolytic diseases.",
+            "start": 414
+          }
+        ],
+        "experiment": {
+          "assay": "qPCR results",
+          "dose": null,
+          "duration": null,
+          "endpoint": "NFATc1 protein expression",
+          "intervention": "RO4929097 treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "RO4929097 attenuated NFATc1 protein expression in RANKL-induced osteoclastogenesis.",
+        "uncertainties": [
+          "The passage links the effect to qPCR results, but the specific assay for NFATc1 protein expression is not detailed here.",
+          "The sentence also mentions LPS-induced osteolysis in mice; this claim isolates the NFATc1 expression result rather than the in vivo phenotype."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        43,
+        519
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        231,
+        392
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

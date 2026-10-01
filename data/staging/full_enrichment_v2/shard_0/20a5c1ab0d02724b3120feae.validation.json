@@ -1,0 +1,556 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoclastogenesis / bone resorption induced by RANKL",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "49",
+              "52",
+              "53",
+              "58",
+              "63",
+              "67",
+              "71",
+              "80"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ARC",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "55",
+              "56",
+              "59",
+              "66",
+              "72"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast formation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "47",
+              "54"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 536,
+            "passage_index": 1,
+            "quote": "Arctiin (ARC) is a main component of Arctium lappa L, which exerts chemopreventive effects against various tumor cells. However, the role of ARC in bone remodeling is still unclear. Here, we first demonstrated that ARC inhibits osteoclast formation and bone resorption function induced by the receptor activator of nuclear factor-kappaB ligand (RANKL) in a dose- and time-dependent manner without exerting cytotoxic effects.",
+            "start": 112
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "dose-dependent",
+          "duration": "time-dependent",
+          "endpoint": "osteoclast formation and bone resorption function",
+          "intervention": "ARC",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Arctiin/ARC inhibits RANKL-induced osteoclast formation and bone resorption in a dose- and time-dependent manner without cytotoxicity.",
+        "uncertainties": [
+          "The quote spans multiple statements; the exact experimental system is described only at a high level.",
+          "RANKL is treated as a gene-tagged entity in the source, but the molecular form/context is not fully resolved from text alone."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "RANKL-induced osteoclast formation",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "49",
+              "52",
+              "53",
+              "58",
+              "63",
+              "67",
+              "71",
+              "80"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ARC",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "pathway",
+            "surface": "MAPK signaling pathway",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "60",
+              "73"
+            ],
+            "existing_node_id": "CHEBI:29108",
+            "key": "e3",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "pathway",
+            "surface": "calcium signaling pathways",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "55",
+              "56",
+              "59",
+              "66",
+              "72"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 803,
+            "passage_index": 1,
+            "quote": "Mechanistic analysis revealed that ARC not only suppresses RANKL-induced mitogen-activated protein kinase (MAPK) and calcium signaling pathways, but also enhances the expression of cytoprotective enzymes that are involved in scavenging reactive oxygen species (ROS).",
+            "start": 537
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "MAPK and calcium signaling pathways",
+          "intervention": "ARC",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "ARC suppresses RANKL-induced MAPK and calcium signaling pathways.",
+        "uncertainties": [
+          "The sentence also mentions calcium signaling; the quote supports suppression of both pathways, but the exact molecular nodes are not specified."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "RANKL-induced osteoclast formation",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "49",
+              "52",
+              "53",
+              "58",
+              "63",
+              "67",
+              "71",
+              "80"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ARC",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "protein",
+            "surface": "cytoprotective enzymes",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "61",
+              "62",
+              "75"
+            ],
+            "existing_node_id": "CHEBI:26523",
+            "key": "e3",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "compound",
+            "surface": "reactive oxygen species (ROS)",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 803,
+            "passage_index": 1,
+            "quote": "enhances the expression of cytoprotective enzymes that are involved in scavenging reactive oxygen species (ROS).",
+            "start": 691
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "expression of cytoprotective enzymes",
+          "intervention": "ARC",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "ARC enhances expression of cytoprotective enzymes involved in scavenging reactive oxygen species.",
+        "uncertainties": [
+          "The specific enzyme identities are not named in the provided text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "RANKL-induced osteoclast formation",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "49",
+              "52",
+              "53",
+              "58",
+              "63",
+              "67",
+              "71",
+              "80"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ARC",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "9",
+              "64",
+              "65",
+              "74"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:NFATC1",
+            "key": "e2",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "NFATc1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "55",
+              "56",
+              "59",
+              "66",
+              "72"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 964,
+            "passage_index": 1,
+            "quote": "Further, ARC inhibits the activation of the major transcription factor nuclear factor of activated T cells 1 (NFATc1) during RANKL-induced osteoclast formation.",
+            "start": 804
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "NFATc1 activation",
+          "intervention": "ARC",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c4",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "ARC inhibits activation of NFATc1 during RANKL-induced osteoclast formation.",
+        "uncertainties": [
+          "NFATc1 is text-supported as a transcription factor, but the exact molecular form in the source annotations is gene-tagged.",
+          "The claim is about activation state rather than abundance."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ovariectomy (OVX) model",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "49",
+              "52",
+              "53",
+              "58",
+              "63",
+              "67",
+              "71",
+              "80"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ARC",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "68",
+              "79"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1056,
+            "passage_index": 1,
+            "quote": "Preclinical studies showed that ARC protects bone loss in an ovariectomy (OVX) mouse model.",
+            "start": 965
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone loss",
+          "intervention": "ARC",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c5",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "ARC protects against bone loss in an ovariectomy mouse model.",
+        "uncertainties": [
+          "The ovarian ovariectomy model is described only as an OVX mouse model, with no further procedural detail."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        112,
+        536
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        226,
+        663
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        537,
+        803
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        672,
+        846
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        691,
+        803
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        788,
+        846
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c4",
+      "corrected_offsets": [
+        804,
+        964
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        847,
+        1013
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c5",
+      "corrected_offsets": [
+        965,
+        1056
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1077,
+        1179
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

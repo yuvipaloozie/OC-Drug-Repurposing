@@ -1,0 +1,220 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "BM reconstitution cells",
+          "compartment": "bone marrow",
+          "disease_setting": "inflammatory bone loss",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "214133"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "TET2",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "214133",
+              "214133"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "Tet2-deficient (Tet2-/-) cells",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "MESH:D010518"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "periodontitis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D016301"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "alveolar bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 642,
+            "passage_index": 1,
+            "quote": "Partial BM reconstitution with TET2-deficient (Tet2-/-) cells promoted clonal expansion and spontaneous periodontitis, characterized by gingival inflammation and alveolar bone loss.",
+            "start": 461
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "spontaneous periodontitis with gingival inflammation and alveolar bone loss",
+          "intervention": "Partial BM reconstitution with TET2-deficient (Tet2-/-) cells",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e2"
+        },
+        "summary": "In mice, Tet2-deficient cells in partial bone marrow reconstitution promoted spontaneous periodontitis with alveolar bone loss; this is a loss-of-function perturbation linked to increased inflammatory bone loss phenotype.",
+        "uncertainties": [
+          "The quoted span is broad and bundles clonal expansion with phenotype outcomes.",
+          "The molecular form of Tet2-deficient cells is unresolved beyond loss of TET2."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "myeloid cells and osteoclast precursors",
+          "compartment": "tissue",
+          "disease_setting": "inflammatory bone loss",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "214133",
+              "214133"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "Tet2-/- myeloid cells",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "wild-type osteoclast precursors",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1157,
+            "passage_index": 1,
+            "quote": "This inflammatory bone loss phenotype was associated with increased tissue infiltration of hyperinflammatory Tet2-/- neutrophils and monocytes, elevated IL-17-producing CD4+ T cells (Th17), and enhanced osteoclastogenesis driven by paracrine signals from Tet2-/- myeloid cells acting on wild-type osteoclast precursors.",
+            "start": 838
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "enhanced osteoclastogenesis",
+          "intervention": "TET2-driven CHIP",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Tet2-deficient myeloid cells were associated with enhanced osteoclastogenesis acting on wild-type osteoclast precursors, consistent with a pro-osteoclastogenic effect in this inflammatory setting.",
+        "uncertainties": [
+          "The mechanism is described as being driven by paracrine signals, but direct molecular mediators are not specified.",
+          "The claim is association-plus-effect in an inflammatory bone loss context, not a direct biochemical assay."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        461,
+        642
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        547,
+        723
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        838,
+        1157
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        823,
+        1160
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

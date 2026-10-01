@@ -1,0 +1,103 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoclastogenesis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "1"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Sophoraflavanone G",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-induced osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "MAPK/NF-kappaB Signaling Pathway",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 98,
+            "passage_index": 0,
+            "quote": "Sophoraflavanone G Inhibits RANKL-Induced Osteoclastogenesis via MAPK/NF-kappaB Signaling Pathway.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": null,
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Sophoraflavanone G is stated to inhibit RANKL-induced osteoclastogenesis, with MAPK/NF-kappaB signaling mentioned as the implicated pathway.",
+        "uncertainties": [
+          "The title states inhibition, but no experimental details, assay, dose, or direct mechanism are provided in the supplied passages.",
+          "The abstract contains a hypothesis sentence with a different compound name ('genistein G'), creating ambiguity about whether it refers to the same intervention; it was not used as evidence."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        98
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        99
+      ],
+      "passage_index": 0
+    }
+  ],
+  "valid_envelope": true
+}

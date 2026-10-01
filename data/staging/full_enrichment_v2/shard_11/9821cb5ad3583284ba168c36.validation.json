@@ -1,0 +1,95 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "infant undernutrition",
+          "species": "mouse",
+          "stage": "young germ-free mice"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "42",
+              "43"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "purified bovine sialylated milk oligosaccharides (S-BMO)",
+            "taxon": "9913"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts and their bone marrow progenitors",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1059,
+            "passage_index": 1,
+            "quote": "Adding purified bovine sialylated milk oligosaccharides (S-BMO) with structures similar to those in human milk to this diet increased femoral trabecular bone volume and cortical thickness, reduced osteoclasts and their bone marrow progenitors,",
+            "start": 816
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclasts and their bone marrow progenitors",
+          "intervention": "Adding purified bovine sialylated milk oligosaccharides (S-BMO) to the diet",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In germ-free mice on a donor-mimicking diet, adding purified bovine sialylated milk oligosaccharides (S-BMO) reduced osteoclasts and their bone marrow progenitors.",
+        "uncertainties": [
+          "The passage also reports increased bone volume and altered regulators of osteoclastogenesis, but those were not extracted as separate claims.",
+          "The exact molecular identity of S-BMO is not specified beyond the text surface; no canonical identifier was assigned."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        816,
+        1059
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        944,
+        1186
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

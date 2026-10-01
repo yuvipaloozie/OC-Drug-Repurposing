@@ -1,0 +1,187 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone joints",
+          "disease_setting": "rheumatoid arthritis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "40"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Rheumatoid arthritis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone degradation/osteoclast",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 158,
+            "passage_index": 1,
+            "quote": "Rheumatoid arthritis (RA) is a commonly occurring chronic autoimmune disorder and causes synovial inflammation and bone degradation/osteoclast in bone joints.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Rheumatoid arthritis is described as causing bone degradation/osteoclast in bone joints.",
+        "uncertainties": [
+          "The phrase 'bone degradation/osteoclast' is terse and may refer to a combined concept rather than a specific osteoclast measurement.",
+          "No causal experiment is described in this sentence; it is a disease background statement."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "rheumatoid arthritis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "56",
+              "57",
+              "60",
+              "61",
+              "64",
+              "65",
+              "68"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "TCTN and TCTN-HA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "66"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNF",
+            "key": "e2",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "protein",
+            "surface": "TNF-alpha",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1703,
+            "passage_index": 1,
+            "quote": "Both TCTN and TCTN-HA significantly reduced TNF-alpha and RF levels",
+            "start": 1636
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": "after 28 days of RA treatment",
+          "endpoint": "TNF-alpha levels",
+          "intervention": "Both TCTN and TCTN-HA",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The TCTN and TCTN-HA nanoparticle formulations significantly reduced TNF-alpha levels in RA treatment.",
+        "uncertainties": [
+          "The abstract reports combined effects of two formulations together rather than separately quantified effects for each one.",
+          "The text does not specify the biological species for the experiment; the TNF-alpha annotation suggests a mouse protein mapping but this is unverified."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        158
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        172,
+        295
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1636,
+        1703
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1794,
+        1865
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

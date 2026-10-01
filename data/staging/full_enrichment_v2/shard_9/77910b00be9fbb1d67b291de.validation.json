@@ -1,0 +1,99 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "49",
+              "50",
+              "57",
+              "58",
+              "75",
+              "85"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "parathyroid hormone (PTH)",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastic activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 376,
+            "passage_index": 1,
+            "quote": "Prolonged elevation of parathyroid hormone (PTH) stimulates osteoclastic activity, leading to progressive bone resorption and cortical disruption.",
+            "start": 230
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Prolonged elevation of parathyroid hormone (PTH) is described as stimulating osteoclastic activity, which leads to progressive bone resorption and cortical disruption.",
+        "uncertainties": [
+          "This is a background mechanistic statement in an abstract, not an experimentally tested perturbation in the reported case.",
+          "The text links PTH to osteoclastic activity and downstream bone resorption, but does not specify direct molecular interaction."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        230,
+        376
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        228,
+        376
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,224 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "rheumatoid arthritis",
+          "species": "9606",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "32",
+              "33",
+              "34",
+              "37"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "These cytokines",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e7",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e8",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 599,
+            "passage_index": 1,
+            "quote": "These cytokines play a crucial part in the process of bone resorption by boosting osteoclast activation and encouraging osteoclast differentiation.",
+            "start": 452
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e7",
+          "sign": "positive",
+          "subject": "e5"
+        },
+        "summary": "The abstract states that pro-inflammatory cytokines promote bone resorption by increasing osteoclast activation and osteoclast differentiation.",
+        "uncertainties": [
+          "The statement is a background summary rather than an experimental result.",
+          "The subject is a group reference ('These cytokines') rather than a single molecular entity."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "rheumatoid arthritis",
+          "species": "9606",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "25",
+              "31",
+              "36",
+              "40"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoporosis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "32",
+              "37"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "pro-inflammatory cytokines",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "33"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "tumor necrosis factor (TNF)-alpha",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [
+              "34"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "interleukin (IL)-1",
+            "taxon": "9606"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 451,
+            "passage_index": 1,
+            "quote": "Several studies have found a correlation between osteoporosis and the presence of pro-inflammatory cytokines, such as tumor necrosis factor (TNF)-alpha, interleukin (IL)-1, and 6.",
+            "start": 272
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": null,
+        "summary": "The abstract states that osteoporosis has been correlated with pro-inflammatory cytokines including TNF-alpha, IL-1, and IL-6.",
+        "uncertainties": [
+          "The sentence reports a correlation from prior studies, not a tested causal relationship in this article.",
+          "The cytokine list includes '6', which likely refers to IL-6, but the text and annotations only explicitly support TNF-alpha and IL-1 as gene-tagged entities."
+        ]
+      },
+      "errors": [
+        "regulatory form mismatch"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        272,
+        451
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        303,
+        455
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        452,
+        599
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        457,
+        592
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

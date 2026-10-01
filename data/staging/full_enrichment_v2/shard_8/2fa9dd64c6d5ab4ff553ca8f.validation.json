@@ -1,0 +1,246 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "38"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "phytate",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "39"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 472,
+            "passage_index": 1,
+            "quote": "phytate, an inhibitor of bone resorption",
+            "start": 432
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Phytate is described as an inhibitor of bone resorption.",
+        "uncertainties": [
+          "The text states an inhibitor relationship in a background sentence; it does not describe the underlying mechanism or direct molecular target."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "incomplete dRTA with urolithiasis",
+          "species": "9606",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "48",
+              "50"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "calcium magnesium phytate",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "40",
+              "43",
+              "49"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "calciuria",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "37",
+              "41",
+              "44",
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "patients",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [
+              "29",
+              "30",
+              "36",
+              "42",
+              "45",
+              "53"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "dRTA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "31",
+              "46"
+            ],
+            "existing_node_id": null,
+            "key": "e7",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "urolithiasis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 779,
+            "passage_index": 1,
+            "quote": "The calciuria levels of 16 patients who had incomplete dRTA with urolithiasis and could not tolerate potassium citrate treatment were recorded before (baseline) and after 6 months of treatment with oral calcium magnesium phytate (380 mg every 12 h).",
+            "start": 530
+          },
+          {
+            "end": 954,
+            "passage_index": 1,
+            "quote": "There were no dietary modifications or other treatments. Results: The baseline calciuria was 317 +- 81 mg/24 h and the level after 6 months was 221 +- 38 mg/24 h (p < 0.005).",
+            "start": 780
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "380 mg every 12 h",
+          "duration": "6 months",
+          "endpoint": "calciuria",
+          "intervention": "oral calcium magnesium phytate (380 mg every 12 h)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e3"
+        },
+        "summary": "In 16 patients with incomplete dRTA and urolithiasis, oral calcium magnesium phytate treatment was followed by lower calciuria after 6 months.",
+        "uncertainties": [
+          "The study is single-arm without a control group, so the reduction is observational and not proof of a direct causal mechanism.",
+          "The passage does not specify whether the effect is mediated through bone resorption or another pathway."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        432,
+        472
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        493,
+        537
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        530,
+        779
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        745,
+        872
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        780,
+        954
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        876,
+        944
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

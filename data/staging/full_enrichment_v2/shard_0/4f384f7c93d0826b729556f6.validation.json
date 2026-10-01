@@ -1,0 +1,240 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "22",
+              "27",
+              "31",
+              "33"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "IMP2 deficiency",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "29",
+              "30"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "CD44-osteopontin signaling pathway",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 938,
+            "passage_index": 1,
+            "quote": "Specifically, the osteoclasts exhibited various polymorphisms, failed to form resorption lacunae, and were detached from the bone surface. Consistent with these findings, IMP2 deficiency reduced",
+            "start": 744
+          },
+          {
+            "end": 1282,
+            "passage_index": 1,
+            "quote": "CD44-osteopontin signaling pathway",
+            "start": 1248
+          }
+        ],
+        "experiment": {
+          "assay": "histochemical evidence",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast activity and adhesion",
+          "intervention": "IMP2 deficiency",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In IMP2-deficient mice, osteoclast activity was reduced and osteoclast adhesion was impaired, with detached osteoclasts and failure to form resorption lacunae.",
+        "uncertainties": [
+          "Evidence spans are partial and include adjacent context rather than the full sentence.",
+          "The text describes multiple osteoclast phenotypes; direct molecular causality is not established.",
+          "CD44-osteopontin pathway is mentioned as the basis for inhibited adhesion, but the exact molecular mechanism is not resolved."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "22",
+              "27",
+              "31",
+              "33"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "IMP2 deficiency",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "25"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:CTSK",
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "cathepsin K",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "26"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:MMP9",
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "matrix metallopeptidase 9",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "C-SRC",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1158,
+            "passage_index": 1,
+            "quote": " the expression of two important proteases (cathepsin K and matrix metallopeptidase 9) as well as that of C-SRC, a critical regulator of ruffled border formation in osteoclasts, indicating impaired osteoclastic activity.",
+            "start": 938
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "expression of cathepsin K, matrix metallopeptidase 9, and C-SRC",
+          "intervention": "IMP2 deficiency",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "IMP2 deficiency reduced expression of cathepsin K, matrix metallopeptidase 9, and C-SRC in osteoclasts, consistent with impaired osteoclastic activity.",
+        "uncertainties": [
+          "The quoted span is part of a longer sentence; the full causal context is split across nearby text.",
+          "The object is represented by one claim even though multiple expression changes are listed in the same sentence.",
+          "C-SRC is named as a regulator of ruffled border formation, but direct regulation by IMP2 is inferred from the perturbation context rather than demonstrated molecularly."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        744,
+        938
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        683,
+        871
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1248,
+        1282
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1367,
+        1404
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        938,
+        1158
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        871,
+        1173
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

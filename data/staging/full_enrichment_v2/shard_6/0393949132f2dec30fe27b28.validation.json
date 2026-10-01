@@ -1,0 +1,208 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 macrophage cells",
+          "compartment": null,
+          "disease_setting": "RANKL-treated cells",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "52",
+              "53",
+              "59",
+              "60",
+              "69",
+              "74",
+              "82"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ginseng leaf extract",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "3",
+              "70",
+              "71",
+              "76",
+              "77",
+              "78"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "heme oxygenase-1",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1299,
+            "passage_index": 1,
+            "quote": "In addition, GLE upregulated dose- and time-dependently the expression of heme oxygenase-1 (HO-1), eventually suppressing ROS production and HMGB1 secretion.",
+            "start": 1142
+          }
+        ],
+        "experiment": {
+          "assay": "expression measurement",
+          "dose": "dose- and time-dependent",
+          "duration": "dose- and time-dependent",
+          "endpoint": "heme oxygenase-1 (HO-1) expression",
+          "intervention": "ginseng leaf extract (GLE)",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Ginseng leaf extract increased heme oxygenase-1 expression in a dose- and time-dependent manner in RANKL-treated RAW264.7 cells.",
+        "uncertainties": [
+          "The text also links HO-1 upregulation to suppression of ROS and HMGB1, but those downstream effects are not separated into a distinct claim here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 macrophage cells",
+          "compartment": null,
+          "disease_setting": "RANKL-induced osteoclast differentiation",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "52",
+              "53"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ginseng leaf extract",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "55",
+              "67",
+              "79"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "56",
+              "68"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "RAW264.7",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 922,
+            "passage_index": 1,
+            "quote": "TRAP staining revealed that GLE had significant anti-osteoclastogenic activity. GLE significantly reduced mRNA levels of osteoclast differentiation markers including TRAP, nuclear factor of activated T cell cytoplasmic 1, and cathepsin K.",
+            "start": 789
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP staining; mRNA measurement",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation / TRAP staining / osteoclast differentiation markers",
+          "intervention": "ginseng leaf extract (GLE)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Ginseng leaf extract showed anti-osteoclastogenic activity and reduced osteoclast differentiation markers in RANKL-treated RAW264.7 cells.",
+        "uncertainties": [
+          "The exact entity mapping for RANKL and RAW264.7 is provider-supported but not independently verified.",
+          "The span combines multiple reported outcomes in one sentence; the claim summarizes them at the phenotype level."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1142,
+        1299
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1270,
+        1378
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

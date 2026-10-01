@@ -24,6 +24,13 @@ def rebuild(root=ROOT):
     check=run_verification(str(root/'data/processed'))
     if check['errors']: raise ValueError('\n'.join(check['errors']))
     tables={name:read(name,root) for name in ['nodes','edges','contexts','experiments','edge_evidence','source_records']}
+    identifiers={n['node_id']:n['node_id'] for n in tables['nodes']}
+    for node in tables['nodes']:
+        for alias in filter(None,node.get('legacy_ids','').split('|')):
+            if alias in identifiers and identifiers[alias]!=node['node_id']:
+                raise ValueError('Ambiguous legacy identifier: '+alias)
+            identifiers[alias]=node['node_id']
+    (root/'data/processed/identifier_map.json').write_text(json.dumps(identifiers,indent=2)+'\n',encoding='utf-8')
     evidence=defaultdict(list)
     for row in tables['edge_evidence']:evidence[row['edge_id']].append(row)
     nodes=[]
@@ -39,6 +46,9 @@ def rebuild(root=ROOT):
     for row in tables['edges']:
         e=dict(row);e['source']=e.pop('source_id');e['target']=e.pop('target_id');e['sign']=int(e['sign'])
         e['evidence_eligible']=eligibility.evidence_eligible(e['edge_id']);e['evidence']=evidence[e['edge_id']];e['context_id']=e['context_id'] or None
+        assessment=eligibility.assess_edge(e['edge_id'])
+        e.update(informed_usable=assessment['usable'], evidence_tier=assessment['tier'],
+                 evidence_weight=assessment['weight'], evidence_warnings=assessment['warnings'])
         edges.append(e)
     payload={'metadata':{'version':'3.0.0','description':'Audited claim inventory; review status is separate from registry resolution. Pending and quarantined claims are not validated facts.',
                          'statistics':{'total_nodes':len(nodes),'total_edges':len(edges),'node_types':dict(Counter(n['type'] for n in nodes))}},
@@ -57,8 +67,8 @@ def rebuild(root=ROOT):
     from src.enrichment.build_master_xlsx_workbook import create_master_xlsx
     tabs=[{'name':'Read me','headers':['Scope','Meaning'],'rows':[
         ['Structural validation', 'Checks IDs, foreign keys, types and export consistency; does not certify biological truth.'],
-        ['Evidence', 'Only reviewed entries with verified passage locations can be evidence eligible.'],
-        ['Pending/quarantined', 'Visible for curation; excluded from default mechanism scoring.'],
+        ['Evidence', 'evidence_eligible denotes the optional strict experimental subset. Default informed analysis also uses weaker, traceable candidates; weights are heuristic.'],
+        ['Pending/quarantined', 'Pending source-linked claims can inform discovery with qualifications. Quarantined claims do not contribute to analysis.'],
         ['Archive','Original values and enrichment are preserved in data/quarantine/legacy_snapshot.zip.']]}]
     for name,rows in tables.items():
         fields=list(rows[0]) if rows else []

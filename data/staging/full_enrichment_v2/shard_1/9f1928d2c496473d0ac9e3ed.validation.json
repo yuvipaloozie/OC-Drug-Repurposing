@@ -1,0 +1,233 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "cancellous bone of the proximal tibial metaphysis",
+          "disease_setting": "glucocorticoid-treated cancellous osteopenia",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "39",
+              "41",
+              "44"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Ris",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "42"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone turnover",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 914,
+            "passage_index": 1,
+            "quote": "Ris treatment",
+            "start": 901
+          },
+          {
+            "end": 1023,
+            "passage_index": 1,
+            "quote": "markedly increased cancellous BV/TV and Tb N above the control level as a result of suppressed bone turnover",
+            "start": 915
+          }
+        ],
+        "experiment": {
+          "assay": "bone histomorphometric analysis",
+          "dose": "10 microg/kg, s.c.",
+          "duration": "4-week treatment period",
+          "endpoint": "cancellous BV/TV and Tb N",
+          "intervention": "risedronate",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In glucocorticoid-treated rats, risedronate treatment increased cancellous bone volume and trabecular number relative to controls, consistent with suppression of bone turnover.",
+        "uncertainties": [
+          "The text does not separately quantify each histomorphometric endpoint for risedronate beyond the summarized statement.",
+          "The causal link to suppressed bone turnover is stated in the paper, but direct molecular mechanism is not provided."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "cancellous bone of the proximal tibial metaphysis",
+          "disease_setting": "glucocorticoid-treated cancellous osteopenia",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "37",
+              "40",
+              "43",
+              "45"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Cal",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone formation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1057,
+            "passage_index": 1,
+            "quote": "Cal treatment",
+            "start": 1044
+          },
+          {
+            "end": 1194,
+            "passage_index": 1,
+            "quote": "Cal treatment attenuated the GC-induced decrease in cancellous BV/TV and Tb Th as a result of suppressed bone resorption and maintained bone formation",
+            "start": 1044
+          }
+        ],
+        "experiment": {
+          "assay": "bone histomorphometric analysis",
+          "dose": "0.1 microg/kg, p.o.",
+          "duration": "4-week treatment period",
+          "endpoint": "cancellous BV/TV and Tb Th",
+          "intervention": "calcitriol",
+          "outcome_change": "other",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In glucocorticoid-treated rats, calcitriol attenuated the glucocorticoid-induced decrease in cancellous bone volume and trabecular thickness, reported as a result of suppressed bone resorption and maintained bone formation.",
+        "uncertainties": [
+          "The passage reports a combined interpretation involving suppressed bone resorption and maintained bone formation; the direct measured molecular targets are not specified.",
+          "The outcome is described relative to glucocorticoid-induced decrease rather than as a standalone increase in all bone measures."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        901,
+        914
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        495,
+        511
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        915,
+        1023
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1022,
+        1156
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1044,
+        1057
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1165,
+        1180
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1044,
+        1194
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1165,
+        1349
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,228 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "glucocorticoid-induced osteoporosis",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "287526"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "PEDF",
+            "taxon": "Rattus norvegicus"
+          },
+          {
+            "annotation_ids": [
+              "81752"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "EP2",
+            "taxon": "Rattus norvegicus"
+          },
+          {
+            "annotation_ids": [
+              "84023"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "EP4",
+            "taxon": "Rattus norvegicus"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1164,
+            "passage_index": 1,
+            "quote": "PEDF increased bone formation markers, reduced bone resorption markers, and upregulated EP2/EP4 expression.",
+            "start": 1057
+          }
+        ],
+        "experiment": {
+          "assay": "qRT-PCR",
+          "dose": "50, 100, 200 mg/kg",
+          "duration": "30 days",
+          "endpoint": "EP2/EP4 mRNA expression",
+          "intervention": "PEDF (50, 100, 200 mg/kg) was then given subcutaneously for 30 days",
+          "outcome_change": "increased",
+          "perturbation_type": "gain_of_function"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In glucocorticoid-induced osteoporosis rats, PEDF treatment was reported to upregulate EP2/EP4 expression.",
+        "uncertainties": [
+          "The sentence reports EP2/EP4 together; the claim is split into a representative EP2 subject with EP4 captured as a second entity rather than a separate causal edge."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "glucocorticoid-induced osteoporosis",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "287526"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "PEDF",
+            "taxon": "Rattus norvegicus"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption markers",
+            "taxon": "Rattus norvegicus"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1094,
+            "passage_index": 1,
+            "quote": "PEDF increased bone formation markers",
+            "start": 1057
+          },
+          {
+            "end": 1127,
+            "passage_index": 1,
+            "quote": "reduced bone resorption markers",
+            "start": 1096
+          },
+          {
+            "end": 1336,
+            "passage_index": 1,
+            "quote": "PEDF-treated groups. CONCLUSION",
+            "start": 1308
+          },
+          {
+            "end": 1290,
+            "passage_index": 1,
+            "quote": "PEDF treated groups. PEDF",
+            "start": 1265
+          }
+        ],
+        "experiment": {
+          "assay": "qRT-PCR",
+          "dose": "50, 100, 200 mg/kg",
+          "duration": "30 days",
+          "endpoint": "bone resorption markers",
+          "intervention": "PEDF (50, 100, 200 mg/kg) was then given subcutaneously for 30 days",
+          "outcome_change": "decreased",
+          "perturbation_type": "gain_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "PEDF treatment reduced bone resorption markers in the glucocorticoid-induced osteoporosis rat model.",
+        "uncertainties": [
+          "The abstract does not specify which bone resorption marker(s) changed in the quoted summary sentence; CTX-1 and TRAP-5b are mentioned elsewhere as measured markers."
+        ]
+      },
+      "errors": [
+        "invented annotation ID",
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1057,
+        1164
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1338,
+        1451
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1057,
+        1094
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1168,
+        1200
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1096,
+        1127
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1202,
+        1238
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,332 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "differentiation into mature osteoclasts"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "116870"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "MTA1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "CVCL:0493"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "RAW264.7",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-induced osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 533,
+            "passage_index": 1,
+            "quote": "MTA1 knockout cells (KO) were established by CRISPR/Cas9 genome editing. RAW264.7 cells with WT and KO group were stimulated independently by RANKL to differentiate into mature osteoclasts.",
+            "start": 344
+          },
+          {
+            "end": 1299,
+            "passage_index": 1,
+            "quote": "MTA1 deficiency, the MTA1 deletion group could differentiate into osteoclasts with larger volume and more TRAP positive.",
+            "start": 1182
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP positivity; cell morphology",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast formation / differentiation",
+          "intervention": "MTA1 knockout/deletion by CRISPR/Cas9",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "MTA1 knockout/deletion in RAW264.7 cells increased osteoclast formation during RANKL-induced differentiation.",
+        "uncertainties": [
+          "The text reports KO and deletion effects together; the exact molecular form of MTA1 (gene versus protein) is not explicitly distinguished.",
+          "The quoted evidence for the second sentence is a partial span because the full sentence is long, but it directly states enhanced osteoclast differentiation in the KO group."
+        ]
+      },
+      "errors": [
+        "invented annotation ID",
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 cells",
+          "compartment": "intracellular",
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "osteoclastogenesis"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "116870"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "MTA1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "18024"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Nrf2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D017382"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ROS",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1549,
+            "passage_index": 1,
+            "quote": "MTA1 deficiency increased the expression of osteoclast-specific markers, including c-Fos, NFATc1, CTSK and MMP-9. Furthermore, the results of qRT-PCR and western blotting showed that MTA1 deficiency reduced basal Nrf2 expression and inhibited Nrf2-mediated expression of related antioxidant enzymes.",
+            "start": 1391
+          },
+          {
+            "end": 1780,
+            "passage_index": 1,
+            "quote": "MTA1 deficiency inhibited Nrf2 nuclear translocation. Taken together, the above increased basal and RANKL-induced intracellular ROS levels, leading to enhanced osteoclast formation.",
+            "start": 1599
+          }
+        ],
+        "experiment": {
+          "assay": "DCFH-DA staining; qRT-PCR; western blotting; immunofluorescence staining",
+          "dose": null,
+          "duration": null,
+          "endpoint": "intracellular ROS levels",
+          "intervention": "MTA1 deficiency / knockout",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e5",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Loss of MTA1 increased ROS-associated signaling during osteoclastogenesis, consistent with higher intracellular ROS levels.",
+        "uncertainties": [
+          "The text links increased ROS to the phenotype, but the direct causal step is summarized rather than tested in isolation.",
+          "Nrf2 is described as being reduced and its nuclear translocation inhibited; the specific causal link from Nrf2 to ROS is inferred from the narrative."
+        ]
+      },
+      "errors": [
+        "invented annotation ID",
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 cells",
+          "compartment": "nucleus",
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "osteoclastogenesis"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "116870"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "MTA1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "18024"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Nrf2",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1552,
+            "passage_index": 1,
+            "quote": "MTA1 deficiency reduced basal Nrf2 expression and inhibited Nrf2-mediated expression of related antioxidant enzymes.",
+            "start": 1436
+          },
+          {
+            "end": 1652,
+            "passage_index": 1,
+            "quote": "Nrf2-mediated expression of related antioxidant enzymes. Immunofluorescence staining demonstrated that MTA1 deficiency inhibited Nrf2 nuclear translocation.",
+            "start": 1496
+          }
+        ],
+        "experiment": {
+          "assay": "qRT-PCR; western blotting; immunofluorescence staining",
+          "dose": null,
+          "duration": null,
+          "endpoint": "basal Nrf2 expression and Nrf2 nuclear translocation",
+          "intervention": "MTA1 deficiency / knockout",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "MTA1 deficiency reduced basal Nrf2 expression and inhibited Nrf2 nuclear translocation in RAW264.7 osteoclastogenesis experiments.",
+        "uncertainties": [
+          "The exact molecular form of Nrf2 is not specified beyond the gene annotation.",
+          "The span combines expression and nuclear translocation effects from adjacent sentences."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        344,
+        533
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        471,
+        579
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1599,
+        1780
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1726,
+        1860
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1436,
+        1552
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1563,
+        1633
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1496,
+        1652
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1623,
+        1718
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

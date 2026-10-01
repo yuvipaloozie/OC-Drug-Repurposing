@@ -1,0 +1,256 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "murine",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "58"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "LIQ",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "64"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast formation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone-resorbing activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 490,
+            "passage_index": 1,
+            "quote": "possesses an unclear role in addressing excessive bone resorption. In this investigation, we found that LIQ demonstrates the ability to inhibit osteoclast formation and the bone-resorbing activity induced by RANKL.",
+            "start": 276
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "At a specific concentration",
+          "duration": null,
+          "endpoint": "osteoclast formation and bone-resorbing activity",
+          "intervention": "LIQ",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Liquiritin inhibited RANKL-induced osteoclast formation and bone-resorbing activity in the study context.",
+        "uncertainties": [
+          "The exact concentration is not stated in the extracted span.",
+          "The passage links the effect to RANKL induction, but directness of the inhibition is not established."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "murine",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "58"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "LIQ",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "64"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "66"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "NF-kappaB",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "75",
+              "76",
+              "77",
+              "78"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "NFATc1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "70"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "RAW264.7",
+            "taxon": "murine"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 942,
+            "passage_index": 1,
+            "quote": "At a specific concentration, LIQ significantly attenuated NF-kappaB-Luc activity induced by RANKL and curtailed NF-kappaB activation in RANKL-stimulated RAW264.7 cells, resulting in reduced IkappaB-alpha breakdown and diminished nuclear NF-kappaB levels. Furthermore, LIQ markedly inhibited RANKL-induced NFATc1 activation, as evidenced by diminished NFATc1 luciferase activity, reduced NFATc1 mRNA levels, and decreased nuclear NFATc1 protein levels.",
+            "start": 491
+          },
+          {
+            "end": 652,
+            "passage_index": 1,
+            "quote": "RAW264.7",
+            "start": 644
+          }
+        ],
+        "experiment": {
+          "assay": "luciferase activity; mRNA level; nuclear protein level",
+          "dose": "At a specific concentration",
+          "duration": null,
+          "endpoint": "NFATc1 activation; NFATc1 luciferase activity; NFATc1 mRNA levels; nuclear NFATc1 protein levels",
+          "intervention": "LIQ",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In RANKL-stimulated RAW264.7 cells, liquiritin reduced NF-kappaB activation and NFATc1 activation, including lower NFATc1 mRNA and nuclear protein levels.",
+        "uncertainties": [
+          "The passage reports multiple readouts for NFATc1, but does not specify which molecular form is the primary causal target.",
+          "NF-kappaB and IkappaB-alpha changes are included in the same experimental context, but the extracted claim centers on NFATc1."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        276,
+        490
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        394,
+        489
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        491,
+        942
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        499,
+        1094
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        644,
+        652
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        809,
+        817
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

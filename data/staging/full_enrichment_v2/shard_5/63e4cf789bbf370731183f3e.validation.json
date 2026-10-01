@@ -1,0 +1,102 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "prostate cancer",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "3",
+              "42",
+              "45",
+              "52",
+              "55",
+              "56",
+              "57",
+              "58",
+              "61",
+              "64"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Dasatinib",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activation and prostate cancer PC-3-cell-induced osteoclast formation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 105,
+            "passage_index": 0,
+            "quote": "Dasatinib inhibits both osteoclast activation and prostate cancer PC-3-cell-induced osteoclast formation.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast activation and prostate cancer PC-3-cell-induced osteoclast formation",
+          "intervention": "dasatinib",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Dasatinib inhibits osteoclast activation and PC-3-cell-induced osteoclast formation.",
+        "uncertainties": [
+          "Title-level summary rather than a detailed methods/result sentence; the exact experimental context for the combined claim is not fully specified in the title."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        105
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        104
+      ],
+      "passage_index": 0
+    }
+  ],
+  "valid_envelope": true
+}

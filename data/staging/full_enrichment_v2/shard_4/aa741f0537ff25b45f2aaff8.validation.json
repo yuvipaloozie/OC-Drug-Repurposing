@@ -1,0 +1,104 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "osteopetrotic",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "25"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Lrrk1",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "26"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteopetrotic",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "osteoclasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 177,
+            "passage_index": 1,
+            "quote": "We previously demonstrated that mice with targeted deletion of the leucine repeat rich kinase 1 (Lrrk1) gene were osteopetrotic due to the failure of osteoclasts to resorb bone.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast bone resorption",
+          "intervention": "targeted deletion of the leucine repeat rich kinase 1 (Lrrk1) gene",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Targeted deletion of Lrrk1 in mice caused an osteopetrotic phenotype, attributed to osteoclast failure to resorb bone.",
+        "uncertainties": [
+          "The passage links osteopetrosis to failure of osteoclast bone resorption, but the molecular step directly controlled by LRRK1 is not specified in this sentence."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        177
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        107
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

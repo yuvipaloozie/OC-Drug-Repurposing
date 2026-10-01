@@ -1,0 +1,205 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": "in vitro"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "34",
+              "35"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "glutamate cysteine ligase",
+            "taxon": "null"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": "null"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 786,
+            "passage_index": 1,
+            "quote": "Inhibiting GSH biosynthesis in vitro via the pharmacological or genetic inhibition of glutamate cysteine ligase (GCLC) prevented osteoclast differentiation.",
+            "start": 630
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation",
+          "intervention": "pharmacological or genetic inhibition of glutamate cysteine ligase (GCLC)",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In vitro pharmacological or genetic inhibition of GCLC prevented osteoclast differentiation.",
+        "uncertainties": [
+          "The passage combines pharmacological and genetic inhibition, so the specific causal modality is not separable from the text.",
+          "GCLC is annotated as a gene by the provider, but the passage itself does not distinguish gene versus protein form.",
+          "No assay, dose, or duration is stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "myeloid cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "34",
+              "35"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "GCLC",
+            "taxon": "null"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone mass",
+            "taxon": "null"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast numbers",
+            "taxon": "null"
+          },
+          {
+            "annotation_ids": [
+              "27",
+              "38",
+              "40"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": "null"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1055,
+            "passage_index": 1,
+            "quote": "Conversely, the genetic ablation of GCLC in myeloid cells using LysMCre resulted in a decrease in bone mass in both male and female mice. The decreased bone mass of the LysMCre;Gclcfl/fl mice was attributed to increased osteoclast numbers and elevated bone resorption.",
+            "start": 787
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone mass",
+          "intervention": "genetic ablation of GCLC in myeloid cells using LysMCre",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Genetic ablation of Gclc in myeloid cells using LysMCre decreased bone mass in mice, with the decrease attributed to increased osteoclast numbers and elevated bone resorption.",
+        "uncertainties": [
+          "The text explicitly attributes the decreased bone mass to increased osteoclast numbers and elevated bone resorption, but the causal mechanism is not directly demonstrated here.",
+          "The passage does not specify whether the Gclc target is being discussed at the gene or protein level beyond the gene annotation.",
+          "No assay, dose, or duration is stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        630,
+        786
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        819,
+        916
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        787,
+        1055
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        917,
+        1077
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

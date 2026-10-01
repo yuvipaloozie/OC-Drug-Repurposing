@@ -1,0 +1,92 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone niche",
+          "disease_setting": "osteoporosis and inflammatory arthritis",
+          "species": "Humans",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "eosinophils",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 888,
+            "passage_index": 1,
+            "quote": "They contribute to bone homeostasis by inhibiting osteoclast differentiation",
+            "start": 812
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The review states that eosinophils inhibit osteoclast differentiation and thereby help maintain bone homeostasis.",
+        "uncertainties": [
+          "Review-level statement; no primary experiment or mechanism details are provided in the extracted span.",
+          "Taxon is inferred only from the patient context in the abstract and not directly tied to the eosinophil statement."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        812,
+        888
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        768,
+        856
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

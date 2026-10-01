@@ -1,0 +1,231 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "bone resorption",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "42"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "c-src",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [
+              "45",
+              "47"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast-dependent bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 419,
+            "passage_index": 1,
+            "quote": "Transcription of c-src, a gene implicated in many human cancers and required for osteoclast-dependent bone resorption, is regulated by the binding of Sp factors to specific elements in its promoter.",
+            "start": 221
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "unknown",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "c-src is described as a gene required for osteoclast-dependent bone resorption.",
+        "uncertainties": [
+          "This is a background statement rather than an experiment in the paper.",
+          "The text states osteoclast-dependent bone resorption, but does not provide an osteoclast-specific perturbation result."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "human cancer cells",
+          "compartment": null,
+          "disease_setting": "cancer",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "39",
+              "46",
+              "48",
+              "52",
+              "58",
+              "60",
+              "62",
+              "63",
+              "64"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "MTM",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "42",
+              "49",
+              "59"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "c-src",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "complex",
+            "surface": "Sp binding to the c-src promoter region",
+            "taxon": "human"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 704,
+            "passage_index": 1,
+            "quote": "MTM",
+            "start": 695
+          },
+          {
+            "end": 876,
+            "passage_index": 1,
+            "quote": "MTM",
+            "start": 871
+          },
+          {
+            "end": 1266,
+            "passage_index": 1,
+            "quote": "c-src",
+            "start": 1261
+          },
+          {
+            "end": 1275,
+            "passage_index": 1,
+            "quote": "mithramycin, namely, premithramycin B, mithramycin SK, 7-demethylmithramycin, 4E-ketomithramycin, and 4C-ketodemycarosylmithramycin, generated through combinatorial biosynthesis, were compared with MTM for their ability to block Sp binding to the c-src promoter. Although most of the tested compounds lost their ability to bind to the DNA, alteration of the MTM 3-pentyl side chain led to a compound (mithramycin SK) with the same DNA binding specificity but with lower binding affinity than MTM.",
+            "start": 1004
+          },
+          {
+            "end": 811,
+            "passage_index": 1,
+            "quote": "MTM inhibits Sp binding to the c-src promoter region, thereby decreasing its expression in human cancer cells.",
+            "start": 701
+          }
+        ],
+        "experiment": {
+          "assay": "DNA binding studies, promoter reporter assays, RT-PCR",
+          "dose": null,
+          "duration": null,
+          "endpoint": "c-src expression / promoter activity",
+          "intervention": "mithramycin (MTM) treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Mithramycin inhibits Sp-factor binding to the c-src promoter region and decreases c-src expression in human cancer cells.",
+        "uncertainties": [
+          "The passage links reduced c-src expression to inhibited Sp binding, but does not establish direct molecular interaction between mithramycin and c-src itself.",
+          "Human cancer cells are mentioned, but the exact cell line is not specified."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        701,
+        811
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1372,
+        1461
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        221,
+        419
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        399,
+        505
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

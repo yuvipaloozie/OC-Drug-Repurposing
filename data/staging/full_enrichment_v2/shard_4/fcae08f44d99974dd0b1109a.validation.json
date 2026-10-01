@@ -1,0 +1,107 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RANKL-stimulated osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "null",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "57"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "DKB140",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "88"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "NFATc1",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [
+              "93"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-stimulated osteoclasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1732,
+            "passage_index": 1,
+            "quote": "Furthermore, DKB140 decreased the expression of nuclear factor of activated T-cells, cytoplasmic 1 (NFATc1), dendritic cell-specific transmembrane protein (DCstamp), and cathepsin K (CTSK)",
+            "start": 1544
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "NFATc1 expression",
+          "intervention": "DKB140",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "DKB140 decreased NFATc1 expression in RANKL-stimulated osteoclasts.",
+        "uncertainties": [
+          "The excerpt groups NFATc1 with DCstamp and CTSK; the specific measurement may reflect expression in the reported osteoclast context rather than a direct causal target relationship.",
+          "The passage does not state whether the effect was at mRNA or protein level."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1544,
+        1732
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1769,
+        1941
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

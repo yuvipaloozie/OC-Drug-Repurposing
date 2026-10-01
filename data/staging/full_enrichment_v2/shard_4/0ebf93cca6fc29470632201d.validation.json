@@ -1,0 +1,196 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoclastogenesis",
+          "species": null,
+          "stage": "differentiation"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "8600"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "1431"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "CS",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1761,
+            "passage_index": 1,
+            "quote": "RANKL treatment decreased CS activity in a concentration-dependent manner.",
+            "start": 1687
+          }
+        ],
+        "experiment": {
+          "assay": "whole cell extracts",
+          "dose": "concentration-dependent",
+          "duration": null,
+          "endpoint": "CS activity",
+          "intervention": "RANKL treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "RANKL treatment decreased citrate synthase activity in a concentration-dependent manner in the osteoclast differentiation context.",
+        "uncertainties": [
+          "RANKL is annotated as a gene in the packet, but the text here refers to treatment with RANKL; molecular form remains text-supported but contextually ambiguous.",
+          "The exact cellular species/cell type is not explicitly stated in the quoted span."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoclastogenesis",
+          "species": null,
+          "stage": "differentiation"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:C052819"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "diethyl succinate",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "compound",
+            "surface": "SIRT5 inhibitor",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "large osteoclasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1102,
+            "passage_index": 1,
+            "quote": "To mimic the effect of protein succinylation, diethyl succinate or a SIRT5 inhibitor was added during differentiation, which reduced the formation of large osteoclasts",
+            "start": 935
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": "during differentiation",
+          "endpoint": "formation of large osteoclasts",
+          "intervention": "diethyl succinate or a SIRT5 inhibitor",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Adding diethyl succinate or a SIRT5 inhibitor during differentiation reduced formation of large osteoclasts.",
+        "uncertainties": [
+          "The sentence combines two interventions (diethyl succinate and a SIRT5 inhibitor), but the claim is recorded with diethyl succinate as the subject because the text does not separate the individual effect sizes.",
+          "The experiment is described as mimicking protein succinylation; that interpretation is not encoded as a causal claim."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1687,
+        1761
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1612,
+        1710
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        935,
+        1102
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1078,
+        1223
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

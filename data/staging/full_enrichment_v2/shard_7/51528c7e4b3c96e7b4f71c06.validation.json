@@ -1,0 +1,402 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone microenvironment",
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "4",
+              "38",
+              "40",
+              "43",
+              "45",
+              "50",
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "HtrA1",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "5",
+              "32",
+              "33",
+              "36",
+              "37",
+              "39",
+              "41",
+              "44",
+              "46",
+              "47",
+              "48"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "osteoprotegerin",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 115,
+            "passage_index": 0,
+            "quote": "Murine osteoclasts secrete serine protease HtrA1 capable of degrading osteoprotegerin in the bone microenvironment.",
+            "start": 0
+          },
+          {
+            "end": 575,
+            "passage_index": 1,
+            "quote": "Osteoclasts, but not BMMs, secreted OPG-degrading enzymes. Using mass spectrometry and RNA-sequencing analysis, we identified high-temperature requirement A serine peptidase 1 (HtrA1) as an OPG-degrading enzyme.",
+            "start": 364
+          }
+        ],
+        "experiment": {
+          "assay": "mass spectrometry and RNA-sequencing analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "HtrA1 secretion",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Murine osteoclasts secrete HtrA1, and HtrA1 is described as capable of degrading osteoprotegerin in the bone microenvironment.",
+        "uncertainties": [
+          "The title states capability/association rather than a quantified causal experiment for osteoclast secretion of HtrA1.",
+          "Osteoprotegerin is annotated as a gene in the packet, but the text context supports a protein/secreted decoy receptor interpretation rather than a gene-level mechanism."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "4",
+              "38",
+              "40",
+              "43",
+              "45",
+              "50",
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "HtrA1",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "5",
+              "32",
+              "33",
+              "36",
+              "37",
+              "39",
+              "41",
+              "44",
+              "46",
+              "47",
+              "48"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "OPG",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "42"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "dithiothreitol",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 705,
+            "passage_index": 1,
+            "quote": "we identified high-temperature requirement A serine peptidase 1 (HtrA1) as an OPG-degrading enzyme. HtrA1 did not degrade OPG pre-reduced by dithiothreitol, suggesting that HtrA1 recognizes the three-dimensional structure of OPG.",
+            "start": 476
+          },
+          {
+            "end": 828,
+            "passage_index": 1,
+            "quote": "HtrA1 initially cleaved the amide bond between leucine 90 and glutamine 91 of OPG, then degraded OPG into small fragments.",
+            "start": 706
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "OPG degradation",
+          "intervention": "HtrA1 with OPG; OPG pre-reduced by dithiothreitol was also tested",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "direct",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "HtrA1 degrades osteoprotegerin.",
+        "uncertainties": [
+          "The exact molecular form of OPG is not fully resolved by the packet annotations, though the text clearly treats it as a degradable protein substrate.",
+          "The DTT comparison supports structure dependence but does not establish a separate mechanistic edge."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW 264.7 cell cultures",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "5",
+              "32",
+              "33",
+              "36",
+              "37",
+              "39",
+              "41",
+              "44",
+              "46",
+              "47",
+              "48"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "OPG",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "30",
+              "31",
+              "34",
+              "35",
+              "49"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-induced osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "4",
+              "38",
+              "40",
+              "43",
+              "45",
+              "50",
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "HtrA1",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "51"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "RAW 264.7",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1061,
+            "passage_index": 1,
+            "quote": "Inhibitory activity of OPG on RANKL-induced osteoclastogenesis was suppressed by adding HtrA1 in RAW 264.7 cell cultures. These results suggest that osteoclasts potentially prepare a microenvironment suitable for osteoclastogenesis.",
+            "start": 829
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "inhibitory activity of OPG on RANKL-induced osteoclastogenesis",
+          "intervention": "adding HtrA1",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e1",
+          "sign": "negative",
+          "subject": "e3"
+        },
+        "summary": "Adding HtrA1 suppressed the inhibitory activity of OPG on RANKL-induced osteoclastogenesis in RAW 264.7 cell cultures.",
+        "uncertainties": [
+          "The sentence reports suppression of OPG inhibitory activity rather than a direct effect of HtrA1 on osteoclastogenesis itself.",
+          "RAW 264.7 is a cell line context, but the precise species is not stated in the passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        115
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        113
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        364,
+        575
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        380,
+        474
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        476,
+        705
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        452,
+        566
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        706,
+        828
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        567,
+        654
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        829,
+        1061
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        895,
+        1068
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

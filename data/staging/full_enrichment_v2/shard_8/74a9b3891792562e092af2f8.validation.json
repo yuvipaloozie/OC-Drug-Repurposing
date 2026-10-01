@@ -1,0 +1,446 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "murine",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:C107601"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "glabridin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "21943"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-induced osteoclastogenesis",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "CVCL:0493"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "RAW264.7 cells",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 129,
+            "passage_index": 0,
+            "quote": "The inhibitory effect and the molecular mechanism of glabridin on RANKL-induced             osteoclastogenesis in RAW264.7 cells.",
+            "start": 0
+          },
+          {
+            "end": 595,
+            "passage_index": 1,
+            "quote": "glabridin, a flavonoid purified from licorice root, on the receptor activator of nuclear factor-kappaB ligand             (RANKL)-induced osteoclast differentiation",
+            "start": 470
+          },
+          {
+            "end": 804,
+            "passage_index": 1,
+            "quote": "Glabridin significantly inhibited RANKL-induced             tartrate-resistant acid phosphatase (TRAP) activity, the formation of multinucleated             osteoclasts and resorption-pit formation.",
+            "start": 606
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "RANKL-induced osteoclast differentiation / TRAP activity / multinucleated osteoclast formation / resorption-pit formation",
+          "intervention": "glabridin",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Glabridin inhibited RANKL-induced osteoclastogenesis in RAW264.7 cells, including reduced TRAP activity, multinucleated osteoclast formation, and resorption-pit formation.",
+        "uncertainties": [
+          "The abstract bundles multiple osteoclast phenotypes in one sentence; directness of each effect is not specified separately.",
+          "RANKL is provider-annotated as a gene, but the passage uses it as a ligand; molecular form is therefore ambiguous."
+        ]
+      },
+      "errors": [
+        "invented annotation ID",
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "murine",
+          "stage": "osteoclast progenitor"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:C107601"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "glabridin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "21943"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "14281"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "c-Fos",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "18018"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "NFATc1",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1060,
+            "passage_index": 1,
+            "quote": "glabridin inhibited RANKL-induced expression             of c-Fos and subsequent expression of NFATc1, which is a master regulator of osteoclastogenesis.",
+            "start": 907
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "c-Fos and NFATc1 expression",
+          "intervention": "glabridin",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Glabridin inhibited the RANKL-induced expression of c-Fos and subsequent expression of NFATc1 in murine RAW264.7 osteoclast progenitor cells.",
+        "uncertainties": [
+          "The sentence also mentions NFATc1, but the exact causal relationship is described as subsequent expression rather than a separate mechanistic test.",
+          "Molecular form for c-Fos and NFATc1 is inferred from gene annotations; protein-level specificity is not stated."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "murine",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:C107601"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "glabridin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "22034"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "TRAF6",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "14389"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "GAB2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "26413"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "ERK2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "26419"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "JNK1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "26400"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "MKK7",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1460,
+            "passage_index": 1,
+            "quote": "glabridin inhibited RANKL-induced expression             of signaling molecules (TRAF6, GAB2, ERK2, JNK1 and MKK7) and osteoclast survival-related signaling pathways such as c-Src, PI3K and Akt2.",
+            "start": 1218
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "expression of signaling molecules",
+          "intervention": "glabridin",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Glabridin inhibited RANKL-induced expression of several signaling molecules, including TRAF6, GAB2, ERK2, JNK1, and MKK7, and also inhibited osteoclast survival-related signaling pathways such as c-Src, PI3K, and Akt2.",
+        "uncertainties": [
+          "The passage lists multiple signaling molecules; only one representative subject-object pair is encoded in the regulatory field.",
+          "c-Src, PI3K, and Akt2 are mentioned in the same sentence but are not separately encoded here."
+        ]
+      },
+      "errors": [
+        "invented annotation ID",
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "mature osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "murine",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:C107601"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "glabridin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone resorptive activity of mature osteoclasts",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1650,
+            "passage_index": 1,
+            "quote": "Glabridin also inhibited the bone resorptive activity of mature osteoclasts by inhibiting osteoclast-associated genes (cathepsin K,             MMP-9, CAII, TCIRG1, OSTM1 and CLCN7).",
+            "start": 1430
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorptive activity",
+          "intervention": "glabridin",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c4",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Glabridin inhibited the bone resorptive activity of mature osteoclasts by inhibiting osteoclast-associated genes such as cathepsin K, MMP-9, CAII, TCIRG1, OSTM1, and CLCN7.",
+        "uncertainties": [
+          "The sentence also attributes the effect to inhibition of several osteoclast-associated genes; those gene-specific effects are not separately encoded.",
+          "The text does not specify assay conditions for mature osteoclasts."
+        ]
+      },
+      "errors": [
+        "invented annotation ID",
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        129
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        124
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        606,
+        804
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        736,
+        906
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        907,
+        1060
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1012,
+        1187
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

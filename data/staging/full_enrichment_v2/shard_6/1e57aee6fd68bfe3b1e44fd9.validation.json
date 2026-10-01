@@ -1,0 +1,125 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 cells",
+          "compartment": null,
+          "disease_setting": "high glucose condition",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "57"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "SMF",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "70"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "TRAP activity",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "64"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "RAW264.7 cells",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1588,
+            "passage_index": 1,
+            "quote": "SMF promoted osteogenesis with higher ALP level and mineralization deposition in osteoblasts, and it also enhanced osteoclastogenesis with higher TRAP activity and bone resorption in osteoclasts under high glucose condition.",
+            "start": 1364
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis, TRAP activity, and bone resorption",
+          "intervention": "SMF exposure",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In RAW264.7 cells under high glucose condition, exposure to SMF increased osteoclastogenesis, TRAP activity, and bone resorption.",
+        "uncertainties": [
+          "SMF is annotated by the provider as a gene, but the text describes a static magnetic field; molecular form is unresolved.",
+          "The claim bundles multiple related phenotypic outputs from one sentence; direct molecular mechanism is not established."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1364,
+        1588
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1519,
+        1743
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

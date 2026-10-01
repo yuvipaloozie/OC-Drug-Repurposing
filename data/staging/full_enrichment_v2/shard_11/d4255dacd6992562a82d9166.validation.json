@@ -1,0 +1,133 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclast precursors",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "M2 macrophage-derived extracellular vesicles",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "OCPs",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast-specific gene expression",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "2",
+              "14",
+              "15"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "glutamate",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 423,
+            "passage_index": 1,
+            "quote": "M2 macrophage-derived extracellular vesicles (M2-EVs) could reprogram OCPs to downregulate osteoclast-specific gene expression",
+            "start": 297
+          },
+          {
+            "end": 558,
+            "passage_index": 1,
+            "quote": "by delivering the molecular metabolite glutamate",
+            "start": 510
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast-specific gene expression",
+          "intervention": "M2 macrophage-derived extracellular vesicles",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "M2 macrophage-derived extracellular vesicles reprogrammed osteoclast precursors, including downregulation of osteoclast-specific gene expression, and this was linked to delivery of glutamate.",
+        "uncertainties": [
+          "The passage also states that OCPs were converted to M2 macrophage-like lineage cells, but the claim here is limited to the explicitly linked downregulation of osteoclast-specific gene expression.",
+          "Direct molecular mechanism between glutamate delivery and the gene-expression change is not established in the quoted text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        297,
+        423
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        35,
+        122
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        510,
+        558
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        144,
+        190
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

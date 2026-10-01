@@ -1,0 +1,275 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "38"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "daidzein",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "39"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "S-equol",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 456,
+            "passage_index": 1,
+            "quote": "equol-producer phenotype, the gut microbial ability to convert daidzein to S-equol, the most bioactive isoflavone metabolite",
+            "start": 332
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "metabolic_conversion",
+        "local_claim_id": "c1",
+        "reaction": {
+          "direction": "as_written",
+          "enzyme": null,
+          "products": [
+            {
+              "entity": "e2",
+              "stoichiometry": null
+            }
+          ],
+          "substrates": [
+            {
+              "entity": "e1",
+              "stoichiometry": null
+            }
+          ]
+        },
+        "regulatory": null,
+        "summary": "Gut microbes can convert daidzein to S-equol, and this equol-producer phenotype is discussed as a source of variability in responses.",
+        "uncertainties": [
+          "The text describes the conversion as a background review statement rather than a primary experimental result.",
+          "No specific enzyme is named for the conversion."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "42"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "S-equol",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "44"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "ERbeta",
+            "taxon": "9606"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1003,
+            "passage_index": 1,
+            "quote": "S-equol acts as a high-affinity ERbeta agonist",
+            "start": 957
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "positive",
+          "subject": "e3"
+        },
+        "summary": "S-equol is described as a high-affinity ERbeta agonist.",
+        "uncertainties": [
+          "Agonist wording comes from a narrative review summary, not a directly described assay in this passage.",
+          "The specific molecular form of ERbeta is not established beyond the gene/protein-name mention in text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "estrogen-deficient",
+          "species": "rodent",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "53"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "S-equol",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "trabecular bone volume",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1283,
+            "passage_index": 1,
+            "quote": "In estrogen-deficient rodent models, S-equol improves trabecular bone volume by 10-20%, increases trabecular number, and enhances biomechanical strength",
+            "start": 1131
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "trabecular bone volume",
+          "intervention": "S-equol",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e6",
+          "sign": "positive",
+          "subject": "e5"
+        },
+        "summary": "In estrogen-deficient rodent models, S-equol is reported to improve trabecular bone volume, increase trabecular number, and enhance biomechanical strength.",
+        "uncertainties": [
+          "The passage summarizes preclinical evidence; it does not provide a specific primary-study design or assay here.",
+          "Multiple outcomes are bundled in one sentence; only the quoted trabecular bone volume effect is encoded in the regulatory object."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        332,
+        456
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        496,
+        590
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        957,
+        1003
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        971,
+        1044
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1131,
+        1283
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1317,
+        1444
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

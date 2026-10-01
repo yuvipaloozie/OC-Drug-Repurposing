@@ -1,0 +1,95 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "66",
+              "67"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "osthenol and bergaptol",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast formation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1276,
+            "passage_index": 1,
+            "quote": "osthenol and bergaptol inhibited osteoclast formation",
+            "start": 1223
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP staining experiments",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast formation",
+          "intervention": "osthenol and bergaptol",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Osthenol and bergaptol were reported to inhibit osteoclast formation.",
+        "uncertainties": [
+          "The sentence groups osthenol and bergaptol together, so the effect of each compound individually is not separated.",
+          "The exact experimental model and species are not stated in the quoted passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1223,
+        1276
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1364,
+        1415
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

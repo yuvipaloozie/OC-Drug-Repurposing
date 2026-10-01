@@ -1,0 +1,139 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "rheumatoid arthritis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "27"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "RANKL-RANK",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "28"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "NF-kappaB",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "MAPK",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "29"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "NFATc1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "Src kinase",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1033,
+            "passage_index": 1,
+            "quote": "During this process, several signaling molecules (RANKL-RANK, NF-kappaB, MAPK, NFATc1, and Src kinase) are activated in the osteoclasts",
+            "start": 898
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "activation of signaling molecules in osteoclasts",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "unknown",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e1",
+          "sign": "positive",
+          "subject": "e2"
+        },
+        "summary": "The review states that several signaling molecules, including RANKL-RANK, NF-kappaB, MAPK, NFATc1, and Src kinase, are activated in osteoclasts, which are the cells responsible for bone resorption.",
+        "uncertainties": [
+          "Review/background statement rather than a primary experiment.",
+          "The passage lists multiple signaling molecules together; the regulatory subject was normalized to the first listed item for graph representation, but the text does not specify separate causal relations for each molecule.",
+          "MAPK and Src kinase are not specifically annotated in the packet, so their molecular forms are text-supported but coarse.",
+          "Species is not stated in the passage."
+        ]
+      },
+      "errors": [
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        898,
+        1033
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        998,
+        1086
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

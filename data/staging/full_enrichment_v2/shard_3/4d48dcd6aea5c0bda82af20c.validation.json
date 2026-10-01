@@ -1,0 +1,244 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "MC3T3-E1 cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "58",
+              "59",
+              "62",
+              "64",
+              "67"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "QPT@ZIF90-W",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteogenic differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "MC3T3-E1 cells",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "60",
+              "61",
+              "68"
+            ],
+            "existing_node_id": "CHEBI:26523",
+            "key": "e4",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "compound",
+            "surface": "ROS",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1115,
+            "passage_index": 1,
+            "quote": "QPT@ZIF90-W significantly promoted osteogenic differentiation of MC3T3-E1 cells after scavenging mitochondrial ROS and total ROS.",
+            "start": 986
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteogenic differentiation",
+          "intervention": "QPT@ZIF90-W hydrogel",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "QPT@ZIF90-W hydrogel promoted osteogenic differentiation of MC3T3-E1 cells after ROS scavenging.",
+        "uncertainties": [
+          "Exact experimental assay and dose/duration are not stated.",
+          "MC3T3-E1 cell taxonomy is not stated in the passage.",
+          "ROS scavenging is mentioned as part of the mechanism, but the direct causal link to osteogenic differentiation is not separately tested in the quoted sentence."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "periodontitis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "57",
+              "58",
+              "59",
+              "62",
+              "64",
+              "67"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "QPT@ZIF90-W hydrogel",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "63",
+              "66",
+              "69"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Plagl1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "pathway",
+            "surface": "Wnt signaling pathway",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1333,
+            "passage_index": 1,
+            "quote": "the pro-osteogenic effect of QPT@ZIF90-W hydrogel was associated with the significant upregulation of Plagl1, following oxidative stress elimination and subsequent activating the Wnt signaling pathway",
+            "start": 1133
+          },
+          {
+            "end": 1590,
+            "passage_index": 1,
+            "quote": "QPT@ZIF90-W hydrogel treatment, compared with other groups, reduced inflammatory cell infiltration, upregulated Plagl1 and osteogenesis related proteins",
+            "start": 1438
+          }
+        ],
+        "experiment": {
+          "assay": "transcriptome sequencing results",
+          "dose": null,
+          "duration": null,
+          "endpoint": "Plagl1 upregulation / Wnt pathway activation",
+          "intervention": "QPT@ZIF90-W hydrogel treatment",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "QPT@ZIF90-W treatment was associated with upregulation of Plagl1 and activation of the Wnt signaling pathway after oxidative stress elimination.",
+        "uncertainties": [
+          "The passage uses associative language for the Plagl1/Wnt mechanism, so direct causality is not established.",
+          "The Wnt pathway activation is described in the narrative but not as a separately quantified experimental endpoint in the quoted span.",
+          "Species and exact cell/tissue context for the in vivo findings are not stated in the quoted text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        986,
+        1115
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1165,
+        1314
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1133,
+        1333
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1388,
+        1537
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1438,
+        1590
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1617,
+        1768
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

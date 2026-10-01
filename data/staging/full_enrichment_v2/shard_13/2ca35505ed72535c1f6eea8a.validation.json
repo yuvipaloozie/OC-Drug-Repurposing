@@ -1,0 +1,175 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "Microfilaments",
+            "taxon": "null"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "V-ATPase",
+            "taxon": "null"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1004,
+            "passage_index": 1,
+            "quote": "Microfilaments directly interact with the V-ATPase through an actin binding site in the B2-subunit of V-ATPase. This binding interaction is required for ruffled membrane formation.",
+            "start": 824
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "ruffled membrane formation",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "direct",
+          "effect_level": "binding",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In osteoclasts, microfilaments directly interact with V-ATPase, and this interaction is required for ruffled membrane formation.",
+        "uncertainties": [
+          "The passage states a binding interaction and its requirement for ruffled membrane formation, but does not specify a causal signaling direction beyond binding/requirement.",
+          "Microfilaments are treated as an unknown molecular form because the text does not explicitly label them as a protein or complex."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "post-menopausal osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "an inhibitor of the interaction",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1166,
+            "passage_index": 1,
+            "quote": "Recent studies show that an inhibitor of the interaction blocks bone resorption in pre-clinical animal models, including a model of post-menopausal osteoporosis.",
+            "start": 1005
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption",
+          "intervention": "an inhibitor of the interaction",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "An inhibitor of the microfilament-V-ATPase interaction blocked bone resorption in pre-clinical animal models, including a model of post-menopausal osteoporosis.",
+        "uncertainties": [
+          "The specific inhibitor is not named in the passage.",
+          "The model species is not specified in the passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        824,
+        1004
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        372,
+        463
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1005,
+        1166
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        471,
+        603
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

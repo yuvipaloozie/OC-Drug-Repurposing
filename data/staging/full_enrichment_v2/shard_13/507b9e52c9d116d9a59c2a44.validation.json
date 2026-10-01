@@ -1,0 +1,191 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "53",
+              "55",
+              "59",
+              "60",
+              "62"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "HDCA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "54",
+              "56",
+              "58",
+              "61"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "TGR5",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1574,
+            "passage_index": 1,
+            "quote": "HDCA treatment has been shown to result in the internalization of TGR5, thereby inhibiting the nuclear translocation of P65 in vivo. Knockout of TGR5 attenuated the effects of HDCA on bone microstructure, confirming these findings.",
+            "start": 1343
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "TGR5 internalization / activation",
+          "intervention": "HDCA treatment",
+          "outcome_change": "not_stated",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "HDCA is reported to activate TGR5 and is described as acting through TGR5 in bone protection; the same passage also says HDCA inhibits osteoclast maturation in vitro.",
+        "uncertainties": [
+          "The cited span contains two adjacent findings; the extracted regulation is based on the explicit statement that HDCA acts through activation of TGR5, while the internalization and downstream P65 text are included as context.",
+          "The quote does not explicitly state direct binding or direct receptor agonism."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "54",
+              "56",
+              "58",
+              "61"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "TGR5",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone microstructure",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1574,
+            "passage_index": 1,
+            "quote": "Knockout of TGR5 attenuated the effects of HDCA on bone microstructure, confirming these findings.",
+            "start": 1476
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone microstructure effect of HDCA",
+          "intervention": "Knockout of TGR5",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Knockout of TGR5 attenuated the effects of HDCA on bone microstructure in vivo.",
+        "uncertainties": [
+          "The sentence reports attenuation of HDCA's effects rather than an isolated baseline phenotype of TGR5 loss.",
+          "The specific direction of TGR5's endogenous role is inferred from perturbation and is not directly stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1343,
+        1574
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1266,
+        1576
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1476,
+        1574
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1577,
+        1662
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

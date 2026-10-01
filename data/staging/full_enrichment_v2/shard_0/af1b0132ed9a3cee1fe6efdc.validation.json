@@ -1,0 +1,184 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "Annexin A",
+            "taxon": "null"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": "null"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 306,
+            "passage_index": 1,
+            "quote": "Annexin A, a calcium-phospholipid binding protein, regulates the proliferation and differentiation of bone cells, including bone marrow mesenchymal stem cells, osteoblasts, and osteoclasts",
+            "start": 118
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "proliferation and differentiation of bone cells",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The review states that Annexin A regulates the proliferation and differentiation of bone cells, including osteoclasts.",
+        "uncertainties": [
+          "The statement is from a review and does not specify a particular experiment or direction of effect on osteoclasts.",
+          "Annexin A is treated as a family-level term in the text; no specific member is isolated in this sentence."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "bone metabolism",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "mechanical stress",
+            "taxon": "null"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "annexins A1, A5, and A6",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone cell differentiation",
+            "taxon": "null"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 565,
+            "passage_index": 1,
+            "quote": "As calcium channel proteins, the annexin A family members are closely associated with mechanical stress, which can target annexins A1, A5, and A6 to promote bone cell differentiation.",
+            "start": 382
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone cell differentiation",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The review says mechanical stress is closely associated with annexin A family members, and can target annexins A1, A5, and A6 to promote bone cell differentiation.",
+        "uncertainties": [
+          "The sentence is framed as a review statement using 'can target', so the mechanism is not presented as a direct experimental result.",
+          "The text does not specify whether the effect applies specifically to osteoclasts versus other bone cells."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        118,
+        306
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        117,
+        239
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        382,
+        565
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        240,
+        454
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

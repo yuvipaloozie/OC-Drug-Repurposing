@@ -1,0 +1,217 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "chondrocytes",
+          "compartment": "subchondral bone",
+          "disease_setting": "osteoarthritis",
+          "species": "murine",
+          "stage": "initial phase (<10 days post-surgery)"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "subchondral osteoclasts",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [
+              "2",
+              "25",
+              "26",
+              "27",
+              "30"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "magnesium",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 406,
+            "passage_index": 1,
+            "quote": "murine OA model, the initial phase (<10 days post-surgery) is characterized by pronounced mitochondrial dysfunction in chondrocytes and concurrent activation of subchondral osteoclasts",
+            "start": 222
+          },
+          {
+            "end": 723,
+            "passage_index": 1,
+            "quote": "magnesium (Mg) as a key regulator of cellular metabolic balance, capable of reinstating homeostasis in inflamed chondrocytes while modulating osteoclast overactivity",
+            "start": 558
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast overactivity",
+          "intervention": "magnesium (Mg)",
+          "outcome_change": "not_stated",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e4"
+        },
+        "summary": "In a murine osteoarthritis model, the initial phase is characterized by concurrent activation of subchondral osteoclasts, and magnesium is described as modulating osteoclast overactivity.",
+        "uncertainties": [
+          "The abstract describes concurrent osteoclast activation and magnesium's modulation, but does not specify whether the magnesium effect on osteoclasts was directly measured in the same experiment or inferred from the treatment outcome.",
+          "The exact boundary of the quoted spans is estimated from the provided passage text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoarthritis",
+          "species": null,
+          "stage": "early"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "2",
+              "25",
+              "26",
+              "27",
+              "30"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "magnesium",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "3",
+              "18",
+              "19",
+              "21",
+              "28",
+              "29",
+              "31"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoarthritis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 117,
+            "passage_index": 0,
+            "quote": "Restoring cartilage-subchondral bone metabolism with biphasic magnesium microspheres ameliorate early osteoarthritis.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "early osteoarthritis amelioration",
+          "intervention": "biphasic magnesium microspheres",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The study presents magnesium-releasing biphasic microspheres as a treatment intended to ameliorate early osteoarthritis.",
+        "uncertainties": [
+          "The title states the therapeutic intent/outcome, but does not specify the experimental readout or exact causal mechanism in the title alone."
+        ]
+      },
+      "errors": [
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        117
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        116
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        222,
+        406
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        340,
+        484
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        558,
+        723
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        676,
+        775
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

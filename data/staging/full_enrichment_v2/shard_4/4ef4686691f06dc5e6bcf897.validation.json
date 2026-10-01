@@ -1,0 +1,369 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "3",
+              "31"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "cichoric acid",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "4",
+              "32",
+              "33",
+              "36",
+              "41",
+              "42",
+              "44",
+              "48"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "e2",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 100,
+            "passage_index": 0,
+            "quote": "Cichoric acid targets RANKL to inhibit osteoclastogenesis and prevent ovariectomy-induced bone loss.",
+            "start": 0
+          },
+          {
+            "end": 1897,
+            "passage_index": 1,
+            "quote": "BACKGROUND AND AIM: Osteoporosis, a systemic metabolic bone disease, is characterized by the decline of bone mass and quality due to excessive osteoclast activity. Currently, drug-targeting osteoclasts show promising therapy for osteoporosis. In this study, we investigated the effect of cichoric acid (CA) on receptor activator of nuclear kappa-B ligand (RANKL)-induced osteoclastogenesis and the bone loss induced by ovariectomy in mice. EXPERIMENTAL PROCEDURE: Molecular docking technologies were employed to examine the interaction between CA and RANKL. CCK8 assay was used to evaluate the cell viability under CA treatment. TRAcP staining, podosome belt staining, and bone resorption assays were used to test the effect of CA on osteoclastogenesis and osteoclast function. Further, an OVX-induced osteoporosis mice model was employed to identify the effect of CA on bone loss using micro-CT scanning and histological examination. To investigate underlying mechanisms, network pharmacology was applied to predict the downstream signaling pathways, which were verified by Western blot and immunofluorescence staining. KEY RESULTS: The molecular docking analysis revealed that CA exhibited a specific binding affinity to RANKL, engaging multiple binding sites. CA inhibited RANKL-induced osteoclastogenesis and bone resorption without cytotoxic effects. Mechanistically, CA suppressed RANKL-induced intracellular reactive oxygen species, nuclear factor-kappa B, and mitogen-activated protein kinase pathways, followed by abrogated nuclear factor activated T-cells 1 activity. Consistent with this finding, CA attenuated post-ovariectomy-induced osteoporosis by ameliorating osteoclastogenesis. CONCLUSIONS AND IMPLICATIONS: CA inhibited osteoclast activity and bone loss by targeting RANKL. CA might represent a promising candidate for treating osteoclast-related diseases, such as osteoporosis.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": "molecular docking",
+          "dose": null,
+          "duration": null,
+          "endpoint": "interaction between CA and RANKL",
+          "intervention": "cichoric acid treatment",
+          "outcome_change": "not_stated",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "binding",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Cichoric acid is described as targeting RANKL and showing specific binding affinity to it.",
+        "uncertainties": [
+          "The passage uses both a title-level claim and a docking result; direct physical binding is suggested but the experimental evidence here is docking, not a biochemical binding assay.",
+          "RANKL is annotated as a gene in the source packet, but the text context supports a protein-like ligand role; molecular form remains text-supported but not fully resolved.",
+          "Species context is supported only for the ovariectomy mouse model; the binding claim itself is not species-specific."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "31"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "cichoric acid",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "33"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-induced osteoclastogenesis",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1355,
+            "passage_index": 1,
+            "quote": "CA inhibited RANKL-induced osteoclastogenesis and bone resorption without cytotoxic effects.",
+            "start": 1263
+          },
+          {
+            "end": 1577,
+            "passage_index": 1,
+            "quote": "Mechanistically, CA suppressed RANKL-induced intracellular reactive oxygen species, nuclear factor-kappa B, and mitogen-activated protein kinase pathways, followed by abrogated nuclear factor activated T-cells 1 activity.",
+            "start": 1356
+          }
+        ],
+        "experiment": {
+          "assay": "TRAcP staining, podosome belt staining, and bone resorption assays",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis and bone resorption",
+          "intervention": "cichoric acid treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Cichoric acid inhibited RANKL-induced osteoclastogenesis and bone resorption without detectable cytotoxic effects.",
+        "uncertainties": [
+          "The text also states there were no cytotoxic effects, but the specific viability readout is not separately quantified here.",
+          "The outcome is described for RANKL-induced osteoclastogenesis; directness remains indirect because the passage does not establish a direct molecular mechanism for the phenotype."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ovariectomy-induced osteoporosis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "31"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "cichoric acid",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "38",
+              "46",
+              "49"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoporosis",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "34",
+              "40",
+              "47"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e7",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 934,
+            "passage_index": 1,
+            "quote": "an OVX-induced osteoporosis mice model was employed to identify the effect of CA on bone loss using micro-CT scanning and histological examination.",
+            "start": 787
+          },
+          {
+            "end": 1695,
+            "passage_index": 1,
+            "quote": "Consistent with this finding, CA attenuated post-ovariectomy-induced osteoporosis by ameliorating osteoclastogenesis.",
+            "start": 1578
+          }
+        ],
+        "experiment": {
+          "assay": "micro-CT scanning and histological examination",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone loss / osteoporosis",
+          "intervention": "cichoric acid treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e5",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In an ovariectomy-induced osteoporosis mouse model, cichoric acid attenuated osteoporosis and bone loss by ameliorating osteoclastogenesis.",
+        "uncertainties": [
+          "The passage attributes the in vivo benefit to amelioration of osteoclastogenesis, but the precise causal chain is not separately demonstrated in the abstract.",
+          "OVX is inferred from the text as ovariectomy-induced; no additional model details are provided."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        100
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        99
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        1897
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        2052
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1263,
+        1355
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1249,
+        1385
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1356,
+        1577
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1386,
+        1514
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        787,
+        934
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        833,
+        1026
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1578,
+        1695
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1678,
+        1831
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

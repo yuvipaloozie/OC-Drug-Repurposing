@@ -1,0 +1,231 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "periodontitis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "62"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "CeO2-DMC@ZIF-8",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "53",
+              "54"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "cGAS-STING",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "55"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "NLRP3",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "inflammatory amplification",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 875,
+            "passage_index": 1,
+            "quote": "Mechanistically, the nanozyme modulates two key inflammatory pathways, cGAS-STING and NLRP3",
+            "start": 784
+          },
+          {
+            "end": 923,
+            "passage_index": 1,
+            "quote": "thereby suppressing inflammatory amplification",
+            "start": 877
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "inflammatory amplification",
+          "intervention": "CeO2-DMC@ZIF-8",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "CeO2-DMC@ZIF-8 modulated the inflammatory pathways cGAS-STING and NLRP3, with the text stating this suppressed inflammatory amplification.",
+        "uncertainties": [
+          "The sentence states modulation of cGAS-STING and NLRP3 but does not specify direction for each pathway individually.",
+          "The pathway effects are described mechanistically in aggregate rather than with separate measured readouts."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ligature-induced periodontitis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "62"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "CeO2-DMC@ZIF-8",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1413,
+            "passage_index": 1,
+            "quote": "in a ligature-induced periodontitis model, CeO2-DMC@ZIF-8",
+            "start": 1368
+          },
+          {
+            "end": 1344,
+            "passage_index": 1,
+            "quote": "effectively reduces oxidative stress, inhibits osteoclast activity",
+            "start": 1278
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast activity",
+          "intervention": "CeO2-DMC@ZIF-8",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In a ligature-induced periodontitis model, CeO2-DMC@ZIF-8 reduced osteoclast activity.",
+        "uncertainties": [
+          "The passage does not specify the assay used to measure osteoclast activity.",
+          "Species is not stated in the provided text."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1278,
+        1344
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1414,
+        1440
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        784,
+        875
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        940,
+        1019
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        877,
+        923
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1020,
+        1068
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

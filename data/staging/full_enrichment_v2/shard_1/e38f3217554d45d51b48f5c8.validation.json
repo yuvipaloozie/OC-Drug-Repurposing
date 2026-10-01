@@ -1,0 +1,206 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "mitochondria",
+          "disease_setting": "periodontitis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "6647",
+              "847"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "enzyme cascade of SOD and CAT",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "-"
+            ],
+            "existing_node_id": "CHEBI:26523",
+            "key": "e2",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "compound",
+            "surface": "ROS",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D010100"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "O2",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 942,
+            "passage_index": 1,
+            "quote": "TPP-SAT targets mitochondrial ROS, converting ROS (such as H<sub>2</sub>O<sub>2</sub> or .O<sub>2</sub> <sup>-</sup>) into O<sub>2</sub> through the enzyme cascade of SOD and CAT",
+            "start": 764
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "mitochondrial ROS conversion to O2",
+          "intervention": "TPP-SAT",
+          "outcome_change": "other",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "metabolic_conversion",
+        "local_claim_id": "c1",
+        "reaction": {
+          "direction": "as_written",
+          "enzyme": "e1",
+          "products": [
+            {
+              "entity": "e3",
+              "stoichiometry": null
+            }
+          ],
+          "substrates": [
+            {
+              "entity": "e2",
+              "stoichiometry": null
+            }
+          ]
+        },
+        "regulatory": null,
+        "summary": "The nanogel TPP-SAT is described as using SOD and CAT to convert ROS species into oxygen.",
+        "uncertainties": [
+          "The text summarizes a designed nanogel and does not specify whether the conversion is direct catalysis by each enzyme or an aggregate functional description.",
+          "ROS and O2 are represented at the level stated in the text; exact biochemical species and stoichiometry are not provided."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "alveolar bone",
+          "disease_setting": "periodontitis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "-"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "TPP-SAT",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "alveolar bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1269,
+            "passage_index": 1,
+            "quote": "TPP-SAT breaks the \"ROS-inflammation-hypoxia\" cycle, inhibits alveolar bone resorption, and accelerates periodontal tissue regeneration.",
+            "start": 1133
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "alveolar bone resorption",
+          "intervention": "TPP-SAT",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "TPP-SAT is reported to break the ROS-inflammation-hypoxia cycle and inhibit alveolar bone resorption in periodontitis.",
+        "uncertainties": [
+          "The passage is a general abstract statement and does not provide experimental details, dose, or assay.",
+          "The claim is in a periodontitis context and does not specifically identify osteoclasts as the measured cell type."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        764,
+        942
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        907,
+        1100
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1133,
+        1269
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1276,
+        1375
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

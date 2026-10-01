@@ -1,0 +1,223 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "periodontal tissue",
+          "disease_setting": "ligature-induced periodontitis with estrogen deficiency",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "50",
+              "62",
+              "75",
+              "88"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "estrogen deficiency",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast numbers",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1372,
+            "passage_index": 1,
+            "quote": "estrogen deficiency aggravated ligature-induced periodontal destruction",
+            "start": 1301
+          },
+          {
+            "end": 1442,
+            "passage_index": 1,
+            "quote": "as evidenced by greater furcation area, increased osteoclast numbers",
+            "start": 1374
+          }
+        ],
+        "experiment": {
+          "assay": "histological analyses",
+          "dose": null,
+          "duration": "14 and 28 days",
+          "endpoint": "osteoclast numbers",
+          "intervention": "estrogen deficiency / ovariectomy",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "positive",
+          "subject": "e3"
+        },
+        "summary": "Estrogen deficiency aggravated periodontal destruction, including increased osteoclast numbers.",
+        "uncertainties": [
+          "The sentence combines several outcomes; the evidence only partially supports the specific osteoclast-number claim.",
+          "Ovariectomy is implied by the model but not directly used as the subject in this claim."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "alveolar bone",
+          "disease_setting": "estrogen deficiency-associated periodontitis",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "71",
+              "80",
+              "85",
+              "87"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "TPPU",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "81",
+              "91"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1007,
+            "passage_index": 1,
+            "quote": "PD",
+            "start": 1003
+          },
+          {
+            "end": 1054,
+            "passage_index": 1,
+            "quote": "TPPU",
+            "start": 1050
+          },
+          {
+            "end": 1619,
+            "passage_index": 1,
+            "quote": "TPPU significantly reversed these changes by reducing bone loss",
+            "start": 1556
+          }
+        ],
+        "experiment": {
+          "assay": "histological analyses",
+          "dose": "1 mg/kg, oral",
+          "duration": "14 and 28 days",
+          "endpoint": "alveolar bone loss",
+          "intervention": "TPPU",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In ovariectomized periodontitis rats, TPPU treatment reduced alveolar bone loss.",
+        "uncertainties": [
+          "The passage describes multiple endpoints and does not isolate a single mechanistic pathway for the bone-loss reduction.",
+          "Exact placement of the outcome quote is approximate within the abstract text."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1556,
+        1619
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1673,
+        1742
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1301,
+        1372
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1418,
+        1465
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1374,
+        1442
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1469,
+        1499
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

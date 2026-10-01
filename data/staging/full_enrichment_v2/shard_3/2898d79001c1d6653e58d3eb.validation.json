@@ -1,0 +1,489 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "lysosome",
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "acid ceramidase",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "42"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "DHA-ceramide",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "43",
+              "44"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "sphingosine",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "45"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "DHA",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 580,
+            "passage_index": 1,
+            "quote": "acid ceramidase cleaves DHA-ceramide to release sphingosine (SPH) and DHA",
+            "start": 507
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "cleavage of DHA-ceramide",
+          "intervention": "Asp-Lip@Cer uptake and lysosomal processing",
+          "outcome_change": "other",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "metabolic_conversion",
+        "local_claim_id": "c1",
+        "reaction": {
+          "direction": "as_written",
+          "enzyme": "e1",
+          "products": [
+            {
+              "entity": "e3",
+              "stoichiometry": null
+            },
+            {
+              "entity": "e4",
+              "stoichiometry": null
+            }
+          ],
+          "substrates": [
+            {
+              "entity": "e2",
+              "stoichiometry": null
+            }
+          ]
+        },
+        "regulatory": null,
+        "summary": "Lysosomal acid ceramidase cleaves DHA-ceramide to release sphingosine (SPH) and DHA.",
+        "uncertainties": [
+          "Entity form for acid ceramidase is inferred from enzyme context rather than explicitly stated as protein.",
+          "The sentence states cleavage/release but not stoichiometry."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "recipient cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "49",
+              "48"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "DHA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "50"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:AKT1",
+            "key": "e6",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "pathway",
+            "surface": "AKT signaling",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 931,
+            "passage_index": 1,
+            "quote": "DHA activates AKT signaling to promote osteogenesis",
+            "start": 880
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "AKT signaling",
+          "intervention": "DHA present in osteoclast-derived apoptotic bodies",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e6",
+          "sign": "positive",
+          "subject": "e5"
+        },
+        "summary": "DHA activates AKT signaling in recipient cells.",
+        "uncertainties": [
+          "The text links AKT signaling to osteogenesis, but the specific molecular species of AKT is not explicitly stated.",
+          "Directness is not established."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "recipient cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "47",
+              "51",
+              "44"
+            ],
+            "existing_node_id": null,
+            "key": "e7",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "SPH",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e8",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "S1P",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 964,
+            "passage_index": 1,
+            "quote": "SPH is converted to S1P",
+            "start": 941
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "conversion to S1P",
+          "intervention": "SPH present in osteoclast-derived apoptotic bodies",
+          "outcome_change": "other",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "metabolic_conversion",
+        "local_claim_id": "c3",
+        "reaction": {
+          "direction": "as_written",
+          "enzyme": null,
+          "products": [
+            {
+              "entity": "e8",
+              "stoichiometry": null
+            }
+          ],
+          "substrates": [
+            {
+              "entity": "e7",
+              "stoichiometry": null
+            }
+          ]
+        },
+        "regulatory": null,
+        "summary": "Sphingosine (SPH) is converted to S1P.",
+        "uncertainties": [
+          "No enzyme is named for the conversion.",
+          "The sentence does not specify whether the conversion is direct enzymatic catalysis or a broader metabolic step."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "recipient cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e8",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "S1P",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "53"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:MAPK1",
+            "key": "e9",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "pathway",
+            "surface": "ERK signaling",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1015,
+            "passage_index": 1,
+            "quote": "S1P to activate ERK signaling and enhance angiogenesis",
+            "start": 961
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "ERK signaling",
+          "intervention": "S1P present in osteoclast-derived apoptotic bodies",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c4",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e9",
+          "sign": "positive",
+          "subject": "e8"
+        },
+        "summary": "S1P activates ERK signaling and is linked to enhanced angiogenesis.",
+        "uncertainties": [
+          "The sentence also mentions angiogenesis, but the extracted relation is limited to ERK signaling activation.",
+          "Directness is not established."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "postmenopausal osteoporosis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "40",
+              "46",
+              "56",
+              "61"
+            ],
+            "existing_node_id": null,
+            "key": "e10",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Asp-Lip@Cer",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e11",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1151,
+            "passage_index": 1,
+            "quote": "In an ovariectomized mouse model of postmenopausal osteoporosis, systemic administration of Asp-Lip@Cer suppressed osteoclast activity",
+            "start": 1017
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast activity",
+          "intervention": "systemic administration of Asp-Lip@Cer",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c5",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e11",
+          "sign": "negative",
+          "subject": "e10"
+        },
+        "summary": "Systemic administration of Asp-Lip@Cer suppressed osteoclast activity in an ovariectomized mouse model of postmenopausal osteoporosis.",
+        "uncertainties": [
+          "The quote does not specify the magnitude or assay for osteoclast activity.",
+          "The model is ovariectomized mouse, but the exact age/stage is not stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        507,
+        580
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        646,
+        720
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        880,
+        931
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1008,
+        1052
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        941,
+        964
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1074,
+        1103
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c4",
+      "corrected_offsets": [
+        961,
+        1015
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1097,
+        1138
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c5",
+      "corrected_offsets": [
+        1017,
+        1151
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1158,
+        1264
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

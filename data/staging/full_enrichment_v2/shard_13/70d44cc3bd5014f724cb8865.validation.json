@@ -1,0 +1,95 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "macrophages",
+          "compartment": "alveolar bone",
+          "disease_setting": "corticotomy-assisted tooth movement",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "33",
+              "34"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "Atf3+ macrophages",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "complex",
+            "surface": "osteoclasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1342,
+            "passage_index": 1,
+            "quote": "Atf3+ macrophages were closely associated with osteoclasts",
+            "start": 1284
+          }
+        ],
+        "experiment": {
+          "assay": "cell chat",
+          "dose": null,
+          "duration": null,
+          "endpoint": "association between Atf3+ macrophages and osteoclasts",
+          "intervention": "corticotomy",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Atf3-positive macrophages were reported to be closely associated with osteoclasts after corticotomy.",
+        "uncertainties": [
+          "The relationship is stated as association, not causation.",
+          "Species is not explicitly stated in the extracted sentence."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1284,
+        1342
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1539,
+        1585
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

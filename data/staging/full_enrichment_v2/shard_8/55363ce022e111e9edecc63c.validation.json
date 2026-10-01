@@ -1,0 +1,231 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoblasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "36",
+              "38",
+              "55",
+              "61"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "E2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "52",
+              "59",
+              "60"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "SRC",
+            "taxon": "human"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 195,
+            "passage_index": 1,
+            "quote": "E2 action in human osteoblasts involves changes in the transcriptional profile",
+            "start": 117
+          },
+          {
+            "end": 425,
+            "passage_index": 1,
+            "quote": "Infraphysiological doses of E2 elevated mRNAs in all genes except for INF-gamma, TRAIL, and TGF-beta.",
+            "start": 324
+          }
+        ],
+        "experiment": {
+          "assay": "transcriptional profile / mRNA measurement",
+          "dose": "infraphysiological",
+          "duration": null,
+          "endpoint": "SRC mRNA",
+          "intervention": "infraphysiological doses of E2",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In human osteoblasts, infraphysiological E2 increased SRC mRNA, among other genes.",
+        "uncertainties": [
+          "The text groups SRC with several genes and does not isolate SRC-specific fold change in the quoted span.",
+          "The species is supported by the phrase 'human osteoblasts'; the gene annotation itself is not sufficient to infer species."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoblasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "36",
+              "38",
+              "55",
+              "61"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "E2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "50",
+              "51",
+              "58"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "CDK2 and CDK4",
+            "taxon": "human"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 425,
+            "passage_index": 1,
+            "quote": "Infraphysiological doses of E2 elevated mRNAs in all genes except for INF-gamma, TRAIL, and TGF-beta.",
+            "start": 324
+          },
+          {
+            "end": 499,
+            "passage_index": 1,
+            "quote": "a significant increase in the CDKs -2 and -4 genes was found",
+            "start": 439
+          }
+        ],
+        "experiment": {
+          "assay": "transcriptional profile / mRNA measurement",
+          "dose": "infraphysiological",
+          "duration": null,
+          "endpoint": "CDK2/CDK4 mRNA",
+          "intervention": "infraphysiological doses of E2",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In human osteoblasts, infraphysiological E2 increased CDK2 and CDK4 mRNA.",
+        "uncertainties": [
+          "The passage reports CDKs -2 and -4 together rather than separate quantitative results for each gene.",
+          "The text is about mRNA changes, not protein abundance or kinase activity."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        117,
+        195
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        286,
+        369
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        324,
+        425
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        496,
+        517
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        324,
+        425
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        496,
+        517
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        439,
+        499
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        626,
+        667
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

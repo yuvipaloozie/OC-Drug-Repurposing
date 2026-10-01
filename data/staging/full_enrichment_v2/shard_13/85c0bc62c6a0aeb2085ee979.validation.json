@@ -1,0 +1,285 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "7185"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "TRAF1",
+            "taxon": "null"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone mass",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 499,
+            "passage_index": 1,
+            "quote": "TRAF1 knockout inhibits osteoclastogenesis",
+            "start": 457
+          },
+          {
+            "end": 538,
+            "passage_index": 1,
+            "quote": "and increases bone mass in both normal",
+            "start": 500
+          },
+          {
+            "end": 568,
+            "passage_index": 1,
+            "quote": "mice",
+            "start": 564
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "TRAF1 knockout",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "TRAF1 knockout inhibits osteoclastogenesis and increases bone mass in mice.",
+        "uncertainties": [
+          "The text combines two outcomes; the quoted span for increased bone mass is incomplete but supported by the same sentence.",
+          "Cell type and exact experimental system are not fully specified in the abstract."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "7185"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "TRAF1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "207"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:AKT1",
+            "key": "e2",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "protein",
+            "surface": "AKT",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "7186"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "TRAF2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "64223"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Gbetal",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast OXPHOS",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 704,
+            "passage_index": 1,
+            "quote": "TRAF1 promotes osteoclast OXPHOS by increasing the phosphorylation level of AKT",
+            "start": 625
+          },
+          {
+            "end": 859,
+            "passage_index": 1,
+            "quote": "TRAF1 functions to inhibit TRAF2-induced ubiquitination of Gbetal, a known activator of AKT, and further upregulates AKT phosphorylation",
+            "start": 723
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "AKT phosphorylation / OXPHOS",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "TRAF1 promotes osteoclast OXPHOS by increasing AKT phosphorylation, and also inhibits TRAF2-induced ubiquitination of Gbeta1.",
+        "uncertainties": [
+          "The abstract states an AKT-dependent mechanism and a TRAF2-induced ubiquitination effect on Gbeta1, but does not establish direct biochemical interaction.",
+          "The entity 'Gbetal' is text-supported from the passage, but its exact standard gene/protein normalization is uncertain.",
+          "The OXPHOS claim is bundled with AKT phosphorylation; directness and causal chain details remain unresolved."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        457,
+        499
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        364,
+        404
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        500,
+        538
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        406,
+        442
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        564,
+        568
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        689,
+        693
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        625,
+        704
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        478,
+        566
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        723,
+        859
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        848,
+        974
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

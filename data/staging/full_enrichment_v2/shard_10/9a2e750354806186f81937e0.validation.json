@@ -1,0 +1,128 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "chronic periodontitis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "61",
+              "65",
+              "72"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Momordica charantia oil",
+            "taxon": "3673"
+          },
+          {
+            "annotation_ids": [
+              "64",
+              "79",
+              "81"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "Streptococcus pyogenes",
+            "taxon": "1314"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "zones of inhibition",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1649,
+            "passage_index": 1,
+            "quote": "Momordica charantia oilexhibited larger zones of inhibition against Streptococcus pyogenes",
+            "start": 1559
+          },
+          {
+            "end": 1208,
+            "passage_index": 1,
+            "quote": "Streptococcus pyogenes were subcultured from plaque samples, and the minimum inhibitory concentration (MIC) of bitter gourd oil was determined using the disc diffusion method.",
+            "start": 1033
+          }
+        ],
+        "experiment": {
+          "assay": "disc diffusion method",
+          "dose": "higher concentrations",
+          "duration": null,
+          "endpoint": "zones of inhibition against Streptococcus pyogenes",
+          "intervention": "bitter gourd oil",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Bitter gourd oil showed larger zones of inhibition against Streptococcus pyogenes at higher concentrations in an in vitro assay.",
+        "uncertainties": [
+          "The text reports antibacterial activity against Streptococcus pyogenes, not an osteoclast-related mechanism.",
+          "Species taxon for Momordica charantia is inferred from the provider annotation but the passage itself frames the substance as bitter gourd oil; the exact preparation is not fully specified."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1559,
+        1649
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1685,
+        1769
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1033,
+        1208
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1168,
+        1271
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

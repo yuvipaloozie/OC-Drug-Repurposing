@@ -1,0 +1,240 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow-derived macrophages",
+          "compartment": null,
+          "disease_setting": "osteoarthritis",
+          "species": "rats",
+          "stage": "osteoclast precursors"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "60",
+              "63",
+              "73",
+              "75",
+              "86",
+              "88",
+              "95",
+              "99"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "DHA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast formation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 341,
+            "passage_index": 1,
+            "quote": "dihydroartemisinin (DHA) in terms of its ability to inhibit osteoclast activation",
+            "start": 260
+          },
+          {
+            "end": 1923,
+            "passage_index": 1,
+            "quote": "DHA was found to inhibit osteoclast formation without cytotoxicity",
+            "start": 1857
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP staining",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast formation",
+          "intervention": "In the presence or absence of DHA",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Dihydroartemisinin inhibited osteoclast formation in osteoclast precursor cells without cytotoxicity.",
+        "uncertainties": [
+          "The abstract combines in vitro osteoclast precursor experiments with an in vivo rat osteoarthritis model; the quoted evidence for this claim comes from the osteoclast-formation assay context.",
+          "The exact molecular target(s) of DHA are not stated directly."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow-derived macrophages",
+          "compartment": null,
+          "disease_setting": "osteoarthritis",
+          "species": "rats",
+          "stage": "osteoclast precursors"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "60",
+              "63",
+              "73",
+              "75",
+              "86",
+              "88",
+              "95",
+              "99"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "DHA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "6",
+              "67",
+              "68",
+              "69",
+              "85",
+              "89",
+              "94",
+              "100"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "NFATc1",
+            "taxon": "rat"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "NFATc1 signaling pathway",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1027,
+            "passage_index": 1,
+            "quote": "NFATc1",
+            "start": 1011
+          },
+          {
+            "end": 2052,
+            "passage_index": 1,
+            "quote": "DHA was found to inhibit osteoclast formation without cytotoxicity, and furthermore, it did not affect bone formation. In addition, DHA suppressed the expression levels of NF-kappaB, MAPK, NFATc1",
+            "start": 1857
+          }
+        ],
+        "experiment": {
+          "assay": "luciferase assay kits; western blotting; RT-qPCR",
+          "dose": null,
+          "duration": null,
+          "endpoint": "NFATc1 expression levels / luciferase activity",
+          "intervention": "DHA treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Dihydroartemisinin suppressed NFATc1 signaling/readout in the osteoclastogenesis experiments.",
+        "uncertainties": [
+          "The text mentions NFATc1 as a gene and also as a signaling-pathway readout; the exact molecular entity affected is not fully resolved from the abstract alone.",
+          "The claimed pathway suppression is broader than the direct evidence for a single NFATc1 entity."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        260,
+        341
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        427,
+        495
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1857,
+        1923
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2058,
+        2159
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1857,
+        2052
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2058,
+        2219
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

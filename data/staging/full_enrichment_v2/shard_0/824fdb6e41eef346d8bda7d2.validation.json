@@ -1,0 +1,233 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "periodontitis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "23",
+              "26",
+              "28"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TLR4",
+            "key": "e1",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "Tlr4",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast formation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "29"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:NFATC1",
+            "key": "e3",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "NFATc1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "30"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:CTSK",
+            "key": "e4",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "CTSK",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "31"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:ACP5",
+            "key": "e5",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "TRAP",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 786,
+            "passage_index": 1,
+            "quote": "Compared to wild-type (WT) mice, Tlr4-/- mice demonstrated increased resistance to periodontitis-associated bone destruction, as evidenced by decreased bone resorption and enhanced bone regeneration.",
+            "start": 587
+          },
+          {
+            "end": 916,
+            "passage_index": 1,
+            "quote": "Mechanistically, the deletion of Tlr4 not only inhibited osteoclast formation by reducing the expression of NFATc1, CTSK and TRAP",
+            "start": 787
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast formation",
+          "intervention": "deletion of Tlr4",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In Tlr4-/- mice, deletion of Tlr4 was associated with reduced osteoclast formation and lower expression of osteoclast-related markers NFATc1, CTSK, and TRAP.",
+        "uncertainties": [
+          "The text links Tlr4 deletion to both reduced osteoclast formation and reduced expression of NFATc1, CTSK, and TRAP, but does not establish direct regulation versus indirect downstream effects."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "periodontitis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "23",
+              "26",
+              "28"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TLR4",
+            "key": "e1",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "Tlr4",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "periodontitis-associated bone destruction",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 786,
+            "passage_index": 1,
+            "quote": "Compared to wild-type (WT) mice, Tlr4-/- mice demonstrated increased resistance to periodontitis-associated bone destruction, as evidenced by decreased bone resorption and enhanced bone regeneration.",
+            "start": 587
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "periodontitis-associated bone destruction",
+          "intervention": "deletion of Tlr4",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e6",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In Tlr4-/- mice, deletion of Tlr4 was associated with increased resistance to periodontitis-associated bone destruction, including decreased bone resorption and enhanced bone regeneration.",
+        "uncertainties": [
+          "The passage reports resistance to bone destruction in Tlr4-/- mice, but does not specify the assay used to measure bone resorption or regeneration."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        587,
+        786
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        614,
+        749
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        787,
+        916
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        752,
+        848
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        587,
+        786
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        614,
+        749
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

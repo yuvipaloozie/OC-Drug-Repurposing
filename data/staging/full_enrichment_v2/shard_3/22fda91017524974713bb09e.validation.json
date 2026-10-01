@@ -1,0 +1,406 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow-derived macrophages",
+          "compartment": "mitochondria",
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "43",
+              "45",
+              "48",
+              "49",
+              "51",
+              "55",
+              "70",
+              "72",
+              "79",
+              "81",
+              "82",
+              "83"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "44",
+              "50",
+              "57",
+              "71"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "complex",
+            "surface": "ECSIT-TRAF6 interaction",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "gene",
+            "surface": "ECSIT",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "44",
+              "50",
+              "57",
+              "71"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TRAF6",
+            "key": "e4",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "TRAF6",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "47",
+              "52",
+              "56",
+              "73",
+              "80"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "E2",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1944,
+            "passage_index": 1,
+            "quote": "RANKL promoted ECSIT-TRAF6 interaction and increased the levels of ECSIT in mitochondria.",
+            "start": 1855
+          },
+          {
+            "end": 1981,
+            "passage_index": 1,
+            "quote": "E2 abrogated these effects of RANKL.",
+            "start": 1945
+          }
+        ],
+        "experiment": {
+          "assay": "co-immunoprecipitation; Western blot",
+          "dose": "RANKL (30 ng/ml); E2 (10-8 M)",
+          "duration": null,
+          "endpoint": "ECSIT-TRAF6 interaction / ECSIT mitochondrial levels",
+          "intervention": "RANKL with or without E2",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "binding",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "RANKL increased ECSIT-TRAF6 interaction and ECSIT levels in mitochondria, while E2 abrogated these RANKL effects.",
+        "uncertainties": [
+          "The exact molecular form of ECSIT is not fully specified in the text.",
+          "The interaction is described as ECSIT-TRAF6 interaction, but directness is not established."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow-derived macrophages",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "osteoclast progenitors"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "gene",
+            "surface": "ECSIT",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "47",
+              "52",
+              "56",
+              "73",
+              "80"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "E2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2103,
+            "passage_index": 1,
+            "quote": "Silencing of ECSIT decreased osteoclast differentiation and abrogated the inhibitory effects of E2 on osteoclastogenesis.",
+            "start": 1982
+          }
+        ],
+        "experiment": {
+          "assay": "tartrate-resistant phosphatase staining",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation",
+          "intervention": "ShRNA lentivirus particles used to knockdown ECSIT",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "ShRNA-mediated ECSIT knockdown decreased osteoclast differentiation and abolished the inhibitory effect of E2 on osteoclastogenesis.",
+        "uncertainties": [
+          "The text links ECSIT knockdown to reduced differentiation, but the responsible molecular form is not explicitly distinguished between gene and protein.",
+          "The E2-related effect is an additional outcome in the same sentence and may involve a separate mechanistic relation."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow-derived macrophages",
+          "compartment": "mitochondria",
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "osteoclast progenitors"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "gene",
+            "surface": "ECSIT",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "complex I activity",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "58",
+              "74"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "oxygen consumption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "61",
+              "75",
+              "76"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "NAD+/NADH redox ratio",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "59",
+              "77"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "ATP production",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "64",
+              "78"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "mitochondrial ROS",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2242,
+            "passage_index": 1,
+            "quote": "Loss of ECSIT decreased complex I activity, oxygen consumption, NAD+/NADH redox ratio, and ATP production and increased mitochondrial ROS.",
+            "start": 2104
+          }
+        ],
+        "experiment": {
+          "assay": "NADH oxidation to NAD; Seahorse XFe96 Analyzer; commercial assay kits; H2DCFDA; MitoSOX; TMRM",
+          "dose": null,
+          "duration": null,
+          "endpoint": "complex I activity, oxygen consumption, NAD+/NADH redox ratio, ATP production; mitochondrial ROS increased",
+          "intervention": "Loss of ECSIT / ECSIT silencing",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Loss of ECSIT decreased complex I activity, oxygen consumption, NAD+/NADH redox ratio, and ATP production, and increased mitochondrial ROS.",
+        "uncertainties": [
+          "Multiple endpoints are reported together; the regulatory object is simplified to complex I activity.",
+          "The sentence does not specify whether ECSIT loss refers to gene or protein level."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1855,
+        1944
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1983,
+        2076
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1945,
+        1981
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2077,
+        2114
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1982,
+        2103
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2160,
+        2248
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        2104,
+        2242
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2249,
+        2369
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

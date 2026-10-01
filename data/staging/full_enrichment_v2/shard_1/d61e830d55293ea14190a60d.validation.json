@@ -1,0 +1,192 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "totally pancreatectomised individuals",
+          "species": "Homo sapiens",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "2695"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "compound",
+            "surface": "GIP",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": "Homo sapiens"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1659,
+            "passage_index": 1,
+            "quote": "GIP increased heart rate by 10 +- 5.9 bpm (p = 0.004), decreased diastolic blood pressure by 9.1 +- 5.4 bpm (p = 0.002), and inhibited postprandial bone resorption assessed by carboxy-terminal collagen crosslinks by 65% +- 35% (p = 0.003), whereas GLP-1 infusion did not affect bone resorption markers.",
+            "start": 1357
+          }
+        ],
+        "experiment": {
+          "assay": "carboxy-terminal collagen crosslinks",
+          "dose": "4 pmol/kg/min",
+          "duration": "270-min intravenous infusions",
+          "endpoint": "postprandial bone resorption assessed by carboxy-terminal collagen crosslinks",
+          "intervention": "infusion of GIP (4 pmol/kg/min)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "GIP infusion was associated with decreased postprandial bone resorption in totally pancreatectomised individuals.",
+        "uncertainties": [
+          "The passage reports bone resorption as an endpoint measured by carboxy-terminal collagen crosslinks; the underlying molecular target is not stated.",
+          "GIP is annotated as a gene by the provider, but the text here only supports a circulating compound/hormone role in the infusion experiment."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "totally pancreatectomised individuals",
+          "species": "Homo sapiens",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "2740"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "compound",
+            "surface": "GLP-1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption markers",
+            "taxon": "Homo sapiens"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1659,
+            "passage_index": 1,
+            "quote": "did not affect bone resorption markers.",
+            "start": 1620
+          },
+          {
+            "end": 1820,
+            "passage_index": 1,
+            "quote": "GLP-1",
+            "start": 1812
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "1 pmol/kg/min",
+          "duration": "270-min intravenous infusions",
+          "endpoint": "bone resorption markers",
+          "intervention": "infusion of GLP-1 (1 pmol/kg/min)",
+          "outcome_change": "no_detected_change",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "GLP-1 infusion did not affect bone resorption markers in the same study.",
+        "uncertainties": [
+          "The passage states no effect on bone resorption markers, but does not specify which marker(s) beyond the broader endpoint.",
+          "GLP-1 is annotated as a gene by the provider, but the text here only supports a circulating compound/hormone role in the infusion experiment."
+        ]
+      },
+      "errors": [
+        "invented annotation ID",
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1357,
+        1659
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1273,
+        1707
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1620,
+        1659
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1687,
+        1707
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

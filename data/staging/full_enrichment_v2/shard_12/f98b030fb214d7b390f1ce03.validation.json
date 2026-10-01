@@ -1,0 +1,151 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclast precursor cells (OCPs)",
+          "compartment": null,
+          "disease_setting": "osteolytic diseases",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "43",
+              "48",
+              "52",
+              "56"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "B1486",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "34",
+              "37",
+              "41",
+              "51",
+              "53",
+              "57"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "VprBP",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "H2AT120p",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 795,
+            "passage_index": 1,
+            "quote": "bone diseases. In this study, we designed and characterized a series of small molecule compounds derived from B32B3 to identify a novel second-generation inhibitor of VprBP.",
+            "start": 622
+          },
+          {
+            "end": 1054,
+            "passage_index": 1,
+            "quote": "Our initial screening of B32B3 derivatives identified three compounds, designated as B1486, B3703, and B6756, that are effective in interfering with VprBP kinase activity toward H2AT120p and RANKL-induced differentiation of osteoclast precursor cells (OCPs).",
+            "start": 796
+          },
+          {
+            "end": 1272,
+            "passage_index": 1,
+            "quote": "However, when their cellular efficacy was systematically accessed over different concentration ranges, B1486 was more potent than B3703 and B6756 at hindering VprBP function in the process of OCP cell differentiation.",
+            "start": 1055
+          }
+        ],
+        "experiment": {
+          "assay": "initial screening; cellular efficacy assessed over different concentration ranges",
+          "dose": null,
+          "duration": null,
+          "endpoint": "VprBP kinase activity toward H2AT120p",
+          "intervention": "B1486",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "B1486 inhibited VprBP kinase activity toward H2AT120p and was reported to interfere with VprBP function during osteoclast precursor cell differentiation.",
+        "uncertainties": [
+          "The text links B1486 to multiple effects; this claim captures the explicitly stated inhibition of VprBP activity rather than inferring a direct mechanism for osteoclast differentiation.",
+          "H2AT120p is mentioned as the kinase target context, but its molecular identity is not resolved from the text alone."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        622,
+        795
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        731,
+        805
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        796,
+        1054
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        806,
+        965
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1055,
+        1272
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        966,
+        1107
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

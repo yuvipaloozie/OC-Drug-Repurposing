@@ -1,0 +1,227 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclast cell cultures",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "30"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "WEMWE",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "35"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-induced osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "35"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1278,
+            "passage_index": 1,
+            "quote": "WEMWE decreased RANKL-induced osteoclastogenesis by blocking c-Fos/NFATc1 via the inhibition",
+            "start": 1186
+          }
+        ],
+        "experiment": {
+          "assay": "anti-osteoclastogenic activity assays",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "WEMWE treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "WEMWE decreased RANKL-induced osteoclastogenesis in osteoclast cell cultures.",
+        "uncertainties": [
+          "The passage links decreased osteoclastogenesis to blocking c-Fos/NFATc1 and ERK/JNK phosphorylation, but the exact causal chain is summarized in one sentence and directness is not established.",
+          "RANKL is annotated as a gene by the provider, but the text here is about RANKL-induced osteoclastogenesis rather than a specific molecular form."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclast cell cultures",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "30"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "WEMWE",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "36"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "c-Fos",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "37"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "NFATc1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "38"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "ERK",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "39"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "JNK",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1309,
+            "passage_index": 1,
+            "quote": "blocking c-Fos/NFATc1 via the inhibition of ERK and JNK phosphorylation",
+            "start": 1238
+          }
+        ],
+        "experiment": {
+          "assay": "anti-osteoclastogenic activity assays",
+          "dose": null,
+          "duration": null,
+          "endpoint": "ERK and JNK phosphorylation",
+          "intervention": "WEMWE treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "WEMWE inhibited ERK and JNK phosphorylation while blocking c-Fos/NFATc1 in the osteoclast context.",
+        "uncertainties": [
+          "The text states inhibition of ERK and JNK phosphorylation and blocking of c-Fos/NFATc1 together; a separate claim for JNK is not fully disambiguated from the quoted span.",
+          "The molecular forms of c-Fos, NFATc1, ERK, and JNK are provider hints; the text does not explicitly specify protein versus gene in every case."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1186,
+        1278
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1286,
+        1376
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1238,
+        1309
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1351,
+        1443
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

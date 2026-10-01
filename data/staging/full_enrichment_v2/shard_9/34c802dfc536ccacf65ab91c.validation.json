@@ -1,0 +1,234 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "hyperphosphatemia",
+          "species": "patients",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "56",
+              "58",
+              "68",
+              "73"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Denosumab",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "51",
+              "53",
+              "59",
+              "69"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "phosphate",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "43",
+              "47",
+              "72",
+              "74"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "hyperphosphatemia",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 530,
+            "passage_index": 1,
+            "quote": "Denosumab, a RANKL inhibitor that decreases bone resorption, was administered for more than two years.",
+            "start": 428
+          },
+          {
+            "end": 634,
+            "passage_index": 1,
+            "quote": "RESULTS: Denosumab result in a marked and sustained reduction in serum phosphate in all three patients.",
+            "start": 531
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": "more than two years",
+          "endpoint": "serum phosphate",
+          "intervention": "Denosumab",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Denosumab treatment was associated with a marked and sustained reduction in serum phosphate in all three patients with FGF23-pathway hyperphosphatemia.",
+        "uncertainties": [
+          "The text reports a treatment outcome in a case series, not a direct molecular mechanism.",
+          "The causal route from denosumab to phosphate reduction is not established in the passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "hyperphosphatemia",
+          "species": "patients",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "56",
+              "58",
+              "68",
+              "73"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Denosumab",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "57"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "e2",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 487,
+            "passage_index": 1,
+            "quote": "Denosumab, a RANKL inhibitor that decreases bone resorption",
+            "start": 428
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The article states that denosumab is a RANKL inhibitor that decreases bone resorption.",
+        "uncertainties": [
+          "This is a descriptive background statement rather than a demonstrated mechanistic experiment.",
+          "The text does not establish whether the RANKL annotation refers to protein or gene form beyond the surface mention."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        428,
+        530
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        563,
+        651
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        531,
+        634
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        654,
+        726
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        428,
+        487
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        563,
+        612
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

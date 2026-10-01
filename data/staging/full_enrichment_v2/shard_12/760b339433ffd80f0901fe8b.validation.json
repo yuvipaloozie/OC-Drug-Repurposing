@@ -1,0 +1,249 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "animal models",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "55"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "puerarin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "66"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "67"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "OPG",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2155,
+            "passage_index": 1,
+            "quote": "puerarin significantly decreased serum levels of bone turnover markers (BGP, PINP, CTX-I, TRACP-5b, and RANKL)",
+            "start": 2045
+          },
+          {
+            "end": 2194,
+            "passage_index": 1,
+            "quote": "OPG levels. Additionally",
+            "start": 2170
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "serum levels of bone turnover markers (RANKL); OPG levels increased",
+          "intervention": "puerarin",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In ovariectomized animal models of osteoporosis, puerarin treatment decreased the bone turnover marker RANKL and increased OPG levels.",
+        "uncertainties": [
+          "The quoted sentence combines multiple markers; the regulatory object captures only RANKL, while OPG is recorded in the summary but not as a separate edge.",
+          "Species is not specified beyond animal models in the abstract."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "animal models",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "62",
+              "63",
+              "68",
+              "75"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "puerarin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "70"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "IL-6",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "71"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "TNF-alpha",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "73"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "MDA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "74"
+            ],
+            "existing_node_id": null,
+            "key": "e7",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "SOD",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2358,
+            "passage_index": 1,
+            "quote": "puerarin significantly reduced pro-inflammatory cytokines (IL-6, TNF-alpha) and malondialdehyde (MDA), while elevating antioxidant enzyme activities (SOD, GSH-Px)",
+            "start": 2196
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "pro-inflammatory cytokines, malondialdehyde, and antioxidant enzyme activities",
+          "intervention": "puerarin",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In ovariectomized animal models of osteoporosis, puerarin treatment reduced inflammatory and oxidative-stress markers while increasing antioxidant enzyme activity.",
+        "uncertainties": [
+          "The sentence contains multiple readouts with different directions; the regulatory object captures IL-6 only, while the summary includes the broader multi-marker result.",
+          "Species is not specified beyond animal models in the abstract."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        2045,
+        2155
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2202,
+        2326
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        2170,
+        2194
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2327,
+        2347
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        2196,
+        2358
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2353,
+        2536
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

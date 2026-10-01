@@ -1,0 +1,234 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "22",
+              "23",
+              "24",
+              "25"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:SRC",
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "c-Src",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RANK",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "alphavbeta3",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1016,
+            "passage_index": 1,
+            "quote": "deletion or inactivating point mutation of either the c-Src SH2 or SH3 domain",
+            "start": 939
+          },
+          {
+            "end": 1058,
+            "passage_index": 1,
+            "quote": "obviates the RANK/alphavbeta3 association",
+            "start": 1017
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "RANK/alphavbeta3 association",
+          "intervention": "deletion or inactivating point mutation of c-Src SH2 or SH3 domain",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "binding",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Deletion or inactivating point mutation of c-Src SH2 or SH3 domain eliminated the RANK/alphavbeta3 association.",
+        "uncertainties": [
+          "The sentence attributes the result to a hypothesis-supporting experiment, but the causal mechanism remains indirect.",
+          "Species is not stated in the quoted passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "17"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "19"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:SRC",
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "c-Src",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RANK",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "alphavbeta3",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 322,
+            "passage_index": 1,
+            "quote": "RANKL induces c-Src to associate with RANK(369-373) in an alphavbeta3-dependent manner.",
+            "start": 235
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "c-Src association with RANK",
+          "intervention": "RANKL stimulation",
+          "outcome_change": "increased",
+          "perturbation_type": "gain_of_function"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "binding",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "RANKL stimulation was reported to induce c-Src association with RANK in an alphavbeta3-dependent manner, linking the receptors in osteoclasts.",
+        "uncertainties": [
+          "The text states dependence on alphavbeta3, but does not specify a direct physical interaction mechanism beyond association.",
+          "Species is not stated in the quoted passage."
+        ]
+      },
+      "errors": [
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        235,
+        322
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        277,
+        388
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        939,
+        1016
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1073,
+        1138
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1017,
+        1058
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1139,
+        1178
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

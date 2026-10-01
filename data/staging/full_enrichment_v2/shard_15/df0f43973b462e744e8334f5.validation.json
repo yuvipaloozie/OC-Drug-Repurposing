@@ -1,0 +1,184 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone microenvironment",
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "exercise",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "mitophagy-related signaling pathways",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1077,
+            "passage_index": 1,
+            "quote": "exercise activates mitophagy-related signaling pathways via metabolic, mechanical, and hypoxic stimuli",
+            "start": 975
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "mitophagy-related signaling pathways",
+          "intervention": "exercise",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The review states that exercise activates mitophagy-related signaling pathways, and that these pathways are part of the exercise-mitophagy-bone remodeling axis.",
+        "uncertainties": [
+          "Review-level statement; no primary experiment or direct mechanism is provided.",
+          "The specific molecular entities within the mitophagy-related signaling pathways are not named."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoclast",
+          "compartment": "bone microenvironment",
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": "differentiation"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "mitophagy",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 916,
+            "passage_index": 1,
+            "quote": "it exerts stage-specific inhibitory effects on bone resorption during osteoclast differentiation",
+            "start": 820
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": "stage-specific",
+          "endpoint": "bone resorption",
+          "intervention": "mitophagy",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The review states that mitophagy has stage-specific inhibitory effects on bone resorption during osteoclast differentiation.",
+        "uncertainties": [
+          "The claim is presented as a review summary rather than a single reported experiment.",
+          "The text does not specify which mitophagy regulators or pathways mediate the effect."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        975,
+        1077
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1103,
+        1191
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        820,
+        916
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        729,
+        836
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,189 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "obesity",
+          "species": null,
+          "stage": "adolescents"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "sleeve gastrectomy",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "9"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "C-terminal cross-linking telopeptide",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "10"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "compound",
+            "surface": "CTX",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1577,
+            "passage_index": 1,
+            "quote": "Elevated bone turnover markers, particularly C-terminal cross-linking telopeptide (CTX), indicate increased bone resorption following SG.",
+            "start": 1440
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption markers / CTX",
+          "intervention": "sleeve gastrectomy",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In adolescents, sleeve gastrectomy was associated with elevated CTX, which the abstract interprets as increased bone resorption after surgery.",
+        "uncertainties": [
+          "The text describes an association in a systematic review rather than a single primary experiment.",
+          "CTX is annotated in the packet as a gene, but the passage itself presents it as a bone turnover marker; molecular form remains ambiguous.",
+          "No direct osteoclast assay or osteoclast-specific measurement is stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "obesity",
+          "species": null,
+          "stage": "adolescents"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "SG",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "areal BMD",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1071,
+            "passage_index": 1,
+            "quote": "SG in adolescents is associated with significant reductions in areal BMD at critical skeletal sites, particularly the femoral neck and total hip",
+            "start": 927
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "areal bone mineral density",
+          "intervention": "sleeve gastrectomy",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Sleeve gastrectomy in adolescents was associated with reduced areal bone mineral density at critical skeletal sites, especially the femoral neck and total hip.",
+        "uncertainties": [
+          "This is a review-level synthesis of multiple studies, not a single experiment.",
+          "No osteoclast-specific mechanism is stated in the passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1440,
+        1577
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1548,
+        1618
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        927,
+        1071
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        637,
+        753
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

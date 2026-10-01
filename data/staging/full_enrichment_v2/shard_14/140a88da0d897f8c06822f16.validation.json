@@ -1,0 +1,210 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "gingival fibroblasts",
+          "compartment": null,
+          "disease_setting": "high-glucose inflammatory microenvironment",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "57",
+              "58",
+              "59"
+            ],
+            "existing_node_id": "CHEBI:17234",
+            "key": "e1",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "compound",
+            "surface": "high glucose (HG) and lipopolysaccharide (LPS)",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "62"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "BMAL1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "60",
+              "61"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "JAK1-STAT3 signaling pathway",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1142,
+            "passage_index": 1,
+            "quote": "the combination of high glucose (HG) and lipopolysaccharide (LPS) activates the JAK1-STAT3 signaling pathway, downregulates BMAL1",
+            "start": 1013
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "BMAL1 expression",
+          "intervention": "high glucose (HG) and lipopolysaccharide (LPS)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In a high-glucose plus lipopolysaccharide in vitro setting, the treatment downregulated BMAL1.",
+        "uncertainties": [
+          "The abstract states the combination also activates JAK1-STAT3, but the extracted claim here only covers BMAL1 downregulation.",
+          "The passage does not specify the exact experimental dose or duration."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "gingival fibroblasts",
+          "compartment": null,
+          "disease_setting": "diabetic periodontitis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "11865"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "BMAL1",
+            "taxon": "null"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "GFs senescence",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "54"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "DPD mice",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 825,
+            "passage_index": 1,
+            "quote": "BMAL1 effectively mitigated GFs senescence",
+            "start": 783
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "GFs senescence",
+          "intervention": "pharmacological activation of BMAL1",
+          "outcome_change": "decreased",
+          "perturbation_type": "gain_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Pharmacological activation of BMAL1 reduced gingival fibroblast senescence in diabetic periodontitis mice.",
+        "uncertainties": [
+          "The exact BMAL1 activator is not named in the abstract.",
+          "The quote is from a broader sentence that also mentions mitochondrial dysfunction and alveolar bone destruction, but this claim only extracts the senescence outcome."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        783,
+        825
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        838,
+        913
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1013,
+        1142
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1122,
+        1230
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

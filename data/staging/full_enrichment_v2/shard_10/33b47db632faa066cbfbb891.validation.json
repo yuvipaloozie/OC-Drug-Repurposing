@@ -1,0 +1,242 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "calvaria / suture mesenchyme",
+          "disease_setting": "LPS-induced inflammatory bone resorption",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Ang-(1-7)",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 761,
+            "passage_index": 1,
+            "quote": "In vivo, mice were supracalvarial injected with Ang-(1-7) or LPS +- Ang-(1-7) subcutaneously. Bone resorption",
+            "start": 652
+          },
+          {
+            "end": 1104,
+            "passage_index": 1,
+            "quote": "We found that Ang-(1-7) attenuated tumor necrosis factor (TNF)-alpha, TRAP, and Cathepsin K expression from calvaria and decreased osteoclast number along with bone resorption at the suture mesenchyme.",
+            "start": 903
+          },
+          {
+            "end": 1855,
+            "passage_index": 1,
+            "quote": "In conclusion, Ang-(1-7) alleviated LPS-induced osteoclastogenesis and bone resorption in vivo",
+            "start": 1761
+          }
+        ],
+        "experiment": {
+          "assay": "micro-computed tomography; TRAP stain; real-time PCR",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis and bone resorption",
+          "intervention": "Ang-(1-7) or LPS +- Ang-(1-7)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Angiotensin-(1-7) alleviated LPS-induced osteoclastogenesis and bone resorption in vivo.",
+        "uncertainties": [
+          "The passage combines in vivo and in vitro descriptions; this claim is limited to the in vivo result stated in the conclusion and results text.",
+          "The mechanism 'via inhibiting TNF-alpha expression in macrophages' is stated in the conclusion but is not encoded here as a direct causal claim from the in vivo phenotype."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "macrophages",
+          "compartment": null,
+          "disease_setting": "LPS-induced osteoclastogenesis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Ang-(1-7)",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "7124",
+              "32",
+              "35",
+              "38",
+              "41",
+              "44",
+              "47"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNF",
+            "key": "e2",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "TNF-alpha",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "macrophages",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1573,
+            "passage_index": 1,
+            "quote": "Ang-(1-7) reduced LPS-stimulated macrophages TNF-alpha expression",
+            "start": 1508
+          }
+        ],
+        "experiment": {
+          "assay": "Western blotting",
+          "dose": null,
+          "duration": null,
+          "endpoint": "TNF-alpha expression",
+          "intervention": "Ang-(1-7)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Angiotensin-(1-7) reduced LPS-stimulated TNF-alpha expression in macrophages.",
+        "uncertainties": [
+          "Macrophages are described in the passage as peritoneal macrophages; the exact cell prep for the TNF-alpha result is not separately detailed in the cited span."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1508,
+        1573
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1694,
+        1758
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        652,
+        761
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        796,
+        912
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        903,
+        1104
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1079,
+        1189
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1761,
+        1855
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1993,
+        2077
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

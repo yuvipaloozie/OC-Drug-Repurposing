@@ -1,0 +1,210 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "patients",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "33",
+              "40",
+              "41"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:ACP5",
+            "key": "e1",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "protein",
+            "surface": "Tracp 5b",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "lumbar spine bone mineral density",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "bone resorption inhibitors",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1438,
+            "passage_index": 1,
+            "quote": "correlations were found between Tracp 5b and lumbar spine bone mineral density (BMD)",
+            "start": 1354
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "lumbar spine bone mineral density",
+          "intervention": "switching from bone resorption inhibitors",
+          "outcome_change": "not_stated",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In patients switching from bone resorption inhibitors, pre-treatment Tracp 5b was correlated with lumbar spine bone mineral density.",
+        "uncertainties": [
+          "The text reports correlation only, without direction of causality.",
+          "The biomarker Tracp 5b is text-tagged as a gene but used here as a pre-treatment blood marker; molecular form is therefore uncertain."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "patients",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "44"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Romosozumab",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone density",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "45"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoporosis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1576,
+            "passage_index": 1,
+            "quote": "Romosozumab administration significantly increases",
+            "start": 1526
+          },
+          {
+            "end": 721,
+            "passage_index": 1,
+            "quote": " bone density in",
+            "start": 706
+          }
+        ],
+        "experiment": {
+          "assay": "dual-energy X-ray absorptiometry",
+          "dose": null,
+          "duration": "12 months",
+          "endpoint": "bone density",
+          "intervention": "romosozumab administration",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Romosozumab administration was associated with a significant increase in bone density in patients with severe osteoporosis.",
+        "uncertainties": [
+          "The abstract reports an observational survey, so causality is not established beyond the reported association/effect statement."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1526,
+        1576
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        660,
+        706
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1354,
+        1438
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1512,
+        1574
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

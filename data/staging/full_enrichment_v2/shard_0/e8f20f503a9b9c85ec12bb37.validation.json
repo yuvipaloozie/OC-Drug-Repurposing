@@ -1,0 +1,199 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "negated_relation",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "bone surface / sealing zone",
+          "disease_setting": null,
+          "species": "rat and chicken",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "1",
+              "9",
+              "14",
+              "15"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "vitronectin receptor",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "tight sealing zone attachment",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 137,
+            "passage_index": 0,
+            "quote": "Vitronectin receptor has a role in bone resorption but does not mediate tight sealing zone attachment of osteoclasts to the bone surface.",
+            "start": 0
+          },
+          {
+            "end": 468,
+            "passage_index": 1,
+            "quote": "During bone resorption, osteoclasts form a tight attachment, the sealing zone, around resorption lacunae. Vitronectin receptor has previously been shown to be expressed in osteoclasts and it has been suggested that it mediates the tight attachment at the sealing zone. In this study we have shown that glycine-arginine-glycine-aspartic acid-serine pentapeptide inhibits bone resorption by isolated osteoclasts and drastically changes the morphology of the osteoclasts.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": "localization by immunofluorescence / immunoperoxidase / immunoelectron microscopy",
+          "dose": null,
+          "duration": null,
+          "endpoint": "tight sealing zone attachment",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The vitronectin receptor is reported not to mediate the final tight sealing zone attachment of osteoclasts to the mineralized bone surface.",
+        "uncertainties": [
+          "The title states a broad role in bone resorption, but the extracted claim is specifically the negated sealing-zone attachment relation.",
+          "The mechanism is inferred from localization and statement of non-mediation; direct biochemical interaction is not established."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "isolated osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "glycine-arginine-glycine-aspartic acid-serine pentapeptide",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 468,
+            "passage_index": 1,
+            "quote": "In this study we have shown that glycine-arginine-glycine-aspartic acid-serine pentapeptide inhibits bone resorption by isolated osteoclasts and drastically changes the morphology of the osteoclasts.",
+            "start": 269
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption",
+          "intervention": "glycine-arginine-glycine-aspartic acid-serine pentapeptide",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e3"
+        },
+        "summary": "A glycine-arginine-glycine-aspartic acid-serine pentapeptide inhibits bone resorption by isolated osteoclasts and drastically changes osteoclast morphology.",
+        "uncertainties": [
+          "The same sentence also reports a morphology change, but the exact direction or mechanistic link for morphology is not separately specified.",
+          "The passage does not state dose, duration, or assay details for the pentapeptide treatment."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        137
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        136
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        468
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        436
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        269,
+        468
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        270,
+        436
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,114 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoarthritis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "106"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "AF",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "119"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1726,
+            "passage_index": 1,
+            "quote": "AF suppressed the formation of osteoclasts and the resorption of bone function induced by RANKL.",
+            "start": 1630
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP staining, F-actin staining and immunofluorescence",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation and bone resorption",
+          "intervention": "AF",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Amentoflavone suppressed RANKL-induced osteoclast formation and bone resorption in the study model.",
+        "uncertainties": [
+          "The passage links the effect to RANKL induction but does not specify a direct molecular target in osteoclasts.",
+          "The model context is OA-related mouse experiments; the exact osteoclast precursor cell type is not stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1630,
+        1726
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1389,
+        1443
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

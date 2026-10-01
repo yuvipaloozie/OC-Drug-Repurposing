@@ -1,0 +1,129 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "13",
+              "14",
+              "15",
+              "18",
+              "19"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:SRC",
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Src",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "pathway",
+            "surface": "bone metabolism",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "17"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoporosis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 194,
+            "passage_index": 1,
+            "quote": "Src was one of the first proto-oncogenes to be identified and is a prototype of non-receptor type tyrosine kinases. The role of Src in bone metabolism first became apparent in Src-deficient mice",
+            "start": 0
+          },
+          {
+            "end": 293,
+            "passage_index": 1,
+            "quote": " and has been confirmed using low-molecular-weight Src inhibitors in animal models of osteoporosis.",
+            "start": 194
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone metabolism",
+          "intervention": "Src-deficient mice; low-molecular-weight Src inhibitors",
+          "outcome_change": "not_stated",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "unknown",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Src is described as having a role in bone metabolism, first apparent in Src-deficient mice and later confirmed with Src inhibitors in animal models of osteoporosis.",
+        "uncertainties": [
+          "The text is a review-style background statement rather than a single primary experiment.",
+          "The exact molecular form of Src is not explicitly distinguished in the source text.",
+          "The relationship to osteoporosis is presented as confirmation in animal models, not as a direct mechanistic edge."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        194
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        152
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        194,
+        293
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        153,
+        270
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,118 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "bone",
+          "disease_setting": null,
+          "species": "mice",
+          "stage": "mature"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "20779"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:SRC",
+            "key": "e1",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "c-src proto-oncogene / src / pp60c-src",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "MESH:D010022"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteopetrosis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 180,
+            "passage_index": 1,
+            "quote": "Targeted disruption of the c-src proto-oncogene in mice has shown that src expression is required for normal bone resorption, since the src-deficient mutants develop osteopetrosis.",
+            "start": 0
+          },
+          {
+            "end": 1139,
+            "passage_index": 1,
+            "quote": "These results indicate that osteoclasts appear in the absence of pp60c-src, but that pp60c-src expression is required for mature osteoclasts to form ruffled borders and resorb bone.",
+            "start": 958
+          }
+        ],
+        "experiment": {
+          "assay": "quantitative bone histomorphometry and electron microscopy",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteopetrosis / impaired normal bone resorption",
+          "intervention": "targeted disruption of the c-src proto-oncogene",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In src-deficient mice, src expression loss was associated with osteopetrosis and impaired normal bone resorption; the authors conclude that pp60c-src expression is required for mature osteoclasts to form ruffled borders and resorb bone.",
+        "uncertainties": [
+          "The text mixes gene and protein nomenclature for src/pp60c-src, so the molecular form is not fully resolved.",
+          "The causal link to ruffled border formation is stated as an interpretation from the observed mutant phenotype, not as a directly demonstrated molecular mechanism."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        180
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        97
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        958,
+        1139
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1079,
+        1171
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

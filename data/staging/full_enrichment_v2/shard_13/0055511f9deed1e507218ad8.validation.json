@@ -1,0 +1,216 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "local region",
+          "disease_setting": null,
+          "species": null,
+          "stage": "polarization"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "F-actin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "4"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "vinculin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "5"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "paxillin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "6"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "alpha-actinin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "transformation of clustered podosomes into rings and sealing zone-like structures",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 834,
+            "passage_index": 1,
+            "quote": "Using quantitative microscopy, we show here a dramatic increase in the local levels of F-actin, vinculin, paxillin, and alpha-actinin, which occurs upon the transformation of clustered podosomes into rings and sealing zone-like structures.",
+            "start": 595
+          }
+        ],
+        "experiment": {
+          "assay": "quantitative microscopy",
+          "dose": null,
+          "duration": null,
+          "endpoint": "local levels of F-actin, vinculin, paxillin, and alpha-actinin",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e1",
+          "sign": "unknown",
+          "subject": "e5"
+        },
+        "summary": "During transformation of clustered podosomes into rings and sealing zone-like structures, the local levels of F-actin, vinculin, paxillin, and alpha-actinin increased.",
+        "uncertainties": [
+          "The passage reports an observed increase during transformation, not a causal mechanism.",
+          "The text does not specify species.",
+          "The protein form of F-actin is inferred from the surface form and remains text-supported but not formally identified by annotation."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "same region",
+          "disease_setting": null,
+          "species": null,
+          "stage": "polarization"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "transformation of clustered podosomes into rings and sealing zone-like structures",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D019000"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "phosphotyrosine",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 928,
+            "passage_index": 1,
+            "quote": "This change is accompanied by a marked decrease in phosphotyrosine levels in the same region.",
+            "start": 835
+          }
+        ],
+        "experiment": {
+          "assay": "quantitative microscopy",
+          "dose": null,
+          "duration": null,
+          "endpoint": "phosphotyrosine levels",
+          "intervention": null,
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e6",
+          "sign": "unknown",
+          "subject": "e5"
+        },
+        "summary": "During the same transformation, phosphotyrosine levels decreased in the same region.",
+        "uncertainties": [
+          "The passage reports a decrease during transformation, not a causal mechanism.",
+          "The text does not specify species.",
+          "The exact molecular entity represented by phosphotyrosine is not further defined in the passage."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        595,
+        834
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        505,
+        743
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        835,
+        928
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        743,
+        837
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

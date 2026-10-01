@@ -1,0 +1,364 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "diabetes periodontitis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "83"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "N-acetylcysteine",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "84"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone destruction",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1263,
+            "passage_index": 1,
+            "quote": "N-acetylcysteine",
+            "start": 1247
+          },
+          {
+            "end": 1413,
+            "passage_index": 1,
+            "quote": "ameliorated the degree of bone destruction, attenuated the inflammatory response, and mitigated oxidative stress in mice with diabetes periodontitis.",
+            "start": 1264
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone destruction",
+          "intervention": "Treatment with the ROS inhibitor N-acetylcysteine",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In mice with diabetes periodontitis, treatment with the ROS inhibitor N-acetylcysteine was reported to improve bone destruction, inflammation, and oxidative stress.",
+        "uncertainties": [
+          "The sentence also reports attenuation of inflammatory response and oxidative stress, but those outcomes are not separately modeled here.",
+          "The mechanism by which N-acetylcysteine acts is not established in this passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "macrophage cells",
+          "compartment": null,
+          "disease_setting": "diabetes periodontitis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "RNA",
+            "surface": "short hairpin-FOXM1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "64",
+              "67",
+              "76",
+              "88",
+              "89",
+              "93",
+              "101",
+              "104"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "FOXM1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "gene",
+            "surface": "C-Jun proto-oncogene",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "78",
+              "90",
+              "91",
+              "103"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "AP-1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "80",
+              "82",
+              "92",
+              "102"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ROS",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1603,
+            "passage_index": 1,
+            "quote": "Short hairpin-FOXM1 reduced the levels of FOXM1, increased the levels of C-Jun proto-oncogene and AP-1, enhanced AP-1 binding activity, and increased ROS production in the macrophage cells.",
+            "start": 1414
+          }
+        ],
+        "experiment": {
+          "assay": "Western blot / qRT-PCR / binding activity / ROS probe (as reported in study methods)",
+          "dose": null,
+          "duration": null,
+          "endpoint": "FOXM1 levels",
+          "intervention": "short hairpin-FOXM1",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "FOXM1 silencing in macrophage cells reduced FOXM1 and increased C-Jun/AP-1, AP-1 binding activity, and ROS production.",
+        "uncertainties": [
+          "The sentence combines multiple outcomes; AP-1 and ROS changes are captured in the summary but not all as separate regulatory edges.",
+          "AP-1 is treated as a complex/ transcription factor entity from text; the precise molecular form is not directly stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "diabetes periodontitis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "98"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "RNA",
+            "surface": "JUN-small interfering RNA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "98"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "JUN",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "gene",
+            "surface": "TRAP",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "95",
+              "99"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "OSCAR",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "97",
+              "100"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "NFATc1",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1895,
+            "passage_index": 1,
+            "quote": "By contrast, JUN-small interfering RNA decreased the mRNA and protein expression of TRAP, OSCAR, and NFATc1.",
+            "start": 1787
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "mRNA and protein expression of TRAP, OSCAR, and NFATc1",
+          "intervention": "JUN-small interfering RNA",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "JUN small interfering RNA decreased TRAP, OSCAR, and NFATc1 expression in the reported system.",
+        "uncertainties": [
+          "The passage does not specify whether the relevant biology was assessed in macrophage cells or another cell type for this particular JUN-siRNA result.",
+          "TRAP is treated as a gene/protein-like marker from text, but the molecular form is not fully resolved."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1247,
+        1263
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1438,
+        1454
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1264,
+        1413
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1455,
+        1558
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1414,
+        1603
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1598,
+        1762
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1787,
+        1895
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1979,
+        2087
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

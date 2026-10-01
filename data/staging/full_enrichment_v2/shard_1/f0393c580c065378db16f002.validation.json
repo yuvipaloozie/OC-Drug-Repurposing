@@ -1,0 +1,174 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "mature osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": "terminally differentiated"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "mature osteoclasts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "11",
+              "12",
+              "13",
+              "15",
+              "17",
+              "18",
+              "19"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ATP",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1401,
+            "passage_index": 1,
+            "quote": "Despite the abundance of mitochondria, mature osteoclasts are considered ATP-depleted, and the availability of ATP is a critical factor that regulates the low survival capacity of these cells, which rapidly undergo death by apoptosis.",
+            "start": 1167
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "survival capacity / apoptosis",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e1",
+          "sign": "positive",
+          "subject": "e2"
+        },
+        "summary": "In mature osteoclasts, ATP availability is described as a critical factor regulating their low survival capacity and rapid apoptosis.",
+        "uncertainties": [
+          "The text states ATP availability is a critical factor, but does not specify a direct molecular mechanism.",
+          "The sentence also says mature osteoclasts are ATP-depleted; this is descriptive background, not a perturbation result."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": "during differentiation"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "OXPHOS",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1080,
+            "passage_index": 1,
+            "quote": "ostoclasts progressively increase OXPHOS during differentiation until they become multinucleated and mitochondrial-rich terminal differentiated cells",
+            "start": 958
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "OXPHOS",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "During osteoclast differentiation, oxidative phosphorylation is described as progressively increasing until the cells become multinucleated and mitochondria-rich terminally differentiated cells.",
+        "uncertainties": [
+          "This is a review-style statement rather than a primary experiment.",
+          "The claim is about OXPHOS during differentiation, not a direct molecular mechanism."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1167,
+        1401
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1091,
+        1200
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

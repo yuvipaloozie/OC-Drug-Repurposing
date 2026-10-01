@@ -1,0 +1,216 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "glutaminolysis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 669,
+            "passage_index": 1,
+            "quote": "glutaminolysis provides amino acids and nucleotides which are essential for osteoclast differentiation and bone resorption in vitro",
+            "start": 538
+          },
+          {
+            "end": 788,
+            "passage_index": 1,
+            "quote": "Genetic experiments in mice found that glutaminolysis is essential for osteoclastogenesis and bone resorption in vivo",
+            "start": 671
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis and bone resorption",
+          "intervention": "genetic experiments in mice",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Glutaminolysis was reported as essential for osteoclast differentiation and bone resorption in mice.",
+        "uncertainties": [
+          "The text combines in vitro and in vivo statements; the specific experimental perturbation is not fully detailed in the abstract.",
+          "The underlying molecular form of glutaminolysis is a pathway, not a single gene or protein."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ovariectomy induced bone loss",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "glutaminolysis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "25"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "CB-839",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "26"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 937,
+            "passage_index": 1,
+            "quote": "inhibiting glutaminolysis using CB-839 prevented ovariectomy induced bone loss in mice",
+            "start": 851
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone loss",
+          "intervention": "CB-839",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e5",
+          "sign": "negative",
+          "subject": "e4"
+        },
+        "summary": "Inhibiting glutaminolysis with CB-839 prevented ovariectomy-induced bone loss in mice.",
+        "uncertainties": [
+          "The passage states inhibition of glutaminolysis using CB-839, but the direct molecular target of CB-839 is not specified here.",
+          "The context is ovariectomy-induced bone loss; the exact model details are not fully described in the abstract."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        538,
+        669
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        231,
+        308
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        671,
+        788
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        310,
+        394
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        851,
+        937
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        408,
+        471
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

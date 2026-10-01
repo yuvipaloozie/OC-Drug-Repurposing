@@ -1,0 +1,116 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "periodontitis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "1",
+              "10"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Periodontitis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "12"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "alveolar bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 47,
+            "passage_index": 1,
+            "quote": "Periodontitis is a chronic inflammatory disease",
+            "start": 0
+          },
+          {
+            "end": 201,
+            "passage_index": 1,
+            "quote": "leading to progressive and irreversible alveolar bone resorption.",
+            "start": 136
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Periodontitis is described as a chronic inflammatory disease that leads to progressive and irreversible alveolar bone resorption.",
+        "uncertainties": [
+          "The text is a review/background statement rather than a primary experiment.",
+          "The causal wording is descriptive and does not establish a tested mechanism."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        47
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        39
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        136,
+        201
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        118,
+        195
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

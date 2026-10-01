@@ -1,0 +1,282 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "periodontal tissues",
+          "compartment": "periodontal region",
+          "disease_setting": "periodontitis",
+          "species": "BALB/c mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "1508"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "CTSB",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "alveolar bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 777,
+            "passage_index": 1,
+            "quote": "downregulate CTSB expression in periodontal tissues. Small-interfering RNA (siRNA) was used to inhibit CTSB expression in macrophages for in vitro experiments.",
+            "start": 618
+          },
+          {
+            "end": 1291,
+            "passage_index": 1,
+            "quote": "CTSB downregulation significantly reduced alveolar bone resorption",
+            "start": 1225
+          }
+        ],
+        "experiment": {
+          "assay": "micro-computed tomography (micro-CT)",
+          "dose": null,
+          "duration": null,
+          "endpoint": "alveolar bone resorption",
+          "intervention": "AAV was employed to downregulate CTSB expression in periodontal tissues",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Downregulating CTSB in periodontitis reduced alveolar bone resorption in mice.",
+        "uncertainties": [
+          "The text links CTSB downregulation to reduced bone resorption in a periodontitis model, but does not establish a direct molecular mechanism for this phenotype change."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "macrophages",
+          "compartment": "periodontal region",
+          "disease_setting": "periodontitis",
+          "species": "BALB/c mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "1508"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "CTSB",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D017382"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "reactive oxygen species",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "114548"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "NLRP3",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "pyroptosis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1587,
+            "passage_index": 1,
+            "quote": "Consistent with in vivo experiments, CTSB knockdown in macrophages also suppressed pyroptosis.",
+            "start": 1493
+          },
+          {
+            "end": 1215,
+            "passage_index": 1,
+            "quote": "MitoSOX Red and DCFH-DA staining were applied to detect mitochondrial and intracellular reactive oxygen species (ROS) levels.",
+            "start": 1090
+          },
+          {
+            "end": 1686,
+            "passage_index": 1,
+            "quote": "Furthermore, both mitochondrial and intracellular ROS levels were decreased after CTSB inhibition.",
+            "start": 1588
+          },
+          {
+            "end": 1923,
+            "passage_index": 1,
+            "quote": "The mechanism through which CTSB activates NLRP3 likely involves inducing mitochondrial ROS generation.",
+            "start": 1820
+          }
+        ],
+        "experiment": {
+          "assay": "MitoSOX Red and DCFH-DA staining; western blotting; immunofluorescence",
+          "dose": null,
+          "duration": null,
+          "endpoint": "pyroptosis and ROS levels",
+          "intervention": "CTSB inhibition / CTSB knockdown",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e5",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Inhibiting CTSB reduced ROS levels and suppressed NLRP3-mediated pyroptosis, including in macrophages.",
+        "uncertainties": [
+          "The passage suggests CTSB lowers NLRP3 via mitochondrial ROS, but the causal link is presented as likely rather than directly demonstrated.",
+          "ROS reduction is reported after CTSB inhibition, but the exact relationship to NLRP3 activation is inferential in the text."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        618,
+        777
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        804,
+        876
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1225,
+        1291
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1084,
+        1125
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1493,
+        1587
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1201,
+        1249
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1090,
+        1215
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1370,
+        1424
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1588,
+        1686
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1690,
+        1800
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1820,
+        1923
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1953,
+        2000
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

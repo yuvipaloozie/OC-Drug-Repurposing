@@ -1,0 +1,260 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "end-stage renal disease",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "78"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "impaired phosphate excretion",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "79"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "vitamin D metabolism",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "80",
+              "81"
+            ],
+            "existing_node_id": "CHEBI:29108",
+            "key": "e3",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "calcium-phosphate homeostasis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "parathyroid glands",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "82"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "PTH",
+            "taxon": "9606"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1282,
+            "passage_index": 1,
+            "quote": "In ESRD, impaired phosphate excretion and vitamin D metabolism disrupt calcium-phosphate homeostasis, altering the feedback to the parathyroid glands.",
+            "start": 1132
+          },
+          {
+            "end": 1321,
+            "passage_index": 1,
+            "quote": "This leads to chronic elevation of PTH",
+            "start": 1283
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "PTH level",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e5",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In end-stage renal disease, impaired phosphate excretion and vitamin D metabolism disrupt calcium-phosphate homeostasis and alter feedback to the parathyroid glands, leading to chronic elevation of PTH.",
+        "uncertainties": [
+          "The passage combines multiple upstream factors (phosphate excretion, vitamin D metabolism, homeostatic feedback), so the most direct causal chain is not fully resolved."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "chronic hyperparathyroidism",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "82"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "PTH",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "83"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "pathologic fractures",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1350,
+            "passage_index": 1,
+            "quote": "This leads to chronic elevation of PTH and promotes bone resorption",
+            "start": 1283
+          },
+          {
+            "end": 1396,
+            "passage_index": 1,
+            "quote": "increasing the risk of pathologic fractures.",
+            "start": 1352
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption / fracture risk",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Chronic elevation of PTH promotes bone resorption and increases the risk of pathologic fractures.",
+        "uncertainties": [
+          "The passage states promotion of bone resorption and increased fracture risk in narrative form; it does not provide a controlled experiment or direct molecular mechanism."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1132,
+        1282
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1271,
+        1360
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1283,
+        1321
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1361,
+        1391
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1283,
+        1350
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1392,
+        1454
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1352,
+        1396
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1455,
+        1495
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

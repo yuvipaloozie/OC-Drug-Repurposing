@@ -1,0 +1,199 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "periodontitis",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "64",
+              "65"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "M2-Exo",
+            "taxon": "null"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1573,
+            "passage_index": 1,
+            "quote": "M2-Exo treatment significantly increased the expression of RUNX2 and PKM2 while suppressing TRIM26 expression.",
+            "start": 1463
+          },
+          {
+            "end": 1438,
+            "passage_index": 1,
+            "quote": "TRAP staining demonstrated decreased osteoclast activity.",
+            "start": 1381
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP staining",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast activity",
+          "intervention": "local administration of M2-Exo",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In periodontitis rats, M2-Exo treatment improved bone regeneration-related outcomes and was associated with decreased osteoclast activity.",
+        "uncertainties": [
+          "The exact molecular composition of M2-Exo is not specified in the passage.",
+          "The quoted evidence combines molecular marker changes with the osteoclast phenotype; the causal link is not directly demonstrated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "periodontitis",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "73"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "2-DG",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "beneficial effects",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1707,
+            "passage_index": 1,
+            "quote": "co-administration of 2-DG partially abrogated these beneficial effects, indicating a critical role for glycolytic metabolism",
+            "start": 1583
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "beneficial effects of M2-Exo",
+          "intervention": "co-administration of 2-DG with M2-Exo",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Co-administration of 2-DG partially reduced the beneficial effects of M2-Exo, consistent with glycolysis being important for the reported bone-regenerative response.",
+        "uncertainties": [
+          "The passage does not specify which individual outcome(s) were partially abrogated beyond the general beneficial effects.",
+          "The glycolysis interpretation is stated by the authors and should not be treated as a direct mechanistic demonstration."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1463,
+        1573
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1002,
+        1113
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1381,
+        1438
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1169,
+        1220
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1583,
+        1707
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1727,
+        1817
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

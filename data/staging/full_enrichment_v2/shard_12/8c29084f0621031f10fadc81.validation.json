@@ -1,0 +1,225 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "alveolar bone",
+          "disease_setting": "periodontitis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "37",
+              "38",
+              "40",
+              "44",
+              "47"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Dec2KO mice",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [
+              "37",
+              "38",
+              "40",
+              "44",
+              "47"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "WT mice",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [
+              "39",
+              "45",
+              "49"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "P. gingivalis",
+            "taxon": "837"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 868,
+            "passage_index": 1,
+            "quote": "Micro-CT showed that the alveolar bone resorption of Dec2KO mice was more severe than WT mice after treatment with P. gingivalis.",
+            "start": 739
+          },
+          {
+            "end": 995,
+            "passage_index": 1,
+            "quote": "Immunohistochemistry and Tartrate-resistant acid phosphatase staining showed active osteoclast differentiation in Dec2KO mice.",
+            "start": 869
+          }
+        ],
+        "experiment": {
+          "assay": "microcomputed tomography; immunohistochemistry; Tartrate-resistant acid phosphatase staining",
+          "dose": null,
+          "duration": null,
+          "endpoint": "alveolar bone resorption; osteoclast differentiation",
+          "intervention": "Dec2 knockout",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In periodontitis mice treated with P. gingivalis, Dec2 knockout was associated with more severe alveolar bone resorption and active osteoclast differentiation than wild-type mice.",
+        "uncertainties": [
+          "The knockout and phenotype are reported at the animal level; the specific molecular form of Dec2 is not directly stated in the perturbation description.",
+          "The comparison is between Dec2KO and WT mice, but the causal mediator of the worsened phenotype is not established as direct."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "periodontitis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Dec2 protein",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "30",
+              "35",
+              "43",
+              "48",
+              "51"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL gene",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1348,
+            "passage_index": 1,
+            "quote": "Furthermore, luciferase reporter and ChIP assays confirmed the direct binding of Dec2 protein to the RANKL gene.",
+            "start": 1236
+          }
+        ],
+        "experiment": {
+          "assay": "luciferase reporter; Chromatin immunoprecipitation (ChIP)",
+          "dose": null,
+          "duration": null,
+          "endpoint": "binding of Dec2 protein to the RANKL gene",
+          "intervention": "luciferase reporter and ChIP assays",
+          "outcome_change": "not_stated",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "direct",
+          "effect_level": "binding",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Dec2 protein was reported to directly bind the RANKL gene, based on luciferase reporter and ChIP assays.",
+        "uncertainties": [
+          "The text states direct binding, but does not specify the exact genomic site or whether binding alters transcription in this passage.",
+          "Species context is from the study model; the binding assay itself is not explicitly attributed to a species in the sentence."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        739,
+        868
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        408,
+        477
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        869,
+        995
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        479,
+        548
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1236,
+        1348
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        700,
+        806
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

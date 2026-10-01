@@ -1,0 +1,203 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "early phase"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "L-plastin phosphorylation",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "early phase of sealing ring formation",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 125,
+            "passage_index": 0,
+            "quote": "L-plastin phosphorylation regulates the early phase of sealing ring formation by actin bundling process in mouse osteoclasts.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "sealing ring formation",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The title states that L-plastin phosphorylation regulates early sealing ring formation in mouse osteoclasts.",
+        "uncertainties": [
+          "Title-level statement is broad and does not specify experimental evidence or molecular direction beyond 'regulates'."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "early phase"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "7"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNF",
+            "key": "e1",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "pathway",
+            "surface": "TNF-alpha signaling",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "phosphorylation of serine-5 and -7 in L-plastin",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "L-plastin",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "actin bundling capacity",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "nascent sealing zones",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 590,
+            "passage_index": 1,
+            "quote": "We have shown here that TNF-alpha signaling regulates the phosphorylation of serine-5 and -7 in L-plastin which increases the actin bundling capacity of L-plastin and hence the formation of nascent sealing zones in mouse osteoclasts.",
+            "start": 357
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "phosphorylation / actin bundling / nascent sealing zone formation",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "TNF-alpha signaling is reported to regulate phosphorylation of L-plastin at serine-5 and -7, which increases actin bundling capacity and promotes nascent sealing zone formation in mouse osteoclasts.",
+        "uncertainties": [
+          "The text states a signaling relationship but does not establish whether the effect is direct.",
+          "Provider annotation 7 maps TNF-alpha to a gene identifier, but the claim text uses signaling and does not confirm a specific molecular entity form."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        125
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        124
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        357,
+        590
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        277,
+        512
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

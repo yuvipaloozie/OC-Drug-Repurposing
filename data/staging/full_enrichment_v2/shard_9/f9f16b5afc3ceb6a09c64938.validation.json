@@ -1,0 +1,148 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "odontoclasts / osteoclasts",
+          "compartment": "extracellular vesicles",
+          "disease_setting": "root resorption / alveolar bone loss",
+          "species": "Mouse",
+          "stage": "Day 7"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "21"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "cytidine",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "22"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "isocytosine",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "23"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "thymine",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "24"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "succinate",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "25"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "citrulline",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "complex",
+            "surface": "EVs from odontoclasts",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e7",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "complex",
+            "surface": "osteoclasts",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1554,
+            "passage_index": 1,
+            "quote": "Known metabolites cytidine, isocytosine, thymine, succinate and citrulline were found at statistically higher levels in EVs from odontoclasts compared with osteoclasts.",
+            "start": 1386
+          }
+        ],
+        "experiment": {
+          "assay": "global metabolomic profiling using a Thermo Q-Exactive Orbitrap mass spectrometer with a Dionex UHPLC and autosampler",
+          "dose": null,
+          "duration": "Day 7",
+          "endpoint": "metabolite levels in EVs",
+          "intervention": "recombinant RANKL and CSF-1 to trigger differentiation along the clastic line",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e6",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Cytidine, isocytosine, thymine, succinate, and citrulline were reported at statistically higher levels in odontoclast EVs than in osteoclast EVs.",
+        "uncertainties": [
+          "The text reports higher metabolite levels in odontoclast EVs versus osteoclast EVs but does not specify a causal mechanism.",
+          "The entity 'EVs from odontoclasts' is a contextual complex/phenotype rather than a canonical molecular entity.",
+          "The passage groups multiple metabolites; the claim is represented with one representative subject entity while the summary covers all listed metabolites."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1386,
+        1554
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1486,
+        1561
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,195 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "metaphyses of long bones and white adipose tissue",
+          "disease_setting": "ovariectomy-induced bone loss and weight gain",
+          "species": "mouse",
+          "stage": "post-ovariectomy"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D004221"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Disulfiram",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "4790"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "NF-kappaB activation",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1460,
+            "passage_index": 1,
+            "quote": "Disulfiram, an anti-alcoholic drug, suppressed OVX-induced activation of NF-kappaB in the metaphyses of long bones and white adipose tissue (WAT), as well as weight gain and bone loss.",
+            "start": 1276
+          }
+        ],
+        "experiment": {
+          "assay": "NF-kappaB reporter mice luminescence",
+          "dose": null,
+          "duration": null,
+          "endpoint": "NF-kappaB activation",
+          "intervention": "Disulfiram",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Disulfiram suppressed OVX-induced NF-kappaB activation in long-bone metaphyses and white adipose tissue.",
+        "uncertainties": [
+          "The text links disulfiram to suppression of both NF-kappaB activation and phenotypic outcomes in the same sentence; the exact causal chain is not separated.",
+          "NF-kappaB is annotated as a gene in the provider data, but the sentence describes activation rather than expression."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ovariectomy-induced bone loss and weight gain",
+          "species": "mouse",
+          "stage": "post-ovariectomy"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D004221"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Disulfiram",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "weight gain",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1460,
+            "passage_index": 1,
+            "quote": "Disulfiram, an anti-alcoholic drug, suppressed OVX-induced activation of NF-kappaB in the metaphyses of long bones and white adipose tissue (WAT), as well as weight gain and bone loss.",
+            "start": 1276
+          }
+        ],
+        "experiment": {
+          "assay": "NF-kappaB reporter mice luminescence / phenotype observation",
+          "dose": null,
+          "duration": null,
+          "endpoint": "weight gain and bone loss",
+          "intervention": "Disulfiram",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Disulfiram reduced OVX-induced weight gain and bone loss.",
+        "uncertainties": [
+          "The sentence reports suppression of both weight gain and bone loss together; this claim encodes them as a combined phenotype effect and does not separate the two outcomes experimentally."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1276,
+        1460
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1367,
+        1551
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1276,
+        1460
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1367,
+        1551
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

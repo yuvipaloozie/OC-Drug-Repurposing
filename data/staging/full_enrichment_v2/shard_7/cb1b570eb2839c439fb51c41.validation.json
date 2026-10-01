@@ -1,0 +1,113 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "masseter muscle",
+          "disease_setting": null,
+          "species": "rabbits",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "BoNT-A",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "7"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "Desmin",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1142,
+            "passage_index": 1,
+            "quote": "Desmin expression was significantly reduced in the BoNT-A group.",
+            "start": 1078
+          },
+          {
+            "end": 308,
+            "passage_index": 1,
+            "quote": "a single Botulinum Toxin Type A (BoNT-A) injection on masticatory function and musculoskeletal structure in rabbits",
+            "start": 193
+          }
+        ],
+        "experiment": {
+          "assay": "immunohistochemical analyses",
+          "dose": "10 units",
+          "duration": "four weeks",
+          "endpoint": "Desmin expression",
+          "intervention": "single Botulinum Toxin Type A (BoNT-A) injection",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In rabbits, a single botulinum toxin type A injection was associated with reduced Desmin expression.",
+        "uncertainties": [
+          "The text does not specify whether Desmin is being treated as a gene, RNA, or protein expression readout.",
+          "The exact molecular directness of the BoNT-A effect on Desmin expression is not established from the abstract alone."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1078,
+        1142
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        392,
+        450
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        193,
+        308
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        172,
+        279
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,94 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoblasts",
+          "compartment": null,
+          "disease_setting": "skeletal fluorosis",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "60"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "CTHRC1",
+            "taxon": "rat"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1619,
+            "passage_index": 1,
+            "quote": "fluoride exposure led to hypomethylation and high expression of Cthrc1 in osteoblasts through TET2 demethylase, which promoted osteoblast differentiation by activating Wnt3a/beta-catenin signalling pathway, and participated in the occurrence of osteosclerotic skeletal fluorosis. Meanwhile, the high CTHRC1 protein expression also inhibited osteoclast differentiation",
+            "start": 1252
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation",
+          "intervention": "fluoride exposure",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Under normal nutritional conditions, fluoride exposure was associated with high CTHRC1 protein expression, and that high CTHRC1 expression inhibited osteoclast differentiation.",
+        "uncertainties": [
+          "The quoted span combines CTHRC1 regulation with the osteoclast-differentiation outcome; the causal link is stated in text but not separately experimentally dissected.",
+          "The exact experimental system for the osteoclast assay is not specified in the provided passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1252,
+        1619
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1399,
+        1717
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

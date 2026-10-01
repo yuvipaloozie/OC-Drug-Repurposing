@@ -1,0 +1,213 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "57"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "CXCR7 agonist",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "76"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "63"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "LPS",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1317,
+            "passage_index": 1,
+            "quote": "Mice injected with LPS and CXCR7 agonist showed significantly reduced osteoclastogenesis and bone resorption compared with mice injected with LPS alone.",
+            "start": 1165
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis and bone resorption",
+          "intervention": "LPS and CXCR7 agonist",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In mice, treatment with LPS plus the CXCR7 agonist VUF11207 reduced osteoclastogenesis and bone resorption compared with LPS alone.",
+        "uncertainties": [
+          "The intervention was a combination of LPS and CXCR7 agonist, so the effect of the agonist alone is not isolated in this sentence."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "in vitro",
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "57"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "CXCR7 agonist",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "60"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "CXCL12",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "69",
+              "71"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "RANKL- and TNF-alpha-induced osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1435,
+            "passage_index": 1,
+            "quote": "Moreover, the CXCR7 agonist inhibited CXCL12 enhancement of RANKL- and TNF-alpha-induced osteoclastogenesis in vitro.",
+            "start": 1318
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "CXCL12 enhancement of RANKL- and TNF-alpha-induced osteoclastogenesis",
+          "intervention": "CXCR7 agonist",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In vitro, the CXCR7 agonist inhibited CXCL12 enhancement of RANKL- and TNF-alpha-induced osteoclastogenesis.",
+        "uncertainties": [
+          "The sentence describes inhibition of CXCL12 enhancement, so the exact mechanistic target beyond the phenotype is not fully resolved."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1165,
+        1317
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1051,
+        1176
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1318,
+        1435
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1211,
+        1327
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

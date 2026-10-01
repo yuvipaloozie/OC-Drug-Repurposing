@@ -1,0 +1,187 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "no_effect",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone tissue",
+          "disease_setting": "periodontitis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "61"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Traumatic occlusion",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [
+              "46",
+              "47"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 757,
+            "passage_index": 1,
+            "quote": "Traumatic occlusion alone, sustained for 8 weeks, did not directly induce bone resorption",
+            "start": 668
+          }
+        ],
+        "experiment": {
+          "assay": "micro-CT",
+          "dose": null,
+          "duration": "8 weeks",
+          "endpoint": "bone resorption",
+          "intervention": "Traumatic occlusion alone, sustained for 8 weeks",
+          "outcome_change": "no_detected_change",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Traumatic occlusion maintained for 8 weeks did not directly induce bone resorption.",
+        "uncertainties": [
+          "The sentence states lack of direct induction, not a mechanistic molecular cause.",
+          "The exact biological entity for traumatic occlusion is a phenotype/condition rather than a molecular entity."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone tissue",
+          "disease_setting": "periodontitis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "61"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Traumatic occlusion",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [
+              "44",
+              "46",
+              "47",
+              "58"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 839,
+            "passage_index": 1,
+            "quote": "Traumatic occlusion alone, sustained for 8 weeks, did not directly induce bone resorption; however, it significantly exacerbated bone resorption in mice with periodontitis",
+            "start": 668
+          }
+        ],
+        "experiment": {
+          "assay": "micro-CT",
+          "dose": null,
+          "duration": "8 weeks",
+          "endpoint": "bone resorption",
+          "intervention": "Traumatic occlusion",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Traumatic occlusion significantly exacerbated bone resorption in mice with periodontitis.",
+        "uncertainties": [
+          "The result is reported at the group level in periodontitis mice, not as a direct molecular mechanism.",
+          "The sentence does not specify whether the exacerbation is direct or indirect."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        668,
+        757
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        676,
+        757
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        668,
+        839
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        676,
+        838
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

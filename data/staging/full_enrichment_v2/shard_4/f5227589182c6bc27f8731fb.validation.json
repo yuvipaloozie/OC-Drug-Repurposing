@@ -1,0 +1,168 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclast precursor cells",
+          "compartment": null,
+          "disease_setting": "apical periodontitis",
+          "species": "murine",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "35",
+              "45",
+              "47",
+              "48"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "NeoSEALER Flo",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "36",
+              "37",
+              "41"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "e2",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 564,
+            "passage_index": 1,
+            "quote": "while further exploring their regulatory roles in receptor activator of nuclear factor kappa-B ligand (RANKL)-induced osteoclastogenesis in vitro.",
+            "start": 418
+          },
+          {
+            "end": 1485,
+            "passage_index": 1,
+            "quote": "Notably, all tested sealers exhibited inhibitory effects on osteoclast differentiation, with NeoSEALER Flo demonstrating the most potent suppression.",
+            "start": 1336
+          },
+          {
+            "end": 2042,
+            "passage_index": 1,
+            "quote": "NeoSEALER Flo, a calcium silicate-based bioceramic sealer",
+            "start": 1985
+          },
+          {
+            "end": 2130,
+            "passage_index": 1,
+            "quote": "effectively minimises cytotoxicity while inhibiting osteoclast formation and activity.",
+            "start": 2044
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP staining; phalloidin staining; qPCR; Western blot; CCK-8 assay",
+          "dose": "low-concentration and high-concentration extracts (50 mg/mL)",
+          "duration": "time-dependent",
+          "endpoint": "osteoclast differentiation / formation / activity",
+          "intervention": "NeoSEALER Flo extracts",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "NeoSEALER Flo extract inhibited RANKL-induced osteoclastogenesis in vitro, with the strongest suppression among the tested sealers.",
+        "uncertainties": [
+          "The text reports multiple sealers; this claim focuses on NeoSEALER Flo because it is stated to have the most potent suppression.",
+          "The exact molecular target and direct mechanism are not stated.",
+          "The entity RANKL is annotated as a gene in the packet, but the text context supports a protein/ligand role; mapping is uncertain."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        418,
+        564
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        653,
+        771
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1336,
+        1485
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1097,
+        1197
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1985,
+        2042
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2100,
+        2158
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        2044,
+        2130
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2160,
+        2197
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

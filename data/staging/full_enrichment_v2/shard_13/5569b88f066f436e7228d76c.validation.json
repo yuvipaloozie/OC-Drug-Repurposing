@@ -1,0 +1,359 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW 264.7",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "extracellular acidification",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1186,
+            "passage_index": 1,
+            "quote": "The results showed that in the pH 6.8 medium group the number of osteoclasts was 511.2+-54.72 and the area of bone absorption was 4,184.88+-277.14 microm2; both were significantly higher than those in the pH 7.4 medium group (all P<0.01).",
+            "start": 948
+          },
+          {
+            "end": 255,
+            "passage_index": 1,
+            "quote": "The impact of extracellular acidification on osteoclasts was investigated.",
+            "start": 181
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP staining and bone resorption pit assay",
+          "dose": "pH 6.8 or 7.4",
+          "duration": null,
+          "endpoint": "osteoclast number and bone resorption area",
+          "intervention": "cell culture media at pH 6.8 or 7.4",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Extracellular acidification (pH 6.8) increased osteoclast number and bone resorption activity compared with pH 7.4 medium.",
+        "uncertainties": [
+          "The text reports osteoclasts generated from RAW 264.7 cells, but species is not explicitly stated in the passage.",
+          "The intervention is described as extracellular acidification via medium pH rather than a discrete compound."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "58",
+              "59"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "copper ion",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "57",
+              "61",
+              "78",
+              "80",
+              "84"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "OGR1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "60",
+              "63",
+              "64",
+              "66",
+              "67",
+              "69",
+              "71",
+              "85",
+              "86"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Ca2+",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1336,
+            "passage_index": 1,
+            "quote": "Inhibition of OGR1 using copper ion (Cu2+) reduced the number of osteoclasts and the area of bone resorption in the pH 6.8 medium group (all P<0.05).",
+            "start": 1187
+          },
+          {
+            "end": 1560,
+            "passage_index": 1,
+            "quote": "Furthermore, extracellular acid (pH 6.8) was able to induce a transient increase of Ca2+ levels in osteoclasts; however, inhibition of OGR1 using Cu2+ effectively attenuated the acid-induced increase of Ca2+ in osteoclasts.",
+            "start": 1337
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP staining; bone resorption pit assay; laser scanning confocal microscopy",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast number and bone resorption area; intracellular Ca2+ levels",
+          "intervention": "Cu2+",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Copper ion inhibition of OGR1 reduced the acid-induced increase in osteoclast number, bone resorption, and intracellular Ca2+ levels.",
+        "uncertainties": [
+          "The passage attributes the effect to inhibition of OGR1 by Cu2+, but the direct molecular target of Cu2+ is not experimentally established here.",
+          "Ca2+ is annotated as a chemical, but the passage refers to intracellular Ca2+ levels rather than a named molecular entity."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "82"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "cyclosporine A",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "75",
+              "81",
+              "83",
+              "87",
+              "5"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "NFATc1",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2971,
+            "passage_index": 1,
+            "quote": "the specific calcineurin inhibitor cyclosporine A significantly inhibited the acid-induced expression of NFATc1 in osteoclasts.",
+            "start": 2844
+          },
+          {
+            "end": 2830,
+            "passage_index": 1,
+            "quote": "The mRNA expression levels of NFATc1 in osteoclasts were also increased in the pH 6.8 medium group compared with those in the pH 7.4 medium group (P<0.05).",
+            "start": 2675
+          }
+        ],
+        "experiment": {
+          "assay": "RT-qPCR",
+          "dose": null,
+          "duration": null,
+          "endpoint": "NFATc1 expression",
+          "intervention": "cyclosporine A",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Cyclosporine A inhibited the acid-induced expression of NFATc1 in osteoclasts.",
+        "uncertainties": [
+          "The passage states cyclosporine A is a calcineurin inhibitor, but the directness of the NFATc1 effect is not established in this sentence alone."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        948,
+        1186
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1231,
+        1340
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        181,
+        255
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        273,
+        359
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1187,
+        1336
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1340,
+        1456
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1337,
+        1560
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1458,
+        1592
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        2844,
+        2971
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        3018,
+        3109
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        2675,
+        2830
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2838,
+        2859
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

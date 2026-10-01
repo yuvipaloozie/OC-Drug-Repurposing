@@ -1,0 +1,139 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "femur",
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "growth stage"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "compound",
+            "surface": "high-fat diet",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone formation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 125,
+            "passage_index": 0,
+            "quote": "Expression of genes associated with bone resorption is increased and bone formation is decreased in mice fed a high-fat diet.",
+            "start": 0
+          },
+          {
+            "end": 1154,
+            "passage_index": 1,
+            "quote": "The present study investigated the possible molecular mechanisms for the dyslipidemic HFD-induced bone loss through comparing femoral gene expression profiles in HFD-fed mice versus the normal diet-fed mice during the growth stage. We used Affymetrix 430A Gene Chips to identify the significant changes in expression of the genes involved in bone metabolism, lipid metabolism, and the related signal transduction pathways. Quantitative RT-PCR was carried out on some significant genes for corroboration of the microarray results. At the conclusion of the 12-week feeding, the down-regulation of most of the genes related to bone formation and the up-regulation of most of the genes related to bone resorption were observed in the HFD-fed mice, consistent with the changes in plasma bone metabolic biomarkers. Together, the HFD induced a decrease in the majority of the adipogenesis-, lipid biosynthesis-, and fatty acid oxidation-related gene expression, such as PPARg and APOE.",
+            "start": 176
+          },
+          {
+            "end": 1463,
+            "passage_index": 1,
+            "quote": "These results indicate that an HFD may induce inhibitory bone formation and enhanced bone resorption, thus causing adverse bone status.",
+            "start": 1328
+          }
+        ],
+        "experiment": {
+          "assay": "Affymetrix 430A Gene Chips; quantitative RT-PCR",
+          "dose": "high-fat diet",
+          "duration": "12-week feeding",
+          "endpoint": "gene expression related to bone resorption",
+          "intervention": "high-fat diet (HFD)",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In mice fed a high-fat diet, most genes related to bone resorption were up-regulated and most genes related to bone formation were down-regulated; the authors conclude that high-fat diet may enhance bone resorption and inhibit bone formation.",
+        "uncertainties": [
+          "The claim mixes observed gene-expression changes with the authors' broader interpretation of bone formation/resorption status.",
+          "The exact molecular entity for 'high-fat diet' is not a specific compound and is represented only as the dietary intervention stated in the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        125
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        123
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        176,
+        1154
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        258,
+        543
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1328,
+        1463
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1470,
+        1568
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

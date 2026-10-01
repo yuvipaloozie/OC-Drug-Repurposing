@@ -1,0 +1,227 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow osteoclasts",
+          "compartment": null,
+          "disease_setting": "osteopenia",
+          "species": "mouse",
+          "stage": "osteoclast differentiation"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "57"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Andrographolide",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "58"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:GLS",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "glutaminase",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "59"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "ERRalpha",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "61"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "PGC-1beta",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1062,
+            "passage_index": 1,
+            "quote": "Andrographolide inhibited glutaminase expression",
+            "start": 1014
+          }
+        ],
+        "experiment": {
+          "assay": "real-time polymerase chain reaction (PCR) and immunoblot analyses",
+          "dose": null,
+          "duration": null,
+          "endpoint": "glutaminase expression",
+          "intervention": "andrographolide",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Andrographolide decreased glutaminase expression in the reported osteoclastogenesis context.",
+        "uncertainties": [
+          "The sentence is embedded in a longer mechanism statement; the direct molecular target relationship is asserted in text, but the exact cell-type context for this specific inhibition sentence is inferred from the surrounding abstract.",
+          "The existing-node suggestion maps glutaminase to a mouse protein node, but the text itself only supports the term 'glutaminase'."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteopenia",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "67"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "andrographolide",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "69"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "70"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "51"
+            ],
+            "existing_node_id": null,
+            "key": "e7",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "mice",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1670,
+            "passage_index": 1,
+            "quote": "andrographolide suppressed osteoclastic bone resorption and attenuated bone loss in vivo.",
+            "start": 1581
+          }
+        ],
+        "experiment": {
+          "assay": "in vivo",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone loss",
+          "intervention": "andrographolide",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e6",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Andrographolide reduced osteoclastic bone resorption and attenuated bone loss in vivo.",
+        "uncertainties": [
+          "The quote contains two phenotype outcomes ('bone resorption' and 'bone loss'); the regulatory object is represented with bone loss, while bone resorption is captured only in the summary.",
+          "The in vivo model is described generically as mice with osteopenia; the specific induction model is high-fat diet in male mice or ovariectomy in female mice, but the sentence quoted here does not specify which one."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1014,
+        1062
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1147,
+        1195
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1581,
+        1670
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1684,
+        1773
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,240 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "37",
+              "40",
+              "44"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Butylphthalide",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "38"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "33"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "TRAcP-positive osteoclasts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "36",
+              "39"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1187,
+            "passage_index": 1,
+            "quote": "Butylphthalide not only suppressed osteoclastogenesis and bone resorption in vitro but also significantly decreased TRAcP-positive osteoclasts and prevented bone loss in vivo",
+            "start": 1013
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP staining; bone slice assay; animal model",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis, bone resorption, TRAcP-positive osteoclasts, bone loss",
+          "intervention": "Butylphthalide",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Butylphthalide suppressed osteoclastogenesis and bone resorption in vitro and decreased TRAcP-positive osteoclasts while preventing bone loss in vivo.",
+        "uncertainties": [
+          "The passage summarizes both in vitro and in vivo results, but does not separate the effect sizes by assay.",
+          "Species for the osteoclast experiments is not explicitly stated in the abstract."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "intracellular",
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "37",
+              "40",
+              "44"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Butylphthalide",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "41",
+              "43"
+            ],
+            "existing_node_id": "CHEBI:26523",
+            "key": "e2",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "compound",
+            "surface": "ROS",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "MAPK signaling pathway",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "42"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:NFATC1",
+            "key": "e4",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "protein",
+            "surface": "NFATc1",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1401,
+            "passage_index": 1,
+            "quote": "Further mechanistic experiments revealed that Butylphthalide reduces intracellular ROS in osteoclasts, inhibits the MAPK and NFATc1 signaling pathways, and downregulates the key genes and proteins of osteoclasts.",
+            "start": 1189
+          }
+        ],
+        "experiment": {
+          "assay": "Western blot; PCR; immunofluorescence; immunohistochemical staining",
+          "dose": null,
+          "duration": null,
+          "endpoint": "intracellular ROS; MAPK and NFATc1 signaling pathways",
+          "intervention": "Butylphthalide",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Butylphthalide reduced intracellular ROS in osteoclasts and inhibited the MAPK and NFATc1 signaling pathways.",
+        "uncertainties": [
+          "The sentence bundles several mechanistic effects; the exact target of 'inhibits the MAPK and NFATc1 signaling pathways' is not fully disambiguated beyond the compound context.",
+          "NFATc1 is provider-annotated as mouse protein, but the abstract does not explicitly state species for this mechanistic pathway statement."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1013,
+        1187
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1096,
+        1247
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1189,
+        1401
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1301,
+        1515
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,113 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "midpalatal suture",
+          "disease_setting": null,
+          "species": "rat",
+          "stage": "adult"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "heavy force groups",
+            "taxon": "10116"
+          },
+          {
+            "annotation_ids": [
+              "12"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "RANKL",
+            "taxon": "10116"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1162,
+            "passage_index": 1,
+            "quote": "Heavy forces resulted in significantly greater suture separation at early time points but also induced more bone resorption",
+            "start": 1039
+          },
+          {
+            "end": 1287,
+            "passage_index": 1,
+            "quote": "Immunohistochemistry confirmed increased RANKL expression in heavy force groups",
+            "start": 1208
+          }
+        ],
+        "experiment": {
+          "assay": "immunohistochemistry",
+          "dose": "200 g",
+          "duration": "3, 7, and 14 days",
+          "endpoint": "RANKL expression",
+          "intervention": "heavy force (200 g)",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Heavy force group exposure was associated with increased RANKL expression in the midpalatal suture, indicating enhanced bone remodeling activity.",
+        "uncertainties": [
+          "The text links increased RANKL expression to heavy force groups, but does not establish direct molecular causality.",
+          "RANKL molecular form is ambiguous in the abstract; immunohistochemistry suggests protein-level measurement, but this is not explicit."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1039,
+        1162
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        492,
+        608
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1208,
+        1287
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        675,
+        762
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

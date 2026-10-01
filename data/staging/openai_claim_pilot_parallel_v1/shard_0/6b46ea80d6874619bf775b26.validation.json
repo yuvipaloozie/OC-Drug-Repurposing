@@ -1,0 +1,170 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "near the implant",
+          "disease_setting": "marginal bone loss",
+          "species": "9606",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "22",
+              "23",
+              "26",
+              "28",
+              "32"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": "9606"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 818,
+            "passage_index": 1,
+            "quote": "We observed approximately 1 mm of bone resorption at the five-year follow-up, with the first 0.78 mm of them being documented at the three-year follow-up.",
+            "start": 664
+          }
+        ],
+        "experiment": {
+          "assay": "orthopantomography",
+          "dose": null,
+          "duration": "five years",
+          "endpoint": "bone resorption",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": null,
+        "summary": "In this retrospective study of implant-supported rehabilitation, the authors observed about 1 mm of bone resorption at five years, with 0.78 mm documented by three years.",
+        "uncertainties": [
+          "Observational retrospective design; no causal perturbation was tested.",
+          "The text reports bone resorption around implants, not a specific molecular mechanism."
+        ]
+      },
+      "errors": [
+        "regulatory form mismatch"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "around the implant",
+          "disease_setting": "marginal bone loss",
+          "species": "9606",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "22",
+              "23",
+              "26",
+              "28",
+              "32"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorptions",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [
+              "29"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "zirconia",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1419,
+            "passage_index": 1,
+            "quote": "The narrowest diameter (3.5 mm; p = 0.001) and anterior mandible (p = 0.008) had the highest bone resorptions. Contrarily, with an insertion depth of approximately 1 mm (p = 0.004), the splinted implant prosthesis (p = 0.21) and zirconia material of the prosthesis (p = 0.57) had the lowest bone remodeling.",
+            "start": 1112
+          }
+        ],
+        "experiment": {
+          "assay": "orthopantomography",
+          "dose": null,
+          "duration": "five years",
+          "endpoint": "bone remodeling / bone resorption",
+          "intervention": null,
+          "outcome_change": "other",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": null,
+        "summary": "The study reports that narrower implant diameter and anterior mandible location were associated with the highest bone resorption, while about 1 mm insertion depth was associated with the lowest bone remodeling.",
+        "uncertainties": [
+          "The passage gives associations with implant characteristics, not a direct causal intervention.",
+          "'Zirconia material' is a material property in the clinical context; molecular identity is only text-supported as zirconia."
+        ]
+      },
+      "errors": [
+        "regulatory form mismatch"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        664,
+        818
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        473,
+        594
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1112,
+        1419
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        596,
+        885
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

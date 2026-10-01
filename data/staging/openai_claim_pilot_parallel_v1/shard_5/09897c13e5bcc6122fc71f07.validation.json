@@ -1,0 +1,219 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclast precursor cells",
+          "compartment": "in vitro",
+          "disease_setting": "apical periodontitis",
+          "species": "murine",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "35",
+              "45",
+              "47",
+              "48"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "NeoSEALER Flo",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "36",
+              "37",
+              "41"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1484,
+            "passage_index": 1,
+            "quote": "all tested sealers exhibited inhibitory effects on osteoclast differentiation, with NeoSEALER Flo demonstrating the most potent suppression",
+            "start": 1345
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP staining",
+          "dose": "50 mg/mL",
+          "duration": null,
+          "endpoint": "RANKL-induced osteoclast formation",
+          "intervention": "NeoSEALER Flo extracts",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "NeoSEALER Flo extracts inhibited RANKL-induced osteoclast differentiation/formation in vitro, with the strongest suppression among the tested sealers.",
+        "uncertainties": [
+          "The exact sentence span may include multiple sealer names; the claim is attributed specifically to NeoSEALER Flo based on the surrounding text.",
+          "NeoSEALER Flo is a sealer product rather than a single defined molecular compound."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclast precursor cells",
+          "compartment": "in vitro",
+          "disease_setting": "apical periodontitis",
+          "species": "murine",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "32",
+              "33",
+              "34",
+              "35",
+              "42",
+              "43",
+              "45",
+              "47",
+              "48",
+              "49",
+              "50",
+              "51"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "sealer extracts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast-related gene and protein expression",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "36",
+              "37",
+              "41"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1699,
+            "passage_index": 1,
+            "quote": "a coordinated downregulation of osteoclast-related gene and protein expression",
+            "start": 1621
+          }
+        ],
+        "experiment": {
+          "assay": "qPCR and Western blot",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast-related gene and protein expression",
+          "intervention": "sealer treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Sealer extracts reduced osteoclast-related gene and protein expression during RANKL-induced osteoclastogenesis.",
+        "uncertainties": [
+          "The sentence describes a coordinated downregulation across multiple sealers; it does not isolate a single sealer-specific molecular target.",
+          "The exact genes/proteins downregulated are not listed in the abstract."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1345,
+        1484
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1360,
+        1499
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1621,
+        1699
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1472,
+        1587
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

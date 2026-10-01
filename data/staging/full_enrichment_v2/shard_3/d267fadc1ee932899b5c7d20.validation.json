@@ -1,0 +1,185 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "periodontal tissue",
+          "disease_setting": "periodontitis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "SLPI",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "24"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "alveolar bone loss",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 749,
+            "passage_index": 1,
+            "quote": "Administration of SLPI significantly reduced neutrophil elastase activity in periodontal tissue and alleviated alveolar bone loss in mice.",
+            "start": 611
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "alveolar bone loss",
+          "intervention": "Administration of SLPI",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "SLPI administration reduced alveolar bone loss in mice.",
+        "uncertainties": [
+          "The passage does not specify whether the bone-loss effect is direct or mediated through inflammation changes.",
+          "SLPI molecular form is inferred from the text name and not explicitly stated in the passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow macrophages",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "SLPI",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "bone marrow macrophages",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1054,
+            "passage_index": 1,
+            "quote": "Furthermore, in vitro treatment of bone marrow macrophages with SLPI resulted in the downregulation of osteoclast differentiation.",
+            "start": 924
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation",
+          "intervention": "treatment with SLPI",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "SLPI treatment downregulated osteoclast differentiation in bone marrow macrophages.",
+        "uncertainties": [
+          "The passage does not state whether SLPI acts directly on osteoclast precursors or indirectly through macrophage state changes."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        611,
+        749
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        754,
+        833
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        924,
+        1054
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        989,
+        1082
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

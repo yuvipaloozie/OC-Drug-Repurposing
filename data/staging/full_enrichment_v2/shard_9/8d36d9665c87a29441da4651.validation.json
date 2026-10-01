@@ -1,0 +1,191 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "LPS-induced inflammatory bone loss",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "61"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "DCA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 756,
+            "passage_index": 1,
+            "quote": "DCA supplementation improved bone mineral density, trabecular and cortical bone microarchitecture by suppressing osteoclastogenesis",
+            "start": 625
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "DCA supplementation",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "DCA supplementation suppressed osteoclastogenesis in the inflammatory bone-loss model.",
+        "uncertainties": [
+          "The passage summarizes a preclinical model but does not specify species or cell type in the extracted span.",
+          "The sentence links improved bone microarchitecture and osteoclastogenesis suppression; only the osteoclastogenesis part is extracted as the regulatory claim."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "LPS-induced inflammatory bone loss",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "63"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "DCA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "83",
+              "84"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "TGR5 and FXR",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1322,
+            "passage_index": 1,
+            "quote": "the anti-resorptive effects of DCA were mediated through bile acid receptors TGR5 and FXR, as pharmacological inhibition of these receptors reversed DCA-induced suppression of osteoclastogenesis",
+            "start": 1128
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "DCA-induced suppression of osteoclastogenesis",
+          "intervention": "pharmacological inhibition of these receptors",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e3"
+        },
+        "summary": "Pharmacological inhibition of TGR5 and FXR reversed the DCA-induced suppression of osteoclastogenesis, consistent with these receptors mediating the DCA effect.",
+        "uncertainties": [
+          "The text states both TGR5 and FXR; it does not resolve whether they act independently or as a complex.",
+          "The direction is inferred from the reversal of suppression rather than from a direct receptor-to-osteoclastogenesis assay."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        625,
+        756
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        406,
+        454
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1128,
+        1322
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        756,
+        866
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

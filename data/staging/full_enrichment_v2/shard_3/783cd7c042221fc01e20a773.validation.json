@@ -1,0 +1,159 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone tissue",
+          "disease_setting": "estrogen deficiency-induced bone loss",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "These extracts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone microstructure",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "plasma alkaline phosphatase activity",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone tissue formation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "32"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "ovariectomized rats",
+            "taxon": "10116"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 569,
+            "passage_index": 1,
+            "quote": "These extracts were administered to ovariectomized rats for 60 days.",
+            "start": 501
+          },
+          {
+            "end": 982,
+            "passage_index": 1,
+            "quote": "The extracts improved bone microstructure with higher trabecular bone, bone mineral density, calcium, phosphorus and magnesium levels, and lower porosity and intertrabecular space in bone tissue.",
+            "start": 787
+          },
+          {
+            "end": 1116,
+            "passage_index": 1,
+            "quote": "Furthermore, plasma alkaline phosphatase activity was elevated in extract-treated animals, indicating enhanced bone tissue formation.",
+            "start": 983
+          }
+        ],
+        "experiment": {
+          "assay": "high-performance liquid chromatography analysis; bone measurements; plasma alkaline phosphatase activity",
+          "dose": null,
+          "duration": "60 days",
+          "endpoint": "bone microstructure and plasma alkaline phosphatase activity",
+          "intervention": "flaxseed and mulberry extracts",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In ovariectomized female Wistar rats, flaxseed and mulberry extracts improved bone microstructure and increased plasma alkaline phosphatase activity, consistent with enhanced bone tissue formation under estrogen-deficient conditions.",
+        "uncertainties": [
+          "The passage reports a combined extract treatment, so the individual contributions of flaxseed versus mulberry are not separable from this text.",
+          "The object summarizes the stated interpretation of enhanced bone tissue formation rather than a directly measured molecular mechanism."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        501,
+        569
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        579,
+        620
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        787,
+        982
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        622,
+        752
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        983,
+        1116
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        754,
+        834
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

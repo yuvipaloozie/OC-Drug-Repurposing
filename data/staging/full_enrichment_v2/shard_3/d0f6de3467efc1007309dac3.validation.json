@@ -1,0 +1,130 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow macrophages",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:C057862"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "MC-LR",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D007501"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "iron uptake",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone marrow macrophages",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "100187907"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:ACP5",
+            "key": "e4",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "TRAP-positive pre-osteoclast cells",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "MESH:D001862"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1433,
+            "passage_index": 1,
+            "quote": "MC-LR exposure promotes iron uptake in bone marrow macrophages through the TF-TFR1 pathway, leading to its transformation to TRAP-positive pre-osteoclast cells, thereby promoting bone resorption",
+            "start": 1239
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "1-30 mug/L",
+          "duration": "6 months",
+          "endpoint": "bone resorption",
+          "intervention": "MC-LR exposure",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e5",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In mice, chronic MC-LR exposure promoted iron uptake in bone marrow macrophages, their transformation to TRAP-positive pre-osteoclast cells, and bone resorption.",
+        "uncertainties": [
+          "The passage links MC-LR to bone marrow macrophage transformation through the TF-TFR1 pathway, but the exact molecular intermediates are not fully detailed.",
+          "TRAP annotation was provided as a gene tag; the claim uses the surface text as a phenotype-like cell state, while the suggested existing node is ambiguous."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1239,
+        1433
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1362,
+        1558
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,117 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "larvae",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "zebrafish",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "simulated microgravity",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "26",
+              "27",
+              "35",
+              "36",
+              "37"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "RANKL/RANK/OPG pathway",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 432,
+            "passage_index": 1,
+            "quote": "zebrafish larvae (Danio rerio) when exposed to simulated microgravity",
+            "start": 363
+          },
+          {
+            "end": 911,
+            "passage_index": 1,
+            "quote": "followed by activation of osteoclast-associated genes (tnfsf11/RANKL, tnfrsf11b/OPG, tnfrsf11a/RANK, nfatc1, ctsk)",
+            "start": 797
+          }
+        ],
+        "experiment": {
+          "assay": "RT-qPCR",
+          "dose": null,
+          "duration": "18-24 h",
+          "endpoint": "transcriptional responses / RT-qPCR",
+          "intervention": "simulated microgravity (SMG) using a Random Positioning Machine",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In zebrafish larvae exposed to simulated microgravity, the RANKL/RANK/OPG pathway was activated after longer exposure times.",
+        "uncertainties": [
+          "The passage groups several osteoclast-associated genes under activation; the specific causal relationship to the named pathway is summarized at pathway level.",
+          "The reported response is time-dependent, with minimal changes at 6-12 h and activation at 18-24 h; only the later response is captured here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        363,
+        432
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        494,
+        552
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        797,
+        911
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        931,
+        1044
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,186 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "33",
+              "36",
+              "37"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Sh3bp2",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1005,
+            "passage_index": 1,
+            "quote": "Sh3bp2-/- osteoclasts spread poorly and were unable to effectively degrade dentine matrix in vitro",
+            "start": 907
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast spreading and dentine matrix degradation",
+          "intervention": "Sh3bp2-/-",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Loss of Sh3bp2 impaired osteoclast function in mice; the mutant osteoclasts spread poorly and degraded dentine matrix less effectively in vitro.",
+        "uncertainties": [
+          "The text reports osteoclast functional defects in Sh3bp2-/- mice, but does not specify the responsible molecular form beyond the gene-level knockout.",
+          "The endpoint combines two functional readouts; the exact contribution of each is not separated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "31",
+              "32",
+              "38",
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "3BP2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "40"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:SRC",
+            "key": "e2",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "protein",
+            "surface": "Src",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1116,
+            "passage_index": 1,
+            "quote": "3BP2 was required for Abl activation in osteoblasts and Src activation in osteoclasts",
+            "start": 1031
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "Src activation",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "3BP2 was required for Src activation in osteoclasts.",
+        "uncertainties": [
+          "The sentence states a requirement for Src activation, but does not specify whether the effect is direct or indirect.",
+          "Species is inferred from the mouse model context in the abstract; the molecular form of 3BP2 is not separately established in the sentence."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        907,
+        1005
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        995,
+        1093
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1031,
+        1116
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1119,
+        1202
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

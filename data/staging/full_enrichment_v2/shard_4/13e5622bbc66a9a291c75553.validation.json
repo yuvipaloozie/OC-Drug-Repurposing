@@ -1,0 +1,138 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "no_effect",
+        "context": {
+          "cell_type": "CD14 + monocytes",
+          "compartment": "in vitro",
+          "disease_setting": "rheumatoid arthritis",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "ACPAs",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "TRAP-positive multinucleated cells",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast-related genes",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption pit area",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 950,
+            "passage_index": 1,
+            "quote": "Osteoclast formation was evaluated by tartrate resistant acid phosphatase (TRAP) staining",
+            "start": 861
+          },
+          {
+            "end": 1457,
+            "passage_index": 1,
+            "quote": "However, ACPAs treatment did not significantly increase the number of TRAP-positive multinucleated cells, the expression of osteoclast-related genes, or bone resorption pit area compared to controls.",
+            "start": 1258
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP staining, quantitative PCR, scanning electron microscopy",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast formation, osteoclast-related gene expression, and bone resorption",
+          "intervention": "ACPAs treatment",
+          "outcome_change": "no_detected_change",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Polyclonal ACPAs purified from RA patients did not significantly increase osteoclast formation, osteoclast marker expression, or bone resorption in vitro.",
+        "uncertainties": [
+          "The text describes pooled polyclonal ACPAs, which are complex antibodies rather than a single defined molecular entity.",
+          "The experiment tested multiple readouts; the claim summarizes the overall reported no-significant-effect finding rather than a direct molecular mechanism."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        861,
+        950
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1053,
+        1114
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1258,
+        1457
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1236,
+        1341
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,139 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "diabetic bone defects",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D005334"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "localized mild hyperthermia",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "37"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "TA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "47"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Zn2+",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "48"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast formation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1421,
+            "passage_index": 1,
+            "quote": "This was achieved through the combined effects of localized mild hyperthermia and stimuli-responsive release of bioactive agents (TA and Zn2+), which also enhanced mitochondrial function and inhibited RANKL-induced osteoclast formation and bone resorption.",
+            "start": 1165
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "RANKL-induced osteoclast formation and bone resorption",
+          "intervention": "photoactivated SC/MTZ hydrogel; localized mild hyperthermia and stimuli-responsive release of TA and Zn2+",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e5",
+          "sign": "negative",
+          "subject": "e2"
+        },
+        "summary": "The photoactivated SC/MTZ hydrogel, through localized mild hyperthermia and release of TA and Zn2+, inhibited RANKL-induced osteoclast formation and bone resorption.",
+        "uncertainties": [
+          "The sentence attributes the effect to a combined intervention, but the specific contribution of TA versus Zn2+ versus hyperthermia is not separable from the text.",
+          "RANKL is annotated by the provider as a gene; the passage uses it as the stimulus in 'RANKL-induced' osteoclast formation."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1165,
+        1421
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1438,
+        1556
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

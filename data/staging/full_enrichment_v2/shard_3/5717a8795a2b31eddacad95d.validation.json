@@ -1,0 +1,194 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "21",
+              "22"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "RANK/RANKL/Osteoprotegerin system",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption and formation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 296,
+            "passage_index": 1,
+            "quote": "RANK/RANKL/Osteoprotegerin system, which governs bone resorption and formation",
+            "start": 218
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption and formation",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "unknown",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The RANK/RANKL/Osteoprotegerin system is described as regulating bone resorption and formation.",
+        "uncertainties": [
+          "The passage is a review-style background statement, not an experiment.",
+          "The exact biological entities within the RANK/RANKL/Osteoprotegerin system are not individually resolved in the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "cancer progression",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "23",
+              "24"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "CXCL12/CXCR4 axis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "26"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "GPCR4",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "27"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone development, remodelling, and pathological conditions such as cancer progression",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 481,
+            "passage_index": 1,
+            "quote": "In addition, the CXCL12/CXCR4 axis and G-protein-coupled receptor 4 (GPCR4) play crucial roles in bone development, remodelling, and pathological conditions such as cancer progression",
+            "start": 298
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone development, remodelling, and pathological conditions such as cancer progression",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The CXCL12/CXCR4 axis and GPCR4 are described as playing roles in bone development, remodelling, and pathological conditions such as cancer progression.",
+        "uncertainties": [
+          "This is a broad review statement with no specific experiment or causal direction.",
+          "The sentence links two entities (CXCL12/CXCR4 axis and GPCR4) to multiple outcomes, but does not separate their individual effects."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        218,
+        296
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        216,
+        290
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        298,
+        481
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        293,
+        409
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

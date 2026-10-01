@@ -1,0 +1,122 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "enteritis-induced bone loss",
+          "species": "ducks",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "raw potato starch",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "6",
+              "78",
+              "82",
+              "103"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Malt1 paracaspase",
+            "taxon": "ducks"
+          },
+          {
+            "annotation_ids": [
+              "7",
+              "60",
+              "66",
+              "81",
+              "84",
+              "102"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "meat ducks",
+            "taxon": "ducks"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 131,
+            "passage_index": 0,
+            "quote": "Dietary supplementation with raw potato starch reversed enteritis-induced bone loss via Malt1 paracaspase inhibition in meat ducks.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone loss",
+          "intervention": "dietary supplementation with raw potato starch",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Dietary raw potato starch supplementation in meat ducks reversed enteritis-induced bone loss, with the title attributing this effect to Malt1 paracaspase inhibition.",
+        "uncertainties": [
+          "Mechanistic phrasing 'via Malt1 paracaspase inhibition' is stated in the title, but the direct causal chain is not independently demonstrated in the extracted passage.",
+          "The term 'meat ducks' is a production context rather than a precise taxonomic label."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        131
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        130
+      ],
+      "passage_index": 0
+    }
+  ],
+  "valid_envelope": true
+}

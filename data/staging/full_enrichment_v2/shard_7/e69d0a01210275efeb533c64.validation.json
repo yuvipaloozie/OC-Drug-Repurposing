@@ -1,0 +1,384 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "periprosthetic joint infection",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "6374"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "CXCL5",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D001847"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:C009900"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "lipoteichoic acid",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 92,
+            "passage_index": 0,
+            "quote": "CXCL5 suppresses osteoclastogenesis and protects against lipoteichoic acid-induced bone loss",
+            "start": 0
+          },
+          {
+            "end": 2169,
+            "passage_index": 1,
+            "quote": "CXCL5 protects bone by inhibiting osteoclast differentiation through PLCgamma2 and c-Fos signalling.",
+            "start": 2093
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation / bone loss",
+          "intervention": "CXCL5 neutralizing antibody; LTA exposure",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "CXCL5 is reported to inhibit osteoclastogenesis and protect against LTA-induced bone loss.",
+        "uncertainties": [
+          "Title and abstract describe related outcomes in multiple contexts; the exact experimental linkage for each sentence is partially condensed in the abstract.",
+          "CXCL5 molecular form is not explicitly specified; treated here as text-supported candidate gene/protein context."
+        ]
+      },
+      "errors": [
+        "invented annotation ID",
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 macrophages",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "6374"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "CXCL5",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast formation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "4772"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:NFATC1",
+            "key": "e3",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "NFATc1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "8600"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "e4",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1773,
+            "passage_index": 1,
+            "quote": "Functionally, CXCL5 inhibited osteoclast formation and reduced nuclear factor of activated T-cells cytoplasmic 1 (NFATc1) expression.",
+            "start": 1640
+          },
+          {
+            "end": 1267,
+            "passage_index": 1,
+            "quote": "CXCL5 on receptor activator of nuclear factor kappa-B ligand (RANKL)-induced osteoclast differentiation.",
+            "start": 1163
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation",
+          "intervention": "CXCL5",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "CXCL5 inhibited osteoclast formation and reduced NFATc1 expression in the RANKL-induced osteoclast differentiation assay.",
+        "uncertainties": [
+          "The abstract explicitly reports NFATc1 expression reduction, but the extracted regulatory edge is anchored on the osteoclast-formation outcome.",
+          "Existing-node suggestions are unverified and may not reflect the intended species or molecular form."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "periprosthetic joint infection",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "6374"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "CXCL5",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "5336"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:PLCG2",
+            "key": "e3",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "unknown",
+            "surface": "PLCgamma2 phosphorylation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "2353"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:FOS",
+            "key": "e4",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "c-Fos",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1896,
+            "passage_index": 1,
+            "quote": "CXCL5 suppressed osteoclastogenesis via PLCgamma2 phosphorylation and c-Fos downregulation.",
+            "start": 1805
+          },
+          {
+            "end": 2097,
+            "passage_index": 1,
+            "quote": "PLCgamma2 and c-Fos",
+            "start": 2078
+          }
+        ],
+        "experiment": {
+          "assay": "kinase profiling",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "CXCL5",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "CXCL5 suppresses osteoclastogenesis via PLCgamma2 phosphorylation and c-Fos downregulation.",
+        "uncertainties": [
+          "The text states a pathway mechanism, but directness of the PLCgamma2 phosphorylation and c-Fos changes is not established from the excerpt alone.",
+          "PLCgamma2 phosphorylation is represented as a text-supported mechanism phrase rather than a specific mapped molecular entity."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        92
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        88
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1640,
+        1773
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1300,
+        1425
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1163,
+        1267
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1350,
+        1418
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1805,
+        1896
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1992,
+        2087
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        2078,
+        2097
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2265,
+        2284
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

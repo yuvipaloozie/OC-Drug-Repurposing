@@ -1,0 +1,158 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "Paget's disease of bone",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "27",
+              "28",
+              "31",
+              "36",
+              "39"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "VAV3",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [
+              "34",
+              "37",
+              "40"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "rs7528153",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [
+              "3",
+              "23",
+              "24",
+              "29",
+              "35",
+              "38",
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Paget's disease of bone",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 66,
+            "passage_index": 0,
+            "quote": "VAV3 Gene Polymorphism Is Associated with Paget's Disease of Bone.",
+            "start": 0
+          },
+          {
+            "end": 801,
+            "passage_index": 1,
+            "quote": "The genotypic and allelic distribution of the VAV3 c.892A>T/p.T298S (rs7528153) polymorphism was compared between a cohort of 238 Spanish subjects with PDB and a cohort of 253 healthy subjects.",
+            "start": 608
+          },
+          {
+            "end": 946,
+            "passage_index": 1,
+            "quote": "RESULTS: Our results indicated that individuals carrying the VAV3 rs7528153 TT genotype were at a significantly increased risk of developing PDB",
+            "start": 802
+          }
+        ],
+        "experiment": {
+          "assay": "genotypic and allelic distribution comparison",
+          "dose": null,
+          "duration": null,
+          "endpoint": "risk of developing PDB",
+          "intervention": "VAV3 c.892A>T/p.T298S (rs7528153) polymorphism; TT genotype comparison",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "unknown",
+          "subject": "e2"
+        },
+        "summary": "The VAV3 rs7528153 polymorphism was associated with Paget's disease of bone, and carriers of the TT genotype had a significantly increased risk of developing PDB in the reported cohort.",
+        "uncertainties": [
+          "The passage reports association and risk, not a mechanistic causal effect.",
+          "The text supports human cohort context, but the exact molecular form of VAV3 in the association is the gene/variant context rather than a functional protein perturbation.",
+          "Existing node suggestion was not used because it is unverified and mouse-specific."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        66
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        64
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        608,
+        801
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        693,
+        863
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        802,
+        946
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        865,
+        988
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

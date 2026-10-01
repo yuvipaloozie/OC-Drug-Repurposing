@@ -1,0 +1,199 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone microenvironment",
+          "disease_setting": "primary cancer / bone metastasis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "bone-on-a-chip (BOC)",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "pre-metastatic niches (PMNs)",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "bone-resident cells",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "metastatic tumor cells",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 397,
+            "passage_index": 1,
+            "quote": "3D printing and bone-on-a-chip (BOC) are combined to develop a BOC platform that mimics the pre-metastatic niches (PMNs) and facilitates elucidation of the interactions between bone-resident cells and metastatic tumor cells",
+            "start": 174
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "platform mimicking PMNs and facilitating interaction studies",
+          "intervention": "3D printing and bone-on-a-chip (BOC)",
+          "outcome_change": "not_stated",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "unknown",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The bone-on-a-chip platform is designed to mimic pre-metastatic niches and to study interactions between bone-resident cells and metastatic tumor cells.",
+        "uncertainties": [
+          "The passage describes a platform purpose rather than a measured biological effect.",
+          "No specific molecular mechanism linking osteoclasts to tumor cells is stated in the quoted span."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "RAW264.7s",
+          "compartment": "bone-on-a-chip platform",
+          "disease_setting": "bone metastasis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "mesenchymal stem cells (MSCs)",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "28"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "osteoclasts (RAW264.7s)",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 695,
+            "passage_index": 1,
+            "quote": "to verify the critical role of mesenchymal stem cells (MSCs) and osteoclasts (RAW264.7s)",
+            "start": 607
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "critical role of osteoclasts",
+          "intervention": "bone-on-a-chip platform with circulated tumor culture medium adjacent to hydrogel",
+          "outcome_change": "not_stated",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "unknown",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "unknown",
+          "subject": "e6"
+        },
+        "summary": "The abstract states that the platform was used to verify the critical role of mesenchymal stem cells and osteoclasts (RAW264.7s).",
+        "uncertainties": [
+          "The text says the role was 'verified' but does not state the measured direction or effect.",
+          "RAW264.7s are treated here as the stated osteoclast context; the passage does not independently define the molecular form."
+        ]
+      },
+      "errors": [
+        "unknown regulatory participant"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        174,
+        397
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        171,
+        320
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        607,
+        695
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        390,
+        468
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

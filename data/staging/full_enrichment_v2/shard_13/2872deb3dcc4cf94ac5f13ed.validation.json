@@ -1,0 +1,232 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "mesenchyme / bone marrow stromal cells",
+          "compartment": "bone marrow",
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "adult/postnatal"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "30",
+              "32",
+              "33",
+              "45"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Kdm6b",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 604,
+            "passage_index": 1,
+            "quote": "The absence of Kdm6b in mesenchyme led to decreased numbers of osteoblasts and osteoclasts, increased marrow adipocytes, as well as repressed bone formation and resorption.",
+            "start": 432
+          },
+          {
+            "end": 770,
+            "passage_index": 1,
+            "quote": "Additionally, Kdm6b-deficient bone marrow stromal cells (BMSCs) displayed impaired osteogenic differentiation and exerted an inhibitory effect on osteoclastogenesis.",
+            "start": 605
+          }
+        ],
+        "experiment": {
+          "assay": "conditional strategy; gene expression analysis / cell phenotyping",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis / osteoclast numbers",
+          "intervention": "conditional loss of Kdm6b in mesenchyme and osteoprogenitor cells",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Loss of Kdm6b in mesenchymal lineage cells was associated with fewer osteoclasts and an inhibitory effect on osteoclastogenesis.",
+        "uncertainties": [
+          "Exact cell-type resolution of the osteoclast effect is indirect because the perturbation was in mesenchyme/osteoprogenitor cells rather than osteoclasts themselves.",
+          "The quoted evidence combines two related observations: fewer osteoclasts in mutant mice and an inhibitory effect on osteoclastogenesis in BMSCs."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "BMSCs",
+          "compartment": "bone marrow",
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "postnatal/adult"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "27",
+              "28",
+              "41",
+              "46",
+              "47"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "KDM6B",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "4",
+              "34",
+              "35",
+              "42",
+              "44"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "CTHRC1",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "5",
+              "43"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "PKCdelta/MAPKs signaling",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1272,
+            "passage_index": 1,
+            "quote": "RNA-seq combined with gene expression analysis uncovered downregulation of collagen triple helix repeat containing 1 (CTHRC1) and a lower receptor activator of nuclear factor kappaB ligand (RANKL)/osteoprotegerin (OPG) ratio in BMSCs of the mutant mice. Further mechanistic explorations demonstrated that KDM6B epigenetically upregulated CTHRC1 expression by removing the repressive H3K27me3 mark from its promoter, thereby triggering PKCdelta/MAPKs signaling to facilitate osteoblast differentiation.",
+            "start": 771
+          }
+        ],
+        "experiment": {
+          "assay": "RNA-seq combined with gene expression analysis; mechanistic exploration",
+          "dose": null,
+          "duration": null,
+          "endpoint": "CTHRC1 expression / PKCdelta-MAPKs signaling",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "direct",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "KDM6B upregulated CTHRC1 expression and activated PKCdelta/MAPKs signaling to promote osteoblast differentiation.",
+        "uncertainties": [
+          "The passage also reports that CTHRC1 was downregulated in mutant BMSCs, which is consistent with but not identical to the mechanistic upregulation statement.",
+          "The role of PKCdelta/MAPKs is described as signaling downstream of CTHRC1, but the exact molecular intermediates are not separately resolved."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        432,
+        604
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        565,
+        690
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        605,
+        770
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        692,
+        804
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        771,
+        1272
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        812,
+        1008
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

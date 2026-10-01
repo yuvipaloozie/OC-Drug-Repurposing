@@ -1,0 +1,247 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "gingival crevicular fluid",
+          "disease_setting": "periodontitis",
+          "species": "Homo sapiens",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:C000604007"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "peroral statin treatment",
+            "taxon": "Homo sapiens"
+          },
+          {
+            "annotation_ids": [
+              "22943"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "DKK-1",
+            "taxon": "Homo sapiens"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 148,
+            "passage_index": 0,
+            "quote": "Changes in Dickkopf-1, but Not Sclerostin, in Gingival Crevicular Fluid Are Associated with Peroral Statin Treatment in Patients with Periodontitis.",
+            "start": 0
+          },
+          {
+            "end": 1735,
+            "passage_index": 1,
+            "quote": "The level of DKK-1 had a positive relationship with the PD, the greater the PD, the higher the level of DKK-1 (Rho = 0.350), while there was no significant association with other parameters.",
+            "start": 1545
+          },
+          {
+            "end": 1828,
+            "passage_index": 1,
+            "quote": "Conclusions: Peroral statins in periodontal patients are associated with GCF levels of DKK-1",
+            "start": 1736
+          }
+        ],
+        "experiment": {
+          "assay": "measurement of gingival crevicular fluid DKK-1 levels",
+          "dose": null,
+          "duration": null,
+          "endpoint": "GCF levels of DKK-1",
+          "intervention": "peroral statin treatment",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Peroral statin treatment was associated with higher gingival crevicular fluid DKK-1 levels in periodontal patients.",
+        "uncertainties": [
+          "Association is observational; the abstract does not establish causality or mechanism.",
+          "The statin intervention is described as peroral statin therapy / statins in periodontal patients; a specific drug is not named."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "gingival crevicular fluid",
+          "disease_setting": "periodontitis",
+          "species": "Homo sapiens",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:C000604007"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "peroral statin treatment",
+            "taxon": "Homo sapiens"
+          },
+          {
+            "annotation_ids": [
+              "50964"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:SOST",
+            "key": "e3",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "protein",
+            "surface": "sclerostin",
+            "taxon": "Homo sapiens"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1365,
+            "passage_index": 1,
+            "quote": "There was no significant difference in sclerostin concentration between the SP and P group.",
+            "start": 1274
+          },
+          {
+            "end": 1860,
+            "passage_index": 1,
+            "quote": "Conclusions: Peroral statins in periodontal patients are associated with GCF levels of DKK-1 but not with sclerostin levels.",
+            "start": 1736
+          }
+        ],
+        "experiment": {
+          "assay": "measurement of gingival crevicular fluid sclerostin levels",
+          "dose": null,
+          "duration": null,
+          "endpoint": "sclerostin concentration in GCF",
+          "intervention": "peroral statin treatment",
+          "outcome_change": "no_detected_change",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Peroral statin treatment was not significantly associated with sclerostin levels in gingival crevicular fluid.",
+        "uncertainties": [
+          "The result is reported as no significant difference, which does not prove absence of any biological effect.",
+          "Association is observational; the abstract does not establish causality or mechanism.",
+          "The suggested existing node is mouse SOST and may not match the human context; mapping left ambiguous."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        148
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        138
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1545,
+        1735
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1682,
+        1838
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1736,
+        1828
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1939,
+        2018
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1274,
+        1365
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1492,
+        1584
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1736,
+        1860
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1939,
+        2027
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

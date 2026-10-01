@@ -1,0 +1,218 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "in vivo",
+          "disease_setting": null,
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "35"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "PPOAC-Bz",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "36",
+              "37"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "OVX-induced bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 962,
+            "passage_index": 1,
+            "quote": "PPOAC-Bz prevented OVX-induced bone loss in vivo.",
+            "start": 913
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone loss",
+          "intervention": "PPOAC-Bz",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e6",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "PPOAC-Bz prevented OVX-induced bone loss in vivo.",
+        "uncertainties": [
+          "OVX is mentioned only as a model/context label; the specific experimental details are not provided in the abstract."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "in vitro",
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "32"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "PPOAC-Bz",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "mature osteoclasts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "F-actin belt formation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 815,
+            "passage_index": 1,
+            "quote": "PPOAC-Bz exerted a strong inhibitory effect on osteoclastogenesis.",
+            "start": 749
+          },
+          {
+            "end": 899,
+            "passage_index": 1,
+            "quote": " PPOAC-Bz altered the mRNA expressions of several osteoclast-specific marker genes and blocked the formation of mature osteoclasts, suppressing F-actin belt formation and bone resorption activity in vitro.",
+            "start": 694
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis; mature osteoclast formation; F-actin belt formation; bone resorption activity",
+          "intervention": "PPOAC-Bz",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "PPOAC-Bz inhibited osteoclastogenesis in vitro and was associated with reduced mature osteoclast formation, F-actin belt formation, and bone resorption activity.",
+        "uncertainties": [
+          "The specific osteoclast marker genes whose mRNA expression changed are not named in the text.",
+          "The direct molecular target of PPOAC-Bz is not stated."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        694,
+        899
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        815,
+        940
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        913,
+        962
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1035,
+        1084
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

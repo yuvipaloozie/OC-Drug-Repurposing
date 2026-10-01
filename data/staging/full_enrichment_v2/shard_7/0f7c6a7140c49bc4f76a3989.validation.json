@@ -1,0 +1,104 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts cultured on bone",
+          "compartment": "bone surface",
+          "disease_setting": null,
+          "species": "cattle",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "rough bone surfaces",
+            "taxon": "cattle"
+          },
+          {
+            "annotation_ids": [
+              "10",
+              "11"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "sealing zone (SZ) rings",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "osteoclasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1109,
+            "passage_index": 1,
+            "quote": "there is a significant enrichment in large and stable SZs (diameter larger than 14 microm; lifespan of hours) in cells cultured on rough bone surfaces, compared with small and fast turning over SZ rings (diameter below 7 microm; lifespan approx. 7 min) formed on smooth bone surfaces",
+            "start": 826
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "large and stable SZs",
+          "intervention": "rough bone surfaces vs smooth bone surfaces",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "unknown",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In osteoclasts cultured on bone, rough surface microtopography was associated with larger and more stable sealing zones than smooth bone surfaces.",
+        "uncertainties": [
+          "Comparison is between rough and smooth bone surfaces rather than a direct molecular perturbation.",
+          "The text reports association/comparison; causal direction is not experimentally isolated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        826,
+        1109
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        540,
+        700
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,217 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "2",
+              "23",
+              "24",
+              "27",
+              "28",
+              "29",
+              "38",
+              "39"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Brevilin A",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation and bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 81,
+            "passage_index": 0,
+            "quote": "Brevilin A inhibits RANKL-induced osteoclast differentiation and bone resorption.",
+            "start": 0
+          },
+          {
+            "end": 461,
+            "passage_index": 1,
+            "quote": "did impede the differentiation and bone resorption activity of osteoclasts.",
+            "start": 386
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "below 1.0 microM",
+          "duration": null,
+          "endpoint": "osteoclast differentiation and bone resorption activity",
+          "intervention": "Brevilin A",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Brevilin A inhibits RANKL-induced osteoclast differentiation and bone resorption; in the abstract it is reported to impede osteoclast differentiation and bone resorption activity.",
+        "uncertainties": [
+          "The title and abstract describe the same overall effect; exact experimental separation between differentiation and resorption is not provided in the quoted spans.",
+          "RANKL-induced context is stated in the title, but the abstract sentence does not repeat RANKL."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow macrophages",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "23",
+              "24",
+              "27",
+              "28",
+              "29",
+              "38",
+              "39"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "BA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "30",
+              "31",
+              "32",
+              "33",
+              "34"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "osteoclast-specific genes Mmp9, Acp5, Dc-stamp, Ctsk, and Atp6v0d2",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 574,
+            "passage_index": 1,
+            "quote": "BA suppressed the expression of osteoclast-specific genes Mmp9, Acp5, Dc-stamp, Ctsk, and Atp6v0d2.",
+            "start": 475
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "expression of osteoclast-specific genes",
+          "intervention": "Brevilin A",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Brevilin A suppresses expression of osteoclast-specific genes, including Mmp9, Acp5, Dc-stamp, Ctsk, and Atp6v0d2.",
+        "uncertainties": [
+          "The quoted span groups multiple genes into one expression statement; individual gene-level effects are not separated.",
+          "Cell type is taken from nearby abstract context describing bone marrow macrophages, but the expression sentence itself does not restate the cell type."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        81
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        82
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        386,
+        461
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        270,
+        345
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        475,
+        574
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        357,
+        457
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

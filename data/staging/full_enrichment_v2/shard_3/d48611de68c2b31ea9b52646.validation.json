@@ -1,0 +1,233 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "PLEKHM1",
+            "taxon": "unknown"
+          },
+          {
+            "annotation_ids": [
+              "42"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RAB7",
+            "taxon": "unknown"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 401,
+            "passage_index": 1,
+            "quote": "As an adaptor protein, pleckstrin homology and RUN domain containing M1 (PLEKHM1) interacts with the key lysosome regulator small GTPase RAB7",
+            "start": 260
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "interaction",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "direct",
+          "effect_level": "binding",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "PLEKHM1 is described as an adaptor protein that interacts with RAB7 in osteoclasts.",
+        "uncertainties": [
+          "The text states interaction/binding but does not specify experimental assay details in the quoted span.",
+          "Taxon is not explicitly stated for the molecular entities in the interaction sentence."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "45",
+              "47",
+              "50",
+              "54",
+              "55",
+              "56"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Plekhm1",
+            "taxon": "unknown"
+          },
+          {
+            "annotation_ids": [
+              "46",
+              "48",
+              "51",
+              "53"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Rab7",
+            "taxon": "unknown"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "lysosome trafficking",
+            "taxon": "unknown"
+          },
+          {
+            "annotation_ids": [
+              "49",
+              "52",
+              "57"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": "unknown"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 934,
+            "passage_index": 1,
+            "quote": "The compound alanine mutations at Y949-R954 and L1011-I1018 regions decreased Plekhm1 protein stability and Rab7-binding",
+            "start": 814
+          },
+          {
+            "end": 1025,
+            "passage_index": 1,
+            "quote": "respectively, thereby attenuated lysosome trafficking and bone resorption in osteoclasts.",
+            "start": 936
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "Plekhm1 protein stability; Rab7-binding; lysosome trafficking; bone resorption",
+          "intervention": "compound alanine mutations at Y949-R954 and L1011-I1018 regions",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "binding",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e3"
+        },
+        "summary": "Compound alanine mutations at the L1011-I1018 region decreased PLEKHM1 protein stability and Rab7 binding, and these mutants showed attenuated lysosome trafficking and bone resorption in osteoclasts.",
+        "uncertainties": [
+          "The sentence links decreased stability to Y949-R954 and decreased Rab7-binding to L1011-I1018, but the exact causal assignment is not fully explicit in the quoted span.",
+          "No assay details are provided in the quoted text.",
+          "The species context is inferred from the surrounding abstract sentence about osteoclasts in mice and is not explicit in the mutation sentence itself."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        260,
+        401
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        314,
+        395
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        814,
+        934
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        712,
+        834
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        936,
+        1025
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        839,
+        930
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

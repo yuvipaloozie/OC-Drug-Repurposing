@@ -1,0 +1,104 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "experimental periodontitis",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "3"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "Porphyromonas gingivalis outer membrane vesicles",
+            "taxon": "Porphyromonas gingivalis"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "alveolar bone resorption",
+            "taxon": "rats"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "local RANKL/OPG ratio",
+            "taxon": "rats"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 163,
+            "passage_index": 0,
+            "quote": "Porphyromonas gingivalis outer membrane vesicles promote alveolar bone resorption by increasing the local RANKL/OPG ratio in experimental periodontitis model rats.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "alveolar bone resorption",
+          "intervention": "Porphyromonas gingivalis outer membrane vesicles",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "claim1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In an experimental periodontitis rat model, Porphyromonas gingivalis outer membrane vesicles were reported to promote alveolar bone resorption by increasing the local RANKL/OPG ratio.",
+        "uncertainties": [
+          "The title states the finding but provides no experimental details beyond the rat periodontitis model.",
+          "The exact molecular composition of the outer membrane vesicles is not specified in the provided text.",
+          "RANKL/OPG ratio is treated as a measured phenotype/ratio rather than a direct molecular interaction."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "claim1",
+      "corrected_offsets": [
+        0,
+        163
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        164
+      ],
+      "passage_index": 0
+    }
+  ],
+  "valid_envelope": true
+}

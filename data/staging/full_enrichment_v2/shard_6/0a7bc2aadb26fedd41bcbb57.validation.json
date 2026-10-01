@@ -1,0 +1,136 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": "mature"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D001031"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "apatite",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "sealing zone formation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "6714"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:SRC",
+            "key": "e3",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "c-src",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "Rho",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1204,
+            "passage_index": 1,
+            "quote": "apatite itself promotes sealing zone formation though c-src and Rho signaling.",
+            "start": 1126
+          },
+          {
+            "end": 1311,
+            "passage_index": 1,
+            "quote": "apatite-mediated sealing zone formation is dependent on both c-src and Rho",
+            "start": 1237
+          }
+        ],
+        "experiment": {
+          "assay": "dynamic observations of several resorption cycles",
+          "dose": null,
+          "duration": null,
+          "endpoint": "sealing zone formation",
+          "intervention": "osteoclasts seeded on apatite",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "claim1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In osteoclasts on apatite, apatite promotes sealing zone formation, and the authors state this apatite-mediated sealing zone formation depends on c-src and Rho signaling.",
+        "uncertainties": [
+          "The text links c-src and Rho to apatite-mediated sealing zone formation, but does not specify whether their roles are direct or indirect.",
+          "Rho is mentioned as signaling without a specific molecular form or identifier."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "claim1",
+      "corrected_offsets": [
+        1126,
+        1204
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1173,
+        1265
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "claim1",
+      "corrected_offsets": [
+        1237,
+        1311
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1276,
+        1374
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,158 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:C020806"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "TBBPA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "11433"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "TRAP activity",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorbing activity",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "CVCL:0493"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "RAW264.7 cells",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "21943"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-stimulated",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 132,
+            "passage_index": 0,
+            "quote": "Tetrabromobisphenol A Promotes the Osteoclastogenesis of RAW264.7 Cells Induced by Receptor Activator of NF-kappa B Ligand In Vitro.",
+            "start": 0
+          },
+          {
+            "end": 1150,
+            "passage_index": 1,
+            "quote": "The presence of 20 mu TBBPA significantly increased TRAP activity in RANKL-stimulated RAW264.7 cells, the bone resorbing activity of osteoclasts, and the gene expression of Akt2, nuclear factor of activated T-cells cytoplasmic 1, and chloride channel voltage-sensitive 7.",
+            "start": 879
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "20 mu",
+          "duration": null,
+          "endpoint": "osteoclastogenesis / TRAP activity / bone resorbing activity",
+          "intervention": "20 mu TBBPA",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Tetrabromobisphenol A (TBBPA) promoted osteoclastogenesis/osteoclast activity in RANKL-stimulated RAW264.7 cells, including increased TRAP activity and bone resorbing activity.",
+        "uncertainties": [
+          "The title and abstract support promotion of osteoclastogenesis, but the exact mechanistic link to the listed gene-expression changes is not directly established in the text.",
+          "Species is not explicitly stated for the RAW264.7 cell line in the supplied text."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        132
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        127
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        879,
+        1150
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        755,
+        929
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

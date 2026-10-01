@@ -1,0 +1,182 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "arthritis",
+          "species": "rabbits",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "HFD",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "1"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "joint and liver health",
+            "taxon": "9986"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 129,
+            "passage_index": 0,
+            "quote": "An HFD negatively influences both joint and liver health in rabbits with and without an enzymatically-induced model of arthritis.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "joint and liver health",
+          "intervention": "high-fat diet",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "A high-fat diet negatively influenced joint and liver health in rabbits, including animals with and without enzymatically induced arthritis.",
+        "uncertainties": [
+          "The title states a broad effect on joint and liver health, but does not specify the individual measured endpoints in detail."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "arthritis",
+          "species": "rabbits",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "HFD",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "10",
+              "11",
+              "12",
+              "13",
+              "14",
+              "15"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "joint injuries",
+            "taxon": "9986"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1010,
+            "passage_index": 1,
+            "quote": " However, the HFD led to an increase in joint injuries in both induced and non-induced arthritis rabbits.",
+            "start": 905
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": "12 weeks",
+          "endpoint": "joint injuries",
+          "intervention": "HFD feeding",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In rabbits, a high-fat diet increased joint injuries in both induced and non-induced arthritis groups.",
+        "uncertainties": [
+          "The sentence does not separate induced from non-induced arthritis outcomes quantitatively."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        129
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        128
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        905,
+        1010
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        902,
+        1007
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

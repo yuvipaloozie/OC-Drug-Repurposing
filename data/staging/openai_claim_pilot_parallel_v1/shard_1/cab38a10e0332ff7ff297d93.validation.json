@@ -1,0 +1,102 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "32",
+              "35",
+              "44",
+              "56",
+              "57",
+              "59"
+            ],
+            "existing_node_id": "CHEBI:17234",
+            "key": "e1",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "compound",
+            "surface": "Glucose",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "33",
+              "45"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 240,
+            "passage_index": 1,
+            "quote": "Glucose ingestion reduces bone resorption,",
+            "start": 198
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption",
+          "intervention": "glucose ingestion",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The abstract states that glucose ingestion reduces bone resorption.",
+        "uncertainties": [
+          "The cited span is a background statement in the abstract rather than a detailed experimental result.",
+          "Glucose is linked to bone resorption at the level of ingestion/treatment; direct molecular mechanism is not stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        198,
+        240
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        298,
+        340
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

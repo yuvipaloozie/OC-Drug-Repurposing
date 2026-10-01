@@ -1,0 +1,208 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "fetal rat long bones",
+          "disease_setting": null,
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "28"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Parathyroid hormone",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "30"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "mycotrienin I",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "31"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "mycotrienin II",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "29",
+              "40"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": "rat"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 571,
+            "passage_index": 1,
+            "quote": "Parathyroid hormone-stimulated bone resorption was inhibited concentration dependently by both mycotrienin I and mycotrienin II, showing half-maximal inhibition in the low nanomolar range in fetal rat long bones in vitro.",
+            "start": 350
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "low nanomolar range",
+          "duration": null,
+          "endpoint": "bone resorption",
+          "intervention": "mycotrienin I and mycotrienin II",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e2"
+        },
+        "summary": "Mycotrienin I and mycotrienin II inhibited parathyroid hormone-stimulated bone resorption in fetal rat long bones in vitro, with concentration-dependent inhibition and low-nanomolar half-maximal inhibition.",
+        "uncertainties": [
+          "The cited text combines both compounds and does not separate their individual potencies beyond stating both were active.",
+          "Parathyroid hormone is treated as a text-supported entity, but the annotation type is Gene and its exact molecular role in this assay is not stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "hypothesis",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone organ culture",
+          "disease_setting": null,
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "41",
+              "42"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "pp60c-src",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "43",
+              "44"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "mycotrienins",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1234,
+            "passage_index": 1,
+            "quote": "the diminished activity of immunopurified pp60c-src from bone suggesting that pp60c-src is a possible target of mycotrienins in the organ culture.",
+            "start": 1088
+          }
+        ],
+        "experiment": {
+          "assay": "immunopurified pp60c-src from bone",
+          "dose": null,
+          "duration": null,
+          "endpoint": "pp60c-src activity",
+          "intervention": "mycotrienins",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e1",
+          "sign": "unknown",
+          "subject": "e2"
+        },
+        "summary": "The authors suggest that pp60c-src may be a possible target of mycotrienins in the organ culture, based on diminished pp60c-src activity in bone.",
+        "uncertainties": [
+          "The text presents this as a suggestion rather than a demonstrated causal mechanism.",
+          "The exact causal direction between diminished pp60c-src activity and resorption inhibition is not directly established in the passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        350,
+        571
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        350,
+        613
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1088,
+        1234
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1149,
+        1307
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

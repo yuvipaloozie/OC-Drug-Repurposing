@@ -1,0 +1,187 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "32",
+              "33",
+              "46",
+              "49"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Cajanin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis and bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 424,
+            "passage_index": 1,
+            "quote": "Cajanin, a natural small-molecule compound, potently inhibits osteoclastogenesis and bone resorption both in vitro and in vivo.",
+            "start": 297
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis and bone resorption",
+          "intervention": "Cajanin treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Cajanin treatment inhibits osteoclastogenesis and bone resorption in vitro and in vivo.",
+        "uncertainties": [
+          "The passage combines in vitro and in vivo results without separating them into distinct experiments.",
+          "No assay details or dose/duration are provided."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "46",
+              "49"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Cajanin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "39",
+              "47",
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "NFATc1",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1033,
+            "passage_index": 1,
+            "quote": "Cajanin significantly suppressed NFATc1 expression and nuclear localization.",
+            "start": 957
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "NFATc1 expression and nuclear localization",
+          "intervention": "Cajanin treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Cajanin suppresses NFATc1 expression and nuclear localization.",
+        "uncertainties": [
+          "The sentence does not separate effects on expression from nuclear localization.",
+          "The molecular form is inferred from the context of expression/localization and not explicitly stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        297,
+        424
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        422,
+        548
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        957,
+        1033
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1082,
+        1159
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

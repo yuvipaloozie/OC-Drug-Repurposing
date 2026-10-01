@@ -1,0 +1,191 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "osteoclasts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "compound",
+            "surface": "native type I collagen",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "23"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "alpha 2 beta 1 integrin",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 479,
+            "passage_index": 1,
+            "quote": "Cell adhesion assays with rat osteoclasts and affinity chromatography/SDS-PAGE analysis with purified human osteoclast membranes demonstrated adhesion of osteoclasts to native type I collagen in a divalent cation and Arg-Gly-Asp (RGD)-dependent way via alpha 2 beta 1 integrin",
+            "start": 203
+          }
+        ],
+        "experiment": {
+          "assay": "cell adhesion assays",
+          "dose": null,
+          "duration": null,
+          "endpoint": "adhesion to native type I collagen",
+          "intervention": "cell adhesion assays with rat osteoclasts",
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "binding",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Osteoclast adhesion to native type I collagen occurred via alpha 2 beta 1 integrin and was RGD-dependent.",
+        "uncertainties": [
+          "The passage states adhesion occurred via alpha 2 beta 1 integrin, but the exact causal mechanism is not directly demonstrated beyond the assay context.",
+          "Species support comes from the rat osteoclast assay; the integrin complex itself is not explicitly assigned a species in the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "22"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Osteoclastic bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "23",
+              "24"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "alpha 2 and beta 1 antibodies",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 979,
+            "passage_index": 1,
+            "quote": "Osteoclastic bone resorption in vitro was inhibited (> 40%) in the presence of alpha 2 and beta 1 antibodies",
+            "start": 871
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastic bone resorption in vitro",
+          "intervention": "alpha 2 and beta 1 antibodies",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e1",
+          "sign": "negative",
+          "subject": "e2"
+        },
+        "summary": "Osteoclastic bone resorption in vitro was inhibited by alpha 2 and beta 1 antibodies.",
+        "uncertainties": [
+          "The passage does not specify whether the inhibition is due to blocking alpha 2, beta 1, or both independently.",
+          "This is an in vitro observation; no in vivo effect is stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        203,
+        479
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        356,
+        580
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        871,
+        979
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        858,
+        942
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

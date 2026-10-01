@@ -1,0 +1,244 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "rheumatoid arthritis and periodontitis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "38",
+              "39",
+              "42",
+              "48",
+              "49",
+              "60",
+              "62",
+              "65",
+              "67"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "TNF-alpha inhibitors",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "40",
+              "68"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "inflammatory cells",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast formation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 129,
+            "passage_index": 1,
+            "quote": "BACKGROUND: TNF-alpha inhibitors (anti-TNF-alpha) decrease the amount of inflammatory cells, osteoclast formation, and bone loss.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast formation",
+          "intervention": null,
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "TNF-alpha inhibitors are described as decreasing inflammatory cells, osteoclast formation, and bone loss.",
+        "uncertainties": [
+          "Background statement rather than a specific experiment.",
+          "The text does not specify the molecular form or species for TNF-alpha inhibitors."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "gingival crevicular fluid",
+          "disease_setting": "rheumatoid arthritis and periodontitis",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "38",
+              "39",
+              "42",
+              "48",
+              "49",
+              "60",
+              "62",
+              "65",
+              "67"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "anti-TNF-alpha",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "53",
+              "54",
+              "58",
+              "59",
+              "69",
+              "70"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "RANKL/OPG ratio",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1069,
+            "passage_index": 1,
+            "quote": "The GCF RANKL/OPG ratio was statistically significantly lower in anti-TNF-alpha treated patients",
+            "start": 973
+          },
+          {
+            "end": 1097,
+            "passage_index": 1,
+            "quote": "at baseline and at 6 months",
+            "start": 1070
+          }
+        ],
+        "experiment": {
+          "assay": "ELISA",
+          "dose": null,
+          "duration": "baseline and at 6 months post-NSPT",
+          "endpoint": "GCF RANKL/OPG ratio",
+          "intervention": "anti-TNF-alpha treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In patients treated with anti-TNF-alpha, the gingival crevicular fluid RANKL/OPG ratio was lower at baseline and at 6 months after NSPT.",
+        "uncertainties": [
+          "This is an association/result in treated patients, not a direct causal mechanism.",
+          "The passage does not specify which anti-TNF-alpha agent was used."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        129
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        125,
+        253
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        973,
+        1069
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1074,
+        1172
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1070,
+        1097
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1174,
+        1203
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

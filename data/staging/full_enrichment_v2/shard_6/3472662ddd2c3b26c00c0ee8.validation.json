@@ -1,0 +1,252 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:C055542"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Isoimperatorin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "117516"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RANK",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "RANK/RANKL binding",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 79,
+            "passage_index": 0,
+            "quote": "Isoimperatorin attenuates bone loss by inhibiting the binding of RANKL to RANK.",
+            "start": 0
+          },
+          {
+            "end": 1116,
+            "passage_index": 1,
+            "quote": "ISO inhibits RANK/RANKL binding, thereby reducing the activity of NFATc1, calcium, and ROS and inhibiting osteoclast generation.",
+            "start": 988
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "RANK/RANKL binding",
+          "intervention": "Isoimperatorin",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "binding",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Isoimperatorin inhibits binding of RANKL to RANK.",
+        "uncertainties": [
+          "The exact molecular identity/taxon of RANK is not specified in the text.",
+          "The binding claim is stated in summary form; the directness of the inhibition is not established."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ovariectomy",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:C055542"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ISO",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D001847"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "ovariectomy",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "10116"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "rat",
+            "taxon": "10116"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 950,
+            "passage_index": 1,
+            "quote": "oral administration of ISO effectively reduced bone loss caused by ovariectomy",
+            "start": 872
+          },
+          {
+            "end": 1310,
+            "passage_index": 1,
+            "quote": "OVX-induced bone loss",
+            "start": 1289
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone loss",
+          "intervention": "oral administration of ISO",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Oral administration of isoimperatorin reduced ovariectomy-induced bone loss in rats.",
+        "uncertainties": [
+          "The abstract combines in vivo and mechanistic conclusions; this claim is limited to the stated OVX rat outcome.",
+          "The annotation for ovariectomy is not a species/disease standard identifier and is treated as a phenotype/context term."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        988,
+        1116
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1210,
+        1317
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        872,
+        950
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        975,
+        1032
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1289,
+        1310
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1369,
+        1390
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

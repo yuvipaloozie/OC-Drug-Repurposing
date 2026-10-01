@@ -1,0 +1,180 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "subchondral bone",
+          "compartment": "subchondral bone",
+          "disease_setting": "osteoarthritis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "H-type arteries",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "osteoclasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 796,
+            "passage_index": 1,
+            "quote": "A significant alteration in subchondral bone is the development of aberrant blood vessels, particularly H-type vessels. H-type arteries are essential for preserving subchondral bone homeostasis. They support nutrients and oxygen to bone tissue and eliminate waste, thereby supporting the metabolic activities of osteoblasts and osteoclasts.",
+            "start": 456
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The paper states that H-type arteries support nutrients and oxygen to bone tissue, eliminate waste, and thereby support the metabolic activities of osteoblasts and osteoclasts.",
+        "uncertainties": [
+          "This is a background mechanistic statement, not an experiment on osteoclasts.",
+          "The text does not specify a direct molecular interaction or causal perturbation between H-type arteries and osteoclasts."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "subchondral bone",
+          "compartment": "subchondral bone",
+          "disease_setting": "osteoarthritis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "53"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "LEP",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "54"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "LEPR",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "56"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "OA lesion",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1478,
+            "passage_index": 1,
+            "quote": "The lipid metabolism pathway was highly enriched on the OA lesion, and LEP and LEPR were markedly underexpressed",
+            "start": 1427
+          }
+        ],
+        "experiment": {
+          "assay": "whole transcriptome analysis; clinical sample verification",
+          "dose": null,
+          "duration": null,
+          "endpoint": "LEP and LEPR expression in subchondral bone",
+          "intervention": "comparison of OA lesion side with non-lesion side; verified in clinical samples",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In osteoarthritis lesion-side subchondral bone, LEP and LEPR were reported as markedly underexpressed.",
+        "uncertainties": [
+          "The quoted span conflates LEP and LEPR underexpression; the exact direction for each gene is stated jointly rather than separately."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        456,
+        796
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        653,
+        848
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,384 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "mature osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "lowering extracellular pH",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "mature osteoclasts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "survival, adhesion, and migration",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 390,
+            "passage_index": 1,
+            "quote": "Acidic extracellular pH promotes osteoporotic bone loss by osteoclast activation. However, the change of osteoclastic cell behavior in acidosis-stimulated bone resorption process is unknown. We found that lowering extracellular pH induced an increase in the survival, adhesion, and migration of mature osteoclasts with a full actin ring, leading to enhanced pit formation on dentine slices.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": "dentine slices",
+          "dose": null,
+          "duration": null,
+          "endpoint": "survival, adhesion, and migration of mature osteoclasts; pit formation on dentine slices",
+          "intervention": "lowering extracellular pH",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Lowering extracellular pH increased mature osteoclast survival, adhesion, and migration, and enhanced pit formation on dentine slices.",
+        "uncertainties": [
+          "The passage also mentions enhanced pit formation, but the causal link is described in the same sentence rather than as a separate measured mechanism.",
+          "Species is not stated in the provided text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "20"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "Acidosis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "21"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "osteopontin",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 588,
+            "passage_index": 1,
+            "quote": "Acidosis upregulated osteopontin, which is an Arg-Gly-Asp (RGD) motif-containing matrix protein secreted from osteoclasts and acts as a common modulator for their survival, adhesion, and migration.",
+            "start": 391
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteopontin expression",
+          "intervention": "acidosis",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Acidosis upregulated osteopontin in osteoclasts.",
+        "uncertainties": [
+          "The text states that osteopontin is secreted from osteoclasts and functions as a modulator, but does not specify the molecular form beyond describing it as a matrix protein.",
+          "The passage does not specify whether the increase was measured at RNA or protein level."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "22"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "synthetic RGD peptide",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "23"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "acidosis-induced osteoclast adhesion and migration",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 797,
+            "passage_index": 1,
+            "quote": "A synthetic RGD peptide treatment blocked acidosis-induced osteoclast adhesion and migration, likely by competing with the RGD motif-containing extracellular matrix proteins for cell surface integrin binding.",
+            "start": 589
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast adhesion and migration",
+          "intervention": "synthetic RGD peptide treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Synthetic RGD peptide blocked acidosis-induced osteoclast adhesion and migration.",
+        "uncertainties": [
+          "The mechanism is described as likely, so the competitive binding explanation is not asserted as observed.",
+          "The passage does not distinguish adhesion from migration as separate endpoints in the claim."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "24"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "acidosis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "25"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Pyk2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "26"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Cbl-b",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "27"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Src",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 942,
+            "passage_index": 1,
+            "quote": "We finally observed that acidosis was associated with activation of osteoclast survival/adhesion/migration-related Pyk2, Cbl-b, and Src signals.",
+            "start": 798
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "activation of Pyk2, Cbl-b, and Src signals",
+          "intervention": "acidosis",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c4",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Acidosis was associated with activation of osteoclast survival/adhesion/migration-related Pyk2, Cbl-b, and Src signals.",
+        "uncertainties": [
+          "The text says 'associated with activation' rather than stating a direct causal effect.",
+          "The claim groups three signaling proteins together; the exact contribution of each is not separated in the passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        390
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        111,
+        412
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        391,
+        588
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        413,
+        605
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        589,
+        797
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        606,
+        856
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c4",
+      "corrected_offsets": [
+        798,
+        942
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        857,
+        1086
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,236 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "hPDLSCs",
+          "compartment": null,
+          "disease_setting": "periodontitis",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:C020380"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "isobutyric acid",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "81686",
+              "81687"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "gelatinases",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "25716"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "NF-kappaB (p-p65) signalling",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "hPDLSCs",
+            "taxon": "9606"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1508,
+            "passage_index": 1,
+            "quote": "Under in vitro conditions, isobutyric acid increased the activity of gelatinases in hPDLSCs",
+            "start": 1417
+          },
+          {
+            "end": 1627,
+            "passage_index": 1,
+            "quote": "and isobutyric acid-regulated gelatinase secretion occurred mainly via the activation of NF-kappaB (p-p65) signalling",
+            "start": 1510
+          }
+        ],
+        "experiment": {
+          "assay": "zymography",
+          "dose": null,
+          "duration": null,
+          "endpoint": "gelatinase activity",
+          "intervention": "isobutyric acid treatment",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In human periodontal ligament stem cells, isobutyric acid increased gelatinase activity, and the text states this gelatinase secretion occurred mainly via NF-kappaB activation.",
+        "uncertainties": [
+          "The text links NF-kappaB activation to gelatinase secretion, but the exact causal chain is not separately demonstrated here.",
+          "Gelatinases are described as a group; the passage also names MMP-2/MMP-9 elsewhere, but the claim is extracted at the group level."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "periodontitis",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:C020380"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "isobutyric acid",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "damage to periodontal soft tissues",
+            "taxon": "10116"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "resorption of alveolar bone",
+            "taxon": "10116"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1415,
+            "passage_index": 1,
+            "quote": "Local injection of isobutyric acid induced damage to periodontal soft tissues and increased resorption of alveolar bone in rats",
+            "start": 1288
+          }
+        ],
+        "experiment": {
+          "assay": "microcomputed tomography",
+          "dose": null,
+          "duration": null,
+          "endpoint": "alveolar bone resorption",
+          "intervention": "local injection of isobutyric acid",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In rats, local injection of isobutyric acid induced periodontal soft tissue damage and increased alveolar bone resorption.",
+        "uncertainties": [
+          "The same sentence also reports periodontal soft tissue damage; this claim focuses on alveolar bone resorption as the regulatory object.",
+          "The rat phenotype is supported by the sentence, but the exact strain-specific context is not mechanistically resolved."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1417,
+        1508
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1542,
+        1608
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1510,
+        1627
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1610,
+        1738
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1288,
+        1415
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1183,
+        1260
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

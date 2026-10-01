@@ -1,0 +1,109 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "3"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Magnesium",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "4"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Zoledronate",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "5",
+              "43",
+              "47"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-Dependent Osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 126,
+            "passage_index": 0,
+            "quote": "Supra-Physiological Levels of Magnesium Counteract the Inhibitory Effect of Zoledronate on RANKL-Dependent Osteoclastogenesis.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "supra-physiological concentrations",
+          "duration": null,
+          "endpoint": "RANKL-dependent osteoclastogenesis",
+          "intervention": "supra-physiological levels of magnesium",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Supra-physiological magnesium counteracts zoledronate's inhibitory effect on RANKL-dependent osteoclastogenesis.",
+        "uncertainties": [
+          "Evidence comes from the title; the exact experimental context and assay are not stated in the title.",
+          "The quote conflates magnesium's effect with zoledronate's inhibitory effect, so direct causality and whether zoledronate was present in the same experiment are not fully specified."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        126
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        124
+      ],
+      "passage_index": 0
+    }
+  ],
+  "valid_envelope": true
+}

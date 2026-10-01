@@ -1,0 +1,231 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "BMMs",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "BQTL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "54"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast resorption activity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1082,
+            "passage_index": 1,
+            "quote": "BQTL suppressed receptor activator of NF-kappaB ligand (RANKL)-induced osteoclastogenesis",
+            "start": 993
+          },
+          {
+            "end": 1185,
+            "passage_index": 1,
+            "quote": "and osteoclast resorption activity in vitro in a dose-dependent manner without observable cytotoxicity",
+            "start": 1083
+          }
+        ],
+        "experiment": {
+          "assay": "TRAcP experiments",
+          "dose": "dose-dependent",
+          "duration": null,
+          "endpoint": "osteoclastogenesis and osteoclast resorption activity",
+          "intervention": "BQTL",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Buqi-Tongluo (BQTL) decoction suppressed RANKL-induced osteoclastogenesis and osteoclast resorption activity in vitro in a dose-dependent manner without observable cytotoxicity.",
+        "uncertainties": [
+          "The quote links BQTL to reduced osteoclastogenesis and resorption activity, but does not specify a direct molecular target.",
+          "The cell type is inferred from the abstract sentence mentioning BMMs and the TRAcP experiment context rather than from the quoted outcome span alone."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "BMMs",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "rat",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "BQTL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "57"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "NFATc1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "58"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "c-fos",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1412,
+            "passage_index": 1,
+            "quote": "The inhibitory effects of BQTL on osteoclast formation and function were attributed to the downregulation of NFATc1 and c-fos activity, primarily through attenuation of the MAPK, NF-kappaB, and Calcineurin signaling pathways.",
+            "start": 1187
+          }
+        ],
+        "experiment": {
+          "assay": "RT-PCR and Western blot analyses",
+          "dose": null,
+          "duration": null,
+          "endpoint": "NFATc1 and c-fos activity",
+          "intervention": "BQTL",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "BQTL was reported to downregulate NFATc1 and c-fos activity in association with attenuation of MAPK, NF-kappaB, and Calcineurin signaling pathways.",
+        "uncertainties": [
+          "The text states an attribution of downregulation through signaling pathways, but does not establish direct inhibition of NFATc1 by BQTL.",
+          "c-fos is mentioned in the same sentence, but the regulatory object field can capture only one object; the second target is represented in the evidence and summary."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        993,
+        1082
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1142,
+        1234
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1083,
+        1185
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1238,
+        1310
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1187,
+        1412
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1322,
+        1467
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,205 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "35",
+              "36",
+              "40",
+              "43",
+              "47",
+              "49",
+              "50",
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Macrophage migration inhibitory factor",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "38"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:NFKB1",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "pathway",
+            "surface": "NF-kappaB signaling pathway",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 553,
+            "passage_index": 1,
+            "quote": "Macrophage migration inhibitory factor (MIF) is an inflammation-related protein with oxidoreductase-like activity that participates in bone remodeling and metabolic regulation Mainly by activating the NF-kappaB signaling pathway.",
+            "start": 324
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "MIF is described as participating in bone remodeling and metabolic regulation mainly by activating the NF-kappaB signaling pathway.",
+        "uncertainties": [
+          "The statement is background and does not report a specific experiment in this paper.",
+          "The pathway annotation was not fully resolved; the suggested existing node is unverified."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "plasma",
+          "disease_setting": "postmenopausal osteoporosis",
+          "species": "9606",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "40",
+              "43",
+              "47",
+              "49",
+              "50",
+              "52",
+              "56"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "MIF",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [
+              "34",
+              "39",
+              "41",
+              "44",
+              "51",
+              "55"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "PMOP",
+            "taxon": "9606"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 867,
+            "passage_index": 1,
+            "quote": "MIF levels were significantly elevated in PMOP",
+            "start": 821
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "plasma MIF levels",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Plasma MIF levels were significantly elevated in PMOP patients compared with individuals with normal bone mass.",
+        "uncertainties": [
+          "Association is observational and does not establish causality.",
+          "PMOP is represented as a disease/phenotype context rather than a molecular target."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        821,
+        867
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        833,
+        877
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        324,
+        553
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        424,
+        653
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

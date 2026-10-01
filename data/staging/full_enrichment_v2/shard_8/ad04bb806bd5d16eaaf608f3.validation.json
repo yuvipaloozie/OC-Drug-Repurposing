@@ -1,0 +1,371 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts derived from mouse bone marrow-derived monocytes (BMMs)",
+          "compartment": null,
+          "disease_setting": "rheumatoid arthritis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:C452799"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Corydaline",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 651,
+            "passage_index": 1,
+            "quote": "Cory's",
+            "start": 645
+          },
+          {
+            "end": 782,
+            "passage_index": 1,
+            "quote": "the biological effect of Cory on osteoclast behaviors was evaluated through various staining methods, RT-qPCR, and Western blot.",
+            "start": 654
+          },
+          {
+            "end": 1241,
+            "passage_index": 1,
+            "quote": "The results from network pharmacology indicated a significant correlation between Cory, oxidative stress, and calcium signaling. Subsequent in vitro experiments demonstrated Cory's capacity to inhibit the formation and function of osteoclast under inflammatory stimuli, thereby protecting against abnormal bone resorption.",
+            "start": 919
+          }
+        ],
+        "experiment": {
+          "assay": "various staining methods, RT-qPCR, and Western blot",
+          "dose": null,
+          "duration": null,
+          "endpoint": "formation and function of osteoclast; abnormal bone resorption",
+          "intervention": "Corydaline (Cory)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Corydaline inhibited osteoclast formation and function under inflammatory stimuli, reducing abnormal bone resorption.",
+        "uncertainties": [
+          "The passage summarizes multiple experiments and does not isolate which assay supports each sub-outcome.",
+          "'Osteoclasts' here are treated as a phenotype/context rather than a specific molecular entity.",
+          "Direct molecular target of Corydaline is not established in the text."
+        ]
+      },
+      "errors": [
+        "invented annotation ID",
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts derived from mouse bone marrow-derived monocytes (BMMs)",
+          "compartment": null,
+          "disease_setting": "rheumatoid arthritis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:C452799"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Corydaline",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D017382"
+            ],
+            "existing_node_id": "CHEBI:26523",
+            "key": "e3",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "compound",
+            "surface": "reactive oxygen species",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "18024"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "pathway",
+            "surface": "Nrf2 signaling pathway",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1416,
+            "passage_index": 1,
+            "quote": "The results from network pharmacology indicated a significant correlation between Cory, oxidative stress, and calcium signaling. Subsequent in vitro experiments demonstrated Cory's capacity to inhibit the formation and function of osteoclast under inflammatory stimuli, thereby protecting against abnormal bone resorption. This effect is achieved by activating the Nrf2 signaling pathway, mitigating the generation of reactive oxygen species (ROS), and modulating the calcineurin-Nfatc1 signaling.",
+            "start": 919
+          },
+          {
+            "end": 1366,
+            "passage_index": 1,
+            "quote": "This effect is achieved by activating the Nrf2 signaling pathway, mitigating the generation of reactive oxygen species (ROS)",
+            "start": 1242
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro experiments",
+          "dose": null,
+          "duration": null,
+          "endpoint": "reactive oxygen species generation",
+          "intervention": "Corydaline (Cory)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Corydaline mitigated the generation of reactive oxygen species and is described as activating the Nrf2 signaling pathway.",
+        "uncertainties": [
+          "The text also mentions activation of the Nrf2 pathway, but the causal linkage is summarized rather than directly measured in the provided excerpt.",
+          "ROS is represented as a compound/abundance entity rather than a specific molecular species."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts derived from mouse bone marrow-derived monocytes (BMMs)",
+          "compartment": null,
+          "disease_setting": "rheumatoid arthritis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:C452799"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Corydaline",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "18018"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "pathway",
+            "surface": "calcineurin-Nfatc1 signaling",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "18018"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:NFATC1",
+            "key": "e6",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "Nfatc1",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 152,
+            "passage_index": 0,
+            "quote": "Corydaline attenuates osteolysis in rheumatoid arthritis via mitigating reactive oxygen species production and suppressing calcineurin-Nfatc1 signaling.",
+            "start": 0
+          },
+          {
+            "end": 1415,
+            "passage_index": 1,
+            "quote": "modulating the calcineurin-Nfatc1 signaling",
+            "start": 1372
+          },
+          {
+            "end": 1904,
+            "passage_index": 1,
+            "quote": "to inhibit the calcineurin-Nfatc1 signaling pathway to regulate the terminals of calcium signaling.",
+            "start": 1835
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "calcineurin-Nfatc1 signaling",
+          "intervention": "Corydaline (Cory)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e5",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Corydaline is described as suppressing calcineurin-Nfatc1 signaling in the osteoclast context.",
+        "uncertainties": [
+          "The pathway name is hyphenated in text; the exact molecular composition is not resolved.",
+          "The title and conclusions summarize suppression, but the underlying direct molecular target is not established in the excerpt."
+        ]
+      },
+      "errors": [
+        "invented annotation ID",
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        654,
+        782
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        785,
+        887
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        919,
+        1241
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        908,
+        1037
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        919,
+        1416
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        908,
+        1127
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1242,
+        1366
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1428,
+        1522
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        0,
+        152
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        149
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1372,
+        1415
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1115,
+        1127
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

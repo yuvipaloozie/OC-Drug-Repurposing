@@ -1,0 +1,262 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis before lumbar fusion surgery",
+          "species": "9606",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "62",
+              "63"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "treated osteoporotic patients",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "BMD",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "64"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "VitD",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "65"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption parameters",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1642,
+            "passage_index": 1,
+            "quote": "osteoporotic patients",
+            "start": 1621
+          },
+          {
+            "end": 1778,
+            "passage_index": 1,
+            "quote": "Treated osteoporotic patients had higher BMD (P<0.001), higher VitD levels P=0.023) and lower levels of bone resorption parameters (P=0.004) than untreated patients.",
+            "start": 1613
+          }
+        ],
+        "experiment": {
+          "assay": "quantitative CT osteoporosis screening and laboratory assessment",
+          "dose": null,
+          "duration": null,
+          "endpoint": "BMD, vitamin D levels, bone resorption parameters",
+          "intervention": "treatment status",
+          "outcome_change": "other",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "unknown",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Among osteoporotic patients before lumbar fusion surgery, treated patients had higher BMD and vitamin D levels and lower bone resorption parameter levels than untreated patients.",
+        "uncertainties": [
+          "Observational comparison; treatment type was heterogeneous and not all treatment components were specified.",
+          "The claim is comparative association, not a causal effect of a specific therapy."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis before lumbar fusion surgery",
+          "species": "9606",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "58",
+              "69"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "male sex",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [
+              "49"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "untreated osteoporosis",
+            "taxon": "9606"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1399,
+            "passage_index": 1,
+            "quote": "71% of osteoporotic men",
+            "start": 1376
+          },
+          {
+            "end": 1447,
+            "passage_index": 1,
+            "quote": "35% of osteoporotic women were untreated",
+            "start": 1407
+          },
+          {
+            "end": 1612,
+            "passage_index": 1,
+            "quote": "Multivariable logistic regression confirmed male sex as an significant contributing factor (OR 4.3, 95% CI 1.9-10.1, P<0.001) for untreated osteoporosis.",
+            "start": 1459
+          }
+        ],
+        "experiment": {
+          "assay": "multivariable logistic regression",
+          "dose": null,
+          "duration": null,
+          "endpoint": "untreated osteoporosis",
+          "intervention": "sex comparison",
+          "outcome_change": "other",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "unknown",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Male sex was associated with untreated osteoporosis in the lumbar fusion surgery cohort.",
+        "uncertainties": [
+          "The text reports association/contribution in regression, not a mechanistic cause.",
+          "The species annotations for men/women are provider hints and may not reflect molecular species."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1621,
+        1642
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1745,
+        1759
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1613,
+        1778
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1778,
+        1881
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1376,
+        1399
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1419,
+        1445
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1407,
+        1447
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1449,
+        1489
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1459,
+        1612
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1491,
+        1587
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

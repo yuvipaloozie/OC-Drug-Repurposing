@@ -1,0 +1,201 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow derived macrophages",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "61",
+              "63",
+              "67",
+              "69",
+              "74",
+              "76",
+              "84",
+              "89",
+              "92",
+              "96"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "5,7-DHC",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "77"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "RANKL induced osteoclast differentiation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1967,
+            "passage_index": 1,
+            "quote": "In vitro, 5,7-DHC (75-200 muM) significantly inhibited RANKL induced osteoclast differentiation, disrupted F-actin ring formation, reduced acidified vesicle secretion, bone resorption, and downregulated osteoclast- elated markers including NFATc1, c-Fos, DC-STAMP, OC-STAMP, CTSK, and MMP9.",
+            "start": 1677
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP staining, phalloidin/AO staining, bone resorption assays, RT-PCR, and western blotting",
+          "dose": "75-200 muM",
+          "duration": null,
+          "endpoint": "osteoclast differentiation, F-actin ring formation, acidified vesicle secretion, bone resorption, and osteoclast-related marker expression",
+          "intervention": "5,7-DHC (75-200 muM)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "5,7-Dihydroxycoumarin inhibited RANKL-induced osteoclast differentiation and reduced osteoclast-related functional readouts in vitro.",
+        "uncertainties": [
+          "The quoted sentence bundles multiple readouts; the claim summarizes them as a single perturbation effect.",
+          "Species is not explicitly stated for the bone marrow derived macrophages in the provided text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ovariectomized (OVX) mice",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "61",
+              "63",
+              "67",
+              "69",
+              "74",
+              "76",
+              "84",
+              "89",
+              "92",
+              "96"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "5,7-DHC",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "90",
+              "91"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "estrogen deficiency-induced bone loss",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2299,
+            "passage_index": 1,
+            "quote": "In OVX mice, 5,7-DHC markedly attenuated estrogen deficiency-induced bone loss and improved trabecular microarchitecture, as reflected by increased BV/TV, BMD, BS/TV, reduced Tb.Sp, and improved histological morphology.",
+            "start": 2080
+          }
+        ],
+        "experiment": {
+          "assay": "micro-CT and histological analyses",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone loss and trabecular microarchitecture",
+          "intervention": "5,7-DHC",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "5,7-Dihydroxycoumarin attenuated estrogen deficiency-induced bone loss and improved trabecular microarchitecture in ovariectomized mice.",
+        "uncertainties": [
+          "The text does not provide the treatment dose or duration for the OVX mouse experiment."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1677,
+        1967
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1858,
+        2199
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        2080,
+        2299
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2248,
+        2420
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

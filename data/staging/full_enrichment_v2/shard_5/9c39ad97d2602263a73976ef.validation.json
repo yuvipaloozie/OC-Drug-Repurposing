@@ -1,0 +1,223 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "4",
+              "25",
+              "31",
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Denosumab",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "5",
+              "26"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 37,
+            "passage_index": 0,
+            "quote": "Denosumab--a powerful RANKL inhibitor",
+            "start": 0
+          },
+          {
+            "end": 66,
+            "passage_index": 1,
+            "quote": "Denosumab is a perfect example on the targeted anticancer therapy.",
+            "start": 0
+          },
+          {
+            "end": 114,
+            "passage_index": 1,
+            "quote": "The inhibition of RANKL activity suppressed the",
+            "start": 67
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "RANKL activity",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Denosumab is described as a RANKL inhibitor, indicating negative regulation of RANKL activity.",
+        "uncertainties": [
+          "Review text states the mechanism in background form rather than reporting a primary experiment.",
+          "Directness is not explicitly established."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "26"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts' resorptive function",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 147,
+            "passage_index": 1,
+            "quote": "The inhibition of RANKL activity suppressed the osteoclasts' resorptive function",
+            "start": 67
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclasts' resorptive function",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The text states that inhibition of RANKL activity suppresses osteoclasts' resorptive function.",
+        "uncertainties": [
+          "The passage is a review-style background statement, not a direct experimental result.",
+          "Osteoclasts are mentioned, but species is not stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        37
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        31
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        66
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        37
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        67,
+        114
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        159,
+        209
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        67,
+        147
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        159,
+        244
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

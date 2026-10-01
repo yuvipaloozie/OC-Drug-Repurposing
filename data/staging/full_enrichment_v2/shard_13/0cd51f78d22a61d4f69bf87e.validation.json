@@ -1,0 +1,339 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "20",
+              "21",
+              "22",
+              "28",
+              "30"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "18",
+              "19",
+              "23",
+              "26",
+              "27",
+              "29",
+              "31"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "paxillin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "25"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "c-Src",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 848,
+            "passage_index": 1,
+            "quote": "RANKL promotes paxillin serine and tyrosine phosphorylation, the latter via cellular sarcoma (c-Src)",
+            "start": 748
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "paxillin serine and tyrosine phosphorylation",
+          "intervention": "Ligand-occupied alphavbeta3 or RANKL",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "RANKL promotes paxillin serine and tyrosine phosphorylation in osteoclasts; the tyrosine phosphorylation is reported to occur via c-Src.",
+        "uncertainties": [
+          "The sentence combines two upstream conditions ('Ligand-occupied alphavbeta3 or RANKL'); this claim records only the RANKL-subject relation.",
+          "Directness is not established for the RANKL-to-paxillin phosphorylation relation.",
+          "The phrase 'the latter via c-Src' links c-Src specifically to tyrosine phosphorylation, not necessarily to serine phosphorylation."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": "generated from embryonic stem cells"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "18",
+              "19",
+              "23",
+              "26",
+              "27",
+              "29",
+              "31"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "paxillin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "17"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 716,
+            "passage_index": 1,
+            "quote": "paxillin-deficient (Pax(-/-) ) osteoclasts, generated from embryonic stem cells, \"superspread\" in response to receptor activator of NF-kappaB ligand (RANKL) and form large, albeit dynamically atypical, actin bands. Despite their increased size, Pax(-/-) osteoclasts resorb bone poorly, excavating pits approximately one-third normal depth.",
+            "start": 377
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption / pit depth",
+          "intervention": "paxillin-deficient (Pax(-/-))",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Paxillin-deficient osteoclasts generated from embryonic stem cells resorb bone poorly and excavate pits at about one-third normal depth.",
+        "uncertainties": [
+          "The text also reports increased osteoclast size and altered actin bands, but the extracted regulatory relation is focused on reduced bone resorption.",
+          "Species is not stated in the passage; embryonic stem cells are mentioned, but the organism is not explicit."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "WT cells",
+          "compartment": "osteoclast cytoskeleton",
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "18",
+              "19",
+              "23",
+              "26",
+              "27",
+              "29",
+              "31"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "paxillin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "protein",
+            "surface": "myosin IIA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast cytoskeleton",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1077,
+            "passage_index": 1,
+            "quote": "WT paxillin, overexpressed in WT cells, contracts the cytoskeleton",
+            "start": 1011
+          },
+          {
+            "end": 1412,
+            "passage_index": 1,
+            "quote": "Thus, in response to RANKL, paxillin associates with myosin IIA to contract the osteoclast cytoskeleton",
+            "start": 1309
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "cytoskeleton contraction",
+          "intervention": "WT paxillin overexpressed in WT cells",
+          "outcome_change": "increased",
+          "perturbation_type": "gain_of_function"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Wild-type paxillin overexpressed in wild-type cells contracts the osteoclast cytoskeleton, and the paper proposes that paxillin associates with myosin IIA to do so.",
+        "uncertainties": [
+          "The association with myosin IIA is stated in the concluding model sentence and is not separately established as a direct physical interaction in the data presented here.",
+          "'WT cells' is stated, but the exact osteoclast source/species is not given in the excerpt."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        748,
+        848
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        858,
+        940
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        377,
+        716
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        215,
+        426
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1011,
+        1077
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1048,
+        1094
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1309,
+        1412
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1294,
+        1384
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,326 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "Ph+ CML",
+          "species": "patients",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D004487"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone marrow edema",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "compound",
+            "surface": "TKI therapy",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:C471992"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "bosutinib",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 782,
+            "passage_index": 1,
+            "quote": "three patients with Ph+ CML who developed acute, MRI-confirmed BME of the lower limb during TKI therapy",
+            "start": 679
+          },
+          {
+            "end": 1049,
+            "passage_index": 1,
+            "quote": "symptoms improved after TKI interruption, bisphosphonate therapy, and supportive measures, and did not recur after switching to bosutinib",
+            "start": 912
+          }
+        ],
+        "experiment": {
+          "assay": "MRI",
+          "dose": null,
+          "duration": null,
+          "endpoint": "MRI-confirmed BME / symptoms",
+          "intervention": "TKI therapy; interruption and switching to bosutinib",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "unresolved",
+          "object": "e1",
+          "sign": "positive",
+          "subject": "e2"
+        },
+        "summary": "In three patients with Ph+ CML, bone marrow edema developed during TKI therapy and improved after TKI interruption, bisphosphonate therapy, and supportive measures; the edema did not recur after switching to bosutinib in some cases.",
+        "uncertainties": [
+          "The passage describes a case series, so causality is not established.",
+          "TKI is a class term; the specific causal drug varies by case."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "Ph+ CML",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "5159"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "PDGFR",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "3815"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "c-KIT",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D004487"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "TKI-associated BME",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1817,
+            "passage_index": 1,
+            "quote": "the differential kinase profiles of implicated drugs suggest PDGFR (and to a lesser extent, c-KIT) inhibition as a plausible mechanistic driver of TKI-associated BME",
+            "start": 1652
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The authors propose that PDGFR inhibition, and to a lesser extent c-KIT inhibition, may mechanistically contribute to TKI-associated bone marrow edema.",
+        "uncertainties": [
+          "This is a proposed mechanism, not an experimentally demonstrated causal result.",
+          "The relation is phrased as a plausible driver, so directness and sign are not experimentally established."
+        ]
+      },
+      "errors": [
+        "invented annotation ID",
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": "intramedullary",
+          "disease_setting": "Ph+ CML",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "5159"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "PDGFR-beta",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "pericyte-mediated microvascular integrity",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "intramedullary edema",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2008,
+            "passage_index": 1,
+            "quote": "PDGFR-beta blockade may impair pericyte-mediated microvascular integrity, increase interstitial fluid extravasation, and alter osteoblast/osteoclast coupling, promoting intramedullary edema",
+            "start": 1819
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The authors propose that PDGFR-beta blockade may impair pericyte-mediated microvascular integrity, increase interstitial fluid extravasation, and alter osteoblast/osteoclast coupling, promoting intramedullary edema.",
+        "uncertainties": [
+          "This is a mechanistic hypothesis presented by the authors.",
+          "The passage also mentions osteoblast/osteoclast coupling, but does not specify a direct molecular interaction."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        679,
+        782
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        700,
+        752
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        912,
+        1049
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        975,
+        1083
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1652,
+        1817
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1778,
+        1862
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1819,
+        2008
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1871,
+        1992
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

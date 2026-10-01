@@ -1,0 +1,218 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "mature OCs",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "35"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ASA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-induced osteoclastogenesis",
+            "taxon": "Homo sapiens"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": "Homo sapiens"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1049,
+            "passage_index": 1,
+            "quote": "ASA was capable of inhibiting RANKL-induced osteoclastogenesis in a dose-dependent manner",
+            "start": 960
+          },
+          {
+            "end": 1202,
+            "passage_index": 1,
+            "quote": "it also effectively suppressed bone resorption of mature OCs in a pit resorption assay",
+            "start": 1116
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP staining; pit resorption assay",
+          "dose": "dose-dependent",
+          "duration": null,
+          "endpoint": "osteoclastogenesis; bone resorption",
+          "intervention": "ASA",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "alpha-asarone (ASA) inhibited RANKL-induced osteoclastogenesis in a dose-dependent manner in vitro and suppressed bone resorption of mature osteoclasts.",
+        "uncertainties": [
+          "The text combines early-stage and late-stage inhibition in one sentence; the specific stage for each effect is not separated.",
+          "Species and cell origin are not stated in the cited span; the osteoclast context is inferred from the passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "oestrogen-deficiency induced OP models",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "49"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ASA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "bone microstructure",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "oestrogen-deficiency induced OP models",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1659,
+            "passage_index": 1,
+            "quote": "our in vivo study uncovered that ASA was capable of improving the bone microstructure in oestrogen-deficiency induced OP models",
+            "start": 1532
+          }
+        ],
+        "experiment": {
+          "assay": "in vivo study",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone microstructure",
+          "intervention": "ASA",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "ASA improved bone microstructure in an estrogen-deficiency induced osteoporosis model in vivo.",
+        "uncertainties": [
+          "The model organism is not specified in the abstract span.",
+          "The exact microstructural metrics are not detailed in the cited text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        960,
+        1049
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        953,
+        1035
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1116,
+        1202
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1068,
+        1142
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1532,
+        1659
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1180,
+        1260
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

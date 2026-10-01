@@ -1,0 +1,232 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "DNA aptamer",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "17"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 266,
+            "passage_index": 1,
+            "quote": "a DNA aptamer that specifically binds RANKL",
+            "start": 223
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "direct",
+          "effect_level": "binding",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The abstract states that a DNA aptamer specifically binds RANKL.",
+        "uncertainties": [
+          "The passage describes binding in a background/introductory context rather than a tested mechanistic assay.",
+          "The aptamer is not given a specific molecular identifier or sequence in the provided text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "19",
+              "22",
+              "26"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "aptRANKL@MSN",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "23"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone formation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "20",
+              "21"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "ovariectomized mouse model of osteoporosis",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 767,
+            "passage_index": 1,
+            "quote": "In an ovariectomized mouse model of osteoporosis, aptRANKL@MSN treatment effectively reversed bone loss",
+            "start": 664
+          },
+          {
+            "end": 978,
+            "passage_index": 1,
+            "quote": "restoring bone mass, microarchitecture, and mechanical strength to levels comparable to healthy controls. The therapy demonstrated a dual action, suppressing bone resorption while also enhancing bone formation",
+            "start": 769
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": "4-week treatment period",
+          "endpoint": "bone loss",
+          "intervention": "aptRANKL@MSN treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In an ovariectomized mouse model of osteoporosis, aptRANKL@MSN treatment reversed bone loss and was described as suppressing bone resorption while enhancing bone formation.",
+        "uncertainties": [
+          "The text combines several outcome improvements; only bone loss reversal is directly encoded as the main regulatory effect.",
+          "The model is ovariectomized mouse osteoporosis, but the exact strain is not stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        223,
+        266
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        135,
+        178
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        664,
+        767
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        565,
+        654
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        769,
+        978
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        655,
+        778
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

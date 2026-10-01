@@ -1,0 +1,230 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "periodontal tissues",
+          "disease_setting": "periodontitis with orthodontic tooth movement",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "119"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "CRP",
+            "taxon": "rat"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1179,
+            "passage_index": 1,
+            "quote": "CRP knockout and AG490 treatment led to a reduction",
+            "start": 1128
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclasts",
+          "intervention": "CRP knockout",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "CRP knockout reduced osteoclasts in the PD+OTM rat model.",
+        "uncertainties": [
+          "The quote spans a coordinated statement with AG490; the CRP-specific effect is separated by context from the same sentence.",
+          "The molecular form is inferred from the gene annotation and knockout context, but the text does not explicitly say protein."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "periodontal tissues",
+          "disease_setting": "periodontitis with orthodontic tooth movement",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "121"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "AG490",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "122",
+              "123",
+              "124"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "IL-6/JAK2/STAT3 pathway",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1179,
+            "passage_index": 1,
+            "quote": "and AG490 treatment led to a reduction",
+            "start": 1141
+          },
+          {
+            "end": 716,
+            "passage_index": 1,
+            "quote": "AG490 used to downregulate the IL-6/JAK2/STAT3 pathway",
+            "start": 662
+          },
+          {
+            "end": 1316,
+            "passage_index": 1,
+            "quote": "decreased expression of IL-6/JAK2/STAT3-related molecules",
+            "start": 1259
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclasts",
+          "intervention": "local injection of the tyrosine kinase inhibitor AG490",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "AG490 treatment reduced osteoclasts and decreased expression of IL-6/JAK2/STAT3-related molecules in the PD+OTM rat model.",
+        "uncertainties": [
+          "The sentence combines osteoclast reduction with pathway downregulation; the causal linkage between these outcomes is not established in the text.",
+          "The pathway is described as IL-6/JAK2/STAT3-related molecules; the exact molecular members affected are not individually enumerated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1128,
+        1179
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        730,
+        782
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1141,
+        1179
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        742,
+        782
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        662,
+        716
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1247,
+        1316
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1259,
+        1316
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1493,
+        1594
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

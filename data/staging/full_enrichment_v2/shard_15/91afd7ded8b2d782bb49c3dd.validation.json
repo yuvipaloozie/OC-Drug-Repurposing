@@ -1,0 +1,215 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone",
+          "disease_setting": "hypertension",
+          "species": "Rattus norvegicus",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "stress exposure",
+            "taxon": "Rattus norvegicus"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoblast activity",
+            "taxon": "Rattus norvegicus"
+          },
+          {
+            "annotation_ids": [
+              "41",
+              "45",
+              "51"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:MMP2",
+            "key": "e3",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "MMP-2",
+            "taxon": "Rattus norvegicus"
+          },
+          {
+            "annotation_ids": [
+              "42",
+              "46"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:MMP9",
+            "key": "e4",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "MMP-9",
+            "taxon": "Rattus norvegicus"
+          },
+          {
+            "annotation_ids": [
+              "35",
+              "47"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "VEGF",
+            "taxon": "Rattus norvegicus"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1117,
+            "passage_index": 1,
+            "quote": "stress exposure reduced osteoblast activity (OCN, BSP), increased matrix remodeling enzymes (MMP-2, MMP-9), and promoted angiogenic signaling (VEGF).",
+            "start": 968
+          }
+        ],
+        "experiment": {
+          "assay": "histology / immunohistochemistry / enzymatic activity analysis",
+          "dose": null,
+          "duration": "acute 2 h restraint; chronic variable stress over 10 days",
+          "endpoint": "bone remodeling markers",
+          "intervention": "acute and chronic stress",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Stress exposure was reported to reduce osteoblast activity and increase matrix remodeling enzymes and angiogenic signaling in rats.",
+        "uncertainties": [
+          "The quoted sentence reports multiple outcomes together; the specific regulatory link for each marker is not separated in the text.",
+          "MMP-2, MMP-9, and VEGF are mentioned as increased/promoted, but the sentence does not specify whether this reflects abundance, expression, or activity for each marker."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone",
+          "disease_setting": "hypertension",
+          "species": "Rattus norvegicus",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "stress-exposed animals",
+            "taxon": "Rattus norvegicus"
+          },
+          {
+            "annotation_ids": [
+              "40",
+              "48"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "TRAP-positive osteoclasts",
+            "taxon": "Rattus norvegicus"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1242,
+            "passage_index": 1,
+            "quote": "TRAP-positive osteoclasts were observed exclusively in stress-exposed animals, indicating elevated bone resorption.",
+            "start": 1127
+          }
+        ],
+        "experiment": {
+          "assay": "histology / immunohistochemistry",
+          "dose": null,
+          "duration": "acute 2 h restraint; chronic variable stress over 10 days",
+          "endpoint": "TRAP-positive osteoclasts / bone resorption",
+          "intervention": "acute and chronic stress",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "TRAP-positive osteoclasts were observed only in stress-exposed animals, which the authors interpret as elevated bone resorption.",
+        "uncertainties": [
+          "The text links TRAP-positive osteoclasts to elevated bone resorption, but does not establish a direct causal mechanism.",
+          "TRAP is annotated as a gene, but the observed result is a histological phenotype rather than a molecular abundance measurement."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        968,
+        1117
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1021,
+        1176
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1127,
+        1242
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1178,
+        1283
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,184 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "bone loss",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "5"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "irisin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "7"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Nrf2",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 62,
+            "passage_index": 0,
+            "quote": "irisin prevents bone loss via Nrf2 activation",
+            "start": 17
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone loss",
+          "intervention": null,
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Irisin is stated to prevent bone loss via Nrf2 activation.",
+        "uncertainties": [
+          "Title-level summary; no experimental details in the quoted span.",
+          "The phrase 'via Nrf2 activation' indicates pathway involvement but not direct biochemical mechanism."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "bone loss",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "5"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "irisin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "8",
+              "9"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "STING/NF-kappaB signaling",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 107,
+            "passage_index": 0,
+            "quote": "inhibition of STING/NF-kappaB signaling.",
+            "start": 67
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "STING/NF-kappaB signaling",
+          "intervention": null,
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Irisin is stated to inhibit STING/NF-kappaB signaling.",
+        "uncertainties": [
+          "Title-level summary; no experimental details in the quoted span.",
+          "The pathway is named as a combined signaling axis; component-specific effects are not separated in the title."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        17,
+        62
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        17,
+        61
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        67,
+        107
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        66,
+        106
+      ],
+      "passage_index": 0
+    }
+  ],
+  "valid_envelope": true
+}

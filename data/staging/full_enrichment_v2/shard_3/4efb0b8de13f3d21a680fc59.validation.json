@@ -1,0 +1,215 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "nephrolithiasis-associated bone disorder",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D053040"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Nephrolithiasis-associated bone disorder",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "reduced bone mineral density (BMD)",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "low bone formation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "high bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "abnormal mineralization",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 526,
+            "passage_index": 1,
+            "quote": "Nephrolithiasis-associated bone disorder is characterized by reduced bone mineral density (BMD) and histologically discloses low bone formation, high bone resorption and abnormal mineralization.",
+            "start": 332
+          }
+        ],
+        "experiment": {
+          "assay": "histology",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone mineral density and histologic bone features",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Nephrolithiasis-associated bone disorder is described as being characterized by reduced bone mineral density, low bone formation, high bone resorption, and abnormal mineralization.",
+        "uncertainties": [
+          "The passage is a review summary rather than a primary experiment.",
+          "The text states characterization of a disorder, not a tested causal mechanism.",
+          "Only the first phenotype is linked in the regulatory object; the remaining listed phenotypes are mentioned in the same descriptive span but not separately modeled."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "nephrolithiasis",
+          "species": null,
+          "stage": "early in life"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D001847"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D007669"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "kidney stone formation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1150,
+            "passage_index": 1,
+            "quote": "the association of bone loss with kidney stone formation early in life",
+            "start": 1080
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "association of bone loss with kidney stone formation",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The review states that bone loss is associated with kidney stone formation early in life.",
+        "uncertainties": [
+          "This is a narrative review statement, not a direct experiment.",
+          "Directionality is not specified beyond an association."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        332,
+        526
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        451,
+        555
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1080,
+        1150
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1218,
+        1260
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

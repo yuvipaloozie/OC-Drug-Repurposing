@@ -1,0 +1,211 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "pathway",
+            "surface": "Src family kinase (SFK) signaling",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "26"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoporosis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "27"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "cancer metastases",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 368,
+            "passage_index": 1,
+            "quote": "Abnormal Src family kinase (SFK) signaling has been linked to several disease states, including osteoporosis and cancer metastases.",
+            "start": 237
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The abstract states that abnormal Src family kinase signaling has been linked to osteoporosis and cancer metastases.",
+        "uncertainties": [
+          "This is a background association statement, not a perturbation experiment.",
+          "The quoted sentence mentions multiple disease states; only osteoporosis is encoded in the regulatory object here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "41"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:SRC",
+            "key": "e1",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "protein",
+            "surface": "Src",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "43"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "AP23464",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "induced-fit movement",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1416,
+            "passage_index": 1,
+            "quote": "AP23464",
+            "start": 1409
+          },
+          {
+            "end": 1808,
+            "passage_index": 1,
+            "quote": "AP23464, results in the largest induced-fit movement",
+            "start": 1756
+          }
+        ],
+        "experiment": {
+          "assay": "crystal structures",
+          "dose": null,
+          "duration": null,
+          "endpoint": "induced-fit movement",
+          "intervention": "AP23464",
+          "outcome_change": "other",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "binding",
+          "interpretation": "explicit_in_text",
+          "object": "e1",
+          "sign": "unknown",
+          "subject": "e2"
+        },
+        "summary": "AP23464 was observed in complex with Src, and the text states that binding of AP23464 produced the largest induced-fit movement in Src.",
+        "uncertainties": [
+          "The evidence supports binding/complex formation and a structural effect, not a direct causal inhibition edge.",
+          "Species is not stated in the text; existing-node suggestion was not treated as authoritative."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1756,
+        1808
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1887,
+        1942
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        237,
+        368
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        428,
+        515
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

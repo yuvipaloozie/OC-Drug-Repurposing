@@ -1,0 +1,366 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoclast precursors",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "2",
+              "29",
+              "30",
+              "33",
+              "34",
+              "36",
+              "38",
+              "47",
+              "51"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RACK1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "31",
+              "32",
+              "42"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "p38 MAPK",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 66,
+            "passage_index": 0,
+            "quote": "RACK1 interaction with c-Src is essential for osteoclast function.",
+            "start": 0
+          },
+          {
+            "end": 194,
+            "passage_index": 1,
+            "quote": "mediates receptor activator of nuclear factor kappaBeta ligand (RANKL)-dependent activation of p38 MAPK in osteoclast precursors",
+            "start": 66
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "RANKL-dependent activation of p38 MAPK",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "RACK1 is described as mediating RANKL-dependent activation of p38 MAPK in osteoclast precursors.",
+        "uncertainties": [
+          "The title suggests an interaction with c-Src, but this claim is stated as background in the abstract rather than an experimentally detailed result in the quoted span.",
+          "Species is not stated in the passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "37",
+              "39",
+              "40"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RACK1 Y228F/Y246F",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [
+              "3",
+              "35",
+              "41",
+              "43",
+              "46",
+              "48",
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "c-Src",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 508,
+            "passage_index": 1,
+            "quote": "A RACK1 mutant protein (mutations of tyrosine 228 and 246 residues to phenylalanine; RACK1 Y228F/Y246F) did not interact with c-Src.",
+            "start": 376
+          },
+          {
+            "end": 718,
+            "passage_index": 1,
+            "quote": "The mutant retained its ability to differentiate into osteoclasts; however, the integrity of the RANKL-mediated cytoskeleton, bone resorption activity, and phosphorylation of c-Src was significantly decreased.",
+            "start": 509
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "c-Src binding; osteoclast differentiation; RANKL-mediated cytoskeleton integrity; bone resorption activity; c-Src phosphorylation",
+          "intervention": "RACK1 Y228F/Y246F mutant protein",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "direct",
+          "effect_level": "binding",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The RACK1 Y228F/Y246F mutant did not interact with c-Src and retained osteoclast differentiation, but reduced RANKL-mediated cytoskeleton integrity, bone resorption activity, and c-Src phosphorylation.",
+        "uncertainties": [
+          "The passage groups multiple downstream phenotypes in one sentence; the precise causal contribution of the binding loss to each decrease is not separately established in the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "3",
+              "35",
+              "41",
+              "43",
+              "46",
+              "48",
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "c-Src",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [
+              "44",
+              "45",
+              "49",
+              "50"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "c-Src K152R",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 827,
+            "passage_index": 1,
+            "quote": "Importantly, lysine 152 (K152) within the Src homology 2 (SH2) domain of c-Src is involved in RACK1 binding.",
+            "start": 719
+          },
+          {
+            "end": 937,
+            "passage_index": 1,
+            "quote": "The c-Src K152R mutant (mutation of lysine 152 into arginine) impaired the resorption of bone by osteoclasts.",
+            "start": 828
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption",
+          "intervention": "c-Src K152R mutant",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e5"
+        },
+        "summary": "The c-Src K152R mutant impaired bone resorption by osteoclasts.",
+        "uncertainties": [
+          "The sentence does not specify whether the effect on resorption is direct or mediated through altered RACK1 binding."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        66,
+        194
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        66,
+        195
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        376,
+        508
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        376,
+        511
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        509,
+        718
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        512,
+        711
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        719,
+        827
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        712,
+        823
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        828,
+        937
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        824,
+        922
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

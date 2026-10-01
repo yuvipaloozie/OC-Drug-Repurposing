@@ -1,0 +1,134 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ligature-induced periodontitis and ovariectomy models",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "51"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Mertk",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "50"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1104,
+            "passage_index": 1,
+            "quote": "bone resorption was significantly attenuated",
+            "start": 1060
+          },
+          {
+            "end": 1128,
+            "passage_index": 1,
+            "quote": "in Mertk-deficient mice",
+            "start": 1105
+          },
+          {
+            "end": 1054,
+            "passage_index": 1,
+            "quote": "In ligature-induced periodontitis and ovariectomy models",
+            "start": 998
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption",
+          "intervention": "Mertk-deficient mice",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Mertk deficiency in mice was associated with attenuated bone resorption in ligature-induced periodontitis and ovariectomy models.",
+        "uncertainties": [
+          "The passage does not specify which bone-resorbing cell type mediated the decreased resorption in vivo.",
+          "The claim is based on a knockout/deficiency phenotype, not a direct biochemical mechanism."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1060,
+        1104
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1206,
+        1243
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1105,
+        1128
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1244,
+        1270
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        998,
+        1054
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1158,
+        1205
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

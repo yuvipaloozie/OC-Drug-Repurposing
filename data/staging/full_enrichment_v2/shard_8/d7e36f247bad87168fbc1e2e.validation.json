@@ -1,0 +1,179 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "mature osteoblast/osteocyte",
+          "compartment": null,
+          "disease_setting": "high-fat diet challenge",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "1",
+              "21",
+              "22",
+              "23",
+              "24",
+              "26",
+              "28",
+              "30",
+              "35",
+              "38"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "PPARgamma",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 895,
+            "passage_index": 1,
+            "quote": "mature osteoblast/osteocyte-specific ablation of PPARgamma in mice (Ocy-PPARgamma-/-) alters body composition with age, namely, to produce less fat and more lean mass, and enhances insulin sensitivity and energy expenditure compared with wild-type mice. In addition, Ocy-PPARgamma-/- mice exhibit more bone density, structure, and strength by uncoupling bone formation from resorption. When challenged with a high-fat diet, Ocy-PPARgamma-/- mice retain glycemic control, with increased browning of the adipose tissue, decreased gluconeogenesis, and less hepatic steatosis.",
+            "start": 323
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": "with age",
+          "endpoint": "body composition, insulin sensitivity, energy expenditure, glycemic control, adipose browning, gluconeogenesis, hepatic steatosis, bone density/structure/strength",
+          "intervention": "mature osteoblast/osteocyte-specific ablation of PPARgamma",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": null,
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Mature osteoblast/osteocyte-specific ablation of PPARgamma in mice altered body composition and improved metabolic phenotypes, including less fat, more lean mass, enhanced insulin sensitivity, increased energy expenditure, retained glycemic control, increased adipose browning, decreased gluconeogenesis, and less hepatic steatosis.",
+        "uncertainties": [
+          "The text combines multiple outcomes from the same perturbation; the exact causal linkage for each individual phenotype is not separately established here.",
+          "Species support comes from the passage text and provider species tags; molecular form is treated as a gene candidate from the annotation."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "bone cells",
+          "compartment": "bone",
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "1",
+              "21",
+              "22",
+              "23",
+              "24",
+              "26",
+              "28",
+              "30",
+              "35",
+              "38"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "PPARgamma",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 189,
+            "passage_index": 1,
+            "quote": "Peroxisome proliferator-activated receptor gamma (PPARgamma) is a master regulator of energy metabolism. In bone, it is known to regulate osteoblast differentiation and osteoclast activity.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoblast differentiation and osteoclast activity",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": null,
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In bone, PPARgamma is described as a regulator of osteoblast differentiation and osteoclast activity.",
+        "uncertainties": [
+          "This is a background statement rather than a new experimental result.",
+          "The passage does not specify whether the regulation is direct or indirect."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        323,
+        895
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        214,
+        432
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        0,
+        189
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        109
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

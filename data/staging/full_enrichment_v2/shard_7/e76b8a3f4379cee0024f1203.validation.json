@@ -1,0 +1,234 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": "jaw bones",
+          "disease_setting": "cherubism",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "33",
+              "34",
+              "35",
+              "36",
+              "41",
+              "45"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "3BP2",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [
+              "39"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "cherubism",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [
+              "40"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": "human"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1394,
+            "passage_index": 1,
+            "quote": "Point mutations of the 3BP2 gene cause the rare human inherited disorder cherubism, characterized by excessive bone resorption in the jaw bones.",
+            "start": 1250
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "cherubism / excessive bone resorption",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Point mutations in 3BP2 are said to cause cherubism, a human inherited disorder characterized by excessive bone resorption in the jaw bones.",
+        "uncertainties": [
+          "The passage is a review-style statement; no primary experimental design is described in the excerpt.",
+          "The causal wording refers to point mutations in 3BP2, but the specific mutant forms are not enumerated here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "myeloid cell",
+          "compartment": null,
+          "disease_setting": "cherubism",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "42"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Cherubism",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "42"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "mice",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "43"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:CSF1",
+            "key": "e3",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "M-CSF",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "44"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "e4",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1582,
+            "passage_index": 1,
+            "quote": "\"Cherubism\" mice exhibit increased myeloid cell responses to M-CSF and RANKL leading to the activation of osteoclasts.",
+            "start": 1464
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast activation",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e5",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Cherubism mice are described as having increased myeloid cell responses to M-CSF and RANKL, which leads to osteoclast activation.",
+        "uncertainties": [
+          "The sentence summarizes a reported phenotype in cherubism mice; the underlying experimental setup is not described in the excerpt.",
+          "The link from increased myeloid cell responses to osteoclast activation is stated in the passage, but directness and causal intermediates are not experimentally detailed here."
+        ]
+      },
+      "errors": [
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1250,
+        1394
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1227,
+        1414
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1464,
+        1582
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1419,
+        1644
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

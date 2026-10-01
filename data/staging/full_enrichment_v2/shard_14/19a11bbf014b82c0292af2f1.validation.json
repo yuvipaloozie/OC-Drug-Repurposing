@@ -1,0 +1,364 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteocytes",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D007501"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Iron overload",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "apoptosis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "8600"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "receptor activator of nuclear factor kappa-Beta ligand (RANKL)",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 138,
+            "passage_index": 1,
+            "quote": "Iron overload leads to apoptosis and increased expression of receptor activator of nuclear factor kappa-Beta ligand (RANKL) in osteocytes,",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteocyte apoptosis and RANKL expression",
+          "intervention": "iron overload",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Iron overload was reported to lead to osteocyte apoptosis and increased RANKL expression.",
+        "uncertainties": [
+          "The passage does not specify the molecular form of RANKL beyond the gene-style annotation.",
+          "The exact experimental system for the initial statement is not fully detailed in the excerpt."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "iron overload",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D019386"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "alendronate",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "-"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "IG9402",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "1593"
+            ],
+            "existing_node_id": null,
+            "key": "e7",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "CTX",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "10090"
+            ],
+            "existing_node_id": null,
+            "key": "e8",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "mice",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 569,
+            "passage_index": 1,
+            "quote": "alendronate, or IG9402, a bisphosphonate (BP) analog which does not inhibit bone resorption, inhibited iron overload-induced osteocyte apoptosis and increased RANKL expression.",
+            "start": 499
+          },
+          {
+            "end": 856,
+            "passage_index": 1,
+            "quote": "Alendronate, but not IG9402, prevented the increase in osteoclastogenesis and serum levels of the bone resorption marker C-telopeptide of type I collagen (CTX) in iron-overloaded mice.",
+            "start": 672
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis and serum CTX",
+          "intervention": "alendronate",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e6",
+          "sign": "negative",
+          "subject": "e4"
+        },
+        "summary": "In iron-overloaded mice, alendronate prevented the increase in osteoclastogenesis.",
+        "uncertainties": [
+          "The excerpt reports prevention of increased osteoclastogenesis in iron-overloaded mice; it does not establish a direct molecular target for alendronate in osteoclasts.",
+          "CTX is annotated as a gene by the provider, but the passage only supports it as a serum bone resorption marker."
+        ]
+      },
+      "errors": [
+        "invented annotation ID",
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "negated_relation",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "iron overload",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "-"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "IG9402",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D001847"
+            ],
+            "existing_node_id": null,
+            "key": "e9",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D007501"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "iron overload",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 856,
+            "passage_index": 1,
+            "quote": "Alendronate, but not IG9402, prevented the increase in osteoclastogenesis and serum levels of the bone resorption marker C-telopeptide of type I collagen (CTX) in iron-overloaded mice.",
+            "start": 672
+          },
+          {
+            "end": 1128,
+            "passage_index": 1,
+            "quote": "Although IG9402 did not prevent bone loss due to iron overload, it partially prevented reduction of strength,",
+            "start": 1019
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis and bone loss",
+          "intervention": "IG9402",
+          "outcome_change": "no_detected_change",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e6",
+          "sign": "unknown",
+          "subject": "e5"
+        },
+        "summary": "IG9402 did not prevent the increase in osteoclastogenesis or bone loss due to iron overload.",
+        "uncertainties": [
+          "The wording supports lack of prevention of osteoclastogenesis and bone loss, not necessarily a direct absence of any biological activity."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        138
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        102
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        672,
+        856
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        774,
+        869
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        672,
+        856
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        774,
+        869
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1019,
+        1128
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1112,
+        1190
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

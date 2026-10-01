@@ -1,0 +1,169 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone",
+          "disease_setting": "Rett syndrome",
+          "species": "mouse",
+          "stage": "postnatal development"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "41",
+              "42"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Mecp2-null mouse model",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "increased osteoclast activity",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [
+              "38",
+              "43",
+              "57"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteopenia",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 107,
+            "passage_index": 0,
+            "quote": "Increased Osteoclast Activity Contributes to Bone Resorption and Osteopenia in a Rett Syndrome Mouse Model.",
+            "start": 0
+          },
+          {
+            "end": 377,
+            "passage_index": 1,
+            "quote": "osteopenia with increased fracture risk; however, the mechanisms underlying these skeletal defects are not completely understood.",
+            "start": 248
+          },
+          {
+            "end": 1114,
+            "passage_index": 1,
+            "quote": "These structural alterations were accompanied by increased osteoclast number per bone surface, elevated urinary deoxypyridinoline, and higher expression of osteoclast-associated genes, including Cathepsin K.",
+            "start": 907
+          },
+          {
+            "end": 1828,
+            "passage_index": 1,
+            "quote": "Together, our findings identify increased osteoclast activity as a significant contributor to Rett-associated osteopenia",
+            "start": 1708
+          }
+        ],
+        "experiment": {
+          "assay": "microcomputed tomography and histomorphometric analyses; urinary deoxypyridinoline; gene expression analysis",
+          "dose": null,
+          "duration": "postnatal day 35 and postnatal day 55",
+          "endpoint": "osteoclast number/activity and osteopenia",
+          "intervention": "Mecp2-null mouse model",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In Mecp2-null mouse models, increased osteoclast activity was observed alongside osteopenia, and the authors conclude it contributes to Rett-associated skeletal pathology.",
+        "uncertainties": [
+          "The claim combines a title-level conclusion with abstract results; the exact causal contribution is presented as the authors' conclusion rather than a directly tested mechanistic pathway.",
+          "The subject is a mutant mouse model rather than a single molecular entity, so the regulatory mapping is approximate.",
+          "The passage reports increased osteoclast number and marker expression, but direct molecular causality from Mecp2 to osteoclast activity is not established in the text."
+        ]
+      },
+      "errors": [
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        107
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        106
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        248,
+        377
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        546,
+        638
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        907,
+        1114
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1039,
+        1168
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1708,
+        1828
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1906,
+        1951
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

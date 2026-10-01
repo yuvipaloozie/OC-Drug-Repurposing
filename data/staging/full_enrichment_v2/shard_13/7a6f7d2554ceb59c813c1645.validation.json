@@ -1,0 +1,133 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "periodontal diseases",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Aging",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "5"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "periodontitis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "wound repair",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "7"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 80,
+            "passage_index": 1,
+            "quote": "AIMS: Aging influences susceptibility to periodontitis and modifies wound repair",
+            "start": 0
+          },
+          {
+            "end": 880,
+            "passage_index": 1,
+            "quote": "Studies reported reduced collagen synthesis during aging, narrowing of the periodontal ligament, widening of cementum, and increased bone resorption.",
+            "start": 731
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "susceptibility to periodontitis; wound repair; bone resorption",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The review states that aging influences susceptibility to periodontitis and modifies wound repair, and that studies reported increased bone resorption during aging.",
+        "uncertainties": [
+          "This is a scoping review summary, not a primary experiment.",
+          "The quoted text reports multiple aging-related outcomes; the claim captures them as background associations rather than a causal mechanism."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        80
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        76
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        731,
+        880
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        896,
+        964
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

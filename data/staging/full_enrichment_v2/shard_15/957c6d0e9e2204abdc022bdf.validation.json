@@ -1,0 +1,191 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "43"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "IL-17",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "44"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "45",
+              "46"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "NF-kappaB/MAPK/NFATc1 pathway of osteoclast differentiation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 698,
+            "passage_index": 1,
+            "quote": "Th17 cells and their signature cytokine IL-17 promote RANKL expression and amplify the NF-kappaB/MAPK/NFATc1 pathway of osteoclast differentiation",
+            "start": 552
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The abstract states that IL-17 promotes RANKL expression and amplifies signaling involved in osteoclast differentiation.",
+        "uncertainties": [
+          "Review statement rather than a primary experiment.",
+          "The sentence also mentions Th17 cells, but the causal relation extracted here is limited to IL-17 promoting RANKL expression as written."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone marrow",
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "regulatory T cells (Tregs)",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast formation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1042,
+            "passage_index": 1,
+            "quote": "regulatory T cells (Tregs) inhibit osteoclast formation through Foxp3-, IL-10-, TGF-beta-, CTLA-4- and IDO-related pathways, thereby limiting proinflammatory T-cell activation and maintaining bone marrow immune homeostasis",
+            "start": 820
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e5",
+          "sign": "negative",
+          "subject": "e4"
+        },
+        "summary": "The abstract states that regulatory T cells inhibit osteoclast formation through several listed pathways.",
+        "uncertainties": [
+          "Review statement rather than a primary experiment.",
+          "The mechanism is presented as a multi-pathway summary, so the individual pathway contributions are not separately resolved."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        552,
+        698
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        685,
+        798
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        820,
+        1042
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        847,
+        1061
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

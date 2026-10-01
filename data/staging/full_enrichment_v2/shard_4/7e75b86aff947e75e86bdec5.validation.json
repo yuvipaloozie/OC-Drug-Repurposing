@@ -1,0 +1,106 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "osteoclasts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "17"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "hydrochloric acid",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "18"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ATP",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1302,
+            "passage_index": 1,
+            "quote": "osteoclasts pump molar quantities of hydrochloric acid to dissolve the bone minerals in a process requiring ATP hydrolysis",
+            "start": 1180
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "hydrochloric acid pumping / bone mineral dissolution",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The review states that osteoclasts pump hydrochloric acid to dissolve bone minerals, and that this process requires ATP hydrolysis.",
+        "uncertainties": [
+          "The passage is a review-style background statement, not an experimental perturbation.",
+          "The exact offset span is best-effort and may be slightly imprecise.",
+          "ATP hydrolysis is mentioned as required, but no explicit causal edge from ATP to acid pumping is stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1180,
+        1302
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1218,
+        1339
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

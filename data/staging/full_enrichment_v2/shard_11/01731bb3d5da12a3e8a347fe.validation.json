@@ -1,0 +1,356 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "37",
+              "38",
+              "43",
+              "53"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "angelic acid",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-induced osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 483,
+            "passage_index": 1,
+            "quote": "angelic acid (AA), a naturally occurring unsaturated monocarboxylic acid, potently inhibits RANKL-induced osteoclastogenesis. This effect occurs with an IC50 of 1.9 microM without cytotoxicity.",
+            "start": 290
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "IC50 of 1.9 microM",
+          "duration": null,
+          "endpoint": "RANKL-induced osteoclastogenesis",
+          "intervention": "angelic acid (AA)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Angelic acid (AA) inhibits RANKL-induced osteoclastogenesis, with the effect reported as potent and non-cytotoxic.",
+        "uncertainties": [
+          "Cell type and species are not stated in the provided abstract passage.",
+          "The text reports potency and lack of cytotoxicity, but not the assay used."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "38",
+              "43",
+              "53"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "AA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "41",
+              "44",
+              "54"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "protein",
+            "surface": "ERK1/2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "45"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:MAPK14",
+            "key": "e4",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "protein",
+            "surface": "p38",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "46"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:MAPK8",
+            "key": "e5",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "protein",
+            "surface": "JNK",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "47"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:NFKB1",
+            "key": "e6",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "protein",
+            "surface": "NF-kappaB",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 670,
+            "passage_index": 1,
+            "quote": "RANKL-activated phosphorylation of ERK1/2, p38, and JNK (all three MAPK branches), while leaving NF-kappaB transcriptional activity unaffected.",
+            "start": 527
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "phosphorylation of ERK1/2, p38, and JNK; NF-kappaB transcriptional activity unaffected",
+          "intervention": "angelic acid (AA)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "AA selectively suppresses RANKL-activated phosphorylation of ERK1/2, p38, and JNK, while leaving NF-kappaB transcriptional activity unaffected.",
+        "uncertainties": [
+          "The abstract does not specify whether ERK1/2 is a protein complex or separate proteins.",
+          "The text supports suppression of MAPK phosphorylation but only states NF-kappaB activity was unaffected, not a mechanistic relation for NF-kappaB."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "38",
+              "43",
+              "53"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "AA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "48",
+              "49",
+              "55"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:NFATC1",
+            "key": "e2",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "protein",
+            "surface": "NFATc1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "50"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:ACP5",
+            "key": "e3",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "protein",
+            "surface": "TRAP",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "51"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:CTSK",
+            "key": "e4",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "protein",
+            "surface": "cathepsin K",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "52"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:ATP6V0D2",
+            "key": "e5",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "protein",
+            "surface": "Atp6v0d2",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 884,
+            "passage_index": 1,
+            "quote": "This preferential MAPK suppression disrupted downstream NFATc1 nuclear translocation, thereby preventing NFATc1-driven transcription of osteoclast-specific effector genes including TRAP, cathepsin K, and Atp6v0d2.",
+            "start": 671
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "NFATc1 nuclear translocation; NFATc1-driven transcription of osteoclast-specific effector genes",
+          "intervention": "angelic acid (AA)",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "AA prevents NFATc1 nuclear translocation and reduces NFATc1-driven transcription of osteoclast-specific effector genes.",
+        "uncertainties": [
+          "The phrase 'thereby' indicates a proposed mechanistic chain, but directness is not established experimentally in the abstract.",
+          "The specific cell type and species are not stated in the provided passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        290,
+        483
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        405,
+        489
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        527,
+        670
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        642,
+        748
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        671,
+        884
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        748,
+        1017
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

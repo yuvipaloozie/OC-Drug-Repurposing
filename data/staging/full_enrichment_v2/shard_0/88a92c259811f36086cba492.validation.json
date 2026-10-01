@@ -1,0 +1,196 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone tissue",
+          "disease_setting": "acute lung injury-induced bone loss",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "42"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "26SCS",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "macrophage polarization to the M2 phenotype",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 573,
+            "passage_index": 1,
+            "quote": "26SCS effectively reaches bone tissue after oral administration.",
+            "start": 509
+          },
+          {
+            "end": 629,
+            "passage_index": 1,
+            "quote": "It promotes macrophage polarization to the M2 phenotype",
+            "start": 574
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "macrophage polarization to the M2 phenotype",
+          "intervention": "oral administration of 26SCS",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "26SCS administration was reported to promote macrophage polarization toward the M2 phenotype.",
+        "uncertainties": [
+          "The passage does not specify the experimental system, species, or assay used for the polarization claim."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone tissue",
+          "disease_setting": "acute lung injury-induced bone loss",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "42"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "26SCS",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast-mediated bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 719,
+            "passage_index": 1,
+            "quote": "inhibiting osteoclast-mediated bone resorption.",
+            "start": 672
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast-mediated bone resorption",
+          "intervention": "oral administration of 26SCS",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "26SCS administration was reported to inhibit osteoclast-mediated bone resorption.",
+        "uncertainties": [
+          "The passage does not state whether the inhibition was direct on osteoclasts or indirect through other cells."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        509,
+        573
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        595,
+        658
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        574,
+        629
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        659,
+        710
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        672,
+        719
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        753,
+        799
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

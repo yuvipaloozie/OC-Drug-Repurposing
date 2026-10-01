@@ -1,0 +1,188 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7-derived osteoclasts",
+          "compartment": "nuclear envelope",
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "6"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "AKAP6",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "microtubule nucleation from the NE",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 975,
+            "passage_index": 1,
+            "quote": "Targeted depletion of AKAP6 in RAW264.7-derived osteoclasts led to the displacement of the Golgi and MTOC-associated proteins PCM1, pericentrin, and CDK5RAP2 from the NE, while their centrosomal localization remained intact. This selectively impaired microtubule nucleation from the NE",
+            "start": 690
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "microtubule nucleation from the NE",
+          "intervention": "Targeted depletion of AKAP6",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "AKAP6 depletion in RAW264.7-derived osteoclasts selectively impaired microtubule nucleation from the nuclear envelope.",
+        "uncertainties": [
+          "AKAP6 is annotated as a gene, but the perturbed molecular form could not be resolved more specifically from the text.",
+          "The exact assay for microtubule nucleation was not stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7-derived osteoclasts",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "6"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "AKAP6",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "podosome formation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption capacity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1204,
+            "passage_index": 1,
+            "quote": "without disrupting centrosomal microtubule activity, enabling a functional dissection of the two MTOCs. Loss of NE-MTOC activity, by AKAP6 depletion, impaired podosome formation and significantly reduced bone resorption capacity",
+            "start": 976
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption capacity",
+          "intervention": "AKAP6 depletion",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "AKAP6 depletion impaired podosome formation and reduced bone resorption capacity in RAW264.7-derived osteoclasts.",
+        "uncertainties": [
+          "The text also reports impaired podosome formation, but the claim is focused on the explicitly stated reduction in bone resorption capacity.",
+          "AKAP6 is annotated as a gene, but the perturbed molecular form could not be resolved more specifically from the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        690,
+        975
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        835,
+        1003
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        976,
+        1204
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1004,
+        1110
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

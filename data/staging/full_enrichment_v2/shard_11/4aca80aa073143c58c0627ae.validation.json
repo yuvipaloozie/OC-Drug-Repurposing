@@ -1,0 +1,204 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW 264.7 cells and bone marrow macrophages",
+          "compartment": null,
+          "disease_setting": "osteoclast-related osteolytic diseases",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "42"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "regorafenib",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1520,
+            "passage_index": 1,
+            "quote": "regorafenib significantly inhibited osteoclast differentiation and bone resorption in RAW 264.7 cells and bone marrow macrophages in a dose-dependent manner, with up to 50% reduction at 800 nM concentration without exhibiting cytotoxic effects",
+            "start": 1277
+          }
+        ],
+        "experiment": {
+          "assay": "cell experiments",
+          "dose": "800 nM",
+          "duration": null,
+          "endpoint": "osteoclast differentiation and bone resorption",
+          "intervention": "regorafenib",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Regorafenib inhibited osteoclast differentiation and bone resorption in cell experiments in a dose-dependent manner, with reported reduction at 800 nM and no cytotoxic effect.",
+        "uncertainties": [
+          "Quoted span begins at the regorafenib mention and may omit a small leading clause before the sentence.",
+          "The same sentence reports both osteoclast differentiation and bone resorption; the regulatory object is simplified to osteoclast differentiation.",
+          "Cell-type and species context are taken only from the named cell types; no species is explicitly stated in the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoclast-related osteolytic diseases",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "63"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "regorafenib",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "68",
+              "69",
+              "70"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "NF-kappaB, p38, ERK, and NFAT signaling pathways",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "67"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1729,
+            "passage_index": 1,
+            "quote": "regorafenib inhibited osteoclast differentiation by blocking the transduction of RANKL-induced NF-kappaB, p38, ERK, and NFAT signaling pathways",
+            "start": 1586
+          }
+        ],
+        "experiment": {
+          "assay": "Western blot and RT-qPCR",
+          "dose": null,
+          "duration": null,
+          "endpoint": "NF-kappaB, p38, ERK, and NFAT signaling",
+          "intervention": "regorafenib",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Regorafenib blocked RANKL-induced NF-kappaB, p38, ERK, and NFAT signaling during osteoclast differentiation.",
+        "uncertainties": [
+          "The text states that regorafenib blocked transduction of RANKL-induced signaling pathways, but direct molecular targets are not established here.",
+          "RANKL is annotated as a gene in the packet; its molecular form is left as provided by the text/annotations."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1277,
+        1520
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        836,
+        1019
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1586,
+        1729
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1705,
+        1848
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

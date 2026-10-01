@@ -1,0 +1,218 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "periodontitis/gingival tissue",
+          "disease_setting": "hypercholesterolemia and periodontitis",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "78",
+              "83",
+              "85"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "CUR",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "74",
+              "76",
+              "79",
+              "82"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1359,
+            "passage_index": 1,
+            "quote": "CUR prevented bone resorption induced by P and HC diet, with larger osteoblastic surfaces and fewer osteoclasts",
+            "start": 1248
+          }
+        ],
+        "experiment": {
+          "assay": "histological analysis; histomorphometric studies",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption; osteoclast presence",
+          "intervention": "CUR treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Curcumin treatment in hypercholesterolemic rats with periodontitis was associated with reduced bone resorption and fewer osteoclasts.",
+        "uncertainties": [
+          "The quote supports decreased bone resorption; the relationship to osteoclast count is descriptive rather than a separately quantified causal effect.",
+          "The exact administration route and timing are not specified in the quoted span."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "gingival tissue",
+          "compartment": "gingival tissue",
+          "disease_setting": "hypercholesterolemia and periodontitis",
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "50",
+              "51",
+              "57",
+              "65",
+              "69",
+              "75",
+              "77",
+              "78",
+              "83",
+              "85"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "CUR",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "70"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "reactive species generation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "71",
+              "72"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "catalase (CAT)",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 845,
+            "passage_index": 1,
+            "quote": "CUR attenuated reactive species generation (p < 0.001) and reduced catalase (CAT) activity, possibly due to its antioxidant properties",
+            "start": 711
+          }
+        ],
+        "experiment": {
+          "assay": "oxidative stress parameters",
+          "dose": null,
+          "duration": null,
+          "endpoint": "reactive species generation; catalase activity",
+          "intervention": "topical administration of CUR",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Curcumin attenuated reactive species generation and reduced catalase activity in gingival tissue under hypercholesterolemic and periodontitis conditions.",
+        "uncertainties": [
+          "The sentence reports two outcomes; only reactive species generation is used as the regulatory object, while catalase activity is included as a second observed effect in the summary.",
+          "The text says the effect was 'possibly due to its antioxidant properties,' which is an interpretation and not direct mechanistic proof."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1248,
+        1359
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1379,
+        1490
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        711,
+        845
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        730,
+        858
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

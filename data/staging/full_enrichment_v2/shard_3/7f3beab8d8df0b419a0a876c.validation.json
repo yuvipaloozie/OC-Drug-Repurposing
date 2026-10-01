@@ -1,0 +1,110 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "mCRPC",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D000069448"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "denosumab",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "8600"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RANK-L",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D001862"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 637,
+            "passage_index": 1,
+            "quote": "denosumab which is a fully humanized monoclonal antibody that binds to the RANK-L thereby inhibiting RANK-L mediated bone resorption.",
+            "start": 504
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption",
+          "intervention": "denosumab",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Denosumab is described as binding RANK-L and inhibiting RANK-L-mediated bone resorption.",
+        "uncertainties": [
+          "RANK-L is annotated as a gene in the packet, but the sentence supports an interaction with the RANK-L ligand/protein; exact molecular form is therefore somewhat uncertain.",
+          "The passage is a review statement rather than a primary experiment, so the claim is descriptive rather than directly experimentally validated here."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        504,
+        637
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        600,
+        741
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

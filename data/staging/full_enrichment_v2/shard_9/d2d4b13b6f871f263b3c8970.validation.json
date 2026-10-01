@@ -1,0 +1,226 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "OPCs",
+          "compartment": null,
+          "disease_setting": "oral squamous cell carcinoma",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "46",
+              "52",
+              "56",
+              "61",
+              "67"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "IL-1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "41",
+              "42",
+              "44",
+              "51",
+              "53",
+              "57",
+              "62",
+              "66",
+              "69"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "OSCC",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "9",
+              "54",
+              "58",
+              "64"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 853,
+            "passage_index": 1,
+            "quote": "IL-1 was selected as a stimulator of both OSCC-induced and RANKL-induced osteoclastogenesis.",
+            "start": 761
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro osteoclastogenesis assay",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "IL-1",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "IL-1 was reported to stimulate both OSCC-induced and RANKL-induced osteoclastogenesis.",
+        "uncertainties": [
+          "The text states stimulation of two osteoclastogenesis contexts; direct molecular mechanism is not established.",
+          "Species is not stated in the extracted passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "OPCs",
+          "compartment": null,
+          "disease_setting": "oral squamous cell carcinoma",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "IL-1 receptor antagonist",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "45",
+              "55"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "NEM",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 948,
+            "passage_index": 1,
+            "quote": "The IL-1 receptor antagonist significantly attenuated osteoclastogenesis induced by NEM cells.",
+            "start": 854
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro osteoclastogenesis assay",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis induced by NEM cells",
+          "intervention": "IL-1 receptor antagonist",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The IL-1 receptor antagonist significantly attenuated osteoclastogenesis induced by NEM cells.",
+        "uncertainties": [
+          "The antagonist target is stated generically and the precise molecular species is not specified in the passage.",
+          "NEM is treated as a cell line context, but the passage does not detail the assay conditions."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        761,
+        853
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        783,
+        876
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        854,
+        948
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        877,
+        962
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

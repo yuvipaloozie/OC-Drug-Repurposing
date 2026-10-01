@@ -1,0 +1,284 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D006418"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "Heme metabolism",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "8600"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-induced osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "mitochondrial oxidative phosphorylation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 102,
+            "passage_index": 0,
+            "quote": "Heme metabolism mediates RANKL-induced osteoclastogenesis via mitochondrial oxidative phosphorylation.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The title states that heme metabolism mediates RANKL-induced osteoclastogenesis via mitochondrial oxidative phosphorylation.",
+        "uncertainties": [
+          "Title-level mechanism statement without experimental details in the title itself.",
+          "RANKL annotation is provider-supplied and not independently validated here."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "2235"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Ferrochelatase",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1296,
+            "passage_index": 1,
+            "quote": "Disruption of heme biosynthesis via genetically silencing Ferrochelatase or a selective inhibitor, N-methyl Protoporphyrin IX (NMPP), demonstrated potent inhibition of osteoclast differentiation",
+            "start": 1102
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation",
+          "intervention": "genetically silencing Ferrochelatase",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Genetic silencing of Ferrochelatase was reported to inhibit osteoclast differentiation.",
+        "uncertainties": [
+          "The sentence combines ferrochelatase silencing with NMPP treatment; the exact contribution of each to the shared outcome is not fully separated in this span.",
+          "Cellular context is inferred from the abstract and may not apply to every experiment mentioned."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:C028842"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "N-methyl Protoporphyrin IX (NMPP)",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1353,
+            "passage_index": 1,
+            "quote": "a selective inhibitor, N-methyl Protoporphyrin IX (NMPP), demonstrated potent inhibition of osteoclast differentiation, with a dose-dependent effect observed in NMPP treatment",
+            "start": 1178
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation",
+          "intervention": "N-methyl Protoporphyrin IX (NMPP) treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "N-methyl Protoporphyrin IX (NMPP) treatment inhibited osteoclast differentiation.",
+        "uncertainties": [
+          "The abstract mentions dose-dependence but does not provide the dose in the supplied text.",
+          "The sentence also refers to ferrochelatase silencing; this claim isolates the chemical intervention only."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        102
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        101
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1102,
+        1296
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1190,
+        1337
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1178,
+        1353
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1239,
+        1440
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

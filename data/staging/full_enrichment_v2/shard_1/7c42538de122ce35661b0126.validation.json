@@ -1,0 +1,176 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "periodontal ligament cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "OC-EVs",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "PDL cells",
+            "taxon": "human"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1195,
+            "passage_index": 1,
+            "quote": "Treatment of PDL cells with OC-EVs significantly increased osteogenic differentiation, mineralization, and gene expressions",
+            "start": 1072
+          }
+        ],
+        "experiment": {
+          "assay": "staining with alkaline phosphatase, Alizarin Red, or von Kossa; characterization by TEM, nanoparticle tracking analysis, and immunoblotting",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteogenic differentiation, mineralization, and gene expressions",
+          "intervention": "treatment with OC-EVs",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Treatment of human periodontal ligament cells with osteoclast extracellular vesicles increased osteogenic differentiation, mineralization, and gene expression.",
+        "uncertainties": [
+          "OC-EVs are described as extracellular vesicles; no specific molecular composition beyond RANK positivity is assigned here.",
+          "The exact PDL cell species is not explicitly stated in the sentence, though the abstract context indicates human periodontal ligament cells."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "periodontal ligament cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "51"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "MK-2206",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "OC-EVs-treated PDL cells",
+            "taxon": "human"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1736,
+            "passage_index": 1,
+            "quote": "Pretreatment with MK-2206 could significantly decrease differentiation and mineralization of OC-EVs-treated PDL cells",
+            "start": 1619
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "differentiation and mineralization",
+          "intervention": "pretreatment with MK-2206",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Pretreatment with the AKT inhibitor MK-2206 decreased differentiation and mineralization in OC-EVs-treated periodontal ligament cells.",
+        "uncertainties": [
+          "The claim supports AKT involvement only at the level of pharmacologic inhibition; direct activation of AKT is not established by this sentence alone."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1072,
+        1195
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1161,
+        1245
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1619,
+        1736
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1691,
+        1788
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

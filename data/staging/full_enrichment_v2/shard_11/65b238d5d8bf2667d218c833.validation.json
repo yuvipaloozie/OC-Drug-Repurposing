@@ -1,0 +1,244 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "bone surfaces",
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "19",
+              "20",
+              "21",
+              "22",
+              "23",
+              "26",
+              "27",
+              "28"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "WASp",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "osteoclasts",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "actin rings at sealing zones",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 107,
+            "passage_index": 0,
+            "quote": "WASp deficiency in mice results in failure to form osteoclast sealing zones and defects in bone resorption.",
+            "start": 0
+          },
+          {
+            "end": 687,
+            "passage_index": 1,
+            "quote": "On bone surfaces, this results in a failure to form actin rings at sealing zones.",
+            "start": 606
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "actin ring / sealing zone formation",
+          "intervention": "WASp-null osteoclasts",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "WASp deficiency in osteoclasts is associated with failure to form actin rings at sealing zones, indicating impaired sealing-zone organization.",
+        "uncertainties": [
+          "WASp is annotated as a disease term in the provider data, but the text supports a protein role; molecular form is inferred from context.",
+          "The text links loss of WASp to failure to form actin rings at sealing zones, but direct molecular mechanism is not stated."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "bone slices / in vivo",
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "19",
+              "20",
+              "21",
+              "22",
+              "23",
+              "26",
+              "27",
+              "28"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "WASp",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "24",
+              "25",
+              "29"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 914,
+            "passage_index": 1,
+            "quote": "These structural disturbances translate into abnormal patterns of bone resorption",
+            "start": 833
+          },
+          {
+            "end": 1125,
+            "passage_index": 1,
+            "quote": "both in vitro on bone slices and in vivo. Although physiologic steady-state levels of bone resorption are maintained, a major impairment is observed when WASp-null animals are exposed to a resorptive challenge.",
+            "start": 915
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro on bone slices and in vivo",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption",
+          "intervention": "WASp-null animals / WASp-null osteoclasts",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "WASp-null osteoclasts show abnormal bone resorption, with impairment especially under resorptive challenge.",
+        "uncertainties": [
+          "The phrase 'abnormal patterns of bone resorption' is broad; the summary captures the strongest explicit impairment statement.",
+          "The text reports maintenance of steady-state resorption but impairment under challenge, so the effect is context-dependent."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        107
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        105
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        606,
+        687
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        742,
+        823
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        833,
+        914
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        891,
+        961
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        915,
+        1125
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        962,
+        1077
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,97 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "THP-1 monocytes/macrophages",
+          "compartment": null,
+          "disease_setting": "apical periodontitis",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "30",
+              "31",
+              "32",
+              "33"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "Enterococcus, Streptococcus, Actinomyces, and Candida",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "RANK+, RANKL+, and RANK+RANKL+ cellular populations",
+            "taxon": "9606"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1113,
+            "passage_index": 1,
+            "quote": "Macrophages challenged with Enterococcus, Streptococcus, Actinomyces, and Candida exhibited an increase in RANK+, RANKL+, and RANK+RANKL+ cellular populations.",
+            "start": 954
+          }
+        ],
+        "experiment": {
+          "assay": "flow cytometry",
+          "dose": null,
+          "duration": null,
+          "endpoint": "RANK/RANKL/OPG expression",
+          "intervention": "stimulated with live bacteria, with or without RANKL",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In human THP-1 monocytes/macrophages, challenge with AP-associated bacteria was associated with increased RANK and RANKL expression-positive cell populations.",
+        "uncertainties": [
+          "The passage groups several bacterial genera/species together, so the claim is broad rather than species-specific.",
+          "RANK and RANKL are reported as positive cell populations rather than directly measured transcript/protein amounts."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        954,
+        1113
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        614,
+        693
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

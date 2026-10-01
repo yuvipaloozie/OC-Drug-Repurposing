@@ -1,0 +1,118 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7",
+          "compartment": null,
+          "disease_setting": "bone disease",
+          "species": "murine",
+          "stage": "osteoclast differentiation"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:C058120"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "cordycepin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "21943"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-induced osteoclast formation and resorption activity",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1266,
+            "passage_index": 1,
+            "quote": "RAW264.7 cells were differentiated into osteoclast",
+            "start": 1216
+          },
+          {
+            "end": 1395,
+            "passage_index": 1,
+            "quote": "1 muM cordycepin significantly inhibited RANKL-induced osteoclast formation and resorption activity",
+            "start": 1296
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP staining, pit formation assay, confocal microscopy, western blot, and real-time PCR",
+          "dose": "1 muM",
+          "duration": "72 h",
+          "endpoint": "osteoclast formation and resorption activity",
+          "intervention": "1 muM cordycepin",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Cordycepin inhibited RANKL-induced osteoclast formation and resorption activity in RAW264.7 cells.",
+        "uncertainties": [
+          "The sentence also mentions disturbing the actin ring-formatted sealing zone and activating cathepsin K and MMP9, but the causal role of those features in the inhibitory effect is not fully resolved from the abstract alone.",
+          "RANKL is provider-tagged as a gene, but the text here supports only its role in RANKL-induced osteoclast differentiation context."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1216,
+        1266
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1317,
+        1368
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1296,
+        1395
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1403,
+        1491
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

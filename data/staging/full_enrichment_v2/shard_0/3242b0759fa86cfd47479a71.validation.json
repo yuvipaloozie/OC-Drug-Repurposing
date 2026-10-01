@@ -1,0 +1,240 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "macrophages",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "47",
+              "48",
+              "51",
+              "59"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "FFAR4",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "53",
+              "54",
+              "58"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "docosahexaenoic acid",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "60",
+              "66"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "TNF-alpha",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "61",
+              "62"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "interleukin-6",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "63"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "IL-1beta",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "64"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "IL-10",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1086,
+            "passage_index": 1,
+            "quote": "FFAR4 acts as the selective receptor for the omega-3 fatty acid docosahexaenoic acid (DHA). It activates two divergent signaling pathways. The Galphaq-dependent cascade facilitates intracellular calcium mobilization and ERK1/2 activation. Meanwhile, beta-arrestin-2 recruitment inhibits NF-kappaB. These collective actions reshape the cytokine environment. In macrophages, DHA-FFAR4 signaling lowers the levels of TNF-alpha, interleukin-6 (IL-6), and IL-1beta while increasing IL-10 secretion.",
+            "start": 593
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "TNF-alpha, interleukin-6, and IL-1beta; IL-10 increased",
+          "intervention": "DHA-FFAR4 signaling",
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "binding",
+          "interpretation": "explicit_in_text",
+          "object": "e1",
+          "sign": "positive",
+          "subject": "e2"
+        },
+        "summary": "The review states that FFAR4 is the selective receptor for DHA and that DHA-FFAR4 signaling lowers pro-inflammatory cytokines while increasing IL-10 in macrophages.",
+        "uncertainties": [
+          "This is presented in a review article rather than as a primary experimental result.",
+          "The passage combines receptor binding with downstream cytokine changes; directness for the cytokine effects is not established from the text alone."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "osteoblastic cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "53",
+              "54",
+              "58",
+              "68"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "DHA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "40",
+              "67",
+              "69",
+              "71"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1384,
+            "passage_index": 1,
+            "quote": "Additionally, DHA modulates the RANKL/OPG axis in osteoblastic cells by suppressing RANKL expression, thereby reducing osteoclast differentiation in an inflammatory mouse model.",
+            "start": 1207
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "RANKL expression; osteoclast differentiation",
+          "intervention": "DHA",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The review states that DHA suppresses RANKL expression in osteoblastic cells, which is associated with reduced osteoclast differentiation in an inflammatory mouse model.",
+        "uncertainties": [
+          "The sentence is a review summary and does not provide experimental details such as dose or assay.",
+          "The reduction in osteoclast differentiation is presented as a consequence of RANKL suppression, but the direct experimental linkage is not fully specified in the quoted text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        593,
+        1086
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        690,
+        1193
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1207,
+        1384
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1320,
+        1490
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

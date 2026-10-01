@@ -1,0 +1,204 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "alveolar bone",
+          "disease_setting": null,
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "31"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "ZOL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "irregularities in the alveolar bone surface",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "root resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1590,
+            "passage_index": 1,
+            "quote": "These findings demonstrate that ZOL administration induces irregularities in the alveolar bone surface and root resorption in a dose-dependent manner.",
+            "start": 1440
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "40 or 400 mug/kg",
+          "duration": "3 weeks postoperatively",
+          "endpoint": "root resorption and alveolar bone surface irregularities",
+          "intervention": "ZOL administration",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Zoledronate administration in rats was reported to induce alveolar bone surface irregularities and root resorption in a dose-dependent manner.",
+        "uncertainties": [
+          "The exact character offsets for the quoted sentence are estimated from the provided passage text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "maxilla",
+          "disease_setting": null,
+          "species": "rats",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "occlusal status",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "root resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1701,
+            "passage_index": 1,
+            "quote": "They also suggest a correlation between occlusal status and the extent of root resorption in ZOL-treated rats.",
+            "start": 1591
+          },
+          {
+            "end": 1388,
+            "passage_index": 1,
+            "quote": "the nonocclusal side of the maxilla exhibited significantly fewer root resorption cavities than the occlusal side",
+            "start": 1275
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "40 and 400 mug/kg",
+          "duration": null,
+          "endpoint": "root resorption cavities on the nonocclusal side versus occlusal side",
+          "intervention": "tooth extraction and ZOL administration",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In ZOL-treated rats, occlusal status was correlated with the extent of root resorption, with the nonocclusal side showing fewer root resorption cavities than the occlusal side.",
+        "uncertainties": [
+          "The association is stated as a correlation and a side-to-side comparison, not a causal mechanism.",
+          "The exact character offsets for the quoted spans are estimated from the provided passage text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1440,
+        1590
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1697,
+        1803
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1591,
+        1701
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1789,
+        1906
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1275,
+        1388
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1450,
+        1558
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

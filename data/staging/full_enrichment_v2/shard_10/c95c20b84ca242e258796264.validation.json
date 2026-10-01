@@ -1,0 +1,187 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "periodontitis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "16"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Periodontitis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "18",
+              "19"
+            ],
+            "existing_node_id": "CHEBI:26523",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "compound",
+            "surface": "localized reactive oxygen species",
+            "taxon": "all"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 195,
+            "passage_index": 1,
+            "quote": "Periodontitis is a chronic inflammatory disease, associated with immune reaction between pathogenic bacteria and host. It is characterized by localized reactive oxygen species (ROS) accumulation.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Periodontitis is characterized by localized reactive oxygen species accumulation.",
+        "uncertainties": [
+          "Association is stated in a review-style background sentence rather than an experiment.",
+          "'localized reactive oxygen species accumulation' is a disease feature, not a causal mechanism by itself."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": "periodontal supporting tissues",
+          "disease_setting": "periodontitis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "18",
+              "19",
+              "20",
+              "21",
+              "24",
+              "26"
+            ],
+            "existing_node_id": "CHEBI:26523",
+            "key": "e1",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "compound",
+            "surface": "ROS accumulation",
+            "taxon": "all"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "oxidative stress",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 302,
+            "passage_index": 1,
+            "quote": "Increased ROS accumulation leads to oxidative stress that can destruct the periodontal supporting tissues.",
+            "start": 196
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "oxidative stress",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Increased ROS accumulation leads to oxidative stress.",
+        "uncertainties": [
+          "The passage is descriptive background, not a reported experiment.",
+          "The downstream tissue destruction is mentioned as a consequence of oxidative stress, but the claim here is limited to ROS accumulation leading to oxidative stress."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        195
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        88
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        196,
+        302
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        166,
+        225
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

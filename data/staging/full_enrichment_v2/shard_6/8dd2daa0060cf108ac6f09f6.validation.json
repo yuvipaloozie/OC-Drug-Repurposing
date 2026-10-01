@@ -1,0 +1,160 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "primary hypothyroidism",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "26",
+              "27",
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "levothyroxine",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "24",
+              "28",
+              "30",
+              "31",
+              "40",
+              "42"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "hypothyroidism",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [
+              "29",
+              "36",
+              "39"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "CTX",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "P1NP",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 544,
+            "passage_index": 1,
+            "quote": "levothyroxine therapy in hypothyroidism on thyroid function and bone turnover markers (C-terminal telopeptide of type I collagen (CTX) and procollagen type I N-terminal propeptide (P1NP)).",
+            "start": 356
+          },
+          {
+            "end": 1430,
+            "passage_index": 1,
+            "quote": "T4 and T3) and bone turnover markers (serum CTX and P1NP) were measured.",
+            "start": 1349
+          },
+          {
+            "end": 1531,
+            "passage_index": 1,
+            "quote": "Serum CTX was highest in Group II (0.48+-0.12 ng/mL) versus Group I (0.32+-0.08 ng/mL) and Group III (0.28+-0.07 ng/mL) (p<0.01). Similarly, P1NP was elevated in Group II (62+-15 ng/mL) compared to Group I (45+-12 ng/mL) and Group III (40+-10 ng/mL) (p<0.01).",
+            "start": 1272
+          },
+          {
+            "end": 1886,
+            "passage_index": 1,
+            "quote": "levothyroxine normalizes thyroid function and stabilizes bone turnover markers.",
+            "start": 1790
+          }
+        ],
+        "experiment": {
+          "assay": "serum measurement",
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone turnover markers (CTX and P1NP)",
+          "intervention": "levothyroxine therapy",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "unknown",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Compared with untreated hypothyroidism, levothyroxine-treated hypothyroidism was associated with lower bone turnover marker levels, and the authors conclude that long-term levothyroxine therapy stabilizes bone turnover markers.",
+        "uncertainties": [
+          "The study is cross-sectional/comparative, so the levothyroxine-bone marker relationship is observed rather than experimentally causal.",
+          "CTX is provider-annotated as a gene ID in the packet, but the text describes it as a bone turnover marker; molecular form is therefore unresolved.",
+          "P1NP is mentioned in text but has no provider annotation ID in the packet."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        356,
+        544
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        484,
+        640
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1272,
+        1531
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1477,
+        1623
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

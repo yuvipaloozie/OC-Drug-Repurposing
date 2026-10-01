@@ -1,0 +1,97 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "advanced malignancy",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "34",
+              "37",
+              "41",
+              "48"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "saracatinib",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption markers",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 757,
+            "passage_index": 1,
+            "quote": "Bone resorption markers were significantly decreased by saracatinib.",
+            "start": 689
+          }
+        ],
+        "experiment": {
+          "assay": "serum and urine samples",
+          "dose": "50, 125 or 175 mg/day",
+          "duration": "21 days",
+          "endpoint": "bone resorption markers",
+          "intervention": "saracatinib",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In the phase I trial, saracatinib treatment significantly decreased bone resorption markers in patients with advanced malignancy.",
+        "uncertainties": [
+          "The passage reports biomarker changes rather than a direct osteoclast assay.",
+          "Species is not explicitly stated in the text; 'patients' indicates clinical context but taxon is not directly specified."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        689,
+        757
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        599,
+        673
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

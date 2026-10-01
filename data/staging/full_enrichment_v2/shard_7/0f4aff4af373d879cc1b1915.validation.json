@@ -1,0 +1,92 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "early childhood education and care centre children",
+          "compartment": "circulation",
+          "disease_setting": null,
+          "species": "Finnish children",
+          "stage": "3-5-year-old children"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "plant-forward meals",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone turnover markers",
+            "taxon": "9606"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1418,
+            "passage_index": 1,
+            "quote": "ECEC centres were cluster-randomized for 10 months into 11 intervention (more plant-based products and less red meat served and moderation in milk consumption encouraged; n = 55 children for individual-level study) and 12 control (maintained regular meals; n = 61 children) ECEC centres. In the intervention arm, 18 children and in the control arm 28 children provided complete (baseline and endpoint) blood samples and dietary data (food frequency questionnaire). Circulating biomarkers (e.g. serum tartrate-resistant acid phosphatase 5b [S-TRAP5b], total and bone-specific alkaline phosphatase [S-ALP; S-BAP], 25-hydroxyvitamin D [S-25(OH)D], and plasma parathyroid hormone) and intakes of calcium, vitamin D, phosphorus, and protein were analysed using mixed models. RESULTS: The intervention group had higher bone formation marker S-BAP (0.05 log-U/L, 95% CI 0.004-0.104; p = 0.04), bone resorption marker S-TRAP5b (2.12 U/L, 95% CI 0.35-3.90; p = 0.02), and S-ALP (0.034 log-U/L, 95% CI 0.002-0.066; p = 0.04) concentrations than the control group.",
+            "start": 365
+          }
+        ],
+        "experiment": {
+          "assay": "mixed models",
+          "dose": null,
+          "duration": "10 months",
+          "endpoint": "circulating biomarkers (S-BAP, S-TRAP5b, S-ALP)",
+          "intervention": "plant-forward meals in ECEC centres",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "A 10-month plant-forward meal intervention in Finnish early childhood education and care centres was associated with higher circulating bone turnover biomarkers than control meals, including bone formation marker S-BAP, resorption marker S-TRAP5b, and S-ALP.",
+        "uncertainties": [
+          "The intervention is dietary and not a molecular perturbation; the mechanistic direction is an inferred perturbation effect rather than a direct biochemical mechanism.",
+          "The claimed increase applies to multiple biomarkers, but the exact object entity is generalized as bone turnover markers."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        365,
+        1418
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        567,
+        918
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

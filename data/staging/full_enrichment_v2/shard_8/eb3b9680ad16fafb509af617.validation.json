@@ -1,0 +1,198 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW 264.7",
+          "compartment": null,
+          "disease_setting": "cleidocranial dysplasia",
+          "species": "RAW 264.7 cells",
+          "stage": "osteoclast differentiation"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "RNA",
+            "surface": "OC-lncRNA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 674,
+            "passage_index": 1,
+            "quote": "We further confirmed that OC-lncRNA positively regulated osteoclastogenesis and bone resorption.",
+            "start": 578
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis and bone resorption",
+          "intervention": "transfected with a RUNX2 mutation expression cassette",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "OC-lncRNA positively regulated osteoclastogenesis and bone resorption.",
+        "uncertainties": [
+          "Cell line context is explicit, but the exact molecular form of OC-lncRNA is not otherwise characterized in the passage.",
+          "The sentence states a positive regulation outcome, but the underlying mechanism is not specified here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW 264.7",
+          "compartment": null,
+          "disease_setting": "cleidocranial dysplasia",
+          "species": "RAW 264.7 cells",
+          "stage": "osteoclast differentiation"
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "RNA",
+            "surface": "OC-lncRNA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "33",
+              "34"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "CXC chemokine receptor type 3 (CXCR3)",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "35"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "RNA",
+            "surface": "microRNA (miR)-221-5p",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 804,
+            "passage_index": 1,
+            "quote": "The OC-lncRNA promoted the expression of CXC chemokine receptor type 3 (CXCR3) by competitively binding to microRNA (miR)-221-5p.",
+            "start": 675
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "CXCR3 expression",
+          "intervention": "transfected with a RUNX2 mutation expression cassette",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "OC-lncRNA promoted CXCR3 expression by competitively binding to miR-221-5p.",
+        "uncertainties": [
+          "The competitive binding relationship is stated, but the binding partner is described at RNA level while the CXCR3 effect is an expression outcome.",
+          "The sentence does not specify whether the regulation is direct versus indirect beyond the binding statement."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        578,
+        674
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        689,
+        767
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        675,
+        804
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        767,
+        876
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

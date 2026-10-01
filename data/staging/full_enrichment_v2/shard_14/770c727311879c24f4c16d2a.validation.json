@@ -1,0 +1,142 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "serum",
+          "disease_setting": null,
+          "species": "9606",
+          "stage": "middle-aged and older adults"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "19",
+              "21",
+              "22",
+              "24",
+              "25",
+              "34",
+              "35"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "vitamin B1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "26",
+              "27",
+              "33"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "TRACP 5b",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 894,
+            "passage_index": 1,
+            "quote": "The level of serum tartrate-resistant acid phosphatase 5b (TRACP 5b), a bone resorption marker, reduced significantly",
+            "start": 777
+          },
+          {
+            "end": 1062,
+            "passage_index": 1,
+            "quote": "while the level of N-terminal propeptide of type I procollagen (P1NP), a marker specific to bone formation, did not change.",
+            "start": 939
+          },
+          {
+            "end": 436,
+            "passage_index": 1,
+            "quote": "given 28.0 mg of vitamin B1 supplementation per day for 1 month",
+            "start": 373
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "28.0 mg per day",
+          "duration": "1 month",
+          "endpoint": "serum TRACP 5b level",
+          "intervention": "vitamin B1 supplementation",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "abundance",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In a single-arm human supplementation study, vitamin B1 intake for 1 month was associated with a significant decrease in serum TRACP 5b, a bone resorption marker.",
+        "uncertainties": [
+          "Single-arm pre/post design limits causal inference beyond association with supplementation.",
+          "TRACP 5b is described as a bone resorption marker; the claim concerns serum marker level, not direct osteoclast function."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        777,
+        894
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        492,
+        543
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        939,
+        1062
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        547,
+        596
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        373,
+        436
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        429,
+        465
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

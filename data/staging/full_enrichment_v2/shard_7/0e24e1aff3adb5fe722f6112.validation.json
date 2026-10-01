@@ -1,0 +1,107 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "bone tissue",
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "45"
+            ],
+            "existing_node_id": "CHEBI:30915",
+            "key": "e1",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "compound",
+            "surface": "alpha-KG",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "46"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "47"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "inflammation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1015,
+            "passage_index": 1,
+            "quote": "After the application of alpha-KG, bone loss and inflammation in bone tissue are alleviated.",
+            "start": 923
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone loss and inflammation in bone tissue",
+          "intervention": "application of alpha-KG",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Application of alpha-ketoglutarate is reported to alleviate bone loss and inflammation in bone tissue.",
+        "uncertainties": [
+          "The passage is a review statement and does not specify the underlying experiment.",
+          "The effect is stated for bone tissue generally, not specifically for osteoclasts."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        923,
+        1015
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1037,
+        1081
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

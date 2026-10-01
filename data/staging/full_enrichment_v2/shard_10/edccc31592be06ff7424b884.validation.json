@@ -1,0 +1,202 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "51"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Denosumab",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "52"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFSF11",
+            "key": "e2",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation and activation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "53"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 254,
+            "passage_index": 1,
+            "quote": "Osteogenesis imperfecta (OI) is a rare genetic disorder predominantly resulting from mutations in COL1A1 and COL1A2. Denosumab, a monoclonal antibody targeting RANKL, inhibits osteoclast differentiation and activation, thereby preventing bone resorption.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Denosumab is described as inhibiting osteoclast differentiation and activation, thereby preventing bone resorption.",
+        "uncertainties": [
+          "The sentence is background framing rather than a primary mechanistic experiment.",
+          "RANKL is annotated as a gene by the provider, but the text only supports the surface name and its role as a target; existing-node mapping is unverified."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteogenesis imperfecta",
+          "species": "human",
+          "stage": "pediatric"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "63"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Denosumab",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "64"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1270,
+            "passage_index": 1,
+            "quote": "Denosumab effectively suppressed bone resorption within the first 2 mo post-injection.",
+            "start": 1184
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "1 mg/kgBW",
+          "duration": "3 yr",
+          "endpoint": "bone resorption",
+          "intervention": "subcutaneous denosumab (1 mg/kgBW) every 6 mo for 3 yr",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In the OI patient study, denosumab treatment suppressed bone resorption within the first 2 months after injection.",
+        "uncertainties": [
+          "The passage reports a clinical study in OI patients; it does not establish direct molecular mechanism of action in osteoclasts from this experiment alone."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        0,
+        254
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        135
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1184,
+        1270
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        723,
+        798
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

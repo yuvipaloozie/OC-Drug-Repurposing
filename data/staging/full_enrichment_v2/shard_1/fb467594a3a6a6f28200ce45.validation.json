@@ -1,0 +1,131 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoarthritis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "pathological osteoclast-chondrocyte crosstalk",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D010003"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoarthritis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "8600",
+              "690",
+              "4790",
+              "2034",
+              "7422"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "RANKL/RANK/OPG, NF-kappaB, HIF-2alpha, and VEGF signaling pathways",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 252,
+            "passage_index": 1,
+            "quote": "degenerative joint disease characterized by cartilage degradation, subchondral bone remodeling, and joint microenvironment imbalance. Emerging evidence identifies pathological osteoclast-chondrocyte crosstalk as a key OA driver",
+            "start": 25
+          },
+          {
+            "end": 393,
+            "passage_index": 1,
+            "quote": "mediated through RANKL/RANK/OPG, NF-kappaB, HIF-2alpha, and VEGF signaling pathways that create a destructive bone-cartilage feedback loop.",
+            "start": 254
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The review states that pathological osteoclast-chondrocyte crosstalk is a key driver of osteoarthritis, and that this relationship is mediated through several signaling pathways.",
+        "uncertainties": [
+          "This is a review statement rather than a primary experiment.",
+          "The crosstalk entity is a textual process description and is not a curated molecular entity."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        25,
+        252
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        127,
+        245
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        254,
+        393
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        258,
+        454
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

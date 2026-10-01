@@ -1,0 +1,222 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoblasts",
+          "compartment": null,
+          "disease_setting": "peri-implantitis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "73"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Kir2.1",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "75",
+              "76"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "RANKL/OPG ratio",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1200,
+            "passage_index": 1,
+            "quote": "In vitro, P.g-LPS upregulated Kir2.1 expression and increased the RANKL/OPG ratio in osteoblasts.",
+            "start": 1103
+          },
+          {
+            "end": 1307,
+            "passage_index": 1,
+            "quote": "Inhibiting or knock-down of Kir2.1 effectively lowered the RANKL/OPG ratio, enhanced matrix mineralization",
+            "start": 1201
+          }
+        ],
+        "experiment": {
+          "assay": "qRT-PCR and Western blot",
+          "dose": null,
+          "duration": null,
+          "endpoint": "RANKL/OPG ratio",
+          "intervention": "Kir2.1 inhibition or knock-down",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In mouse osteoblasts, Kir2.1 inhibition or knockdown lowered the RANKL/OPG ratio.",
+        "uncertainties": [
+          "The exact molecular form of Kir2.1 is unresolved from text alone; mapped here as gene.",
+          "The quote span for the outcome sentence is partial because the abstract continues with additional endpoints."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "BMDMs",
+          "compartment": null,
+          "disease_setting": "peri-implantitis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "99"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Kir2.1",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "83"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 879,
+            "passage_index": 1,
+            "quote": "Conditioned medium from osteoblasts following Kir2.1 knockdown was used to treat BMDMs, and subsequent osteoclast differentiation was evaluated by TRAP staining.",
+            "start": 718
+          },
+          {
+            "end": 1347,
+            "passage_index": 1,
+            "quote": "Inhibiting or knock-down of Kir2.1 effectively lowered the RANKL/OPG ratio, enhanced matrix mineralization and reduced osteoclast differentiation.",
+            "start": 1201
+          }
+        ],
+        "experiment": {
+          "assay": "TRAP staining",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation",
+          "intervention": "Kir2.1 knockdown",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Kir2.1 knockdown reduced osteoclast differentiation in the BMDM coculture/conditioned-medium experiment.",
+        "uncertainties": [
+          "The osteoclast readout is reported in a conditioned-medium/BMDM setup, so the causal link is indirect from the abstract text.",
+          "The exact molecular form of TRAP is unresolved from text alone; the annotation is not used as an entity here."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1103,
+        1200
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1238,
+        1348
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1201,
+        1307
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1367,
+        1486
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        718,
+        879
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        924,
+        1044
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1201,
+        1347
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1367,
+        1508
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

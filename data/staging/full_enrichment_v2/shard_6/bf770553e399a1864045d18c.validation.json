@@ -1,0 +1,189 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "no_effect",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "40",
+              "44",
+              "46",
+              "47",
+              "62"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "saracatinib",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone formation markers",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1434,
+            "passage_index": 1,
+            "quote": "There was no significant effect on bone formation markers.",
+            "start": 1376
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "60 to 250 mg",
+          "duration": "trial dosing period",
+          "endpoint": "bone formation markers",
+          "intervention": "saracatinib",
+          "outcome_change": "no_detected_change",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Saracatinib had no significant effect on bone formation markers in this trial.",
+        "uncertainties": [
+          "The statement is a null result for bone formation markers, not evidence of absence for all bone biology endpoints."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "40",
+              "44",
+              "46",
+              "47",
+              "62"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "saracatinib",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "38",
+              "49",
+              "60",
+              "63"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 360,
+            "passage_index": 1,
+            "quote": "saracatinib",
+            "start": 349
+          },
+          {
+            "end": 1194,
+            "passage_index": 1,
+            "quote": "bone resorption",
+            "start": 1179
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "60 to 250 mg",
+          "duration": "single dose followed 7 to 10 days later with daily doses for a further 10 to 14 days; markers measured 24 and 48 hours after dosing and 10 to 14 days after the final dose",
+          "endpoint": "bone resorption markers",
+          "intervention": "saracatinib",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In healthy men, saracatinib treatment was associated with a dose-dependent decrease in bone resorption markers.",
+        "uncertainties": [
+          "The evidence spans do not capture the full causal sentence.",
+          "The outcome is reported on bone resorption markers rather than direct osteoclast measurements.",
+          "Directness of the drug-to-phenotype effect is not established in the text."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1376,
+        1434
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1577,
+        1624
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

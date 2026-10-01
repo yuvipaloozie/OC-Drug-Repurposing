@@ -1,0 +1,465 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "ovariectomised osteoporosis model",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "55"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "CSA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "bone mineral density",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "trabecular microarchitecture",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "56",
+              "57"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "OVX mice",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1765,
+            "passage_index": 1,
+            "quote": "CSA significantly increased bone mineral density and improved trabecular microarchitecture in OVX mice",
+            "start": 1663
+          }
+        ],
+        "experiment": {
+          "assay": "micro-computed tomography, histological staining and immunohistochemistry",
+          "dose": null,
+          "duration": "6 weeks",
+          "endpoint": "bone mineral density and trabecular microarchitecture",
+          "intervention": "CSA treatment for 6 weeks",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "CSA treatment increased bone mineral density and improved trabecular microarchitecture in ovariectomised mice.",
+        "uncertainties": [
+          "The quoted span is a partial sentence and does not include the full outcome phrase for trabecular microarchitecture, though the surrounding text states it.",
+          "The model is described as OVX mice, but OVX itself is not fully annotated with a usable identifier."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow macrophages",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "52",
+              "55",
+              "59",
+              "65",
+              "68",
+              "72"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "CSA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "60"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "RANKL-induced osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "61"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:NFATC1",
+            "key": "e3",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "NFATc1",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "62"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:CTSK",
+            "key": "e4",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "CTSK",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1912,
+            "passage_index": 1,
+            "quote": "CSA dose-dependently suppressed RANKL-induced osteoclastogenesis by downregulating NFATc1 and CTSK",
+            "start": 1814
+          }
+        ],
+        "experiment": {
+          "assay": "tartrate-resistant acid phosphatase (TRAcP), qPCR, Western blot",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis and downregulation of NFATc1/CTSK",
+          "intervention": "CSA dose-dependent treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In vitro, CSA suppressed RANKL-induced osteoclastogenesis and was associated with decreased NFATc1 and CTSK expression.",
+        "uncertainties": [
+          "The sentence also names RANKL as the inducing stimulus; the claim captures the CSA perturbation rather than a direct CSA-RANKL biochemical interaction.",
+          "NFATc1 and CTSK are inferred as expression decreases from the phrase 'downregulating', but the exact measured molecular form is not separately specified in the quoted span."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow mesenchymal stem cells",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "52",
+              "55",
+              "59",
+              "65",
+              "68",
+              "72"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "CSA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoblast differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "63"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RUNX2",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "gene",
+            "surface": "OCN",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "64"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFRSF11B",
+            "key": "e5",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "OPG",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1991,
+            "passage_index": 1,
+            "quote": "while enhancing osteoblast differentiation by upregulating RUNX2, OCN and OPG",
+            "start": 1914
+          }
+        ],
+        "experiment": {
+          "assay": "ALP and alizarin red staining, qPCR, Western blot",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoblast differentiation and expression of RUNX2/OCN/OPG",
+          "intervention": "CSA treatment",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "CSA enhanced osteoblast differentiation and increased RUNX2, OCN and OPG expression.",
+        "uncertainties": [
+          "OCN is named in text but not provider-annotated, so its molecular form remains unresolved.",
+          "The quoted span does not include the full sentence context beyond the osteoblast arm."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoblasts and osteoclasts",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "52",
+              "55",
+              "59",
+              "65",
+              "68",
+              "72"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "CSA",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "48",
+              "66",
+              "69"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNF",
+            "key": "e2",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "protein",
+            "surface": "TNF-alpha",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "67",
+              "70"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "MIRO1",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "mitochondrial transfer",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 2170,
+            "passage_index": 1,
+            "quote": "CSA directly bound and inhibited TNF-alpha, upregulated the mitochondrial transporter MIRO1, and restored mitochondrial transfer from osteoblasts to osteoclasts",
+            "start": 2010
+          }
+        ],
+        "experiment": {
+          "assay": "molecular docking, surface plasmon resonance, fluorescence labelling, JC-1 staining, co-culture",
+          "dose": null,
+          "duration": null,
+          "endpoint": "TNF-alpha activity and mitochondrial transfer balance",
+          "intervention": "CSA treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c4",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "direct",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "CSA directly bound TNF-alpha and inhibited its activity, while increasing MIRO1 and restoring mitochondrial transfer.",
+        "uncertainties": [
+          "The text combines multiple mechanistic outcomes; the claim focuses on the direct binding/inhibition of TNF-alpha and mentions the mitochondrial-transfer result in the summary.",
+          "TNF-alpha is provider-annotated as a gene, but the passage supports a protein-level mechanistic role rather than a specific gene product ID."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1663,
+        1765
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1028,
+        1118
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1814,
+        1912
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1994,
+        2100
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c3",
+      "corrected_offsets": [
+        1914,
+        1991
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2103,
+        2188
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c4",
+      "corrected_offsets": [
+        2010,
+        2170
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        2190,
+        2357
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

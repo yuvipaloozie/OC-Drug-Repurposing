@@ -1,0 +1,209 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "BMDMs",
+          "compartment": null,
+          "disease_setting": "PMOP",
+          "species": null,
+          "stage": "mature osteoclasts differentiation"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "48"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Liquiritin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts formation",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1374,
+            "passage_index": 1,
+            "quote": "Liquiritin suppressed osteoclasts formation and bone resorption in vitro",
+            "start": 1302
+          }
+        ],
+        "experiment": {
+          "assay": "TRAcP and F-actin staining; bone resorption assays",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast formation and bone resorption",
+          "intervention": "Liquiritin",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "indirect",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Liquiritin suppressed osteoclast formation/osteoclastogenesis in vitro and reduced bone resorption in the reported BMDM osteoclast-differentiation experiment.",
+        "uncertainties": [
+          "The exact molecular target responsible for the anti-osteoclast effect is not isolated in this span.",
+          "The text combines osteoclast formation and bone resorption in one sentence; the claim focuses on the shared suppressive outcome."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "BMDMs",
+          "compartment": null,
+          "disease_setting": "PMOP",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "57"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Liquiritin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "apoptosis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "58"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "PPARgamma",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1575,
+            "passage_index": 1,
+            "quote": "inducing PPARgamma-mediated apoptosis-a novel mechanistic insight",
+            "start": 1510
+          },
+          {
+            "end": 128,
+            "passage_index": 0,
+            "quote": "and triggers apoptosis through PPARgamma activation.",
+            "start": 76
+          }
+        ],
+        "experiment": {
+          "assay": "Western blotting and immunofluorescence; CETSA; molecular docking",
+          "dose": null,
+          "duration": null,
+          "endpoint": "apoptosis",
+          "intervention": "Liquiritin",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Liquiritin induced apoptosis, with the abstract describing this as PPARgamma-mediated and the title stating it triggers apoptosis through PPARgamma activation.",
+        "uncertainties": [
+          "The text indicates PPARgamma mediation/activation, but does not by itself establish a direct mechanistic edge from Liquiritin to PPARgamma activity.",
+          "The title is a summary statement rather than a standalone experiment; the abstract provides the main experimental support."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1302,
+        1374
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        745,
+        807
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1510,
+        1575
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1714,
+        1782
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        76,
+        128
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        65,
+        125
+      ],
+      "passage_index": 0
+    }
+  ],
+  "valid_envelope": true
+}

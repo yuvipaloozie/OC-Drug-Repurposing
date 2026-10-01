@@ -1,0 +1,111 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "macrophages",
+          "compartment": "gingiva/alveolar bone",
+          "disease_setting": "periodontitis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "KAT6A",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "alveolar bone resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 534,
+            "passage_index": 1,
+            "quote": "macrophage KAT6A knockout (MK6AKO) mice were generated and subjected to PD induction by a combination of molar ligation and application of Porphyromonas gingivalis (Pg).",
+            "start": 365
+          },
+          {
+            "end": 628,
+            "passage_index": 1,
+            "quote": "Morphological analyses showed significantly decreased alveolar bone resorption in MK6AKO mice",
+            "start": 535
+          }
+        ],
+        "experiment": {
+          "assay": "Morphological analyses",
+          "dose": null,
+          "duration": null,
+          "endpoint": "alveolar bone resorption",
+          "intervention": "macrophage KAT6A knockout (MK6AKO)",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Macrophage KAT6A knockout in mice was associated with decreased alveolar bone resorption after periodontitis induction.",
+        "uncertainties": [
+          "The text reports a knockout phenotype in mice, but does not establish direct molecular causality or the precise cell-autonomous mechanism.",
+          "KAT6A molecular form is not explicitly distinguished between gene and protein in the passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        365,
+        534
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        150,
+        247
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        535,
+        628
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        248,
+        336
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

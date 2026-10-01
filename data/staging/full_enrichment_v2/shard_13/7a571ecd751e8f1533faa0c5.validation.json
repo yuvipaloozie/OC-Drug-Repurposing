@@ -1,0 +1,211 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "bone remodeling",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "33"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "citrate",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "30"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone remodeling",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 334,
+            "passage_index": 1,
+            "quote": "citrate, an intermediate metabolite of the tricarboxylic acid (TCA) cycle, plays an important role in bone remodeling",
+            "start": 217
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Citrate is described as playing an important role in bone remodeling, with multiple proposed modes of involvement.",
+        "uncertainties": [
+          "Review/abstract language is broad and does not specify a single experimental result.",
+          "The statement is associative/background rather than a direct causal experiment."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "bone remodeling disorders",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "53"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Citrate",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "citrate transporter",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoblast/OC function",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "pathway",
+            "surface": "histone acetylation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone remodeling disorders",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1671,
+            "passage_index": 1,
+            "quote": "Citrate imbalance due to citrate transporter could result in the supression of osteoblast/OC function through histone acetylation, thereby contributing to disorders in bone remodeling",
+            "start": 1488
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoblast/OC function",
+          "intervention": "citrate imbalance due to citrate transporter",
+          "outcome_change": "decreased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The abstract states that citrate imbalance due to citrate transporter could suppress osteoblast/osteoclast function through histone acetylation, contributing to bone remodeling disorders.",
+        "uncertainties": [
+          "The statement is phrased as a possibility ('could result') rather than a demonstrated experiment.",
+          "The specific molecular identity of 'citrate transporter' is not provided.",
+          "OC is expanded in the text as osteoclast/OC, but the phenotype is not experimentally separated into osteoblast versus osteoclast effects."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        217,
+        334
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        305,
+        407
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1488,
+        1671
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1576,
+        1744
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,189 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "serum",
+          "disease_setting": "recurrent urinary tract infections",
+          "species": "Homo sapiens",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "53",
+              "56",
+              "58"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "Vitamin D levels",
+            "taxon": "Homo sapiens"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RANKL levels",
+            "taxon": "Homo sapiens"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1267,
+            "passage_index": 1,
+            "quote": "Vitamin D levels showed a strong inverse correlation with RANKL levels (r =  - 0.593).",
+            "start": 1181
+          }
+        ],
+        "experiment": {
+          "assay": "correlation analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "correlation between vitamin D and RANKL levels",
+          "intervention": null,
+          "outcome_change": "decreased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Vitamin D levels were inversely correlated with RANKL levels in patients with recurrent UTIs.",
+        "uncertainties": [
+          "This is a correlation, not a causal perturbation result.",
+          "The direction is inverse, but causal sign is not established."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "serum",
+          "disease_setting": "recurrent urinary tract infections",
+          "species": "Homo sapiens",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "54",
+              "55"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "Patients in the E. coli group",
+            "taxon": "Homo sapiens"
+          },
+          {
+            "annotation_ids": [
+              "53",
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "significantly lower serum vitamin D levels and elevated levels of IL-6, RANKL, and CTX-I",
+            "taxon": "Homo sapiens"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1180,
+            "passage_index": 1,
+            "quote": "Patients in the E. coli group had significantly lower serum vitamin D levels and elevated levels of IL-6, RANKL, and CTX-I than those in the non-E. coli group (all p < 0.001).",
+            "start": 1005
+          }
+        ],
+        "experiment": {
+          "assay": "serum measurements and group comparison",
+          "dose": null,
+          "duration": null,
+          "endpoint": "serum vitamin D, IL-6, RANKL, and CTX-I levels versus non-E. coli group",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In patients with recurrent UTIs, the E. coli group showed a clinical profile with lower vitamin D and higher inflammatory/bone-resorption markers than the non-E. coli group.",
+        "uncertainties": [
+          "The object is a composite phenotype rather than a single molecular entity.",
+          "The comparison is cross-sectional and does not establish causality."
+        ]
+      },
+      "errors": [
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1005,
+        1180
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1111,
+        1353
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1181,
+        1267
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1355,
+        1411
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

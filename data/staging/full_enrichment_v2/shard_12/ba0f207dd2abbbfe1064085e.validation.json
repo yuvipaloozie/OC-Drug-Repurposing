@@ -1,0 +1,125 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "no_effect",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "lupus nephritis",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:C529054"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Dapagliflozin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone and mineral metabolism",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone turnover biomarkers",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1592,
+            "passage_index": 1,
+            "quote": "By the end of the study, there were no significant differences in kidney function or bone turnover biomarkers between the dapagliflozin and placebo groups after adjusting for baseline values.",
+            "start": 1401
+          },
+          {
+            "end": 2178,
+            "passage_index": 1,
+            "quote": "CONCLUSIONS: Dapagliflozin did not significantly affect bone and mineral metabolism in patients with lupus nephritis over a 12-month period.",
+            "start": 2038
+          }
+        ],
+        "experiment": {
+          "assay": "bone formation markers, bone resorption markers, and quantitative computed tomography",
+          "dose": "10 mg daily",
+          "duration": "12 months",
+          "endpoint": "bone and mineral metabolism; bone turnover biomarkers",
+          "intervention": "Dapagliflozin (10 mg daily) or placebo",
+          "outcome_change": "no_detected_change",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In this randomized trial of lupus nephritis patients, dapagliflozin did not significantly alter bone and mineral metabolism or bone turnover biomarkers compared with placebo over 12 months.",
+        "uncertainties": [
+          "The text reports no significant difference after adjustment; the exact unadjusted biomarker direction is not specified in the conclusion span.",
+          "Bone and mineral metabolism is summarized from the conclusion; the cited biomarker passage is a related endpoint rather than a direct mechanistic assay."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1401,
+        1592
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1490,
+        1600
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        2038,
+        2178
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1616,
+        1767
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

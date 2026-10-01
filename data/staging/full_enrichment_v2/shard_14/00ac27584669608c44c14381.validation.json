@@ -1,0 +1,265 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "50",
+              "52",
+              "53",
+              "54",
+              "55",
+              "63",
+              "65",
+              "74",
+              "76"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "asiatic acid",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "57",
+              "64",
+              "66",
+              "75"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "IL-6",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1284,
+            "passage_index": 1,
+            "quote": "Molecular docking showed strong binding energies of asiatic acid with all predicted target proteins, with the highest affinity observed for IL-6",
+            "start": 1140
+          },
+          {
+            "end": 1472,
+            "passage_index": 1,
+            "quote": "molecular dynamics simulation confirmed stable binding of asiatic acid to IL-6, with persistent interactions",
+            "start": 1364
+          }
+        ],
+        "experiment": {
+          "assay": "molecular docking; molecular dynamics simulation",
+          "dose": null,
+          "duration": null,
+          "endpoint": "binding affinity / interaction persistence",
+          "intervention": "molecular docking and molecular dynamics simulation",
+          "outcome_change": "no_detected_change",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "binding",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Molecular docking and molecular dynamics simulations support stable binding between asiatic acid and IL-6, with IL-6 described as the highest-affinity predicted target.",
+        "uncertainties": [
+          "The passage reports in silico binding predictions and simulation stability, not a biochemical or cellular perturbation.",
+          "IL-6 is identified as a predicted target/hub, but the text does not establish causality beyond binding/association."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "hypothesis",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "47",
+              "50",
+              "52",
+              "53",
+              "54",
+              "55",
+              "63",
+              "65",
+              "74",
+              "76"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "asiatic acid",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "3",
+              "57",
+              "64",
+              "66",
+              "75"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "IL-6",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "5",
+              "42",
+              "48",
+              "51",
+              "56",
+              "77"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoporosis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1949,
+            "passage_index": 1,
+            "quote": "These results establish a robust mechanistic framework for future translational studies exploring asiatic acid as a natural therapeutic candidate for osteoporosis.",
+            "start": 1786
+          },
+          {
+            "end": 1785,
+            "passage_index": 1,
+            "quote": "implicating IL-6 as a plausible upstream molecular target.",
+            "start": 1727
+          }
+        ],
+        "experiment": {
+          "assay": "network pharmacology, molecular docking, molecular dynamics simulation",
+          "dose": null,
+          "duration": null,
+          "endpoint": "anti-osteoporotic mechanism / therapeutic candidacy",
+          "intervention": "integrative in silico strategy",
+          "outcome_change": "not_stated",
+          "perturbation_type": "other"
+        },
+        "kind": "association",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The study proposes IL-6 as a plausible upstream molecular target in the potential anti-osteoporotic actions of asiatic acid.",
+        "uncertainties": [
+          "This is a mechanistic proposal from an in silico study, not a demonstrated biological effect in cells or organisms.",
+          "The text uses cautious language such as 'potential' and 'plausible upstream molecular target'."
+        ]
+      },
+      "errors": [
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1140,
+        1284
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        834,
+        913
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1364,
+        1472
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1005,
+        1104
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1786,
+        1949
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1779,
+        1853
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1727,
+        1785
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1747,
+        1788
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,199 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "erosive shoulder injury",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "Antigen-specific T cells",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "osteoclasts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "54"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "RANK/RANK-L",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1577,
+            "passage_index": 1,
+            "quote": "Antigen-specific T cells potently activated osteoclasts via RANK/RANK-L, and the osteoclast activation marker Trap5b was high in sera of patients with an erosive shoulder injury.",
+            "start": 1399
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast activation",
+          "intervention": "Antigen-specific T cells",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Antigen-specific T cells activated osteoclasts via RANK/RANK-L in vitro.",
+        "uncertainties": [
+          "The passage states activation via RANK/RANK-L but does not specify the exact molecular mechanism beyond that axis.",
+          "Cell type and species for the in vitro system are not explicitly stated in the quoted text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "bone toxicity",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "57"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "alpha-tocopheryl succinate",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "osteoclasts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "58"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone toxicity",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1692,
+            "passage_index": 1,
+            "quote": "In vitro, the vaccine component alpha-tocopheryl succinate recapitulated bone toxicity and stimulated osteoclasts.",
+            "start": 1578
+          }
+        ],
+        "experiment": {
+          "assay": "in vitro",
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast stimulation",
+          "intervention": "alpha-tocopheryl succinate",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In vitro, alpha-tocopheryl succinate recapitulated bone toxicity and stimulated osteoclasts.",
+        "uncertainties": [
+          "The text links bone toxicity and osteoclast stimulation in the same sentence but does not specify whether bone toxicity is a consequence of osteoclast stimulation or a separate observed phenotype.",
+          "The in vitro system is not otherwise described in the quoted text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1399,
+        1577
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1547,
+        1643
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1578,
+        1692
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1737,
+        1825
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,365 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "breast cancer-induced model osteolysis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "45",
+              "48",
+              "50",
+              "60",
+              "61",
+              "65",
+              "69"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Sabutoclax",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "51",
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast differentiation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "acid secretion",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "F-actin ring formation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast bone resorption function",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 856,
+            "passage_index": 1,
+            "quote": "Sabutoclax treatment was associated with inhibition of RANKL-induced osteoclast differentiation, RANKL-induced acid secretion, F-actin ring formation, osteoclast bone resorption function",
+            "start": 670
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclast differentiation, acid secretion, F-actin ring formation, and bone resorption function",
+          "intervention": "Sabutoclax treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Sabutoclax treatment was associated with inhibition of RANKL-induced osteoclast differentiation and osteoclast functional outputs, including acid secretion, F-actin ring formation, and bone resorption.",
+        "uncertainties": [
+          "The sentence bundles multiple osteoclast phenotypes; only one regulatory object can be represented directly, so the summary aggregates the listed effects.",
+          "RANKL is annotated as a gene in the source packet, but the text context refers to RANKL-induced responses rather than a specific molecular form."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "breast cancer-induced model osteolysis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "45",
+              "48",
+              "50",
+              "60",
+              "61",
+              "65",
+              "69"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Sabutoclax",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "53",
+              "54",
+              "66"
+            ],
+            "existing_node_id": "CHEBI:26523",
+            "key": "e2",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "compound",
+            "surface": "ROS",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "67"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:MAPK1",
+            "key": "e3",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "ERK",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "55",
+              "56",
+              "68",
+              "70"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:NFATC1",
+            "key": "e4",
+            "mapping_qualification": "provider_only",
+            "molecular_form": "gene",
+            "surface": "NFATc1",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1100,
+            "passage_index": 1,
+            "quote": "RANKL-induced acid secretion, F-actin ring formation, osteoclast bone resorption function, reactive oxygen species (ROS) production, mitogen-activated protein kinase/extracellular signal-regulated kinase signaling, as well as reduced nuclear translocation and expression of nuclear factor of activated T-cells cytoplasmic 1 (NFATc1).",
+            "start": 767
+          },
+          {
+            "end": 1896,
+            "passage_index": 1,
+            "quote": "Sabutoclax are associated with ROS reduction, mitochondrial perturbation, and suppression of ERK/NFATc1 signaling. Sabutoclax treatment was associated with both decreased protein expression and reduced nuclear translocation of NFATc1.",
+            "start": 1657
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "ROS production, ERK/NFATc1 signaling, NFATc1 expression, and NFATc1 nuclear translocation",
+          "intervention": "Sabutoclax treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Sabutoclax treatment was associated with reduced reactive oxygen species production and suppression of ERK/NFATc1 signaling, including decreased NFATc1 expression and nuclear translocation.",
+        "uncertainties": [
+          "The text states association and suppression rather than a direct molecular mechanism.",
+          "ERK and NFATc1 are described as signaling-related endpoints; direct molecular target relationships are not established here."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "tibia",
+          "disease_setting": "breast cancer-induced osteolysis",
+          "species": "mice",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "45",
+              "48",
+              "50",
+              "60",
+              "61",
+              "65",
+              "69"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Sabutoclax",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "47",
+              "58",
+              "63"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteolysis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "59"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "mice",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1379,
+            "passage_index": 1,
+            "quote": "the in vivo efficacy of Sabutoclax was evaluated. This study found that Sabutoclax effectively prevents breast cancer-induced osteolysis",
+            "start": 1280
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteolysis",
+          "intervention": "Sabutoclax",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c3",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In the nude mouse orthotopic breast cancer osteolysis model, Sabutoclax effectively prevented breast cancer-induced osteolysis.",
+        "uncertainties": [
+          "The passage does not give the full quantitative in vivo outcome here, only that the treatment was effective/preventive.",
+          "The nude-mouse orthotopic model is described in the abstract, but the exact treatment schedule is not stated."
+        ]
+      },
+      "errors": [
+        "quote not uniquely anchorable"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        670,
+        856
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        527,
+        694
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        767,
+        1100
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        896,
+        1033
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

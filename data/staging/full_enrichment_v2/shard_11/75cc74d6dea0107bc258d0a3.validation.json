@@ -1,0 +1,132 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "macrophages",
+          "compartment": "in vitro",
+          "disease_setting": null,
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "3",
+              "18",
+              "20",
+              "21",
+              "23",
+              "25"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "RNA",
+            "surface": "NFATc1 modRNA",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [
+              "16",
+              "17",
+              "19",
+              "22"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "human macrophages",
+            "taxon": "human"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast-like cells",
+            "taxon": "human"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 877,
+            "passage_index": 1,
+            "quote": "The isolated macrophages were transfected with NFATc1 modRNA.",
+            "start": 816
+          },
+          {
+            "end": 1635,
+            "passage_index": 1,
+            "quote": "Transfection with 25 or 50 ng/mL of NFATc1 modRNA for 3 days induced the formation of tartrate-resistant acid phosphatase-positive multinucleated cells, the F-actin ring formation, expression of cathepsin K, and increased bone resorption activity.",
+            "start": 1388
+          }
+        ],
+        "experiment": {
+          "assay": "tartrate-resistant acid phosphatase-positive expression; F-actin ring formation; cathepsin expression; bone resorption activity; scanning electron microscopy",
+          "dose": "25 or 50 ng/mL",
+          "duration": "3 days",
+          "endpoint": "osteoclast-like cell formation and osteoclast markers/bone resorption activity",
+          "intervention": "transfection with NFATc1 modRNA",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Transfection of human macrophages with NFATc1 modRNA increased NFATc1 expression and induced osteoclast-like features, including TRAP-positive multinucleated cells, F-actin ring formation, cathepsin K expression, and increased bone resorption activity.",
+        "uncertainties": [
+          "The exact molecular form of NFATc1 in the modRNA reagent is not independently specified beyond the text.",
+          "The quote for the intervention span and outcome span is extracted from the same abstract passage, but the start offset is approximate because the passage contains many long sentences."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        816,
+        877
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        833,
+        893
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1388,
+        1635
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1418,
+        1601
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

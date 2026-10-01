@@ -1,0 +1,217 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "55"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "phenolic compounds",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "49"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "51"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "OPG",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 971,
+            "passage_index": 1,
+            "quote": "phenolic compounds have emerged as promising natural agents for osteoporosis prevention due to their antioxidant, anti-inflammatory, and hormone-modulating properties. Key phenolic groups, including flavonoids (quercetin), isoflavones (genistein and daidzein), and stilbenes (resveratrol), have demonstrated significant osteoprotective effects by regulating receptor activator of nuclear factor-kappa B ligand (RANKL) and osteoprotegerin (OPG) signaling",
+            "start": 518
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "unknown",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "The review states that phenolic-compound metabolites have osteoprotective effects by regulating RANKL and OPG signaling.",
+        "uncertainties": [
+          "Review-level background statement rather than a primary experiment.",
+          "The sentence groups RANKL and OPG signaling together; the exact direction and mechanism are not specified."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "55"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "phenolic compounds",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "pathway",
+            "surface": "Wnt",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "52"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "beta-catenin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "inflammatory cytokines",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1054,
+            "passage_index": 1,
+            "quote": "activating Wnt and beta-catenin pathways, and suppressing inflammatory cytokines.",
+            "start": 973
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "unknown",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "The review states that phenolic compounds are described as activating Wnt and beta-catenin pathways and suppressing inflammatory cytokines.",
+        "uncertainties": [
+          "This is a review summary, not an experiment.",
+          "The text does not specify which phenolic compound causes each effect, nor whether the pathway activation is direct.",
+          "The phrase also mentions suppressing inflammatory cytokines, but no specific cytokine is named."
+        ]
+      },
+      "errors": [
+        "unsigned relationship has causal sign"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        518,
+        971
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        621,
+        1080
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        973,
+        1054
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1080,
+        1198
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

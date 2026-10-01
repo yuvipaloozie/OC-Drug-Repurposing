@@ -1,0 +1,148 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "OC-like cells",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": "human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "upregulated genes",
+            "taxon": "9606"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "cell division",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "cell migration",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "cell adhesion",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1126,
+            "passage_index": 1,
+            "quote": "In this study, we identified 3201 differentially expressed genes using a 5% false discovery rate; 1834 genes were upregulated, whereas 1367 genes were downregulated.",
+            "start": 961
+          },
+          {
+            "end": 1261,
+            "passage_index": 1,
+            "quote": "We confirmed a significant upregulation of several well-established OC genes including CTSK, DCSTAMP, ACP5, MMP9, ITGB3, and ATP6V0D2.",
+            "start": 1127
+          },
+          {
+            "end": 1376,
+            "passage_index": 1,
+            "quote": "The GO analysis suggested that upregulated genes are involved in cell division, cell migration, and cell adhesion,",
+            "start": 1262
+          }
+        ],
+        "experiment": {
+          "assay": "RNA-sequencing; differential expression analysis; GO analysis",
+          "dose": null,
+          "duration": null,
+          "endpoint": "differential gene expression and GO enrichment",
+          "intervention": "RNA-sequencing comparison of human OC-like cells and PBMCs",
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "association",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "undirected",
+          "directness": "unknown",
+          "effect_level": "association",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "In human OC-like cells versus PBMCs, the study reported 3201 differentially expressed genes, including 1834 upregulated and 1367 downregulated genes, and noted that upregulated genes were enriched for cell division, cell migration, and cell adhesion.",
+        "uncertainties": [
+          "The passage reports enrichment/association rather than a direct causal mechanism.",
+          "The statement about several OC genes is summarized together with the broader differential-expression result; no individual causal direction is established for each gene."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        961,
+        1126
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        616,
+        769
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1127,
+        1261
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        771,
+        913
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1262,
+        1376
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        915,
+        1032
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

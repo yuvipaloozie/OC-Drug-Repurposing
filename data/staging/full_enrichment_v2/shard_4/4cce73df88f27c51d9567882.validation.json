@@ -1,0 +1,129 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW264.7 osteoclasts",
+          "compartment": null,
+          "disease_setting": "diabetic osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "53",
+              "55",
+              "61",
+              "67",
+              "68",
+              "76",
+              "82",
+              "87",
+              "88",
+              "90",
+              "93"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "PEG-Loxe",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "58",
+              "63",
+              "64",
+              "65",
+              "72",
+              "73",
+              "74",
+              "77",
+              "78",
+              "79",
+              "80",
+              "84",
+              "85",
+              "86",
+              "92"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "HMGB-1/RAGE/TLR4/NF-kappaB pathway",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1224,
+            "passage_index": 1,
+            "quote": "PEG-Loxe can significantly enhance osteoblast differentiation (increased ALP, Col-1 and Runx2 activities, p < 0.001) and suppressing osteoclastogenesis by inhibiting HMGB-1/RAGE/TLR4/NF-kappaB pathway (p < 0.001)",
+            "start": 1012
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "100 nM",
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "PEG-Loxe",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "PEG-Loxe treatment was reported to suppress osteoclastogenesis and to do so by inhibiting the HMGB-1/RAGE/TLR4/NF-kappaB pathway.",
+        "uncertainties": [
+          "The quote includes a combined statement about osteoblast differentiation and osteoclastogenesis; the extracted claim focuses only on osteoclastogenesis.",
+          "The pathway is stated as a mechanism in text, but direct molecular causality is not established."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1012,
+        1224
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        653,
+        855
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

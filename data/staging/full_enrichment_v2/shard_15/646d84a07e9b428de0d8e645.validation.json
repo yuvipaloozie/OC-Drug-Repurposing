@@ -1,0 +1,251 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "glucocorticoid treatment",
+          "species": "rat",
+          "stage": "growing"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D011239"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "prednisolone",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D001847"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone accumulation",
+            "taxon": "rat"
+          },
+          {
+            "annotation_ids": [
+              "MESH:D006130"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone growth",
+            "taxon": "rat"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "ALP",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "25295"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "osteocalcin",
+            "taxon": "rat"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "Rat-Laps",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1790,
+            "passage_index": 1,
+            "quote": "Prednisolone and prednisolone+L-NAME treated rats had significantly lower ALP and osteocalcin levels than controls at 2 and 4 weeks, and significantly higher levels of Rat-Laps than controls at 4 weeks. Prednisolone, L-NAME, and prednisolone+L-NAME produced a significant inhibition of bone accumulation and bone growth at all sites measured.",
+            "start": 1448
+          }
+        ],
+        "experiment": {
+          "assay": "DXA scanning; serum measurement",
+          "dose": "5 mg/kg",
+          "duration": "4 weeks",
+          "endpoint": "bone accumulation and bone growth; ALP, osteocalcin, Rat-Laps",
+          "intervention": "prednisolone sodium succinate, 5 mg/kg, 5 days per week by intramuscular injection",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In growing male rats, prednisolone treatment was reported to significantly inhibit bone accumulation and bone growth at all measured sites, and to reduce bone formation markers while increasing the bone resorption marker Rat-Laps compared with controls.",
+        "uncertainties": [
+          "The quoted passage combines multiple outcomes; the exact causal link to each biomarker is summarized but not separately quantified.",
+          "ALP and Rat-Laps are not explicitly typed in the source packet beyond their names."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "glucocorticoid-induced skeletal changes",
+          "species": "rat",
+          "stage": "young"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "MESH:D001120"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "L-arginine",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D011239"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "prednisolone",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "MESH:D006130"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone growth",
+            "taxon": "rat"
+          },
+          {
+            "annotation_ids": [
+              "MESH:D014091"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": "rat"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1929,
+            "passage_index": 1,
+            "quote": "Supplementation with L-arginine appeared to prevent the inhibition of bone growth and increase in bone resorption induced by prednisolone.",
+            "start": 1791
+          }
+        ],
+        "experiment": {
+          "assay": "DXA scanning; serum measurement",
+          "dose": "10 mg/kg",
+          "duration": "4 weeks",
+          "endpoint": "bone growth and bone resorption",
+          "intervention": "L-arginine supplementation with prednisolone",
+          "outcome_change": "increased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "L-arginine supplementation was reported to prevent the prednisolone-induced inhibition of bone growth and the prednisolone-induced increase in bone resorption in young male rats.",
+        "uncertainties": [
+          "The word 'appeared' indicates a cautious interpretation in the source.",
+          "The passage states prevention of a prednisolone-induced effect rather than a direct mechanistic target of L-arginine."
+        ]
+      },
+      "errors": [
+        "invented annotation ID"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1448,
+        1790
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1588,
+        1916
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1791,
+        1929
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1949,
+        2096
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

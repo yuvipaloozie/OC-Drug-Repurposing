@@ -1,0 +1,189 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "macrophage",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "3"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Abl",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "macrophage podosomes",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 115,
+            "passage_index": 0,
+            "quote": "The tyrosine kinase Abl is a component of macrophage podosomes and is required for podosome formation and function.",
+            "start": 0
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "podosome formation and function",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Abl is described as a component of macrophage podosomes and as required for podosome formation and function.",
+        "uncertainties": [
+          "The title states a requirement, but no perturbation experiment is described in the title alone."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "bone marrow-derived macrophages and monocyte-derived macrophages",
+          "compartment": null,
+          "disease_setting": null,
+          "species": "murine and human",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "16",
+              "20",
+              "23",
+              "24"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Abl",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "21"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "imatinib",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "macrophage podosomes",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "extracellular matrix",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 656,
+            "passage_index": 1,
+            "quote": "Silencing of Abl expression in bone marrow-derived macrophages and monocyte-derived macrophages by siRNA or Abl enzymatic inhibition with imatinib resulted in the disassembly of macrophage podosomes and the reduction of their capacity to degrade an extracellular matrix and migrate through matrigel matrices and endothelial cell monolayers.",
+            "start": 316
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "disassembly of macrophage podosomes; reduced capacity to degrade extracellular matrix and migrate through matrigel matrices and endothelial cell monolayers",
+          "intervention": "siRNA or Abl enzymatic inhibition with imatinib",
+          "outcome_change": "decreased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Silencing of Abl expression or Abl inhibition with imatinib disassembled macrophage podosomes and reduced macrophage capacity to degrade extracellular matrix and migrate through matrices and endothelial monolayers.",
+        "uncertainties": [
+          "The sentence combines two interventions (siRNA silencing and imatinib inhibition) and multiple outcomes; the exact contribution of each intervention to each outcome is not separated.",
+          "The text mentions murine and human macrophages, but the specific species for each experimental subcondition is not resolved.",
+          "Abl is annotated as a gene here; the affected molecular form in the experiment could be gene or protein-level inferred from the text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        316,
+        656
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        432,
+        773
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,240 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclasts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "40",
+              "41",
+              "47",
+              "57",
+              "63",
+              "67"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFRSF11B",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "osteoprotegerin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "38",
+              "39",
+              "42",
+              "52",
+              "58",
+              "62",
+              "66",
+              "69"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:FOS",
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "c-Fos",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "5",
+              "50",
+              "51",
+              "68"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "Beclin1",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 609,
+            "passage_index": 1,
+            "quote": "This study aimed to explore the role of c-Fos during osteoprotegerin (OPG)-mediated suppression of osteoclastogenesis. We found that the number of osteoclasts and the expression of c-Fos, MMP-9, CAII, Src and p62 were decreased after treated with OPG, including attenuation the PI3K/Akt and the TAK1/S6 signalling pathways, but the expression of Beclin1 and LC3II were increased.",
+            "start": 230
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis / osteoclast number",
+          "intervention": "OPG treatment",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e1",
+          "sign": "negative",
+          "subject": "e2"
+        },
+        "summary": "OPG treatment reduced osteoclast number and several osteoclast-related proteins, while increasing Beclin1 and LC3II; the passage also states attenuation of PI3K/Akt and TAK1/S6 signaling.",
+        "uncertainties": [
+          "The sentence reports multiple molecular changes together; the claim summarizes the overall OPG-associated decrease in osteoclast-related markers and increase in Beclin1/LC3II without separating all subrelations.",
+          "Species and cell type are not stated in the provided text.",
+          "Existing-node suggestion for osteoprotegerin may not match the text-specific molecular form."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "38",
+              "39",
+              "42",
+              "52",
+              "58",
+              "62",
+              "66",
+              "69"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:FOS",
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "c-Fos",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "40",
+              "41",
+              "47",
+              "57",
+              "63",
+              "67"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:TNFRSF11B",
+            "key": "e2",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "gene",
+            "surface": "osteoprotegerin",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1260,
+            "passage_index": 1,
+            "quote": "Furthermore, continuous activation of c-Fos could reverse OPG-mediated suppression of osteoclastogenesis by activating the autophagy and the PI3K/Akt and the TAK1/S6 signalling pathways.",
+            "start": 1074
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis / reversal of OPG-mediated suppression",
+          "intervention": "continuous activation of c-Fos",
+          "outcome_change": "increased",
+          "perturbation_type": "gain_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Continuous activation of c-Fos reversed OPG-mediated suppression of osteoclastogenesis and was described as activating autophagy, PI3K/Akt, and TAK1/S6 signaling.",
+        "uncertainties": [
+          "The phrase 'by activating the autophagy and the PI3K/Akt and the TAK1/S6 signalling pathways' is included as the proposed mechanism, but direct causality is not separately demonstrated in the abstract.",
+          "Species and cell type are not stated in the provided text."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        230,
+        609
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        248,
+        663
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1074,
+        1260
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1394,
+        1570
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,236 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "experimental CKD",
+          "species": "mice",
+          "stage": "20-week old"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "65",
+              "66",
+              "67"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "high phosphate diet",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "46",
+              "47",
+              "69",
+              "73"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "FGF23",
+            "taxon": "10090"
+          },
+          {
+            "annotation_ids": [
+              "63",
+              "64",
+              "68",
+              "78"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "mice",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 747,
+            "passage_index": 1,
+            "quote": "then were fed",
+            "start": 734
+          },
+          {
+            "end": 973,
+            "passage_index": 1,
+            "quote": "Nx mice showed increased markers of mineral metabolism, particularly under HP, including FGF23 (especially in F; HP vs NP: M +184%, F +770%)",
+            "start": 833
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "1.65% Pi",
+          "duration": "10 weeks",
+          "endpoint": "FGF23",
+          "intervention": "5/6 nephrectomy then high phosphate diet",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In nephrectomized CD1 mice fed a high phosphate diet, FGF23 levels increased, especially in females.",
+        "uncertainties": [
+          "The increase is reported for nephrectomized mice under high phosphate diet; the claim does not establish a direct mechanism."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "experimental CKD",
+          "species": "mice",
+          "stage": "20-week old"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "65",
+              "66",
+              "67"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "high phosphate diet",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "55",
+              "56",
+              "76",
+              "62"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone disorders",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "64",
+              "78"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "female mice",
+            "taxon": "10090"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1351,
+            "passage_index": 1,
+            "quote": "Under HP cardiac hypertrophy was significant in M (+28% cardiomyocyte area vs NP) while bone disorders were more pronounced in F, with increased cortical porosity (+28% vs NP) and turnover.",
+            "start": 1162
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "1.65% Pi",
+          "duration": "10 weeks",
+          "endpoint": "bone disorders / cortical porosity / turnover",
+          "intervention": "5/6 nephrectomy then high phosphate diet",
+          "outcome_change": "increased",
+          "perturbation_type": "other"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "Under high phosphate diet after nephrectomy, female mice showed more pronounced bone disorders, including increased cortical porosity and turnover.",
+        "uncertainties": [
+          "The passage summarizes a sex difference in phenotype; it does not isolate a single molecular mediator for the bone changes."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        734,
+        747
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        827,
+        838
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        833,
+        973
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        960,
+        1094
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1162,
+        1351
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1318,
+        1437
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

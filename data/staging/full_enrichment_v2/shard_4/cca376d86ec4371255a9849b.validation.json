@@ -1,0 +1,106 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "mid-palatal suture",
+          "disease_setting": "orthodontic maxillary expansion",
+          "species": "rats",
+          "stage": "maxillary expansion and relapse"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "13"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "U0126",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone remodeling",
+            "taxon": "rat"
+          },
+          {
+            "annotation_ids": [
+              "18"
+            ],
+            "existing_node_id": "LOCAL:protein:mouse:ACP5",
+            "key": "e3",
+            "mapping_qualification": "ambiguous",
+            "molecular_form": "phenotype",
+            "surface": "TRAP-positive cells",
+            "taxon": "rat"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1558,
+            "passage_index": 1,
+            "quote": "Conversely, MAPK inhibition impeded bone remodeling, indicated by decreased osteogenic markers and fewer TRAP-positive cells.",
+            "start": 1433
+          }
+        ],
+        "experiment": {
+          "assay": "histology; immunohistochemistry",
+          "dose": "100 g force",
+          "duration": "seven days",
+          "endpoint": "bone remodeling",
+          "intervention": "U0126",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In rats undergoing maxillary expansion, MAPK inhibition with U0126 impaired bone remodeling and was associated with fewer TRAP-positive cells.",
+        "uncertainties": [
+          "Exact character offsets are best-effort and may be slightly imprecise.",
+          "TRAP-positive cells are a phenotypic readout; the text does not explicitly identify them as osteoclasts.",
+          "The study context is orthodontic bone remodeling, not a direct osteoclast-specific assay."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1433,
+        1558
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1488,
+        1607
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

@@ -1,0 +1,245 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "bone",
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "newly formed osteoclasts"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "3",
+              "24",
+              "25",
+              "28",
+              "30",
+              "37",
+              "38",
+              "40"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Fluoride",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "5",
+              "32",
+              "41"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "NFATc1",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 97,
+            "passage_index": 0,
+            "quote": "Fluoride decreased osteoclastic bone resorption through the inhibition of NFATc1 gene expression.",
+            "start": 0
+          },
+          {
+            "end": 671,
+            "passage_index": 1,
+            "quote": "through the inhibition of nuclear factor of active T cells (NFAT) c1 expression",
+            "start": 592
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "0.5 mg/L",
+          "duration": null,
+          "endpoint": "NFATc1 expression",
+          "intervention": "fluoride",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Fluoride reduced NFATc1 gene expression in osteoclasts, which the abstract describes as the mechanism through which fluoride lowered bone resorption.",
+        "uncertainties": [
+          "The text states inhibition of NFATc1 expression as the mechanism, but does not establish direct molecular target engagement by fluoride."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": "bone",
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "newly formed osteoclasts"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "3",
+              "24",
+              "25",
+              "28",
+              "30",
+              "37",
+              "38",
+              "40"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Fluoride",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "4",
+              "29",
+              "31",
+              "36",
+              "39"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclast resorption",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 31,
+            "passage_index": 0,
+            "quote": "Fluoride decreased osteoclastic",
+            "start": 0
+          },
+          {
+            "end": 545,
+            "passage_index": 1,
+            "quote": "Our data showed that fluoride levels <= 8 mg/L had no effect on osteoclast formation; however, it significantly reduced osteoclast resorption at 0.5 mg/L.",
+            "start": 391
+          },
+          {
+            "end": 1273,
+            "passage_index": 1,
+            "quote": "Fluoride <= 8 mg/L did not impact osteoclast formation; however, it significantly decreased the resorption activity of newly formed osteoclasts.",
+            "start": 1129
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": "0.5 mg/L",
+          "duration": null,
+          "endpoint": "osteoclast resorption",
+          "intervention": "fluoride",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Fluoride treatment decreased osteoclast bone resorption activity.",
+        "uncertainties": [
+          "The passage links reduced resorption to NFATc1 inhibition, but the causal chain is presented as an interpretation rather than a directly tested mechanism."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        592,
+        671
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        739,
+        774
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        0,
+        31
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        0,
+        30
+      ],
+      "passage_index": 0
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        391,
+        545
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        213,
+        302
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1129,
+        1273
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1227,
+        1340
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

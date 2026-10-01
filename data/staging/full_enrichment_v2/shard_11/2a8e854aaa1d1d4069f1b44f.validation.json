@@ -1,0 +1,236 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW 264.7 cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "106"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "7a",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "116"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "105"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "unknown",
+            "surface": "RANKL stimulated RAW 264.7 cells",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1627,
+            "passage_index": 1,
+            "quote": "RANKL stimulated RAW 264.7 cells, 7a markedly inhibited osteoclastogenesis",
+            "start": 1553
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "7a",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The chalcone derivative 7a inhibited osteoclastogenesis in RANKL-stimulated RAW 264.7 cells.",
+        "uncertainties": [
+          "The exact assay used to measure osteoclastogenesis is not stated.",
+          "RAW 264.7 cell species is not explicitly stated in the passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "RAW 264.7 cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "110"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "7a",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "111"
+            ],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "NFATc1",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "112"
+            ],
+            "existing_node_id": null,
+            "key": "e5",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "c-Fos",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "113",
+              "114"
+            ],
+            "existing_node_id": null,
+            "key": "e6",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "complex",
+            "surface": "NFATc1/c-Fos axis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1772,
+            "passage_index": 1,
+            "quote": "7a reduced NFATc1 and c-Fos expression",
+            "start": 1734
+          },
+          {
+            "end": 1852,
+            "passage_index": 1,
+            "quote": "thereby disrupting the NFATc1/c-Fos axis central to osteoclast differentiation",
+            "start": 1774
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "NFATc1 and c-Fos expression",
+          "intervention": "7a",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "expression",
+          "interpretation": "explicit_in_text",
+          "object": "e4",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In the same RANKL-stimulated RAW 264.7 cell context, 7a reduced NFATc1 and c-Fos expression, consistent with disruption of the osteoclast differentiation axis described in the text.",
+        "uncertainties": [
+          "The quote states reduced expression for both NFATc1 and c-Fos, but the regulatory object is represented with NFATc1 as the primary object because the schema allows only one object per claim.",
+          "RAW 264.7 cell species is not explicitly stated in the passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1553,
+        1627
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1711,
+        1791
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1734,
+        1772
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1892,
+        1930
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1774,
+        1852
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1932,
+        2015
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

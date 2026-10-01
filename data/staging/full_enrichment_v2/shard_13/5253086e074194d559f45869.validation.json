@@ -1,0 +1,167 @@
+{
+  "accepted": [],
+  "errors": [],
+  "rejected": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "epithelial cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "src family kinases",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1042,
+            "passage_index": 1,
+            "quote": "The maintenance of the F-actin core and the surrounding hemidesmosomes depends on actin polymerization, src family kinases and Grb2",
+            "start": 911
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "maintenance of the F-actin core and the surrounding hemidesmosomes",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In epithelial podosome-like structures, maintenance of the F-actin core and surrounding hemidesmosomes depends on src family kinases.",
+        "uncertainties": [
+          "The text states a dependence relationship but does not specify a direct molecular mechanism.",
+          "The object is a composite structural phenotype rather than a single molecular entity.",
+          "The passage also mentions actin polymerization and Grb2 in the same dependence clause, so this claim is only one component of a multi-factor statement."
+        ]
+      },
+      "errors": [
+        "unknown regulatory participant"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": "epithelial cells",
+          "compartment": null,
+          "disease_setting": null,
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "29"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "Grb2",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1042,
+            "passage_index": 1,
+            "quote": "and Grb2",
+            "start": 1034
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "maintenance of the F-actin core and the surrounding hemidesmosomes",
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In epithelial podosome-like structures, maintenance of the F-actin core and surrounding hemidesmosomes depends on Grb2.",
+        "uncertainties": [
+          "The text states a dependence relationship but does not specify a direct molecular mechanism.",
+          "The object is a composite structural phenotype rather than a single molecular entity.",
+          "The dependence statement is shared with actin polymerization and src family kinases in the same sentence."
+        ]
+      },
+      "errors": [
+        "unknown regulatory participant"
+      ],
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        911,
+        1042
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1020,
+        1090
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        1034,
+        1042
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1078,
+        1090
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

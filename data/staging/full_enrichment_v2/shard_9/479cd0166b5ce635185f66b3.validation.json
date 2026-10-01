@@ -1,0 +1,132 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "hypothesis",
+        "context": {
+          "cell_type": "osteoclasts",
+          "compartment": null,
+          "disease_setting": "osteoporosis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "51"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "pathway",
+            "surface": "RANKL-ERK1/2 pathway",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "lipoylation",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "unknown",
+            "surface": "osteoclasts",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e4",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "pathway",
+            "surface": "glycolysis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1243,
+            "passage_index": 1,
+            "quote": "while osteoclasts are naturally resistant due to their reliance on glycolysis and the RANKL-ERK1/2 pathway-mediated inhibition of lipoylation.",
+            "start": 1101
+          },
+          {
+            "end": 930,
+            "passage_index": 1,
+            "quote": "We hypothesize that",
+            "start": 911
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": null,
+          "intervention": null,
+          "outcome_change": "not_stated",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "activity",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "The review hypothesizes that in osteoclasts, the RANKL-ERK1/2 pathway mediates inhibition of lipoylation, contributing to their natural resistance to cuproptosis.",
+        "uncertainties": [
+          "This is presented as a hypothesis in a review, not as an experimental result.",
+          "The passage does not specify a direct molecular mechanism or experimental assay.",
+          "RANKL is annotated as a gene/protein candidate, but the text supports only the pathway phrase rather than a resolved molecular form."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": false,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        1101,
+        1243
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1137,
+        1263
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        911,
+        930
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1005,
+        1026
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

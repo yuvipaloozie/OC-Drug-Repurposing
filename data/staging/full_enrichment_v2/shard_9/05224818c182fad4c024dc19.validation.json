@@ -1,0 +1,127 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "background_statement",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "hyperparathyroidism",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "28"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "parathyroid hormone",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone resorption",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "21",
+              "33",
+              "34",
+              "36"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "brown tumor",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 392,
+            "passage_index": 1,
+            "quote": "Due to overproduction of parathyroid hormone in hyperparathyroidism bone resorption takes place",
+            "start": 297
+          },
+          {
+            "end": 486,
+            "passage_index": 1,
+            "quote": ", which appear as cyst-like lesions, commonly known as osteitis fibrosa cystica or brown tumor",
+            "start": 392
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone resorption",
+          "intervention": null,
+          "outcome_change": "increased",
+          "perturbation_type": "not_stated"
+        },
+        "kind": "regulation",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e2",
+          "sign": "positive",
+          "subject": "e1"
+        },
+        "summary": "In hyperparathyroidism, overproduction of parathyroid hormone is described as causing bone resorption, which appears as cyst-like lesions or brown tumor.",
+        "uncertainties": [
+          "Statement is background description in a case report abstract, not an experimental perturbation.",
+          "The text links brown tumor to the described bone resorption, but does not establish a direct molecular mechanism."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        297,
+        392
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        385,
+        480
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        392,
+        486
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        480,
+        564
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

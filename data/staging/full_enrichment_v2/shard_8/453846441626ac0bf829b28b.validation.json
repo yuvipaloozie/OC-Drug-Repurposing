@@ -1,0 +1,239 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "myeloid cells",
+          "compartment": "bone",
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "35 days"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "31",
+              "32",
+              "33",
+              "36",
+              "37",
+              "53"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "GPR109A",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "trabecular bone",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [
+              "42",
+              "46"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "CKO males",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 742,
+            "passage_index": 1,
+            "quote": "At 35 days, CKO males showed significantly increased trabecular bone in both tibia and vertebrae",
+            "start": 646
+          },
+          {
+            "end": 790,
+            "passage_index": 1,
+            "quote": "when compared to control genotypes (f/f, Cre+).",
+            "start": 743
+          }
+        ],
+        "experiment": {
+          "assay": "microCT",
+          "dose": null,
+          "duration": null,
+          "endpoint": "trabecular bone in tibia and vertebrae",
+          "intervention": "myeloid cell-specific GPR109A knockout",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Myeloid cell-specific GPR109A knockout males showed increased trabecular bone at 35 days compared with control genotypes.",
+        "uncertainties": [
+          "The claim is based on a knockout phenotype, so direct molecular mechanism is not established.",
+          "The text reports an increase in trabecular bone but does not specify a direct causal molecular interaction."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": "myeloid cells",
+          "compartment": "bone",
+          "disease_setting": null,
+          "species": "mouse",
+          "stage": "6 and 12 months"
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "31",
+              "32",
+              "33",
+              "36",
+              "37",
+              "53"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "gene",
+            "surface": "GPR109A",
+            "taxon": "mouse"
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "trabecular bone",
+            "taxon": "mouse"
+          }
+        ],
+        "evidence": [
+          {
+            "end": 996,
+            "passage_index": 1,
+            "quote": "In contrast, female CKO mice displayed significantly increased trabecular bone",
+            "start": 918
+          },
+          {
+            "end": 1016,
+            "passage_index": 1,
+            "quote": "at 6 and 12 months.",
+            "start": 997
+          }
+        ],
+        "experiment": {
+          "assay": "microCT",
+          "dose": null,
+          "duration": null,
+          "endpoint": "trabecular bone",
+          "intervention": "myeloid cell-specific GPR109A knockout",
+          "outcome_change": "increased",
+          "perturbation_type": "loss_of_function"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "inferred_from_perturbation",
+          "object": "e2",
+          "sign": "unknown",
+          "subject": "e1"
+        },
+        "summary": "Female myeloid cell-specific GPR109A knockout mice showed increased trabecular bone at 6 and 12 months compared with controls.",
+        "uncertainties": [
+          "The text combines two time points (6 and 12 months) in one statement.",
+          "The claim is phenotype-level and does not establish a direct molecular interaction."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        646,
+        742
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        438,
+        530
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        743,
+        790
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        530,
+        574
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        918,
+        996
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        760,
+        837
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        997,
+        1016
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        837,
+        852
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}

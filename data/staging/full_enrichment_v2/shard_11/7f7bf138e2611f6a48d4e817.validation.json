@@ -1,0 +1,206 @@
+{
+  "accepted": [
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": null,
+          "disease_setting": "CoCrMo alloy particles-induced osteolysis",
+          "species": null,
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "43",
+              "44"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "Hollow RuO2",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "45",
+              "46"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "protein",
+            "surface": "RANKL",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "unresolved",
+            "molecular_form": "phenotype",
+            "surface": "osteoclastogenesis",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 713,
+            "passage_index": 1,
+            "quote": "Hollow RuO2 significantly suppressed receptor activator of nuclear factor kappa-B ligand (RANKL)-induced osteoclastogenesis",
+            "start": 590
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "osteoclastogenesis",
+          "intervention": "Hollow RuO2",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c1",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "Hollow RuO2 suppressed RANKL-induced osteoclastogenesis.",
+        "uncertainties": [
+          "The passage also attributes suppression to inhibition of NF-kappaB and TNF-alpha pathways, but the directness and intermediate causal steps are not fully specified.",
+          "Cell type for this specific effect is described only indirectly in the same sentence as bone marrow-derived macrophages."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    },
+    {
+      "canonical_imported": false,
+      "claim": {
+        "assertion": "observed_result",
+        "context": {
+          "cell_type": null,
+          "compartment": "calvaria",
+          "disease_setting": "CoCrMo alloy particles-induced osteolysis",
+          "species": "mouse",
+          "stage": null
+        },
+        "entities": [
+          {
+            "annotation_ids": [
+              "55",
+              "56"
+            ],
+            "existing_node_id": null,
+            "key": "e1",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "hollow RuO2 nanozymes",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "59"
+            ],
+            "existing_node_id": null,
+            "key": "e2",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "compound",
+            "surface": "CoCrMo alloy particles",
+            "taxon": null
+          },
+          {
+            "annotation_ids": [
+              "57"
+            ],
+            "existing_node_id": null,
+            "key": "e3",
+            "mapping_qualification": "text_supported_candidate",
+            "molecular_form": "phenotype",
+            "surface": "bone loss",
+            "taxon": null
+          }
+        ],
+        "evidence": [
+          {
+            "end": 1149,
+            "passage_index": 1,
+            "quote": "In mouse calvaria, hollow RuO2 nanozymes demonstrate an appreciable attenuation in osteoclast differentiation, bone loss, and soft tissue malformations induced by CoCrMo alloy particles.",
+            "start": 963
+          }
+        ],
+        "experiment": {
+          "assay": null,
+          "dose": null,
+          "duration": null,
+          "endpoint": "bone loss",
+          "intervention": "hollow RuO2 nanozymes",
+          "outcome_change": "decreased",
+          "perturbation_type": "chemical_treatment"
+        },
+        "kind": "perturbation_effect",
+        "local_claim_id": "c2",
+        "reaction": null,
+        "regulatory": {
+          "direction": "subject_to_object",
+          "directness": "unknown",
+          "effect_level": "phenotype",
+          "interpretation": "explicit_in_text",
+          "object": "e3",
+          "sign": "negative",
+          "subject": "e1"
+        },
+        "summary": "In mouse calvaria, hollow RuO2 attenuated osteoclast differentiation, bone loss, and soft tissue malformations induced by CoCrMo alloy particles.",
+        "uncertainties": [
+          "The sentence also mentions osteoclast differentiation and soft tissue malformations; only one object is represented here.",
+          "The exact experimental model details beyond mouse calvaria are not specified in the passage."
+        ]
+      },
+      "identity_resolution_required": true,
+      "projection_candidate": true,
+      "status": "automated_extraction_unreviewed"
+    }
+  ],
+  "errors": [],
+  "rejected": [],
+  "repairs": [
+    {
+      "claim": "c1",
+      "corrected_offsets": [
+        590,
+        713
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        718,
+        841
+      ],
+      "passage_index": 1
+    },
+    {
+      "claim": "c2",
+      "corrected_offsets": [
+        963,
+        1149
+      ],
+      "method": "unique_exact_quote_match",
+      "original_offsets": [
+        1094,
+        1276
+      ],
+      "passage_index": 1
+    }
+  ],
+  "valid_envelope": true
+}
