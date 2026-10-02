@@ -1,5 +1,13 @@
 # Browser explorers
 
+## Current workbench (October 2026)
+
+Both entry pages now load the React/shadcn workbench from `assets/workbench/`, keeping the original palette and the existing `assets/research-data.js` data interface. Source, build instructions, component provenance, and interactions are documented in [viewer/README.md](../../viewer/README.md). From the repository root, use `npm --prefix viewer run build` for UI changes. Built assets are included; ordinary viewing and Python data rebuilds need no Node installation.
+
+The Python builder continues to generate the two entry shells from `templates/viewer.html`. The previous shell is retained in `templates/legacy-viewer.html`, alongside its unchanged legacy renderer and stylesheet. The notes below describe that previous implementation.
+
+## Previous standalone interface
+
 Run `python -m http.server 8765 --bind 127.0.0.1` from the repository root, then open http://127.0.0.1:8765/. Neo4j is not needed.
 
 - `index.html`: pathway explorer. Search names, aliases or identifiers; explore the whole graph, or select an entity in the left list to open its complete one-hop neighborhood with an animated layout. Drag nodes to rearrange them, drag the background to pan, and double-click a node to explore its neighborhood. Keyboard users can press Enter to inspect, Shift+Enter to explore, and arrow keys to move a focused node. Selecting an entity preserves the graph positions and camera. A deterministic force layout spaces connected entities with rectangular collision avoidance. The details panel exposes the full entity schema and connection list. SVG nodes support keyboard selection, pan, zoom, fit and readable-size controls. Edge colors indicate the recorded sign, not independent validation of causality.
