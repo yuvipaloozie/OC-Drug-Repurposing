@@ -7,4 +7,3 @@ The components in `src/components/ui` were retrieved from the official shadcn/ui
 React, Radix primitives, cmdk, react-resizable-panels, TanStack Table, Lucide, and d3-force are installed through npm, with versions pinned in package-lock.json. 3Dmol remains the repository's existing locally bundled renderer and license.
 
 Newsreader Variable and DM Sans Variable are bundled locally via Fontsource npm packages under the SIL Open Font License 1.1. Their licenses are preserved in `licenses/`. No external font requests are needed.
-
