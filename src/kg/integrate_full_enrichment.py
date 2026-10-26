@@ -120,6 +120,14 @@ def project(claim):
     return ('REGULATES',sign,basis),'projected'
 
 
+def context_qualifiers(claim):
+    """Preserve explicit source strings; never infer qualifiers from project topic."""
+    ctx, exp = claim['context'], claim['experiment']
+    qualifiers = {k: ctx[k] for k in ('sex', 'intervention_type', 'model_setting') if ctx.get(k)}
+    qualifiers.update({k: exp[k] for k in ('dose', 'duration') if exp.get(k)})
+    return qualifiers
+
+
 def prepare(root=ROOT, *, output=OUTPUT, records_path='data/staging/full_enrichment_v2/claims.jsonl', packets_path='data/staging/full_enrichment_prepared_v2/requests.jsonl', grounding_path='data/staging/full_grounding_v1/grounded_claims.jsonl', resolver=resolve, projector=project):
     out=root/output
     out.mkdir(parents=True,exist_ok=True)
@@ -132,6 +140,8 @@ def prepare(root=ROOT, *, output=OUTPUT, records_path='data/staging/full_enrichm
     before={t:(root/'data/processed'/f'{t}.csv').read_bytes().decode('utf-8') for t in TABLES}
     tables={t:list(csv.DictReader(io.StringIO(text))) for t,text in before.items()}
     fields={t:next(csv.reader(io.StringIO(text))) for t,text in before.items()}
+    for table in ('contexts', 'experiments'):
+        if 'qualifiers' not in fields[table]: fields[table].append('qualifiers')
     nodes={n['node_id']:n for n in tables['nodes']}
     original_nodes=set(nodes)
     sources={s['source_id']:s for s in tables['source_records']}
@@ -190,9 +200,10 @@ def prepare(root=ROOT, *, output=OUTPUT, records_path='data/staging/full_enrichm
         if p['source_id'] not in sources:
             source={'source_id':p['source_id'],'pmid':p['pmid'],'title':next(x['text'] for x in p['passages'] if x['passage_type']=='title'), 'resolution_status':'resolved','claim_match_status':'relevant_paper_claim_pending','publication_types':'|'.join(p.get('publication_types',[])), 'url':'https://pubmed.ncbi.nlm.nih.gov/'+p['pmid']+'/', 'raw_file':p['raw_file'],'raw_sha256':p['source_sha256'],'retrieved_at':''}
             sources[p['source_id']]=source;tables['source_records'].append(source)
-        ctx=c['context']; ctxid='ctx:extracted:'+stable([p['source_id'],ctx])
+        ctx=c['context']; qualifiers=context_qualifiers(c)
+        ctxid='ctx:extracted:'+stable([p['source_id'],ctx,qualifiers] if qualifiers else [p['source_id'],ctx])
         if ctxid not in contexts:
-            tables['contexts'].append({'context_id':ctxid,'species':SPECIES.get(taxon(ctx['species']),ctx['species'] or ''),'cell_type':ctx['cell_type'] or '', 'stage':ctx['stage'] or '', 'compartment':ctx['compartment'] or '', 'disease_setting':ctx['disease_setting'] or '', 'verification_status':'pending_source_review', 'note':'Extracted context, not expert reviewed. Source: '+p['source_id']})
+            tables['contexts'].append({'context_id':ctxid,'species':SPECIES.get(taxon(ctx['species']),ctx['species'] or ''),'cell_type':ctx['cell_type'] or '', 'stage':ctx['stage'] or '', 'compartment':ctx['compartment'] or '', 'disease_setting':ctx['disease_setting'] or '', 'verification_status':'pending_source_review', 'qualifiers':json.dumps(qualifiers,ensure_ascii=False), 'note':'Extracted context, not expert reviewed. Source: '+p['source_id']})
             contexts.add(ctxid)
         relation,sign,basis=projection
         a,b=resolved[c['regulatory']['subject']],resolved[c['regulatory']['object']]
@@ -211,7 +222,7 @@ def prepare(root=ROOT, *, output=OUTPUT, records_path='data/staging/full_enrichm
             edge['causal_basis']=basis;edge['review_note']=note
         expid='exp:full:'+stable(cid)
         exp=c['experiment']
-        tables['experiments'].append({'experiment_id':expid,'paper_id':p['source_id'],'model_system':'','species':SPECIES.get(taxon(ctx['species']),ctx['species'] or ''),'cell_type':ctx['cell_type'] or '', 'differentiation_stage':ctx['stage'] or '', 'treatment':exp['intervention'] or '', 'dose':'','duration':'','endpoint':exp['endpoint'] or '', 'assay':'','measured_effect':exp['outcome_change'],'viability':'not reported','verification_status':'pending_passage_review','review_note':note+'Claim-level record, not an independent replication. Unverified quantities remain in the extraction sidecar.'})
+        tables['experiments'].append({'experiment_id':expid,'paper_id':p['source_id'],'model_system':'','species':SPECIES.get(taxon(ctx['species']),ctx['species'] or ''),'cell_type':ctx['cell_type'] or '', 'differentiation_stage':ctx['stage'] or '', 'treatment':exp['intervention'] or '', 'dose':'','duration':'','endpoint':exp['endpoint'] or '', 'assay':'','measured_effect':exp['outcome_change'],'viability':'not reported','verification_status':'pending_passage_review','qualifiers':json.dumps(qualifiers,ensure_ascii=False),'review_note':note+'Claim-level record, not an independent replication. Unverified quantities remain in the extraction sidecar.'})
         tables['edge_evidence'].append({'evidence_id':'ev:full:'+stable(cid),'edge_id':edge['edge_id'],'experiment_id':expid,'source_id':p['source_id'],'quote_or_location':'\n\n'.join(e['quote'] for e in c['evidence']),'claim_summary':c['summary'],'passage_status':'source_checked_quote','source_location':json.dumps({'claim_id':cid,'request_id':p['request_id'],'spans':c['evidence'],'validation_file':record['validation_file']},ensure_ascii=False),'source_url':sources[p['source_id']]['url'],'source_sha256':p['source_sha256'],'evidence_kind':'association' if relation=='ASSOCIATED_WITH' else 'perturbation' if basis=='genetic_perturbation_role_inference' else 'measurement','polarity':'support','curator_status':'automated_extraction','reviewed_at':'','review_note':note+'Uncertainties: '+' | '.join(c['uncertainties'])})
         outcomes.append({'claim_id':cid,'source_id':p['source_id'],'status':'integrated_proposed','edge_id':edge['edge_id'],'reason':basis})
     after={t:csv_text(tables[t],fields[t]) for t in TABLES}

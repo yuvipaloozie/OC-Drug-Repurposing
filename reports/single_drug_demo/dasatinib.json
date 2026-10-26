@@ -91,12 +91,12 @@
   "scenario": "Conditional inhibition of candidate mouse SRC; species transfer unverified",
   "target_list_scope": "Eight targets/groups in label section 12.1; not an exhaustive targetome",
   "canonical_input_sha256": {
-    "data\\processed\\nodes.csv": "6015f0d6bd63974659be8353b652e4b78e182722cadcc0f2902c4d652704815d",
-    "data\\processed\\edges.csv": "47a9bfb128a00e161b537250c56c44ce74297761b104821c659be64b80b3bc5a",
-    "data\\processed\\experiments.csv": "a658e78407d301c1a9801e6a1eb994d0b3e3b224a8a640a6fe7443d0a3b4c47c",
-    "data\\processed\\edge_evidence.csv": "e87e4a027f6178a8accbd1ef9d1540dbed22df96a1e8cca629b6b1967d90652f",
-    "data\\processed\\contexts.csv": "7690e2a3f63d9d263a89b7040dd2e00a2fbe0552a49184c00b797ee6605cee5c",
-    "data\\processed\\source_records.csv": "e5ddf688bdbc39b0231c2e26d1293fe1a6c030dc8613f2d5a96b34a86f49f228"
+    "data\\processed\\nodes.csv": "8eb70991396119a3f89a179c0bf9008f9863c862f3ddf7586efb5b02669999d2",
+    "data\\processed\\edges.csv": "236f758e00c00d3fa5156d1483d26f380b0f6aeda55ba088942616a8febd691b",
+    "data\\processed\\experiments.csv": "5df71d53d9e6848ee624774b0163fe1f68e51f852cf6c6bc41ef80c71de33827",
+    "data\\processed\\edge_evidence.csv": "6ceab4e097bca86ac9541b4f62d915c282cf89ef14db6f59c25f8bb753b40319",
+    "data\\processed\\contexts.csv": "688d344a08b245c83ca2f1684ac4c7db5540b79029613ffb2f27c46faad28301",
+    "data\\processed\\source_records.csv": "3b8308c4179f17b4a17b56ab1d60ce172ecd9924e5e48d491f2af2585c718074"
   },
   "canonical_inputs_unchanged": true,
   "scores": {
@@ -108,133 +108,12 @@
         "graph_coverage": true,
         "mechanism_coverage": false,
         "surviving_paths_count": 0,
-        "mechanism_feature": -0.0312,
+        "mechanism_feature": 0.0,
         "supporting_weight": 0.0,
-        "opposing_weight": 0.031231,
+        "opposing_weight": 0.0,
         "contradiction_flag": false,
         "paths": [],
-        "opposing_paths": [
-          {
-            "drug_id": "LOCAL:drug:dasatinib",
-            "start_node_id": "LOCAL:drug:dasatinib",
-            "nodes": [
-              "LOCAL:drug:dasatinib",
-              "LOCAL:protein:mouse:SRC",
-              "LOCAL:protein:mouse:VAV3",
-              "LOCAL:protein:mouse:RAC1",
-              "LOCAL:protein:mouse:WAS",
-              "LOCAL:protein:mouse:CTTN",
-              "PATHWAY:OSTEOCLAST_DIFFERENTIATION"
-            ],
-            "edges": [
-              "demo:dasatinib:LOCAL:protein:mouse:SRC",
-              "edge:0053",
-              "edge:0054",
-              "edge:0056",
-              "edge:0057",
-              "edge:full:d77631522379b15185ac3c5f"
-            ],
-            "path_length": 6,
-            "net_sign": 1,
-            "has_unsigned_step": false,
-            "unsigned_steps": [],
-            "evidence_mode": "informed",
-            "edge_assessments": [
-              {
-                "edge_id": "demo:dasatinib:LOCAL:protein:mouse:SRC",
-                "usable": true,
-                "tier": "citation_only_candidate",
-                "weight": 0.15,
-                "support_sources": [
-                  "DAILYMED:f9b79d54-9bee-4c93-9c87-f3e65d91f146"
-                ],
-                "contradicting_sources": [],
-                "warnings": [
-                  "not_strict_experimental_evidence"
-                ]
-              },
-              {
-                "edge_id": "edge:0053",
-                "usable": true,
-                "tier": "citation_only_candidate",
-                "weight": 0.15,
-                "support_sources": [
-                  "PMID:15711558"
-                ],
-                "contradicting_sources": [],
-                "warnings": [
-                  "not_strict_experimental_evidence"
-                ]
-              },
-              {
-                "edge_id": "edge:0054",
-                "usable": true,
-                "tier": "citation_only_candidate",
-                "weight": 0.15,
-                "support_sources": [
-                  "PMID:15711558"
-                ],
-                "contradicting_sources": [],
-                "warnings": [
-                  "not_strict_experimental_evidence"
-                ]
-              },
-              {
-                "edge_id": "edge:0056",
-                "usable": true,
-                "tier": "citation_only_candidate",
-                "weight": 0.15,
-                "support_sources": [
-                  "PMID:15711558"
-                ],
-                "contradicting_sources": [],
-                "warnings": [
-                  "endpoint_identity_pending",
-                  "not_strict_experimental_evidence"
-                ]
-              },
-              {
-                "edge_id": "edge:0057",
-                "usable": true,
-                "tier": "citation_only_candidate",
-                "weight": 0.15,
-                "support_sources": [
-                  "PMID:15711558"
-                ],
-                "contradicting_sources": [],
-                "warnings": [
-                  "endpoint_identity_pending",
-                  "not_strict_experimental_evidence"
-                ]
-              },
-              {
-                "edge_id": "edge:full:d77631522379b15185ac3c5f",
-                "usable": true,
-                "tier": "extracted_candidate",
-                "weight": 0.25,
-                "support_sources": [
-                  "PMID:38655781"
-                ],
-                "contradicting_sources": [],
-                "warnings": [
-                  "endpoint_identity_pending",
-                  "genetic_perturbation_not_equivalent_to_drug_inhibition",
-                  "inferred_functional_role_not_direct_activation",
-                  "not_strict_experimental_evidence"
-                ]
-              }
-            ],
-            "warnings": [
-              "context_incomplete",
-              "context_mismatch",
-              "endpoint_identity_pending",
-              "genetic_perturbation_not_equivalent_to_drug_inhibition",
-              "inferred_functional_role_not_direct_activation",
-              "not_strict_experimental_evidence"
-            ],
-            "heuristic_weight": 0.031231
-          }
-        ],
+        "opposing_paths": [],
         "direction_unresolved_paths": [],
         "all_paths": [
           {
@@ -257,6 +136,14 @@
               "edge:0057",
               "edge:full:d77631522379b15185ac3c5f"
             ],
+            "traversal_directions": [
+              "forward",
+              "forward",
+              "forward",
+              "forward",
+              "forward",
+              "forward"
+            ],
             "path_length": 6,
             "net_sign": 1,
             "has_unsigned_step": false,
@@ -274,6 +161,16 @@
                 "contradicting_sources": [],
                 "warnings": [
                   "not_strict_experimental_evidence"
+                ],
+                "evidence_assessments": [
+                  {
+                    "evidence_id": "",
+                    "source_id": "DAILYMED:f9b79d54-9bee-4c93-9c87-f3e65d91f146",
+                    "usable": true,
+                    "tier": "citation_only_candidate",
+                    "weight": 0.15,
+                    "warnings": []
+                  }
                 ]
               },
               {
@@ -287,6 +184,16 @@
                 "contradicting_sources": [],
                 "warnings": [
                   "not_strict_experimental_evidence"
+                ],
+                "evidence_assessments": [
+                  {
+                    "evidence_id": "ev:0047",
+                    "source_id": "PMID:15711558",
+                    "usable": true,
+                    "tier": "citation_only_candidate",
+                    "weight": 0.15,
+                    "warnings": []
+                  }
                 ]
               },
               {
@@ -300,6 +207,16 @@
                 "contradicting_sources": [],
                 "warnings": [
                   "not_strict_experimental_evidence"
+                ],
+                "evidence_assessments": [
+                  {
+                    "evidence_id": "ev:0048",
+                    "source_id": "PMID:15711558",
+                    "usable": true,
+                    "tier": "citation_only_candidate",
+                    "weight": 0.15,
+                    "warnings": []
+                  }
                 ]
               },
               {
@@ -314,6 +231,16 @@
                 "warnings": [
                   "endpoint_identity_pending",
                   "not_strict_experimental_evidence"
+                ],
+                "evidence_assessments": [
+                  {
+                    "evidence_id": "ev:0050",
+                    "source_id": "PMID:15711558",
+                    "usable": true,
+                    "tier": "citation_only_candidate",
+                    "weight": 0.15,
+                    "warnings": []
+                  }
                 ]
               },
               {
@@ -328,6 +255,16 @@
                 "warnings": [
                   "endpoint_identity_pending",
                   "not_strict_experimental_evidence"
+                ],
+                "evidence_assessments": [
+                  {
+                    "evidence_id": "ev:0051",
+                    "source_id": "PMID:15711558",
+                    "usable": true,
+                    "tier": "citation_only_candidate",
+                    "weight": 0.15,
+                    "warnings": []
+                  }
                 ]
               },
               {
@@ -344,18 +281,470 @@
                   "genetic_perturbation_not_equivalent_to_drug_inhibition",
                   "inferred_functional_role_not_direct_activation",
                   "not_strict_experimental_evidence"
+                ],
+                "evidence_assessments": [
+                  {
+                    "evidence_id": "ev:full:a28c68662588883fd177c998",
+                    "source_id": "PMID:38655781",
+                    "usable": true,
+                    "tier": "extracted_candidate",
+                    "weight": 0.25,
+                    "warnings": []
+                  }
                 ]
               }
             ],
             "warnings": [
               "context_incomplete",
               "context_mismatch",
+              "context_unknown:species",
               "endpoint_identity_pending",
               "genetic_perturbation_not_equivalent_to_drug_inhibition",
               "inferred_functional_role_not_direct_activation",
               "not_strict_experimental_evidence"
             ],
-            "heuristic_weight": 0.031231
+            "heuristic_weight": 0.031231,
+            "evidence_quality_weight": 0.15,
+            "context_applicability": "incompatible",
+            "context_details": [
+              {
+                "edge_id": "demo:dasatinib:LOCAL:protein:mouse:SRC",
+                "status": "unknown",
+                "records": [
+                  {
+                    "evidence_id": "",
+                    "observed": {},
+                    "mismatched_fields": [],
+                    "unknown_fields": [
+                      "species"
+                    ],
+                    "status": "unknown"
+                  }
+                ],
+                "mismatched_fields": [],
+                "unknown_fields": [
+                  "species"
+                ]
+              },
+              {
+                "edge_id": "edge:0053",
+                "status": "compatible",
+                "records": [
+                  {
+                    "evidence_id": "ev:0047",
+                    "observed": {
+                      "species": "mouse",
+                      "cell_type": "bone marrow macrophage",
+                      "stage": "mature_multinucleated_osteoclast",
+                      "disease_setting": "RANKL_induced_osteoclastogenesis"
+                    },
+                    "mismatched_fields": [],
+                    "unknown_fields": [],
+                    "status": "compatible"
+                  }
+                ],
+                "mismatched_fields": [],
+                "unknown_fields": []
+              },
+              {
+                "edge_id": "edge:0054",
+                "status": "compatible",
+                "records": [
+                  {
+                    "evidence_id": "ev:0048",
+                    "observed": {
+                      "species": "mouse",
+                      "cell_type": "bone marrow macrophage",
+                      "stage": "mature_multinucleated_osteoclast",
+                      "disease_setting": "RANKL_induced_osteoclastogenesis"
+                    },
+                    "mismatched_fields": [],
+                    "unknown_fields": [],
+                    "status": "compatible"
+                  }
+                ],
+                "mismatched_fields": [],
+                "unknown_fields": []
+              },
+              {
+                "edge_id": "edge:0056",
+                "status": "compatible",
+                "records": [
+                  {
+                    "evidence_id": "ev:0050",
+                    "observed": {
+                      "species": "mouse",
+                      "cell_type": "bone marrow macrophage",
+                      "stage": "mature_multinucleated_osteoclast",
+                      "disease_setting": "RANKL_induced_osteoclastogenesis"
+                    },
+                    "mismatched_fields": [],
+                    "unknown_fields": [],
+                    "status": "compatible"
+                  }
+                ],
+                "mismatched_fields": [],
+                "unknown_fields": []
+              },
+              {
+                "edge_id": "edge:0057",
+                "status": "compatible",
+                "records": [
+                  {
+                    "evidence_id": "ev:0051",
+                    "observed": {
+                      "species": "mouse",
+                      "cell_type": "bone marrow macrophage",
+                      "stage": "mature_multinucleated_osteoclast",
+                      "disease_setting": "RANKL_induced_osteoclastogenesis"
+                    },
+                    "mismatched_fields": [],
+                    "unknown_fields": [],
+                    "status": "compatible"
+                  }
+                ],
+                "mismatched_fields": [],
+                "unknown_fields": []
+              },
+              {
+                "edge_id": "edge:full:d77631522379b15185ac3c5f",
+                "status": "compatible",
+                "records": [
+                  {
+                    "evidence_id": "ev:full:a28c68662588883fd177c998",
+                    "observed": {
+                      "species": "mouse",
+                      "cell_type": "BMSCs"
+                    },
+                    "mismatched_fields": [],
+                    "unknown_fields": [],
+                    "status": "compatible"
+                  }
+                ],
+                "mismatched_fields": [],
+                "unknown_fields": []
+              }
+            ],
+            "transfer_assumptions": [
+              "genetic_to_pharmacological_transfer_required"
+            ],
+            "pharmacology_caveats": []
+          }
+        ],
+        "context_incompatible_paths": [
+          {
+            "drug_id": "LOCAL:drug:dasatinib",
+            "start_node_id": "LOCAL:drug:dasatinib",
+            "nodes": [
+              "LOCAL:drug:dasatinib",
+              "LOCAL:protein:mouse:SRC",
+              "LOCAL:protein:mouse:VAV3",
+              "LOCAL:protein:mouse:RAC1",
+              "LOCAL:protein:mouse:WAS",
+              "LOCAL:protein:mouse:CTTN",
+              "PATHWAY:OSTEOCLAST_DIFFERENTIATION"
+            ],
+            "edges": [
+              "demo:dasatinib:LOCAL:protein:mouse:SRC",
+              "edge:0053",
+              "edge:0054",
+              "edge:0056",
+              "edge:0057",
+              "edge:full:d77631522379b15185ac3c5f"
+            ],
+            "traversal_directions": [
+              "forward",
+              "forward",
+              "forward",
+              "forward",
+              "forward",
+              "forward"
+            ],
+            "path_length": 6,
+            "net_sign": 1,
+            "has_unsigned_step": false,
+            "unsigned_steps": [],
+            "evidence_mode": "informed",
+            "edge_assessments": [
+              {
+                "edge_id": "demo:dasatinib:LOCAL:protein:mouse:SRC",
+                "usable": true,
+                "tier": "citation_only_candidate",
+                "weight": 0.15,
+                "support_sources": [
+                  "DAILYMED:f9b79d54-9bee-4c93-9c87-f3e65d91f146"
+                ],
+                "contradicting_sources": [],
+                "warnings": [
+                  "not_strict_experimental_evidence"
+                ],
+                "evidence_assessments": [
+                  {
+                    "evidence_id": "",
+                    "source_id": "DAILYMED:f9b79d54-9bee-4c93-9c87-f3e65d91f146",
+                    "usable": true,
+                    "tier": "citation_only_candidate",
+                    "weight": 0.15,
+                    "warnings": []
+                  }
+                ]
+              },
+              {
+                "edge_id": "edge:0053",
+                "usable": true,
+                "tier": "citation_only_candidate",
+                "weight": 0.15,
+                "support_sources": [
+                  "PMID:15711558"
+                ],
+                "contradicting_sources": [],
+                "warnings": [
+                  "not_strict_experimental_evidence"
+                ],
+                "evidence_assessments": [
+                  {
+                    "evidence_id": "ev:0047",
+                    "source_id": "PMID:15711558",
+                    "usable": true,
+                    "tier": "citation_only_candidate",
+                    "weight": 0.15,
+                    "warnings": []
+                  }
+                ]
+              },
+              {
+                "edge_id": "edge:0054",
+                "usable": true,
+                "tier": "citation_only_candidate",
+                "weight": 0.15,
+                "support_sources": [
+                  "PMID:15711558"
+                ],
+                "contradicting_sources": [],
+                "warnings": [
+                  "not_strict_experimental_evidence"
+                ],
+                "evidence_assessments": [
+                  {
+                    "evidence_id": "ev:0048",
+                    "source_id": "PMID:15711558",
+                    "usable": true,
+                    "tier": "citation_only_candidate",
+                    "weight": 0.15,
+                    "warnings": []
+                  }
+                ]
+              },
+              {
+                "edge_id": "edge:0056",
+                "usable": true,
+                "tier": "citation_only_candidate",
+                "weight": 0.15,
+                "support_sources": [
+                  "PMID:15711558"
+                ],
+                "contradicting_sources": [],
+                "warnings": [
+                  "endpoint_identity_pending",
+                  "not_strict_experimental_evidence"
+                ],
+                "evidence_assessments": [
+                  {
+                    "evidence_id": "ev:0050",
+                    "source_id": "PMID:15711558",
+                    "usable": true,
+                    "tier": "citation_only_candidate",
+                    "weight": 0.15,
+                    "warnings": []
+                  }
+                ]
+              },
+              {
+                "edge_id": "edge:0057",
+                "usable": true,
+                "tier": "citation_only_candidate",
+                "weight": 0.15,
+                "support_sources": [
+                  "PMID:15711558"
+                ],
+                "contradicting_sources": [],
+                "warnings": [
+                  "endpoint_identity_pending",
+                  "not_strict_experimental_evidence"
+                ],
+                "evidence_assessments": [
+                  {
+                    "evidence_id": "ev:0051",
+                    "source_id": "PMID:15711558",
+                    "usable": true,
+                    "tier": "citation_only_candidate",
+                    "weight": 0.15,
+                    "warnings": []
+                  }
+                ]
+              },
+              {
+                "edge_id": "edge:full:d77631522379b15185ac3c5f",
+                "usable": true,
+                "tier": "extracted_candidate",
+                "weight": 0.25,
+                "support_sources": [
+                  "PMID:38655781"
+                ],
+                "contradicting_sources": [],
+                "warnings": [
+                  "endpoint_identity_pending",
+                  "genetic_perturbation_not_equivalent_to_drug_inhibition",
+                  "inferred_functional_role_not_direct_activation",
+                  "not_strict_experimental_evidence"
+                ],
+                "evidence_assessments": [
+                  {
+                    "evidence_id": "ev:full:a28c68662588883fd177c998",
+                    "source_id": "PMID:38655781",
+                    "usable": true,
+                    "tier": "extracted_candidate",
+                    "weight": 0.25,
+                    "warnings": []
+                  }
+                ]
+              }
+            ],
+            "warnings": [
+              "context_incomplete",
+              "context_mismatch",
+              "context_unknown:species",
+              "endpoint_identity_pending",
+              "genetic_perturbation_not_equivalent_to_drug_inhibition",
+              "inferred_functional_role_not_direct_activation",
+              "not_strict_experimental_evidence"
+            ],
+            "heuristic_weight": 0.031231,
+            "evidence_quality_weight": 0.15,
+            "context_applicability": "incompatible",
+            "context_details": [
+              {
+                "edge_id": "demo:dasatinib:LOCAL:protein:mouse:SRC",
+                "status": "unknown",
+                "records": [
+                  {
+                    "evidence_id": "",
+                    "observed": {},
+                    "mismatched_fields": [],
+                    "unknown_fields": [
+                      "species"
+                    ],
+                    "status": "unknown"
+                  }
+                ],
+                "mismatched_fields": [],
+                "unknown_fields": [
+                  "species"
+                ]
+              },
+              {
+                "edge_id": "edge:0053",
+                "status": "compatible",
+                "records": [
+                  {
+                    "evidence_id": "ev:0047",
+                    "observed": {
+                      "species": "mouse",
+                      "cell_type": "bone marrow macrophage",
+                      "stage": "mature_multinucleated_osteoclast",
+                      "disease_setting": "RANKL_induced_osteoclastogenesis"
+                    },
+                    "mismatched_fields": [],
+                    "unknown_fields": [],
+                    "status": "compatible"
+                  }
+                ],
+                "mismatched_fields": [],
+                "unknown_fields": []
+              },
+              {
+                "edge_id": "edge:0054",
+                "status": "compatible",
+                "records": [
+                  {
+                    "evidence_id": "ev:0048",
+                    "observed": {
+                      "species": "mouse",
+                      "cell_type": "bone marrow macrophage",
+                      "stage": "mature_multinucleated_osteoclast",
+                      "disease_setting": "RANKL_induced_osteoclastogenesis"
+                    },
+                    "mismatched_fields": [],
+                    "unknown_fields": [],
+                    "status": "compatible"
+                  }
+                ],
+                "mismatched_fields": [],
+                "unknown_fields": []
+              },
+              {
+                "edge_id": "edge:0056",
+                "status": "compatible",
+                "records": [
+                  {
+                    "evidence_id": "ev:0050",
+                    "observed": {
+                      "species": "mouse",
+                      "cell_type": "bone marrow macrophage",
+                      "stage": "mature_multinucleated_osteoclast",
+                      "disease_setting": "RANKL_induced_osteoclastogenesis"
+                    },
+                    "mismatched_fields": [],
+                    "unknown_fields": [],
+                    "status": "compatible"
+                  }
+                ],
+                "mismatched_fields": [],
+                "unknown_fields": []
+              },
+              {
+                "edge_id": "edge:0057",
+                "status": "compatible",
+                "records": [
+                  {
+                    "evidence_id": "ev:0051",
+                    "observed": {
+                      "species": "mouse",
+                      "cell_type": "bone marrow macrophage",
+                      "stage": "mature_multinucleated_osteoclast",
+                      "disease_setting": "RANKL_induced_osteoclastogenesis"
+                    },
+                    "mismatched_fields": [],
+                    "unknown_fields": [],
+                    "status": "compatible"
+                  }
+                ],
+                "mismatched_fields": [],
+                "unknown_fields": []
+              },
+              {
+                "edge_id": "edge:full:d77631522379b15185ac3c5f",
+                "status": "compatible",
+                "records": [
+                  {
+                    "evidence_id": "ev:full:a28c68662588883fd177c998",
+                    "observed": {
+                      "species": "mouse",
+                      "cell_type": "BMSCs"
+                    },
+                    "mismatched_fields": [],
+                    "unknown_fields": [],
+                    "status": "compatible"
+                  }
+                ],
+                "mismatched_fields": [],
+                "unknown_fields": []
+              }
+            ],
+            "transfer_assumptions": [
+              "genetic_to_pharmacological_transfer_required"
+            ],
+            "pharmacology_caveats": []
           }
         ],
         "excluded_edges": [
@@ -368,7 +757,8 @@
             "contradicting_sources": [],
             "warnings": [
               "quarantined_claim"
-            ]
+            ],
+            "evidence_assessments": []
           },
           {
             "edge_id": "edge:0060",
@@ -379,7 +769,8 @@
             "contradicting_sources": [],
             "warnings": [
               "quarantined_claim"
-            ]
+            ],
+            "evidence_assessments": []
           },
           {
             "edge_id": "EDGE_STR_0358",
@@ -390,6 +781,16 @@
             "contradicting_sources": [],
             "warnings": [
               "no_nonquarantined_source_support"
+            ],
+            "evidence_assessments": [
+              {
+                "evidence_id": "ev:0335",
+                "source_id": "",
+                "usable": false,
+                "tier": "excluded",
+                "weight": 0.0,
+                "warnings": []
+              }
             ]
           }
         ],
@@ -410,6 +811,7 @@
         "opposing_paths": [],
         "direction_unresolved_paths": [],
         "all_paths": [],
+        "context_incompatible_paths": [],
         "excluded_edges": [
           {
             "edge_id": "demo:dasatinib:LOCAL:protein:mouse:SRC",
@@ -420,6 +822,16 @@
             "contradicting_sources": [],
             "warnings": [
               "strict_experiment_requirements_not_met"
+            ],
+            "evidence_assessments": [
+              {
+                "evidence_id": "",
+                "source_id": "DAILYMED:f9b79d54-9bee-4c93-9c87-f3e65d91f146",
+                "usable": false,
+                "tier": "excluded",
+                "weight": 0.0,
+                "warnings": []
+              }
             ]
           }
         ],
@@ -432,118 +844,13 @@
         "evidence_mode": "informed",
         "score_kind": "uncalibrated_heuristic",
         "graph_coverage": true,
-        "mechanism_coverage": true,
-        "surviving_paths_count": 1,
-        "mechanism_feature": 0.0342,
-        "supporting_weight": 0.034212,
+        "mechanism_coverage": false,
+        "surviving_paths_count": 0,
+        "mechanism_feature": 0.0,
+        "supporting_weight": 0.0,
         "opposing_weight": 0.0,
         "contradiction_flag": false,
-        "paths": [
-          {
-            "drug_id": "LOCAL:drug:dasatinib",
-            "start_node_id": "LOCAL:drug:dasatinib",
-            "nodes": [
-              "LOCAL:drug:dasatinib",
-              "LOCAL:protein:mouse:SRC",
-              "LOCAL:protein:mouse:VAV3",
-              "LOCAL:protein:mouse:RAC1",
-              "LOCAL:protein:mouse:WAS",
-              "PATHWAY:BONE_RESORPTION"
-            ],
-            "edges": [
-              "demo:dasatinib:LOCAL:protein:mouse:SRC",
-              "edge:0053",
-              "edge:0054",
-              "edge:0056",
-              "edge:full:f0eaca18559376b359136632"
-            ],
-            "path_length": 5,
-            "net_sign": -1,
-            "has_unsigned_step": false,
-            "unsigned_steps": [],
-            "evidence_mode": "informed",
-            "edge_assessments": [
-              {
-                "edge_id": "demo:dasatinib:LOCAL:protein:mouse:SRC",
-                "usable": true,
-                "tier": "citation_only_candidate",
-                "weight": 0.15,
-                "support_sources": [
-                  "DAILYMED:f9b79d54-9bee-4c93-9c87-f3e65d91f146"
-                ],
-                "contradicting_sources": [],
-                "warnings": [
-                  "not_strict_experimental_evidence"
-                ]
-              },
-              {
-                "edge_id": "edge:0053",
-                "usable": true,
-                "tier": "citation_only_candidate",
-                "weight": 0.15,
-                "support_sources": [
-                  "PMID:15711558"
-                ],
-                "contradicting_sources": [],
-                "warnings": [
-                  "not_strict_experimental_evidence"
-                ]
-              },
-              {
-                "edge_id": "edge:0054",
-                "usable": true,
-                "tier": "citation_only_candidate",
-                "weight": 0.15,
-                "support_sources": [
-                  "PMID:15711558"
-                ],
-                "contradicting_sources": [],
-                "warnings": [
-                  "not_strict_experimental_evidence"
-                ]
-              },
-              {
-                "edge_id": "edge:0056",
-                "usable": true,
-                "tier": "citation_only_candidate",
-                "weight": 0.15,
-                "support_sources": [
-                  "PMID:15711558"
-                ],
-                "contradicting_sources": [],
-                "warnings": [
-                  "endpoint_identity_pending",
-                  "not_strict_experimental_evidence"
-                ]
-              },
-              {
-                "edge_id": "edge:full:f0eaca18559376b359136632",
-                "usable": true,
-                "tier": "extracted_candidate",
-                "weight": 0.25,
-                "support_sources": [
-                  "PMID:14726392"
-                ],
-                "contradicting_sources": [],
-                "warnings": [
-                  "endpoint_identity_pending",
-                  "genetic_perturbation_not_equivalent_to_drug_inhibition",
-                  "inferred_functional_role_not_direct_activation",
-                  "not_strict_experimental_evidence"
-                ]
-              }
-            ],
-            "warnings": [
-              "context_incomplete",
-              "context_mismatch",
-              "endpoint_identity_pending",
-              "genetic_perturbation_not_equivalent_to_drug_inhibition",
-              "inferred_functional_role_not_direct_activation",
-              "not_strict_experimental_evidence"
-            ],
-            "heuristic_weight": 0.034212
-          }
-        ],
+        "paths": [],
         "opposing_paths": [],
         "direction_unresolved_paths": [],
         "all_paths": [
@@ -565,6 +872,13 @@
               "edge:0056",
               "edge:full:f0eaca18559376b359136632"
             ],
+            "traversal_directions": [
+              "forward",
+              "forward",
+              "forward",
+              "forward",
+              "forward"
+            ],
             "path_length": 5,
             "net_sign": -1,
             "has_unsigned_step": false,
@@ -582,6 +896,16 @@
                 "contradicting_sources": [],
                 "warnings": [
                   "not_strict_experimental_evidence"
+                ],
+                "evidence_assessments": [
+                  {
+                    "evidence_id": "",
+                    "source_id": "DAILYMED:f9b79d54-9bee-4c93-9c87-f3e65d91f146",
+                    "usable": true,
+                    "tier": "citation_only_candidate",
+                    "weight": 0.15,
+                    "warnings": []
+                  }
                 ]
               },
               {
@@ -595,6 +919,16 @@
                 "contradicting_sources": [],
                 "warnings": [
                   "not_strict_experimental_evidence"
+                ],
+                "evidence_assessments": [
+                  {
+                    "evidence_id": "ev:0047",
+                    "source_id": "PMID:15711558",
+                    "usable": true,
+                    "tier": "citation_only_candidate",
+                    "weight": 0.15,
+                    "warnings": []
+                  }
                 ]
               },
               {
@@ -608,6 +942,16 @@
                 "contradicting_sources": [],
                 "warnings": [
                   "not_strict_experimental_evidence"
+                ],
+                "evidence_assessments": [
+                  {
+                    "evidence_id": "ev:0048",
+                    "source_id": "PMID:15711558",
+                    "usable": true,
+                    "tier": "citation_only_candidate",
+                    "weight": 0.15,
+                    "warnings": []
+                  }
                 ]
               },
               {
@@ -622,6 +966,16 @@
                 "warnings": [
                   "endpoint_identity_pending",
                   "not_strict_experimental_evidence"
+                ],
+                "evidence_assessments": [
+                  {
+                    "evidence_id": "ev:0050",
+                    "source_id": "PMID:15711558",
+                    "usable": true,
+                    "tier": "citation_only_candidate",
+                    "weight": 0.15,
+                    "warnings": []
+                  }
                 ]
               },
               {
@@ -638,18 +992,407 @@
                   "genetic_perturbation_not_equivalent_to_drug_inhibition",
                   "inferred_functional_role_not_direct_activation",
                   "not_strict_experimental_evidence"
+                ],
+                "evidence_assessments": [
+                  {
+                    "evidence_id": "ev:full:4809244aa0c81fbca5fadfe8",
+                    "source_id": "PMID:14726392",
+                    "usable": true,
+                    "tier": "extracted_candidate",
+                    "weight": 0.25,
+                    "warnings": []
+                  }
                 ]
               }
             ],
             "warnings": [
               "context_incomplete",
               "context_mismatch",
+              "context_unknown:species",
               "endpoint_identity_pending",
               "genetic_perturbation_not_equivalent_to_drug_inhibition",
               "inferred_functional_role_not_direct_activation",
               "not_strict_experimental_evidence"
             ],
-            "heuristic_weight": 0.034212
+            "heuristic_weight": 0.034212,
+            "evidence_quality_weight": 0.15,
+            "context_applicability": "incompatible",
+            "context_details": [
+              {
+                "edge_id": "demo:dasatinib:LOCAL:protein:mouse:SRC",
+                "status": "unknown",
+                "records": [
+                  {
+                    "evidence_id": "",
+                    "observed": {},
+                    "mismatched_fields": [],
+                    "unknown_fields": [
+                      "species"
+                    ],
+                    "status": "unknown"
+                  }
+                ],
+                "mismatched_fields": [],
+                "unknown_fields": [
+                  "species"
+                ]
+              },
+              {
+                "edge_id": "edge:0053",
+                "status": "compatible",
+                "records": [
+                  {
+                    "evidence_id": "ev:0047",
+                    "observed": {
+                      "species": "mouse",
+                      "cell_type": "bone marrow macrophage",
+                      "stage": "mature_multinucleated_osteoclast",
+                      "disease_setting": "RANKL_induced_osteoclastogenesis"
+                    },
+                    "mismatched_fields": [],
+                    "unknown_fields": [],
+                    "status": "compatible"
+                  }
+                ],
+                "mismatched_fields": [],
+                "unknown_fields": []
+              },
+              {
+                "edge_id": "edge:0054",
+                "status": "compatible",
+                "records": [
+                  {
+                    "evidence_id": "ev:0048",
+                    "observed": {
+                      "species": "mouse",
+                      "cell_type": "bone marrow macrophage",
+                      "stage": "mature_multinucleated_osteoclast",
+                      "disease_setting": "RANKL_induced_osteoclastogenesis"
+                    },
+                    "mismatched_fields": [],
+                    "unknown_fields": [],
+                    "status": "compatible"
+                  }
+                ],
+                "mismatched_fields": [],
+                "unknown_fields": []
+              },
+              {
+                "edge_id": "edge:0056",
+                "status": "compatible",
+                "records": [
+                  {
+                    "evidence_id": "ev:0050",
+                    "observed": {
+                      "species": "mouse",
+                      "cell_type": "bone marrow macrophage",
+                      "stage": "mature_multinucleated_osteoclast",
+                      "disease_setting": "RANKL_induced_osteoclastogenesis"
+                    },
+                    "mismatched_fields": [],
+                    "unknown_fields": [],
+                    "status": "compatible"
+                  }
+                ],
+                "mismatched_fields": [],
+                "unknown_fields": []
+              },
+              {
+                "edge_id": "edge:full:f0eaca18559376b359136632",
+                "status": "compatible",
+                "records": [
+                  {
+                    "evidence_id": "ev:full:4809244aa0c81fbca5fadfe8",
+                    "observed": {
+                      "species": "mouse",
+                      "cell_type": "osteoclasts",
+                      "intervention_type": "gene_deletion",
+                      "model_setting": "resorptive_challenge"
+                    },
+                    "mismatched_fields": [],
+                    "unknown_fields": [],
+                    "status": "compatible"
+                  }
+                ],
+                "mismatched_fields": [],
+                "unknown_fields": []
+              }
+            ],
+            "transfer_assumptions": [
+              "genetic_to_pharmacological_transfer_required"
+            ],
+            "pharmacology_caveats": []
+          }
+        ],
+        "context_incompatible_paths": [
+          {
+            "drug_id": "LOCAL:drug:dasatinib",
+            "start_node_id": "LOCAL:drug:dasatinib",
+            "nodes": [
+              "LOCAL:drug:dasatinib",
+              "LOCAL:protein:mouse:SRC",
+              "LOCAL:protein:mouse:VAV3",
+              "LOCAL:protein:mouse:RAC1",
+              "LOCAL:protein:mouse:WAS",
+              "PATHWAY:BONE_RESORPTION"
+            ],
+            "edges": [
+              "demo:dasatinib:LOCAL:protein:mouse:SRC",
+              "edge:0053",
+              "edge:0054",
+              "edge:0056",
+              "edge:full:f0eaca18559376b359136632"
+            ],
+            "traversal_directions": [
+              "forward",
+              "forward",
+              "forward",
+              "forward",
+              "forward"
+            ],
+            "path_length": 5,
+            "net_sign": -1,
+            "has_unsigned_step": false,
+            "unsigned_steps": [],
+            "evidence_mode": "informed",
+            "edge_assessments": [
+              {
+                "edge_id": "demo:dasatinib:LOCAL:protein:mouse:SRC",
+                "usable": true,
+                "tier": "citation_only_candidate",
+                "weight": 0.15,
+                "support_sources": [
+                  "DAILYMED:f9b79d54-9bee-4c93-9c87-f3e65d91f146"
+                ],
+                "contradicting_sources": [],
+                "warnings": [
+                  "not_strict_experimental_evidence"
+                ],
+                "evidence_assessments": [
+                  {
+                    "evidence_id": "",
+                    "source_id": "DAILYMED:f9b79d54-9bee-4c93-9c87-f3e65d91f146",
+                    "usable": true,
+                    "tier": "citation_only_candidate",
+                    "weight": 0.15,
+                    "warnings": []
+                  }
+                ]
+              },
+              {
+                "edge_id": "edge:0053",
+                "usable": true,
+                "tier": "citation_only_candidate",
+                "weight": 0.15,
+                "support_sources": [
+                  "PMID:15711558"
+                ],
+                "contradicting_sources": [],
+                "warnings": [
+                  "not_strict_experimental_evidence"
+                ],
+                "evidence_assessments": [
+                  {
+                    "evidence_id": "ev:0047",
+                    "source_id": "PMID:15711558",
+                    "usable": true,
+                    "tier": "citation_only_candidate",
+                    "weight": 0.15,
+                    "warnings": []
+                  }
+                ]
+              },
+              {
+                "edge_id": "edge:0054",
+                "usable": true,
+                "tier": "citation_only_candidate",
+                "weight": 0.15,
+                "support_sources": [
+                  "PMID:15711558"
+                ],
+                "contradicting_sources": [],
+                "warnings": [
+                  "not_strict_experimental_evidence"
+                ],
+                "evidence_assessments": [
+                  {
+                    "evidence_id": "ev:0048",
+                    "source_id": "PMID:15711558",
+                    "usable": true,
+                    "tier": "citation_only_candidate",
+                    "weight": 0.15,
+                    "warnings": []
+                  }
+                ]
+              },
+              {
+                "edge_id": "edge:0056",
+                "usable": true,
+                "tier": "citation_only_candidate",
+                "weight": 0.15,
+                "support_sources": [
+                  "PMID:15711558"
+                ],
+                "contradicting_sources": [],
+                "warnings": [
+                  "endpoint_identity_pending",
+                  "not_strict_experimental_evidence"
+                ],
+                "evidence_assessments": [
+                  {
+                    "evidence_id": "ev:0050",
+                    "source_id": "PMID:15711558",
+                    "usable": true,
+                    "tier": "citation_only_candidate",
+                    "weight": 0.15,
+                    "warnings": []
+                  }
+                ]
+              },
+              {
+                "edge_id": "edge:full:f0eaca18559376b359136632",
+                "usable": true,
+                "tier": "extracted_candidate",
+                "weight": 0.25,
+                "support_sources": [
+                  "PMID:14726392"
+                ],
+                "contradicting_sources": [],
+                "warnings": [
+                  "endpoint_identity_pending",
+                  "genetic_perturbation_not_equivalent_to_drug_inhibition",
+                  "inferred_functional_role_not_direct_activation",
+                  "not_strict_experimental_evidence"
+                ],
+                "evidence_assessments": [
+                  {
+                    "evidence_id": "ev:full:4809244aa0c81fbca5fadfe8",
+                    "source_id": "PMID:14726392",
+                    "usable": true,
+                    "tier": "extracted_candidate",
+                    "weight": 0.25,
+                    "warnings": []
+                  }
+                ]
+              }
+            ],
+            "warnings": [
+              "context_incomplete",
+              "context_mismatch",
+              "context_unknown:species",
+              "endpoint_identity_pending",
+              "genetic_perturbation_not_equivalent_to_drug_inhibition",
+              "inferred_functional_role_not_direct_activation",
+              "not_strict_experimental_evidence"
+            ],
+            "heuristic_weight": 0.034212,
+            "evidence_quality_weight": 0.15,
+            "context_applicability": "incompatible",
+            "context_details": [
+              {
+                "edge_id": "demo:dasatinib:LOCAL:protein:mouse:SRC",
+                "status": "unknown",
+                "records": [
+                  {
+                    "evidence_id": "",
+                    "observed": {},
+                    "mismatched_fields": [],
+                    "unknown_fields": [
+                      "species"
+                    ],
+                    "status": "unknown"
+                  }
+                ],
+                "mismatched_fields": [],
+                "unknown_fields": [
+                  "species"
+                ]
+              },
+              {
+                "edge_id": "edge:0053",
+                "status": "compatible",
+                "records": [
+                  {
+                    "evidence_id": "ev:0047",
+                    "observed": {
+                      "species": "mouse",
+                      "cell_type": "bone marrow macrophage",
+                      "stage": "mature_multinucleated_osteoclast",
+                      "disease_setting": "RANKL_induced_osteoclastogenesis"
+                    },
+                    "mismatched_fields": [],
+                    "unknown_fields": [],
+                    "status": "compatible"
+                  }
+                ],
+                "mismatched_fields": [],
+                "unknown_fields": []
+              },
+              {
+                "edge_id": "edge:0054",
+                "status": "compatible",
+                "records": [
+                  {
+                    "evidence_id": "ev:0048",
+                    "observed": {
+                      "species": "mouse",
+                      "cell_type": "bone marrow macrophage",
+                      "stage": "mature_multinucleated_osteoclast",
+                      "disease_setting": "RANKL_induced_osteoclastogenesis"
+                    },
+                    "mismatched_fields": [],
+                    "unknown_fields": [],
+                    "status": "compatible"
+                  }
+                ],
+                "mismatched_fields": [],
+                "unknown_fields": []
+              },
+              {
+                "edge_id": "edge:0056",
+                "status": "compatible",
+                "records": [
+                  {
+                    "evidence_id": "ev:0050",
+                    "observed": {
+                      "species": "mouse",
+                      "cell_type": "bone marrow macrophage",
+                      "stage": "mature_multinucleated_osteoclast",
+                      "disease_setting": "RANKL_induced_osteoclastogenesis"
+                    },
+                    "mismatched_fields": [],
+                    "unknown_fields": [],
+                    "status": "compatible"
+                  }
+                ],
+                "mismatched_fields": [],
+                "unknown_fields": []
+              },
+              {
+                "edge_id": "edge:full:f0eaca18559376b359136632",
+                "status": "compatible",
+                "records": [
+                  {
+                    "evidence_id": "ev:full:4809244aa0c81fbca5fadfe8",
+                    "observed": {
+                      "species": "mouse",
+                      "cell_type": "osteoclasts",
+                      "intervention_type": "gene_deletion",
+                      "model_setting": "resorptive_challenge"
+                    },
+                    "mismatched_fields": [],
+                    "unknown_fields": [],
+                    "status": "compatible"
+                  }
+                ],
+                "mismatched_fields": [],
+                "unknown_fields": []
+              }
+            ],
+            "transfer_assumptions": [
+              "genetic_to_pharmacological_transfer_required"
+            ],
+            "pharmacology_caveats": []
           }
         ],
         "excluded_edges": [
@@ -662,7 +1405,8 @@
             "contradicting_sources": [],
             "warnings": [
               "quarantined_claim"
-            ]
+            ],
+            "evidence_assessments": []
           },
           {
             "edge_id": "edge:0060",
@@ -673,7 +1417,8 @@
             "contradicting_sources": [],
             "warnings": [
               "quarantined_claim"
-            ]
+            ],
+            "evidence_assessments": []
           },
           {
             "edge_id": "EDGE_STR_0358",
@@ -684,6 +1429,16 @@
             "contradicting_sources": [],
             "warnings": [
               "no_nonquarantined_source_support"
+            ],
+            "evidence_assessments": [
+              {
+                "evidence_id": "ev:0335",
+                "source_id": "",
+                "usable": false,
+                "tier": "excluded",
+                "weight": 0.0,
+                "warnings": []
+              }
             ]
           }
         ],
@@ -704,6 +1459,7 @@
         "opposing_paths": [],
         "direction_unresolved_paths": [],
         "all_paths": [],
+        "context_incompatible_paths": [],
         "excluded_edges": [
           {
             "edge_id": "demo:dasatinib:LOCAL:protein:mouse:SRC",
@@ -714,6 +1470,16 @@
             "contradicting_sources": [],
             "warnings": [
               "strict_experiment_requirements_not_met"
+            ],
+            "evidence_assessments": [
+              {
+                "evidence_id": "",
+                "source_id": "DAILYMED:f9b79d54-9bee-4c93-9c87-f3e65d91f146",
+                "usable": false,
+                "tier": "excluded",
+                "weight": 0.0,
+                "warnings": []
+              }
             ]
           }
         ],
@@ -742,6 +1508,14 @@
         "edge:0057",
         "edge:0058"
       ],
+      "traversal_directions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
       "path_length": 6,
       "net_sign": 0,
       "has_unsigned_step": true,
@@ -765,6 +1539,16 @@
           "contradicting_sources": [],
           "warnings": [
             "not_strict_experimental_evidence"
+          ],
+          "evidence_assessments": [
+            {
+              "evidence_id": "",
+              "source_id": "DAILYMED:f9b79d54-9bee-4c93-9c87-f3e65d91f146",
+              "usable": true,
+              "tier": "citation_only_candidate",
+              "weight": 0.15,
+              "warnings": []
+            }
           ]
         },
         {
@@ -778,6 +1562,16 @@
           "contradicting_sources": [],
           "warnings": [
             "not_strict_experimental_evidence"
+          ],
+          "evidence_assessments": [
+            {
+              "evidence_id": "ev:0047",
+              "source_id": "PMID:15711558",
+              "usable": true,
+              "tier": "citation_only_candidate",
+              "weight": 0.15,
+              "warnings": []
+            }
           ]
         },
         {
@@ -791,6 +1585,16 @@
           "contradicting_sources": [],
           "warnings": [
             "not_strict_experimental_evidence"
+          ],
+          "evidence_assessments": [
+            {
+              "evidence_id": "ev:0048",
+              "source_id": "PMID:15711558",
+              "usable": true,
+              "tier": "citation_only_candidate",
+              "weight": 0.15,
+              "warnings": []
+            }
           ]
         },
         {
@@ -805,6 +1609,16 @@
           "warnings": [
             "endpoint_identity_pending",
             "not_strict_experimental_evidence"
+          ],
+          "evidence_assessments": [
+            {
+              "evidence_id": "ev:0050",
+              "source_id": "PMID:15711558",
+              "usable": true,
+              "tier": "citation_only_candidate",
+              "weight": 0.15,
+              "warnings": []
+            }
           ]
         },
         {
@@ -819,6 +1633,16 @@
           "warnings": [
             "endpoint_identity_pending",
             "not_strict_experimental_evidence"
+          ],
+          "evidence_assessments": [
+            {
+              "evidence_id": "ev:0051",
+              "source_id": "PMID:15711558",
+              "usable": true,
+              "tier": "citation_only_candidate",
+              "weight": 0.15,
+              "warnings": []
+            }
           ]
         },
         {
@@ -833,6 +1657,16 @@
           "warnings": [
             "endpoint_identity_pending",
             "not_strict_experimental_evidence"
+          ],
+          "evidence_assessments": [
+            {
+              "evidence_id": "ev:0052",
+              "source_id": "PMID:15711558",
+              "usable": true,
+              "tier": "citation_only_candidate",
+              "weight": 0.15,
+              "warnings": []
+            }
           ]
         }
       ],
@@ -842,7 +1676,128 @@
         "endpoint_identity_pending",
         "not_strict_experimental_evidence"
       ],
-      "heuristic_weight": 0.044244
+      "heuristic_weight": 0.044244,
+      "evidence_quality_weight": 0.15,
+      "context_applicability": "unknown",
+      "context_details": [
+        {
+          "edge_id": "demo:dasatinib:LOCAL:protein:mouse:SRC",
+          "status": "not_assessed",
+          "records": [
+            {
+              "evidence_id": "",
+              "observed": {},
+              "mismatched_fields": [],
+              "unknown_fields": [],
+              "status": "not_assessed"
+            }
+          ],
+          "mismatched_fields": [],
+          "unknown_fields": []
+        },
+        {
+          "edge_id": "edge:0053",
+          "status": "not_assessed",
+          "records": [
+            {
+              "evidence_id": "ev:0047",
+              "observed": {
+                "species": "mouse",
+                "cell_type": "bone marrow macrophage",
+                "stage": "mature_multinucleated_osteoclast",
+                "disease_setting": "RANKL_induced_osteoclastogenesis"
+              },
+              "mismatched_fields": [],
+              "unknown_fields": [],
+              "status": "not_assessed"
+            }
+          ],
+          "mismatched_fields": [],
+          "unknown_fields": []
+        },
+        {
+          "edge_id": "edge:0054",
+          "status": "not_assessed",
+          "records": [
+            {
+              "evidence_id": "ev:0048",
+              "observed": {
+                "species": "mouse",
+                "cell_type": "bone marrow macrophage",
+                "stage": "mature_multinucleated_osteoclast",
+                "disease_setting": "RANKL_induced_osteoclastogenesis"
+              },
+              "mismatched_fields": [],
+              "unknown_fields": [],
+              "status": "not_assessed"
+            }
+          ],
+          "mismatched_fields": [],
+          "unknown_fields": []
+        },
+        {
+          "edge_id": "edge:0056",
+          "status": "not_assessed",
+          "records": [
+            {
+              "evidence_id": "ev:0050",
+              "observed": {
+                "species": "mouse",
+                "cell_type": "bone marrow macrophage",
+                "stage": "mature_multinucleated_osteoclast",
+                "disease_setting": "RANKL_induced_osteoclastogenesis"
+              },
+              "mismatched_fields": [],
+              "unknown_fields": [],
+              "status": "not_assessed"
+            }
+          ],
+          "mismatched_fields": [],
+          "unknown_fields": []
+        },
+        {
+          "edge_id": "edge:0057",
+          "status": "not_assessed",
+          "records": [
+            {
+              "evidence_id": "ev:0051",
+              "observed": {
+                "species": "mouse",
+                "cell_type": "bone marrow macrophage",
+                "stage": "mature_multinucleated_osteoclast",
+                "disease_setting": "RANKL_induced_osteoclastogenesis"
+              },
+              "mismatched_fields": [],
+              "unknown_fields": [],
+              "status": "not_assessed"
+            }
+          ],
+          "mismatched_fields": [],
+          "unknown_fields": []
+        },
+        {
+          "edge_id": "edge:0058",
+          "status": "not_assessed",
+          "records": [
+            {
+              "evidence_id": "ev:0052",
+              "observed": {
+                "species": "mouse",
+                "cell_type": "bone marrow macrophage",
+                "stage": "mature_multinucleated_osteoclast",
+                "disease_setting": "RANKL_induced_osteoclastogenesis"
+              },
+              "mismatched_fields": [],
+              "unknown_fields": [],
+              "status": "not_assessed"
+            }
+          ],
+          "mismatched_fields": [],
+          "unknown_fields": []
+        }
+      ],
+      "transfer_assumptions": [],
+      "pharmacology_caveats": []
     },
     {
       "drug_id": "LOCAL:drug:dasatinib",
@@ -865,6 +1820,15 @@
         "edge:0057",
         "edge:0058",
         "edge:0059"
+      ],
+      "traversal_directions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
       ],
       "path_length": 7,
       "net_sign": 0,
@@ -894,6 +1858,16 @@
           "contradicting_sources": [],
           "warnings": [
             "not_strict_experimental_evidence"
+          ],
+          "evidence_assessments": [
+            {
+              "evidence_id": "",
+              "source_id": "DAILYMED:f9b79d54-9bee-4c93-9c87-f3e65d91f146",
+              "usable": true,
+              "tier": "citation_only_candidate",
+              "weight": 0.15,
+              "warnings": []
+            }
           ]
         },
         {
@@ -907,6 +1881,16 @@
           "contradicting_sources": [],
           "warnings": [
             "not_strict_experimental_evidence"
+          ],
+          "evidence_assessments": [
+            {
+              "evidence_id": "ev:0047",
+              "source_id": "PMID:15711558",
+              "usable": true,
+              "tier": "citation_only_candidate",
+              "weight": 0.15,
+              "warnings": []
+            }
           ]
         },
         {
@@ -920,6 +1904,16 @@
           "contradicting_sources": [],
           "warnings": [
             "not_strict_experimental_evidence"
+          ],
+          "evidence_assessments": [
+            {
+              "evidence_id": "ev:0048",
+              "source_id": "PMID:15711558",
+              "usable": true,
+              "tier": "citation_only_candidate",
+              "weight": 0.15,
+              "warnings": []
+            }
           ]
         },
         {
@@ -934,6 +1928,16 @@
           "warnings": [
             "endpoint_identity_pending",
             "not_strict_experimental_evidence"
+          ],
+          "evidence_assessments": [
+            {
+              "evidence_id": "ev:0050",
+              "source_id": "PMID:15711558",
+              "usable": true,
+              "tier": "citation_only_candidate",
+              "weight": 0.15,
+              "warnings": []
+            }
           ]
         },
         {
@@ -948,6 +1952,16 @@
           "warnings": [
             "endpoint_identity_pending",
             "not_strict_experimental_evidence"
+          ],
+          "evidence_assessments": [
+            {
+              "evidence_id": "ev:0051",
+              "source_id": "PMID:15711558",
+              "usable": true,
+              "tier": "citation_only_candidate",
+              "weight": 0.15,
+              "warnings": []
+            }
           ]
         },
         {
@@ -962,6 +1976,16 @@
           "warnings": [
             "endpoint_identity_pending",
             "not_strict_experimental_evidence"
+          ],
+          "evidence_assessments": [
+            {
+              "evidence_id": "ev:0052",
+              "source_id": "PMID:15711558",
+              "usable": true,
+              "tier": "citation_only_candidate",
+              "weight": 0.15,
+              "warnings": []
+            }
           ]
         },
         {
@@ -976,6 +2000,16 @@
           "warnings": [
             "endpoint_identity_pending",
             "not_strict_experimental_evidence"
+          ],
+          "evidence_assessments": [
+            {
+              "evidence_id": "ev:0053",
+              "source_id": "PMID:15711558",
+              "usable": true,
+              "tier": "citation_only_candidate",
+              "weight": 0.15,
+              "warnings": []
+            }
           ]
         }
       ],
@@ -985,7 +2019,148 @@
         "endpoint_identity_pending",
         "not_strict_experimental_evidence"
       ],
-      "heuristic_weight": 0.040962
+      "heuristic_weight": 0.040962,
+      "evidence_quality_weight": 0.15,
+      "context_applicability": "unknown",
+      "context_details": [
+        {
+          "edge_id": "demo:dasatinib:LOCAL:protein:mouse:SRC",
+          "status": "not_assessed",
+          "records": [
+            {
+              "evidence_id": "",
+              "observed": {},
+              "mismatched_fields": [],
+              "unknown_fields": [],
+              "status": "not_assessed"
+            }
+          ],
+          "mismatched_fields": [],
+          "unknown_fields": []
+        },
+        {
+          "edge_id": "edge:0053",
+          "status": "not_assessed",
+          "records": [
+            {
+              "evidence_id": "ev:0047",
+              "observed": {
+                "species": "mouse",
+                "cell_type": "bone marrow macrophage",
+                "stage": "mature_multinucleated_osteoclast",
+                "disease_setting": "RANKL_induced_osteoclastogenesis"
+              },
+              "mismatched_fields": [],
+              "unknown_fields": [],
+              "status": "not_assessed"
+            }
+          ],
+          "mismatched_fields": [],
+          "unknown_fields": []
+        },
+        {
+          "edge_id": "edge:0054",
+          "status": "not_assessed",
+          "records": [
+            {
+              "evidence_id": "ev:0048",
+              "observed": {
+                "species": "mouse",
+                "cell_type": "bone marrow macrophage",
+                "stage": "mature_multinucleated_osteoclast",
+                "disease_setting": "RANKL_induced_osteoclastogenesis"
+              },
+              "mismatched_fields": [],
+              "unknown_fields": [],
+              "status": "not_assessed"
+            }
+          ],
+          "mismatched_fields": [],
+          "unknown_fields": []
+        },
+        {
+          "edge_id": "edge:0056",
+          "status": "not_assessed",
+          "records": [
+            {
+              "evidence_id": "ev:0050",
+              "observed": {
+                "species": "mouse",
+                "cell_type": "bone marrow macrophage",
+                "stage": "mature_multinucleated_osteoclast",
+                "disease_setting": "RANKL_induced_osteoclastogenesis"
+              },
+              "mismatched_fields": [],
+              "unknown_fields": [],
+              "status": "not_assessed"
+            }
+          ],
+          "mismatched_fields": [],
+          "unknown_fields": []
+        },
+        {
+          "edge_id": "edge:0057",
+          "status": "not_assessed",
+          "records": [
+            {
+              "evidence_id": "ev:0051",
+              "observed": {
+                "species": "mouse",
+                "cell_type": "bone marrow macrophage",
+                "stage": "mature_multinucleated_osteoclast",
+                "disease_setting": "RANKL_induced_osteoclastogenesis"
+              },
+              "mismatched_fields": [],
+              "unknown_fields": [],
+              "status": "not_assessed"
+            }
+          ],
+          "mismatched_fields": [],
+          "unknown_fields": []
+        },
+        {
+          "edge_id": "edge:0058",
+          "status": "not_assessed",
+          "records": [
+            {
+              "evidence_id": "ev:0052",
+              "observed": {
+                "species": "mouse",
+                "cell_type": "bone marrow macrophage",
+                "stage": "mature_multinucleated_osteoclast",
+                "disease_setting": "RANKL_induced_osteoclastogenesis"
+              },
+              "mismatched_fields": [],
+              "unknown_fields": [],
+              "status": "not_assessed"
+            }
+          ],
+          "mismatched_fields": [],
+          "unknown_fields": []
+        },
+        {
+          "edge_id": "edge:0059",
+          "status": "not_assessed",
+          "records": [
+            {
+              "evidence_id": "ev:0053",
+              "observed": {
+                "species": "mouse",
+                "cell_type": "bone marrow macrophage",
+                "stage": "mature_multinucleated_osteoclast",
+                "disease_setting": "RANKL_induced_osteoclastogenesis"
+              },
+              "mismatched_fields": [],
+              "unknown_fields": [],
+              "status": "not_assessed"
+            }
+          ],
+          "mismatched_fields": [],
+          "unknown_fields": []
+        }
+      ],
+      "transfer_assumptions": [],
+      "pharmacology_caveats": []
     }
   ],
   "interpretation": "No phenotype coverage is unknown, not evidence of inefficacy. Scores are uncalibrated heuristics, not ML probabilities."

@@ -1,5 +1,7 @@
 # PHGDH / serine-synthesis module: first source-level curation
 
+Historical checkpoint. The subsequent [serine mechanism iteration](serine_module/README.md) adds reaction participation, measured-pool representation, gene/product mappings, and qualified chromatin/RNA evidence. Counts and unfinished items below describe the September 30 checkpoint.
+
 30 September 2026 UTC. This pass reviews selected qualitative claims from Stegen et al., *The serine synthesis pathway drives osteoclast differentiation through epigenetic regulation of NFATc1 expression* (PMID 38200114, PMC10822776). It is an assistant-led literature curation, not independent experimental replication or PI approval. It does not finish the entire metabolic-to-chromatin mechanism.
 
 ## Result

@@ -2,7 +2,7 @@
 
 A research framework for studying small molecules that may inhibit **osteoclast differentiation, activity, and pathological bone resorption**. The project combines an osteoclast mechanism knowledge graph with a planned molecular graph branch for drug-repurposing research.
 
-The current release contains **378 biological entities, 475 relationship claims, and 490 evidence records**, together with interactive pathway and structure explorers, relational data, Excel workbooks, and Neo4j exports. The schema and provenance repair preserves the biological inventory while distinguishing source-checked evidence from pending and quarantined assertions. This is a working research resource, not yet a validated prediction benchmark.
+The current release contains **396 biological entities, 503 relationship claims, and 518 evidence records**, together with interactive pathway and structure explorers, relational data, Excel workbooks, and Neo4j exports. The schema and provenance repair preserves the biological inventory while distinguishing source-checked evidence from pending and quarantined assertions. This is a working research resource, not yet a validated prediction benchmark.
 
 ## Architectural Principles
 
@@ -10,16 +10,16 @@ The current release contains **378 biological entities, 475 relationship claims,
 
 The mechanism graph represents biological entities and their relationships. Exogenous drug candidates belong in the separate molecular modeling branch rather than becoming nodes in the current biological topology. This separation supports the intended research design, but does not by itself guarantee freedom from training or evaluation leakage.
 
-- **378 biological nodes:** genes, proteins, RNA, endogenous compounds, reactions, and pathways.
-- **475 relationship claims:** directed relationships with positive, negative, or unknown signs. Their presence in the graph does not establish causality.
+- **396 biological nodes:** genes, proteins, RNA, endogenous compounds, reactions, and pathways.
+- **503 relationship claims:** directed relationships with positive, negative, or unknown signs. Their presence in the graph does not establish causality.
 - **Individual evidence records:** multiple sources or experiments supporting the same claim remain separate records and are exported as arrays rather than overwritten.
 - **Evidence-informed discovery:** source-linked provisional claims can contribute with explicit evidence tiers and uncertainty. Known quarantined assertions remain excluded from analysis; strict experimental eligibility is an optional audit view.
 
 Unsupported drug-target, multi-omics, and quantitative annotations from the earlier enrichment pipeline have been removed from active scientific fields. Their original values remain recoverable in `data/quarantine/legacy_snapshot.zip`.
 
-### 2. The nine physiological modules
+### 2. Physiological modules
 
-The original physiological organization remains available for browsing and filtering. These modules organize the inventory; they are not independent evidence of a node's function or an edge's mechanism.
+The original nine-module organization remains available, with a focused serine-synthesis/epigenetic module added for the source-backed mechanism. These modules organize the inventory; they are not independent evidence of a node's function or an edge's mechanism.
 
 | Module | Research focus |
 | --- | --- |
@@ -37,7 +37,7 @@ The original physiological organization remains available for browsing and filte
 
 **Protein is now a base entity type.** Enzyme and transcription-factor annotations are functional roles rather than competing top-level identities. The inventory contains 231 proteins; their legacy role assignments still require biological review.
 
-Thirteen entities formerly labeled as genes are now represented as RNA: six mRNAs, six miRNAs, and one lncRNA. Translation relationships connect mRNA to protein. The full-corpus integration adds registry-grounded gene and RNA entities, bringing the current totals to 65 genes and 18 RNAs. Gene, RNA, and protein remain distinct; no gene-to-transcript or transcript-to-protein links are inferred merely from shared symbols.
+Thirteen entities formerly labeled as genes are now represented as RNA: six mRNAs, six miRNAs, and one lncRNA. Translation relationships connect mRNA to protein. The full-corpus integration adds registry-grounded gene and RNA entities, bringing the current totals to 69 genes and 18 RNAs. Gene, RNA, and protein remain distinct; no gene-to-transcript or transcript-to-protein links are inferred merely from shared symbols.
 
 Symbol-based protein identifiers previously using the `HGNC:` prefix now use explicit local identifiers such as `LOCAL:protein:mouse:PHGDH`. RNA uses an analogous namespace. These are local identities, not verified HGNC, MGI, or UniProt accessions. `identifier_map.json` and `legacy_ids` preserve older URLs and search aliases while experimental isoform identity and orthology remain separate mapping tasks. The latest pass matched 222 of 231 proteins to unique reviewed UniProt primary-gene/species records; nine remain unresolved.
 
@@ -52,11 +52,21 @@ Run `python -m src.ingest.discovery_pilot` from the repository root, or add `--o
 
 The broader run processed 2,404 papers while preserving 50 held-out papers. It produced 4,436 unreviewed, source-anchored claims for approximately $29.97. An offline projection following cached NCBI identity resolution added **47 entities and 59 proposed relationships**, with 59 separate evidence and experiment records. At that first-integration checkpoint, informed analysis included 127 relationships; the strict experimental subset remains two.
 
-These additions preserve species, molecular form, source passages, context, and interpretation. Genetic loss-of-function effects are distinguished from inferred normal roles; phosphorylation changes without a supported activity direction remain unsigned. Formation and differentiation remain separate endpoints. The other 4,377 claims remain staged with explicit reasons, including unresolved chemical identities and experimental roles; they have not been discarded or declared false. At that checkpoint, new protein nodes were gene-locus grounded with protein accessions pending; the subsequent quality pass resolves most accessions. See [the integration report](reports/history/FULL_GRAPH_INTEGRATION.md) for reproducible commands and limits.
+These additions preserve species, molecular form, source passages, context, and interpretation. Genetic loss-of-function effects are distinguished from inferred normal roles; phosphorylation changes without a supported activity direction remain unsigned. Formation and differentiation remain separate endpoints. At that checkpoint, the other 4,377 claims remained staged with explicit reasons, including unresolved chemical identities and experimental roles; they have not been discarded or declared false. At that checkpoint, new protein nodes were gene-locus grounded with protein accessions pending; the subsequent quality pass resolves most accessions. See [the integration report](reports/history/FULL_GRAPH_INTEGRATION.md) for reproducible commands and limits.
 
-The [resolution/connectivity iteration](reports/history/RESOLUTION_CONNECTIVITY_ITERATION.md) subsequently added 43 entities, 54 relationships and 56 evidence records using improved species/synonym handling and separate chemical-effect projection. For the same 210 mouse proteins, signed endpoint coverage increased from 24 to 29 pairs; pairs with no reported species/cell mismatch increased from 17 to 23. A separate `chemical_effects.csv` records 125 proposed literature effects across 34 compounds, without asserting direct drug-target binding. The example dasatinib target-to-outcome gap remains unresolved. These are measured coverage improvements, not validated predictive accuracy.
+The [resolution/connectivity iteration](reports/history/RESOLUTION_CONNECTIVITY_ITERATION.md) subsequently added 43 entities, 54 relationships and 56 evidence records using improved species/synonym handling and separate chemical-effect projection. For the same 210 mouse proteins, signed endpoint coverage increased from 24 to 29 pairs; pairs with no reported species/cell mismatch increased from 17 to 23. A separate `chemical_effects.csv` records 125 proposed literature effects across 34 compounds, without asserting direct drug-target binding. The example dasatinib target-to-outcome gap was unresolved at that checkpoint. These are measured coverage improvements, not validated predictive accuracy.
 
-The [identity and enrichment quality pass](reports/RESOLUTION_QUALITY_PASS.md) repaired four chemical accession errors, reviewed 120 randomly selected deferred claims, and added 21 entities and 24 proposed relationships. It also corrected a target-inhibition sign error, checked protein accessions against species, and regenerated compound structures. Informed analysis now includes 199 relationships. Fixed-start signed coverage increased from 35 to 38 pairs, while pairs without reported species/cell mismatch remained 29; biological context remains a key limitation.
+The [identity and enrichment quality pass](reports/RESOLUTION_QUALITY_PASS.md) repaired four chemical accession errors, reviewed 120 randomly selected deferred claims, and added 21 entities and 24 proposed relationships. It also corrected a target-inhibition sign error, checked protein accessions against species, and regenerated compound structures. At that checkpoint, informed analysis included 199 relationships. Fixed-start signed coverage increased from 35 to 38 pairs, while pairs without reported species/cell mismatch remained 29; biological context remains a key limitation.
+
+### Context-aware scoring and the serine mechanism module
+
+The [current generated evaluation](reports/serine_module/README.md) describes the bounded PHGDH/PSAT1/PSPH module and remaining scientific limits. Three reactions now have explicit ChEBI participants and unsigned enzyme/participation links. Four registry-backed `ENCODES` links connect genes to protein products without inventing transcript isoforms. The measured alpha-ketoglutarate pool, chromatin demethylation, Nfatc1 RNA, and phenotype evidence remain distinct.
+
+Scoring qualifies each evidence record before aggregation. Context/experiment `qualifiers` preserve sex, intervention type, model setting, dose and duration when supported; omitted values remain unknown. Known incompatible routes remain inspectable under `context_incompatible_paths` but do not contribute to the requested scenario score. Evidence quality, context applicability, and transfer assumptions are reported separately.
+
+The reusable [drug-target input](data/drug_targets/targets.csv) lives outside the canonical biological graph. `python -m src.kg.drug_targets` checks exact accession/species coverage; adding `--allow-species-transfer` runs an explicitly qualified NCT-503 scenario. NCT-503 is a research control in this dataset, not an FDA screening candidate. Its human enzyme IC50 does not become mouse potency or an osteoclast efficacy estimate.
+
+`python -m src.kg.evaluate_serine_module` runs offline development checks and prepares the frozen 50-paper independent-review handoff. Precision/recall remain unmeasured until that review is completed. Future extraction can preserve qualifiers using `configs/claim_extraction_context_v3.json`; paid execution is disabled there. Frozen earlier requests and prompts remain unchanged.
 
 ## Source Data, Evidence, and Provenance
 
@@ -66,7 +76,7 @@ The canonical data is maintained in `data/processed`:
 | --- | --- |
 | `nodes.csv` | Biological identity, type, RNA subtype, roles, aliases, module, and identity-review status. |
 | `edges.csv` | Stable claim IDs, source/target entities, relation, sign, context references, claim status, and optional causal-basis/effect-level qualifications. |
-| `contexts.csv` | Recorded species, cell type, stage, compartment, and context verification status. |
+| `contexts.csv` | Recorded species, cell type, stage, compartment, context verification status, and JSON qualifiers. |
 | `experiments.csv` | Experimental records and their review status; unsupported measurements are left blank. |
 | `edge_evidence.csv` | Individually identified evidence records linking claims, sources, and experiments. |
 | `source_records.csv` | Retrieved publication metadata and source-resolution/claim-matching status. |
@@ -259,3 +269,11 @@ The [first integration example](reports/history/DEVELOPMENT_GROUNDING_AND_PYK2.m
 ## Repository packaging
 
 The repository retains canonical data, public-source snapshots, validated extraction records, frozen inputs and applied patches needed for evidence auditing. Opaque provider response envelopes, run logs, superseded drafts, generated review pages and large duplicate discovery tables remain local and are excluded from Git. Regenerate discovery tables with the discovery pipeline when needed; canonical graph replay uses the retained inputs and patches. Historical progress reports are under `reports/history`; start with the current [quality report](reports/RESOLUTION_QUALITY_PASS.md).
+
+### Biological source audit and FDA candidate inventory
+
+The [biological audit](reports/biological_validation/README.md) reports the scope of source checks, context-dependent findings, reaction balance, graph connectivity, and source dependence. This is not independent human or experimental validation of the whole graph. The [FDA inventory](data/fda/README.md) preserves an official Orange Book snapshot and reproducible ingredient/product tables. Approval defines candidate eligibility; osteoclast activity remains unknown until separately supported.
+
+### FDA drug evaluation pilot
+
+The [drug experiment](data/evaluation/drug_pilot_v1/README.md) adds reproducible FDA-to-PubChem/ChEMBL mappings, explicit human-mouse target scenarios, RDKit molecular features, and a source-linked assay outcome pilot. Compound/scaffold/paper grouping and held-out source masking support future comparisons of chemistry-only, mechanism-only, and combined models. Current coverage and label limitations are reported separately from predictive performance; no trained-model accuracy is claimed.

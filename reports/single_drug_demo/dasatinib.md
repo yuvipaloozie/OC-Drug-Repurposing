@@ -23,17 +23,17 @@ Current candidate identity status: LOCAL:protein:mouse:SRC: registry_gene_specie
 
 | Endpoint | Mode | Supporting | Opposing | Unsigned |
 |---|---|---:|---:|---:|
-| PATHWAY:OSTEOCLAST_DIFFERENTIATION | informed | 0 | 1 | 0 |
+| PATHWAY:OSTEOCLAST_DIFFERENTIATION | informed | 0 | 0 | 0 |
 | PATHWAY:OSTEOCLAST_DIFFERENTIATION | strict | 0 | 0 | 0 |
-| PATHWAY:BONE_RESORPTION | informed | 1 | 0 | 0 |
+| PATHWAY:BONE_RESORPTION | informed | 0 | 0 | 0 |
 | PATHWAY:BONE_RESORPTION | strict | 0 | 0 | 0 |
 
 A zero feature here means missing eligible connectivity, not a predicted biological null effect. No search was allowed to reinstate quarantined claims.
 
 ## Partial routes and stopping points
 
-- Full candidate route to PATHWAY:OSTEOCLAST_DIFFERENTIATION: LOCAL:drug:dasatinib -> LOCAL:protein:mouse:SRC -> LOCAL:protein:mouse:VAV3 -> LOCAL:protein:mouse:RAC1 -> LOCAL:protein:mouse:WAS -> LOCAL:protein:mouse:CTTN -> PATHWAY:OSTEOCLAST_DIFFERENTIATION. Warnings: context_incomplete, context_mismatch, endpoint_identity_pending, genetic_perturbation_not_equivalent_to_drug_inhibition, inferred_functional_role_not_direct_activation, not_strict_experimental_evidence.
-- Full candidate route to PATHWAY:BONE_RESORPTION: LOCAL:drug:dasatinib -> LOCAL:protein:mouse:SRC -> LOCAL:protein:mouse:VAV3 -> LOCAL:protein:mouse:RAC1 -> LOCAL:protein:mouse:WAS -> PATHWAY:BONE_RESORPTION. Warnings: context_incomplete, context_mismatch, endpoint_identity_pending, genetic_perturbation_not_equivalent_to_drug_inhibition, inferred_functional_role_not_direct_activation, not_strict_experimental_evidence.
+- Full candidate route to PATHWAY:OSTEOCLAST_DIFFERENTIATION: LOCAL:drug:dasatinib -> LOCAL:protein:mouse:SRC -> LOCAL:protein:mouse:VAV3 -> LOCAL:protein:mouse:RAC1 -> LOCAL:protein:mouse:WAS -> LOCAL:protein:mouse:CTTN -> PATHWAY:OSTEOCLAST_DIFFERENTIATION. Warnings: context_incomplete, context_mismatch, context_unknown:species, endpoint_identity_pending, genetic_perturbation_not_equivalent_to_drug_inhibition, inferred_functional_role_not_direct_activation, not_strict_experimental_evidence.
+- Full candidate route to PATHWAY:BONE_RESORPTION: LOCAL:drug:dasatinib -> LOCAL:protein:mouse:SRC -> LOCAL:protein:mouse:VAV3 -> LOCAL:protein:mouse:RAC1 -> LOCAL:protein:mouse:WAS -> PATHWAY:BONE_RESORPTION. Warnings: context_incomplete, context_mismatch, context_unknown:species, endpoint_identity_pending, genetic_perturbation_not_equivalent_to_drug_inhibition, inferred_functional_role_not_direct_activation, not_strict_experimental_evidence.
 - LOCAL:drug:dasatinib -> LOCAL:protein:mouse:SRC -> LOCAL:protein:mouse:VAV3 -> LOCAL:protein:mouse:RAC1 -> LOCAL:protein:mouse:WAS -> LOCAL:protein:mouse:CTTN -> PATHWAY:PODOSOME_BELT; net sign 0; evidence-weight heuristic 0.044244 (not probability).
 - LOCAL:drug:dasatinib -> LOCAL:protein:mouse:SRC -> LOCAL:protein:mouse:VAV3 -> LOCAL:protein:mouse:RAC1 -> LOCAL:protein:mouse:WAS -> LOCAL:protein:mouse:CTTN -> PATHWAY:PODOSOME_BELT -> PATHWAY:F_ACTIN_SEALING_ZONE; net sign 0; evidence-weight heuristic 0.040962 (not probability).
 - Blocked edge:0052: LOCAL:protein:mouse:SRC -> LOCAL:protein:mouse:PTK2B; quarantined_claim.

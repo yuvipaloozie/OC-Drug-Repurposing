@@ -2,49 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Osteoclast Research · Pathway explorer</title>
-  <link rel="stylesheet" href="assets/research-viewer.css?v=structures-1">
-  <script defer src="assets/research-data.js?v=structures-1"></script>
-  <script defer src="assets/research-viewer.js?v=structures-1"></script>
+  <title>Osteoclast · Graph</title>
+  <link rel="stylesheet" href="assets/workbench/workbench.css">
+  <script src="assets/research-data.js"></script>
+  <script type="module" src="assets/workbench/workbench.js"></script>
 </head>
-<body data-mode="graph">
-  <header class="app-header">
-    <a class="brand" href="index.html"><span class="brand-icon" aria-hidden="true"></span><span>Osteoclast <b>Research workspace</b></span></a>
-    <nav aria-label="Explorer"><a href="index.html" data-nav="graph">Pathway explorer</a><a href="osteoclast_3d_conformation_explorer.html" data-nav="structure">Structure explorer</a></nav>
-    <span class="dataset-tag">LOCAL RESEARCH COLLECTION</span>
-  </header>
-  <section class="page-heading"><div><p class="eyebrow">EXPLORE THE BIOLOGY</p><h1>Pathway explorer</h1><p id="page-description"></p></div><div class="collection-stat"><strong id="total-nodes"></strong><span>entities in the collection</span></div></section>
-  <main class="workspace">
-    <aside class="catalog" aria-label="Find a biological entity">
-      <div class="catalog-heading"><h2>Find a target</h2><span id="result-count" class="count"></span></div>
-      <label for="search">Name, symbol or identifier</label><input id="search" type="search" placeholder="Try PHGDH, NFATC1, RANKL…" autocomplete="off">
-      <label for="module">Biological module</label><select id="module"><option value="all">All modules</option></select>
-      <div class="list-caption">ENTITIES <span>DIRECT LINKS</span></div>
-      <div id="entity-list" class="entity-list" aria-label="Matching entities"></div>
-      <p class="catalog-note">Research claim inventory: pending and quarantined claims remain visible for audit. They are not validated mechanisms.</p>
-    </aside>
-    <section class="stage" aria-label="Explorer canvas">
-      <div class="stage-header"><div><p class="eyebrow" id="stage-kicker"></p><h2 id="stage-title"></h2></div><span class="badge" id="stage-badge"></span></div>
-      <div id="graph-tools" class="toolbar">
-        <div class="segmented" aria-label="Graph scope"><button id="scope-neighbors" aria-pressed="false">Neighborhood</button><button id="scope-module" aria-pressed="true">Full graph / module</button></div>
-        <div class="zoom-tools"><button id="zoom-out" aria-label="Zoom out">−</button><span id="zoom-label">100%</span><button id="zoom-in" aria-label="Zoom in">+</button><button id="fit">Fit</button><button id="actual">Readable size</button><button id="expand-graph" aria-pressed="false">Expand</button></div>
-      </div>
-      <div id="evidence-tools" class="evidence-tools" hidden><label for="evidence-filter">Evidence</label><select id="evidence-filter" aria-describedby="evidence-filter-note"><option value="all">All recorded claims</option><option value="reviewed">Has reviewed passage</option><option value="pending">Has pending evidence</option><option value="quarantined">Quarantined claim / evidence</option><option value="eligible">Strict experimental evidence</option></select><span id="evidence-filter-note" role="status">Filters relationships; entity positions stay fixed.</span></div>
-      <div id="connectivity-tools" class="connectivity-tools" hidden>
-        <label for="connectivity-filter">Minimum connections <output id="connectivity-value" for="connectivity-filter">0</output></label>
-        <input id="connectivity-filter" type="range" min="0" max="1" step="1" value="0" aria-describedby="connectivity-note">
-        <button id="reset-connectivity" type="button">Reset</button>
-        <span id="connectivity-note">Total recorded relationships per entity, incoming + outgoing; not evidence strength.</span>
-      </div>
-      <div id="neighbor-pagination" class="neighbor-pagination" hidden><span id="neighbor-page-label"></span><button id="previous-neighbors">Previous</button><button id="next-neighbors">Next neighbors</button></div>
-      <div id="graph-frame" class="graph-frame"><svg id="graph" role="group" aria-label="Interactive biological relationship graph"><defs><marker id="arrow-positive" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10" fill="none" stroke="#549984" stroke-width="1.6"/></marker><marker id="arrow-negative" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M8 0 L8 10" stroke="#dd7772" stroke-width="2"/></marker><marker id="arrow-unknown" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10" fill="none" stroke="#939e98" stroke-width="1.6"/></marker></defs><g id="graph-scene"></g></svg><div id="graph-empty" class="empty" hidden></div></div>
-      <div id="graph-footer" class="stage-footer"><div class="legend"><span><i class="positive"></i>Positive sign</span><span><i class="negative"></i>Negative sign</span><span><i class="unknown"></i>Unknown / unsigned</span></div><span id="graph-count"></span><div class="type-legend"><span style="--fill:#edf7f1">Protein</span><span style="--fill:#fcefed">Enzyme role</span><span style="--fill:#edf5f8">TF role</span><span style="--fill:#fff8e3">RNA</span><span style="--fill:#f9f5e5">Compound</span><span style="--fill:#eff5f5">Reaction</span><span style="--fill:#eef5ed">Pathway</span></div><p class="evidence-legend">Evidence: solid = reviewed passage · dashed = pending · dotted = quarantine-only. Mixed support appears in edge details. Reviewed passages can inform discovery; strict eligibility is a separate audit view.</p><p>Drag background to pan · Drag nodes to arrange · Click to inspect · Double-click to explore</p></div>
-      <div id="structure-tools" class="toolbar" hidden><label for="structure-source">Structure source</label><select id="structure-source" aria-describedby="structure-source-note"></select><button id="load-structure" class="primary">Load 3D structure</button><button id="reset-structure" disabled>Reset view</button><a id="external-structure" target="_blank" rel="noopener noreferrer">Open source ↗</a></div>
-      <p id="structure-source-note" class="source-note" role="status" hidden></p>
-      <div id="structure-stage" class="structure-stage" hidden><div id="structure-placeholder" class="empty"><span class="molecule-icon">◌</span><h3 id="structure-message">Choose a structure</h3><p id="structure-explanation"></p></div><div id="structure-frame" role="img" aria-label="Interactive 3D molecular structure" hidden></div></div>
-      <div id="structure-footer" class="stage-footer" hidden><p id="structure-status" role="status"></p><p>Structures describe molecular shape. They do not demonstrate target engagement or validate KG relationships.</p></div>
-    </section>
-    <aside class="inspector" aria-label="Selected entity details"><div class="inspector-heading"><p class="eyebrow">SELECTED ENTITY</p><h2 id="entity-title"></h2><p id="entity-name"></p><span class="badge" id="entity-type"></span></div><div class="inspector-content"><dl id="entity-facts"></dl><a class="cross-link" id="cross-link"></a><section><h3>Connections <span id="connection-count"></span></h3><p class="muted">Select a relationship to read its recorded evidence.</p><div id="connections"></div></section><details class="raw-details"><summary>Entity schema / repository fields</summary><p class="muted">These values are not independently verified. Missing fields are not inferred.</p><pre id="raw-annotations"></pre></details></div></aside>
-  </main>
-</body>
+<body data-mode="graph"><div id="root"></div><noscript>Enable JavaScript to open the viewer.</noscript></body>
 </html>

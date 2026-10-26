@@ -80,13 +80,20 @@ def rebuild(root=ROOT):
     import importlib.util
     spec=importlib.util.spec_from_file_location('viewer_build',root/'src/visualization/build_viewers.py')
     module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module);module.build(root)
+    write_manifest(root)
+    print(f"Rebuilt {len(nodes)} entities, {len(edges)} claims, {len(ledger)} evidence records")
+
+
+def write_manifest(root=ROOT):
+    """Refresh checksums without regenerating exports or overwriting a live viewer."""
     outputs=['index.html','osteoclast_3d_conformation_explorer.html','sources.csv','osteoclast_knowledge_graph_sources.xlsx']
-    files=[p for base in ['data/processed','data/raw/provenance','data/quarantine','neo4j','assets','schemas'] for p in (root/base).rglob('*') if p.is_file() and '__pycache__' not in p.parts]
+    files=[p for base in ['data/processed','data/raw/provenance','data/quarantine','neo4j','assets','schemas',
+                         'data/raw/fda','data/raw/fda_resolution_v1','data/fda','data/drug_targets','data/evaluation']
+           for p in (root/base).rglob('*') if p.is_file() and '__pycache__' not in p.parts]
     files += [root/p for p in outputs]
     manifest={'manifest_version':'3.0.0','note':'Hashes describe local files; original source claims are archived, not certified.',
               'files':{str(p.relative_to(root)).replace('\\','/'):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(set(files))}}
     (root/'data/manifest.json').write_text(json.dumps(manifest,indent=2)+'\n',encoding='utf-8')
-    print(f"Rebuilt {len(nodes)} entities, {len(edges)} claims, {len(ledger)} evidence records")
 
 def export_neo4j(g,root):
     # All IDs/properties are serialized, not concatenated as executable user text.
@@ -120,4 +127,8 @@ def export_neo4j(g,root):
     (root/'neo4j/sample_queries.cypher').write_text('MATCH (n:Protein) RETURN n LIMIT 100;\nMATCH (n:RNA) RETURN n;\nMATCH (s)-[r]->(t) WHERE r.status = "curated" RETURN s,r,t;\nMATCH (v:Evidence) WHERE v.curator_status <> "reviewed" RETURN v LIMIT 100;\n',encoding='utf-8')
     (root/'neo4j/style.grass').write_text('node { caption: "{name}"; color: #edf2f5; }\nnode.Protein { color: #e7f2eb; }\nnode.RNA { color: #fff0db; }\nnode.Gene { color: #fbe8df; }\nnode.IntracellularCompound { color: #eee9f8; }\nnode.Pathway { color: #e1f2f3; }\n',encoding='utf-8')
 
-if __name__=='__main__':rebuild()
+if __name__=='__main__':
+    import argparse
+    parser=argparse.ArgumentParser();parser.add_argument('--manifest-only',action='store_true')
+    if parser.parse_args().manifest_only:write_manifest()
+    else:rebuild()
