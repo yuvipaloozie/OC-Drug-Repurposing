@@ -1,0 +1,388 @@
+{
+  "scope": "development engineering checks; not held-out scientific validation",
+  "checks": {
+    "cpt1a_female_compatible": true,
+    "cpt1a_male_incompatible": true,
+    "complete_reaction_chromatin_rna_trace_present": true,
+    "biochemical_trace_does_not_invent_causal_sign": true,
+    "human_target_not_automatically_mouse_target": true,
+    "explicit_transfer_retains_assumptions": true,
+    "no_drug_analysis_path_truncation": true,
+    "no_drugs_in_canonical_nodes": true,
+    "canonical_tables_unchanged_by_evaluation": true,
+    "development_sources_disjoint_from_frozen_holdout": true
+  },
+  "counts": {
+    "nodes": 396,
+    "edges": 503,
+    "evidence": 518
+  },
+  "relations": {
+    "ACTIVATES": 219,
+    "REGULATES": 145,
+    "INHIBITS": 55,
+    "PART_OF": 15,
+    "TRANSLATED_TO": 7,
+    "TRANSPORTS": 7,
+    "ASSOCIATED_WITH": 33,
+    "ENCODES": 4,
+    "CATALYZES": 4,
+    "INPUT_TO": 7,
+    "OUTPUT_OF": 7
+  },
+  "informed_usable": 224,
+  "strict_experimental": 2,
+  "nct503_scenario": {
+    "supporting": 1,
+    "opposing": 0,
+    "unsigned": 15,
+    "context_incompatible": 15,
+    "total": 16
+  },
+  "example_metabolic_trace": {
+    "drug_id": "LOCAL:protein:mouse:PHGDH",
+    "start_node_id": "LOCAL:protein:mouse:PHGDH",
+    "nodes": [
+      "LOCAL:protein:mouse:PHGDH",
+      "RHEA:12641",
+      "CHEBI:18110",
+      "RHEA:14329",
+      "CHEBI:16810",
+      "RXN:CHROMATIN_H3K27me3_demethylation_Nfatc1",
+      "LOCAL:rna:mouse:Nfatc1"
+    ],
+    "edges": [
+      "edge:serine:PHGDH_catalysis",
+      "edge:serine:PHGDH_OUTPUT_OF_18110",
+      "edge:serine:PSAT1_INPUT_TO_18110",
+      "edge:serine:PSAT1_OUTPUT_OF_16810",
+      "edge:serine:oxoglutarate_cosubstrate",
+      "edge:serine:demethylation_transcription"
+    ],
+    "traversal_directions": [
+      "forward",
+      "reverse_structural",
+      "forward",
+      "reverse_structural",
+      "forward",
+      "forward"
+    ],
+    "path_length": 6,
+    "net_sign": 0,
+    "has_unsigned_step": true,
+    "unsigned_steps": [
+      {
+        "edge_id": "edge:serine:PHGDH_catalysis",
+        "relation": "CATALYZES",
+        "kind": "structural_or_biochemical"
+      },
+      {
+        "edge_id": "edge:serine:PHGDH_OUTPUT_OF_18110",
+        "relation": "OUTPUT_OF",
+        "kind": "structural_or_biochemical"
+      },
+      {
+        "edge_id": "edge:serine:PSAT1_INPUT_TO_18110",
+        "relation": "INPUT_TO",
+        "kind": "structural_or_biochemical"
+      },
+      {
+        "edge_id": "edge:serine:PSAT1_OUTPUT_OF_16810",
+        "relation": "OUTPUT_OF",
+        "kind": "structural_or_biochemical"
+      },
+      {
+        "edge_id": "edge:serine:oxoglutarate_cosubstrate",
+        "relation": "INPUT_TO",
+        "kind": "structural_or_biochemical"
+      }
+    ],
+    "evidence_mode": "informed",
+    "edge_assessments": [
+      {
+        "edge_id": "edge:serine:PHGDH_catalysis",
+        "usable": true,
+        "tier": "curated_database",
+        "weight": 0.8,
+        "support_sources": [
+          "UniProtKB:Q61753"
+        ],
+        "contradicting_sources": [],
+        "warnings": [
+          "not_strict_experimental_evidence"
+        ],
+        "evidence_assessments": [
+          {
+            "evidence_id": "ev:serine:PHGDH_catalysis",
+            "source_id": "UniProtKB:Q61753",
+            "usable": true,
+            "tier": "curated_database",
+            "weight": 0.8,
+            "warnings": []
+          }
+        ]
+      },
+      {
+        "edge_id": "edge:serine:PHGDH_OUTPUT_OF_18110",
+        "usable": true,
+        "tier": "curated_database",
+        "weight": 0.8,
+        "support_sources": [
+          "UniProtKB:Q61753"
+        ],
+        "contradicting_sources": [],
+        "warnings": [
+          "not_strict_experimental_evidence"
+        ],
+        "evidence_assessments": [
+          {
+            "evidence_id": "ev:serine:PHGDH_OUTPUT_OF_18110",
+            "source_id": "UniProtKB:Q61753",
+            "usable": true,
+            "tier": "curated_database",
+            "weight": 0.8,
+            "warnings": []
+          }
+        ]
+      },
+      {
+        "edge_id": "edge:serine:PSAT1_INPUT_TO_18110",
+        "usable": true,
+        "tier": "curated_database",
+        "weight": 0.8,
+        "support_sources": [
+          "UniProtKB:Q99K85"
+        ],
+        "contradicting_sources": [],
+        "warnings": [
+          "not_strict_experimental_evidence"
+        ],
+        "evidence_assessments": [
+          {
+            "evidence_id": "ev:serine:PSAT1_INPUT_TO_18110",
+            "source_id": "UniProtKB:Q99K85",
+            "usable": true,
+            "tier": "curated_database",
+            "weight": 0.8,
+            "warnings": []
+          }
+        ]
+      },
+      {
+        "edge_id": "edge:serine:PSAT1_OUTPUT_OF_16810",
+        "usable": true,
+        "tier": "curated_database",
+        "weight": 0.8,
+        "support_sources": [
+          "UniProtKB:Q99K85"
+        ],
+        "contradicting_sources": [],
+        "warnings": [
+          "not_strict_experimental_evidence"
+        ],
+        "evidence_assessments": [
+          {
+            "evidence_id": "ev:serine:PSAT1_OUTPUT_OF_16810",
+            "source_id": "UniProtKB:Q99K85",
+            "usable": true,
+            "tier": "curated_database",
+            "weight": 0.8,
+            "warnings": []
+          }
+        ]
+      },
+      {
+        "edge_id": "edge:serine:oxoglutarate_cosubstrate",
+        "usable": true,
+        "tier": "reviewed_passage",
+        "weight": 0.65,
+        "support_sources": [
+          "PMID:38200114"
+        ],
+        "contradicting_sources": [],
+        "warnings": [
+          "endpoint_identity_pending",
+          "not_strict_experimental_evidence"
+        ],
+        "evidence_assessments": [
+          {
+            "evidence_id": "ev:serine:oxoglutarate_cosubstrate",
+            "source_id": "PMID:38200114",
+            "usable": true,
+            "tier": "reviewed_passage",
+            "weight": 0.65,
+            "warnings": []
+          }
+        ]
+      },
+      {
+        "edge_id": "edge:serine:demethylation_transcription",
+        "usable": true,
+        "tier": "reviewed_passage",
+        "weight": 0.65,
+        "support_sources": [
+          "PMID:38200114"
+        ],
+        "contradicting_sources": [],
+        "warnings": [
+          "endpoint_identity_pending",
+          "not_strict_experimental_evidence"
+        ],
+        "evidence_assessments": [
+          {
+            "evidence_id": "ev:serine:demethylation_transcription",
+            "source_id": "PMID:38200114",
+            "usable": true,
+            "tier": "reviewed_passage",
+            "weight": 0.65,
+            "warnings": []
+          }
+        ]
+      }
+    ],
+    "warnings": [
+      "context_incomplete",
+      "direction_unresolved",
+      "endpoint_identity_pending",
+      "not_strict_experimental_evidence"
+    ],
+    "heuristic_weight": 0.191724,
+    "evidence_quality_weight": 0.65,
+    "context_applicability": "unknown",
+    "context_details": [
+      {
+        "edge_id": "edge:serine:PHGDH_catalysis",
+        "status": "not_assessed",
+        "records": [
+          {
+            "evidence_id": "ev:serine:PHGDH_catalysis",
+            "observed": {
+              "species": "mouse"
+            },
+            "mismatched_fields": [],
+            "unknown_fields": [],
+            "status": "not_assessed"
+          }
+        ],
+        "mismatched_fields": [],
+        "unknown_fields": []
+      },
+      {
+        "edge_id": "edge:serine:PHGDH_OUTPUT_OF_18110",
+        "status": "not_assessed",
+        "records": [
+          {
+            "evidence_id": "ev:serine:PHGDH_OUTPUT_OF_18110",
+            "observed": {
+              "species": "mouse"
+            },
+            "mismatched_fields": [],
+            "unknown_fields": [],
+            "status": "not_assessed"
+          }
+        ],
+        "mismatched_fields": [],
+        "unknown_fields": []
+      },
+      {
+        "edge_id": "edge:serine:PSAT1_INPUT_TO_18110",
+        "status": "not_assessed",
+        "records": [
+          {
+            "evidence_id": "ev:serine:PSAT1_INPUT_TO_18110",
+            "observed": {
+              "species": "mouse"
+            },
+            "mismatched_fields": [],
+            "unknown_fields": [],
+            "status": "not_assessed"
+          }
+        ],
+        "mismatched_fields": [],
+        "unknown_fields": []
+      },
+      {
+        "edge_id": "edge:serine:PSAT1_OUTPUT_OF_16810",
+        "status": "not_assessed",
+        "records": [
+          {
+            "evidence_id": "ev:serine:PSAT1_OUTPUT_OF_16810",
+            "observed": {
+              "species": "mouse"
+            },
+            "mismatched_fields": [],
+            "unknown_fields": [],
+            "status": "not_assessed"
+          }
+        ],
+        "mismatched_fields": [],
+        "unknown_fields": []
+      },
+      {
+        "edge_id": "edge:serine:oxoglutarate_cosubstrate",
+        "status": "not_assessed",
+        "records": [
+          {
+            "evidence_id": "ev:serine:oxoglutarate_cosubstrate",
+            "observed": {
+              "species": "mouse",
+              "cell_type": "bone marrow mononuclear cell-derived osteoclast precursors",
+              "stage": "early differentiation",
+              "duration": "0\u20133 days",
+              "disease_setting": "RANKL_induced_osteoclastogenesis",
+              "model_setting": "in_vitro"
+            },
+            "mismatched_fields": [],
+            "unknown_fields": [],
+            "status": "not_assessed"
+          }
+        ],
+        "mismatched_fields": [],
+        "unknown_fields": []
+      },
+      {
+        "edge_id": "edge:serine:demethylation_transcription",
+        "status": "not_assessed",
+        "records": [
+          {
+            "evidence_id": "ev:serine:demethylation_transcription",
+            "observed": {
+              "species": "mouse",
+              "cell_type": "bone marrow mononuclear cell-derived osteoclast precursors",
+              "stage": "early differentiation",
+              "intervention_type": "gene_deletion_with_metabolite_rescue",
+              "dose": "0.25 mM rescue reagent",
+              "duration": "0\u20133 days",
+              "disease_setting": "RANKL_induced_osteoclastogenesis",
+              "model_setting": "in_vitro"
+            },
+            "mismatched_fields": [],
+            "unknown_fields": [],
+            "status": "not_assessed"
+          }
+        ],
+        "mismatched_fields": [],
+        "unknown_fields": []
+      }
+    ],
+    "transfer_assumptions": [],
+    "pharmacology_caveats": []
+  },
+  "holdout": {
+    "papers": 50,
+    "blind_packet_sha256": "209b001ce23569f6da336e2d674da6e603af0fb2991f8d9a2fafd3f542b51969",
+    "canonical_source_overlap_pmids": [],
+    "independent_review_status": "pending",
+    "precision": null,
+    "recall": null,
+    "instruction": "Mask held-out papers from canonical evidence before evaluation, including any original seed-graph overlap. No human metrics inferred from automated checks."
+  },
+  "canonical_input_sha256": {
+    "nodes": "8eb70991396119a3f89a179c0bf9008f9863c862f3ddf7586efb5b02669999d2",
+    "edges": "236f758e00c00d3fa5156d1483d26f380b0f6aeda55ba088942616a8febd691b",
+    "experiments": "5df71d53d9e6848ee624774b0163fe1f68e51f852cf6c6bc41ef80c71de33827",
+    "edge_evidence": "6ceab4e097bca86ac9541b4f62d915c282cf89ef14db6f59c25f8bb753b40319",
+    "contexts": "688d344a08b245c83ca2f1684ac4c7db5540b79029613ffb2f27c46faad28301",
+    "source_records": "3b8308c4179f17b4a17b56ab1d60ce172ecd9924e5e48d491f2af2585c718074"
+  }
+}

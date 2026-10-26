@@ -40,6 +40,7 @@ class EdgeRelation(str, Enum):
     REGULATES = "REGULATES"
     TRANSCRIBED_FROM = "TRANSCRIBED_FROM"
     TRANSLATED_TO = "TRANSLATED_TO"
+    ENCODES = "ENCODES"  # Gene -> protein; no invented transcript or causal sign
     PART_OF = "PART_OF"
     ASSOCIATED_WITH = "ASSOCIATED_WITH"
 
@@ -121,6 +122,7 @@ class Experiment:
     measured_effect: str = ""  # quantitative or qualitative effect
     viability: str = "not reported"  # MTT, CCK-8, LDH, Trypan blue, or 'not reported'
     figure_or_table: str = ""
+    qualifiers: str = "{}"
     verification_status: str = "pending_passage_review"
     review_note: str = ""
 
@@ -162,6 +164,7 @@ class Context:
     disease_setting: Optional[str] = None  # physiological, RANKL_induced_osteoclastogenesis
     note: str = ""
     verification_status: str = "pending_source_review"
+    qualifiers: str = "{}"  # JSON: sex, intervention_type, dose, duration, model_setting
 
     def to_dict(self) -> Dict[str, Any]:
         return asdict(self)

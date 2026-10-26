@@ -24,10 +24,12 @@ class AuditedSchemaTests(unittest.TestCase):
         self.assertFalse(any(n['type']=='gene' and 'RNA' in n['name'] for n in nodes.values()))
 
     def test_review_requires_passage_and_source_checksum(self):
+        # Reviewed registry records are JSON; literature snapshots are XML.
+        # Both require actual cached bytes, including nested provenance folders.
+        checksums={hashlib.sha256(p.read_bytes()).hexdigest() for p in (ROOT/'data/raw/provenance').rglob('*') if p.is_file() and p.suffix in {'.xml','.json'}}
         for ev in rows('edge_evidence'):
             if ev['curator_status']=='reviewed':
                 self.assertTrue(ev['quote_or_location']);self.assertTrue(ev['source_location'])
-                checksums={hashlib.sha256(p.read_bytes()).hexdigest() for p in (ROOT/'data/raw/provenance').glob('*.xml')}
                 self.assertIn(ev['source_sha256'],checksums)
 
     def test_validator_rejects_dangling_and_false_review(self):

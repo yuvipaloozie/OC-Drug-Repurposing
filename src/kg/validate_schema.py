@@ -29,6 +29,14 @@ def run_verification(data_dir):
         for k in ['source_id','target_id']:
             if e[k] not in tables['nodes']:errors.append(f'{e["edge_id"]}: missing {k} {e[k]}')
         if e['context_id'] and e['context_id'] not in tables['contexts']:errors.append('Missing context '+e['edge_id'])
+        if e['relation'] in {'ENCODES', 'CATALYZES', 'INPUT_TO', 'OUTPUT_OF'}:
+            a,b=tables['nodes'].get(e['source_id'],{}),tables['nodes'].get(e['target_id'],{})
+            expected = {'ENCODES': ('gene','protein'), 'CATALYZES': ('protein','reaction')}
+            if e['relation'] in expected and (a.get('type'),b.get('type')) != expected[e['relation']]:
+                errors.append('Invalid structural endpoints '+e['edge_id'])
+            if e['relation'] in {'INPUT_TO','OUTPUT_OF'} and (a.get('type') not in {'intracellular_compound','extracellular_compound'} or b.get('type')!='reaction'):
+                errors.append('Invalid reaction participant '+e['edge_id'])
+            if str(e['sign']) != '0': errors.append('Signed structural relationship '+e['edge_id'])
         if e['relation']=='TRANSLATED_TO' and e['source_id'] in tables['nodes'] and e['target_id'] in tables['nodes']:
             a,b=tables['nodes'][e['source_id']],tables['nodes'][e['target_id']]
             if a['type']!='rna' or a.get('rna_type')!='mrna' or b['type']!='protein':errors.append('Invalid translation endpoints '+e['edge_id'])
@@ -46,6 +54,11 @@ def run_verification(data_dir):
             if not re.fullmatch('[a-f0-9]{64}',ev['source_sha256']):errors.append('Invalid source hash '+ev['evidence_id'])
     for exp in tables['experiments'].values():
         if exp['paper_id'] not in tables['source_records']:errors.append('Experiment missing source record '+exp['experiment_id'])
+    for table in ('contexts','experiments'):
+        for row in tables[table].values():
+            try:
+                if not isinstance(json.loads(row.get('qualifiers') or '{}'), dict): raise ValueError()
+            except (ValueError, TypeError): errors.append('Invalid context qualifiers in '+table)
     pending=sum(v['curator_status']!='reviewed' for v in tables['edge_evidence'].values())
     warnings.append(f'{pending} evidence records require review or are quarantined; registry existence is not claim validation.')
     return {'status':'PASS' if not errors else 'FAIL','scope':'structural_only','errors':errors,'warnings':warnings,

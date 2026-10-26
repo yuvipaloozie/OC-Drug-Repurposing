@@ -75,11 +75,11 @@ result = g.score_drug_mechanism(
 
 ## Export and UI compatibility
 
-Derived JSON/Neo4j relationship properties now include `informed_usable`, `evidence_tier`, `evidence_weight`, and `evidence_warnings`. The existing `evidence_eligible` property retains strict meaning. Canonical CSVs and their scientific fields are unchanged, and workbook copies still mirror those canonical tables rather than storing derived ranking weights as experimental measurements.
+Derived JSON/Neo4j relationship properties now include `informed_usable`, `evidence_tier`, `evidence_weight`, and `evidence_warnings`. The existing `evidence_eligible` property retains strict meaning. Canonical CSVs remain authoritative; context and experiment qualifiers now preserve additional conditions, and workbook copies still mirror those canonical tables rather than storing derived ranking weights as experimental measurements.
 
 The viewer keeps all existing layout, interaction and evidence controls. Its previous “Eligible for scoring” option is renamed **“Strict experimental evidence”** so the narrow audit subset is not mistaken for the entire usable graph. Default display remains all recorded claims. There are no added sliders, policy dashboards or drug-ranking panels.
 
-Regression coverage includes single-step paths, database facts without experiments, provisional extraction, quarantines, citation mismatches with independent support, context transfer, unsigned biochemical routes, supporting/contradicting records, opposing routes, unresolved citations, leakage masking and explicit search limits. All 43 tests pass.
+Regression coverage includes single-step paths, database facts without experiments, provisional extraction, quarantines, citation mismatches with independent support, context transfer, unsigned biochemical routes, supporting/contradicting records, opposing routes, unresolved citations, leakage masking and explicit search limits. The original policy checkpoint passed 43 tests.
 
 ## PYK2 development integration update
 
@@ -95,4 +95,18 @@ At the v2 checkpoint, the graph had 357 entities, 451 relationships, 466 evidenc
 
 ## Identity and enrichment quality pass
 
-The current graph has 378 nodes, 475 relationships, 490 evidence records, 199 informed-usable relationships and two strict experimental relationships. Evidence weights are unchanged. Four previously usable legacy chemical relationships and two erroneous pharmacological-target projections were quarantined; 24 source-anchored proposals were added. Registry identity resolution does not promote biological evidence. See [the quality report](RESOLUTION_QUALITY_PASS.md).
+At the identity-quality checkpoint, the graph had 378 nodes, 475 relationships, 490 evidence records, 199 informed-usable relationships and two strict experimental relationships. Evidence weights are unchanged. Four previously usable legacy chemical relationships and two erroneous pharmacological-target projections were quarantined; 24 source-anchored proposals were added. Registry identity resolution does not promote biological evidence. See [the quality report](RESOLUTION_QUALITY_PASS.md).
+
+## Context and per-record assessment update (October 2026)
+
+`assess_edge` evaluates source resolution, passage quality, and experimental eligibility within each evidence record before choosing eligible support. Unresolved reviewed passages cannot borrow a resolved citation's eligibility. When a target context is supplied, incompatible evidence cannot lend its higher tier to compatible evidence from another experiment.
+
+`contexts.qualifiers` and `experiments.qualifiers` are JSON objects. Supported fields include sex, intervention_type, model_setting, dose, and duration; stage and disease_setting remain context columns. Missing requested values are unknown, not excluded. Supplied strings are compared conservatively; there is no dose-equivalence, temporal, or disease-ontology reasoner.
+
+Paths expose `evidence_quality_weight`, `context_applicability`, `context_details`, and `transfer_assumptions`. Known incompatible routes remain in `all_paths`/`context_incompatible_paths`; their signed effects do not contribute to the scenario score. Unknown-context routes remain eligible with warnings. The scalar heuristic is retained for compatibility, not presented as calibrated confidence.
+
+`ENCODES` is unsigned gene-to-protein identity. `INPUT_TO` and `OUTPUT_OF` both point compound-to-reaction; product-directed traversal explicitly reverses `OUTPUT_OF`. Reverse gene/product exploration remains unsigned, so gene loss cannot automatically become an inhibitor prediction. The viewer retains its layout and adds recorded conditions only inside existing relationship details.
+
+See [the generated module evaluation](serine_module/README.md) for current counts, demonstration results, and independent-review status.
+
+Drug overlays and returned paths also retain `pharmacology_caveats`, including source-supported off-target findings. These are interpretation warnings, not a new blanket exclusion or an invented numerical selectivity penalty. The source audit is documented in [biological validation](biological_validation/README.md).

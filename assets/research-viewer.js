@@ -55,6 +55,12 @@
       const other = nodes.get(e.source === n.id ? e.target : e.source), detail = make('details',undefined,'connection');
       const summary = make('summary',`${e.target === n.id ? '← ' : '→ '}${symbol(other)}`); summary.append(make('span',`${human(e.relation)} · ${e.sign === -1 ? 'negative' : e.sign === 1 ? 'positive' : 'unsigned'}`)); detail.append(summary);
       detail.append(make('p',`Claim status: ${human(e.status)}. ${e.review_note||''}`));
+      const context=data.contexts?.find(c=>c.context_id===e.context_id);
+      if(context){
+        let qualifiers={};try{qualifiers=typeof context.qualifiers==='string'?JSON.parse(context.qualifiers):context.qualifiers||{};}catch{}
+        const conditions=Object.entries({...context,...qualifiers}).filter(([k,v])=>v&&['species','cell_type','sex','stage','intervention_type','dose','duration','disease_setting','model_setting'].includes(k));
+        if(conditions.length)detail.append(make('p',`Recorded conditions: ${conditions.map(([k,v])=>`${human(k)}: ${human(v)}`).join(' · ')}. Unspecified conditions remain unknown.`,'muted'));
+      }
       const evidenceRows=Array.isArray(e.evidence)?e.evidence:[];
       for(const ev of evidenceRows){
         const record=make('div',undefined,'evidence-record');
