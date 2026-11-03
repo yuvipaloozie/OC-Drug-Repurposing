@@ -1,11 +1,10 @@
 # Osteoclast Drug Repurposing: Contextual Mechanism Knowledge Graph & Molecular Graphs
 
-![Python](https://img.shields.io/badge/Python-203858?style=flat-square)
-![Knowledge graphs](https://img.shields.io/badge/Knowledge%20graphs-203858?style=flat-square)
-![Evidence provenance](https://img.shields.io/badge/Evidence%20provenance-203858?style=flat-square)
-![RDKit](https://img.shields.io/badge/RDKit-203858?style=flat-square)
-![Structured extraction](https://img.shields.io/badge/Structured%20extraction-203858?style=flat-square)
-![Neo4j](https://img.shields.io/badge/Neo4j-203858?style=flat-square)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![RDKit](https://img.shields.io/badge/RDKit-287233?style=for-the-badge)
+![Neo4j](https://img.shields.io/badge/Neo4j-4581C3?style=for-the-badge&logo=neo4j&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 
 This project studies small molecules that may inhibit **osteoclast differentiation, activity, and pathological bone resorption**. It combines a source-linked mechanism knowledge graph with a planned molecular graph branch for drug-repurposing research. The current tools support evidence inspection, context-aware path analysis and candidate-coverage checks.
 
@@ -53,7 +52,6 @@ Symbol-based protein identifiers previously using the `HGNC:` prefix now use exp
 A cached Europe PMC/PubTator pilot now stages literature upstream of the canonical graph. The initial run retrieved 318 unique papers, annotated 56 of 60 requested papers, and selected 212 abstract passages for review. These are unreviewed discovery candidates; no nodes or relationships were added to the live graph.
 
 Run `python -m src.ingest.discovery_pilot` from the repository root, or add `--offline` to replay cached responses. Open `data/staging/discovery_pilot/review_queue.html` for the searchable queue. The [pilot report](reports/history/DISCOVERY_PILOT.md) explains the queries, results, field-by-field schema mapping, identity limitations, and checks. Raw responses live in `data/raw/discovery_pilot`; candidate tables live in `data/staging/discovery_pilot`.
-
 
 ### Full-corpus extraction and graph integration
 
