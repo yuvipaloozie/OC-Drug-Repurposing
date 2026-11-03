@@ -29,7 +29,7 @@ The older `src/kg/generate_web_app.py` and `src/visualization/build_3d_conformat
 
 ## Research limitations
 
-The UI redesign does not validate the biological evidence, repair the KG, or train a predictor. It preserves the source snapshot and exposes additional annotations separately. Some existing repository annotations are generated or unverified; see the project review before using them in research conclusions.
+The viewers display the source snapshot and its annotations. Biological evidence review and predictor training are separate tasks. Some repository annotations remain generated or unverified; check the project review before using them in research conclusions.
 
 ## Audited schema v3
 
@@ -38,3 +38,4 @@ Node type is separate from protein roles and RNA subtype. Old node URLs resolve 
 
 ### Reference-inspired visual refresh
 Both explorers share white panels, soft rounded interactive surfaces, fine dividers, and a teal/green/coral/gold category palette. Square markers identify categories; pale rounded node cards preserve graph readability. Entity fields use a bordered cell grid. System sans-serif typography keeps the viewer usable offline. Neighborhood animation refits after settling to prevent a resize during animation from leaving nodes clipped.
+
