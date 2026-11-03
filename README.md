@@ -1,8 +1,15 @@
 # Osteoclast Drug Repurposing: Contextual Mechanism Knowledge Graph & Molecular Graphs
 
-A research framework for studying small molecules that may inhibit **osteoclast differentiation, activity, and pathological bone resorption**. The project combines an osteoclast mechanism knowledge graph with a planned molecular graph branch for drug-repurposing research.
+![Python](https://img.shields.io/badge/Python-203858?style=flat-square)
+![Knowledge graphs](https://img.shields.io/badge/Knowledge%20graphs-203858?style=flat-square)
+![Evidence provenance](https://img.shields.io/badge/Evidence%20provenance-203858?style=flat-square)
+![RDKit](https://img.shields.io/badge/RDKit-203858?style=flat-square)
+![Structured extraction](https://img.shields.io/badge/Structured%20extraction-203858?style=flat-square)
+![Neo4j](https://img.shields.io/badge/Neo4j-203858?style=flat-square)
 
-The current release contains **396 biological entities, 503 relationship claims, and 518 evidence records**, together with interactive pathway and structure explorers, relational data, Excel workbooks, and Neo4j exports. The schema and provenance repair preserves the biological inventory while distinguishing source-checked evidence from pending and quarantined assertions. This is a working research resource, not yet a validated prediction benchmark.
+This project studies small molecules that may inhibit **osteoclast differentiation, activity, and pathological bone resorption**. It combines a source-linked mechanism knowledge graph with a planned molecular graph branch for drug-repurposing research. The current tools support evidence inspection, context-aware path analysis and candidate-coverage checks.
+
+The current release contains **396 biological entities, 503 relationship claims, and 518 evidence records**, together with interactive pathway and structure explorers, relational data, Excel workbooks, and Neo4j exports. Evidence records distinguish source-checked findings from pending and quarantined assertions. The molecular branch and independent review are still in development; validated drug-prediction performance has not been established.
 
 ## Architectural Principles
 
@@ -54,9 +61,9 @@ The broader run processed 2,404 papers while preserving 50 held-out papers. It p
 
 These additions preserve species, molecular form, source passages, context, and interpretation. Genetic loss-of-function effects are distinguished from inferred normal roles; phosphorylation changes without a supported activity direction remain unsigned. Formation and differentiation remain separate endpoints. At that checkpoint, the other 4,377 claims remained staged with explicit reasons, including unresolved chemical identities and experimental roles; they have not been discarded or declared false. At that checkpoint, new protein nodes were gene-locus grounded with protein accessions pending; the subsequent quality pass resolves most accessions. See [the integration report](reports/history/FULL_GRAPH_INTEGRATION.md) for reproducible commands and limits.
 
-The [resolution/connectivity iteration](reports/history/RESOLUTION_CONNECTIVITY_ITERATION.md) subsequently added 43 entities, 54 relationships and 56 evidence records using improved species/synonym handling and separate chemical-effect projection. For the same 210 mouse proteins, signed endpoint coverage increased from 24 to 29 pairs; pairs with no reported species/cell mismatch increased from 17 to 23. A separate `chemical_effects.csv` records 125 proposed literature effects across 34 compounds, without asserting direct drug-target binding. The example dasatinib target-to-outcome gap was unresolved at that checkpoint. These are measured coverage improvements, not validated predictive accuracy.
+The [resolution/connectivity iteration](reports/history/RESOLUTION_CONNECTIVITY_ITERATION.md) subsequently added 43 entities, 54 relationships and 56 evidence records using improved species/synonym handling and separate chemical-effect projection. For the same 210 mouse proteins, signed endpoint coverage increased from 24 to 29 pairs; pairs with no reported species/cell mismatch increased from 17 to 23. A separate `chemical_effects.csv` records 125 proposed literature effects across 34 compounds, without asserting direct drug-target binding. The example dasatinib target-to-outcome gap was unresolved at that checkpoint. These measurements describe coverage. Predictive accuracy has not been validated.
 
-The [identity and enrichment quality pass](reports/RESOLUTION_QUALITY_PASS.md) repaired four chemical accession errors, reviewed 120 randomly selected deferred claims, and added 21 entities and 24 proposed relationships. It also corrected a target-inhibition sign error, checked protein accessions against species, and regenerated compound structures. At that checkpoint, informed analysis included 199 relationships. Fixed-start signed coverage increased from 35 to 38 pairs, while pairs without reported species/cell mismatch remained 29; biological context remains a key limitation.
+The [identity and enrichment quality pass](reports/RESOLUTION_QUALITY_PASS.md) repaired four chemical accession errors, reviewed 120 randomly selected deferred claims, and added 21 entities and 24 proposed relationships. It also corrected a target-inhibition sign error, checked protein accessions against species, and regenerated compound structures. At that checkpoint, informed analysis included 199 relationships. Fixed-start signed coverage increased from 35 to 38 pairs, while pairs without reported species/cell mismatch remained 29; biological context still limits interpretation.
 
 ### Context-aware scoring and the serine mechanism module
 
@@ -154,7 +161,7 @@ Small-molecule atoms and bonds -> Molecular model / fingerprint baseline --+
 Reviewed biological evidence -> Contextual mechanism knowledge graph -----+
 ```
 
-The molecular branch is intended to compare chemical representations with fingerprint baselines. The mechanism branch is intended to provide inspectable biological paths with source, experiment, and context provenance. Late fusion, calibrated rankings, and a validated drug-repurposing benchmark remain development goals rather than demonstrated results.
+The molecular branch will compare chemical representations with fingerprint baselines. The mechanism branch provides inspectable biological paths with source, experiment and context provenance. Late fusion, calibrated rankings and a validated drug-repurposing benchmark remain development goals.
 
 Default analysis uses **evidence-informed discovery**: reviewed experiments, curated database facts and source-linked provisional claims can contribute, with explicit tiers and uncertainty. Currently **68 relationships** are usable: two reviewed-experiment relationships, four reviewed-passage relationships, two proposed extracted candidates and 60 weak citation-only candidates. Known quarantines and mismatched citations remain excluded. These counts describe usable hypotheses, not validated mechanisms.
 
@@ -177,7 +184,7 @@ The original seed topics remain useful starting points for targeted literature r
 
 The ChEBI label for `CHEBI:16015` is corrected to L-glutamic acid, and its two incident claims are quarantined for reaction-level re-curation. It is not merged with alpha-ketoglutarate.
 
-The immediate priority is source-to-claim matching and passage-level experimental curation, followed by registry/orthology mapping and context review. These steps strengthen evidence tiers and scientific interpretation; incomplete but traceable claims can already support explicitly provisional discovery.
+The immediate priority is source-to-claim matching and passage-level experimental curation, followed by registry/orthology mapping and context review. Traceable claims can support provisional discovery while those reviews continue, with evidence tiers and uncertainty retained.
 
 ## Repository Structure
 
@@ -240,7 +247,7 @@ python -B -m src.kg.rebuild
 python -B -m unittest discover -s tests -v
 ```
 
-Structural validation checks identifiers, foreign keys, entity types, RNA translation relationships, and review requirements. A structural PASS does not certify biological truth or model readiness.
+Structural validation checks identifiers, foreign keys, entity types, RNA translation relationships, and review requirements. A structural PASS confirms those checks; biological support and model readiness require separate evaluation.
 
 Rebuild synchronizes both graph JSON copies, browser assets, inventory, source ledgers, all three Excel workbook copies, Neo4j artifacts, and the file-hash manifest. It performs no network enrichment and does not automatically promote records to reviewed status. Legacy export and master-pipeline entry points redirect to this rebuild.
 
@@ -277,3 +284,4 @@ The [biological audit](reports/biological_validation/README.md) reports the scop
 ### FDA drug evaluation pilot
 
 The [drug experiment](data/evaluation/drug_pilot_v1/README.md) adds reproducible FDA-to-PubChem/ChEMBL mappings, explicit human-mouse target scenarios, RDKit molecular features, and a source-linked assay outcome pilot. Compound/scaffold/paper grouping and held-out source masking support future comparisons of chemistry-only, mechanism-only, and combined models. Current coverage and label limitations are reported separately from predictive performance; no trained-model accuracy is claimed.
+
