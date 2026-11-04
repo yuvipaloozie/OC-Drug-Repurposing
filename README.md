@@ -10,6 +10,47 @@ A mechanism knowledge graph for exploring osteoclast differentiation and bone re
 
 The canonical dataset contains 396 biological entities, 503 relationship claims, and 518 evidence records. Drug candidates remain outside the biological topology. Evidence review, biological context, and molecular identity are recorded separately. Scores are exploratory heuristics; no trained-model accuracy or validated efficacy prediction is available.
 
+## Pipeline
+
+```mermaid
+flowchart TD
+    L["Literature and registry snapshots"] --> C["Extract claims and resolve identities"]
+    C --> R["Curate evidence and experimental context"]
+    R --> K["Canonical biological graph"]
+    K --> V["Graph and structure viewer"]
+    K --> X["JSON, CSV, Excel and Neo4j exports"]
+
+    F["FDA candidate inventory"] --> M["PubChem / ChEMBL mapping"]
+    M --> T["Source-backed drug-target inputs"]
+    M --> D["RDKit molecular features"]
+    K --> P["Context-aware mechanism paths"]
+    T --> P
+    P --> E["Grouped assay evaluation pilot"]
+    D --> E
+    A["Assay outcomes and paper / compound groups"] --> E
+
+    classDef source fill:#dbeafe,stroke:#2563eb,color:#172554
+    classDef curation fill:#fef3c7,stroke:#d97706,color:#78350f
+    classDef graph fill:#dcfce7,stroke:#16a34a,color:#14532d
+    classDef output fill:#ccfbf1,stroke:#0d9488,color:#134e4a
+    classDef drug fill:#ede9fe,stroke:#7c3aed,color:#4c1d95
+    classDef evaluation fill:#ffe4e6,stroke:#e11d48,color:#881337
+    class L,F,A source
+    class C,R curation
+    class K,P graph
+    class V,X output
+    class M,T,D drug
+    class E evaluation
+```
+
+Drug-target inputs overlay the biological graph for analysis. The evaluation pilot prepares grouped inputs and evaluates supplied predictions; model training remains future work.
+
+## Interface
+
+![Osteoclast graph viewer showing the PHGDH local network, entity catalog, and evidence inspector](docs/images/graph-viewer.jpg)
+
+PHGDH neighborhood in the running workbench. Select a relationship for its evidence records, or switch to Structure or Split for molecular inspection.
+
 ## Run the viewer
 
 From the repository root:
