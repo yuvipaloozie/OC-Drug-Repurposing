@@ -47,32 +47,17 @@ class OsteoclastKnowledgeGraph:
         if source_path.exists():
             with source_path.open(encoding='utf-8', newline='') as f:
                 self.source_records = {row['source_id']: row for row in csv.DictReader(f)}
-        # Load nodes
-        with open(nodes_path, "r", encoding="utf-8") as f:
-            reader = csv.DictReader(f)
-            for row in reader:
-                self.nodes[row["node_id"]] = row
+        def read_rows(path):
+            with open(path, encoding='utf-8') as f:
+                return list(csv.DictReader(f))
 
-        # Load contexts if provided
+        self.nodes = {row['node_id']: row for row in read_rows(nodes_path)}
         if contexts_path:
-            with open(contexts_path, "r", encoding="utf-8") as f:
-                reader = csv.DictReader(f)
-                for row in reader:
-                    self.contexts[row["context_id"]] = row
-
-        # Load experiments if provided
+            self.contexts = {row['context_id']: row for row in read_rows(contexts_path)}
         if experiments_path:
-            with open(experiments_path, "r", encoding="utf-8") as f:
-                reader = csv.DictReader(f)
-                for row in reader:
-                    self.experiments[row["experiment_id"]] = row
-
-        # Load edge evidence if provided
+            self.experiments = {row['experiment_id']: row for row in read_rows(experiments_path)}
         if evidence_path:
-            with open(evidence_path, "r", encoding="utf-8") as f:
-                reader = csv.DictReader(f)
-                for row in reader:
-                    self.edge_evidence.append(row)
+            self.edge_evidence = read_rows(evidence_path)
 
         # Load edges
         with open(edges_path, "r", encoding="utf-8") as f:
@@ -113,14 +98,15 @@ class OsteoclastKnowledgeGraph:
             and ev.get("source_id") not in held_out_papers
         ]
 
+        original_support = {ev['edge_id'] for ev in self.edge_evidence}
+        remaining_support = {ev['edge_id'] for ev in subgraph.edge_evidence}
+
         # Valid edges
         for edge_id, edge in self.edges.items():
             sources = [v.strip() for v in edge.get("source_record_id", "").split(';') if v.strip()]
             retained_sources = [v for v in sources if v not in held_out_papers]
-            original_support = [ev for ev in self.edge_evidence if ev["edge_id"] == edge_id]
-            remaining_support = [ev for ev in subgraph.edge_evidence if ev["edge_id"] == edge_id]
-            if original_support:
-                if not remaining_support:
+            if edge_id in original_support:
+                if edge_id not in remaining_support:
                     continue
             elif sources and not retained_sources:
                 continue

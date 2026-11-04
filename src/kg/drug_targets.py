@@ -85,7 +85,8 @@ def run(root=ROOT,allow_species_transfer=False):
     before={t:hashlib.sha256((root/f'data/processed/{t}.csv').read_bytes()).hexdigest() for t in TABLES}
     rows=load_targets(root/'data/drug_targets/targets.csv',root)
     graph,decisions=overlay(load_graph(root),rows,allow_species_transfer)
-    results={r['drug_id']:graph.score_drug_mechanism(r['drug_id'],target_context={'species':'mouse'},max_depth=12) for r in rows}
+    results={drug:graph.score_drug_mechanism(drug,target_context={'species':'mouse'},max_depth=12)
+             for drug in dict.fromkeys(r['drug_id'] for r in rows)}
     assert before=={t:hashlib.sha256((root/f'data/processed/{t}.csv').read_bytes()).hexdigest() for t in TABLES}
     return {'canonical_inputs_unchanged':True,'canonical_input_sha256':before,'allow_species_transfer':allow_species_transfer,
             'target_decisions':decisions,'results':results,'interpretation':'Research-probe coverage exercise, not an FDA candidate ranking or efficacy prediction. Potency is assay-specific and is not converted into a phenotype probability.'}

@@ -1,125 +1,10 @@
-# Osteoclast Drug Repurposing: Contextual Mechanism Knowledge Graph & Molecular Graphs
+# Osteoclast drug repurposing
 
-A research framework for studying small molecules that may inhibit **osteoclast differentiation, activity, and pathological bone resorption**. The project combines an osteoclast mechanism knowledge graph with a planned molecular graph branch for drug-repurposing research.
+A mechanism knowledge graph for exploring osteoclast differentiation and bone resorption, with a React graph/structure viewer and a separate FDA drug-evaluation pipeline.
 
-The current release contains **396 biological entities, 503 relationship claims, and 518 evidence records**, together with interactive pathway and structure explorers, relational data, Excel workbooks, and Neo4j exports. The schema and provenance repair preserves the biological inventory while distinguishing source-checked evidence from pending and quarantined assertions. This is a working research resource, not yet a validated prediction benchmark.
+The canonical dataset contains 396 biological entities, 503 relationship claims, and 518 evidence records. Drug candidates remain outside the biological topology. Evidence review, biological context, and molecular identity are recorded separately. Scores are exploratory heuristics; no trained-model accuracy or validated efficacy prediction is available.
 
-## Architectural Principles
-
-### 1. Biological topology and separate drug modeling
-
-The mechanism graph represents biological entities and their relationships. Exogenous drug candidates belong in the separate molecular modeling branch rather than becoming nodes in the current biological topology. This separation supports the intended research design, but does not by itself guarantee freedom from training or evaluation leakage.
-
-- **396 biological nodes:** genes, proteins, RNA, endogenous compounds, reactions, and pathways.
-- **503 relationship claims:** directed relationships with positive, negative, or unknown signs. Their presence in the graph does not establish causality.
-- **Individual evidence records:** multiple sources or experiments supporting the same claim remain separate records and are exported as arrays rather than overwritten.
-- **Evidence-informed discovery:** source-linked provisional claims can contribute with explicit evidence tiers and uncertainty. Known quarantined assertions remain excluded from analysis; strict experimental eligibility is an optional audit view.
-
-Unsupported drug-target, multi-omics, and quantitative annotations from the earlier enrichment pipeline have been removed from active scientific fields. Their original values remain recoverable in `data/quarantine/legacy_snapshot.zip`.
-
-### 2. Physiological modules
-
-The original nine-module organization remains available, with a focused serine-synthesis/epigenetic module added for the source-backed mechanism. These modules organize the inventory; they are not independent evidence of a node's function or an edge's mechanism.
-
-| Module | Research focus |
-| --- | --- |
-| `differentiation` | RANKL/RANK signaling, TRAF6, NFATc1, transcriptional regulation, and chromatin-associated claims. |
-| `metabolism` | Glycolysis, the TCA cycle, glutaminolysis, serine synthesis, fatty-acid metabolism, and itaconate. |
-| `activity_acidification` | Resorption-lacuna acidification, proton transport, proteases, and TRAP-associated activity. |
-| `morphology_cytoskeleton` | Integrins, actin organization, podosomes, sealing zones, and cytoskeletal regulators. |
-| `inflammation` | Cytokine signaling and inflammatory interactions represented in the inventory. |
-| `immunomodulation` | Costimulatory receptors, signaling adaptors, and calcium-associated pathways. |
-| `maturation_fusion` | Precursor maturation, membrane fusion, and multinucleated osteoclast formation. |
-| `interactions_with_other_processes` | Coupling to other cell types and biological processes. |
-| `hormonal_influence` | Endocrine influences and hormone-associated signaling. |
-
-### 3. Gene, RNA, and protein identity
-
-**Protein is now a base entity type.** Enzyme and transcription-factor annotations are functional roles rather than competing top-level identities. The inventory contains 231 proteins; their legacy role assignments still require biological review.
-
-Thirteen entities formerly labeled as genes are now represented as RNA: six mRNAs, six miRNAs, and one lncRNA. Translation relationships connect mRNA to protein. The full-corpus integration adds registry-grounded gene and RNA entities, bringing the current totals to 69 genes and 18 RNAs. Gene, RNA, and protein remain distinct; no gene-to-transcript or transcript-to-protein links are inferred merely from shared symbols.
-
-Symbol-based protein identifiers previously using the `HGNC:` prefix now use explicit local identifiers such as `LOCAL:protein:mouse:PHGDH`. RNA uses an analogous namespace. These are local identities, not verified HGNC, MGI, or UniProt accessions. `identifier_map.json` and `legacy_ids` preserve older URLs and search aliases while experimental isoform identity and orthology remain separate mapping tasks. The latest pass matched 222 of 231 proteins to unique reviewed UniProt primary-gene/species records; nine remain unresolved.
-
-## Literature Discovery Pilot
-
-A cached Europe PMC/PubTator pilot now stages literature upstream of the canonical graph. The initial run retrieved 318 unique papers, annotated 56 of 60 requested papers, and selected 212 abstract passages for review. These are unreviewed discovery candidates; no nodes or relationships were added to the live graph.
-
-Run `python -m src.ingest.discovery_pilot` from the repository root, or add `--offline` to replay cached responses. Open `data/staging/discovery_pilot/review_queue.html` for the searchable queue. The [pilot report](reports/history/DISCOVERY_PILOT.md) explains the queries, results, field-by-field schema mapping, identity limitations, and checks. Raw responses live in `data/raw/discovery_pilot`; candidate tables live in `data/staging/discovery_pilot`.
-
-
-### Full-corpus extraction and graph integration
-
-The broader run processed 2,404 papers while preserving 50 held-out papers. It produced 4,436 unreviewed, source-anchored claims for approximately $29.97. An offline projection following cached NCBI identity resolution added **47 entities and 59 proposed relationships**, with 59 separate evidence and experiment records. At that first-integration checkpoint, informed analysis included 127 relationships; the strict experimental subset remains two.
-
-These additions preserve species, molecular form, source passages, context, and interpretation. Genetic loss-of-function effects are distinguished from inferred normal roles; phosphorylation changes without a supported activity direction remain unsigned. Formation and differentiation remain separate endpoints. At that checkpoint, the other 4,377 claims remained staged with explicit reasons, including unresolved chemical identities and experimental roles; they have not been discarded or declared false. At that checkpoint, new protein nodes were gene-locus grounded with protein accessions pending; the subsequent quality pass resolves most accessions. See [the integration report](reports/history/FULL_GRAPH_INTEGRATION.md) for reproducible commands and limits.
-
-The [resolution/connectivity iteration](reports/history/RESOLUTION_CONNECTIVITY_ITERATION.md) subsequently added 43 entities, 54 relationships and 56 evidence records using improved species/synonym handling and separate chemical-effect projection. For the same 210 mouse proteins, signed endpoint coverage increased from 24 to 29 pairs; pairs with no reported species/cell mismatch increased from 17 to 23. A separate `chemical_effects.csv` records 125 proposed literature effects across 34 compounds, without asserting direct drug-target binding. The example dasatinib target-to-outcome gap was unresolved at that checkpoint. These are measured coverage improvements, not validated predictive accuracy.
-
-The [identity and enrichment quality pass](reports/RESOLUTION_QUALITY_PASS.md) repaired four chemical accession errors, reviewed 120 randomly selected deferred claims, and added 21 entities and 24 proposed relationships. It also corrected a target-inhibition sign error, checked protein accessions against species, and regenerated compound structures. At that checkpoint, informed analysis included 199 relationships. Fixed-start signed coverage increased from 35 to 38 pairs, while pairs without reported species/cell mismatch remained 29; biological context remains a key limitation.
-
-### Context-aware scoring and the serine mechanism module
-
-The [current generated evaluation](reports/serine_module/README.md) describes the bounded PHGDH/PSAT1/PSPH module and remaining scientific limits. Three reactions now have explicit ChEBI participants and unsigned enzyme/participation links. Four registry-backed `ENCODES` links connect genes to protein products without inventing transcript isoforms. The measured alpha-ketoglutarate pool, chromatin demethylation, Nfatc1 RNA, and phenotype evidence remain distinct.
-
-Scoring qualifies each evidence record before aggregation. Context/experiment `qualifiers` preserve sex, intervention type, model setting, dose and duration when supported; omitted values remain unknown. Known incompatible routes remain inspectable under `context_incompatible_paths` but do not contribute to the requested scenario score. Evidence quality, context applicability, and transfer assumptions are reported separately.
-
-The reusable [drug-target input](data/drug_targets/targets.csv) lives outside the canonical biological graph. `python -m src.kg.drug_targets` checks exact accession/species coverage; adding `--allow-species-transfer` runs an explicitly qualified NCT-503 scenario. NCT-503 is a research control in this dataset, not an FDA screening candidate. Its human enzyme IC50 does not become mouse potency or an osteoclast efficacy estimate.
-
-`python -m src.kg.evaluate_serine_module` runs offline development checks and prepares the frozen 50-paper independent-review handoff. Precision/recall remain unmeasured until that review is completed. Future extraction can preserve qualifiers using `configs/claim_extraction_context_v3.json`; paid execution is disabled there. Frozen earlier requests and prompts remain unchanged.
-
-## Source Data, Evidence, and Provenance
-
-The canonical data is maintained in `data/processed`:
-
-| Table | Purpose |
-| --- | --- |
-| `nodes.csv` | Biological identity, type, RNA subtype, roles, aliases, module, and identity-review status. |
-| `edges.csv` | Stable claim IDs, source/target entities, relation, sign, context references, claim status, and optional causal-basis/effect-level qualifications. |
-| `contexts.csv` | Recorded species, cell type, stage, compartment, context verification status, and JSON qualifiers. |
-| `experiments.csv` | Experimental records and their review status; unsupported measurements are left blank. |
-| `edge_evidence.csv` | Individually identified evidence records linking claims, sources, and experiments. |
-| `source_records.csv` | Retrieved publication metadata and source-resolution/claim-matching status. |
-
-Publication resolution and claim verification are separate steps. A valid PMID or DOI confirms that a publication record exists; it does not establish that the article supports the associated mechanism or experiment.
-
-The source audit requested 44 references from Europe PMC: 42 resolved and two remained unresolved. It flagged 29 apparent citation-topic mismatches, six references needing additional claim matching, and seven relevant publications still requiring claim-level scrutiny. Five open-access full-text XML snapshots and retrieval records are included under `data/raw/provenance`.
-
-Before full-corpus integration, of the **351 evidence records**, **250 are quarantined, 92 are pending, seven contain source-checked qualitative paraphrases, and two are source-linked proposed PYK2 extractions**. Four new experiments and two source-specific contexts were reviewed during the [PHGDH/PSAT1 curation pass](reports/PHGDH_MODULE_CURATION.md); the 48 legacy experiment records retain their prior statuses. Two context-specific phenotype claims now meet the strict experimental gate. Their support comes from one paper and does not validate the wider graph or historical quantitative assertions.
-
-Recovered repository narratives are retained in `claim_summary`, not presented as article quotations. Checked excerpts or paraphrases use `quote_or_location` alongside a source location, URL, checksum, and review information. Broken context and experiment references have been cleared without inventing replacements, and joined experiment IDs have been separated into individual evidence rows.
-
-Twenty STRING-derived relationships are represented as unsigned `ASSOCIATED_WITH` claims rather than unsupported activation or inhibition. Database associations and format-valid identifiers must not be interpreted as mechanistic verification.
-
-See the [schema and provenance repair report](reports/SCHEMA_AND_PROVENANCE_REPAIR.md), [audit changes](data/processed/audit_changes.csv), and [audit notebook](reports/provenance_audit.ipynb) for record-level details. The original data and exports remain in the quarantine archive.
-
-## Interactive Pathway and Structure Explorers
-
-Both HTML explorers share a research interface with rounded panels, bordered entity-detail cells, restrained teal/green/coral/gold accents, and pale category colors. The static viewers do not require Neo4j or a frontend build tool.
-
-### Pathway explorer
-
-Open [`index.html`](index.html) to navigate the biological graph:
-
-- Browse the full collection or filter by physiological module.
-- Search by name, symbol, current identifier, or legacy alias.
-- Select an entity from the left catalog to open its neighborhood.
-- Click a graph node to inspect its identity, schema fields, connections, and evidence; double-click to explore its neighborhood.
-- Drag nodes to arrange them, drag the background to pan, and use zoom, Fit, Readable size, or Expand to adjust the view.
-
-The full graph starts with wider spacing and light category/role fills. At whole-network fit, labels are necessarily small; zoom or switch to a neighborhood for detailed reading. Neighborhoods refit after their animation settles to keep their nodes inside the canvas.
-
-A compact Evidence selector filters relationships by reviewed passages, pending evidence, quarantine, or strict experimental evidence. Nodes and their positions remain visible. Line styles distinguish reviewed passages, pending evidence, and quarantine-only claims; mixed support remains explicit in details. This strict filter is separate from the more inclusive default analysis policy.
-
-Relationship details preserve all associated evidence records and show their review status. Visibility in the viewer does not imply verified biology; analysis returns the evidence tier and qualifications separately.
-
-### Structure explorer
-
-Open [`osteoclast_3d_conformation_explorer.html`](osteoclast_3d_conformation_explorer.html) to inspect molecular shape. The viewer uses bundled 3Dmol.js and offers available structure-source candidates for the selected entity. The source selector lists usable candidates only. If just one candidate exists, it is shown as a fixed selection with an explanation; placeholder PDB IDs are excluded. For multiple candidates, choose a source and select Load 3D structure. Loading remote structures requires internet access; interactive rendering requires WebGL.
-
-Legacy protein structure identifiers are explicitly marked as unverified candidates. Registry, species, and sequence correspondence still need checking before a structure can be treated as the correct experimental target. RNA entities are no longer treated as proteins simply because of their older labels. A rendered structure does not demonstrate target engagement, inhibition, or support for a KG relationship.
-
-### Local quickstart
+## Run the viewer
 
 From the repository root:
 
@@ -127,153 +12,83 @@ From the repository root:
 python -m http.server 8765 --bind 127.0.0.1
 ```
 
-Visit http://127.0.0.1:8765/index.html and switch explorers using the navigation bar. Python serves the static files; Neo4j is optional. See [viewer development](src/visualization/VIEWERS.md) for the shared templates and build process.
+Open [the graph viewer](http://127.0.0.1:8765/index.html). Search for an entity, explore its local network, select a relationship to inspect evidence, then use Structure or Split to inspect available molecular models. Full-network layouts run in a worker and are cached. Large networks initially show the selected entity's connections; All relationships displays every edge.
 
-## Master Evidence Workbook
+Compiled assets and local fonts are included. Viewing needs no Node installation or Neo4j database. Remote structure loading needs internet access; 3D rendering needs WebGL. Protein candidates retain their identity qualifications, and computed compound coordinates retain their provenance. See [viewer development](viewer/README.md) and [structure coverage](reports/MOLECULAR_STRUCTURES.md).
 
-The rebuilt [Excel workbook](data/processed/osteoclast_knowledge_graph_sources.xlsx) contains seven sheets: a scope/read-me sheet followed by nodes, edges, contexts, experiments, edge evidence, and source records. Synchronized copies are provided at the repository root and under `neo4j`; all three are rebuilt and checksum-tracked.
+## Development and tests
 
-The workbook mirrors the canonical tables, including missing values and review status. It replaces the earlier eight-tab presentation of unsupported enrichment and blanket verification claims. Source CSV exports provide a flattened evidence ledger with publication metadata, while the graph JSON retains multiple evidence records per relationship.
-
-Use the workbook for inspection and curation planning. Update canonical tables and rebuild to propagate a change across the repository; editing a generated workbook alone will not update the graph or viewers.
-
-## Molecular Graphs and Downstream Validation
-
-The original two-branch research direction remains:
-
-```text
-Small-molecule atoms and bonds -> Molecular model / fingerprint baseline --+
-                                                                         |
-                                                                         v
-                                                                  Future late fusion
-                                                                         |
-                                                                         v
-                                                              Candidate ranking
-                                                                         ^
-                                                                         |
-Reviewed biological evidence -> Contextual mechanism knowledge graph -----+
-```
-
-The molecular branch is intended to compare chemical representations with fingerprint baselines. The mechanism branch is intended to provide inspectable biological paths with source, experiment, and context provenance. Late fusion, calibrated rankings, and a validated drug-repurposing benchmark remain development goals rather than demonstrated results.
-
-Default analysis uses **evidence-informed discovery**: reviewed experiments, curated database facts and source-linked provisional claims can contribute, with explicit tiers and uncertainty. Currently **68 relationships** are usable: two reviewed-experiment relationships, four reviewed-passage relationships, two proposed extracted candidates and 60 weak citation-only candidates. Known quarantines and mismatched citations remain excluded. These counts describe usable hypotheses, not validated mechanisms.
-
-Use `find_mechanism_paths(..., mode="strict")` for the two-edge strict experimental subset, or `mode="discovery"` to permit unresolved source metadata as well. Single-edge target-to-phenotype routes are supported. Unsigned biochemical routes remain available with unresolved direction; opposing routes and contradictory evidence remain visible. Scores are uncalibrated heuristics, not efficacy probabilities. The [evidence policy](reports/EVIDENCE_POLICY.md) documents tiers, weights, context handling, compatibility and examples. Drug scoring still requires an explicit drug-target interaction.
-
-Paper-held-out filtering removes claims whose only support is held out. This is one leakage control, not a complete benchmark validation. Scaffold splits, source independence, target overlap, and model calibration still need an explicit evaluation design.
-
-Earlier generated tissue-expression values, pseudotime coordinates, mutation annotations, kinetics, and chemical features are not active validated inputs. The obsolete generators are disabled so they cannot silently restore those assertions during routine rebuilding.
-
-## Seed Biological Modules and Curation Priorities
-
-The original seed topics remain useful starting points for targeted literature review:
-
-1. **Serine synthesis, alpha-ketoglutarate, and chromatin.** The checked PHGDH claim is an indirect serine-pathway effect involving PSAT1, not direct alpha-ketoglutarate production by PHGDH. The source locations are Figure 3i and Extended Data Figure 4e in cached `PMC10822776`. The earlier CBR-5884 dose/effect assertion was quarantined; it was not transferred to the paper's NCT-503 intervention.
-2. **PRMT6 and fatty-acid-oxidation gene regulation.** A qualitative paraphrase from cached `PMC11516099` supports reduced H3R2 asymmetric dimethylation at FAO gene promoters with PRMT6 deficiency. Detailed experimental and contextual assignments remain under review.
-3. **Glutaminolysis and metabolic support.** GLS-associated claims remain part of the inventory, with `PMC11467445` cached for review. Publication availability does not establish every recorded downstream relationship or drug-response assertion.
-4. **Itaconate and TET2.** A checked qualitative claim is linked to the abstract and Results of cached `PMC12159140`. Derivative experiments, including OI, must not be assigned to parent itaconate as dose-equivalent evidence.
-5. **Pyruvate, acetyl-CoA, and histone acetylation.** These remain candidate mechanisms for source-specific curation; earlier detailed residue and assay claims should not be treated as validated findings.
-6. **The RANKL signaling backbone.** RANKL/RANK, TRAF6, transcriptional regulators, and downstream osteoclast-associated entities remain central navigation routes. Each relationship still needs its own evidence and context assessment.
-
-The ChEBI label for `CHEBI:16015` is corrected to L-glutamic acid, and its two incident claims are quarantined for reaction-level re-curation. It is not merged with alpha-ketoglutarate.
-
-The immediate priority is source-to-claim matching and passage-level experimental curation, followed by registry/orthology mapping and context review. These steps strengthen evidence tiers and scientific interpretation; incomplete but traceable claims can already support explicitly provisional discovery.
-
-## Repository Structure
-
-```text
-OC-Drug-Repurposing/
-  configs/kg_config.yaml           Schema and research configuration
-  data/
-    raw/provenance/                Publication snapshots and retrieval records
-    processed/                     Canonical CSV tables and generated exports
-    quarantine/                    Original snapshot and archival notes
-    manifest.json                  SHA-256 hashes of packaged artifacts
-  neo4j/                           Import, loader, queries, styling, export copies
-  schemas/models.py                Entity, claim, and provenance models
-  src/
-    ingest/                        Literature ingestion helpers
-    kg/graph.py                    Graph loading, paths, and evidence gates
-    kg/validate_schema.py          Structural and review-status validation
-    kg/rebuild.py                  Canonical export rebuild
-    visualization/templates/       Shared HTML, CSS, and JavaScript
-    visualization/build_viewers.py Both browser explorers
-    enrichment/                    Workbook builder and retired legacy tools
-  assets/                          Generated viewer data, styling, bundled library
-  reports/                         Audit findings, summary, and notebook
-  tests/                           Graph and audited-schema regression tests
-  index.html                       Pathway explorer
-  osteoclast_3d_conformation_explorer.html
-  requirements.txt
-```
-
-## Neo4j Deployment
-
-Neo4j is useful for database queries and inspection, but is not required for the browser explorers. Rebuild the export, then import into an empty database:
+Core graph loading, validation, and export rebuilding use Python's standard library. Install analysis dependencies for registry requests, graph statistics, molecular features, and pilot metrics:
 
 ```powershell
-python -B -m src.kg.rebuild
-python neo4j/load_to_neo4j.py --password YOUR_NEO4J_PASSWORD
-```
-
-The export includes biological nodes and relationships plus separate Claim, Evidence, Source, Experiment, and Context records. Protein and RNA labels follow the revised identity model; functional roles supplement the Protein label.
-
-Existing databases can retain old IDs and enrichment properties. Back up and review their contents before choosing a reset or fresh import. The legacy enrichment, deduplication, and drug-removal Cypher files are retired no-ops. A live Neo4j import has not been executed as part of this repair.
-
-Example inspection queries:
-
-```cypher
-MATCH (n:Protein) RETURN n LIMIT 100;
-MATCH (n:RNA) RETURN n;
-MATCH (v:Evidence)-[:EVIDENCE_FOR]->(c:Claim)
-WHERE v.curator_status <> 'reviewed'
-RETURN v, c LIMIT 100;
-```
-
-See the [Neo4j guide](neo4j/README.md) and generated sample queries for more detail.
-
-## Validation and Reproducible Rebuilds
-
-```powershell
+python -m pip install -r requirements.txt
 python -B -m src.kg.verify_kg
-python -B -m src.kg.rebuild
 python -B -m unittest discover -s tests -v
 ```
 
-Structural validation checks identifiers, foreign keys, entity types, RNA translation relationships, and review requirements. A structural PASS does not certify biological truth or model readiness.
+Optional extraction dependencies are in `requirements-extraction.txt`; the pinned structure-generation environment is in `requirements-structures.txt`. RDKit tests skip when RDKit is unavailable. Structured extraction credentials belong in Windows Credential Manager or `OPENAI_API_KEY`. See [extraction setup](reports/OPENAI_EXTRACTION_SETUP.md).
 
-Rebuild synchronizes both graph JSON copies, browser assets, inventory, source ledgers, all three Excel workbook copies, Neo4j artifacts, and the file-hash manifest. It performs no network enrichment and does not automatically promote records to reviewed status. Legacy export and master-pipeline entry points redirect to this rebuild.
+Frontend development requires Node 22.18+ or Node 24:
 
-The repair passed 25 unit/regression tests, including evidence preservation, invalid-reference rejection, source checksums, export consistency, and held-out support handling. A fresh Git checkout also passed the suite with all 44 manifest artifacts present. Git attributes preserve checksum-covered bytes, and the required provenance snapshots are included in version control.
+```powershell
+cd viewer
+npm ci
+npm test
+npm run build
+```
 
-The remaining scientific work is documented in the [repair report](reports/SCHEMA_AND_PROVENANCE_REPAIR.md). Test success establishes software/data consistency within these checks; it does not resolve the pending literature review or validate a repurposing prediction.
+The build writes `assets/workbench/`. After changing packaged assets, refresh the checksum manifest from the repository root:
 
-## Single-drug coverage demonstration
+```powershell
+python -m src.kg.rebuild --manifest-only
+```
 
-Run `python -m src.kg.single_drug_demo` for an offline dasatinib example using a cached DailyMed label. It maps the eight listed targets/groups, evaluates a conditional drug-to-mouse-SRC overlay, and reports supporting, opposing, unsigned and blocked routes to differentiation and bone resorption. The overlay leaves the canonical graph and viewer unchanged. The current result is missing endpoint coverage, not a prediction of inefficacy; the molecular ML lane is not run. See the [results and limitations](reports/single_drug_demo/dasatinib.md) and accompanying JSON for input hashes and provenance.
+## Data and exports
 
-## Connectivity-focused literature discovery
+Edit canonical tables in `data/processed`, then rebuild derived artifacts:
 
-The [connectivity iteration](reports/history/CONNECTIVITY_ITERATION.md) defines the next curation priorities and documents a reproducible 2,500-paper PubTator request (2,454 returned). Named query configuration, bounded cursor pagination, cached responses, exact-span checks and a publication-status-aware shortlist support offline replay. The outputs remain in discovery staging; text-mined candidates do not automatically change the canonical graph. No paid model API or LangChain dependency is required.
+```powershell
+python -B -m src.kg.rebuild
+```
 
-## Compound structure models
+| Table | Contents |
+| --- | --- |
+| `nodes.csv` | Entity identity, species, molecular form, roles, aliases, and modules |
+| `edges.csv` | Directed claims, signs, context references, and causal qualifications |
+| `edge_evidence.csv` | Separate supporting or contradicting evidence records for each claim |
+| `source_records.csv` | Publication metadata, resolution status, and claim matching |
+| `experiments.csv` | Assay details, review status, and structured qualifiers |
+| `contexts.csv` | Species, cell type, stage, and other experimental conditions |
 
-The structure explorer includes 19 local RDKit-generated compound/ion models alongside existing protein structure candidates. Registry names, charge and computed-coordinate provenance are shown explicitly; ambiguous structures and known identifier conflicts are withheld with a reason. See [coverage and reproduction](reports/MOLECULAR_STRUCTURES.md). The KG viewer also offers a minimum incident-relationship slider for reducing visual density.
+Genes, RNA, and proteins have distinct identities. Legacy identifiers resolve through `identifier_map.json` and `legacy_ids`; shared symbols alone do not establish an isoform or orthology mapping. Reaction participation and gene/product mappings remain unsigned.
 
-### Evidence-linked literature extraction
+Rebuilding synchronizes graph JSON, browser data, source ledgers, the [seven-sheet workbook](data/processed/osteoclast_knowledge_graph_sources.xlsx), Neo4j exports, and `data/manifest.json`. It makes no network calls and does not promote review status. Edit CSV inputs, not generated workbooks. Structural validation checks consistency; source verification remains a separate task.
 
-The cached PubTator corpus can be prepared for structured OpenAI extraction with source-linked quotations and separate regulatory/reaction claims. Credentials stay in Windows Credential Manager or `OPENAI_API_KEY`, never in the graph or browser. The bounded pilot writes unreviewed claims to staging; development-only registry checks and a reversible two-claim PYK2 integration are now implemented; broader grounding and integration remain ongoing. See the [extraction setup](reports/OPENAI_EXTRACTION_SETUP.md) and [framework](reports/CLAIM_EXTRACTION_FRAMEWORK.md).
+Public-source snapshots and frozen patches support offline replay. Preserve their bytes and hashes. Historical enrichment assertions remain in `data/quarantine/legacy_snapshot.zip`; retired transform entry points fail explicitly. Their implementations remain in Git history.
 
-The [first integration example](reports/history/DEVELOPMENT_GROUNDING_AND_PYK2.md) separates PYK2/PTK2B from FAK/PTK2 and distinguishes a depletion experiment from the normal protein's inferred role. Both new relationships remain proposed; genetic perturbation is not assumed equivalent to drug inhibition.
+## Evidence and drug evaluation
 
-## Repository packaging
+Default mechanism analysis accepts source-linked claims under explicit evidence tiers and excludes quarantined or mismatched support. `find_mechanism_paths(..., mode="strict")` requires reviewed experimental support; `mode="discovery"` also permits unresolved source metadata. Unsigned, opposing, and context-incompatible routes remain inspectable. Context-incompatible routes do not contribute to a requested scenario score. See [the evidence policy](reports/EVIDENCE_POLICY.md).
 
-The repository retains canonical data, public-source snapshots, validated extraction records, frozen inputs and applied patches needed for evidence auditing. Opaque provider response envelopes, run logs, superseded drafts, generated review pages and large duplicate discovery tables remain local and are excluded from Git. Regenerate discovery tables with the discovery pipeline when needed; canonical graph replay uses the retained inputs and patches. Historical progress reports are under `reports/history`; start with the current [quality report](reports/RESOLUTION_QUALITY_PASS.md).
+The [serine module](reports/serine_module/README.md) follows PHGDH/PSAT1/PSPH through biochemical participants, chromatin, RNA, and phenotype evidence. The [drug-target input](data/drug_targets/targets.csv) records accession/taxon, assay provenance, and transfer assumptions. `python -m src.kg.drug_targets` evaluates exact mappings; `--allow-species-transfer` enables the explicit cross-species scenario. Potency remains assay-specific.
 
-### Biological source audit and FDA candidate inventory
+The [FDA inventory](data/fda/README.md) supplies a candidate universe. The [evaluation pilot](data/evaluation/drug_pilot_v1/README.md) combines PubChem/ChEMBL mappings, RDKit features, assay outcomes, and compound/scaffold/paper grouping. Unknown outcomes are not negative labels. The small retrospective pilot needs independent review and a larger evaluation population before predictive accuracy can be established.
 
-The [biological audit](reports/biological_validation/README.md) reports the scope of source checks, context-dependent findings, reaction balance, graph connectivity, and source dependence. This is not independent human or experimental validation of the whole graph. The [FDA inventory](data/fda/README.md) preserves an official Orange Book snapshot and reproducible ingredient/product tables. Approval defines candidate eligibility; osteoclast activity remains unknown until separately supported.
+## Repository map
 
-### FDA drug evaluation pilot
+| Path | Purpose |
+| --- | --- |
+| `src/ingest/` | Cached literature discovery, registry resolution, and staged extraction |
+| `src/kg/` | Evidence assessment, path search, curation patches, evaluation, and exports |
+| `src/enrichment/` | Workbook and compound-model generation; retired compatibility entry points |
+| `schemas/` | Entity, claim, context, and extraction schemas |
+| `viewer/` | React/shadcn source, local font licenses, and frontend tests |
+| `src/visualization/` | HTML shells and browser-data export |
+| `data/` | Canonical tables, provenance, candidates, evaluation inputs, and staging |
+| `reports/` | Scientific limits, curation findings, and historical results |
+| `neo4j/` | Optional database loader, exports, and queries |
+| `tests/` | Python regression tests |
 
-The [drug experiment](data/evaluation/drug_pilot_v1/README.md) adds reproducible FDA-to-PubChem/ChEMBL mappings, explicit human-mouse target scenarios, RDKit molecular features, and a source-linked assay outcome pilot. Compound/scaffold/paper grouping and held-out source masking support future comparisons of chemistry-only, mechanism-only, and combined models. Current coverage and label limitations are reported separately from predictive performance; no trained-model accuracy is claimed.
+For database inspection, follow the [Neo4j guide](neo4j/README.md). Import into a fresh database or review existing contents before resetting it.
+
+Further details: [biological audit](reports/biological_validation/README.md), [schema/provenance repair](reports/SCHEMA_AND_PROVENANCE_REPAIR.md), [identity quality pass](reports/RESOLUTION_QUALITY_PASS.md), [PHGDH curation](reports/PHGDH_MODULE_CURATION.md), [dasatinib example](reports/single_drug_demo/dasatinib.md), [extraction framework](reports/CLAIM_EXTRACTION_FRAMEWORK.md), and [historical iterations](reports/history/).
