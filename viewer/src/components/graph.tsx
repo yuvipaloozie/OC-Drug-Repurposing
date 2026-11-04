@@ -9,6 +9,7 @@ import {
   type Edge,
 } from "../lib/model";
 import { Tool, WorkbenchToolbar } from "./workbench-toolbar";
+import { fitCamera } from "../lib/graph-camera";
 type Point = { id: string; x: number; y: number };
 const layoutCache = new Map<string, Record<string, Point>>();
 export function Graph({
@@ -173,22 +174,8 @@ export function Graph({
     return () => ro.disconnect();
   }, []);
   const fit = () => {
-    const p = Object.values(positions);
-    if (!p.length) return;
-    const x0 = Math.min(...p.map((p) => p.x)) - 115,
-      x1 = Math.max(...p.map((p) => p.x)) + 115,
-      y0 = Math.min(...p.map((p) => p.y)) - 55,
-      y1 = Math.max(...p.map((p) => p.y)) + 55;
-    const k = Math.min(
-      1.15,
-      (size.w - 60) / (x1 - x0),
-      (size.h - 125) / (y1 - y0),
-    );
-    setCamera({
-      k,
-      x: size.w / 2 - ((x0 + x1) * k) / 2,
-      y: (size.h - 60) / 2 - ((y0 + y1) * k) / 2,
-    });
+    const fitted = fitCamera(Object.values(positions), size, 1.15, 60);
+    if (fitted) setCamera(fitted);
   };
   const lastFit = useRef<{
     layout: typeof layout;
@@ -199,22 +186,9 @@ export function Graph({
     if (size.w < 1 || size.h < 1) return;
     const prev = lastFit.current;
     if (!prev || prev.layout !== layout) {
-      const p = Object.values(layout);
-      if (!p.length) return;
-      const x0 = Math.min(...p.map((p) => p.x)) - 115,
-        x1 = Math.max(...p.map((p) => p.x)) + 115,
-        y0 = Math.min(...p.map((p) => p.y)) - 55,
-        y1 = Math.max(...p.map((p) => p.y)) + 55;
-      const k = Math.min(
-        1.1,
-        (size.w - 50) / (x1 - x0),
-        (size.h - 125) / (y1 - y0),
-      );
-      setCamera({
-        k,
-        x: size.w / 2 - ((x0 + x1) * k) / 2,
-        y: (size.h - 60) / 2 - ((y0 + y1) * k) / 2,
-      });
+      const fitted = fitCamera(Object.values(layout), size, 1.1, 50);
+      if (!fitted) return;
+      setCamera(fitted);
     } else
       setCamera((c) => ({
         ...c,
