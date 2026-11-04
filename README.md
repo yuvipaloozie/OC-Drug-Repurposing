@@ -31,13 +31,13 @@ flowchart TD
 
     classDef source fill:#dbeafe,stroke:#2563eb,color:#172554
     classDef curation fill:#fef3c7,stroke:#d97706,color:#78350f
-    classDef graph fill:#dcfce7,stroke:#16a34a,color:#14532d
+    classDef biology fill:#dcfce7,stroke:#16a34a,color:#14532d
     classDef output fill:#ccfbf1,stroke:#0d9488,color:#134e4a
     classDef drug fill:#ede9fe,stroke:#7c3aed,color:#4c1d95
     classDef evaluation fill:#ffe4e6,stroke:#e11d48,color:#881337
     class L,F,A source
     class C,R curation
-    class K,P graph
+    class K,P biology
     class V,X output
     class M,T,D drug
     class E evaluation
