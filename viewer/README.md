@@ -1,6 +1,6 @@
 # Scientific viewer
 
-The two existing HTML entry points now load this React workbench. The compiled files in `../assets/workbench` are distributed with the repository, so viewing does not require Node or npm. Serve the repository using its existing Python HTTP server.
+The two HTML entry points load this React workbench. The compiled files in `../assets/workbench` are distributed with the repository, so viewing does not require Node or npm. Serve the repository using its existing Python HTTP server.
 
 ## Development
 
@@ -25,6 +25,7 @@ npm test
 - Resize or collapse side panels. Small screens use dialog panels.
 - Protein and compound representations, chain selection, ligand visibility, graph SVG and structure PNG export are available where applicable.
 
-Repeated instructional/disclaimer paragraphs have been removed. Scientific source passages and record-specific qualifications are preserved in the evidence inspector and expandable record details.
+The evidence inspector and expandable record details retain scientific source passages and qualifications for each record.
 
-The 21st.dev contribution is a design-pattern adaptation, not copied gated code. See THIRD_PARTY.md.
+The interface adapts 21st.dev design patterns without copying gated code. See THIRD_PARTY.md.
+

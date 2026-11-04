@@ -1,5 +1,11 @@
 # Osteoclast drug repurposing
 
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![RDKit](https://img.shields.io/badge/RDKit-287233?style=for-the-badge)
+![Neo4j](https://img.shields.io/badge/Neo4j-4581C3?style=for-the-badge&logo=neo4j&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+
 A mechanism knowledge graph for exploring osteoclast differentiation and bone resorption, with a React graph/structure viewer and a separate FDA drug-evaluation pipeline.
 
 The canonical dataset contains 396 biological entities, 503 relationship claims, and 518 evidence records. Drug candidates remain outside the biological topology. Evidence review, biological context, and molecular identity are recorded separately. Scores are exploratory heuristics; no trained-model accuracy or validated efficacy prediction is available.
